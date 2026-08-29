@@ -455,7 +455,7 @@
         "locationTip": "Adresa i karta na vašoj javnoj stranici kontakta. Pretražite ili dodirnite kartu za postavljanje špenadla."
       },
       "branding": {
-        "title": "Web",
+        "title": "Stranica jelovnika",
         "accentLabel": "Boja naglaska",
         "accentTip": "Glavna boja za gumbe i isticanja.",
         "showTitleLabel": "Prikaži naziv na početnoj",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Veličina loga iznad pozadine."
       },
       "general": {
-        "title": "Lokalizacija",
+        "title": "Valuta i vremenska zona",
         "menuLinkLabel": "Poveznica jelovnika",
         "slugPlaceholder": "vaš-slug",
         "copyUrl": "Kopiraj URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Koristi se za cijene u jelovniku."
       },
       "orders": {
-        "title": "Narudžbe",
+        "title": "Postavke narudžbi",
         "acceptLabel": "Prihvati narudžbe",
         "acceptTip": "Kad je isključeno, gosti vide jelovnik, ali ne mogu naručiti.",
         "modeLabel": "Način narudžbe",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Za integraciju platnog sustava u svoj restoran kontaktiraj podršku."
       },
       "bookings": {
-        "title": "Rezervacije",
+        "title": "Postavke rezervacija",
         "enableLabel": "Omogući rezervacije",
         "enableTip": "Kad je isključeno, gosti vide jelovnik, ali ne mogu rezervirati stol.",
         "modeLabel": "Način potvrde",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Vrati se na admin račun ({email}).",
       "rows": {
         "contacts": "Kontakti i lokacija",
-        "branding": "Web",
-        "general": "Lokalizacija",
+        "branding": "Stranica jelovnika",
+        "general": "Valuta i vremenska zona",
         "tables": "Stolovi",
-        "orders": "Narudžbe",
-        "bookings": "Rezervacije",
+        "orders": "Postavke narudžbi",
+        "bookings": "Postavke rezervacija",
         "languages": "Jezici",
         "billing": "Naplata",
         "support": "Podrška",

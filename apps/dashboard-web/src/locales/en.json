@@ -531,7 +531,7 @@
         "locationTip": "Address and map shown on your public contacts page. Search or tap the map to set the pin."
       },
       "branding": {
-        "title": "Site",
+        "title": "Menu site",
         "accentLabel": "Accent color",
         "accentTip": "Main color for buttons and highlights.",
         "showTitleLabel": "Show name on homepage",
@@ -573,7 +573,7 @@
         "logoScaleTip": "Size of the logo over the background."
       },
       "general": {
-        "title": "Locale",
+        "title": "Currency & timezone",
         "menuLinkLabel": "Menu link",
         "slugPlaceholder": "your-slug",
         "copyUrl": "Copy URL",
@@ -583,7 +583,7 @@
         "currencyTip": "Used for prices in your menu."
       },
       "orders": {
-        "title": "Orders",
+        "title": "Order settings",
         "acceptLabel": "Accept orders",
         "acceptTip": "When off, guests can browse the menu but can't place orders.",
         "modeLabel": "Order mode",
@@ -601,7 +601,7 @@
         "paymentIntegrationTip": "To integrate a payment system for your restaurant, contact support."
       },
       "bookings": {
-        "title": "Bookings",
+        "title": "Booking settings",
         "enableLabel": "Enable bookings",
         "enableTip": "When off, guests can browse the menu but can't reserve a table.",
         "modeLabel": "Confirmation mode",
@@ -799,12 +799,12 @@
       "exitImpersonationDesc": "Return to your admin account ({email}).",
       "rows": {
         "contacts": "Contacts & location",
-        "branding": "Site",
-        "general": "Locale",
+        "branding": "Menu site",
+        "general": "Currency & timezone",
         "tables": "Tables",
         "devices": "Devices",
-        "orders": "Orders",
-        "bookings": "Bookings",
+        "orders": "Order settings",
+        "bookings": "Booking settings",
         "languages": "Languages",
         "customTexts": "Menu texts",
         "billing": "Billing",

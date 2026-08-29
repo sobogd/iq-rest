@@ -455,7 +455,7 @@
         "locationTip": "Adres ve harita genel iletişim sayfanızda gösterilir. Pin koymak için arayın veya haritaya dokunun."
       },
       "branding": {
-        "title": "Site",
+        "title": "Menü sitesi",
         "accentLabel": "Vurgu rengi",
         "accentTip": "Düğmeler ve vurgular için ana renk.",
         "showTitleLabel": "Ana sayfada adı göster",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Arka planın üzerindeki logonun boyutu."
       },
       "general": {
-        "title": "Bölge",
+        "title": "Para birimi ve saat dilimi",
         "menuLinkLabel": "Menü bağlantısı",
         "slugPlaceholder": "your-slug",
         "copyUrl": "URL'yi kopyala",
@@ -507,7 +507,7 @@
         "currencyTip": "Menüdeki fiyatlar için kullanılır."
       },
       "orders": {
-        "title": "Siparişler",
+        "title": "Sipariş ayarları",
         "acceptLabel": "Sipariş kabul et",
         "acceptTip": "Kapalıyken misafirler menüyü görebilir ancak sipariş veremez.",
         "modeLabel": "Sipariş modu",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Restoranınız için bir ödeme sistemi entegrasyonu için destekle iletişime geçin."
       },
       "bookings": {
-        "title": "Rezervasyonlar",
+        "title": "Rezervasyon ayarları",
         "enableLabel": "Rezervasyonları etkinleştir",
         "enableTip": "Kapalıyken misafirler menüyü görebilir ancak masa rezervasyonu yapamaz.",
         "modeLabel": "Onay modu",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Yönetici hesabınıza ({email}) dön.",
       "rows": {
         "contacts": "İletişim ve konum",
-        "branding": "Site",
-        "general": "Bölge",
+        "branding": "Menü sitesi",
+        "general": "Para birimi ve saat dilimi",
         "tables": "Masalar",
-        "orders": "Siparişler",
-        "bookings": "Rezervasyonlar",
+        "orders": "Sipariş ayarları",
+        "bookings": "Rezervasyon ayarları",
         "languages": "Diller",
         "billing": "Faturalama",
         "support": "Destek",

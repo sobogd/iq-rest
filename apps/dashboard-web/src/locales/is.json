@@ -455,7 +455,7 @@
         "locationTip": "Heimilisfang og kort sem birtast á opinberu tengiliðasíðunni. Leitaðu eða smelltu á kortið til að setja prjón."
       },
       "branding": {
-        "title": "Vefur",
+        "title": "Matseðilsvefur",
         "accentLabel": "Áherslulitur",
         "accentTip": "Aðalitur fyrir takka og áherslur.",
         "showTitleLabel": "Sýna nafn á forsíðu",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Stærð lógósins yfir bakgrunninum."
       },
       "general": {
-        "title": "Staðsetning",
+        "title": "Gjaldmiðill og tímabelti",
         "menuLinkLabel": "Tengill matseðils",
         "slugPlaceholder": "thinn-slug",
         "copyUrl": "Afrita URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Notaður fyrir verð á matseðlinum."
       },
       "orders": {
-        "title": "Pantanir",
+        "title": "Pantanastillingar",
         "acceptLabel": "Taka við pöntunum",
         "acceptTip": "Þegar slökkt er, geta gestir séð matseðilinn en geta ekki pantað.",
         "modeLabel": "Pöntunarmáti",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Hafðu samband við þjónustuver til að samþætta greiðslukerfi á veitingastað þinn."
       },
       "bookings": {
-        "title": "Bókanir",
+        "title": "Bókanastillingar",
         "enableLabel": "Virkja bókanir",
         "enableTip": "Þegar slökkt er, geta gestir séð matseðilinn en geta ekki bókað borð.",
         "modeLabel": "Staðfestingarmáti",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Farðu til baka á stjórnandareikning þinn ({email}).",
       "rows": {
         "contacts": "Tengiliðir og staðsetning",
-        "branding": "Vefur",
-        "general": "Staðsetning",
+        "branding": "Matseðilsvefur",
+        "general": "Gjaldmiðill og tímabelti",
         "tables": "Borð",
-        "orders": "Pantanir",
-        "bookings": "Bókanir",
+        "orders": "Pantanastillingar",
+        "bookings": "Bókanastillingar",
         "languages": "Tungumál",
         "billing": "Reikningagerð",
         "support": "Stuðningur",

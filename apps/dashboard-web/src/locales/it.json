@@ -455,7 +455,7 @@
         "locationTip": "Indirizzo e mappa mostrati nella pagina contatti pubblica. Cerca o tocca la mappa per posizionare il pin."
       },
       "branding": {
-        "title": "Sito",
+        "title": "Sito del menu",
         "accentLabel": "Colore accento",
         "accentTip": "Colore principale per pulsanti ed evidenziazioni.",
         "showTitleLabel": "Mostra il nome nella home",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Dimensione del logo sullo sfondo."
       },
       "general": {
-        "title": "Localizzazione",
+        "title": "Valuta e fuso orario",
         "menuLinkLabel": "Link del menu",
         "slugPlaceholder": "tuo-slug",
         "copyUrl": "Copia URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Usata per i prezzi del menu."
       },
       "orders": {
-        "title": "Ordini",
+        "title": "Opzioni ordini",
         "acceptLabel": "Accetta ordini",
         "acceptTip": "Se disattivato, gli ospiti possono vedere il menu ma non ordinare.",
         "modeLabel": "Modalità ordine",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Per integrare un sistema di pagamento per il tuo ristorante, contatta il supporto."
       },
       "bookings": {
-        "title": "Prenotazioni",
+        "title": "Opzioni prenotazioni",
         "enableLabel": "Attiva prenotazioni",
         "enableTip": "Se disattivato, gli ospiti possono vedere il menu ma non prenotare un tavolo.",
         "modeLabel": "Modalità conferma",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Torna al tuo account admin ({email}).",
       "rows": {
         "contacts": "Contatti e posizione",
-        "branding": "Sito",
-        "general": "Localizzazione",
+        "branding": "Sito del menu",
+        "general": "Valuta e fuso orario",
         "tables": "Tavoli",
-        "orders": "Ordini",
-        "bookings": "Prenotazioni",
+        "orders": "Opzioni ordini",
+        "bookings": "Opzioni prenotazioni",
         "languages": "Lingue",
         "billing": "Fatturazione",
         "support": "Supporto",

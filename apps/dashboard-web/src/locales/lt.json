@@ -455,7 +455,7 @@
         "locationTip": "Adresas ir žemėlapis rodomi jūsų viešo kontaktų puslapyje. Ieškokite arba bakstelėkite žemėlapį, kad nustatytumėte kaištį."
       },
       "branding": {
-        "title": "Svetainė",
+        "title": "Meniu svetainė",
         "accentLabel": "Akcento spalva",
         "accentTip": "Pagrindinė spalva mygtukams ir paryškinimams.",
         "showTitleLabel": "Rodyti pavadinimą pagrindiniame puslapyje",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Logotipo dydis virš fono."
       },
       "general": {
-        "title": "Regiono nustatymai",
+        "title": "Valiuta ir laiko juosta",
         "menuLinkLabel": "Meniu nuoroda",
         "slugPlaceholder": "jusu-slug",
         "copyUrl": "Kopijuoti URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Naudojama meniu kainoms."
       },
       "orders": {
-        "title": "Užsakymai",
+        "title": "Užsakymų nustatymai",
         "acceptLabel": "Priimti užsakymus",
         "acceptTip": "Kai išjungta, svečiai gali matyti meniu, bet negali užsakyti.",
         "modeLabel": "Užsakymų režimas",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Norėdami integruoti mokėjimo sistemą savo restorane, susisiekite su palaikymu."
       },
       "bookings": {
-        "title": "Rezervacijos",
+        "title": "Rezervacijų nustatymai",
         "enableLabel": "Įjungti rezervacijas",
         "enableTip": "Kai išjungta, svečiai gali matyti meniu, bet negali rezervuoti stalo.",
         "modeLabel": "Patvirtinimo režimas",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Grįžti į savo administratoriaus paskyrą ({email}).",
       "rows": {
         "contacts": "Kontaktai ir vieta",
-        "branding": "Svetainė",
-        "general": "Regiono nustatymai",
+        "branding": "Meniu svetainė",
+        "general": "Valiuta ir laiko juosta",
         "tables": "Stalai",
-        "orders": "Užsakymai",
-        "bookings": "Rezervacijos",
+        "orders": "Užsakymų nustatymai",
+        "bookings": "Rezervacijų nustatymai",
         "languages": "Kalbos",
         "billing": "Atsiskaitymas",
         "support": "Pagalba",

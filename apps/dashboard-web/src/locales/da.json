@@ -455,7 +455,7 @@
         "locationTip": "Adresse og kort vises på din offentlige kontaktside. Søg eller tryk på kortet for at placere nålen."
       },
       "branding": {
-        "title": "Site",
+        "title": "Menuside",
         "accentLabel": "Accentfarve",
         "accentTip": "Hovedfarve til knapper og fremhævelser.",
         "showTitleLabel": "Vis navn på forsiden",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Logoets størrelse over baggrunden."
       },
       "general": {
-        "title": "Lokalisering",
+        "title": "Valuta og tidszone",
         "menuLinkLabel": "Menulink",
         "slugPlaceholder": "din-slug",
         "copyUrl": "Kopier URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Bruges til priser i din menu."
       },
       "orders": {
-        "title": "Bestillinger",
+        "title": "Bestillingsopsætning",
         "acceptLabel": "Accepter bestillinger",
         "acceptTip": "Når slået fra kan gæster se menuen, men ikke bestille.",
         "modeLabel": "Bestillingstilstand",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Kontakt support for at integrere et betalingssystem i din restaurant."
       },
       "bookings": {
-        "title": "Reservationer",
+        "title": "Reservationsopsætning",
         "enableLabel": "Aktiver reservationer",
         "enableTip": "Når slået fra kan gæster se menuen, men ikke reservere bord.",
         "modeLabel": "Bekræftelsestilstand",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Vend tilbage til din admin-konto ({email}).",
       "rows": {
         "contacts": "Kontakter & adresse",
-        "branding": "Site",
-        "general": "Lokalisering",
+        "branding": "Menuside",
+        "general": "Valuta og tidszone",
         "tables": "Borde",
-        "orders": "Bestillinger",
-        "bookings": "Reservationer",
+        "orders": "Bestillingsopsætning",
+        "bookings": "Reservationsopsætning",
         "languages": "Sprog",
         "billing": "Fakturering",
         "support": "Support",

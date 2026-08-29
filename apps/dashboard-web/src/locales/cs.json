@@ -455,7 +455,7 @@
         "locationTip": "Adresa a mapa zobrazené na vaší veřejné kontaktní stránce. Hledejte nebo klepněte na mapu pro umístění špendlíku."
       },
       "branding": {
-        "title": "Web",
+        "title": "Web s menu",
         "accentLabel": "Akcentová barva",
         "accentTip": "Hlavní barva pro tlačítka a zvýraznění.",
         "showTitleLabel": "Zobrazit název na úvodní stránce",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Velikost loga na pozadí."
       },
       "general": {
-        "title": "Místní nastavení",
+        "title": "Měna a časové pásmo",
         "menuLinkLabel": "Odkaz na menu",
         "slugPlaceholder": "vase-slug",
         "copyUrl": "Kopírovat URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Použito pro ceny v menu."
       },
       "orders": {
-        "title": "Objednávky",
+        "title": "Nastavení objednávek",
         "acceptLabel": "Přijímat objednávky",
         "acceptTip": "Pokud je vypnuto, hosté vidí menu, ale nemohou objednávat.",
         "modeLabel": "Režim objednávek",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Pro integraci platebního systému ve vaší restauraci kontaktujte podporu."
       },
       "bookings": {
-        "title": "Rezervace",
+        "title": "Nastavení rezervací",
         "enableLabel": "Povolit rezervace",
         "enableTip": "Pokud je vypnuto, hosté vidí menu, ale nemohou rezervovat stůl.",
         "modeLabel": "Režim potvrzení",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Vrátit se na admin účet ({email}).",
       "rows": {
         "contacts": "Kontakty a poloha",
-        "branding": "Web",
-        "general": "Místní nastavení",
+        "branding": "Web s menu",
+        "general": "Měna a časové pásmo",
         "tables": "Stoly",
-        "orders": "Objednávky",
-        "bookings": "Rezervace",
+        "orders": "Nastavení objednávek",
+        "bookings": "Nastavení rezervací",
         "languages": "Jazyky",
         "billing": "Fakturace",
         "support": "Podpora",

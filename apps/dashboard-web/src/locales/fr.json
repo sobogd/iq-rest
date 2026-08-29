@@ -455,7 +455,7 @@
         "locationTip": "Adresse et carte affichées sur votre page contacts publique. Recherchez ou appuyez sur la carte pour placer le point."
       },
       "branding": {
-        "title": "Site",
+        "title": "Site du menu",
         "accentLabel": "Couleur d'accent",
         "accentTip": "Couleur principale pour boutons et mises en valeur.",
         "showTitleLabel": "Afficher le nom sur la page d'accueil",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Taille du logo sur l'arrière-plan."
       },
       "general": {
-        "title": "Localisation",
+        "title": "Devise, fuseau horaire",
         "menuLinkLabel": "Lien du menu",
         "slugPlaceholder": "votre-slug",
         "copyUrl": "Copier l'URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Utilisée pour les prix de votre menu."
       },
       "orders": {
-        "title": "Commandes",
+        "title": "Réglages commandes",
         "acceptLabel": "Accepter les commandes",
         "acceptTip": "Si désactivé, les clients peuvent voir le menu mais pas commander.",
         "modeLabel": "Mode de commande",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Pour intégrer un système de paiement à votre restaurant, contactez le support."
       },
       "bookings": {
-        "title": "Réservations",
+        "title": "Réglages réservations",
         "enableLabel": "Activer les réservations",
         "enableTip": "Si désactivé, les clients peuvent voir le menu mais pas réserver.",
         "modeLabel": "Mode de confirmation",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Revenir à votre compte admin ({email}).",
       "rows": {
         "contacts": "Contacts et adresse",
-        "branding": "Site",
-        "general": "Localisation",
+        "branding": "Site du menu",
+        "general": "Devise, fuseau horaire",
         "tables": "Tables",
-        "orders": "Commandes",
-        "bookings": "Réservations",
+        "orders": "Réglages commandes",
+        "bookings": "Réglages réservations",
         "languages": "Langues",
         "billing": "Facturation",
         "support": "Support",

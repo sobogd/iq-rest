@@ -455,7 +455,7 @@
         "locationTip": "A cím és térkép a nyilvános kapcsolat oldalon jelenik meg. Keress vagy érintsd meg a térképet a tű elhelyezéséhez."
       },
       "branding": {
-        "title": "Webhely",
+        "title": "Étlap weboldala",
         "accentLabel": "Kiemelő szín",
         "accentTip": "Fő szín gombokhoz és kiemelésekhez.",
         "showTitleLabel": "Név megjelenítése a kezdőlapon",
@@ -497,7 +497,7 @@
         "logoScaleTip": "A logó mérete a háttér fölött."
       },
       "general": {
-        "title": "Területi beállítások",
+        "title": "Pénznem és időzóna",
         "menuLinkLabel": "Étlap link",
         "slugPlaceholder": "your-slug",
         "copyUrl": "URL másolása",
@@ -507,7 +507,7 @@
         "currencyTip": "Az étlap árainál használt pénznem."
       },
       "orders": {
-        "title": "Rendelések",
+        "title": "Rendelési beállítások",
         "acceptLabel": "Rendelések elfogadása",
         "acceptTip": "Ha ki van kapcsolva, a vendégek látják az étlapot, de nem rendelhetnek.",
         "modeLabel": "Rendelési mód",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Az éttermed fizetési rendszerének integrálásához vedd fel a kapcsolatot az ügyfélszolgálattal."
       },
       "bookings": {
-        "title": "Foglalások",
+        "title": "Foglalási beállítások",
         "enableLabel": "Foglalások engedélyezése",
         "enableTip": "Ha ki van kapcsolva, a vendégek látják az étlapot, de nem foglalhatnak asztalt.",
         "modeLabel": "Megerősítési mód",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Vissza az admin fiókodhoz ({email}).",
       "rows": {
         "contacts": "Kapcsolat és helyszín",
-        "branding": "Webhely",
-        "general": "Területi beállítások",
+        "branding": "Étlap weboldala",
+        "general": "Pénznem és időzóna",
         "tables": "Asztalok",
-        "orders": "Rendelések",
-        "bookings": "Foglalások",
+        "orders": "Rendelési beállítások",
+        "bookings": "Foglalási beállítások",
         "languages": "Nyelvek",
         "billing": "Számlázás",
         "support": "Támogatás",

@@ -455,7 +455,7 @@
         "locationTip": "Naslov in zemljevid prikazana na javni strani s kontakti. Iščite ali tapnite na zemljevid, da postavite zatič."
       },
       "branding": {
-        "title": "Spletna stran",
+        "title": "Spletna stran menija",
         "accentLabel": "Poudarjena barva",
         "accentTip": "Glavna barva za gumbe in poudarke.",
         "showTitleLabel": "Prikaži ime na domači strani",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Velikost logotipa čez ozadje."
       },
       "general": {
-        "title": "Lokalne nastavitve",
+        "title": "Valuta in časovni pas",
         "menuLinkLabel": "Povezava menija",
         "slugPlaceholder": "vas-slug",
         "copyUrl": "Kopiraj URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Uporablja se za cene v meniju."
       },
       "orders": {
-        "title": "Naročila",
+        "title": "Nastavitve naročil",
         "acceptLabel": "Sprejmi naročila",
         "acceptTip": "Ko je izklopljeno, gostje vidijo meni, vendar ne morejo naročati.",
         "modeLabel": "Način naročanja",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Za integracijo plačilnega sistema v tvoji restavraciji kontaktiraj podporo."
       },
       "bookings": {
-        "title": "Rezervacije",
+        "title": "Nastavitve rezervacij",
         "enableLabel": "Omogoči rezervacije",
         "enableTip": "Ko je izklopljeno, gostje vidijo meni, vendar ne morejo rezervirati mize.",
         "modeLabel": "Način potrditve",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Vrnitev na admin račun ({email}).",
       "rows": {
         "contacts": "Kontakti in lokacija",
-        "branding": "Spletna stran",
-        "general": "Lokalne nastavitve",
+        "branding": "Spletna stran menija",
+        "general": "Valuta in časovni pas",
         "tables": "Mize",
-        "orders": "Naročila",
-        "bookings": "Rezervacije",
+        "orders": "Nastavitve naročil",
+        "bookings": "Nastavitve rezervacij",
         "languages": "Jeziki",
         "billing": "Obračun",
         "support": "Podpora",

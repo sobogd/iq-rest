@@ -455,7 +455,7 @@
         "locationTip": "Adreça i mapa que es mostren a la pàgina de contactes pública. Cerca o toca el mapa per posar el pin."
       },
       "branding": {
-        "title": "Lloc",
+        "title": "Web del menú",
         "accentLabel": "Color d'accent",
         "accentTip": "Color principal per a botons i ressaltats.",
         "showTitleLabel": "Mostra el nom a la pàgina d'inici",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Mida del logo sobre el fons."
       },
       "general": {
-        "title": "Configuració regional",
+        "title": "Moneda i fus horari",
         "menuLinkLabel": "Enllaç del menú",
         "slugPlaceholder": "el-teu-slug",
         "copyUrl": "Copia URL",
@@ -507,7 +507,7 @@
         "currencyTip": "S'usa per als preus del menú."
       },
       "orders": {
-        "title": "Comandes",
+        "title": "Opcions de comandes",
         "acceptLabel": "Accepta comandes",
         "acceptTip": "Quan està desactivat, els clients veuen el menú però no poden comandar.",
         "modeLabel": "Mode de comanda",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Per integrar un sistema de pagament al teu restaurant, contacta amb el suport."
       },
       "bookings": {
-        "title": "Reserves",
+        "title": "Opcions de reserves",
         "enableLabel": "Habilita reserves",
         "enableTip": "Quan està desactivat, els clients veuen el menú però no poden reservar taula.",
         "modeLabel": "Mode de confirmació",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Torna al teu compte d'admin ({email}).",
       "rows": {
         "contacts": "Contactes i ubicació",
-        "branding": "Lloc",
-        "general": "Configuració regional",
+        "branding": "Web del menú",
+        "general": "Moneda i fus horari",
         "tables": "Taules",
-        "orders": "Comandes",
-        "bookings": "Reserves",
+        "orders": "Opcions de comandes",
+        "bookings": "Opcions de reserves",
         "languages": "Idiomes",
         "billing": "Facturació",
         "support": "Suport",

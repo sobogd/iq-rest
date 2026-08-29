@@ -455,7 +455,7 @@
         "locationTip": "Adresa i mapa prikazani na vašoj javnoj stranici kontakta. Pretražite ili dodirnite mapu da postavite čiodu."
       },
       "branding": {
-        "title": "Сајт",
+        "title": "Sajt menija",
         "accentLabel": "Boja akcenta",
         "accentTip": "Glavna boja za dugmad i isticanja.",
         "showTitleLabel": "Prikaži ime na početnoj",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Veličina logotipa preko pozadine."
       },
       "general": {
-        "title": "Локализација",
+        "title": "Valuta i vremenska zona",
         "menuLinkLabel": "Link menija",
         "slugPlaceholder": "vaš-slug",
         "copyUrl": "Kopiraj URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Koristi se za cene u meniju."
       },
       "orders": {
-        "title": "Porudžbine",
+        "title": "Podešavanja porudžbina",
         "acceptLabel": "Prihvataj porudžbine",
         "acceptTip": "Kad je isključeno, gosti vide meni, ali ne mogu naručiti.",
         "modeLabel": "Režim porudžbina",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "За интеграцију платног система у твој ресторан контактирај подршку."
       },
       "bookings": {
-        "title": "Rezervacije",
+        "title": "Podešavanja rezervacija",
         "enableLabel": "Omogući rezervacije",
         "enableTip": "Kad je isključeno, gosti vide meni, ali ne mogu rezervisati sto.",
         "modeLabel": "Režim potvrde",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Vraćanje na admin nalog ({email}).",
       "rows": {
         "contacts": "Kontakti i lokacija",
-        "branding": "Сајт",
-        "general": "Локализација",
+        "branding": "Sajt menija",
+        "general": "Valuta i vremenska zona",
         "tables": "Stolovi",
-        "orders": "Porudžbine",
-        "bookings": "Rezervacije",
+        "orders": "Podešavanja porudžbina",
+        "bookings": "Podešavanja rezervacija",
         "languages": "Jezici",
         "billing": "Naplata",
         "support": "Podrška",

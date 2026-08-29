@@ -455,7 +455,7 @@
         "locationTip": "Aadress ja kaart kuvatakse sinu avalikul kontaktilehel. Otsi või vajuta kaardil, et nõela paigutada."
       },
       "branding": {
-        "title": "Sait",
+        "title": "Menüü veebisait",
         "accentLabel": "Aktsendivärv",
         "accentTip": "Põhivärv nuppudele ja esiletõstmistele.",
         "showTitleLabel": "Näita nime avalehel",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Logo suurus tausta peal."
       },
       "general": {
-        "title": "Lokaadi seaded",
+        "title": "Valuuta ja ajavöönd",
         "menuLinkLabel": "Menüü link",
         "slugPlaceholder": "sinu-slug",
         "copyUrl": "Kopeeri URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Kasutatakse menüü hindades."
       },
       "orders": {
-        "title": "Tellimused",
+        "title": "Tellimuste seaded",
         "acceptLabel": "Võta tellimusi vastu",
         "acceptTip": "Välja lülitatuna näevad külalised menüüd, kuid ei saa tellida.",
         "modeLabel": "Tellimuse režiim",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Maksesüsteemi integreerimiseks oma restorani võtke ühendust toega."
       },
       "bookings": {
-        "title": "Broneeringud",
+        "title": "Broneeringute seaded",
         "enableLabel": "Luba broneeringud",
         "enableTip": "Välja lülitatuna näevad külalised menüüd, kuid ei saa lauda broneerida.",
         "modeLabel": "Kinnitusrežiim",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Naase oma admin-kontole ({email}).",
       "rows": {
         "contacts": "Kontaktid ja asukoht",
-        "branding": "Sait",
-        "general": "Lokaadi seaded",
+        "branding": "Menüü veebisait",
+        "general": "Valuuta ja ajavöönd",
         "tables": "Lauad",
-        "orders": "Tellimused",
-        "bookings": "Broneeringud",
+        "orders": "Tellimuste seaded",
+        "bookings": "Broneeringute seaded",
         "languages": "Keeled",
         "billing": "Arveldus",
         "support": "Tugi",

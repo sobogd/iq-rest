@@ -455,7 +455,7 @@
         "locationTip": "Adrese un karte tiek parādītas jūsu publiskajā kontaktu lapā. Meklējiet vai pieskarieties kartei, lai novietotu adatu."
       },
       "branding": {
-        "title": "Vietne",
+        "title": "Ēdienkartes vietne",
         "accentLabel": "Akcenta krāsa",
         "accentTip": "Galvenā krāsa pogām un izcēlumiem.",
         "showTitleLabel": "Rādīt nosaukumu sākumlapā",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Logotipa izmērs virs fona."
       },
       "general": {
-        "title": "Reģiona iestatījumi",
+        "title": "Valūta un laika josla",
         "menuLinkLabel": "Ēdienkartes saite",
         "slugPlaceholder": "jūsu-slug",
         "copyUrl": "Kopēt URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Tiek izmantota cenām ēdienkartē."
       },
       "orders": {
-        "title": "Pasūtījumi",
+        "title": "Pasūtījumu iestatījumi",
         "acceptLabel": "Pieņemt pasūtījumus",
         "acceptTip": "Kad izslēgts, viesi var redzēt ēdienkarti, bet nevar pasūtīt.",
         "modeLabel": "Pasūtījumu režīms",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Lai integrētu maksājumu sistēmu jūsu restorānā, sazinieties ar atbalstu."
       },
       "bookings": {
-        "title": "Rezervācijas",
+        "title": "Rezervāciju iestatījumi",
         "enableLabel": "Iespējot rezervācijas",
         "enableTip": "Kad izslēgts, viesi var redzēt ēdienkarti, bet nevar rezervēt galdu.",
         "modeLabel": "Apstiprinājuma režīms",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Atgriezties pie sava admin konta ({email}).",
       "rows": {
         "contacts": "Kontakti un atrašanās vieta",
-        "branding": "Vietne",
-        "general": "Reģiona iestatījumi",
+        "branding": "Ēdienkartes vietne",
+        "general": "Valūta un laika josla",
         "tables": "Galdi",
-        "orders": "Pasūtījumi",
-        "bookings": "Rezervācijas",
+        "orders": "Pasūtījumu iestatījumi",
+        "bookings": "Rezervāciju iestatījumi",
         "languages": "Valodas",
         "billing": "Norēķini",
         "support": "Atbalsts",

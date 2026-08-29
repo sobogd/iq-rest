@@ -455,7 +455,7 @@
         "locationTip": "公開連絡先ページに表示される住所と地図。検索するか地図をタップしてピンを設定します。"
       },
       "branding": {
-        "title": "サイト",
+        "title": "メニューサイト",
         "accentLabel": "アクセントカラー",
         "accentTip": "ボタンとハイライトのメインカラー。",
         "showTitleLabel": "ホームページに名前を表示",
@@ -497,7 +497,7 @@
         "logoScaleTip": "背景に対するロゴのサイズ。"
       },
       "general": {
-        "title": "地域設定",
+        "title": "通貨・タイムゾーン",
         "menuLinkLabel": "メニューリンク",
         "slugPlaceholder": "your-slug",
         "copyUrl": "URLをコピー",
@@ -507,7 +507,7 @@
         "currencyTip": "メニューの価格に使用されます。"
       },
       "orders": {
-        "title": "注文",
+        "title": "注文設定",
         "acceptLabel": "注文を受け付ける",
         "acceptTip": "オフの場合、ゲストはメニューを見ることができますが注文できません。",
         "modeLabel": "注文モード",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "レストランに決済システムを統合するには、サポートまでお問い合わせください。"
       },
       "bookings": {
-        "title": "予約",
+        "title": "予約設定",
         "enableLabel": "予約を有効にする",
         "enableTip": "オフの場合、ゲストはメニューを見ることができますがテーブルを予約できません。",
         "modeLabel": "確認モード",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "管理者アカウント ({email}) に戻ります。",
       "rows": {
         "contacts": "連絡先と場所",
-        "branding": "サイト",
-        "general": "地域設定",
+        "branding": "メニューサイト",
+        "general": "通貨・タイムゾーン",
         "tables": "テーブル",
-        "orders": "注文",
-        "bookings": "予約",
+        "orders": "注文設定",
+        "bookings": "予約設定",
         "languages": "言語",
         "billing": "請求",
         "support": "サポート",

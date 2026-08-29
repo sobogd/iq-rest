@@ -455,7 +455,7 @@
         "locationTip": "Adress och karta visas på din offentliga kontaktsida. Sök eller tryck på kartan för att placera nålen."
       },
       "branding": {
-        "title": "Webbplats",
+        "title": "Menysida",
         "accentLabel": "Accentfärg",
         "accentTip": "Huvudfärg för knappar och markeringar.",
         "showTitleLabel": "Visa namn på startsidan",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Logotypens storlek över bakgrunden."
       },
       "general": {
-        "title": "Region",
+        "title": "Valuta och tidszon",
         "menuLinkLabel": "Menylänk",
         "slugPlaceholder": "din-slug",
         "copyUrl": "Kopiera URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Används för priser i menyn."
       },
       "orders": {
-        "title": "Beställningar",
+        "title": "Orderinställningar",
         "acceptLabel": "Acceptera beställningar",
         "acceptTip": "När av kan gäster se menyn men inte beställa.",
         "modeLabel": "Beställningsläge",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Kontakta support för att integrera ett betalningssystem i din restaurang."
       },
       "bookings": {
-        "title": "Bokningar",
+        "title": "Bokningsinställningar",
         "enableLabel": "Aktivera bokningar",
         "enableTip": "När av kan gäster se menyn men inte boka bord.",
         "modeLabel": "Bekräftelseläge",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Återgå till ditt admin-konto ({email}).",
       "rows": {
         "contacts": "Kontakter & plats",
-        "branding": "Webbplats",
-        "general": "Region",
+        "branding": "Menysida",
+        "general": "Valuta och tidszon",
         "tables": "Bord",
-        "orders": "Beställningar",
-        "bookings": "Bokningar",
+        "orders": "Orderinställningar",
+        "bookings": "Bokningsinställningar",
         "languages": "Språk",
         "billing": "Fakturering",
         "support": "Support",

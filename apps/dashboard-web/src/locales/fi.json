@@ -455,7 +455,7 @@
         "locationTip": "Osoite ja kartta näytetään julkisella yhteystietosivullasi. Hae tai napauta karttaa asettaaksesi nuppineulan."
       },
       "branding": {
-        "title": "Sivusto",
+        "title": "Menusivusto",
         "accentLabel": "Korostusväri",
         "accentTip": "Pääväri painikkeille ja korostuksille.",
         "showTitleLabel": "Näytä nimi etusivulla",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Logon koko taustan päällä."
       },
       "general": {
-        "title": "Aluekohtaiset",
+        "title": "Valuutta ja aikavyöhyke",
         "menuLinkLabel": "Menulinkki",
         "slugPlaceholder": "oma-slug",
         "copyUrl": "Kopioi URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Käytetään menun hintoihin."
       },
       "orders": {
-        "title": "Tilaukset",
+        "title": "Tilausasetukset",
         "acceptLabel": "Hyväksy tilaukset",
         "acceptTip": "Pois päältä, vieraat näkevät menun mutta eivät voi tilata.",
         "modeLabel": "Tilaustila",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Ota yhteyttä tukeen integroidaksesi maksujärjestelmän ravintolaasi."
       },
       "bookings": {
-        "title": "Varaukset",
+        "title": "Varausasetukset",
         "enableLabel": "Ota varaukset käyttöön",
         "enableTip": "Pois päältä, vieraat näkevät menun mutta eivät voi varata pöytää.",
         "modeLabel": "Vahvistustapa",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Palaa admin-tilillesi ({email}).",
       "rows": {
         "contacts": "Yhteystiedot ja sijainti",
-        "branding": "Sivusto",
-        "general": "Aluekohtaiset",
+        "branding": "Menusivusto",
+        "general": "Valuutta ja aikavyöhyke",
         "tables": "Pöydät",
-        "orders": "Tilaukset",
-        "bookings": "Varaukset",
+        "orders": "Tilausasetukset",
+        "bookings": "Varausasetukset",
         "languages": "Kielet",
         "billing": "Laskutus",
         "support": "Tuki",

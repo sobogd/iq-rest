@@ -455,7 +455,7 @@
         "locationTip": "Adresa a mapa zobrazené na verejnej kontaktnej stránke. Hľadajte alebo klepnite na mapu pre umiestnenie špendlíka."
       },
       "branding": {
-        "title": "Web",
+        "title": "Web s menu",
         "accentLabel": "Akcentová farba",
         "accentTip": "Hlavná farba pre tlačidlá a zvýraznenia.",
         "showTitleLabel": "Zobraziť názov na úvodnej stránke",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Veľkosť loga cez pozadie."
       },
       "general": {
-        "title": "Miestne nastavenia",
+        "title": "Mena a časové pásmo",
         "menuLinkLabel": "Odkaz menu",
         "slugPlaceholder": "vaš-slug",
         "copyUrl": "Kopírovať URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Použité pre ceny v menu."
       },
       "orders": {
-        "title": "Objednávky",
+        "title": "Nastavenia objednávok",
         "acceptLabel": "Prijímať objednávky",
         "acceptTip": "Ak vypnuté, hostia vidia menu, ale nemôžu objednávať.",
         "modeLabel": "Režim objednávok",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Pre integráciu platobného systému vo vašej reštaurácii kontaktujte podporu."
       },
       "bookings": {
-        "title": "Rezervácie",
+        "title": "Nastavenia rezervácií",
         "enableLabel": "Povoliť rezervácie",
         "enableTip": "Ak vypnuté, hostia vidia menu, ale nemôžu rezervovať stôl.",
         "modeLabel": "Režim potvrdenia",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Návrat na admin účet ({email}).",
       "rows": {
         "contacts": "Kontakty a poloha",
-        "branding": "Web",
-        "general": "Miestne nastavenia",
+        "branding": "Web s menu",
+        "general": "Mena a časové pásmo",
         "tables": "Stoly",
-        "orders": "Objednávky",
-        "bookings": "Rezervácie",
+        "orders": "Nastavenia objednávok",
+        "bookings": "Nastavenia rezervácií",
         "languages": "Jazyky",
         "billing": "Fakturácia",
         "support": "Podpora",

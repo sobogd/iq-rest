@@ -455,7 +455,7 @@
         "locationTip": "Adresse und Karte auf Ihrer öffentlichen Kontaktseite. Suchen oder auf die Karte tippen, um den Pin zu setzen."
       },
       "branding": {
-        "title": "Webseite",
+        "title": "Speisekarten-Website",
         "accentLabel": "Akzentfarbe",
         "accentTip": "Hauptfarbe für Buttons und Hervorhebungen.",
         "showTitleLabel": "Name auf der Startseite anzeigen",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Größe des Logos über dem Hintergrund."
       },
       "general": {
-        "title": "Region",
+        "title": "Währung & Zeitzone",
         "menuLinkLabel": "Karten-Link",
         "slugPlaceholder": "ihr-slug",
         "copyUrl": "URL kopieren",
@@ -507,7 +507,7 @@
         "currencyTip": "Wird für Preise in Ihrer Karte verwendet."
       },
       "orders": {
-        "title": "Bestellungen",
+        "title": "Bestelloptionen",
         "acceptLabel": "Bestellungen annehmen",
         "acceptTip": "Wenn aus, können Gäste die Karte ansehen, aber nicht bestellen.",
         "modeLabel": "Bestellmodus",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Wenden Sie sich an den Support, um ein Zahlungssystem in Ihr Restaurant zu integrieren."
       },
       "bookings": {
-        "title": "Reservierungen",
+        "title": "Reservierungsoptionen",
         "enableLabel": "Reservierungen aktivieren",
         "enableTip": "Wenn aus, können Gäste die Karte ansehen, aber keinen Tisch reservieren.",
         "modeLabel": "Bestätigungsmodus",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Zurück zu Ihrem Admin-Konto ({email}).",
       "rows": {
         "contacts": "Kontakt & Standort",
-        "branding": "Webseite",
-        "general": "Region",
+        "branding": "Speisekarten-Website",
+        "general": "Währung & Zeitzone",
         "tables": "Tische",
-        "orders": "Bestellungen",
-        "bookings": "Reservierungen",
+        "orders": "Bestelloptionen",
+        "bookings": "Reservierungsoptionen",
         "languages": "Sprachen",
         "billing": "Abrechnung",
         "support": "Support",

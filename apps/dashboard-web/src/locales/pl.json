@@ -455,7 +455,7 @@
         "locationTip": "Adres i mapa wyświetlane na publicznej stronie kontaktowej. Wyszukaj lub stuknij mapę, aby ustawić pinezkę."
       },
       "branding": {
-        "title": "Witryna",
+        "title": "Strona menu",
         "accentLabel": "Kolor akcentu",
         "accentTip": "Główny kolor przycisków i wyróżnień.",
         "showTitleLabel": "Pokaż nazwę na stronie głównej",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Rozmiar logo na tle."
       },
       "general": {
-        "title": "Lokalizacja",
+        "title": "Waluta i strefa czasowa",
         "menuLinkLabel": "Link do menu",
         "slugPlaceholder": "twój-slug",
         "copyUrl": "Kopiuj URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Używana dla cen w menu."
       },
       "orders": {
-        "title": "Zamówienia",
+        "title": "Ustawienia zamówień",
         "acceptLabel": "Przyjmuj zamówienia",
         "acceptTip": "Gdy wyłączone, goście widzą menu, ale nie mogą zamawiać.",
         "modeLabel": "Tryb zamówień",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Aby zintegrować system płatności w swojej restauracji, skontaktuj się z pomocą techniczną."
       },
       "bookings": {
-        "title": "Rezerwacje",
+        "title": "Ustawienia rezerwacji",
         "enableLabel": "Włącz rezerwacje",
         "enableTip": "Gdy wyłączone, goście widzą menu, ale nie mogą rezerwować stolika.",
         "modeLabel": "Tryb potwierdzania",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Wróć do konta administratora ({email}).",
       "rows": {
         "contacts": "Kontakt i lokalizacja",
-        "branding": "Witryna",
-        "general": "Lokalizacja",
+        "branding": "Strona menu",
+        "general": "Waluta i strefa czasowa",
         "tables": "Stoliki",
-        "orders": "Zamówienia",
-        "bookings": "Rezerwacje",
+        "orders": "Ustawienia zamówień",
+        "bookings": "Ustawienia rezerwacji",
         "languages": "Języki",
         "billing": "Rozliczenia",
         "support": "Wsparcie",

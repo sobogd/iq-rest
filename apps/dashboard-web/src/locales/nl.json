@@ -455,7 +455,7 @@
         "locationTip": "Adres en kaart op uw publieke contactpagina. Zoek of tik op de kaart om de pin te plaatsen."
       },
       "branding": {
-        "title": "Site",
+        "title": "Menusite",
         "accentLabel": "Accentkleur",
         "accentTip": "Hoofdkleur voor knoppen en accenten.",
         "showTitleLabel": "Naam op startpagina tonen",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Grootte van het logo op de achtergrond."
       },
       "general": {
-        "title": "Regio",
+        "title": "Valuta en tijdzone",
         "menuLinkLabel": "Menulink",
         "slugPlaceholder": "uw-slug",
         "copyUrl": "URL kopiëren",
@@ -507,7 +507,7 @@
         "currencyTip": "Wordt gebruikt voor prijzen in uw menu."
       },
       "orders": {
-        "title": "Bestellingen",
+        "title": "Bestelopties",
         "acceptLabel": "Bestellingen accepteren",
         "acceptTip": "Indien uit, kunnen gasten het menu bekijken maar niet bestellen.",
         "modeLabel": "Bestelmodus",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Neem contact op met support om een betaalsysteem in je restaurant te integreren."
       },
       "bookings": {
-        "title": "Reserveringen",
+        "title": "Reserveringsopties",
         "enableLabel": "Reserveringen inschakelen",
         "enableTip": "Indien uit, kunnen gasten het menu bekijken maar niet reserveren.",
         "modeLabel": "Bevestigingsmodus",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Terug naar uw admin-account ({email}).",
       "rows": {
         "contacts": "Contacten en locatie",
-        "branding": "Site",
-        "general": "Regio",
+        "branding": "Menusite",
+        "general": "Valuta en tijdzone",
         "tables": "Tafels",
-        "orders": "Bestellingen",
-        "bookings": "Reserveringen",
+        "orders": "Bestelopties",
+        "bookings": "Reserveringsopties",
         "languages": "Talen",
         "billing": "Facturering",
         "support": "Ondersteuning",

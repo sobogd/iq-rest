@@ -455,7 +455,7 @@
         "locationTip": "公开联系页面上显示的地址和地图。搜索或点击地图设置定位点。"
       },
       "branding": {
-        "title": "网站",
+        "title": "菜单网站",
         "accentLabel": "强调色",
         "accentTip": "按钮和高亮的主色。",
         "showTitleLabel": "在主页显示名称",
@@ -497,7 +497,7 @@
         "logoScaleTip": "背景上 Logo 的大小。"
       },
       "general": {
-        "title": "区域",
+        "title": "货币与时区",
         "menuLinkLabel": "菜单链接",
         "slugPlaceholder": "your-slug",
         "copyUrl": "复制链接",
@@ -507,7 +507,7 @@
         "currencyTip": "用于菜单中的价格。"
       },
       "orders": {
-        "title": "订单",
+        "title": "订单设置",
         "acceptLabel": "接受订单",
         "acceptTip": "关闭时，顾客可以查看菜单但不能下单。",
         "modeLabel": "订单模式",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "要为您的餐厅集成支付系统,请联系客服。"
       },
       "bookings": {
-        "title": "预订",
+        "title": "预订设置",
         "enableLabel": "启用预订",
         "enableTip": "关闭时，顾客可以查看菜单但不能预订桌台。",
         "modeLabel": "确认模式",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "返回您的管理员账户 ({email})。",
       "rows": {
         "contacts": "联系方式与位置",
-        "branding": "网站",
-        "general": "区域",
+        "branding": "菜单网站",
+        "general": "货币与时区",
         "tables": "桌台",
-        "orders": "订单",
-        "bookings": "预订",
+        "orders": "订单设置",
+        "bookings": "预订设置",
         "languages": "语言",
         "billing": "计费",
         "support": "支持",

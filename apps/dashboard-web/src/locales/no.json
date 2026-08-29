@@ -455,7 +455,7 @@
         "locationTip": "Adresse og kart vises på din offentlige kontaktside. Søk eller trykk på kartet for å plassere nålen."
       },
       "branding": {
-        "title": "Nettsted",
+        "title": "Menyside",
         "accentLabel": "Aksentfarge",
         "accentTip": "Hovedfarge for knapper og fremhevinger.",
         "showTitleLabel": "Vis navn på forsiden",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Størrelsen på logoen over bakgrunnen."
       },
       "general": {
-        "title": "Regional",
+        "title": "Valuta og tidssone",
         "menuLinkLabel": "Menylink",
         "slugPlaceholder": "din-slug",
         "copyUrl": "Kopier URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Brukes for priser i menyen."
       },
       "orders": {
-        "title": "Bestillinger",
+        "title": "Bestillingsoppsett",
         "acceptLabel": "Aksepter bestillinger",
         "acceptTip": "Når av kan gjester se menyen, men ikke bestille.",
         "modeLabel": "Bestillingsmodus",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Ta kontakt med support for å integrere et betalingssystem i restauranten din."
       },
       "bookings": {
-        "title": "Bookinger",
+        "title": "Bookingoppsett",
         "enableLabel": "Aktiver bookinger",
         "enableTip": "Når av kan gjester se menyen, men ikke booke bord.",
         "modeLabel": "Bekreftelsesmodus",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Tilbake til admin-kontoen din ({email}).",
       "rows": {
         "contacts": "Kontakter & adresse",
-        "branding": "Nettsted",
-        "general": "Regional",
+        "branding": "Menyside",
+        "general": "Valuta og tidssone",
         "tables": "Bord",
-        "orders": "Bestillinger",
-        "bookings": "Bookinger",
+        "orders": "Bestillingsoppsett",
+        "bookings": "Bookingoppsett",
         "languages": "Språk",
         "billing": "Fakturering",
         "support": "Support",

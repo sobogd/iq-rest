@@ -455,7 +455,7 @@
         "locationTip": "Adresa și harta afișate pe pagina de contacte publică. Caută sau atinge harta pentru a fixa pinul."
       },
       "branding": {
-        "title": "Site",
+        "title": "Site meniu",
         "accentLabel": "Culoare de accent",
         "accentTip": "Culoarea principală pentru butoane și evidențieri.",
         "showTitleLabel": "Afișează numele pe pagina principală",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Dimensiunea logo-ului peste fundal."
       },
       "general": {
-        "title": "Regional",
+        "title": "Monedă și fus orar",
         "menuLinkLabel": "Link meniu",
         "slugPlaceholder": "slug-ul-tău",
         "copyUrl": "Copiază URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Folosită pentru prețurile din meniu."
       },
       "orders": {
-        "title": "Comenzi",
+        "title": "Setări comenzi",
         "acceptLabel": "Acceptă comenzi",
         "acceptTip": "Când e dezactivat, clienții văd meniul dar nu pot comanda.",
         "modeLabel": "Mod comandă",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Pentru a integra un sistem de plată în restaurantul tău, contactează asistența."
       },
       "bookings": {
-        "title": "Rezervări",
+        "title": "Setări rezervări",
         "enableLabel": "Activează rezervările",
         "enableTip": "Când e dezactivat, clienții văd meniul dar nu pot rezerva o masă.",
         "modeLabel": "Mod confirmare",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Revino la contul de admin ({email}).",
       "rows": {
         "contacts": "Contacte și locație",
-        "branding": "Site",
-        "general": "Regional",
+        "branding": "Site meniu",
+        "general": "Monedă și fus orar",
         "tables": "Mese",
-        "orders": "Comenzi",
-        "bookings": "Rezervări",
+        "orders": "Setări comenzi",
+        "bookings": "Setări rezervări",
         "languages": "Limbi",
         "billing": "Facturare",
         "support": "Suport",

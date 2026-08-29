@@ -7,7 +7,7 @@
       "orders": "Pedidos",
       "kitchen": "Cozinha",
       "analytics": "Análises",
-      "settings": "Ajustes",
+      "settings": "Definições",
       "untitledRestaurant": "Restaurante sem nome"
     },
     "common": {
@@ -455,7 +455,7 @@
         "locationTip": "Endereço e mapa apresentados na página de contactos pública. Pesquise ou toque no mapa para definir o pino."
       },
       "branding": {
-        "title": "Site",
+        "title": "Site do menu",
         "accentLabel": "Cor de destaque",
         "accentTip": "Cor principal para botões e destaques.",
         "showTitleLabel": "Mostrar nome na página inicial",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Tamanho do logótipo sobre o fundo."
       },
       "general": {
-        "title": "Localização",
+        "title": "Moeda e fuso horário",
         "menuLinkLabel": "Link do menu",
         "slugPlaceholder": "o-seu-slug",
         "copyUrl": "Copiar URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Usada para os preços do menu."
       },
       "orders": {
-        "title": "Pedidos",
+        "title": "Definições de pedidos",
         "acceptLabel": "Aceitar pedidos",
         "acceptTip": "Quando desligado, os clientes podem ver o menu mas não fazer pedidos.",
         "modeLabel": "Modo de pedido",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Para integrar um sistema de pagamento no teu restaurante, contacta o suporte."
       },
       "bookings": {
-        "title": "Reservas",
+        "title": "Definições de reservas",
         "enableLabel": "Ativar reservas",
         "enableTip": "Quando desligado, os clientes podem ver o menu mas não reservar mesa.",
         "modeLabel": "Modo de confirmação",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Voltar à sua conta de admin ({email}).",
       "rows": {
         "contacts": "Contactos e localização",
-        "branding": "Site",
-        "general": "Localização",
+        "branding": "Site do menu",
+        "general": "Moeda e fuso horário",
         "tables": "Mesas",
-        "orders": "Pedidos",
-        "bookings": "Reservas",
+        "orders": "Definições de pedidos",
+        "bookings": "Definições de reservas",
         "languages": "Idiomas",
         "billing": "Faturação",
         "support": "Suporte",

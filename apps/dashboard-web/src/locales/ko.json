@@ -455,7 +455,7 @@
         "locationTip": "공개 연락처 페이지에 표시되는 주소와 지도. 검색하거나 지도를 탭하여 핀을 설정합니다."
       },
       "branding": {
-        "title": "사이트",
+        "title": "메뉴 사이트",
         "accentLabel": "강조 색상",
         "accentTip": "버튼과 강조 표시의 주요 색상.",
         "showTitleLabel": "홈페이지에 이름 표시",
@@ -497,7 +497,7 @@
         "logoScaleTip": "배경 위 로고의 크기입니다."
       },
       "general": {
-        "title": "지역 설정",
+        "title": "통화 및 시간대",
         "menuLinkLabel": "메뉴 링크",
         "slugPlaceholder": "your-slug",
         "copyUrl": "URL 복사",
@@ -507,7 +507,7 @@
         "currencyTip": "메뉴의 가격에 사용됩니다."
       },
       "orders": {
-        "title": "주문",
+        "title": "주문 설정",
         "acceptLabel": "주문 받기",
         "acceptTip": "꺼져 있을 때 손님은 메뉴를 볼 수 있지만 주문할 수 없습니다.",
         "modeLabel": "주문 모드",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "레스토랑에 결제 시스템을 통합하려면 지원팀에 문의하세요."
       },
       "bookings": {
-        "title": "예약",
+        "title": "예약 설정",
         "enableLabel": "예약 활성화",
         "enableTip": "꺼져 있을 때 손님은 메뉴를 볼 수 있지만 테이블을 예약할 수 없습니다.",
         "modeLabel": "확인 모드",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "관리자 계정 ({email})으로 돌아갑니다.",
       "rows": {
         "contacts": "연락처 및 위치",
-        "branding": "사이트",
-        "general": "지역 설정",
+        "branding": "메뉴 사이트",
+        "general": "통화 및 시간대",
         "tables": "테이블",
-        "orders": "주문",
-        "bookings": "예약",
+        "orders": "주문 설정",
+        "bookings": "예약 설정",
         "languages": "언어",
         "billing": "결제",
         "support": "지원",

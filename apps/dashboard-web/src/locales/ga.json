@@ -455,7 +455,7 @@
         "locationTip": "Seoladh agus léarscáil léirithe ar do leathanach teagmhála phoiblí. Cuardaigh nó tapáil ar an léarscáil chun an pionna a shocrú."
       },
       "branding": {
-        "title": "Suíomh",
+        "title": "Suíomh an bhiachláir",
         "accentLabel": "Dath aibhsithe",
         "accentTip": "Príomhdhath do chnaipí agus aibhsithe.",
         "showTitleLabel": "Taispeáin ainm ar an mbaile",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Méid an lógó os cionn an chúlra."
       },
       "general": {
-        "title": "Áitiúil",
+        "title": "Airgeadra agus crios ama",
         "menuLinkLabel": "Nasc bhiachláir",
         "slugPlaceholder": "do-slug",
         "copyUrl": "Cóipeáil URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Úsáidte do phraghsanna sa bhiachlár."
       },
       "orders": {
-        "title": "Orduithe",
+        "title": "Socruithe ordaithe",
         "acceptLabel": "Glac orduithe",
         "acceptTip": "Nuair atá sé as, féadann cuairteoirí an biachlár a fheiceáil ach ní féidir leo orduithe a chur.",
         "modeLabel": "Mód ordaithe",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Chun córas íocaíochta a chomhtháthú don bhialann agat, déan teagmháil leis an tacaíocht."
       },
       "bookings": {
-        "title": "Áirithintí",
+        "title": "Socruithe áirithinte",
         "enableLabel": "Cumasaigh áirithintí",
         "enableTip": "Nuair atá sé as, féadann cuairteoirí an biachlár a fheiceáil ach ní féidir leo bord a chur in áirithe.",
         "modeLabel": "Mód deimhnithe",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Fill ar do chuntas riarthóra ({email}).",
       "rows": {
         "contacts": "Teagmhálacha agus suíomh",
-        "branding": "Suíomh",
-        "general": "Áitiúil",
+        "branding": "Suíomh an bhiachláir",
+        "general": "Airgeadra agus crios ama",
         "tables": "Boird",
-        "orders": "Orduithe",
-        "bookings": "Áirithintí",
+        "orders": "Socruithe ordaithe",
+        "bookings": "Socruithe áirithinte",
         "languages": "Teangacha",
         "billing": "Billeáil",
         "support": "Tacaíocht",

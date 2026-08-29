@@ -455,7 +455,7 @@
         "locationTip": "Dirección y mapa que se muestran en tu página de contactos pública. Busca o toca el mapa para fijar el punto."
       },
       "branding": {
-        "title": "Sitio",
+        "title": "Web del menú",
         "accentLabel": "Color de acento",
         "accentTip": "Color principal para botones y resaltados.",
         "showTitleLabel": "Mostrar nombre en la página de inicio",
@@ -497,7 +497,7 @@
         "logoScaleTip": "Tamaño del logo sobre el fondo."
       },
       "general": {
-        "title": "Configuración regional",
+        "title": "Moneda y zona horaria",
         "menuLinkLabel": "Enlace del menú",
         "slugPlaceholder": "tu-slug",
         "copyUrl": "Copiar URL",
@@ -507,7 +507,7 @@
         "currencyTip": "Se usa para los precios de tu menú."
       },
       "orders": {
-        "title": "Pedidos",
+        "title": "Ajustes de pedidos",
         "acceptLabel": "Aceptar pedidos",
         "acceptTip": "Si está desactivado, los clientes pueden ver el menú pero no realizar pedidos.",
         "modeLabel": "Modo de pedido",
@@ -525,7 +525,7 @@
         "paymentIntegrationTip": "Para integrar un sistema de pago en tu restaurante, contacta con soporte."
       },
       "bookings": {
-        "title": "Reservas",
+        "title": "Ajustes de reservas",
         "enableLabel": "Habilitar reservas",
         "enableTip": "Si está desactivado, los clientes pueden ver el menú pero no reservar mesa.",
         "modeLabel": "Modo de confirmación",
@@ -712,11 +712,11 @@
       "exitImpersonationDesc": "Volver a tu cuenta de administrador ({email}).",
       "rows": {
         "contacts": "Contactos y ubicación",
-        "branding": "Sitio",
-        "general": "Configuración regional",
+        "branding": "Web del menú",
+        "general": "Moneda y zona horaria",
         "tables": "Mesas",
-        "orders": "Pedidos",
-        "bookings": "Reservas",
+        "orders": "Ajustes de pedidos",
+        "bookings": "Ajustes de reservas",
         "languages": "Idiomas",
         "billing": "Facturación",
         "support": "Soporte",
