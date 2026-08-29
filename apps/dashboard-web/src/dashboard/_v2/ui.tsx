@@ -13,10 +13,8 @@ import {
  CopyIcon,
  DownloadIcon,
  ExternalLinkIcon,
- EyeIcon,
  GlobeIcon,
  HelpCircleIcon,
- ShareIcon,
  SparklesIcon,
 } from "./icons";
 import { inputClass, labelClass, primaryBtn, secondaryBtn } from "./tokens";
@@ -25,7 +23,6 @@ import { useLocale } from "@/lib/i18n-compat";
 import { useAiImageAccess } from "./sub-context";
 import { isPastDue } from "./billing-status";
 import type { Ml } from "./types";
-import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { useScrollLock } from "./use-scroll-lock";
 import { track } from "@/lib/dashboard-events";
 import { QRCodeCanvas } from "qrcode.react";
@@ -1063,54 +1060,6 @@ export function SaveButton({
    )}
    {label ?? tc("save")}
   </button>
- );
-}
-
-// PreviewButton + ShareButton (used on Menu page sticky bar).
-
-export function PreviewButton({
- url,
- onOpen,
-}: {
- url: string;
- onOpen?: () => void;
-}) {
- const t = useTranslations("dashboard.preview");
- const [open, setOpen] = useState(false);
- const fullUrl = url.startsWith("http") ? url : "https://" + url;
- return (
- <>
- <button
- type="button"
- onClick={() => {
- onOpen?.();
- setOpen(true);
- }}
- className="inline-flex items-center gap-1 h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors"
- >
- <EyeIcon size={14} />
- {t("preview")}
- </button>
- <MenuPreviewModal menuUrl={fullUrl} open={open} onOpenChange={setOpen} />
- </>
- );
-}
-
-export function ShareButton({
- onClick,
-}: {
- onClick: () => void;
-}) {
- const t = useTranslations("dashboard.preview");
- return (
- <button
- type="button"
- onClick={onClick}
- className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md"
- >
- <ShareIcon size={14} />
- {t("share")}
- </button>
  );
 }
 

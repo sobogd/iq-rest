@@ -16,7 +16,7 @@ import {
  EyeOffIcon,
  PlusIcon,
 } from "./icons";
-import { EmptyState, PreviewButton, ShareButton, ShareModal } from "./ui";
+import { EmptyState } from "./ui";
 import { Page } from "./page";
 import { iconBtn, primaryBtn } from "./tokens";
 import { getMlWithFallback } from "./i18n";
@@ -46,7 +46,7 @@ export function MenuList({
  const t = useTranslations("dashboard.menu");
  const restaurant = useRestaurant();
  const router = useDashboardRouter();
- const { defaultLang, currency, menuUrl } = restaurant;
+ const { defaultLang, currency } = restaurant;
  const currencySymbol = currencySymbolOf(currency);
 
  const [categories, setCategories] = useState<Category[]>(initialCategories);
@@ -103,7 +103,6 @@ export function MenuList({
  });
  return map;
  });
- const [shareOpen, setShareOpen] = useState(false);
  const [sub, setSub] = useState<SubData | null>(initialSub);
 
  // Empty layout: no categories and no groups anywhere (drives the empty state).
@@ -338,17 +337,6 @@ export function MenuList({
    onBack={currentGroup ? () => router.push({ name: "menu" }) : undefined}
    actions={
     <>
-     {!currentGroup && menuUrl ? (
-      <PreviewButton url={menuUrl} onOpen={() => track("Click", "Menu preview open")} />
-     ) : null}
-     {!currentGroup && menuUrl ? (
-      <ShareButton
-       onClick={() => {
-        track("Click", "Share open");
-        setShareOpen(true);
-       }}
-      />
-     ) : null}
      {scopedLeaves.length > 0 ? (
       <button
        type="button"
@@ -474,13 +462,6 @@ export function MenuList({
  </div>
  </div>
  )}
- 
-  <ShareModal
-   open={shareOpen}
-   onClose={() => setShareOpen(false)}
-   url={menuUrl}
-   restaurantName={restaurant.name}
-  />
  </Page>
  );
 }

@@ -16,6 +16,7 @@ import {
   CalendarIcon,
   ChefHatIcon,
   CloseIcon,
+  EyeIcon,
   GlobeIcon,
   GridIcon,
   HelpCircleIcon,
@@ -26,6 +27,8 @@ import {
   QrIcon,
   ReceiptIcon,
   RefreshIcon,
+  ShareIcon,
+  SwapIcon,
   UsersIcon,
 } from "./icons";
 import { apiUrl } from "@/lib/api";
@@ -34,6 +37,8 @@ import { useOrdersStreamStateStore } from "./orders-sync-state";
 import { useRestaurantsOrNull } from "./restaurants-context";
 import { useDashboardRouter } from "../_spa/router";
 import type { View } from "../_spa/types";
+import { ShareModal } from "./ui";
+import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { LogoutButton, LogoutAllButton } from "../settings/logout-link";
 import { useScrollLock } from "./use-scroll-lock";
 import type { Restaurant } from "./types";
@@ -110,11 +115,21 @@ export function Sidebar({
   return (
     <>
       {open ? (
-        <div
-          className="md:hidden fixed inset-0 z-40 bg-black/50"
-          onClick={() => setOpen(false)}
-          aria-hidden
-        />
+        <>
+          <div
+            className="md:hidden fixed inset-0 z-40 bg-black/50"
+            onClick={() => setOpen(false)}
+            aria-hidden
+          />
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            aria-label="Close menu"
+            className="md:hidden fixed top-3 left-[min(19rem,calc(100vw-3.5rem))] z-50 h-10 w-10 flex items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-sm"
+          >
+            <CloseIcon size={20} />
+          </button>
+        </>
       ) : null}
       <aside
         className={
@@ -123,7 +138,8 @@ export function Sidebar({
           (open ? "translate-x-0" : "-translate-x-full md:translate-x-0")
         }
       >
-        <SidebarHeader restaurant={restaurant} onClose={() => setOpen(false)} />
+        <SidebarHeader restaurant={restaurant} />
+        <SidebarQuickActions restaurant={restaurant} />
         <SidebarNav isAdmin={isAdmin} impersonatedBy={impersonatedBy} viewName={view.name} />
         <SidebarFooter impersonatedBy={impersonatedBy} />
       </aside>
@@ -131,7 +147,7 @@ export function Sidebar({
   );
 }
 
-function SidebarHeader({ restaurant, onClose }: { restaurant: Restaurant; onClose: () => void }) {
+function SidebarHeader({ restaurant }: { restaurant: Restaurant }) {
   const t = useTranslations("dashboard.nav");
   const th = useTranslations("dashboard.settingsHub");
   const router = useDashboardRouter();
@@ -139,26 +155,67 @@ function SidebarHeader({ restaurant, onClose }: { restaurant: Restaurant; onClos
   const many = (restaurants?.list.length ?? 0) > 1;
 
   return (
-    <div className="shrink-0 flex items-center gap-2 px-3 h-14 border-b border-border">
+    <div className="shrink-0 flex items-center px-3 h-14 border-b border-border">
       <button
         type="button"
         onClick={() => router.push({ name: "settings.restaurants" })}
-        className="min-w-0 flex-1 flex items-center gap-2 h-10 px-2 rounded-lg text-left hover:bg-secondary transition-colors"
+        className="min-w-0 w-full flex items-center gap-2 h-10 px-2 rounded-lg text-left hover:bg-secondary transition-colors"
         title={many ? th("switcherDescMany", { count: restaurants!.list.length }) : th("switcherDescOne")}
       >
+        {/* Name truncates first: the live-sync dot and the switch affordance
+            always stay visible, however long the venue name is. */}
         <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
           {restaurant.name || t("untitledRestaurant")}
         </span>
         <SyncIndicator />
+        <SwapIcon size={15} className="shrink-0 text-muted-foreground" />
+      </button>
+    </div>
+  );
+}
+
+/** Preview + share the public menu — reachable from every dashboard screen,
+ *  not just the menu page. */
+function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
+  const tp = useTranslations("dashboard.preview");
+  const [previewOpen, setPreviewOpen] = useState(false);
+  const [shareOpen, setShareOpen] = useState(false);
+  const menuUrl = restaurant.menuUrl;
+  if (!menuUrl) return null;
+  const fullUrl = menuUrl.startsWith("http") ? menuUrl : "https://" + menuUrl;
+  const btn =
+    "flex-1 min-w-0 h-9 px-2.5 rounded-lg inline-flex items-center justify-center gap-1.5 text-xs font-medium transition-colors";
+  return (
+    <div className="shrink-0 flex items-center gap-2 px-2 py-2 border-b border-border">
+      <button
+        type="button"
+        onClick={() => {
+          track("Click", "Menu preview open");
+          setPreviewOpen(true);
+        }}
+        className={btn + " text-primary-foreground bg-primary-gradient"}
+      >
+        <EyeIcon size={14} />
+        <span className="truncate">{tp("preview")}</span>
       </button>
       <button
         type="button"
-        onClick={onClose}
-        aria-label="Close menu"
-        className="md:hidden shrink-0 h-10 w-10 flex items-center justify-center text-muted-foreground"
+        onClick={() => {
+          track("Click", "Share open");
+          setShareOpen(true);
+        }}
+        className={btn + " text-muted-foreground bg-secondary hover:text-foreground"}
       >
-        <CloseIcon size={20} />
+        <ShareIcon size={14} />
+        <span className="truncate">{tp("share")}</span>
       </button>
+      <MenuPreviewModal menuUrl={fullUrl} open={previewOpen} onOpenChange={setPreviewOpen} />
+      <ShareModal
+        open={shareOpen}
+        onClose={() => setShareOpen(false)}
+        url={menuUrl}
+        restaurantName={restaurant.name}
+      />
     </div>
   );
 }
