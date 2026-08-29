@@ -29,24 +29,37 @@ html {
    behind it; the stop distances come from useScrollFade. Masking the content
    rather than laying a gradient over it matters because the sidebar is
    translucent on desktop (bg-nav/90 + backdrop-blur) — an opaque gradient
-   would seam against the blur. Unsupported browsers simply ignore the rule
-   and show the pane as it is today. */
+   would seam against the blur. The ramp inside the fade distance is weighted
+   toward the edge rather than linear: it holds near full opacity for most of
+   the distance, so rows keep their contrast, and dissolves quickly in the
+   last stretch. Every stop is expressed relative to that distance, so all of
+   them collapse onto the edge when it is 0 — that is how "no fade on this
+   side" is said. Unsupported browsers simply ignore the rule and show the
+   pane as it is today. */
 .scroll-fade {
   --fade-top: 0px;
   --fade-bottom: 0px;
   -webkit-mask-image: linear-gradient(
     to bottom,
-    transparent 0,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.6) calc(var(--fade-top) * 0.25),
+    rgba(0, 0, 0, 0.92) calc(var(--fade-top) * 0.55),
     #000 var(--fade-top),
     #000 calc(100% - var(--fade-bottom)),
-    transparent 100%
+    rgba(0, 0, 0, 0.92) calc(100% - var(--fade-bottom) * 0.55),
+    rgba(0, 0, 0, 0.6) calc(100% - var(--fade-bottom) * 0.25),
+    rgba(0, 0, 0, 0) 100%
   );
   mask-image: linear-gradient(
     to bottom,
-    transparent 0,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.6) calc(var(--fade-top) * 0.25),
+    rgba(0, 0, 0, 0.92) calc(var(--fade-top) * 0.55),
     #000 var(--fade-top),
     #000 calc(100% - var(--fade-bottom)),
-    transparent 100%
+    rgba(0, 0, 0, 0.92) calc(100% - var(--fade-bottom) * 0.55),
+    rgba(0, 0, 0, 0.6) calc(100% - var(--fade-bottom) * 0.25),
+    rgba(0, 0, 0, 0) 100%
   );
 }
 
