@@ -65,14 +65,14 @@ function PageHeaderBar({
 }) {
   const { setOpen } = useSidebar();
   return (
-    <header className="shrink-0 h-14 flex items-center gap-2 px-3 md:px-6 border-b border-border bg-nav/90 backdrop-blur-md">
+    <header className="shrink-0 relative h-14 flex items-center gap-2 px-4 md:px-6 bg-nav/90 backdrop-blur-md after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-border">
       <button
         type="button"
         onClick={() => setOpen(true)}
         aria-label="Open menu"
-        className="md:hidden shrink-0 h-10 w-10 -ml-1 flex items-center justify-center text-foreground"
+        className="md:hidden shrink-0 h-9 w-9 -ml-2 flex items-center justify-center rounded-lg text-foreground hover:bg-secondary transition-colors"
       >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
           <line x1="3" y1="6" x2="21" y2="6" />
           <line x1="3" y1="12" x2="21" y2="12" />
           <line x1="3" y1="18" x2="21" y2="18" />
@@ -83,15 +83,15 @@ function PageHeaderBar({
           type="button"
           onClick={onBack}
           aria-label="Back"
-          className="shrink-0 h-9 w-9 -ml-1 flex items-center justify-center rounded-lg text-muted-foreground hover:bg-secondary transition-colors"
+          className="shrink-0 h-9 w-9 md:-ml-2 flex items-center justify-center rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
         >
-          <ChevronLeftIcon size={18} />
+          <ChevronLeftIcon size={16} />
         </button>
       ) : null}
       <div className="min-w-0 flex-1 flex flex-col justify-center">
-        <h1 className="text-base font-medium text-foreground truncate leading-tight">{title}</h1>
+        <h1 className="text-base font-medium text-foreground truncate leading-5">{title}</h1>
         {subtitle ? (
-          <p className="text-xs text-muted-foreground truncate leading-tight">{subtitle}</p>
+          <p className="text-xs text-muted-foreground truncate leading-4">{subtitle}</p>
         ) : null}
       </div>
       {actions ? <div className="shrink-0 flex items-center gap-2">{actions}</div> : null}

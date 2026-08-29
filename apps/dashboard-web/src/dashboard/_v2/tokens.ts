@@ -29,4 +29,4 @@ export const navRow =
 /** Same row, marked as the current destination. */
 export const navRowActive =
   "h-9 px-3 rounded-lg flex items-center gap-2.5 text-sm font-medium transition-colors " +
-  "bg-foreground text-background";
+  "bg-foreground text-background hover:bg-foreground/90";

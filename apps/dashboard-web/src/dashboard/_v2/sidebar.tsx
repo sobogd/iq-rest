@@ -149,7 +149,7 @@ export function Sidebar({
         <SidebarHeader restaurant={restaurant} />
         <nav
           data-scroll-pane="sidebar"
-          className="flex-1 min-h-0 overflow-y-auto flex flex-col gap-4 px-2 py-3"
+          className="flex-1 min-h-0 overflow-y-auto overscroll-contain flex flex-col gap-4 px-2 py-2"
         >
           <SidebarQuickActions restaurant={restaurant} />
           <SidebarNav isAdmin={isAdmin} impersonatedBy={impersonatedBy} viewName={view.name} />
@@ -168,11 +168,11 @@ function SidebarHeader({ restaurant }: { restaurant: Restaurant }) {
   const many = (restaurants?.list.length ?? 0) > 1;
 
   return (
-    <div className="shrink-0 flex items-center gap-1 h-14 px-2 border-b border-border">
+    <div className="shrink-0 relative flex items-center gap-0.5 h-14 px-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-border">
       {/* Name truncates first so the live-sync dot stays pinned right after it,
           never drifting to the far edge of the panel. */}
-      <div className="min-w-0 flex-1 flex items-center gap-2 px-3">
-        <span className="min-w-0 text-base font-medium text-foreground truncate">
+      <div className="min-w-0 flex-1 flex items-center gap-2.5 pl-3">
+        <span className="min-w-0 truncate text-base font-medium text-foreground leading-5">
           {restaurant.name || t("untitledRestaurant")}
         </span>
         <SyncIndicator />
@@ -253,26 +253,37 @@ function SyncIndicator() {
   const streamState = useOrdersStreamStateStore((s) => s.state);
   const fetching = useIsFetching({ queryKey: ["orders"] }) > 0;
   const qc = useQueryClient();
+  // Fixed 12px slot: the healthy dot is 6px and the reconnect spinner 12px, so
+  // without it the venue name's truncation point moved whenever a query ran.
+  const slot = "w-3 h-3 shrink-0 flex items-center justify-center";
   if (streamState === "open" && !fetching) {
-    return <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" aria-label="live" title="Live" />;
+    return (
+      <span className={slot}>
+        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-label="live" title="Live" />
+      </span>
+    );
   }
   if (streamState === "connecting" || fetching) {
     return (
-      <span
-        className="w-3 h-3 rounded-full border-2 border-amber-400 border-t-transparent animate-spin shrink-0"
-        aria-label="reconnecting"
-        title="Reconnecting"
-      />
+      <span className={slot}>
+        <span
+          className="w-3 h-3 rounded-full border-2 border-amber-400 border-t-transparent animate-spin"
+          aria-label="reconnecting"
+          title="Reconnecting"
+        />
+      </span>
     );
   }
   return (
-    <button
-      type="button"
-      onClick={() => void qc.invalidateQueries({ queryKey: ["orders"] })}
-      className="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0"
-      aria-label="offline"
-      title="Click to refresh"
-    />
+    <span className={slot}>
+      <button
+        type="button"
+        onClick={() => void qc.invalidateQueries({ queryKey: ["orders"] })}
+        className="w-1.5 h-1.5 rounded-full bg-red-500"
+        aria-label="offline"
+        title="Click to refresh"
+      />
+    </span>
   );
 }
 
@@ -354,7 +365,7 @@ function NavGroup({
   const router = useDashboardRouter();
   return (
     <div className="flex flex-col gap-0.5">
-      <div className="px-3 pb-1 text-[11px] font-medium uppercase tracking-wide text-muted-foreground/80">
+      <div className="px-3 pb-1 text-[11px] leading-4 font-medium uppercase tracking-wide text-muted-foreground/80">
         {title}
       </div>
       {items.map((item) => {
