@@ -238,7 +238,7 @@ function ViewBtn({ active, onClick, children }: { active: boolean; onClick: () =
    type="button"
    onClick={onClick}
    className={
-    "h-9 px-3 text-sm font-medium transition-colors " +
+    "h-9 px-3 text-xs font-medium transition-colors " +
     (active ? "bg-primary-gradient text-primary-foreground" : "text-muted-foreground hover:text-foreground")
    }
   >

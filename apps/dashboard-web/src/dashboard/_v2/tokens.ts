@@ -32,10 +32,12 @@ export const navRowActive =
   "bg-foreground text-background hover:bg-foreground/90";
 
 /** Page-header controls carry the sidebar's row metrics: 36px tall, 12px side
- *  padding, 14px label, 10px glyph→label gap, 16px glyphs. Callers append the
+ *  padding, 10px glyph→label gap, 16px glyphs — with a 12px label, a step
+ *  below the sidebar rows so the header reads as chrome, not content. Callers
+ *  append the
  *  surface (bg-secondary / bg-primary-gradient) and the text colour. */
 export const headerBtn =
-  "h-9 px-3 rounded-lg inline-flex items-center gap-2.5 text-sm font-medium transition-colors disabled:opacity-60";
+  "h-9 px-3 rounded-lg inline-flex items-center gap-2.5 text-xs font-medium transition-colors disabled:opacity-60";
 
 /** Same, for a glyph-only control. */
 export const headerIconBtn =

@@ -80,7 +80,7 @@ export function AdminRestaurantsPage() {
               type="button"
               onClick={() => setFilter(f.id)}
               className={
-                "h-8 px-3 text-sm font-medium rounded-md transition-colors " +
+                "h-8 px-3 text-xs font-medium rounded-md transition-colors " +
                 (filter === f.id ? "bg-card text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground")
               }
             >
