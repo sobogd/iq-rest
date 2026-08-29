@@ -17,7 +17,7 @@ import {
 } from "./icons";
 import { EmptyState } from "./ui";
 import { Page } from "./page";
-import { headerBtn, iconBtn, primaryBtn } from "./tokens";
+import { iconBtn, primaryBtn } from "./tokens";
 import { getMlWithFallback } from "./i18n";
 import { currencySymbolOf, moveItem } from "./helpers";
 import { fetchSubscriptionStatus, patchItem, reorderCategories, reorderItemsBulk } from "./api";
@@ -355,8 +355,11 @@ export function MenuList({
        onClick={anyOpen ? collapseAll : expandAll}
        /* Wears the header back button's chrome — no surface of its own, colour
           and hover borrowed from it, 16px glyph — so the two controls on this
-          bar read as one family. */
-       className={headerBtn + " relative justify-center shrink-0 text-foreground hover:bg-secondary"}
+          bar read as one family. Spelled out rather than built from headerBtn
+          because the label runs one step larger than that token's text-xs, and
+          two competing text-* utilities would be settled by CSS order, not by
+          the order they appear here. */
+       className="relative justify-center shrink-0 h-9 px-3 rounded-lg inline-flex items-center gap-2.5 text-sm font-medium transition-colors text-foreground hover:bg-secondary"
       >
        {/* width reservation: longer label fixes the width */}
        <span className="invisible inline-flex items-center gap-2.5" aria-hidden>
