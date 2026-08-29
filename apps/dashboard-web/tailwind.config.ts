@@ -2,6 +2,13 @@ import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
 
 const config: Config = {
+  // Touch devices have no hover, but they do latch one onto the last tapped
+  // element until something else is tapped — so a nav row or header button
+  // stays lit long after the tap that navigated away. This compiles every
+  // `hover:` utility behind `@media (hover: hover)`, which is the only place
+  // the state is real. Tap feedback is left to the browser's own tap
+  // highlight; removing that too would make taps feel dead.
+  future: { hoverOnlyWhenSupported: true },
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
