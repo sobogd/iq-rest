@@ -5,7 +5,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher, SaveButton, TranslatedInput } from "./ui";
 import { Page } from "./page";
-import { headerBtn } from "./tokens";
+import { headerBtn, headerBtnSurface } from "./tokens";
 import { SparklesIcon } from "./icons";
 import { AVAILABLE_LANGUAGES } from "./i18n";
 import type { Ml } from "./types";
@@ -192,7 +192,7 @@ export function CustomTextsSettingsPage() {
       type="button"
       onClick={doTranslateAll}
       disabled={!canTranslate}
-      className={headerBtn + " bg-secondary text-foreground hover:bg-muted"}
+      className={headerBtn + " " + headerBtnSurface}
      >
       {translating ? (
        <span className="w-3 h-3 border-2 border-input border-t-foreground rounded-full animate-spin" />

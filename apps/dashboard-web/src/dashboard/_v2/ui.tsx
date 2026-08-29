@@ -18,7 +18,7 @@ import {
  HelpCircleIcon,
  SparklesIcon,
 } from "./icons";
-import { headerBtn, inputClass, labelClass, primaryBtn, secondaryBtn } from "./tokens";
+import { headerBtn, headerBtnSurface, inputClass, labelClass, primaryBtn, secondaryBtn } from "./tokens";
 import { AVAILABLE_LANGUAGES, getMl, setMl, translateText } from "./i18n";
 import { useLocale } from "@/lib/i18n-compat";
 import { useAiImageAccess } from "./sub-context";
@@ -418,7 +418,7 @@ export function LanguageSwitcher({
  return !v;
  });
  }}
- className={headerBtn + " bg-secondary text-foreground hover:bg-muted"}
+ className={headerBtn + " " + headerBtnSurface}
  title={active.label}
  aria-haspopup="listbox"
  aria-expanded={open}

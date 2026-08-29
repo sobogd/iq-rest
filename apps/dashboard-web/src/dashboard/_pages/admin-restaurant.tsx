@@ -11,7 +11,7 @@ import {
 import { apiUrl } from "@/lib/api";
 import { Select, ToggleSwitch } from "../_v2/ui";
 import { Page } from "../_v2/page";
-import { headerIconBtn } from "../_v2/tokens";
+import { headerBtnSurface, headerIconBtn } from "../_v2/tokens";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { getMenuUrl } from "@/lib/menu-url";
 import { useDashboardRouter } from "../_spa/router";
@@ -382,7 +382,7 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
   const menuLink = restaurant.slug ? getMenuUrl(restaurant.slug) : null;
   const owner = restaurant.users.find((u) => u.isOwner) ?? restaurant.users[0];
   const ownerHandle = owner?.email.split("@")[0] ?? "";
-  const iconBtn = headerIconBtn + " bg-secondary text-foreground hover:bg-muted";
+  const iconBtn = headerIconBtn + " " + headerBtnSurface;
   function openSession() {
     router.push({ name: "settings.admin.traffic", restaurantId });
   }
@@ -390,20 +390,20 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
   const headerActions = (
     <>
       <button type="button" onClick={openSession} className={iconBtn} title="View session events">
-        <Activity className="h-4 w-4" />
+        <Activity className="h-3.5 w-3.5" />
       </button>
       {menuLink ? (
         <button type="button" onClick={() => setPreviewOpen(true)} className={iconBtn} title="View menu">
-          <ExternalLink className="h-4 w-4" />
+          <ExternalLink className="h-3.5 w-3.5" />
         </button>
       ) : null}
       {owner ? (
         <button type="button" onClick={handleImpersonate} disabled={impersonating} className={iconBtn} title={impersonating ? "Logging in…" : `Login as ${ownerHandle}`}>
-          <LogIn className="h-4 w-4" />
+          <LogIn className="h-3.5 w-3.5" />
         </button>
       ) : null}
       <button type="button" onClick={() => setConfirmDelete(true)} className={iconBtn} title="Delete restaurant">
-        <Trash2 className="h-4 w-4 text-red-600" />
+        <Trash2 className="h-3.5 w-3.5 text-red-600" />
       </button>
     </>
   );
@@ -529,10 +529,10 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
             <button
               type="button"
               onClick={close}
-              className={headerIconBtn + " shrink-0 bg-secondary text-foreground hover:bg-muted"}
+              className={headerIconBtn + " shrink-0 " + headerBtnSurface}
               title="Close"
             >
-              <CloseIcon className="h-4 w-4" />
+              <CloseIcon className="h-3.5 w-3.5" />
             </button>
           </div>
           <div className="flex-1 overflow-y-auto p-5">{content}</div>

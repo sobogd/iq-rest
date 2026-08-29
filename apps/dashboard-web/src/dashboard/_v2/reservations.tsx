@@ -11,7 +11,7 @@ import {
 } from "./icons";
 import { Modal, PageHeader } from "./ui";
 import { Page } from "./page";
-import { headerIconBtn } from "./tokens";
+import { headerBtnSurface, headerIconBtn } from "./tokens";
 import { formatTime, isSameDay } from "./helpers";
 import { patchReservation } from "./api";
 import { useDashboardRouter } from "../_spa/router";
@@ -148,10 +148,10 @@ export function ReservationsPage({
    </div>
    <div className="flex items-center gap-1">
     <NavBtn onClick={() => shift(-1)} aria-label={t("prev")}>
-     <ChevronLeftIcon size={16} />
+     <ChevronLeftIcon size={14} />
     </NavBtn>
     <NavBtn onClick={() => shift(1)} aria-label={t("next")}>
-     <ChevronRightIcon size={16} />
+     <ChevronRightIcon size={14} />
     </NavBtn>
    </div>
   </>
@@ -252,7 +252,7 @@ function NavBtn({ children, onClick, ...rest }: { children: React.ReactNode; onC
   <button
    type="button"
    onClick={onClick}
-   className={headerIconBtn + " text-muted-foreground hover:bg-secondary hover:text-foreground"}
+   className={headerIconBtn + " " + headerBtnSurface}
    {...rest}
   >
    {children}

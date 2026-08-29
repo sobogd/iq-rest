@@ -5,7 +5,7 @@ import { Star, EyeOff, Pencil, Trash2, Paperclip, X, FileText, Play, MessageSqua
 import { apiUrl } from "@/lib/api";
 import { SendIcon, RefreshIcon } from "../_v2/icons";
 import { Page } from "../_v2/page";
-import { headerIconBtn } from "../_v2/tokens";
+import { headerBtnSurface, headerIconBtn } from "../_v2/tokens";
 import { useDashboardRouter } from "../_spa/router";
 import { AVAILABLE_LANGUAGES } from "../_v2/i18n";
 
@@ -402,26 +402,26 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
             <button
               type="button"
               onClick={() => setFlag({ watched: !contact.watched })}
-              className={headerIconBtn + " bg-secondary hover:bg-muted " + (contact.watched ? "text-amber-500" : "text-foreground")}
+              className={headerIconBtn + " bg-secondary hover:text-foreground " + (contact.watched ? "text-amber-500" : "text-muted-foreground")}
               title={contact.watched ? "Unwatch" : "Watch"}
             >
-              <Star className="w-4 h-4" fill={contact.watched ? "currentColor" : "none"} />
+              <Star className="w-3.5 h-3.5" fill={contact.watched ? "currentColor" : "none"} />
             </button>
             <button
               type="button"
               onClick={() => setFlag({ muted: !contact.muted })}
-              className={headerIconBtn + " bg-secondary hover:bg-muted " + (contact.muted ? "text-primary" : "text-foreground")}
+              className={headerIconBtn + " bg-secondary hover:text-foreground " + (contact.muted ? "text-primary" : "text-muted-foreground")}
               title={contact.muted ? "Unmute" : "Mute"}
             >
-              <EyeOff className="w-4 h-4" />
+              <EyeOff className="w-3.5 h-3.5" />
             </button>
             <button
               type="button"
               onClick={removeThread}
-              className={headerIconBtn + " bg-secondary text-red-500 hover:bg-red-500/10"}
+              className={headerIconBtn + " bg-secondary text-red-500 hover:text-red-600"}
               title="Delete conversation"
             >
-              <Trash2 className="w-4 h-4" />
+              <Trash2 className="w-3.5 h-3.5" />
             </button>
           </>
         ) : null}
@@ -429,10 +429,10 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
           type="button"
           onClick={() => void load()}
           disabled={loading}
-          className={headerIconBtn + " bg-secondary text-foreground hover:bg-muted"}
+          className={headerIconBtn + " " + headerBtnSurface}
           title="Refresh"
         >
-          <RefreshIcon size={16} className={loading ? "animate-spin" : ""} />
+          <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
         </button>
         </>
       }

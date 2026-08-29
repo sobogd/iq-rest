@@ -5,7 +5,7 @@ import { apiUrl } from "@/lib/api";
 import { useTranslations } from "next-intl";
 import { EmptyState } from "../_v2/ui";
 import { Page } from "../_v2/page";
-import { headerBtn } from "../_v2/tokens";
+import { headerBtn, headerBtnSurface } from "../_v2/tokens";
 import { ChevronDownIcon } from "../_v2/icons";
 import { AVAILABLE_LANGUAGES } from "../_v2/i18n";
 import { track } from "@/lib/dashboard-events";
@@ -273,7 +273,7 @@ function PeriodDropdown({
           if (!open) track("Click", "Analytics period");
           setOpen((v) => !v);
         }}
-        className={headerBtn + " bg-secondary text-foreground hover:bg-muted"}
+        className={headerBtn + " " + headerBtnSurface}
         aria-haspopup="listbox"
         aria-expanded={open}
       >

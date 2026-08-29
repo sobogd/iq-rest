@@ -11,7 +11,7 @@ import { Trash2, X as XIcon, Check } from "lucide-react";
 import { apiUrl } from "@/lib/api";
 import { RefreshIcon } from "../_v2/icons";
 import { Page } from "../_v2/page";
-import { headerBtn, headerIconBtn } from "../_v2/tokens";
+import { headerBtn, headerBtnSurface, headerIconBtn } from "../_v2/tokens";
 import { useDashboardRouter } from "../_spa/router";
 import { useScrollLock } from "../_v2/use-scroll-lock";
 import {
@@ -207,10 +207,10 @@ function TrafficList({
       <button
         type="button"
         onClick={exitSelect}
-        className={headerIconBtn + " bg-secondary text-foreground hover:bg-muted"}
+        className={headerIconBtn + " " + headerBtnSurface}
         title="Cancel"
       >
-        <XIcon className="h-4 w-4" />
+        <XIcon className="h-3.5 w-3.5" />
       </button>
     </div>
   ) : (
@@ -218,10 +218,10 @@ function TrafficList({
       type="button"
       onClick={() => void load()}
       disabled={loading}
-      className={headerIconBtn + " bg-secondary text-foreground hover:bg-muted"}
+      className={headerIconBtn + " " + headerBtnSurface}
       title="Refresh"
     >
-      <RefreshIcon size={16} className={loading ? "animate-spin" : ""} />
+      <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
     </button>
   );
 

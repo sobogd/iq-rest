@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import { ArrowLeftIcon } from "./icons";
 import { useSidebar } from "./sidebar";
+import { headerBtnSurface, headerIconBtn } from "./tokens";
 
 /**
  * Every dashboard screen renders through Page: a fixed header (burger on
@@ -51,15 +52,12 @@ export function Page({
   );
 }
 
-/** Burger and back share one treatment with the page's own header controls
- *  (see the menu list's collapse button): a 32px square on a quiet secondary
- *  fill, muted glyph that warms on hover. No negative margin — the fill makes
- *  the button's edge visible, so hanging it into the bar's padding would read
- *  as a misalignment rather than the optical correction it was for a
- *  surfaceless glyph. */
-const leadingBtn =
-  "shrink-0 h-8 w-8 inline-flex items-center justify-center rounded-md " +
-  "text-muted-foreground bg-secondary hover:text-foreground transition-colors";
+/** Burger and back are header controls like any other, so they wear the shared
+ *  token rather than a copy of it. No negative margin — the fill makes the
+ *  button's edge visible, so hanging it into the bar's padding would read as a
+ *  misalignment rather than the optical correction it was for a surfaceless
+ *  glyph. */
+const leadingBtn = headerIconBtn + " shrink-0 " + headerBtnSurface;
 
 function PageHeaderBar({
   title,
@@ -97,7 +95,7 @@ function PageHeaderBar({
           <ArrowLeftIcon size={14} />
         </button>
       ) : null}
-      <h1 className="min-w-0 flex-1 text-base font-medium text-foreground truncate leading-5">
+      <h1 className="min-w-0 flex-1 text-sm font-medium text-foreground truncate leading-5">
         {title}
       </h1>
       {actions ? <div className="shrink-0 flex items-center gap-2">{actions}</div> : null}

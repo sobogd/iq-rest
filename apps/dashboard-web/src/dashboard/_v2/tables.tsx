@@ -13,7 +13,7 @@ import {
  TableQrModal,
 } from "./ui";
 import { Page } from "./page";
-import { headerBtn, headerIconBtn, inputClass } from "./tokens";
+import { headerBtn, headerBtnSurface, headerIconBtn, inputClass } from "./tokens";
 import { newId } from "./helpers";
 import { createTable, deleteTable, updateTable } from "./api";
 import { apiTableToTable } from "./mappers";
@@ -631,17 +631,17 @@ export function TablesPage({
          type="button"
          onClick={handleDelete}
          aria-label={t("deleteTable")}
-         className={headerIconBtn + " text-red-600 bg-secondary hover:bg-muted"}
+         className={headerIconBtn + " bg-secondary text-red-600 hover:text-red-700"}
         >
-         <TrashIcon size={16} />
+         <TrashIcon size={14} />
         </button>
         <button
          type="button"
          onClick={() => setQrOpen(true)}
          aria-label={t("showQr")}
-         className={headerIconBtn + " text-foreground bg-secondary hover:bg-muted"}
+         className={headerIconBtn + " " + headerBtnSurface}
         >
-         <QrIcon size={16} />
+         <QrIcon size={14} />
         </button>
        </>
       ) : null}

@@ -31,14 +31,21 @@ export const navRowActive =
   "h-9 px-3 rounded-lg flex items-center gap-2.5 text-sm font-medium transition-colors " +
   "bg-foreground text-background hover:bg-foreground/90";
 
-/** Page-header controls carry the sidebar's row metrics: 36px tall, 12px side
- *  padding, 10px glyph→label gap, 16px glyphs — with a 12px label, a step
- *  below the sidebar rows so the header reads as chrome, not content. Callers
- *  append the
- *  surface (bg-secondary / bg-primary-gradient) and the text colour. */
+/** Page-header controls: 32px tall, 10px side padding, 6px glyph→label gap,
+ *  14px glyphs and a 12px label, a step below the sidebar rows so the header
+ *  reads as chrome, not content. Callers append the surface and the text
+ *  colour — headerBtnSurface for the ordinary ones, an accent fill for the
+ *  primary action. */
 export const headerBtn =
-  "h-9 px-3 rounded-lg inline-flex items-center gap-2.5 text-xs font-medium transition-colors disabled:opacity-60";
+  "h-8 px-2.5 rounded-md inline-flex items-center gap-1.5 text-xs font-medium transition-colors disabled:opacity-60";
 
 /** Same, for a glyph-only control. */
 export const headerIconBtn =
-  "h-9 w-9 rounded-lg inline-flex items-center justify-center transition-colors disabled:opacity-60";
+  "h-8 w-8 rounded-md inline-flex items-center justify-center transition-colors disabled:opacity-60";
+
+/** The default header surface: a quiet fill under a muted glyph or label that
+ *  warms on hover. Named rather than repeated at each call site so a control
+ *  wearing a different colour is visibly a deliberate exception — destructive
+ *  red, a brand fill, the primary gradient — instead of a copy that drifted. */
+export const headerBtnSurface =
+  "text-muted-foreground bg-secondary hover:text-foreground";

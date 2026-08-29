@@ -13,7 +13,7 @@ import {
 } from "./ui";
 import { Page } from "./page";
 import { TablesPage } from "./tables";
-import { headerBtn, inputClass } from "./tokens";
+import { headerBtn, headerBtnSurface, inputClass } from "./tokens";
 import { isPastDue, pastDueDaysLeft } from "./billing-status";
 import { MapPicker } from "@/components/map-picker";
 import { slugify } from "./helpers";
@@ -1606,7 +1606,7 @@ function CurrencyDropdown({
  type="button"
  disabled={disabled}
  onClick={() => setOpen((v) => !v)}
- className={headerBtn + " bg-secondary text-foreground hover:bg-muted"}
+ className={headerBtn + " " + headerBtnSurface}
  aria-haspopup="listbox"
  aria-expanded={open}
  >

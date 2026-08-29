@@ -7,7 +7,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { apiUrl } from "@/lib/api";
 import { EyeIcon, RefreshIcon } from "../_v2/icons";
 import { Page } from "../_v2/page";
-import { headerIconBtn } from "../_v2/tokens";
+import { headerBtnSurface, headerIconBtn } from "../_v2/tokens";
 import { useDashboardRouter } from "../_spa/router";
 import { AVAILABLE_LANGUAGES } from "../_v2/i18n";
 
@@ -92,10 +92,10 @@ export function AdminRestaurantsPage() {
           type="button"
           onClick={() => void fetchRows()}
           disabled={loading}
-          className={headerIconBtn + " bg-secondary text-foreground hover:bg-muted"}
+          className={headerIconBtn + " " + headerBtnSurface}
           title="Refresh"
         >
-          <RefreshIcon size={16} className={loading ? "animate-spin" : ""} />
+          <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
         </button>
          </>
         }
