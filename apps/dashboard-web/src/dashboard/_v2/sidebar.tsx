@@ -123,13 +123,17 @@ export function Sidebar({
             onClick={() => setOpen(false)}
             aria-hidden
           />
+          {/* Sits on the backdrop, level with the venue row's swap button: the
+              header is h-14 and this is h-9, so 10px of top offset centres it,
+              and the same 10px separates it from the drawer's right edge. The
+              min() keeps it on screen on very narrow phones. */}
           <button
             type="button"
             onClick={() => setOpen(false)}
             aria-label="Close menu"
-            className="md:hidden fixed top-3 left-[min(19rem,calc(100vw-3.5rem))] z-50 h-10 w-10 flex items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-sm"
+            className="md:hidden fixed top-2.5 left-[min(18.625rem,calc(100vw-2.75rem))] z-50 h-9 w-9 flex items-center justify-center text-white"
           >
-            <CloseIcon size={20} />
+            <CloseIcon size={16} />
           </button>
         </>
       ) : null}
