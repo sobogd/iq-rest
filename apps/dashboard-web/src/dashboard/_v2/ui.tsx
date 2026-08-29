@@ -339,25 +339,37 @@ export function ConfirmDialog({
 export function ToggleSwitch({
  checked,
  onChange,
+ /** "sm" is for switches that sit inside a list row rather than a form field,
+  *  where the full-size track would outweigh the row's own text. */
+ size = "md",
+ label,
 }: {
  checked: boolean;
  onChange: () => void;
+ size?: "md" | "sm";
+ label?: string;
 }) {
+ const sm = size === "sm";
  return (
  <button
  type="button"
  role="switch"
  aria-checked={checked}
+ aria-label={label}
  onClick={onChange}
  className={
- "shrink-0 relative inline-flex h-6 w-11 items-center rounded-full transition-colors " +
+ "shrink-0 relative inline-flex items-center rounded-full transition-colors " +
+ (sm ? "h-5 w-9 " : "h-6 w-11 ") +
  (checked ? "bg-foreground" : "bg-input")
  }
  >
  <span
  className={
- "inline-block h-4 w-4 transform rounded-full bg-background transition-transform " +
- (checked ? "translate-x-6" : "translate-x-1")
+ "inline-block transform rounded-full bg-background transition-transform " +
+ (sm ? "h-3.5 w-3.5 " : "h-4 w-4 ") +
+ (checked
+   ? (sm ? "translate-x-[19px]" : "translate-x-6")
+   : (sm ? "translate-x-[3px]" : "translate-x-1"))
  }
  />
  </button>

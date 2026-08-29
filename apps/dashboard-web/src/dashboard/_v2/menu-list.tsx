@@ -11,11 +11,9 @@ import {
  ChevronDownIcon,
  CollapseIcon,
  ExpandIcon,
- EyeIcon,
- EyeOffIcon,
  PlusIcon,
 } from "./icons";
-import { EmptyState } from "./ui";
+import { EmptyState, ToggleSwitch } from "./ui";
 import { Page } from "./page";
 import { headerBtn, headerBtnSurface, iconBtn, primaryBtn } from "./tokens";
 import { getMlWithFallback } from "./i18n";
@@ -778,15 +776,17 @@ function DishRow({
  ) : null}
  </div>
 
- <div className="flex items-center gap-0.5 shrink-0 pl-1">
- <button
- type="button"
- onClick={(e) => { e.stopPropagation(); onToggleVisible(); }}
- className={iconBtn}
- aria-label={dish.visible ? t("hideDish") : t("showDish")}
+ {/* The row itself opens the dish, so the switch swallows its own click. */}
+ <div
+ className="flex items-center shrink-0 pl-1"
+ onClick={(e) => e.stopPropagation()}
  >
- {dish.visible ? <EyeIcon size={14} /> : <EyeOffIcon size={14} />}
- </button>
+ <ToggleSwitch
+ size="sm"
+ checked={dish.visible}
+ onChange={onToggleVisible}
+ label={dish.visible ? t("hideDish") : t("showDish")}
+ />
  </div>
  </div>
  );
