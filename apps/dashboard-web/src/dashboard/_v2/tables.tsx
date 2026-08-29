@@ -650,7 +650,7 @@ export function TablesPage({
        onClick={addTable}
        className={headerBtn + " text-primary-foreground bg-primary-gradient"}
       >
-       <PlusIcon size={16} />
+       <PlusIcon size={14} />
        {t("table")}
       </button>
      </>

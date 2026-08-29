@@ -424,7 +424,7 @@ export function LanguageSwitcher({
  aria-expanded={open}
  >
  <span className="uppercase">{active.short}</span>
- <ChevronDownIcon size={16} />
+ <ChevronDownIcon size={14} />
  </button>
  {open ? (
  <div
@@ -1053,9 +1053,9 @@ export function SaveButton({
    className={headerBtn + " text-primary-foreground bg-primary-gradient"}
   >
    {saving ? (
-    <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+    <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
    ) : (
-    <CheckIcon size={16} />
+    <CheckIcon size={14} />
    )}
    {label ?? tc("save")}
   </button>

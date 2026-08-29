@@ -278,7 +278,7 @@ function PeriodDropdown({
         aria-expanded={open}
       >
         <span>{active?.label}</span>
-        <ChevronDownIcon size={16} />
+        <ChevronDownIcon size={14} />
       </button>
       {open ? (
         <div

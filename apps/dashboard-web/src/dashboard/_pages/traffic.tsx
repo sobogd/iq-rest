@@ -202,7 +202,7 @@ function TrafficList({
         className={headerBtn + " bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/40"}
         title={`Delete ${selected.size}`}
       >
-        <Trash2 className="h-4 w-4" /> {selected.size}
+        <Trash2 className="h-3.5 w-3.5" /> {selected.size}
       </button>
       <button
         type="button"

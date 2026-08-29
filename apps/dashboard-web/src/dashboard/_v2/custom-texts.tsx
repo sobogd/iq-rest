@@ -195,9 +195,9 @@ export function CustomTextsSettingsPage() {
       className={headerBtn + " bg-secondary text-foreground hover:bg-muted"}
      >
       {translating ? (
-       <span className="w-4 h-4 border-2 border-input border-t-foreground rounded-full animate-spin" />
+       <span className="w-3 h-3 border-2 border-input border-t-foreground rounded-full animate-spin" />
       ) : (
-       <SparklesIcon size={16} />
+       <SparklesIcon size={14} />
       )}
       {tct("translateAll")}
      </button>

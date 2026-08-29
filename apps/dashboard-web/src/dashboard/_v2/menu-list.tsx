@@ -345,11 +345,11 @@ export function MenuList({
       >
        {/* width reservation: longer label fixes the width */}
        <span className="invisible inline-flex items-center gap-2.5" aria-hidden>
-        <ExpandIcon size={16} />
+        <ExpandIcon size={14} />
         {t("expand").length >= t("collapse").length ? t("expand") : t("collapse")}
        </span>
        <span className="absolute inset-0 inline-flex items-center justify-center gap-2.5">
-        {anyOpen ? <CollapseIcon size={16} /> : <ExpandIcon size={16} />}
+        {anyOpen ? <CollapseIcon size={14} /> : <ExpandIcon size={14} />}
         {anyOpen ? t("collapse") : t("expand")}
        </span>
       </button>
