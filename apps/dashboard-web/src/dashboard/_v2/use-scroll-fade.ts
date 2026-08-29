@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 
-/** How far the content dissolves at an edge that has more behind it. */
-const MAX = 24;
+/** How far the content dissolves at an edge that has more behind it. Roughly a
+ *  nav row and a half, so the cut-off row is visibly dissolving rather than
+ *  just dimmed along its top pixels. */
+const MAX = 48;
 
 /**
  * Marks a scroll container as scrollable by dissolving its own pixels toward
