@@ -300,7 +300,7 @@ function SidebarNav({
 
   const main: NavItem[] = [
     { view: { name: "menu" }, label: t("menu"), icon: Utensils, track: "menu", match: ["category", "group", "item", "option"] },
-    { view: { name: "reservations" }, label: t("reservations"), icon: CalendarIcon, track: "booking" },
+    { view: { name: "reservations" }, label: t("reservations"), icon: CalendarIcon, track: "booking", match: ["reservations"] },
     { view: { name: "orders" }, label: t("orders"), icon: ReceiptIcon, track: "orders", match: ["orders"] },
     { view: { name: "kitchen" }, label: t("kitchen"), icon: ChefHatIcon, track: "kitchen" },
     { view: { name: "analytics" }, label: t("analytics"), icon: BarChart3, track: "analytics" },
@@ -313,9 +313,10 @@ function SidebarNav({
     { view: { name: "settings.tables" }, label: ts("rows.tables"), icon: QrIcon, track: "tables", match: ["settings.tables"] },
     { view: { name: "settings.devices" }, label: ts("rows.devices"), icon: GridIcon, track: "devices" },
     { view: { name: "settings.orders" }, label: ts("rows.orders"), icon: ReceiptIcon, track: "orders" },
-    // Booking settings are not listed here: they are reached from the gear on
-    // the reservations board, next to the schedule they describe. The route
-    // still resolves, so existing links and bookmarks keep working.
+    // Booking settings are not listed here: they live at
+    // /dashboard/reservations/settings, reached from the sliders on the board
+    // next to the schedule they describe. The nav row above stays lit while
+    // they are open, which is what `match` is for.
     { view: { name: "settings.languages" }, label: ts("rows.languages"), icon: GlobeIcon, track: "languages" },
     // "Menu texts" is an admin-only surface: shown only inside an admin
     // impersonation session (backend also 403s the save/translate endpoints).

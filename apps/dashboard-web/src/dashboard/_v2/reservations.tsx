@@ -173,7 +173,7 @@ export function ReservationsPage({
     <NavBtn
      onClick={() => {
       track("Click", "Booking settings");
-      router.push({ name: "settings.bookings", from: "reservations" });
+      router.push({ name: "reservations.settings" });
      }}
      aria-label={ts("rows.bookings")}
      title={ts("rows.bookings")}

@@ -278,7 +278,7 @@ const PRO_FEATURE_VIEWS: Record<string, ProFeature> = {
   kitchen: "kitchen",
   reservations: "reservations",
   "settings.orders": "orders",
-  "settings.bookings": "reservations",
+  "reservations.settings": "reservations",
   "settings.devices": "devices",
 };
 
@@ -411,18 +411,10 @@ function ViewSwitch(p: SwitchProps) {
       );
     case "settings.orders":
       return <SettingsOrdersWrapper />;
-    case "settings.bookings":
-      // Opened from the reservations board, back returns there rather than to
-      // the settings hub the sidebar would imply.
-      return (
-        <SettingsBookingsWrapper
-          onBack={
-            view.from === "reservations"
-              ? () => router.resetTo({ name: "reservations" })
-              : undefined
-          }
-        />
-      );
+    case "reservations.settings":
+      // A screen inside the reservations section, so back always returns to the
+      // board — including on a cold open of the URL.
+      return <SettingsBookingsWrapper onBack={() => router.resetTo({ name: "reservations" })} />;
     case "settings.languages":
       return <SettingsLanguagesWrapper />;
     case "settings.customTexts":
