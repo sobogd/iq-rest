@@ -196,10 +196,10 @@ function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
   if (!menuUrl) return null;
   const fullUrl = menuUrl.startsWith("http") ? menuUrl : "https://" + menuUrl;
   return (
-    // An unlabelled first group inside the nav scroll area. Deliberately
-    // indistinguishable from a nav group: same row token, same label colour,
-    // same muted glyph — these are destinations like any other, and a tinted
-    // one read as a different kind of control.
+    // An unlabelled first group inside the nav scroll area — same row token and
+    // metrics as a nav group. Preview keeps the brand tint on both glyph and
+    // label: it is the one row that opens the guest-facing menu rather than a
+    // dashboard screen, and that is worth marking.
     <div className="flex flex-col gap-0.5">
       <button
         type="button"
@@ -207,9 +207,9 @@ function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
           track("Click", "Menu preview open");
           setPreviewOpen(true);
         }}
-        className={navRow + " text-foreground"}
+        className={navRow + " text-primary"}
       >
-        <EyeIcon size={14} className="shrink-0 text-muted-foreground" />
+        <EyeIcon size={14} className="shrink-0" />
         <span className="min-w-0 truncate">{tp("preview")}</span>
       </button>
       <button
