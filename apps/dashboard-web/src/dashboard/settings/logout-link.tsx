@@ -30,7 +30,7 @@ export function LogoutButton() {
 
   return (
     <button type="button" onClick={handle} disabled={busy} title={t("logoutDesc")} className={ROW}>
-      <LogoutIcon size={16} className="shrink-0" />
+      <LogoutIcon size={14} className="shrink-0" />
       <span className="min-w-0 truncate">{busy ? t("loggingOut") : t("logout")}</span>
     </button>
   );

@@ -204,7 +204,7 @@ function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
         }}
         className={navRow + " text-primary"}
       >
-        <EyeIcon size={16} className="shrink-0" />
+        <EyeIcon size={14} className="shrink-0" />
         <span className="min-w-0 truncate">{tp("preview")}</span>
       </button>
       <button
@@ -215,7 +215,7 @@ function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
         }}
         className={navRow + " text-foreground"}
       >
-        <ShareIcon size={16} className="shrink-0" />
+        <ShareIcon size={14} className="shrink-0 text-muted-foreground" />
         <span className="min-w-0 truncate">{tp("share")}</span>
       </button>
       {/* Portaled to <body>: the sidebar animates with a transform, which
@@ -377,7 +377,7 @@ function NavGroup({
                 : navRow + " text-foreground"
             }
           >
-            <Icon size={16} className="shrink-0" />
+            <Icon size={14} className={"shrink-0 " + (active ? "" : "text-muted-foreground")} />
             <span className="min-w-0 truncate">{item.label}</span>
           </button>
         );
@@ -419,7 +419,7 @@ function ReloadTabletsButton() {
       title="Reload every paired tablet system-wide"
       className={navRow + " text-foreground"}
     >
-      <RefreshIcon size={16} className="shrink-0" />
+      <RefreshIcon size={14} className="shrink-0 text-muted-foreground" />
       <span className="min-w-0 truncate">{reloading ? "Sending…" : "Reload tablets"}</span>
     </button>
   );
@@ -457,7 +457,7 @@ function SidebarFooter({ impersonatedBy }: { impersonatedBy: string | null }) {
           title={t("exitImpersonationDesc", { email: impersonatedBy })}
           className={navRow + " text-red-600"}
         >
-          <LogoutIcon size={16} className="shrink-0" />
+          <LogoutIcon size={14} className="shrink-0" />
           <span className="min-w-0 truncate">{t("exitImpersonation")}</span>
         </button>
       ) : (
