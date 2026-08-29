@@ -30,11 +30,13 @@ html {
    rather than laying a gradient over it matters because the sidebar is
    translucent on desktop (bg-nav/90 + backdrop-blur) — an opaque gradient
    would seam against the blur. The ramp inside the fade distance is weighted
-   toward the edge rather than linear: it holds near full opacity for most of
-   the distance, so rows keep their contrast, and dissolves quickly in the
-   last stretch. Every stop is expressed relative to that distance, so all of
-   them collapse onto the edge when it is 0 — that is how "no fade on this
-   side" is said. Unsupported browsers simply ignore the rule and show the
+   differently at each edge. The top holds near full opacity and lets go only
+   in its last stretch, keeping rows readable right up to the cut. The bottom
+   starts letting go much higher and travels the whole distance, because that
+   is the edge a reader is heading toward — a dissolve that only appears in
+   the final pixels arrives too late to read as "there is more". Every stop
+   is expressed relative to that distance, so all of them collapse onto the
+   edge when it is 0 — that is how "no fade on this side" is said. Unsupported browsers simply ignore the rule and show the
    pane as it is today. */
 .scroll-fade {
   --fade-top: 0px;
@@ -46,8 +48,8 @@ html {
     rgba(0, 0, 0, 0.97) calc(var(--fade-top) * 0.32),
     #000 var(--fade-top),
     #000 calc(100% - var(--fade-bottom)),
-    rgba(0, 0, 0, 0.97) calc(100% - var(--fade-bottom) * 0.32),
-    rgba(0, 0, 0, 0.75) calc(100% - var(--fade-bottom) * 0.12),
+    rgba(0, 0, 0, 0.97) calc(100% - var(--fade-bottom) * 0.85),
+    rgba(0, 0, 0, 0.75) calc(100% - var(--fade-bottom) * 0.45),
     rgba(0, 0, 0, 0) 100%
   );
   mask-image: linear-gradient(
@@ -57,8 +59,8 @@ html {
     rgba(0, 0, 0, 0.97) calc(var(--fade-top) * 0.32),
     #000 var(--fade-top),
     #000 calc(100% - var(--fade-bottom)),
-    rgba(0, 0, 0, 0.97) calc(100% - var(--fade-bottom) * 0.32),
-    rgba(0, 0, 0, 0.75) calc(100% - var(--fade-bottom) * 0.12),
+    rgba(0, 0, 0, 0.97) calc(100% - var(--fade-bottom) * 0.85),
+    rgba(0, 0, 0, 0.75) calc(100% - var(--fade-bottom) * 0.45),
     rgba(0, 0, 0, 0) 100%
   );
 }
