@@ -17,7 +17,7 @@ import {
 } from "./icons";
 import { EmptyState } from "./ui";
 import { Page } from "./page";
-import { iconBtn, primaryBtn } from "./tokens";
+import { headerBtn, iconBtn, primaryBtn } from "./tokens";
 import { getMlWithFallback } from "./i18n";
 import { currencySymbolOf, moveItem } from "./helpers";
 import { fetchSubscriptionStatus, patchItem, reorderCategories, reorderItemsBulk } from "./api";
@@ -350,17 +350,20 @@ export function MenuList({
    actions={
     <>
      {scopedLeaves.length > 0 ? (
-      /* Glyph-only, wearing the header's back-button metrics (h-9 w-9, no
-         surface) so the two chrome controls on this bar read as one family.
-         The label survives as the accessible name / tooltip. */
       <button
        type="button"
        onClick={anyOpen ? collapseAll : expandAll}
-       aria-label={anyOpen ? t("collapse") : t("expand")}
-       title={anyOpen ? t("collapse") : t("expand")}
-       className="shrink-0 h-9 w-9 inline-flex items-center justify-center rounded-lg text-foreground hover:bg-secondary transition-colors"
+       className={headerBtn + " relative justify-center shrink-0 bg-secondary text-foreground hover:bg-muted"}
       >
-       {anyOpen ? <CollapseIcon size={16} /> : <ExpandIcon size={16} />}
+       {/* width reservation: longer label fixes the width */}
+       <span className="invisible inline-flex items-center gap-2.5" aria-hidden>
+        <ExpandIcon size={14} />
+        {t("expand").length >= t("collapse").length ? t("expand") : t("collapse")}
+       </span>
+       <span className="absolute inset-0 inline-flex items-center justify-center gap-2.5">
+        {anyOpen ? <CollapseIcon size={14} /> : <ExpandIcon size={14} />}
+        {anyOpen ? t("collapse") : t("expand")}
+       </span>
       </button>
      ) : null}
     </>
