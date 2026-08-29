@@ -4,8 +4,8 @@
   "description": "Create professional QR menu for restaurant and cafe in minutes",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "background_color": "#faf7f1",
+  "theme_color": "#faf7f1",
   "icons": [
     {
       "src": "/icon-192.png",
