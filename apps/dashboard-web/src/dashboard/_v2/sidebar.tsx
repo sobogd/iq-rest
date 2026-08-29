@@ -313,7 +313,9 @@ function SidebarNav({
     { view: { name: "settings.tables" }, label: ts("rows.tables"), icon: QrIcon, track: "tables", match: ["settings.tables"] },
     { view: { name: "settings.devices" }, label: ts("rows.devices"), icon: GridIcon, track: "devices" },
     { view: { name: "settings.orders" }, label: ts("rows.orders"), icon: ReceiptIcon, track: "orders" },
-    { view: { name: "settings.bookings" }, label: ts("rows.bookings"), icon: CalendarIcon, track: "bookings" },
+    // Booking settings are not listed here: they are reached from the gear on
+    // the reservations board, next to the schedule they describe. The route
+    // still resolves, so existing links and bookmarks keep working.
     { view: { name: "settings.languages" }, label: ts("rows.languages"), icon: GlobeIcon, track: "languages" },
     // "Menu texts" is an admin-only surface: shown only inside an admin
     // impersonation session (backend also 403s the save/translate endpoints).
