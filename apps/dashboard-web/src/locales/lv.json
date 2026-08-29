@@ -155,7 +155,8 @@
       },
       "addGroup": "Pievienot grupu",
       "backToMenu": "Atpakaļ uz izvēlni",
-      "groupsHeading": "Grupas"
+      "groupsHeading": "Grupas",
+      "ungrouped": "Bez grupas"
     },
     "categoryForm": {
       "newTitle": "Jauna kategorija",

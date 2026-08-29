@@ -155,7 +155,8 @@
       },
       "addGroup": "Lägg till grupp",
       "backToMenu": "Tillbaka till meny",
-      "groupsHeading": "Grupper"
+      "groupsHeading": "Grupper",
+      "ungrouped": "Utan grupp"
     },
     "categoryForm": {
       "newTitle": "Ny kategori",

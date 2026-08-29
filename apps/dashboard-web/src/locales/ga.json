@@ -155,7 +155,8 @@
       },
       "addGroup": "Cuir grúpa leis",
       "backToMenu": "Ar ais chuig an roghchlár",
-      "groupsHeading": "Grúpaí"
+      "groupsHeading": "Grúpaí",
+      "ungrouped": "Gan ghrúpa"
     },
     "categoryForm": {
       "newTitle": "Catagóir nua",

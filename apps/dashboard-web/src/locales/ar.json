@@ -155,7 +155,8 @@
       },
       "addGroup": "إضافة مجموعة",
       "backToMenu": "العودة إلى القائمة",
-      "groupsHeading": "المجموعات"
+      "groupsHeading": "المجموعات",
+      "ungrouped": "بدون مجموعة"
     },
     "categoryForm": {
       "newTitle": "فئة جديدة",

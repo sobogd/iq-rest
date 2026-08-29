@@ -155,7 +155,8 @@
       },
       "addGroup": "Додај групу",
       "backToMenu": "Назад на мени",
-      "groupsHeading": "Групе"
+      "groupsHeading": "Групе",
+      "ungrouped": "Без групе"
     },
     "categoryForm": {
       "newTitle": "Nova kategorija",

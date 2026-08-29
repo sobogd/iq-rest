@@ -155,7 +155,8 @@
       },
       "addGroup": "Grup ekle",
       "backToMenu": "Menüye dön",
-      "groupsHeading": "Gruplar"
+      "groupsHeading": "Gruplar",
+      "ungrouped": "Grupsuz"
     },
     "categoryForm": {
       "newTitle": "Yeni kategori",

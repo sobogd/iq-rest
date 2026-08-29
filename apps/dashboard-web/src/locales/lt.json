@@ -155,7 +155,8 @@
       },
       "addGroup": "Pridėti grupę",
       "backToMenu": "Atgal į meniu",
-      "groupsHeading": "Grupės"
+      "groupsHeading": "Grupės",
+      "ungrouped": "Be grupės"
     },
     "categoryForm": {
       "newTitle": "Nauja kategorija",

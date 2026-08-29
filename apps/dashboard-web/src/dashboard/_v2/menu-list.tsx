@@ -84,7 +84,6 @@ export function MenuList({
    [categories, currentGroupId],
  );
  const groupsFlipRef = useFlip<HTMLDivElement>([topLevelGroups.map((c) => c.id).join(",")]);
- const ungroupedFlipRef = useFlip<HTMLDivElement>([ungroupedCategories.map((c) => c.id).join(",")]);
  // Scroll position survives navigations to the item / category edit pages.
  // sessionStorage: restoring a week-old scroll offset in a fresh tab would be
  // surprising, so it resets per tab.
@@ -105,8 +104,10 @@ export function MenuList({
  // Seeded from the categories this venue actually has, which also drops the
  // ids of every other venue the owner visited — the store never grows past
  // the menu in front of us. Unknown id = open, the historical default.
+ // Groups are absent on purpose: they no longer fold.
  const map: Record<string, boolean> = {};
  initialCategories.forEach((c) => {
+ if (c.isGroup) return;
  map[c.id] = typeof saved[c.id] === "boolean" ? (saved[c.id] as boolean) : true;
  });
  return map;
@@ -175,7 +176,7 @@ export function MenuList({
  let changed = false;
  const next = { ...prev };
  initialCategories.forEach((c) => {
- if (!(c.id in next)) {
+ if (!c.isGroup && !(c.id in next)) {
  next[c.id] = true;
  changed = true;
  }
@@ -184,12 +185,9 @@ export function MenuList({
  });
  }, [initialCategories]);
 
- // anyOpen treats both leaf categories and group containers. Groups default
- // to open (openIds[id] !== false) so any group not explicitly closed counts
- // as "open" — keeps the icon flipping correctly when only groups are open.
- const anyOpen =
- scopedLeaves.some((c) => openIds[c.id]) ||
- topLevelGroups.some((g) => openIds[g.id] !== false);
+ // Only leaf categories fold, so they alone decide which way the header
+ // control points.
+ const anyOpen = scopedLeaves.some((c) => openIds[c.id]);
 
  function toggleCategory(id: string) {
  // Tracked outside the updater: React may re-run an updater (StrictMode, a
@@ -203,7 +201,6 @@ export function MenuList({
  setOpenIds((prev) => {
  const next = { ...prev };
  scopedLeaves.forEach((c) => { next[c.id] = true; });
- topLevelGroups.forEach((g) => { next[g.id] = true; });
  return next;
  });
  }
@@ -212,7 +209,6 @@ export function MenuList({
  setOpenIds((prev) => {
  const next = { ...prev };
  scopedLeaves.forEach((c) => { next[c.id] = false; });
- topLevelGroups.forEach((g) => { next[g.id] = false; });
  return next;
  });
  }
@@ -396,62 +392,61 @@ export function MenuList({
  />
  ) : (
  <div className="space-y-3">
- {/* Ungrouped categories first (no group header). */}
- {ungroupedCategories.length > 0 && (
- <div ref={ungroupedFlipRef} className="space-y-3">
- {ungroupedCategories.map((cat, idx) => (
- <div key={cat.id} data-flip-id={cat.id}>
- <CategoryAccordion
- category={cat}
- defaultLang={defaultLang}
- currencySymbol={currencySymbol}
- isOpen={!!openIds[cat.id]}
- onToggle={() => toggleCategory(cat.id)}
- isFirst={idx === 0}
- isLast={idx === ungroupedCategories.length - 1}
- onMoveUp={() => moveCategory(ungroupedCategories, idx, -1)}
- onMoveDown={() => moveCategory(ungroupedCategories, idx, 1)}
- onMoveDish={moveDish}
- onToggleDishVisible={toggleDishVisible}
- />
- </div>
- ))}
- </div>
- )}
-
- {/* Each group: borderless header (chevron + name + buttons),
-     followed by its child categories + a scoped "Add category"
-     button. Click anywhere on the header toggles the group. */}
+ {/* Each group: borderless header (name + reorder buttons) over its
+     child categories. A group is always expanded — only categories
+     fold. */}
  {topLevelGroups.length > 0 && (
  <div ref={groupsFlipRef} className="space-y-3">
- {topLevelGroups.map((g, gi) => {
- const kids = categoriesInGroup(g.id);
- const isGroupOpen = openIds[g.id] !== false;
- return (
+ {topLevelGroups.map((g, gi) => (
  <GroupBlock
  key={g.id}
- g={g}
- gi={gi}
- kids={kids}
- isGroupOpen={isGroupOpen}
- topLevelGroupsLength={topLevelGroups.length}
+ flipId={g.id}
+ title={getMlWithFallback(g.name, defaultLang, defaultLang)}
+ kids={categoriesInGroup(g.id)}
  openIds={openIds}
  defaultLang={defaultLang}
  currencySymbol={currencySymbol}
  t={t}
  toggleCategory={toggleCategory}
- moveGroup={moveGroup}
  moveCategory={moveCategory}
  moveDish={moveDish}
  toggleDishVisible={toggleDishVisible}
- onEditGroup={() => {
+ sort={{
+ onUp: () => moveGroup(gi, -1),
+ onDown: () => moveGroup(gi, 1),
+ upDisabled: gi === 0,
+ downDisabled: gi === topLevelGroups.length - 1,
+ }}
+ onEditTitle={() => {
  track("Click", "Menu group edit");
  router.push({ name: "group.edit", id: g.id });
  }}
  />
- );
- })}
+ ))}
  </div>
+ )}
+
+ {/* Categories belonging to no group ride in a group-shaped block of
+     their own, always last. It carries no reorder buttons (there is
+     no second bucket to swap with — its position is the rule, not a
+     preference) and no edit target, because it stands for the absence
+     of a group rather than a stored one. Its header is dropped when
+     there are no real groups: a lone "ungrouped" caption over the
+     whole menu labels nothing. */}
+ {ungroupedCategories.length > 0 && (
+ <GroupBlock
+ flipId="ungrouped"
+ title={topLevelGroups.length > 0 ? t("ungrouped") : null}
+ kids={ungroupedCategories}
+ openIds={openIds}
+ defaultLang={defaultLang}
+ currencySymbol={currencySymbol}
+ t={t}
+ toggleCategory={toggleCategory}
+ moveCategory={moveCategory}
+ moveDish={moveDish}
+ toggleDishVisible={toggleDishVisible}
+ />
  )}
 
  <div className="flex items-center justify-center gap-6 pt-6 pb-8 md:pb-0">
@@ -484,71 +479,66 @@ export function MenuList({
  );
 }
 
+/** One group's worth of the list: an optional header over its categories.
+ *  Serves both a real group and the ungrouped bucket — the bucket simply
+ *  passes no `sort` and no `onEditTitle`, and passes a null title when it is
+ *  the only block on the page. */
 function GroupBlock({
- g,
- gi,
+ flipId,
+ title,
  kids,
- isGroupOpen,
- topLevelGroupsLength,
  openIds,
  defaultLang,
  currencySymbol,
  t,
  toggleCategory,
- moveGroup,
  moveCategory,
  moveDish,
  toggleDishVisible,
- onEditGroup,
+ sort,
+ onEditTitle,
 }: {
- g: Category;
- gi: number;
+ flipId: string;
+ title: string | null;
  kids: Category[];
- isGroupOpen: boolean;
- topLevelGroupsLength: number;
  openIds: Record<string, boolean>;
  defaultLang: string;
  currencySymbol: string;
  t: ReturnType<typeof useTranslations>;
  toggleCategory: (id: string) => void;
- moveGroup: (idx: number, dir: number) => void;
  moveCategory: (siblings: Category[], idx: number, dir: number) => void;
  moveDish: (categoryId: string, idx: number, dir: number) => void;
  toggleDishVisible: (categoryId: string, dishId: string) => void;
- onEditGroup: () => void;
+ sort?: { onUp: () => void; onDown: () => void; upDisabled: boolean; downDisabled: boolean };
+ onEditTitle?: () => void;
 }) {
  const kidsFlipRef = useFlip<HTMLDivElement>([kids.map((c) => c.id).join(",")]);
+ const titleClass = "min-w-0 text-lg font-semibold text-foreground/70 truncate";
  return (
- <div data-flip-id={g.id} className="space-y-3">
- <div className="flex items-center gap-2 py-1">
+ <div data-flip-id={flipId} className="space-y-3">
+ {title !== null ? (
+ /* min-h matches the row a real group gets from its 32px reorder
+    buttons, so a header without them keeps the same rhythm. */
+ <div className="flex items-center gap-2 py-1 min-h-10">
+ {onEditTitle ? (
  <button
  type="button"
- onClick={() => toggleCategory(g.id)}
- aria-expanded={isGroupOpen}
- aria-label={isGroupOpen ? t("collapseCategory") : t("expandCategory")}
- className="w-6 h-6 -ml-1 inline-flex items-center justify-center rounded-md text-muted-foreground hover:bg-secondary transition-colors shrink-0"
+ onClick={onEditTitle}
+ className={titleClass + " text-left hover:text-foreground transition-colors"}
  >
- <span
- className="transition-transform duration-150 inline-flex"
- style={{ transform: isGroupOpen ? "rotate(0deg)" : "rotate(-90deg)" }}
- >
- <ChevronDownIcon size={14} />
- </span>
+ {title}
  </button>
- <button
- type="button"
- onClick={onEditGroup}
- className="min-w-0 text-left text-lg font-semibold text-foreground/70 truncate hover:text-foreground transition-colors"
- >
- {getMlWithFallback(g.name, defaultLang, defaultLang)}
- </button>
+ ) : (
+ <span className={titleClass}>{title}</span>
+ )}
  <span className="flex-1" />
+ {sort ? (
  <div className="flex items-center gap-0.5 shrink-0">
  <span className="inline-flex items-center gap-0">
  <button
  type="button"
- onClick={(e) => { e.stopPropagation(); moveGroup(gi, -1); }}
- disabled={gi === 0}
+ onClick={(e) => { e.stopPropagation(); sort.onUp(); }}
+ disabled={sort.upDisabled}
  className={iconBtn}
  aria-label={t("moveCategoryUp")}
  >
@@ -556,8 +546,8 @@ function GroupBlock({
  </button>
  <button
  type="button"
- onClick={(e) => { e.stopPropagation(); moveGroup(gi, 1); }}
- disabled={gi === topLevelGroupsLength - 1}
+ onClick={(e) => { e.stopPropagation(); sort.onDown(); }}
+ disabled={sort.downDisabled}
  className={iconBtn}
  aria-label={t("moveCategoryDown")}
  >
@@ -565,10 +555,11 @@ function GroupBlock({
  </button>
  </span>
  </div>
+ ) : null}
  </div>
+ ) : null}
 
- <Collapsible open={isGroupOpen} style={{ marginTop: 0 }}>
- <div ref={kidsFlipRef} className="space-y-3 pt-2">
+ <div ref={kidsFlipRef} className="space-y-3">
  {kids.map((cat, ci) => (
  <div key={cat.id} data-flip-id={cat.id}>
  <CategoryAccordion
@@ -587,7 +578,6 @@ function GroupBlock({
  </div>
  ))}
  </div>
- </Collapsible>
  </div>
  );
 }

@@ -155,7 +155,8 @@
       },
       "addGroup": "Bæta við hóp",
       "backToMenu": "Aftur í valmynd",
-      "groupsHeading": "Hópar"
+      "groupsHeading": "Hópar",
+      "ungrouped": "Án hóps"
     },
     "categoryForm": {
       "newTitle": "Nýr flokkur",

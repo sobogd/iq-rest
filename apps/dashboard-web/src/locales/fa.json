@@ -155,7 +155,8 @@
       },
       "addGroup": "افزودن گروه",
       "backToMenu": "بازگشت به منو",
-      "groupsHeading": "گروه‌ها"
+      "groupsHeading": "گروه‌ها",
+      "ungrouped": "بدون گروه"
     },
     "categoryForm": {
       "newTitle": "دسته جدید",

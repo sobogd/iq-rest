@@ -155,7 +155,8 @@
       },
       "addGroup": "Csoport hozzáadása",
       "backToMenu": "Vissza a menübe",
-      "groupsHeading": "Csoportok"
+      "groupsHeading": "Csoportok",
+      "ungrouped": "Csoport nélkül"
     },
     "categoryForm": {
       "newTitle": "Új kategória",

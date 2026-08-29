@@ -155,7 +155,8 @@
       },
       "addGroup": "Lisa rühm",
       "backToMenu": "Tagasi menüüsse",
-      "groupsHeading": "Rühmad"
+      "groupsHeading": "Rühmad",
+      "ungrouped": "Rühmata"
     },
     "categoryForm": {
       "newTitle": "Uus kategooria",

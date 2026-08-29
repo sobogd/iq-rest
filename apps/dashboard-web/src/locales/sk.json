@@ -155,7 +155,8 @@
       },
       "addGroup": "Pridať skupinu",
       "backToMenu": "Späť do menu",
-      "groupsHeading": "Skupiny"
+      "groupsHeading": "Skupiny",
+      "ungrouped": "Bez skupiny"
     },
     "categoryForm": {
       "newTitle": "Nová kategória",

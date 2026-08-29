@@ -155,7 +155,8 @@
       },
       "addGroup": "Dodaj grupu",
       "backToMenu": "Natrag na izbornik",
-      "groupsHeading": "Grupe"
+      "groupsHeading": "Grupe",
+      "ungrouped": "Bez grupe"
     },
     "categoryForm": {
       "newTitle": "Nova kategorija",

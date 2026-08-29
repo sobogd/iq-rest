@@ -155,7 +155,8 @@
       },
       "addGroup": "Dodaj grupę",
       "backToMenu": "Powrót do menu",
-      "groupsHeading": "Grupy"
+      "groupsHeading": "Grupy",
+      "ungrouped": "Bez grupy"
     },
     "categoryForm": {
       "newTitle": "Nowa kategoria",

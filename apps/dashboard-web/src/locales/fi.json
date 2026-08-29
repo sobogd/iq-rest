@@ -155,7 +155,8 @@
       },
       "addGroup": "Lisää ryhmä",
       "backToMenu": "Takaisin valikkoon",
-      "groupsHeading": "Ryhmät"
+      "groupsHeading": "Ryhmät",
+      "ungrouped": "Ei ryhmää"
     },
     "categoryForm": {
       "newTitle": "Uusi kategoria",
