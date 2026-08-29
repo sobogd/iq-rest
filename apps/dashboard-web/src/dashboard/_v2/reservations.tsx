@@ -115,7 +115,7 @@ export function ReservationsPage({
  // rather than sliced out of one string, so each locale keeps its own order and
  // its own abbreviation ("Sat", "сб", "土").
  const title = view === "month"
-  ? capitalize(focusDate.toLocaleDateString(locale, { month: "long", year: "numeric" }))
+  ? capitalize(formatMonthYear(focusDate, locale))
   : capitalize(focusDate.toLocaleDateString(locale, { day: "numeric", month: "long" }))
     + " (" + focusDate.toLocaleDateString(locale, { weekday: "short" }) + ")";
 
@@ -770,6 +770,22 @@ function todayMidnight() {
  const d = new Date();
  d.setHours(0, 0, 0, 0);
  return d;
+}
+
+/** "August 2026", "август 2026", "2026年8月" — a month and its year without the
+ *  era suffix Russian and its neighbours append (" г.", " р."). Built from
+ *  Intl parts rather than concatenated, so locales that put the year first or
+ *  interleave their own counters keep doing so; only a trailing literal that
+ *  begins with whitespace is dropped, which is what an appended abbreviation
+ *  looks like and what a CJK counter (年, 월) never is. */
+function formatMonthYear(date: Date, locale: string): string {
+ const parts = new Intl.DateTimeFormat(locale, { month: "long", year: "numeric" }).formatToParts(date);
+ while (parts.length > 0) {
+  const last = parts[parts.length - 1];
+  if (last.type === "literal" && /^\s/.test(last.value)) parts.pop();
+  else break;
+ }
+ return parts.map((p) => p.value).join("");
 }
 
 function capitalize(s: string) {
