@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Menüü",
-      "subtitle": "Halda kategooriaid ja roogasid.",
       "expand": "Laienda",
       "collapse": "Ahenda",
       "noCategories": "Kategooriaid pole veel",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Tellimused",
-      "subtitleOne": "Sul on {count} aktiivne tellimus.",
-      "subtitleOther": "Sul on {count} aktiivset tellimust.",
       "noActive": "Aktiivseid tellimusi pole",
       "noActiveSub": "Tellimuse alustamiseks vajuta vabal lauale kaardil või oota, kuni külalised QR-menüü kaudu tellivad.",
       "tapTable": "Tellimuse vaatamiseks või alustamiseks vajuta lauale kaardil.",
@@ -415,7 +412,6 @@
       "number": "Number",
       "seats": "Kohad",
       "seatsShort": "{n} kohta",
-      "formTip": "Lohista laud paika ja kasuta käepidemeid pööramiseks ja suuruse muutmiseks. Määra kohad, number ja kuju allpool ning salvesta.",
       "photo": "Foto",
       "qrModalTitle": "Laud {number}{label}",
       "qrForTable": "QR lauale {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Ristkülik"
     },
     "settings": {
-      "breadcrumb": "Seaded",
       "about": {
-        "title": "Meist",
         "titleLabel": "Pealkiri",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Alapealkiri",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restoranid",
-      "subtitle": "Vaheta restoranide vahel või lisa uus.",
       "active": "Aktiivne",
       "managed": "Hallatav",
       "delete": "Kustuta",
@@ -697,7 +690,6 @@
       "paidOnly": "Restoranide lisamiseks on vaja aktiivset tellimust. Koosta oma pakett arvelduse alt, et lisada veel.",
       "atLimit": "Oled jõudnud oma tellimusse kuuluva {limit} restorani ülempiirini. Lisa veel restorane arvelduse alt või kirjuta toele eripaketi kohta.",
       "newTitle": "Lisa restoran",
-      "newSubtitle": "Loo veel üks restoran. Vali, kas alustada praeguse menüü koopiast või nullist.",
       "startFrom": "Alusta",
       "duplicate": "Dubleeri praegune menüü ja sätted",
       "duplicateDesc": "Kopeerib kategooriad, road, keeled ja visuaalsed sätted. Lauad, tellimused ja broneeringud ei kopeeru.",
@@ -713,42 +705,23 @@
       "backToSettings": "Seaded"
     },
     "settingsHub": {
-      "title": "Seaded",
-      "subtitle": "Halda restorani, meeskonda ja kontot.",
       "logout": "Logi välja",
       "loggingOut": "Väljalogimine...",
       "logoutDesc": "Logi sellest kontost välja.",
       "exitImpersonation": "Lõpeta esindamine",
       "exitImpersonationDesc": "Naase oma admin-kontole ({email}).",
       "rows": {
-        "about": "Meist",
-        "aboutDesc": "Restorani nimi ja alapealkiri.",
         "contacts": "Kontaktid ja asukoht",
-        "contactsDesc": "Telefon, Instagram, WhatsApp, nõel kaardil.",
         "branding": "Sait",
-        "brandingDesc": "Avalik menüü-URL, nimi, rõhutusvärv, tausta pilt või video.",
         "general": "Lokaadi seaded",
-        "generalDesc": "Valuuta ja ajavöönd.",
         "tables": "Lauad",
-        "tablesDesc": "Plaan, kohad ja QR-koodid laua kaupa.",
         "orders": "Tellimused",
-        "ordersDesc": "Luba tellimused, in-app või WhatsApp režiim, kohustuslikud väljad.",
         "bookings": "Broneeringud",
-        "bookingsDesc": "Luba broneeringud, automaatne või käsitsi kinnitus, töötunnid.",
         "languages": "Keeled",
-        "languagesDesc": "Keeled, kuhu avalik menüü tõlgitakse.",
         "billing": "Arveldus",
-        "billingDesc": "Tellimusplaan, prooviversioon, makseteldus.",
         "support": "Tugi",
-        "supportDesc": "Vestle meie meeskonnaga reaalajas.",
-        "companies": "Ettevõtted",
-        "companiesDesc": "Kõik ettevõtted, plaanid ja vestlused.",
-        "sessions": "Seansid",
-        "sessionsDesc": "Kasutajaseansid, sündmused ja konversioonid.",
-        "devices": "Seadmed",
-        "devicesDesc": "Seo tahvelarvuteid köögi ekraani ja kelneri terminalide jaoks."
+        "devices": "Seadmed"
       },
-      "activeRestaurant": "Aktiivne restoran: {name}",
       "switcherDescMany": "Vaheta {count} restorani vahel või lisa uus.",
       "switcherDescOne": "Lisa uus restoran või halda seda."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analüütika",
-      "subtitle": "Menüü vaatamised ja jõudlus.",
       "loading": "Analüütika laadimine…",
       "noData": "Andmeid pole veel",
       "byDay": "Päeva järgi",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Seadmed",
-      "subtitle": "Seo tahvelarvutid, et köögi ja teenindustöötajad logiks sisse ühe korra ja püsiks sisselogituna. Igal seadmel on oma juurdepääs — alati tühistatav.",
       "back": "Tagasi",
       "addDevice": "Lisa seade",
       "delete": "Kustuta",

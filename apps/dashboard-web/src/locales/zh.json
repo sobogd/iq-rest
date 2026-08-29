@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "菜单",
-      "subtitle": "管理类别和菜品。",
       "expand": "展开",
       "collapse": "折叠",
       "noCategories": "尚无类别",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "订单",
-      "subtitleOne": "您有 {count} 个活跃订单。",
-      "subtitleOther": "您有 {count} 个活跃订单。",
       "noActive": "无活跃订单",
       "noActiveSub": "在地图上点击空闲桌台开始订单，或等待顾客通过二维码菜单下单。",
       "tapTable": "点击地图上的桌台查看或开始订单。",
@@ -415,7 +412,6 @@
       "number": "号码",
       "seats": "座位",
       "seatsShort": "{n} 座",
-      "formTip": "拖动桌子进行摆放，用控制点旋转和调整大小。在下方设置座位、编号和形状，然后保存。",
       "photo": "照片",
       "qrModalTitle": "桌 {number}{label}",
       "qrForTable": "桌 {number} 的二维码",
@@ -438,9 +434,7 @@
       "shapeRect": "矩形"
     },
     "settings": {
-      "breadcrumb": "设置",
       "about": {
-        "title": "关于",
         "titleLabel": "标题",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "副标题",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "餐厅",
-      "subtitle": "在餐厅之间切换或添加新餐厅。",
       "active": "当前",
       "managed": "受管理",
       "delete": "删除",
@@ -697,7 +690,6 @@
       "paidOnly": "添加餐厅需要有效订阅。请在计费页面搭建您的套餐以添加更多。",
       "atLimit": "您已达到订阅包含的 {limit} 家餐厅上限。请在计费页面添加更多餐厅，或联系客服咨询定制套餐。",
       "newTitle": "添加餐厅",
-      "newSubtitle": "创建另一家餐厅。选择从当前菜单的副本开始，或从零开始。",
       "startFrom": "起始方式",
       "duplicate": "复制当前菜单和设置",
       "duplicateDesc": "复制分类、菜品、语言和视觉设置。桌位、订单和预订不会被复制。",
@@ -713,42 +705,23 @@
       "backToSettings": "设置"
     },
     "settingsHub": {
-      "title": "设置",
-      "subtitle": "管理您的餐厅、团队和账户。",
       "logout": "退出登录",
       "loggingOut": "正在退出...",
       "logoutDesc": "从此账户退出登录。",
       "exitImpersonation": "退出冒充",
       "exitImpersonationDesc": "返回您的管理员账户 ({email})。",
       "rows": {
-        "about": "关于",
-        "aboutDesc": "餐厅名称和副标题。",
         "contacts": "联系方式与位置",
-        "contactsDesc": "电话、Instagram、WhatsApp、地图定位点。",
         "branding": "网站",
-        "brandingDesc": "公共菜单 URL、名称、强调色、背景图片或视频。",
         "general": "区域",
-        "generalDesc": "货币和时区。",
         "tables": "桌台",
-        "tablesDesc": "平面图、按桌座位和二维码。",
         "orders": "订单",
-        "ordersDesc": "启用订单、应用内或 WhatsApp 模式、必填字段。",
         "bookings": "预订",
-        "bookingsDesc": "启用预订、自动或手动确认、营业时间。",
         "languages": "语言",
-        "languagesDesc": "公开菜单翻译的语言。",
         "billing": "计费",
-        "billingDesc": "订阅套餐、试用、付款管理。",
         "support": "支持",
-        "supportDesc": "实时与我们的团队聊天。",
-        "companies": "公司",
-        "companiesDesc": "所有公司、套餐和聊天。",
-        "sessions": "会话",
-        "sessionsDesc": "用户会话、事件和转化。",
-        "devices": "设备",
-        "devicesDesc": "配对平板用于厨房显示屏和服务员终端。"
+        "devices": "设备"
       },
-      "activeRestaurant": "当前餐厅：{name}",
       "switcherDescMany": "在 {count} 家餐厅之间切换，或添加另一家。",
       "switcherDescOne": "添加另一家餐厅或管理这一家。"
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "分析",
-      "subtitle": "菜单浏览量和性能。",
       "loading": "加载分析中…",
       "noData": "尚无数据",
       "byDay": "按天",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "设备",
-      "subtitle": "配对平板,让厨房和前厅员工登录一次后保持在线。每台设备有独立访问权限,可随时撤销。",
       "back": "返回",
       "addDevice": "添加设备",
       "delete": "删除",

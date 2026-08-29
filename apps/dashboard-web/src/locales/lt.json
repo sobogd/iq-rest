@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Meniu",
-      "subtitle": "Tvarkykite kategorijas ir patiekalus.",
       "expand": "Išskleisti",
       "collapse": "Suskleisti",
       "noCategories": "Dar nėra kategorijų",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Užsakymai",
-      "subtitleOne": "Turite {count} aktyvų užsakymą.",
-      "subtitleOther": "Turite {count} aktyvių užsakymų.",
       "noActive": "Nėra aktyvių užsakymų",
       "noActiveSub": "Bakstelėkite laisvą stalą žemėlapyje, kad pradėtumėte užsakymą, arba palaukite, kol svečiai užsakys per QR meniu.",
       "tapTable": "Bakstelėkite stalą žemėlapyje, kad peržiūrėtumėte arba pradėtumėte užsakymą.",
@@ -415,7 +412,6 @@
       "number": "Numeris",
       "seats": "Vietos",
       "seatsShort": "{n} vietos",
-      "formTip": "Vilkite stalą, kad jį padėtumėte, ir naudokite rankenėles pasukti bei keisti dydį. Žemiau nustatykite vietas, numerį ir formą, tada išsaugokite.",
       "photo": "Nuotrauka",
       "qrModalTitle": "Stalas {number}{label}",
       "qrForTable": "QR stalui {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Stačiakampis"
     },
     "settings": {
-      "breadcrumb": "Nustatymai",
       "about": {
-        "title": "Apie mus",
         "titleLabel": "Pavadinimas",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Paantraštė",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restoranai",
-      "subtitle": "Perjunkite tarp restoranų arba pridėkite naują.",
       "active": "Aktyvus",
       "managed": "Valdoma",
       "delete": "Ištrinti",
@@ -697,7 +690,6 @@
       "paidOnly": "Restoranams pridėti reikia aktyvios prenumeratos. Sudarykite savo planą skiltyje Atsiskaitymas, kad pridėtumėte daugiau.",
       "atLimit": "Pasiekėte {limit} restoranų, įtrauktų į jūsų prenumeratą, ribą. Pridėkite daugiau restoranų skiltyje Atsiskaitymas arba parašykite pagalbai dėl individualaus plano.",
       "newTitle": "Pridėti restoraną",
-      "newSubtitle": "Sukurkite kitą restoraną. Pasirinkite, ar pradėti nuo dabartinio meniu kopijos, ar nuo nulio.",
       "startFrom": "Pradėti nuo",
       "duplicate": "Dubliuoti dabartinį meniu ir nustatymus",
       "duplicateDesc": "Nukopijuoja kategorijas, patiekalus, kalbas ir vizualinius nustatymus. Stalų, užsakymų ir rezervacijų nekopijuoja.",
@@ -713,42 +705,23 @@
       "backToSettings": "Nustatymai"
     },
     "settingsHub": {
-      "title": "Nustatymai",
-      "subtitle": "Tvarkykite restoraną, komandą ir paskyrą.",
       "logout": "Atsijungti",
       "loggingOut": "Atsijungiama...",
       "logoutDesc": "Atsijungti nuo šios paskyros.",
       "exitImpersonation": "Išeiti iš imitacijos",
       "exitImpersonationDesc": "Grįžti į savo administratoriaus paskyrą ({email}).",
       "rows": {
-        "about": "Apie mus",
-        "aboutDesc": "Restorano pavadinimas ir paantraštė.",
         "contacts": "Kontaktai ir vieta",
-        "contactsDesc": "Telefonas, Instagram, WhatsApp, kaištis žemėlapyje.",
         "branding": "Svetainė",
-        "brandingDesc": "Viešo meniu URL, pavadinimas, akcentinė spalva, fono nuotrauka ar vaizdo įrašas.",
         "general": "Regiono nustatymai",
-        "generalDesc": "Valiuta ir laiko juosta.",
         "tables": "Stalai",
-        "tablesDesc": "Planas, vietos ir QR kodai pagal stalą.",
         "orders": "Užsakymai",
-        "ordersDesc": "Įjungti užsakymus, in-app arba WhatsApp režimas, privalomi laukai.",
         "bookings": "Rezervacijos",
-        "bookingsDesc": "Įjungti rezervacijas, automatinis arba rankinis patvirtinimas, darbo valandos.",
         "languages": "Kalbos",
-        "languagesDesc": "Kalbos, į kurias verčiamas viešas meniu.",
         "billing": "Atsiskaitymas",
-        "billingDesc": "Prenumeratos planas, bandomasis laikotarpis, mokėjimų valdymas.",
         "support": "Pagalba",
-        "supportDesc": "Bendraukite su mūsų komanda realiu laiku.",
-        "companies": "Įmonės",
-        "companiesDesc": "Visos įmonės, planai ir pokalbiai.",
-        "sessions": "Seansai",
-        "sessionsDesc": "Vartotojų seansai, įvykiai ir konversijos.",
-        "devices": "Įrenginiai",
-        "devicesDesc": "Susiekite planšetes virtuvės ekranui ir padavėjų terminalams."
+        "devices": "Įrenginiai"
       },
-      "activeRestaurant": "Aktyvus restoranas: {name}",
       "switcherDescMany": "Perjunkite tarp {count} restoranų arba pridėkite naują.",
       "switcherDescOne": "Pridėkite kitą restoraną arba tvarkykite šį."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analitika",
-      "subtitle": "Meniu peržiūros ir veikimas.",
       "loading": "Įkeliama analitika…",
       "noData": "Dar nėra duomenų",
       "byDay": "Pagal dieną",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Įrenginiai",
-      "subtitle": "Susiekite planšetes, kad virtuvės ir aptarnavimo personalas prisijungtų vieną kartą ir liktų prisijungęs. Kiekvienas įrenginys turi atskirą prieigą — bet kada atšaukiamą.",
       "back": "Atgal",
       "addDevice": "Pridėti įrenginį",
       "delete": "Pašalinti",

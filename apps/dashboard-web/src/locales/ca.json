@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Menú",
-      "subtitle": "Gestiona categories i plats.",
       "expand": "Expandeix",
       "collapse": "Replega",
       "noCategories": "Encara no hi ha categories",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Comandes",
-      "subtitleOne": "Tens {count} comanda activa.",
-      "subtitleOther": "Tens {count} comandes actives.",
       "noActive": "Sense comandes actives",
       "noActiveSub": "Toca una taula lliure al mapa per iniciar una comanda, o espera que els clients comandin pel menú QR.",
       "tapTable": "Toca una taula al mapa per veure o iniciar una comanda.",
@@ -415,7 +412,6 @@
       "number": "Número",
       "seats": "Places",
       "seatsShort": "{n} places",
-      "formTip": "Arrossega la taula per col·locar-la i fes servir els controls per girar-la i redimensionar-la. Configura les places, el número i la forma a sota i desa.",
       "photo": "Foto",
       "qrModalTitle": "Taula {number}{label}",
       "qrForTable": "QR per a la taula {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Rectangle"
     },
     "settings": {
-      "breadcrumb": "Configuració",
       "about": {
-        "title": "Sobre nosaltres",
         "titleLabel": "Títol",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Subtítol",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restaurants",
-      "subtitle": "Canvia entre restaurants o afegeix-ne un de nou.",
       "active": "Actiu",
       "managed": "Gestionat",
       "delete": "Suprimeix",
@@ -697,7 +690,6 @@
       "paidOnly": "Afegir restaurants requereix una subscripció activa. Munta el teu pla a Facturació per afegir-ne més.",
       "atLimit": "Has arribat als {limit} restaurants inclosos a la teva subscripció. Afegeix més restaurants a Facturació o escriu al suport per a un pla a mida.",
       "newTitle": "Afegeix restaurant",
-      "newSubtitle": "Crea un altre restaurant. Tria si vols començar amb una còpia del menú actual o des de zero.",
       "startFrom": "Comença des de",
       "duplicate": "Duplica el menú i la configuració actuals",
       "duplicateDesc": "Copia categories, plats, idiomes i ajustos visuals. Taules, comandes i reserves no es copien.",
@@ -713,42 +705,23 @@
       "backToSettings": "Configuració"
     },
     "settingsHub": {
-      "title": "Configuració",
-      "subtitle": "Gestiona el restaurant, l'equip i el compte.",
       "logout": "Tanca sessió",
       "loggingOut": "Tancant sessió...",
       "logoutDesc": "Tanca sessió en aquest compte.",
       "exitImpersonation": "Surt de la suplantació",
       "exitImpersonationDesc": "Torna al teu compte d'admin ({email}).",
       "rows": {
-        "about": "Sobre nosaltres",
-        "aboutDesc": "Nom del restaurant i subtítol.",
         "contacts": "Contactes i ubicació",
-        "contactsDesc": "Telèfon, Instagram, WhatsApp, pin al mapa.",
         "branding": "Lloc",
-        "brandingDesc": "URL del menú públic, nom, color d'accent, imatge o vídeo de fons.",
         "general": "Configuració regional",
-        "generalDesc": "Moneda i fus horari.",
         "tables": "Taules",
-        "tablesDesc": "Plànol, places i codis QR per taula.",
         "orders": "Comandes",
-        "ordersDesc": "Habilita comandes, mode in-app o WhatsApp, camps obligatoris.",
         "bookings": "Reserves",
-        "bookingsDesc": "Habilita reserves, confirmació auto o manual, horari.",
         "languages": "Idiomes",
-        "languagesDesc": "Idiomes als quals es tradueix el menú públic.",
         "billing": "Facturació",
-        "billingDesc": "Pla de subscripció, prova, gestió de pagaments.",
         "support": "Suport",
-        "supportDesc": "Xateja amb el nostre equip en temps real.",
-        "companies": "Empreses",
-        "companiesDesc": "Totes les empreses, plans i xats.",
-        "sessions": "Sessions",
-        "sessionsDesc": "Sessions d'usuari, esdeveniments i conversions.",
-        "devices": "Dispositius",
-        "devicesDesc": "Vincula tauletes per a la pantalla de cuina i les terminals de sala."
+        "devices": "Dispositius"
       },
-      "activeRestaurant": "Restaurant actiu: {name}",
       "switcherDescMany": "Canvia entre {count} restaurants o afegeix-ne un altre.",
       "switcherDescOne": "Afegeix un altre restaurant o gestiona aquest."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analítica",
-      "subtitle": "Visualitzacions del menú i rendiment.",
       "loading": "Carregant analítica…",
       "noData": "Encara no hi ha dades",
       "byDay": "Per dia",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Dispositius",
-      "subtitle": "Vincula tauletes perquè el personal de cuina i de sala iniciï sessió una vegada i s'hi mantingui. Cada dispositiu té el seu propi accés — revocable en qualsevol moment.",
       "back": "Enrere",
       "addDevice": "Afegir dispositiu",
       "delete": "Eliminar",

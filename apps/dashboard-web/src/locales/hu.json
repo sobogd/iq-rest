@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Étlap",
-      "subtitle": "Kategóriák és ételek kezelése.",
       "expand": "Kibont",
       "collapse": "Becsuk",
       "noCategories": "Még nincs kategória",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Rendelések",
-      "subtitleOne": "{count} aktív rendelésed van.",
-      "subtitleOther": "{count} aktív rendelésed van.",
       "noActive": "Nincs aktív rendelés",
       "noActiveSub": "Érints meg egy szabad asztalt a térképen rendelés indításához, vagy várj, hogy a vendégek rendeljenek QR-en keresztül.",
       "tapTable": "Érints meg egy asztalt a térképen rendelés megtekintéséhez vagy indításához.",
@@ -415,7 +412,6 @@
       "number": "Szám",
       "seats": "Helyek",
       "seatsShort": "{n} hely",
-      "formTip": "Húzd az asztalt a helyére, és a fogantyúkkal forgasd és méretezd át. Állítsd be a helyeket, a számot és az alakot lent, majd ments.",
       "photo": "Fotó",
       "qrModalTitle": "{number}. asztal{label}",
       "qrForTable": "QR a {number}. asztalhoz",
@@ -438,9 +434,7 @@
       "shapeRect": "Téglalap"
     },
     "settings": {
-      "breadcrumb": "Beállítások",
       "about": {
-        "title": "Rólunk",
         "titleLabel": "Cím",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Alcím",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Éttermek",
-      "subtitle": "Válts éttermek között, vagy adj hozzá újat.",
       "active": "Aktív",
       "managed": "Kezelt",
       "delete": "Törlés",
@@ -697,7 +690,6 @@
       "paidOnly": "Éttermek hozzáadásához aktív előfizetés szükséges. Állítsd össze a csomagod a Számlázásnál, hogy többet adhass hozzá.",
       "atLimit": "Elérted az előfizetésedben foglalt {limit} éttermet. Adj hozzá további éttermeket a Számlázásnál, vagy írj az ügyfélszolgálatnak egyedi csomagról.",
       "newTitle": "Étterem hozzáadása",
-      "newSubtitle": "Hozz létre másik éttermet. Válaszd, hogy a jelenlegi étlap másolatából vagy üresen indulsz.",
       "startFrom": "Indítás",
       "duplicate": "Jelenlegi étlap és beállítások másolása",
       "duplicateDesc": "Másolja a kategóriákat, ételeket, nyelveket és vizuális beállításokat. Az asztalokat, rendeléseket és foglalásokat nem.",
@@ -713,42 +705,23 @@
       "backToSettings": "Beállítások"
     },
     "settingsHub": {
-      "title": "Beállítások",
-      "subtitle": "Étterem, csapat és fiók kezelése.",
       "logout": "Kijelentkezés",
       "loggingOut": "Kijelentkezés...",
       "logoutDesc": "Kijelentkezés ebből a fiókból.",
       "exitImpersonation": "Megszemélyesítés befejezése",
       "exitImpersonationDesc": "Vissza az admin fiókodhoz ({email}).",
       "rows": {
-        "about": "Rólunk",
-        "aboutDesc": "Étterem neve és alcíme.",
         "contacts": "Kapcsolat és helyszín",
-        "contactsDesc": "Telefon, Instagram, WhatsApp, tű a térképen.",
         "branding": "Webhely",
-        "brandingDesc": "Nyilvános menü URL, név, kiemelőszín, háttérkép vagy -videó.",
         "general": "Területi beállítások",
-        "generalDesc": "Pénznem és időzóna.",
         "tables": "Asztalok",
-        "tablesDesc": "Tervrajz, asztalonkénti helyek és QR-kódok.",
         "orders": "Rendelések",
-        "ordersDesc": "Rendelések engedélyezése, in-app vagy WhatsApp mód, kötelező mezők.",
         "bookings": "Foglalások",
-        "bookingsDesc": "Foglalások engedélyezése, automatikus vagy kézi megerősítés, nyitvatartás.",
         "languages": "Nyelvek",
-        "languagesDesc": "Nyelvek, amelyekre a nyilvános étlap fordítva van.",
         "billing": "Számlázás",
-        "billingDesc": "Előfizetési csomag, próba, fizetéskezelés.",
         "support": "Támogatás",
-        "supportDesc": "Beszélgess csapatunkkal valós időben.",
-        "companies": "Cégek",
-        "companiesDesc": "Minden cég, csomag és beszélgetés.",
-        "sessions": "Munkamenetek",
-        "sessionsDesc": "Felhasználói munkamenetek, események és konverziók.",
-        "devices": "Eszközök",
-        "devicesDesc": "Párosítson táblagépeket konyhai kijelzőhöz és pincér-terminálokhoz."
+        "devices": "Eszközök"
       },
-      "activeRestaurant": "Aktív étterem: {name}",
       "switcherDescMany": "Válts {count} étterem között, vagy adj hozzá újat.",
       "switcherDescOne": "Adj hozzá másik éttermet, vagy kezeld ezt."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analitika",
-      "subtitle": "Étlap megtekintések és teljesítmény.",
       "loading": "Analitika betöltése…",
       "noData": "Még nincs adat",
       "byDay": "Napokra bontva",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Eszközök",
-      "subtitle": "Párosítson táblagépeket, hogy a konyhai és felszolgáló személyzet egyszer bejelentkezzen és bejelentkezve maradjon. Minden eszköznek külön hozzáférése van — bármikor visszavonható.",
       "back": "Vissza",
       "addDevice": "Eszköz hozzáadása",
       "delete": "Törlés",

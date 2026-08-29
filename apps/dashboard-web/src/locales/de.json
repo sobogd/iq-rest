@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Speisekarte",
-      "subtitle": "Verwalten Sie Kategorien und Gerichte.",
       "expand": "Aufklappen",
       "collapse": "Zuklappen",
       "noCategories": "Noch keine Kategorien",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Bestellungen",
-      "subtitleOne": "Sie haben {count} aktive Bestellung.",
-      "subtitleOther": "Sie haben {count} aktive Bestellungen.",
       "noActive": "Keine aktiven Bestellungen",
       "noActiveSub": "Tippen Sie auf einen freien Tisch, um eine Bestellung zu starten, oder warten Sie, bis Gäste über die QR-Karte bestellen.",
       "tapTable": "Tippen Sie auf einen Tisch, um eine Bestellung zu sehen oder zu starten.",
@@ -415,7 +412,6 @@
       "number": "Nummer",
       "seats": "Plätze",
       "seatsShort": "{n} Plätze",
-      "formTip": "Ziehe den Tisch zum Positionieren und nutze die Griffe zum Drehen und Skalieren. Sitzplätze, Nummer und Form unten festlegen, dann speichern.",
       "photo": "Foto",
       "qrModalTitle": "Tisch {number}{label}",
       "qrForTable": "QR für Tisch {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Rechteck"
     },
     "settings": {
-      "breadcrumb": "Einstellungen",
       "about": {
-        "title": "Über uns",
         "titleLabel": "Titel",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Untertitel",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restaurants",
-      "subtitle": "Zwischen Restaurants wechseln oder ein neues hinzufügen.",
       "active": "Aktiv",
       "managed": "Verwaltet",
       "delete": "Löschen",
@@ -697,7 +690,6 @@
       "paidOnly": "Um Restaurants hinzuzufügen, ist ein aktives Abonnement nötig. Stell deinen Tarif in der Abrechnung zusammen, um weitere hinzuzufügen.",
       "atLimit": "Du hast die {limit} Restaurants erreicht, die in deinem Abonnement enthalten sind. Füge weitere Restaurants in der Abrechnung hinzu oder schreibe dem Support wegen eines individuellen Tarifs.",
       "newTitle": "Restaurant hinzufügen",
-      "newSubtitle": "Erstelle ein weiteres Restaurant. Wähle, ob du mit einer Kopie des aktuellen Menüs oder neu beginnst.",
       "startFrom": "Starten mit",
       "duplicate": "Aktuelles Menü und Einstellungen duplizieren",
       "duplicateDesc": "Kopiert Kategorien, Gerichte, Sprachen und visuelle Einstellungen. Tische, Bestellungen und Reservierungen werden nicht kopiert.",
@@ -713,42 +705,23 @@
       "backToSettings": "Einstellungen"
     },
     "settingsHub": {
-      "title": "Einstellungen",
-      "subtitle": "Verwalten Sie Ihr Restaurant, Team und Konto.",
       "logout": "Abmelden",
       "loggingOut": "Abmelden...",
       "logoutDesc": "Von diesem Konto abmelden.",
       "exitImpersonation": "Imitation beenden",
       "exitImpersonationDesc": "Zurück zu Ihrem Admin-Konto ({email}).",
       "rows": {
-        "about": "Über uns",
-        "aboutDesc": "Restaurantname und Untertitel.",
         "contacts": "Kontakt & Standort",
-        "contactsDesc": "Telefon, Instagram, WhatsApp, Adresse auf der Karte.",
         "branding": "Webseite",
-        "brandingDesc": "Öffentliche Menü-URL, Name, Akzentfarbe, Hintergrundbild oder -video.",
         "general": "Region",
-        "generalDesc": "Währung und Zeitzone.",
         "tables": "Tische",
-        "tablesDesc": "Plan, Plätze pro Tisch und QR-Codes.",
         "orders": "Bestellungen",
-        "ordersDesc": "Bestellungen aktivieren, Modus In-App oder WhatsApp, Pflichtfelder.",
         "bookings": "Reservierungen",
-        "bookingsDesc": "Reservierungen aktivieren, automatische oder manuelle Bestätigung, Öffnungszeiten.",
         "languages": "Sprachen",
-        "languagesDesc": "Sprachen, in die Ihre öffentliche Karte übersetzt wird.",
         "billing": "Abrechnung",
-        "billingDesc": "Abo-Tarif, Test, Zahlungsverwaltung.",
         "support": "Support",
-        "supportDesc": "Chatten Sie mit unserem Team in Echtzeit.",
-        "companies": "Unternehmen",
-        "companiesDesc": "Alle Unternehmen, Tarife und Chats.",
-        "sessions": "Sitzungen",
-        "sessionsDesc": "Benutzersitzungen, Ereignisse und Konversionen.",
-        "devices": "Geräte",
-        "devicesDesc": "Koppele Tablets für Küchendisplay und Service-Terminals."
+        "devices": "Geräte"
       },
-      "activeRestaurant": "Aktives Restaurant: {name}",
       "switcherDescMany": "Zwischen {count} Restaurants wechseln oder ein weiteres hinzufügen.",
       "switcherDescOne": "Weiteres Restaurant hinzufügen oder dieses verwalten."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analysen",
-      "subtitle": "Karten-Aufrufe und Performance.",
       "loading": "Analysen werden geladen…",
       "noData": "Noch keine Daten",
       "byDay": "Pro Tag",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Geräte",
-      "subtitle": "Tablets koppeln, damit sich Küchen- und Servicepersonal einmal anmeldet und angemeldet bleibt. Jedes Gerät hat eigenen Zugriff — jederzeit widerruflich.",
       "back": "Zurück",
       "addDevice": "Gerät hinzufügen",
       "delete": "Löschen",

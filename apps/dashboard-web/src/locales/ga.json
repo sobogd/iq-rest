@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Biachlár",
-      "subtitle": "Bainistigh catagóirí agus miasa.",
       "expand": "Leathnaigh",
       "collapse": "Laghdaigh",
       "noCategories": "Gan catagóirí fós",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Orduithe",
-      "subtitleOne": "Tá {count} ordú gníomhach agat.",
-      "subtitleOther": "Tá {count} ordú gníomhach agat.",
       "noActive": "Gan orduithe gníomhacha",
       "noActiveSub": "Tapáil bord saor ar an léarscáil chun ordú a thosú, nó fan go gcuirfidh cuairteoirí orduithe tríd an mbiachlár QR.",
       "tapTable": "Tapáil bord ar an léarscáil chun ordú a fheiceáil nó a thosú.",
@@ -415,7 +412,6 @@
       "number": "Uimhir",
       "seats": "Suíocháin",
       "seatsShort": "{n} suíochán",
-      "formTip": "Tarraing an bord chun é a chur in áit agus úsáid na hanlaí chun é a rothlú agus a athmhéadú. Socraigh suíocháin, uimhir agus cruth thíos, ansin sábháil.",
       "photo": "Grianghraf",
       "qrModalTitle": "Bord {number}{label}",
       "qrForTable": "QR le haghaidh bord {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Dronuilleog"
     },
     "settings": {
-      "breadcrumb": "Socruithe",
       "about": {
-        "title": "Maidir linn",
         "titleLabel": "Teideal",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Fotheideal",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Bialanna",
-      "subtitle": "Athraigh idir bialanna nó cuir ceann nua leis.",
       "active": "Gníomhach",
       "managed": "Bainistithe",
       "delete": "Scrios",
@@ -697,7 +690,6 @@
       "paidOnly": "Teastaíonn síntiús gníomhach chun bialanna a chur leis. Tóg do phlean i mBilleáil chun tuilleadh a chur leis.",
       "atLimit": "Tá na {limit} bialann atá san áireamh i do shíntiús bainte amach agat. Cuir tuilleadh bialanna leis i mBilleáil, nó cuir teachtaireacht chuig an tacaíocht faoi phlean saincheaptha.",
       "newTitle": "Cuir bialann leis",
-      "newSubtitle": "Cruthaigh bialann eile. Pioc an dtosóidh tú le cóip den bhiachlár reatha nó ó thús.",
       "startFrom": "Tosaigh ó",
       "duplicate": "Déan dúblach den bhiachlár agus de na socruithe reatha",
       "duplicateDesc": "Cóipeálann sé catagóirí, míreanna, teangacha agus socruithe amhairc. Ní chóipeáiltear boird, orduithe ná áirithintí.",
@@ -713,42 +705,23 @@
       "backToSettings": "Socruithe"
     },
     "settingsHub": {
-      "title": "Socruithe",
-      "subtitle": "Bainistigh do bhialann, foireann agus cuntas.",
       "logout": "Logáil amach",
       "loggingOut": "Á logáil amach...",
       "logoutDesc": "Logáil amach as an gcuntas seo.",
       "exitImpersonation": "Fág an pearsanú",
       "exitImpersonationDesc": "Fill ar do chuntas riarthóra ({email}).",
       "rows": {
-        "about": "Maidir linn",
-        "aboutDesc": "Ainm bialainne agus fotheideal.",
         "contacts": "Teagmhálacha agus suíomh",
-        "contactsDesc": "Teileafón, Instagram, WhatsApp, pionna ar an léarscáil.",
         "branding": "Suíomh",
-        "brandingDesc": "URL biachláir poiblí, ainm, dath béime, íomhá nó físeán cúlra.",
         "general": "Áitiúil",
-        "generalDesc": "Airgeadra agus crios ama.",
         "tables": "Boird",
-        "tablesDesc": "Plean, suíocháin agus cóid QR in aghaidh an bhoird.",
         "orders": "Orduithe",
-        "ordersDesc": "Cumasaigh orduithe, mód in-app nó WhatsApp, réimsí riachtanacha.",
         "bookings": "Áirithintí",
-        "bookingsDesc": "Cumasaigh áirithintí, deimhniú uathoibríoch nó láimhe, uaireanta.",
         "languages": "Teangacha",
-        "languagesDesc": "Teangacha ina n-aistrítear an biachlár poiblí.",
         "billing": "Billeáil",
-        "billingDesc": "Plean síntiúis, triail, bainistíocht íocaíochtaí.",
         "support": "Tacaíocht",
-        "supportDesc": "Comhrá lenár bhfoireann i bhfíor-am.",
-        "companies": "Cuideachtaí",
-        "companiesDesc": "Gach cuideachta, plean agus comhrá.",
-        "sessions": "Seisiúin",
-        "sessionsDesc": "Seisiúin úsáideoirí, eachtraí agus comhshó.",
-        "devices": "Gléasanna",
-        "devicesDesc": "Péireáil táibléid don taispeáint cistine agus do na críochfoirt freastalaithe."
+        "devices": "Gléasanna"
       },
-      "activeRestaurant": "Bialann gníomhach: {name}",
       "switcherDescMany": "Athraigh idir {count} bhialann nó cuir ceann eile leis.",
       "switcherDescOne": "Cuir bialann eile leis nó bainistigh an ceann seo."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Anailís",
-      "subtitle": "Amhairc bhiachláir agus feidhmíocht.",
       "loading": "Á luchtú anailíse…",
       "noData": "Gan sonraí fós",
       "byDay": "De réir lae",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Gléasanna",
-      "subtitle": "Péireáil táibléid ionas go logálann an fhoireann cistine agus freastail isteach uair amháin agus go bhfanann siad logáilte isteach. Tá rochtain dá chuid féin ag gach gléas — féidir é a chealú am ar bith.",
       "back": "Ar ais",
       "addDevice": "Cuir gléas leis",
       "delete": "Scrios",

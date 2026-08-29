@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Menú",
-      "subtitle": "Gestiona tus categorías y platos.",
       "expand": "Expandir",
       "collapse": "Contraer",
       "noCategories": "Aún no hay categorías",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Pedidos",
-      "subtitleOne": "Tienes {count} pedido activo.",
-      "subtitleOther": "Tienes {count} pedidos activos.",
       "noActive": "Sin pedidos activos",
       "noActiveSub": "Toca una mesa libre en el plano para iniciar un pedido, o espera a que los clientes lo hagan desde el menú QR.",
       "tapTable": "Toca una mesa en el plano para ver o iniciar un pedido.",
@@ -415,7 +412,6 @@
       "number": "Número",
       "seats": "Sillas",
       "seatsShort": "{n} sillas",
-      "formTip": "Arrastra la mesa para colocarla y usa los controles para girarla y redimensionarla. Configura plazas, número y forma abajo y guarda.",
       "photo": "Foto",
       "qrModalTitle": "Mesa {number}{label}",
       "qrForTable": "QR para la mesa {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Rectángulo"
     },
     "settings": {
-      "breadcrumb": "Ajustes",
       "about": {
-        "title": "Acerca de",
         "titleLabel": "Título",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Subtítulo",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restaurantes",
-      "subtitle": "Cambia entre restaurantes o añade uno nuevo.",
       "active": "Activo",
       "managed": "Gestionado",
       "delete": "Eliminar",
@@ -697,7 +690,6 @@
       "paidOnly": "Añadir restaurantes requiere una suscripción activa. Crea tu plan en Facturación para añadir más.",
       "atLimit": "Has alcanzado los {limit} restaurantes incluidos en tu suscripción. Añade más restaurantes en Facturación, o escribe al soporte sobre un plan a medida.",
       "newTitle": "Añadir restaurante",
-      "newSubtitle": "Crea otro restaurante. Elige si empezar con una copia del menú actual o desde cero.",
       "startFrom": "Empieza desde",
       "duplicate": "Duplicar menú y ajustes actuales",
       "duplicateDesc": "Copia categorías, platos, idiomas y ajustes visuales. Las mesas, pedidos y reservas no se copian.",
@@ -713,42 +705,23 @@
       "backToSettings": "Ajustes"
     },
     "settingsHub": {
-      "title": "Ajustes",
-      "subtitle": "Gestiona tu restaurante, equipo y cuenta.",
       "logout": "Cerrar sesión",
       "loggingOut": "Cerrando sesión...",
       "logoutDesc": "Cierra sesión en esta cuenta.",
       "exitImpersonation": "Salir de la suplantación",
       "exitImpersonationDesc": "Volver a tu cuenta de administrador ({email}).",
       "rows": {
-        "about": "Acerca de",
-        "aboutDesc": "Nombre y subtítulo del restaurante.",
         "contacts": "Contactos y ubicación",
-        "contactsDesc": "Teléfono, Instagram, WhatsApp, dirección en el mapa.",
         "branding": "Sitio",
-        "brandingDesc": "URL del menú público, nombre, color de acento, imagen o vídeo de fondo.",
         "general": "Configuración regional",
-        "generalDesc": "Moneda y zona horaria.",
         "tables": "Mesas",
-        "tablesDesc": "Plano, sillas por mesa y códigos QR.",
         "orders": "Pedidos",
-        "ordersDesc": "Habilitar pedidos, modo interno o WhatsApp, campos obligatorios.",
         "bookings": "Reservas",
-        "bookingsDesc": "Habilitar reservas, confirmación automática o manual, horario.",
         "languages": "Idiomas",
-        "languagesDesc": "Idiomas a los que se traduce tu menú público.",
         "billing": "Facturación",
-        "billingDesc": "Plan de suscripción, prueba, gestión de pagos.",
         "support": "Soporte",
-        "supportDesc": "Chatea con nuestro equipo en tiempo real.",
-        "companies": "Empresas",
-        "companiesDesc": "Todas las empresas, planes y chats.",
-        "sessions": "Sesiones",
-        "sessionsDesc": "Sesiones de usuario, eventos y conversiones.",
-        "devices": "Dispositivos",
-        "devicesDesc": "Vincula tabletas para la pantalla de cocina y los terminales de sala."
+        "devices": "Dispositivos"
       },
-      "activeRestaurant": "Restaurante activo: {name}",
       "switcherDescMany": "Cambia entre {count} restaurantes o añade otro.",
       "switcherDescOne": "Añade otro restaurante o gestiona este."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analíticas",
-      "subtitle": "Vistas del menú y rendimiento.",
       "loading": "Cargando analíticas…",
       "noData": "Aún no hay datos",
       "byDay": "Por día",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Dispositivos",
-      "subtitle": "Vincula tabletas para que el personal de cocina y sala inicie sesión una vez y permanezca conectado. Cada dispositivo tiene su propio acceso — revocable en cualquier momento.",
       "back": "Atrás",
       "addDevice": "Añadir dispositivo",
       "delete": "Eliminar",

@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "메뉴",
-      "subtitle": "카테고리와 요리를 관리합니다.",
       "expand": "펼치기",
       "collapse": "접기",
       "noCategories": "아직 카테고리가 없습니다",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "주문",
-      "subtitleOne": "활성 주문이 {count}개 있습니다.",
-      "subtitleOther": "활성 주문이 {count}개 있습니다.",
       "noActive": "활성 주문 없음",
       "noActiveSub": "주문을 시작하려면 지도에서 빈 테이블을 탭하거나 손님이 QR 메뉴로 주문하기를 기다리세요.",
       "tapTable": "주문을 보거나 시작하려면 지도에서 테이블을 탭하세요.",
@@ -415,7 +412,6 @@
       "number": "번호",
       "seats": "좌석",
       "seatsShort": "{n}석",
-      "formTip": "테이블을 드래그해 배치하고 핸들로 회전과 크기를 조절하세요. 아래에서 좌석, 번호, 모양을 설정한 뒤 저장하세요.",
       "photo": "사진",
       "qrModalTitle": "테이블 {number}{label}",
       "qrForTable": "테이블 {number}용 QR",
@@ -438,9 +434,7 @@
       "shapeRect": "사각형"
     },
     "settings": {
-      "breadcrumb": "설정",
       "about": {
-        "title": "소개",
         "titleLabel": "제목",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "부제",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "레스토랑",
-      "subtitle": "레스토랑 간에 전환하거나 새 레스토랑을 추가하세요.",
       "active": "활성",
       "managed": "관리 중",
       "delete": "삭제",
@@ -697,7 +690,6 @@
       "paidOnly": "레스토랑을 추가하려면 활성 구독이 필요합니다. 더 추가하려면 결제에서 플랜을 구성하세요.",
       "atLimit": "구독에 포함된 {limit}개 레스토랑에 도달했습니다. 결제에서 레스토랑을 더 추가하거나, 맞춤 플랜에 대해 지원팀에 문의하세요.",
       "newTitle": "레스토랑 추가",
-      "newSubtitle": "다른 레스토랑을 만드세요. 현재 메뉴 복사본으로 시작할지 처음부터 시작할지 선택하세요.",
       "startFrom": "시작 방식",
       "duplicate": "현재 메뉴 및 설정 복제",
       "duplicateDesc": "카테고리, 메뉴 항목, 언어, 시각 설정을 복사합니다. 테이블, 주문, 예약은 복사되지 않습니다.",
@@ -713,42 +705,23 @@
       "backToSettings": "설정"
     },
     "settingsHub": {
-      "title": "설정",
-      "subtitle": "레스토랑, 팀, 계정을 관리합니다.",
       "logout": "로그아웃",
       "loggingOut": "로그아웃 중...",
       "logoutDesc": "이 계정에서 로그아웃합니다.",
       "exitImpersonation": "사칭 종료",
       "exitImpersonationDesc": "관리자 계정 ({email})으로 돌아갑니다.",
       "rows": {
-        "about": "소개",
-        "aboutDesc": "레스토랑 이름과 부제.",
         "contacts": "연락처 및 위치",
-        "contactsDesc": "전화, Instagram, WhatsApp, 지도 핀.",
         "branding": "사이트",
-        "brandingDesc": "공개 메뉴 URL, 이름, 강조색, 배경 이미지 또는 동영상.",
         "general": "지역 설정",
-        "generalDesc": "통화 및 시간대.",
         "tables": "테이블",
-        "tablesDesc": "평면도, 테이블별 좌석과 QR 코드.",
         "orders": "주문",
-        "ordersDesc": "주문 활성화, 인앱 또는 WhatsApp 모드, 필수 필드.",
         "bookings": "예약",
-        "bookingsDesc": "예약 활성화, 자동 또는 수동 확인, 운영 시간.",
         "languages": "언어",
-        "languagesDesc": "공개 메뉴가 번역되는 언어.",
         "billing": "결제",
-        "billingDesc": "구독 플랜, 체험, 결제 관리.",
         "support": "지원",
-        "supportDesc": "팀과 실시간으로 채팅하세요.",
-        "companies": "회사",
-        "companiesDesc": "모든 회사, 플랜, 채팅.",
-        "sessions": "세션",
-        "sessionsDesc": "사용자 세션, 이벤트, 전환.",
-        "devices": "기기",
-        "devicesDesc": "주방 디스플레이와 서빙 단말기용 태블릿을 페어링합니다."
+        "devices": "기기"
       },
-      "activeRestaurant": "활성 레스토랑: {name}",
       "switcherDescMany": "{count}개의 레스토랑 간 전환하거나 다른 레스토랑을 추가하세요.",
       "switcherDescOne": "다른 레스토랑을 추가하거나 이 레스토랑을 관리하세요."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "분석",
-      "subtitle": "메뉴 조회수와 성과.",
       "loading": "분석을 불러오는 중…",
       "noData": "아직 데이터가 없습니다",
       "byDay": "일별",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "기기",
-      "subtitle": "태블릿을 페어링하여 주방 및 서빙 직원이 한 번 로그인하고 유지할 수 있도록 합니다. 각 기기는 개별 접근 권한을 가지며, 언제든 해지 가능합니다.",
       "back": "뒤로",
       "addDevice": "기기 추가",
       "delete": "삭제",

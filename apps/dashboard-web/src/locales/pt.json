@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Menu",
-      "subtitle": "Gira as suas categorias e pratos.",
       "expand": "Expandir",
       "collapse": "Recolher",
       "noCategories": "Ainda sem categorias",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Pedidos",
-      "subtitleOne": "Tem {count} pedido ativo.",
-      "subtitleOther": "Tem {count} pedidos ativos.",
       "noActive": "Sem pedidos ativos",
       "noActiveSub": "Toque numa mesa livre no mapa para iniciar um pedido, ou aguarde que os clientes façam um pelo menu QR.",
       "tapTable": "Toque numa mesa no mapa para ver ou iniciar um pedido.",
@@ -415,7 +412,6 @@
       "number": "Número",
       "seats": "Lugares",
       "seatsShort": "{n} lugares",
-      "formTip": "Arraste a mesa para posicioná-la e use as alças para rodar e redimensionar. Defina lugares, número e forma abaixo e guarde.",
       "photo": "Foto",
       "qrModalTitle": "Mesa {number}{label}",
       "qrForTable": "QR para a mesa {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Retângulo"
     },
     "settings": {
-      "breadcrumb": "Configurações",
       "about": {
-        "title": "Sobre",
         "titleLabel": "Título",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Subtítulo",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restaurantes",
-      "subtitle": "Alterne entre restaurantes ou adicione um novo.",
       "active": "Ativo",
       "managed": "Gerido",
       "delete": "Eliminar",
@@ -697,7 +690,6 @@
       "paidOnly": "Adicionar restaurantes requer uma subscrição ativa. Crie o seu plano na Faturação para adicionar mais.",
       "atLimit": "Atingiu os {limit} restaurantes incluídos na sua subscrição. Adicione mais restaurantes na Faturação, ou contacte o suporte sobre um plano à medida.",
       "newTitle": "Adicionar restaurante",
-      "newSubtitle": "Crie outro restaurante. Escolha começar com uma cópia do menu atual ou do zero.",
       "startFrom": "Começar com",
       "duplicate": "Duplicar menu e definições atuais",
       "duplicateDesc": "Copia categorias, pratos, idiomas e definições visuais. Mesas, pedidos e reservas não são copiados.",
@@ -713,42 +705,23 @@
       "backToSettings": "Definições"
     },
     "settingsHub": {
-      "title": "Configurações",
-      "subtitle": "Gira o seu restaurante, equipa e conta.",
       "logout": "Terminar sessão",
       "loggingOut": "A terminar sessão...",
       "logoutDesc": "Sair desta conta.",
       "exitImpersonation": "Sair da impersonação",
       "exitImpersonationDesc": "Voltar à sua conta de admin ({email}).",
       "rows": {
-        "about": "Sobre",
-        "aboutDesc": "Nome e subtítulo do restaurante.",
         "contacts": "Contactos e localização",
-        "contactsDesc": "Telefone, Instagram, WhatsApp, pino no mapa.",
         "branding": "Site",
-        "brandingDesc": "URL do menu público, nome, cor de destaque, imagem ou vídeo de fundo.",
         "general": "Localização",
-        "generalDesc": "Moeda e fuso horário.",
         "tables": "Mesas",
-        "tablesDesc": "Plano, lugares por mesa e códigos QR.",
         "orders": "Pedidos",
-        "ordersDesc": "Ativar pedidos, modo in-app ou WhatsApp, campos obrigatórios.",
         "bookings": "Reservas",
-        "bookingsDesc": "Ativar reservas, confirmação auto ou manual, horário.",
         "languages": "Idiomas",
-        "languagesDesc": "Idiomas para os quais o menu público é traduzido.",
         "billing": "Faturação",
-        "billingDesc": "Plano, avaliação, gestão de pagamentos.",
         "support": "Suporte",
-        "supportDesc": "Converse com a nossa equipa em tempo real.",
-        "companies": "Empresas",
-        "companiesDesc": "Todas as empresas, planos e conversas.",
-        "sessions": "Sessões",
-        "sessionsDesc": "Sessões de utilizador, eventos e conversões.",
-        "devices": "Dispositivos",
-        "devicesDesc": "Emparelhe tablets para o ecrã da cozinha e terminais de sala."
+        "devices": "Dispositivos"
       },
-      "activeRestaurant": "Restaurante ativo: {name}",
       "switcherDescMany": "Alterne entre {count} restaurantes ou adicione outro.",
       "switcherDescOne": "Adicione outro restaurante ou gira este."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Análises",
-      "subtitle": "Visualizações de menu e desempenho.",
       "loading": "A carregar análises…",
       "noData": "Ainda sem dados",
       "byDay": "Por dia",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Dispositivos",
-      "subtitle": "Emparelhe tablets para que o pessoal de cozinha e de sala inicie sessão uma vez e permaneça ligado. Cada dispositivo tem o seu próprio acesso — revogável a qualquer momento.",
       "back": "Voltar",
       "addDevice": "Adicionar dispositivo",
       "delete": "Eliminar",

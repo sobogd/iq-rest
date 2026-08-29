@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Meni",
-      "subtitle": "Upravljajte kategorije in jedi.",
       "expand": "Razširi",
       "collapse": "Skrči",
       "noCategories": "Še ni kategorij",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Naročila",
-      "subtitleOne": "Imate {count} aktivno naročilo.",
-      "subtitleOther": "Imate {count} aktivnih naročil.",
       "noActive": "Ni aktivnih naročil",
       "noActiveSub": "Tapnite prosto mizo na zemljevidu za začetek naročila ali počakajte, da gostje naročijo prek QR menija.",
       "tapTable": "Tapnite mizo na zemljevidu za ogled ali začetek naročila.",
@@ -415,7 +412,6 @@
       "number": "Številka",
       "seats": "Sedeži",
       "seatsShort": "{n} sedežev",
-      "formTip": "Povlecite mizo, da jo postavite, in z ročicami jo zavrtite ter spremenite velikost. Spodaj nastavite sedeže, številko in obliko ter shranite.",
       "photo": "Fotografija",
       "qrModalTitle": "Miza {number}{label}",
       "qrForTable": "QR za mizo {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Pravokotnik"
     },
     "settings": {
-      "breadcrumb": "Nastavitve",
       "about": {
-        "title": "O nas",
         "titleLabel": "Naslov",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Podnaslov",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restavracije",
-      "subtitle": "Preklapljajte med restavracijami ali dodajte novo.",
       "active": "Aktivna",
       "managed": "Upravljano",
       "delete": "Izbriši",
@@ -697,7 +690,6 @@
       "paidOnly": "Za dodajanje restavracij je potrebna aktivna naročnina. Sestavite svoj paket v razdelku Obračun, da jih dodate več.",
       "atLimit": "Dosegli ste {limit} restavracij, vključenih v vašo naročnino. Dodajte več restavracij v razdelku Obračun ali pišite podpori o paketu po meri.",
       "newTitle": "Dodaj restavracijo",
-      "newSubtitle": "Ustvarite drugo restavracijo. Izberite, ali začnete s kopijo trenutnega menija ali iz nič.",
       "startFrom": "Začnite z",
       "duplicate": "Podvoji trenutni meni in nastavitve",
       "duplicateDesc": "Kopira kategorije, jedi, jezike in vizualne nastavitve. Miz, naročil in rezervacij ne kopira.",
@@ -713,42 +705,23 @@
       "backToSettings": "Nastavitve"
     },
     "settingsHub": {
-      "title": "Nastavitve",
-      "subtitle": "Upravljajte restavracijo, ekipo in račun.",
       "logout": "Odjava",
       "loggingOut": "Odjavljanje...",
       "logoutDesc": "Odjavi se iz tega računa.",
       "exitImpersonation": "Končaj zastopanje",
       "exitImpersonationDesc": "Vrnitev na admin račun ({email}).",
       "rows": {
-        "about": "O nas",
-        "aboutDesc": "Ime restavracije in podnaslov.",
         "contacts": "Kontakti in lokacija",
-        "contactsDesc": "Telefon, Instagram, WhatsApp, zatič na zemljevidu.",
         "branding": "Spletna stran",
-        "brandingDesc": "URL javnega menija, ime, poudarjena barva, slika ali videoposnetek ozadja.",
         "general": "Lokalne nastavitve",
-        "generalDesc": "Valuta in časovni pas.",
         "tables": "Mize",
-        "tablesDesc": "Načrt, sedeži in QR kode po mizah.",
         "orders": "Naročila",
-        "ordersDesc": "Omogoči naročila, način v aplikaciji ali WhatsApp, obvezna polja.",
         "bookings": "Rezervacije",
-        "bookingsDesc": "Omogoči rezervacije, samodejna ali ročna potrditev, delovni čas.",
         "languages": "Jeziki",
-        "languagesDesc": "Jeziki, v katere se prevaja javni meni.",
         "billing": "Obračun",
-        "billingDesc": "Naročninski paket, preizkus, upravljanje plačil.",
         "support": "Podpora",
-        "supportDesc": "Klepetajte z našo ekipo v realnem času.",
-        "companies": "Podjetja",
-        "companiesDesc": "Vsa podjetja, paketi in klepeti.",
-        "sessions": "Seje",
-        "sessionsDesc": "Uporabniške seje, dogodki in pretvorbe.",
-        "devices": "Naprave",
-        "devicesDesc": "Seznanite tablice za kuhinjski zaslon in natakarske terminale."
+        "devices": "Naprave"
       },
-      "activeRestaurant": "Aktivna restavracija: {name}",
       "switcherDescMany": "Preklapljajte med {count} restavracijami ali dodajte še eno.",
       "switcherDescOne": "Dodajte drugo restavracijo ali upravljajte to."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analitika",
-      "subtitle": "Ogledi menija in zmogljivost.",
       "loading": "Nalaganje analitike…",
       "noData": "Še ni podatkov",
       "byDay": "Po dnevu",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Naprave",
-      "subtitle": "Seznanite tablice, da se kuhinjsko in strežno osebje prijavi enkrat in ostane prijavljeno. Vsaka naprava ima svoj dostop — kadar koli ga lahko prekličete.",
       "back": "Nazaj",
       "addDevice": "Dodaj napravo",
       "delete": "Izbriši",

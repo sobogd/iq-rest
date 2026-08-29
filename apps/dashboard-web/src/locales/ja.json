@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "メニュー",
-      "subtitle": "カテゴリと料理を管理します。",
       "expand": "展開",
       "collapse": "折りたたむ",
       "noCategories": "カテゴリがまだありません",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "注文",
-      "subtitleOne": "アクティブな注文が {count} 件あります。",
-      "subtitleOther": "アクティブな注文が {count} 件あります。",
       "noActive": "アクティブな注文はありません",
       "noActiveSub": "マップで空席のテーブルをタップして注文を開始するか、ゲストがQRメニューから注文するのを待ちます。",
       "tapTable": "マップでテーブルをタップして注文を表示または開始します。",
@@ -415,7 +412,6 @@
       "number": "番号",
       "seats": "席数",
       "seatsShort": "{n} 席",
-      "formTip": "テーブルをドラッグして配置し、ハンドルで回転・サイズ変更します。下で席数・番号・形を設定して保存してください。",
       "photo": "写真",
       "qrModalTitle": "テーブル {number}{label}",
       "qrForTable": "テーブル {number} のQR",
@@ -438,9 +434,7 @@
       "shapeRect": "長方形"
     },
     "settings": {
-      "breadcrumb": "設定",
       "about": {
-        "title": "概要",
         "titleLabel": "タイトル",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "サブタイトル",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "レストラン",
-      "subtitle": "レストランを切り替えるか、新しく追加します。",
       "active": "アクティブ",
       "managed": "管理中",
       "delete": "削除",
@@ -697,7 +690,6 @@
       "paidOnly": "レストランを追加するには有効なサブスクリプションが必要です。請求でプランを作成して追加してください。",
       "atLimit": "サブスクリプションに含まれる {limit} 店舗に達しました。請求でレストランを追加するか、カスタムプランについてサポートにお問い合わせください。",
       "newTitle": "レストランを追加",
-      "newSubtitle": "別のレストランを作成します。現在のメニューのコピーから始めるか、ゼロから始めるかを選んでください。",
       "startFrom": "開始方法",
       "duplicate": "現在のメニューと設定を複製",
       "duplicateDesc": "カテゴリー、商品、言語、ビジュアル設定をコピーします。テーブル、注文、予約はコピーされません。",
@@ -713,42 +705,23 @@
       "backToSettings": "設定"
     },
     "settingsHub": {
-      "title": "設定",
-      "subtitle": "レストラン、チーム、アカウントを管理します。",
       "logout": "ログアウト",
       "loggingOut": "ログアウト中...",
       "logoutDesc": "このアカウントからログアウトします。",
       "exitImpersonation": "なりすましを終了",
       "exitImpersonationDesc": "管理者アカウント ({email}) に戻ります。",
       "rows": {
-        "about": "概要",
-        "aboutDesc": "レストラン名とサブタイトル。",
         "contacts": "連絡先と場所",
-        "contactsDesc": "電話、Instagram、WhatsApp、地図のピン。",
         "branding": "サイト",
-        "brandingDesc": "公開メニュー URL、店名、アクセントカラー、背景画像または動画。",
         "general": "地域設定",
-        "generalDesc": "通貨とタイムゾーン。",
         "tables": "テーブル",
-        "tablesDesc": "プラン、テーブルごとの席とQRコード。",
         "orders": "注文",
-        "ordersDesc": "注文を有効化、アプリ内またはWhatsAppモード、必須フィールド。",
         "bookings": "予約",
-        "bookingsDesc": "予約を有効化、自動または手動確認、営業時間。",
         "languages": "言語",
-        "languagesDesc": "公開メニューの翻訳先言語。",
         "billing": "請求",
-        "billingDesc": "サブスクリプションプラン、試用、支払い管理。",
         "support": "サポート",
-        "supportDesc": "リアルタイムでチームとチャット。",
-        "companies": "企業",
-        "companiesDesc": "すべての企業、プラン、チャット。",
-        "sessions": "セッション",
-        "sessionsDesc": "ユーザーセッション、イベント、コンバージョン。",
-        "devices": "デバイス",
-        "devicesDesc": "キッチンディスプレイとホール用端末用のタブレットをペアリングします。"
+        "devices": "デバイス"
       },
-      "activeRestaurant": "アクティブなレストラン: {name}",
       "switcherDescMany": "{count} 店舗のレストランを切り替えるか、別のものを追加します。",
       "switcherDescOne": "別のレストランを追加するか、このレストランを管理します。"
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "分析",
-      "subtitle": "メニューの表示数とパフォーマンス。",
       "loading": "分析を読み込み中…",
       "noData": "データがまだありません",
       "byDay": "日別",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "デバイス",
-      "subtitle": "タブレットをペアリングし、キッチンとホールのスタッフが一度のログインで使い続けられるようにします。各デバイスは独立したアクセスを持ち、いつでも取り消せます。",
       "back": "戻る",
       "addDevice": "デバイスを追加",
       "delete": "削除",

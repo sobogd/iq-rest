@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Menu",
-      "subtitle": "Hallitse kategorioita ja annoksia.",
       "expand": "Laajenna",
       "collapse": "Pienennä",
       "noCategories": "Ei kategorioita vielä",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Tilaukset",
-      "subtitleOne": "Sinulla on {count} aktiivinen tilaus.",
-      "subtitleOther": "Sinulla on {count} aktiivista tilausta.",
       "noActive": "Ei aktiivisia tilauksia",
       "noActiveSub": "Napauta vapaata pöytää kartalta aloittaaksesi tilauksen, tai odota vieraiden tekevän tilauksen QR-menun kautta.",
       "tapTable": "Napauta pöytää kartalla nähdäksesi tai aloittaaksesi tilauksen.",
@@ -415,7 +412,6 @@
       "number": "Numero",
       "seats": "Paikat",
       "seatsShort": "{n} paikkaa",
-      "formTip": "Vedä pöytä paikalleen ja käytä kahvoja kiertämiseen ja koon muuttamiseen. Aseta paikat, numero ja muoto alta ja tallenna.",
       "photo": "Kuva",
       "qrModalTitle": "Pöytä {number}{label}",
       "qrForTable": "QR pöydälle {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Suorakulmio"
     },
     "settings": {
-      "breadcrumb": "Asetukset",
       "about": {
-        "title": "Tietoja",
         "titleLabel": "Otsikko",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Alaotsikko",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Ravintolat",
-      "subtitle": "Vaihda ravintolaa tai lisää uusi.",
       "active": "Aktiivinen",
       "managed": "Hallinnoitu",
       "delete": "Poista",
@@ -697,7 +690,6 @@
       "paidOnly": "Ravintoloiden lisääminen vaatii aktiivisen tilauksen. Rakenna pakettisi Laskutuksesta lisätäksesi niitä.",
       "atLimit": "Olet saavuttanut tilaukseesi sisältyvän {limit} ravintolan enimmäismäärän. Lisää ravintoloita Laskutuksesta tai ota yhteyttä tukeen räätälöidystä paketista.",
       "newTitle": "Lisää ravintola",
-      "newSubtitle": "Luo toinen ravintola. Valitse, aloitatko nykyisen ruokalistan kopiosta vai tyhjästä.",
       "startFrom": "Aloita",
       "duplicate": "Kopioi nykyinen ruokalista ja asetukset",
       "duplicateDesc": "Kopioi kategoriat, annokset, kielet ja visuaaliset asetukset. Pöytiä, tilauksia ja varauksia ei kopioida.",
@@ -713,42 +705,23 @@
       "backToSettings": "Asetukset"
     },
     "settingsHub": {
-      "title": "Asetukset",
-      "subtitle": "Hallitse ravintolaasi, tiimiä ja tiliä.",
       "logout": "Kirjaudu ulos",
       "loggingOut": "Kirjaudutaan ulos...",
       "logoutDesc": "Kirjaudu ulos tältä tililtä.",
       "exitImpersonation": "Poistu esiintymisestä",
       "exitImpersonationDesc": "Palaa admin-tilillesi ({email}).",
       "rows": {
-        "about": "Tietoja",
-        "aboutDesc": "Ravintolan nimi ja alaotsikko.",
         "contacts": "Yhteystiedot ja sijainti",
-        "contactsDesc": "Puhelin, Instagram, WhatsApp, sijainti kartalla.",
         "branding": "Sivusto",
-        "brandingDesc": "Julkisen ruokalistan URL, nimi, korostusväri, taustakuva tai -video.",
         "general": "Aluekohtaiset",
-        "generalDesc": "Valuutta ja aikavyöhyke.",
         "tables": "Pöydät",
-        "tablesDesc": "Pohjapiirros, paikat ja QR-koodit pöytäkohtaisesti.",
         "orders": "Tilaukset",
-        "ordersDesc": "Ota tilaukset käyttöön, in-app- tai WhatsApp-tila, pakolliset kentät.",
         "bookings": "Varaukset",
-        "bookingsDesc": "Ota varaukset käyttöön, automaattinen tai manuaalinen vahvistus, aukioloajat.",
         "languages": "Kielet",
-        "languagesDesc": "Kielet, joille julkinen menu käännetään.",
         "billing": "Laskutus",
-        "billingDesc": "Tilauspaketti, kokeilu, maksuhallinta.",
         "support": "Tuki",
-        "supportDesc": "Keskustele tiimimme kanssa reaaliajassa.",
-        "companies": "Yritykset",
-        "companiesDesc": "Kaikki yritykset, paketit ja keskustelut.",
-        "sessions": "Istunnot",
-        "sessionsDesc": "Käyttäjäistunnot, tapahtumat ja konversiot.",
-        "devices": "Laitteet",
-        "devicesDesc": "Yhdistä tabletit keittiön näyttöön ja tarjoilijoiden päätteille."
+        "devices": "Laitteet"
       },
-      "activeRestaurant": "Aktiivinen ravintola: {name}",
       "switcherDescMany": "Vaihda {count} ravintolan välillä tai lisää uusi.",
       "switcherDescOne": "Lisää toinen ravintola tai hallinnoi tätä."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analytiikka",
-      "subtitle": "Menun katselut ja suorituskyky.",
       "loading": "Ladataan analytiikkaa…",
       "noData": "Ei dataa vielä",
       "byDay": "Päivän mukaan",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Laitteet",
-      "subtitle": "Yhdistä tabletit, jotta keittiön ja salin henkilökunta kirjautuu sisään kerran ja pysyy sisäänkirjautuneena. Jokaisella laitteella on oma pääsy — peruutettavissa milloin tahansa.",
       "back": "Takaisin",
       "addDevice": "Lisää laite",
       "delete": "Poista",

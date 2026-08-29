@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Menu",
-      "subtitle": "Gérez vos catégories et plats.",
       "expand": "Développer",
       "collapse": "Réduire",
       "noCategories": "Aucune catégorie pour l'instant",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Commandes",
-      "subtitleOne": "Vous avez {count} commande active.",
-      "subtitleOther": "Vous avez {count} commandes actives.",
       "noActive": "Aucune commande active",
       "noActiveSub": "Appuyez sur une table libre du plan pour démarrer une commande, ou attendez que les clients commandent via le menu QR.",
       "tapTable": "Appuyez sur une table du plan pour voir ou démarrer une commande.",
@@ -415,7 +412,6 @@
       "number": "Numéro",
       "seats": "Places",
       "seatsShort": "{n} places",
-      "formTip": "Faites glisser la table pour la positionner et utilisez les poignées pour la pivoter et la redimensionner. Réglez places, numéro et forme ci-dessous, puis enregistrez.",
       "photo": "Photo",
       "qrModalTitle": "Table {number}{label}",
       "qrForTable": "QR pour la table {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Rectangle"
     },
     "settings": {
-      "breadcrumb": "Paramètres",
       "about": {
-        "title": "À propos",
         "titleLabel": "Titre",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Sous-titre",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restaurants",
-      "subtitle": "Basculez entre les restaurants ou ajoutez-en un nouveau.",
       "active": "Actif",
       "managed": "Géré",
       "delete": "Supprimer",
@@ -697,7 +690,6 @@
       "paidOnly": "Ajouter des restaurants nécessite un abonnement actif. Composez votre forfait dans la facturation pour en ajouter d'autres.",
       "atLimit": "Vous avez atteint les {limit} restaurants inclus dans votre abonnement. Ajoutez d'autres restaurants dans la facturation, ou contactez le support pour un forfait sur mesure.",
       "newTitle": "Ajouter un restaurant",
-      "newSubtitle": "Créez un autre restaurant. Choisissez de partir d'une copie du menu actuel ou de zéro.",
       "startFrom": "Commencer avec",
       "duplicate": "Dupliquer le menu et les réglages actuels",
       "duplicateDesc": "Copie les catégories, plats, langues et réglages visuels. Tables, commandes et réservations ne sont pas copiés.",
@@ -713,42 +705,23 @@
       "backToSettings": "Réglages"
     },
     "settingsHub": {
-      "title": "Paramètres",
-      "subtitle": "Gérez votre restaurant, équipe et compte.",
       "logout": "Déconnexion",
       "loggingOut": "Déconnexion...",
       "logoutDesc": "Se déconnecter de ce compte.",
       "exitImpersonation": "Quitter l'impersonation",
       "exitImpersonationDesc": "Revenir à votre compte admin ({email}).",
       "rows": {
-        "about": "À propos",
-        "aboutDesc": "Nom et sous-titre du restaurant.",
         "contacts": "Contacts et adresse",
-        "contactsDesc": "Téléphone, Instagram, WhatsApp, point sur la carte.",
         "branding": "Site",
-        "brandingDesc": "URL du menu public, nom, couleur d'accent, image ou vidéo de fond.",
         "general": "Localisation",
-        "generalDesc": "Devise et fuseau horaire.",
         "tables": "Tables",
-        "tablesDesc": "Plan, places et codes QR par table.",
         "orders": "Commandes",
-        "ordersDesc": "Activer les commandes, mode in-app ou WhatsApp, champs obligatoires.",
         "bookings": "Réservations",
-        "bookingsDesc": "Activer les réservations, confirmation auto ou manuelle, horaires.",
         "languages": "Langues",
-        "languagesDesc": "Langues dans lesquelles votre menu public est traduit.",
         "billing": "Facturation",
-        "billingDesc": "Forfait, essai, gestion des paiements.",
         "support": "Support",
-        "supportDesc": "Discutez avec notre équipe en temps réel.",
-        "companies": "Entreprises",
-        "companiesDesc": "Toutes les entreprises, forfaits et chats.",
-        "sessions": "Sessions",
-        "sessionsDesc": "Sessions utilisateur, événements et conversions.",
-        "devices": "Appareils",
-        "devicesDesc": "Associez des tablettes pour l'écran de cuisine et les terminaux serveur."
+        "devices": "Appareils"
       },
-      "activeRestaurant": "Restaurant actif : {name}",
       "switcherDescMany": "Basculez entre {count} restaurants ou ajoutez-en un autre.",
       "switcherDescOne": "Ajoutez un autre restaurant ou gérez celui-ci."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analyses",
-      "subtitle": "Vues du menu et performance.",
       "loading": "Chargement des analyses…",
       "noData": "Aucune donnée pour l'instant",
       "byDay": "Par jour",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Appareils",
-      "subtitle": "Associez des tablettes pour que le personnel de cuisine et de salle se connecte une seule fois et reste connecté. Chaque appareil dispose de son propre accès — révocable à tout moment.",
       "back": "Retour",
       "addDevice": "Ajouter un appareil",
       "delete": "Supprimer",

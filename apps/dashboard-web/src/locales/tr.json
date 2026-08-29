@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Menü",
-      "subtitle": "Kategorileri ve yemekleri yönetin.",
       "expand": "Genişlet",
       "collapse": "Daralt",
       "noCategories": "Henüz kategori yok",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Siparişler",
-      "subtitleOne": "{count} aktif siparişiniz var.",
-      "subtitleOther": "{count} aktif siparişiniz var.",
       "noActive": "Aktif sipariş yok",
       "noActiveSub": "Sipariş başlatmak için haritada boş bir masaya dokunun veya misafirlerin QR menüden sipariş vermesini bekleyin.",
       "tapTable": "Sipariş görmek veya başlatmak için haritada bir masaya dokunun.",
@@ -415,7 +412,6 @@
       "number": "Numara",
       "seats": "Koltuk",
       "seatsShort": "{n} koltuk",
-      "formTip": "Masayı yerleştirmek için sürükleyin, döndürmek ve yeniden boyutlandırmak için tutamaçları kullanın. Aşağıdan koltuk, numara ve şekli ayarlayıp kaydedin.",
       "photo": "Fotoğraf",
       "qrModalTitle": "Masa {number}{label}",
       "qrForTable": "Masa {number} için QR",
@@ -438,9 +434,7 @@
       "shapeRect": "Dikdörtgen"
     },
     "settings": {
-      "breadcrumb": "Ayarlar",
       "about": {
-        "title": "Hakkında",
         "titleLabel": "Başlık",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Alt başlık",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restoranlar",
-      "subtitle": "Restoranlar arasında geçiş yapın veya yenisini ekleyin.",
       "active": "Aktif",
       "managed": "Yönetiliyor",
       "delete": "Sil",
@@ -697,7 +690,6 @@
       "paidOnly": "Restoran eklemek için etkin bir abonelik gerekir. Daha fazlasını eklemek için Faturalama'dan planınızı oluşturun.",
       "atLimit": "Aboneliğinize dahil olan {limit} restorana ulaştınız. Faturalama'dan daha fazla restoran ekleyin veya özel bir plan için destek ekibine yazın.",
       "newTitle": "Restoran ekle",
-      "newSubtitle": "Başka bir restoran oluşturun. Mevcut menünün kopyasıyla mı yoksa sıfırdan mı başlayacağınızı seçin.",
       "startFrom": "Başlangıç",
       "duplicate": "Mevcut menü ve ayarları çoğalt",
       "duplicateDesc": "Kategorileri, ürünleri, dilleri ve görsel ayarları kopyalar. Masalar, siparişler ve rezervasyonlar kopyalanmaz.",
@@ -713,42 +705,23 @@
       "backToSettings": "Ayarlar"
     },
     "settingsHub": {
-      "title": "Ayarlar",
-      "subtitle": "Restoran, ekip ve hesabınızı yönetin.",
       "logout": "Çıkış",
       "loggingOut": "Çıkış yapılıyor...",
       "logoutDesc": "Bu hesaptan çıkış yap.",
       "exitImpersonation": "Kimliğe bürünmeyi sonlandır",
       "exitImpersonationDesc": "Yönetici hesabınıza ({email}) dön.",
       "rows": {
-        "about": "Hakkında",
-        "aboutDesc": "Restoran adı ve alt başlık.",
         "contacts": "İletişim ve konum",
-        "contactsDesc": "Telefon, Instagram, WhatsApp, haritada pin.",
         "branding": "Site",
-        "brandingDesc": "Genel menü URL'si, ad, vurgu rengi, arka plan görseli veya videosu.",
         "general": "Bölge",
-        "generalDesc": "Para birimi ve saat dilimi.",
         "tables": "Masalar",
-        "tablesDesc": "Plan, masa başı koltuk ve QR kodları.",
         "orders": "Siparişler",
-        "ordersDesc": "Siparişleri etkinleştir, in-app veya WhatsApp modu, zorunlu alanlar.",
         "bookings": "Rezervasyonlar",
-        "bookingsDesc": "Rezervasyonları etkinleştir, otomatik veya manuel onay, çalışma saatleri.",
         "languages": "Diller",
-        "languagesDesc": "Genel menünüzün çevrildiği diller.",
         "billing": "Faturalama",
-        "billingDesc": "Abonelik planı, deneme, ödeme yönetimi.",
         "support": "Destek",
-        "supportDesc": "Ekibimizle gerçek zamanlı sohbet edin.",
-        "companies": "Şirketler",
-        "companiesDesc": "Tüm şirketler, planlar ve sohbetler.",
-        "sessions": "Oturumlar",
-        "sessionsDesc": "Kullanıcı oturumları, olaylar ve dönüşümler.",
-        "devices": "Cihazlar",
-        "devicesDesc": "Mutfak ekranı ve garson terminalleri için tabletleri eşleştirin."
+        "devices": "Cihazlar"
       },
-      "activeRestaurant": "Aktif restoran: {name}",
       "switcherDescMany": "{count} restoran arasında geçiş yapın veya yenisini ekleyin.",
       "switcherDescOne": "Başka bir restoran ekleyin veya bunu yönetin."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analitik",
-      "subtitle": "Menü görüntülemeleri ve performans.",
       "loading": "Analitik yükleniyor…",
       "noData": "Henüz veri yok",
       "byDay": "Güne göre",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Cihazlar",
-      "subtitle": "Tabletleri eşleştirin; mutfak ve servis personeli bir kez giriş yapsın ve oturumu açık kalsın. Her cihazın kendi erişimi vardır — istediğiniz zaman iptal edilebilir.",
       "back": "Geri",
       "addDevice": "Cihaz ekle",
       "delete": "Sil",

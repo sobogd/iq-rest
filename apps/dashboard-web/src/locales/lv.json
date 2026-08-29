@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Ēdienkarte",
-      "subtitle": "Pārvaldiet kategorijas un ēdienus.",
       "expand": "Izvērst",
       "collapse": "Sakļaut",
       "noCategories": "Vēl nav kategoriju",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Pasūtījumi",
-      "subtitleOne": "Jums ir {count} aktīvs pasūtījums.",
-      "subtitleOther": "Jums ir {count} aktīvi pasūtījumi.",
       "noActive": "Nav aktīvu pasūtījumu",
       "noActiveSub": "Pieskarieties brīvam galdam kartē, lai sāktu pasūtījumu, vai gaidiet, līdz viesi pasūta caur QR ēdienkarti.",
       "tapTable": "Pieskarieties galdam kartē, lai apskatītu vai sāktu pasūtījumu.",
@@ -415,7 +412,6 @@
       "number": "Numurs",
       "seats": "Vietas",
       "seatsShort": "{n} vietas",
-      "formTip": "Velciet galdu, lai to novietotu, un izmantojiet rokturus, lai pagrieztu un mainītu izmēru. Iestatiet vietas, numuru un formu zemāk un saglabājiet.",
       "photo": "Fotoattēls",
       "qrModalTitle": "Galds {number}{label}",
       "qrForTable": "QR galdam {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Taisnstūris"
     },
     "settings": {
-      "breadcrumb": "Iestatījumi",
       "about": {
-        "title": "Par mums",
         "titleLabel": "Nosaukums",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Apakšvirsraksts",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restorāni",
-      "subtitle": "Pārslēdzieties starp restorāniem vai pievienojiet jaunu.",
       "active": "Aktīvs",
       "managed": "Pārvaldīts",
       "delete": "Dzēst",
@@ -697,7 +690,6 @@
       "paidOnly": "Restorānu pievienošanai nepieciešams aktīvs abonements. Izveidojiet savu plānu sadaļā Norēķini, lai pievienotu vēl.",
       "atLimit": "Esat sasniedzis {limit} restorānus, kas iekļauti jūsu abonementā. Pievienojiet vairāk restorānu sadaļā Norēķini vai rakstiet atbalstam par pielāgotu plānu.",
       "newTitle": "Pievienot restorānu",
-      "newSubtitle": "Izveidojiet citu restorānu. Izvēlieties, vai sākt ar pašreizējās ēdienkartes kopiju, vai no nulles.",
       "startFrom": "Sākt no",
       "duplicate": "Dublēt pašreizējo ēdienkarti un iestatījumus",
       "duplicateDesc": "Kopē kategorijas, ēdienus, valodas un vizuālos iestatījumus. Galdiņus, pasūtījumus un rezervācijas nekopē.",
@@ -713,42 +705,23 @@
       "backToSettings": "Iestatījumi"
     },
     "settingsHub": {
-      "title": "Iestatījumi",
-      "subtitle": "Pārvaldiet restorānu, komandu un kontu.",
       "logout": "Iziet",
       "loggingOut": "Iziet...",
       "logoutDesc": "Iziet no šī konta.",
       "exitImpersonation": "Iziet no uzdošanās",
       "exitImpersonationDesc": "Atgriezties pie sava admin konta ({email}).",
       "rows": {
-        "about": "Par mums",
-        "aboutDesc": "Restorāna nosaukums un apakšvirsraksts.",
         "contacts": "Kontakti un atrašanās vieta",
-        "contactsDesc": "Tālrunis, Instagram, WhatsApp, adata kartē.",
         "branding": "Vietne",
-        "brandingDesc": "Publiskā ēdienkartes URL, nosaukums, akcenta krāsa, fona attēls vai video.",
         "general": "Reģiona iestatījumi",
-        "generalDesc": "Valūta un laika josla.",
         "tables": "Galdi",
-        "tablesDesc": "Plāns, vietas un QR kodi pa galdiem.",
         "orders": "Pasūtījumi",
-        "ordersDesc": "Iespējot pasūtījumus, in-app vai WhatsApp režīms, obligātie lauki.",
         "bookings": "Rezervācijas",
-        "bookingsDesc": "Iespējot rezervācijas, automātiska vai manuāla apstiprināšana, darba laiks.",
         "languages": "Valodas",
-        "languagesDesc": "Valodas, kurās tiek tulkota publiskā ēdienkarte.",
         "billing": "Norēķini",
-        "billingDesc": "Abonēšanas plāns, izmēģinājums, maksājumu pārvaldība.",
         "support": "Atbalsts",
-        "supportDesc": "Tērzējiet ar mūsu komandu reāllaikā.",
-        "companies": "Uzņēmumi",
-        "companiesDesc": "Visi uzņēmumi, plāni un sarunas.",
-        "sessions": "Sesijas",
-        "sessionsDesc": "Lietotāju sesijas, notikumi un konversijas.",
-        "devices": "Ierīces",
-        "devicesDesc": "Savienojiet planšetdatorus virtuves displejam un viesmīļu termināļiem."
+        "devices": "Ierīces"
       },
-      "activeRestaurant": "Aktīvs restorāns: {name}",
       "switcherDescMany": "Pārslēdzieties starp {count} restorāniem vai pievienojiet vēl vienu.",
       "switcherDescOne": "Pievienojiet citu restorānu vai pārvaldiet šo."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analīze",
-      "subtitle": "Ēdienkartes skatījumi un veiktspēja.",
       "loading": "Ielādē analīzi…",
       "noData": "Vēl nav datu",
       "byDay": "Pa dienām",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Ierīces",
-      "subtitle": "Savienojiet planšetdatorus, lai virtuves un viesmīļu personāls pieteiktos vienreiz un paliktu pieteicies. Katrai ierīcei ir sava piekļuve — to var atsaukt jebkurā brīdī.",
       "back": "Atpakaļ",
       "addDevice": "Pievienot ierīci",
       "delete": "Dzēst",

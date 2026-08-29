@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Menu",
-      "subtitle": "Spravujte kategorie a jídla.",
       "expand": "Rozbalit",
       "collapse": "Sbalit",
       "noCategories": "Žádné kategorie",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Objednávky",
-      "subtitleOne": "Máte {count} aktivní objednávku.",
-      "subtitleOther": "Máte {count} aktivních objednávek.",
       "noActive": "Žádné aktivní objednávky",
       "noActiveSub": "Klepněte na volný stůl na mapě a začněte objednávku, nebo počkejte, až hosté objednají přes QR menu.",
       "tapTable": "Klepněte na stůl na mapě a zobrazte nebo začněte objednávku.",
@@ -415,7 +412,6 @@
       "number": "Číslo",
       "seats": "Místa",
       "seatsShort": "{n} míst",
-      "formTip": "Přetáhněte stůl pro umístění a pomocí úchytů jej otočte a změňte velikost. Níže nastavte místa, číslo a tvar a uložte.",
       "photo": "Fotka",
       "qrModalTitle": "Stůl {number}{label}",
       "qrForTable": "QR pro stůl {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Obdélník"
     },
     "settings": {
-      "breadcrumb": "Nastavení",
       "about": {
-        "title": "O nás",
         "titleLabel": "Název",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Podtitulek",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restaurace",
-      "subtitle": "Přepínejte mezi restauracemi nebo přidejte novou.",
       "active": "Aktivní",
       "managed": "Spravováno",
       "delete": "Smazat",
@@ -697,7 +690,6 @@
       "paidOnly": "Přidávání restaurací vyžaduje aktivní předplatné. Sestavte si plán ve Fakturaci a přidejte další.",
       "atLimit": "Dosáhli jste {limit} restaurací zahrnutých ve vašem předplatném. Přidejte další restaurace ve Fakturaci nebo napište podpoře ohledně plánu na míru.",
       "newTitle": "Přidat restauraci",
-      "newSubtitle": "Vytvořte další restauraci. Vyberte, zda začít kopií současného menu nebo od nuly.",
       "startFrom": "Začít od",
       "duplicate": "Duplikovat aktuální menu a nastavení",
       "duplicateDesc": "Zkopíruje kategorie, položky, jazyky a vizuální nastavení. Stoly, objednávky a rezervace se nekopírují.",
@@ -713,42 +705,23 @@
       "backToSettings": "Nastavení"
     },
     "settingsHub": {
-      "title": "Nastavení",
-      "subtitle": "Spravujte restauraci, tým a účet.",
       "logout": "Odhlásit",
       "loggingOut": "Odhlašování...",
       "logoutDesc": "Odhlásit se z tohoto účtu.",
       "exitImpersonation": "Ukončit zastupování",
       "exitImpersonationDesc": "Vrátit se na admin účet ({email}).",
       "rows": {
-        "about": "O nás",
-        "aboutDesc": "Název restaurace a podtitulek.",
         "contacts": "Kontakty a poloha",
-        "contactsDesc": "Telefon, Instagram, WhatsApp, špendlík na mapě.",
         "branding": "Web",
-        "brandingDesc": "Veřejná URL menu, název, akcentní barva, obrázek nebo video pozadí.",
         "general": "Místní nastavení",
-        "generalDesc": "Měna a časové pásmo.",
         "tables": "Stoly",
-        "tablesDesc": "Plánek, místa a QR kódy podle stolů.",
         "orders": "Objednávky",
-        "ordersDesc": "Povolit objednávky, in-app nebo WhatsApp režim, povinná pole.",
         "bookings": "Rezervace",
-        "bookingsDesc": "Povolit rezervace, automatické nebo ruční potvrzení, pracovní hodiny.",
         "languages": "Jazyky",
-        "languagesDesc": "Jazyky, do kterých je překládáno veřejné menu.",
         "billing": "Fakturace",
-        "billingDesc": "Plán předplatného, zkušební doba, správa plateb.",
         "support": "Podpora",
-        "supportDesc": "Chat s naším týmem v reálném čase.",
-        "companies": "Společnosti",
-        "companiesDesc": "Všechny společnosti, plány a chaty.",
-        "sessions": "Relace",
-        "sessionsDesc": "Uživatelské relace, události a konverze.",
-        "devices": "Zařízení",
-        "devicesDesc": "Spárujte tablety pro kuchyňský displej a obsluhovací terminály."
+        "devices": "Zařízení"
       },
-      "activeRestaurant": "Aktivní restaurace: {name}",
       "switcherDescMany": "Přepínejte mezi {count} restauracemi nebo přidejte další.",
       "switcherDescOne": "Přidejte další restauraci nebo spravujte tuto."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analýzy",
-      "subtitle": "Zobrazení menu a výkon.",
       "loading": "Načítání analýz…",
       "noData": "Žádná data",
       "byDay": "Podle dne",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Zařízení",
-      "subtitle": "Spárujte tablety, aby se kuchyňský a obsluhový personál přihlásil jednou a zůstal přihlášený. Každé zařízení má svůj přístup — kdykoli odvolatelný.",
       "back": "Zpět",
       "addDevice": "Přidat zařízení",
       "delete": "Smazat",

@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Menu",
-      "subtitle": "Manage your categories and dishes.",
       "expand": "Expand",
       "collapse": "Collapse",
       "noCategories": "No categories yet",
@@ -295,7 +294,6 @@
     },
     "devices": {
       "title": "Devices",
-      "subtitle": "Pair tablets so kitchen and waiter staff can sign in once and stay signed in. Each device gets its own access — revoke any time.",
       "back": "Back",
       "addDevice": "Add device",
       "delete": "Delete",
@@ -342,8 +340,6 @@
     },
     "orders": {
       "title": "Orders",
-      "subtitleOne": "You have {count} active order.",
-      "subtitleOther": "You have {count} active orders.",
       "noActive": "No active orders",
       "noActiveSub": "Tap a free table on the map to start an order, or wait for guests to place one via the QR menu.",
       "tapTable": "Tap a table on the map to see or start an order.",
@@ -492,7 +488,6 @@
       "number": "Number",
       "seats": "Seats",
       "seatsShort": "{n} seats",
-      "formTip": "Drag the table to position it, and use the handles to rotate and resize it. Set seats, number and shape below, then save.",
       "photo": "Photo",
       "qrModalTitle": "Table {number}{label}",
       "qrForTable": "QR for table {number}",
@@ -515,9 +510,7 @@
       "shapeRect": "Rectangle"
     },
     "settings": {
-      "breadcrumb": "Settings",
       "about": {
-        "title": "About",
         "titleLabel": "Title",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Subtitle",
@@ -656,7 +649,6 @@
       },
       "customTexts": {
         "title": "Menu texts",
-        "subtitle": "Override the built-in buttons and labels on your public menu. Leave a field empty to keep the built-in text. Write a text in your default language, then use Translate all to fill the other languages — any language left empty falls back to your default.",
         "translateAll": "Translate all",
         "groups": {
           "navigation": "Navigation & menu",
@@ -769,7 +761,6 @@
     },
     "restaurants": {
       "title": "Restaurants",
-      "subtitle": "Switch between restaurants or add a new one.",
       "active": "Active",
       "managed": "Managed",
       "delete": "Delete",
@@ -784,7 +775,6 @@
       "paidOnly": "Adding restaurants requires an active subscription. Build your plan in Billing to add more.",
       "atLimit": "You've reached the {limit} restaurants included in your subscription. Add more restaurants in Billing, or message support about a custom plan.",
       "newTitle": "Add restaurant",
-      "newSubtitle": "Create another restaurant. Pick whether to start with a copy of the current menu or from scratch.",
       "startFrom": "Start from",
       "duplicate": "Duplicate current menu and settings",
       "duplicateDesc": "Copies categories, items, languages, and visual settings. Tables, orders and reservations are not copied.",
@@ -800,9 +790,6 @@
       "backToSettings": "Settings"
     },
     "settingsHub": {
-      "title": "Settings",
-      "subtitle": "Manage your restaurant, team, and account.",
-      "activeRestaurant": "Active restaurant: {name}",
       "switcherDescMany": "Switch between {count} restaurants or add another.",
       "switcherDescOne": "Add another restaurant or manage this one.",
       "logout": "Log out",
@@ -811,34 +798,17 @@
       "exitImpersonation": "Exit impersonation",
       "exitImpersonationDesc": "Return to your admin account ({email}).",
       "rows": {
-        "about": "About",
-        "aboutDesc": "Restaurant name and subtitle.",
         "contacts": "Contacts & location",
-        "contactsDesc": "Phone, Instagram, WhatsApp, address pin on the map.",
         "branding": "Site",
-        "brandingDesc": "Public menu URL, name, accent color, background image or video.",
         "general": "Locale",
-        "generalDesc": "Currency and timezone.",
         "tables": "Tables",
-        "tablesDesc": "Floor plan, per-table seats and QR codes.",
         "devices": "Devices",
-        "devicesDesc": "Pair tablets for kitchen display and waiter terminals.",
         "orders": "Orders",
-        "ordersDesc": "Enable orders, in-app or WhatsApp mode, required guest fields.",
         "bookings": "Bookings",
-        "bookingsDesc": "Enable reservations, auto or manual confirmation, working hours.",
         "languages": "Languages",
-        "languagesDesc": "Languages your public menu is translated into.",
         "customTexts": "Menu texts",
-        "customTextsDesc": "Customize buttons and labels shown on your public menu.",
         "billing": "Billing",
-        "billingDesc": "Subscription plan, trial, payment management.",
-        "support": "Support",
-        "supportDesc": "Chat with our team in real time.",
-        "companies": "Companies",
-        "companiesDesc": "All companies, plans, and chats.",
-        "sessions": "Sessions",
-        "sessionsDesc": "User sessions, events, and conversions."
+        "support": "Support"
       }
     },
     "impersonation": {
@@ -848,7 +818,6 @@
     },
     "analyticsDashboard": {
       "title": "Analytics",
-      "subtitle": "Menu views and performance.",
       "scopeActive": "Active restaurant",
       "scopeAll": "All restaurants",
       "loading": "Loading analytics…",

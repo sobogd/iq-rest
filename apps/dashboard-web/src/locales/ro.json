@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Meniu",
-      "subtitle": "Gestionează categoriile și preparatele.",
       "expand": "Extinde",
       "collapse": "Restrânge",
       "noCategories": "Nicio categorie încă",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Comenzi",
-      "subtitleOne": "Ai {count} comandă activă.",
-      "subtitleOther": "Ai {count} comenzi active.",
       "noActive": "Fără comenzi active",
       "noActiveSub": "Atinge o masă liberă pe hartă pentru a porni o comandă, sau așteaptă ca clienții să comande prin meniul QR.",
       "tapTable": "Atinge o masă pe hartă pentru a vedea sau a porni o comandă.",
@@ -415,7 +412,6 @@
       "number": "Număr",
       "seats": "Locuri",
       "seatsShort": "{n} locuri",
-      "formTip": "Trage masa pentru a o poziționa și folosește mânerele pentru rotire și redimensionare. Setează locurile, numărul și forma mai jos, apoi salvează.",
       "photo": "Poză",
       "qrModalTitle": "Masa {number}{label}",
       "qrForTable": "QR pentru masa {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Dreptunghi"
     },
     "settings": {
-      "breadcrumb": "Setări",
       "about": {
-        "title": "Despre",
         "titleLabel": "Titlu",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Subtitlu",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restaurante",
-      "subtitle": "Comută între restaurante sau adaugă unul nou.",
       "active": "Activ",
       "managed": "Gestionat",
       "delete": "Șterge",
@@ -697,7 +690,6 @@
       "paidOnly": "Adăugarea de restaurante necesită un abonament activ. Construiește-ți planul în Facturare pentru a adăuga mai multe.",
       "atLimit": "Ai atins cele {limit} restaurante incluse în abonamentul tău. Adaugă mai multe restaurante în Facturare sau scrie asistenței despre un plan personalizat.",
       "newTitle": "Adaugă restaurant",
-      "newSubtitle": "Creează un alt restaurant. Alege dacă pornești cu o copie a meniului curent sau de la zero.",
       "startFrom": "Pornește de la",
       "duplicate": "Duplică meniul și setările curente",
       "duplicateDesc": "Copiază categoriile, articolele, limbile și setările vizuale. Mesele, comenzile și rezervările nu se copiază.",
@@ -713,42 +705,23 @@
       "backToSettings": "Setări"
     },
     "settingsHub": {
-      "title": "Setări",
-      "subtitle": "Gestionează restaurantul, echipa și contul.",
       "logout": "Deconectează-te",
       "loggingOut": "Deconectare...",
       "logoutDesc": "Deconectează-te de la acest cont.",
       "exitImpersonation": "Ieși din impersonare",
       "exitImpersonationDesc": "Revino la contul de admin ({email}).",
       "rows": {
-        "about": "Despre",
-        "aboutDesc": "Numele restaurantului și subtitlu.",
         "contacts": "Contacte și locație",
-        "contactsDesc": "Telefon, Instagram, WhatsApp, pin pe hartă.",
         "branding": "Site",
-        "brandingDesc": "URL meniu public, nume, culoare de accent, imagine sau video de fundal.",
         "general": "Regional",
-        "generalDesc": "Monedă și fus orar.",
         "tables": "Mese",
-        "tablesDesc": "Plan, locuri pe masă și coduri QR.",
         "orders": "Comenzi",
-        "ordersDesc": "Activează comenzi, mod in-app sau WhatsApp, câmpuri obligatorii.",
         "bookings": "Rezervări",
-        "bookingsDesc": "Activează rezervări, confirmare auto sau manuală, program.",
         "languages": "Limbi",
-        "languagesDesc": "Limbile în care este tradus meniul public.",
         "billing": "Facturare",
-        "billingDesc": "Plan abonament, probă, gestionare plăți.",
         "support": "Suport",
-        "supportDesc": "Discută cu echipa noastră în timp real.",
-        "companies": "Companii",
-        "companiesDesc": "Toate companiile, planurile și conversațiile.",
-        "sessions": "Sesiuni",
-        "sessionsDesc": "Sesiuni utilizator, evenimente și conversii.",
-        "devices": "Dispozitive",
-        "devicesDesc": "Asociază tablete pentru ecranul de bucătărie și terminalele ospătarilor."
+        "devices": "Dispozitive"
       },
-      "activeRestaurant": "Restaurant activ: {name}",
       "switcherDescMany": "Comută între {count} restaurante sau adaugă altul.",
       "switcherDescOne": "Adaugă alt restaurant sau gestionează-l pe acesta."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analize",
-      "subtitle": "Vizualizări meniu și performanță.",
       "loading": "Se încarcă analizele…",
       "noData": "Niciun fel de date",
       "byDay": "Pe zi",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Dispozitive",
-      "subtitle": "Asociază tablete pentru ca personalul din bucătărie și sală să se autentifice o singură dată și să rămână autentificat. Fiecare dispozitiv are propriul acces — revocabil oricând.",
       "back": "Înapoi",
       "addDevice": "Adaugă dispozitiv",
       "delete": "Șterge",

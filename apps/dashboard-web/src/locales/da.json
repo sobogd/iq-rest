@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Menu",
-      "subtitle": "Administrer kategorier og retter.",
       "expand": "Udvid",
       "collapse": "Skjul",
       "noCategories": "Ingen kategorier endnu",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Bestillinger",
-      "subtitleOne": "Du har {count} aktiv bestilling.",
-      "subtitleOther": "Du har {count} aktive bestillinger.",
       "noActive": "Ingen aktive bestillinger",
       "noActiveSub": "Tryk på et ledigt bord på kortet for at starte en bestilling, eller vent på at gæster bestiller via QR-menuen.",
       "tapTable": "Tryk på et bord på kortet for at se eller starte en bestilling.",
@@ -415,7 +412,6 @@
       "number": "Nummer",
       "seats": "Pladser",
       "seatsShort": "{n} pladser",
-      "formTip": "Træk bordet for at placere det, og brug håndtagene til at rotere og ændre størrelse. Angiv pladser, nummer og form nedenfor, og gem.",
       "photo": "Foto",
       "qrModalTitle": "Bord {number}{label}",
       "qrForTable": "QR til bord {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Rektangel"
     },
     "settings": {
-      "breadcrumb": "Indstillinger",
       "about": {
-        "title": "Om",
         "titleLabel": "Titel",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Undertitel",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restauranter",
-      "subtitle": "Skift mellem restauranter eller tilføj en ny.",
       "active": "Aktiv",
       "managed": "Administreret",
       "delete": "Slet",
@@ -697,7 +690,6 @@
       "paidOnly": "Tilføjelse af restauranter kræver et aktivt abonnement. Byg din plan under Fakturering for at tilføje flere.",
       "atLimit": "Du har nået de {limit} restauranter, der er inkluderet i dit abonnement. Tilføj flere restauranter under Fakturering, eller skriv til supporten om en skræddersyet plan.",
       "newTitle": "Tilføj restaurant",
-      "newSubtitle": "Opret en anden restaurant. Vælg, om du vil starte med en kopi af den nuværende menu eller fra bunden.",
       "startFrom": "Start fra",
       "duplicate": "Duplikér nuværende menu og indstillinger",
       "duplicateDesc": "Kopierer kategorier, retter, sprog og visuelle indstillinger. Borde, ordrer og reservationer kopieres ikke.",
@@ -713,42 +705,23 @@
       "backToSettings": "Indstillinger"
     },
     "settingsHub": {
-      "title": "Indstillinger",
-      "subtitle": "Administrer din restaurant, team og konto.",
       "logout": "Log ud",
       "loggingOut": "Logger ud...",
       "logoutDesc": "Log ud af denne konto.",
       "exitImpersonation": "Afslut imitation",
       "exitImpersonationDesc": "Vend tilbage til din admin-konto ({email}).",
       "rows": {
-        "about": "Om",
-        "aboutDesc": "Restaurantens navn og undertitel.",
         "contacts": "Kontakter & adresse",
-        "contactsDesc": "Telefon, Instagram, WhatsApp, nål på kortet.",
         "branding": "Site",
-        "brandingDesc": "Offentlig menu-URL, navn, accentfarve, baggrundsbillede eller -video.",
         "general": "Lokalisering",
-        "generalDesc": "Valuta og tidszone.",
         "tables": "Borde",
-        "tablesDesc": "Plan, pladser pr. bord og QR-koder.",
         "orders": "Bestillinger",
-        "ordersDesc": "Aktiver bestillinger, in-app eller WhatsApp-tilstand, påkrævede felter.",
         "bookings": "Reservationer",
-        "bookingsDesc": "Aktiver reservationer, auto eller manuel bekræftelse, åbningstider.",
         "languages": "Sprog",
-        "languagesDesc": "Sprog din offentlige menu oversættes til.",
         "billing": "Fakturering",
-        "billingDesc": "Abonnementsplan, prøve, betalingsstyring.",
         "support": "Support",
-        "supportDesc": "Chat med vores team i realtid.",
-        "companies": "Virksomheder",
-        "companiesDesc": "Alle virksomheder, planer og chats.",
-        "sessions": "Sessioner",
-        "sessionsDesc": "Brugersessioner, hændelser og konverteringer.",
-        "devices": "Enheder",
-        "devicesDesc": "Par tablets til køkkendisplay og tjenerterminaler."
+        "devices": "Enheder"
       },
-      "activeRestaurant": "Aktiv restaurant: {name}",
       "switcherDescMany": "Skift mellem {count} restauranter eller tilføj en til.",
       "switcherDescOne": "Tilføj en anden restaurant eller administrer denne."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analyse",
-      "subtitle": "Menuvisninger og ydelse.",
       "loading": "Indlæser analyse…",
       "noData": "Ingen data endnu",
       "byDay": "Pr. dag",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Enheder",
-      "subtitle": "Par tablets, så køkken- og servicepersonale kan logge ind én gang og forblive logget ind. Hver enhed har sin egen adgang — kan tilbagekaldes når som helst.",
       "back": "Tilbage",
       "addDevice": "Tilføj enhed",
       "delete": "Slet",

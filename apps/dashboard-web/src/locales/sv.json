@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Meny",
-      "subtitle": "Hantera kategorier och rätter.",
       "expand": "Expandera",
       "collapse": "Komprimera",
       "noCategories": "Inga kategorier än",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Beställningar",
-      "subtitleOne": "Du har {count} aktiv beställning.",
-      "subtitleOther": "Du har {count} aktiva beställningar.",
       "noActive": "Inga aktiva beställningar",
       "noActiveSub": "Tryck på ett ledigt bord på kartan för att starta en beställning, eller vänta på att gäster beställer via QR-menyn.",
       "tapTable": "Tryck på ett bord på kartan för att se eller starta en beställning.",
@@ -415,7 +412,6 @@
       "number": "Nummer",
       "seats": "Platser",
       "seatsShort": "{n} platser",
-      "formTip": "Dra bordet för att placera det och använd handtagen för att rotera och ändra storlek. Ställ in platser, nummer och form nedan och spara.",
       "photo": "Foto",
       "qrModalTitle": "Bord {number}{label}",
       "qrForTable": "QR för bord {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Rektangel"
     },
     "settings": {
-      "breadcrumb": "Inställningar",
       "about": {
-        "title": "Om",
         "titleLabel": "Titel",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Underrubrik",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restauranger",
-      "subtitle": "Växla mellan restauranger eller lägg till en ny.",
       "active": "Aktiv",
       "managed": "Hanteras",
       "delete": "Ta bort",
@@ -697,7 +690,6 @@
       "paidOnly": "Att lägga till restauranger kräver en aktiv prenumeration. Bygg ditt abonnemang under Fakturering för att lägga till fler.",
       "atLimit": "Du har nått de {limit} restauranger som ingår i din prenumeration. Lägg till fler restauranger under Fakturering, eller kontakta supporten om ett skräddarsytt abonnemang.",
       "newTitle": "Lägg till restaurang",
-      "newSubtitle": "Skapa en annan restaurang. Välj om du vill börja med en kopia av nuvarande meny eller från noll.",
       "startFrom": "Börja från",
       "duplicate": "Duplicera nuvarande meny och inställningar",
       "duplicateDesc": "Kopierar kategorier, rätter, språk och visuella inställningar. Bord, beställningar och bokningar kopieras inte.",
@@ -713,42 +705,23 @@
       "backToSettings": "Inställningar"
     },
     "settingsHub": {
-      "title": "Inställningar",
-      "subtitle": "Hantera restaurang, team och konto.",
       "logout": "Logga ut",
       "loggingOut": "Loggar ut...",
       "logoutDesc": "Logga ut från detta konto.",
       "exitImpersonation": "Avsluta personifiering",
       "exitImpersonationDesc": "Återgå till ditt admin-konto ({email}).",
       "rows": {
-        "about": "Om",
-        "aboutDesc": "Restaurangens namn och underrubrik.",
         "contacts": "Kontakter & plats",
-        "contactsDesc": "Telefon, Instagram, WhatsApp, nål på kartan.",
         "branding": "Webbplats",
-        "brandingDesc": "URL till offentlig meny, namn, accentfärg, bakgrundsbild eller -video.",
         "general": "Region",
-        "generalDesc": "Valuta och tidszon.",
         "tables": "Bord",
-        "tablesDesc": "Plan, platser per bord och QR-koder.",
         "orders": "Beställningar",
-        "ordersDesc": "Aktivera beställningar, in-app eller WhatsApp-läge, obligatoriska fält.",
         "bookings": "Bokningar",
-        "bookingsDesc": "Aktivera bokningar, auto eller manuell bekräftelse, öppettider.",
         "languages": "Språk",
-        "languagesDesc": "Språk din offentliga meny översätts till.",
         "billing": "Fakturering",
-        "billingDesc": "Prenumerationsplan, test, betalningshantering.",
         "support": "Support",
-        "supportDesc": "Chatta med vårt team i realtid.",
-        "companies": "Företag",
-        "companiesDesc": "Alla företag, planer och chattar.",
-        "sessions": "Sessioner",
-        "sessionsDesc": "Användarsessioner, händelser och konverteringar.",
-        "devices": "Enheter",
-        "devicesDesc": "Para ihop surfplattor för köksdisplay och servitörsterminaler."
+        "devices": "Enheter"
       },
-      "activeRestaurant": "Aktiv restaurang: {name}",
       "switcherDescMany": "Växla mellan {count} restauranger eller lägg till en till.",
       "switcherDescOne": "Lägg till en annan restaurang eller hantera den här."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analys",
-      "subtitle": "Menyvisningar och prestanda.",
       "loading": "Laddar analys…",
       "noData": "Ingen data än",
       "byDay": "Per dag",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Enheter",
-      "subtitle": "Para ihop surfplattor så att kök- och servicepersonal loggar in en gång och förblir inloggade. Varje enhet har egen åtkomst — kan återkallas när som helst.",
       "back": "Tillbaka",
       "addDevice": "Lägg till enhet",
       "delete": "Ta bort",

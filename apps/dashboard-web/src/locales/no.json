@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Meny",
-      "subtitle": "Administrer kategorier og retter.",
       "expand": "Utvid",
       "collapse": "Skjul",
       "noCategories": "Ingen kategorier ennå",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Bestillinger",
-      "subtitleOne": "Du har {count} aktiv bestilling.",
-      "subtitleOther": "Du har {count} aktive bestillinger.",
       "noActive": "Ingen aktive bestillinger",
       "noActiveSub": "Trykk på et ledig bord på kartet for å starte en bestilling, eller vent på at gjester bestiller via QR-menyen.",
       "tapTable": "Trykk på et bord på kartet for å se eller starte en bestilling.",
@@ -415,7 +412,6 @@
       "number": "Nummer",
       "seats": "Plasser",
       "seatsShort": "{n} plasser",
-      "formTip": "Dra bordet for å plassere det, og bruk håndtakene til å rotere og endre størrelse. Angi plasser, nummer og form nedenfor, og lagre.",
       "photo": "Bilde",
       "qrModalTitle": "Bord {number}{label}",
       "qrForTable": "QR for bord {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Rektangel"
     },
     "settings": {
-      "breadcrumb": "Innstillinger",
       "about": {
-        "title": "Om",
         "titleLabel": "Tittel",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Undertittel",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restauranter",
-      "subtitle": "Bytt mellom restauranter eller legg til en ny.",
       "active": "Aktiv",
       "managed": "Administrert",
       "delete": "Slett",
@@ -697,7 +690,6 @@
       "paidOnly": "Å legge til restauranter krever et aktivt abonnement. Bygg planen din under Fakturering for å legge til flere.",
       "atLimit": "Du har nådd de {limit} restaurantene som er inkludert i abonnementet ditt. Legg til flere restauranter under Fakturering, eller kontakt support om en skreddersydd plan.",
       "newTitle": "Legg til restaurant",
-      "newSubtitle": "Opprett en annen restaurant. Velg om du vil starte med en kopi av dagens meny eller helt fra start.",
       "startFrom": "Start fra",
       "duplicate": "Dupliser nåværende meny og innstillinger",
       "duplicateDesc": "Kopierer kategorier, retter, språk og visuelle innstillinger. Bord, bestillinger og reservasjoner kopieres ikke.",
@@ -713,42 +705,23 @@
       "backToSettings": "Innstillinger"
     },
     "settingsHub": {
-      "title": "Innstillinger",
-      "subtitle": "Administrer restauranten, teamet og kontoen.",
       "logout": "Logg ut",
       "loggingOut": "Logger ut...",
       "logoutDesc": "Logg ut fra denne kontoen.",
       "exitImpersonation": "Avslutt imitasjon",
       "exitImpersonationDesc": "Tilbake til admin-kontoen din ({email}).",
       "rows": {
-        "about": "Om",
-        "aboutDesc": "Restaurantnavn og undertittel.",
         "contacts": "Kontakter & adresse",
-        "contactsDesc": "Telefon, Instagram, WhatsApp, nål på kartet.",
         "branding": "Nettsted",
-        "brandingDesc": "URL til offentlig meny, navn, aksentfarge, bakgrunnsbilde eller -video.",
         "general": "Regional",
-        "generalDesc": "Valuta og tidssone.",
         "tables": "Bord",
-        "tablesDesc": "Plan, plasser per bord og QR-koder.",
         "orders": "Bestillinger",
-        "ordersDesc": "Aktiver bestillinger, in-app eller WhatsApp-modus, påkrevde felter.",
         "bookings": "Bookinger",
-        "bookingsDesc": "Aktiver bookinger, auto eller manuell bekreftelse, åpningstider.",
         "languages": "Språk",
-        "languagesDesc": "Språk din offentlige meny oversettes til.",
         "billing": "Fakturering",
-        "billingDesc": "Abonnementsplan, prøve, betalingsadministrasjon.",
         "support": "Support",
-        "supportDesc": "Chat med teamet vårt i sanntid.",
-        "companies": "Selskaper",
-        "companiesDesc": "Alle selskaper, planer og chatter.",
-        "sessions": "Økter",
-        "sessionsDesc": "Brukerøkter, hendelser og konverteringer.",
-        "devices": "Enheter",
-        "devicesDesc": "Par nettbrett for kjøkkendisplay og servitørterminaler."
+        "devices": "Enheter"
       },
-      "activeRestaurant": "Aktiv restaurant: {name}",
       "switcherDescMany": "Bytt mellom {count} restauranter eller legg til en til.",
       "switcherDescOne": "Legg til en annen restaurant eller administrer denne."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analyse",
-      "subtitle": "Menyvisninger og ytelse.",
       "loading": "Laster analyse…",
       "noData": "Ingen data ennå",
       "byDay": "Per dag",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Enheter",
-      "subtitle": "Par nettbrett slik at kjøkken- og servicepersonale logger inn én gang og forblir innlogget. Hver enhet har sin egen tilgang — kan tilbakekalles når som helst.",
       "back": "Tilbake",
       "addDevice": "Legg til enhet",
       "delete": "Slett",

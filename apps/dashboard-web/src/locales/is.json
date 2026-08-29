@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Matseðill",
-      "subtitle": "Stjórnaðu flokkum og réttum.",
       "expand": "Stækka",
       "collapse": "Minnka",
       "noCategories": "Engir flokkar enn",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Pantanir",
-      "subtitleOne": "Þú átt {count} virka pöntun.",
-      "subtitleOther": "Þú átt {count} virkar pantanir.",
       "noActive": "Engar virkar pantanir",
       "noActiveSub": "Smelltu á laust borð á kortinu til að hefja pöntun, eða bíddu eftir að gestir panti gegnum QR-matseðilinn.",
       "tapTable": "Smelltu á borð á kortinu til að sjá eða hefja pöntun.",
@@ -415,7 +412,6 @@
       "number": "Númer",
       "seats": "Sæti",
       "seatsShort": "{n} sæti",
-      "formTip": "Dragðu borðið til að staðsetja það og notaðu handföngin til að snúa og breyta stærð. Stilltu sæti, númer og lögun fyrir neðan og vistaðu.",
       "photo": "Mynd",
       "qrModalTitle": "Borð {number}{label}",
       "qrForTable": "QR fyrir borð {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Rétthyrningur"
     },
     "settings": {
-      "breadcrumb": "Stillingar",
       "about": {
-        "title": "Um okkur",
         "titleLabel": "Titill",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Undirtitill",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Veitingastaðir",
-      "subtitle": "Skiptu á milli veitingastaða eða bættu nýjum við.",
       "active": "Virkur",
       "managed": "Í umsjón",
       "delete": "Eyða",
@@ -697,7 +690,6 @@
       "paidOnly": "Að bæta við veitingastöðum krefst virkrar áskriftar. Settu saman áskriftina í Reikningagerð til að bæta við fleirum.",
       "atLimit": "Þú hefur náð þeim {limit} veitingastöðum sem fylgja áskriftinni þinni. Bættu við fleiri veitingastöðum í Reikningagerð, eða sendu þjónustuveri skilaboð um sérsniðna áskrift.",
       "newTitle": "Bæta veitingastað við",
-      "newSubtitle": "Stofnaðu annan veitingastað. Veldu hvort byrja eigi með afriti af núverandi matseðli eða á núlli.",
       "startFrom": "Byrjaðu með",
       "duplicate": "Afrita núverandi matseðil og stillingar",
       "duplicateDesc": "Afritar flokka, rétti, tungumál og útlit. Borðum, pöntunum og bókunum er ekki afritað.",
@@ -713,42 +705,23 @@
       "backToSettings": "Stillingar"
     },
     "settingsHub": {
-      "title": "Stillingar",
-      "subtitle": "Stjórnaðu veitingastaðnum, teyminu og reikningnum.",
       "logout": "Skrá út",
       "loggingOut": "Skráir út...",
       "logoutDesc": "Skráðu þig út af þessum reikningi.",
       "exitImpersonation": "Hætta í líkjun",
       "exitImpersonationDesc": "Farðu til baka á stjórnandareikning þinn ({email}).",
       "rows": {
-        "about": "Um okkur",
-        "aboutDesc": "Nafn veitingastaðar og undirtitill.",
         "contacts": "Tengiliðir og staðsetning",
-        "contactsDesc": "Sími, Instagram, WhatsApp, prjón á korti.",
         "branding": "Vefur",
-        "brandingDesc": "Slóð opins matseðils, nafn, áherslulitur, bakgrunnsmynd eða -myndband.",
         "general": "Staðsetning",
-        "generalDesc": "Gjaldmiðill og tímabelti.",
         "tables": "Borð",
-        "tablesDesc": "Áætlun, sæti og QR-kóðar eftir borði.",
         "orders": "Pantanir",
-        "ordersDesc": "Virkja pantanir, in-app eða WhatsApp máti, krafðir reitir.",
         "bookings": "Bókanir",
-        "bookingsDesc": "Virkja bókanir, sjálfvirk eða handvirk staðfesting, vinnutími.",
         "languages": "Tungumál",
-        "languagesDesc": "Tungumál sem opinberi matseðillinn er þýddur á.",
         "billing": "Reikningagerð",
-        "billingDesc": "Áskriftarpakki, prufa, greiðslustjórnun.",
         "support": "Stuðningur",
-        "supportDesc": "Spjallaðu við teymið okkar í rauntíma.",
-        "companies": "Fyrirtæki",
-        "companiesDesc": "Öll fyrirtæki, áskriftir og spjall.",
-        "sessions": "Setur",
-        "sessionsDesc": "Notendasetur, atburðir og umbreytingar.",
-        "devices": "Tæki",
-        "devicesDesc": "Paraðu spjaldtölvur fyrir eldhússkjá og þjónaborð."
+        "devices": "Tæki"
       },
-      "activeRestaurant": "Virkur veitingastaður: {name}",
       "switcherDescMany": "Skiptu á milli {count} veitingastaða eða bættu öðrum við.",
       "switcherDescOne": "Bættu öðrum veitingastað við eða stjórnaðu þessum."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Greiningar",
-      "subtitle": "Skoðanir matseðils og frammistaða.",
       "loading": "Hleður greiningum…",
       "noData": "Engin gögn enn",
       "byDay": "Eftir degi",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Tæki",
-      "subtitle": "Paraðu spjaldtölvur svo eldhús- og þjónustulið skrái sig inn einu sinni og haldist innskráð. Hvert tæki hefur sinn eigin aðgang — afturkallanlegt hvenær sem er.",
       "back": "Til baka",
       "addDevice": "Bæta við tæki",
       "delete": "Eyða",

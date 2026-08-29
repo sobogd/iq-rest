@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Menu",
-      "subtitle": "Beheer uw categorieën en gerechten.",
       "expand": "Uitvouwen",
       "collapse": "Inklappen",
       "noCategories": "Nog geen categorieën",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Bestellingen",
-      "subtitleOne": "U heeft {count} actieve bestelling.",
-      "subtitleOther": "U heeft {count} actieve bestellingen.",
       "noActive": "Geen actieve bestellingen",
       "noActiveSub": "Tik op een vrije tafel op de plattegrond om een bestelling te starten, of wacht tot gasten via het QR-menu bestellen.",
       "tapTable": "Tik op een tafel om een bestelling te zien of starten.",
@@ -415,7 +412,6 @@
       "number": "Nummer",
       "seats": "Plaatsen",
       "seatsShort": "{n} plaatsen",
-      "formTip": "Sleep de tafel om te plaatsen en gebruik de handvatten om te draaien en het formaat te wijzigen. Stel zitplaatsen, nummer en vorm hieronder in en sla op.",
       "photo": "Foto",
       "qrModalTitle": "Tafel {number}{label}",
       "qrForTable": "QR voor tafel {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Rechthoek"
     },
     "settings": {
-      "breadcrumb": "Instellingen",
       "about": {
-        "title": "Over",
         "titleLabel": "Titel",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Ondertitel",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Restaurants",
-      "subtitle": "Wissel tussen restaurants of voeg een nieuw restaurant toe.",
       "active": "Actief",
       "managed": "Beheerd",
       "delete": "Verwijderen",
@@ -697,7 +690,6 @@
       "paidOnly": "Restaurants toevoegen vereist een actief abonnement. Stel je abonnement samen in Facturering om er meer toe te voegen.",
       "atLimit": "Je hebt de {limit} restaurants bereikt die in je abonnement zijn inbegrepen. Voeg meer restaurants toe in Facturering, of neem contact op met support voor een abonnement op maat.",
       "newTitle": "Restaurant toevoegen",
-      "newSubtitle": "Maak een ander restaurant. Kies of je start met een kopie van het huidige menu of helemaal opnieuw.",
       "startFrom": "Beginnen met",
       "duplicate": "Huidig menu en instellingen dupliceren",
       "duplicateDesc": "Kopieert categorieën, gerechten, talen en visuele instellingen. Tafels, bestellingen en reserveringen worden niet gekopieerd.",
@@ -713,42 +705,23 @@
       "backToSettings": "Instellingen"
     },
     "settingsHub": {
-      "title": "Instellingen",
-      "subtitle": "Beheer uw restaurant, team en account.",
       "logout": "Uitloggen",
       "loggingOut": "Uitloggen...",
       "logoutDesc": "Uitloggen uit dit account.",
       "exitImpersonation": "Impersonatie verlaten",
       "exitImpersonationDesc": "Terug naar uw admin-account ({email}).",
       "rows": {
-        "about": "Over",
-        "aboutDesc": "Restaurantnaam en ondertitel.",
         "contacts": "Contacten en locatie",
-        "contactsDesc": "Telefoon, Instagram, WhatsApp, adres op de kaart.",
         "branding": "Site",
-        "brandingDesc": "URL van het openbare menu, naam, accentkleur, achtergrondafbeelding of -video.",
         "general": "Regio",
-        "generalDesc": "Valuta en tijdzone.",
         "tables": "Tafels",
-        "tablesDesc": "Plattegrond, plaatsen per tafel en QR-codes.",
         "orders": "Bestellingen",
-        "ordersDesc": "Bestellingen inschakelen, in-app of WhatsApp-modus, verplichte velden.",
         "bookings": "Reserveringen",
-        "bookingsDesc": "Reserveringen inschakelen, automatische of handmatige bevestiging, openingstijden.",
         "languages": "Talen",
-        "languagesDesc": "Talen waarin uw publieke menu wordt vertaald.",
         "billing": "Facturering",
-        "billingDesc": "Abonnement, proef, betalingsbeheer.",
         "support": "Ondersteuning",
-        "supportDesc": "Chat in realtime met ons team.",
-        "companies": "Bedrijven",
-        "companiesDesc": "Alle bedrijven, abonnementen en chats.",
-        "sessions": "Sessies",
-        "sessionsDesc": "Gebruikerssessies, gebeurtenissen en conversies.",
-        "devices": "Apparaten",
-        "devicesDesc": "Koppel tablets voor het keukendisplay en bedieningsterminals."
+        "devices": "Apparaten"
       },
-      "activeRestaurant": "Actief restaurant: {name}",
       "switcherDescMany": "Wissel tussen {count} restaurants of voeg een ander toe.",
       "switcherDescOne": "Voeg een ander restaurant toe of beheer dit restaurant."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analyses",
-      "subtitle": "Menubekeken en prestaties.",
       "loading": "Analyses laden…",
       "noData": "Nog geen gegevens",
       "byDay": "Per dag",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Apparaten",
-      "subtitle": "Koppel tablets zodat keuken- en bedieningspersoneel één keer inlogt en ingelogd blijft. Elk apparaat heeft eigen toegang — altijd in te trekken.",
       "back": "Terug",
       "addDevice": "Apparaat toevoegen",
       "delete": "Verwijderen",

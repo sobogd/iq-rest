@@ -90,7 +90,6 @@
     },
     "menu": {
       "title": "Meni",
-      "subtitle": "Upravljajte kategorijama i jelima.",
       "expand": "Proširi",
       "collapse": "Sažmi",
       "noCategories": "Još nema kategorija",
@@ -265,8 +264,6 @@
     },
     "orders": {
       "title": "Porudžbine",
-      "subtitleOne": "Imate {count} aktivnu porudžbinu.",
-      "subtitleOther": "Imate {count} aktivnih porudžbina.",
       "noActive": "Nema aktivnih porudžbina",
       "noActiveSub": "Dodirnite slobodan sto na mapi za pokretanje porudžbine ili sačekajte da gosti naruče preko QR menija.",
       "tapTable": "Dodirnite sto na mapi za prikaz ili pokretanje porudžbine.",
@@ -415,7 +412,6 @@
       "number": "Broj",
       "seats": "Mesta",
       "seatsShort": "{n} mesta",
-      "formTip": "Превуците сто да бисте га поставили и користите ручке за ротацију и промену величине. Подесите места, број и облик испод, па сачувајте.",
       "photo": "Fotografija",
       "qrModalTitle": "Sto {number}{label}",
       "qrForTable": "QR za sto {number}",
@@ -438,9 +434,7 @@
       "shapeRect": "Правоугаоник"
     },
     "settings": {
-      "breadcrumb": "Podešavanja",
       "about": {
-        "title": "O nama",
         "titleLabel": "Naslov",
         "titlePlaceholder": "Love Eatery",
         "subtitleLabel": "Podnaslov",
@@ -682,7 +676,6 @@
     },
     "restaurants": {
       "title": "Ресторани",
-      "subtitle": "Пребацујте се између ресторана или додајте нови.",
       "active": "Активан",
       "managed": "Управљано",
       "delete": "Обриши",
@@ -697,7 +690,6 @@
       "paidOnly": "Додавање ресторана захтева активну претплату. Направите свој план у одељку Наплата да додате још.",
       "atLimit": "Достигли сте {limit} ресторана укључених у вашу претплату. Додајте још ресторана у одељку Наплата или пишите подршци о прилагођеном плану.",
       "newTitle": "Додај ресторан",
-      "newSubtitle": "Креирајте други ресторан. Изаберите да ли да почнете с копијом тренутног менија или из нуле.",
       "startFrom": "Почети од",
       "duplicate": "Дуплирај тренутни мени и подешавања",
       "duplicateDesc": "Копира категорије, ставке, језике и визуелна подешавања. Столови, поруџбине и резервације се не копирају.",
@@ -713,42 +705,23 @@
       "backToSettings": "Подешавања"
     },
     "settingsHub": {
-      "title": "Podešavanja",
-      "subtitle": "Upravljajte restoranom, timom i nalogom.",
       "logout": "Odjava",
       "loggingOut": "Odjavljivanje...",
       "logoutDesc": "Odjavite se sa ovog naloga.",
       "exitImpersonation": "Izađi iz oponašanja",
       "exitImpersonationDesc": "Vraćanje na admin nalog ({email}).",
       "rows": {
-        "about": "O nama",
-        "aboutDesc": "Ime restorana i podnaslov.",
         "contacts": "Kontakti i lokacija",
-        "contactsDesc": "Telefon, Instagram, WhatsApp, čioda na mapi.",
         "branding": "Сајт",
-        "brandingDesc": "URL јавног менија, назив, акцентна боја, слика или видео позадине.",
         "general": "Локализација",
-        "generalDesc": "Валута и временска зона.",
         "tables": "Stolovi",
-        "tablesDesc": "Plan, mesta i QR kodovi po stolu.",
         "orders": "Porudžbine",
-        "ordersDesc": "Omogući porudžbine, in-app ili WhatsApp režim, obavezna polja.",
         "bookings": "Rezervacije",
-        "bookingsDesc": "Omogući rezervacije, automatska ili ručna potvrda, radno vreme.",
         "languages": "Jezici",
-        "languagesDesc": "Jezici na koje je preveden javni meni.",
         "billing": "Naplata",
-        "billingDesc": "Pretplatnički plan, probni period, upravljanje plaćanjima.",
         "support": "Podrška",
-        "supportDesc": "Razgovarajte sa našim timom u realnom vremenu.",
-        "companies": "Kompanije",
-        "companiesDesc": "Sve kompanije, planovi i razgovori.",
-        "sessions": "Sesije",
-        "sessionsDesc": "Korisničke sesije, događaji i konverzije.",
-        "devices": "Уређаји",
-        "devicesDesc": "Упарите таблете за кухињски екран и конобарске терминале."
+        "devices": "Уређаји"
       },
-      "activeRestaurant": "Активан ресторан: {name}",
       "switcherDescMany": "Пребацујте се између {count} ресторана или додајте још један.",
       "switcherDescOne": "Додајте други ресторан или управљајте овим."
     },
@@ -759,7 +732,6 @@
     },
     "analyticsDashboard": {
       "title": "Analitika",
-      "subtitle": "Pregledi menija i performanse.",
       "loading": "Učitavanje analitike…",
       "noData": "Još nema podataka",
       "byDay": "Po danu",
@@ -937,7 +909,6 @@
     },
     "devices": {
       "title": "Уређаји",
-      "subtitle": "Упарите таблете како би се кухињско и конобарско особље пријавило једном и остало пријављено. Сваки уређај има сопствени приступ — опозивно у било ком тренутку.",
       "back": "Назад",
       "addDevice": "Додај уређај",
       "delete": "Обриши",
