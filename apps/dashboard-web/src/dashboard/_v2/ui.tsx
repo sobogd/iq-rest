@@ -359,7 +359,7 @@ export function ToggleSwitch({
  onClick={onChange}
  className={
  "shrink-0 relative inline-flex items-center rounded-full transition-colors " +
- (sm ? "h-5 w-9 " : "h-6 w-11 ") +
+ (sm ? "h-5 w-8 " : "h-6 w-11 ") +
  (checked ? "bg-foreground" : "bg-input")
  }
  >
@@ -368,7 +368,7 @@ export function ToggleSwitch({
  "inline-block transform rounded-full bg-background transition-transform " +
  (sm ? "h-3.5 w-3.5 " : "h-4 w-4 ") +
  (checked
-   ? (sm ? "translate-x-[19px]" : "translate-x-6")
+   ? (sm ? "translate-x-[15px]" : "translate-x-6")
    : (sm ? "translate-x-[3px]" : "translate-x-1"))
  }
  />
