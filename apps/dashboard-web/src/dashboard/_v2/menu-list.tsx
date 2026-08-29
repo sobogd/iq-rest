@@ -17,7 +17,7 @@ import {
 } from "./icons";
 import { EmptyState } from "./ui";
 import { Page } from "./page";
-import { headerBtn, iconBtn, primaryBtn } from "./tokens";
+import { iconBtn, primaryBtn } from "./tokens";
 import { getMlWithFallback } from "./i18n";
 import { currencySymbolOf, moveItem } from "./helpers";
 import { fetchSubscriptionStatus, patchItem, reorderCategories, reorderItemsBulk } from "./api";
@@ -85,20 +85,29 @@ export function MenuList({
  );
  const groupsFlipRef = useFlip<HTMLDivElement>([topLevelGroups.map((c) => c.id).join(",")]);
  const ungroupedFlipRef = useFlip<HTMLDivElement>([ungroupedCategories.map((c) => c.id).join(",")]);
- // Persist menu UI state (open categories + scroll position) across
- // navigations to the item / category edit pages. sessionStorage so it
- // resets per tab.
+ // Scroll position survives navigations to the item / category edit pages.
+ // sessionStorage: restoring a week-old scroll offset in a fresh tab would be
+ // surprising, so it resets per tab.
  const STATE_KEY = "dash_menu_list_state_v1";
+ // Which categories are folded is a lasting preference, not a per-tab detail:
+ // an owner who collapses a 30-category menu wants it collapsed tomorrow too.
+ // Hence localStorage, and hence the header's collapse control is a one-time
+ // action rather than something to repeat every session.
+ const OPEN_KEY = "dash_menu_list_open_v1";
  const [openIds, setOpenIds] = useState<Record<string, boolean>>(() => {
+ let saved: Record<string, unknown> = {};
  try {
- const saved = JSON.parse(sessionStorage.getItem(STATE_KEY) || "{}");
- if (saved && typeof saved.openIds === "object" && saved.openIds) return saved.openIds;
+ const raw = JSON.parse(localStorage.getItem(OPEN_KEY) || "{}");
+ if (raw && typeof raw === "object") saved = raw as Record<string, unknown>;
  } catch {
  // ignore corrupt JSON
  }
+ // Seeded from the categories this venue actually has, which also drops the
+ // ids of every other venue the owner visited — the store never grows past
+ // the menu in front of us. Unknown id = open, the historical default.
  const map: Record<string, boolean> = {};
  initialCategories.forEach((c) => {
- map[c.id] = true;
+ map[c.id] = typeof saved[c.id] === "boolean" ? (saved[c.id] as boolean) : true;
  });
  return map;
  });
@@ -115,15 +124,19 @@ export function MenuList({
  }
  }, [initialSub]);
 
- // Persist openIds whenever they change.
+ // Persist openIds whenever they change, pruned to the live categories for
+ // the same reason the initial read is: no unbounded growth across venues.
  useEffect(() => {
  try {
- const prev = JSON.parse(sessionStorage.getItem(STATE_KEY) || "{}");
- sessionStorage.setItem(STATE_KEY, JSON.stringify({ ...prev, openIds }));
+ const known: Record<string, boolean> = {};
+ categories.forEach((c) => {
+ if (c.id in openIds) known[c.id] = openIds[c.id];
+ });
+ localStorage.setItem(OPEN_KEY, JSON.stringify(known));
  } catch {
- // sessionStorage might be disabled; OK to drop persistence.
+ // localStorage might be disabled or full; OK to drop persistence.
  }
- }, [openIds]);
+ }, [openIds, categories]);
 
  // Restore window scroll on mount, then continuously persist scrollY on
  // scroll. Continuous-save (rather than save-on-unmount) is required
@@ -337,20 +350,17 @@ export function MenuList({
    actions={
     <>
      {scopedLeaves.length > 0 ? (
+      /* Glyph-only, wearing the header's back-button metrics (h-9 w-9, no
+         surface) so the two chrome controls on this bar read as one family.
+         The label survives as the accessible name / tooltip. */
       <button
        type="button"
        onClick={anyOpen ? collapseAll : expandAll}
-       className={headerBtn + " relative justify-center shrink-0 bg-secondary text-foreground hover:bg-muted"}
+       aria-label={anyOpen ? t("collapse") : t("expand")}
+       title={anyOpen ? t("collapse") : t("expand")}
+       className="shrink-0 h-9 w-9 inline-flex items-center justify-center rounded-lg text-foreground hover:bg-secondary transition-colors"
       >
-       {/* width reservation: longer label fixes the width */}
-       <span className="invisible inline-flex items-center gap-2.5" aria-hidden>
-        <ExpandIcon size={14} />
-        {t("expand").length >= t("collapse").length ? t("expand") : t("collapse")}
-       </span>
-       <span className="absolute inset-0 inline-flex items-center justify-center gap-2.5">
-        {anyOpen ? <CollapseIcon size={14} /> : <ExpandIcon size={14} />}
-        {anyOpen ? t("collapse") : t("expand")}
-       </span>
+       {anyOpen ? <CollapseIcon size={16} /> : <ExpandIcon size={16} />}
       </button>
      ) : null}
     </>
