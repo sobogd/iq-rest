@@ -31,7 +31,7 @@ import {
   SwapIcon,
   UsersIcon,
 } from "./icons";
-import { navRow, navRowActive } from "./tokens";
+import { headerBtnSurface, headerIconBtn, navRow, navRowActive } from "./tokens";
 import { apiUrl } from "@/lib/api";
 import { track } from "@/lib/dashboard-events";
 import { useOrdersStreamStateStore } from "./orders-sync-state";
@@ -175,9 +175,9 @@ function SidebarHeader({ restaurant }: { restaurant: Restaurant }) {
         onClick={() => router.push({ name: "settings.restaurants" })}
         aria-label={many ? th("switcherDescMany", { count: restaurants!.list.length }) : th("switcherDescOne")}
         title={many ? th("switcherDescMany", { count: restaurants!.list.length }) : th("switcherDescOne")}
-        className="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center text-foreground hover:bg-secondary transition-colors"
+        className={headerIconBtn + " shrink-0 " + headerBtnSurface}
       >
-        <SwapIcon size={15} />
+        <SwapIcon size={14} />
       </button>
     </div>
   );
