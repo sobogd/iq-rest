@@ -109,12 +109,13 @@ export function ReservationsPage({
   );
  }
 
- // A day shows the date alone — no weekday, and no year either: it is entered
- // from a month that named one, and from a calendar cell whose column already
- // said which day of the week it was.
+ // A day leads with its weekday spelled out, then the date. The separator is
+ // Intl's, not ours — the comma is right for English and Russian and wrong for
+ // the locales that do not use one. Still no year: the month it was entered
+ // from already named one.
  const title = view === "month"
   ? capitalize(formatMonthYear(focusDate, locale))
-  : capitalize(focusDate.toLocaleDateString(locale, { day: "numeric", month: "long" }));
+  : capitalize(focusDate.toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "long" }));
 
  const count = view === "month" ? monthBookings.length : dayBookings.length;
  const subtitle = count === 0
