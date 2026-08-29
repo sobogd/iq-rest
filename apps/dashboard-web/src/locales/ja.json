@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "メニュー",
+      "groupMain": "メイン",
       "reservations": "予約",
       "orders": "注文",
       "kitchen": "キッチン",

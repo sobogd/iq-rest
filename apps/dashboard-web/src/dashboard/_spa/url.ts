@@ -25,8 +25,6 @@ export function viewToPath(view: View): string {
       return "/dashboard/kitchen";
     case "analytics":
       return "/dashboard/analytics";
-    case "settings":
-      return "/dashboard/settings";
     case "settings.contacts":
       return "/dashboard/settings/contacts";
     case "settings.branding":
@@ -122,7 +120,8 @@ export function pathToView(path: string): View {
   }
 
   // Settings family
-  if (stripped === "/dashboard/settings") return { name: "settings" };
+  // The settings hub page is gone — the sidebar is the settings index now.
+  if (stripped === "/dashboard/settings") return { name: "settings.branding" };
   if (stripped === "/dashboard/settings/about") return { name: "settings.branding" };
   if (stripped === "/dashboard/settings/contacts") return { name: "settings.contacts" };
   if (stripped === "/dashboard/settings/branding") return { name: "settings.branding" };

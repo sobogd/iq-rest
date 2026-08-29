@@ -6,12 +6,12 @@ import { useLocale, useTranslations } from "next-intl";
 import { ChevronRightIcon, CheckIcon, CopyIcon, SendIcon, SparklesIcon, CloseIcon } from "./icons";
 import {
  AiImageModal,
- PageHeader,
+ SaveButton,
  Select,
- SubpageStickyBar,
  ToggleSwitch,
  uploadFile,
 } from "./ui";
+import { Page } from "./page";
 import { TablesPage } from "./tables";
 import { inputClass } from "./tokens";
 import { isPastDue, pastDueDaysLeft } from "./billing-status";
@@ -77,7 +77,7 @@ export function AboutSettingsPage({
 }: {
  restaurant: Restaurant;
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
- onBack: () => void;
+ onBack?: () => void;
 }) {
  const t = useTranslations("dashboard.settings");
  const ta = useTranslations("dashboard.settings.about");
@@ -108,17 +108,11 @@ export function AboutSettingsPage({
     name: draft.name.trim(),
     subtitle: draft.subtitle.trim(),
    }));
- onBack();
+ onBack?.();
  }
 
  return (
- <div>
- <SubpageStickyBar onBack={() => { track("Click", "About back"); onBack(); }} onSave={save} canSave={canSave} />
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
- <div className="mb-5">
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{ta("title")}</h2>
- </div>
+ <Page grid title={ta("title")} onBack={onBack} actions={<SaveButton onSave={save} canSave={canSave} />}>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <label htmlFor="about-title" className="block text-sm font-medium text-foreground mb-2.5">{ta("titleLabel")}</label>
  <input
@@ -142,8 +136,7 @@ export function AboutSettingsPage({
  />
  </div>
  
- </div>
- </div>
+ </Page>
  );
 }
 
@@ -156,7 +149,7 @@ export function ContactsSettingsPage({
 }: {
  restaurant: Restaurant;
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
- onBack: () => void;
+ onBack?: () => void;
 }) {
  const t = useTranslations("dashboard.settings");
  const tc = useTranslations("dashboard.settings.contacts");
@@ -198,17 +191,11 @@ export function ContactsSettingsPage({
  placeId: draft.location.placeId,
  },
  }));
- onBack();
+ onBack?.();
  }
 
  return (
- <div>
- <SubpageStickyBar onBack={() => { track("Click", "Contacts back"); onBack(); }} onSave={save} canSave />
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
- <div className="mb-5">
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{tc("title")}</h2>
- </div>
+ <Page title={tc("title")} onBack={onBack} actions={<SaveButton onSave={save} />}>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:items-start">
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <div className="text-sm font-medium text-foreground">{tc("contactsHeader")}</div>
@@ -276,8 +263,7 @@ export function ContactsSettingsPage({
  </div>
  </div>
  </div>
- </div>
- </div>
+ </Page>
  );
 }
 
@@ -322,7 +308,7 @@ export function BrandingSettingsPage({
 }: {
  restaurant: Restaurant;
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
- onBack: () => void;
+ onBack?: () => void;
 }) {
  const t = useTranslations("dashboard.settings");
  const tb = useTranslations("dashboard.settings.branding");
@@ -413,7 +399,7 @@ export function BrandingSettingsPage({
     titleScale: draft.titleScale,
     languageSwitcher: draft.languageSwitcher,
  }));
- onBack();
+ onBack?.();
  }
 
  async function handleBackground(e: React.ChangeEvent<HTMLInputElement>) {
@@ -469,14 +455,9 @@ export function BrandingSettingsPage({
 
  const canSave = draft.name.trim().length > 0 && validSlug;
  return (
- <div>
- <SubpageStickyBar onBack={() => { track("Click", "Branding back"); onBack(); }} onSave={save} canSave={canSave} />
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
- <div className="mb-5">
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{tb("title")}</h2>
- </div>
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-3">
+ <>
+ <Page grid title={tb("title")} onBack={onBack} actions={<SaveButton onSave={save} canSave={canSave} />}>
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <label htmlFor="brand-name" className="block text-sm font-medium text-foreground mb-2.5">{ta("titleLabel")}</label>
  <input
  id="brand-name"
@@ -912,7 +893,7 @@ export function BrandingSettingsPage({
  </div>
  </div>
  </div>
- </div>
+ </Page>
 
  <AiImageModal
  open={aiOpen}
@@ -924,7 +905,7 @@ export function BrandingSettingsPage({
  placeholder={tb("aiPlaceholder")}
  aspect="portrait"
  />
- </div>
+ </>
  );
 }
 
@@ -937,7 +918,7 @@ export function GeneralSettingsPage({
 }: {
  restaurant: Restaurant;
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
- onBack: () => void;
+ onBack?: () => void;
 }) {
  const t = useTranslations("dashboard.settings");
  const tg = useTranslations("dashboard.settings.general");
@@ -963,17 +944,11 @@ export function GeneralSettingsPage({
  currency: draft.currency,
  bookingSettings: { ...r.bookingSettings, timezone: draft.timezone },
  }));
- onBack();
+ onBack?.();
  }
 
  return (
- <div>
- <SubpageStickyBar onBack={() => { track("Click", "General back"); onBack(); }} onSave={save} canSave />
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
- <div className="mb-5">
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{tg("title")}</h2>
- </div>
+ <Page grid title={tg("title")} onBack={onBack} actions={<SaveButton onSave={save} />}>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <label htmlFor="gen-currency" className="block text-sm font-medium text-foreground mb-2.5">{tg("currencyLabel")}</label>
  <Select<string>
@@ -1004,8 +979,7 @@ export function GeneralSettingsPage({
  />
  <p className="text-xs text-muted-foreground mt-1.5 leading-snug">{tb("timezoneTip")}</p>
  </div>
- </div>
- </div>
+ </Page>
  );
 }
 
@@ -1018,7 +992,7 @@ export function OrderSettingsPage({
 }: {
  restaurant: Restaurant;
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
- onBack: () => void;
+ onBack?: () => void;
 }) {
  const t = useTranslations("dashboard.settings");
  const to = useTranslations("dashboard.settings.orders");
@@ -1055,7 +1029,7 @@ export function OrderSettingsPage({
  return;
  }
  setRestaurant((r) => ({ ...r, orderSettings: draft, paymentMethods: paymentDraft }));
- onBack();
+ onBack?.();
  }
 
  function togglePayment(code: string) {
@@ -1065,13 +1039,7 @@ export function OrderSettingsPage({
  const disabled = !draft.acceptOrders;
 
  return (
- <div>
- <SubpageStickyBar onBack={() => { track("Click", "Order settings back"); onBack(); }} onSave={save} canSave={canSave} />
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
- <div className="mb-5">
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{to("title")}</h2>
- </div>
+ <Page grid title={to("title")} onBack={onBack} actions={<SaveButton onSave={save} canSave={canSave} />}>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
  <div>
@@ -1172,8 +1140,7 @@ export function OrderSettingsPage({
  </p>
  </div>
  </div>
-</div>
- </div>
+ </Page>
  );
 }
 
@@ -1186,7 +1153,7 @@ export function BookingSettingsPage({
 }: {
  restaurant: Restaurant;
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
- onBack: () => void;
+ onBack?: () => void;
 }) {
  const t = useTranslations("dashboard.settings");
  const tb = useTranslations("dashboard.settings.bookings");
@@ -1229,7 +1196,7 @@ export function BookingSettingsPage({
  return;
  }
  setRestaurant((r) => ({ ...r, bookingSettings: draft }));
- onBack();
+ onBack?.();
  }
 
  function updateDay(idx: number, patch: Partial<typeof draft.schedule[0]>) {
@@ -1242,13 +1209,7 @@ export function BookingSettingsPage({
  const disabled = !draft.enabled;
 
  return (
- <div>
- <SubpageStickyBar onBack={() => { track("Click", "Booking settings back"); onBack(); }} onSave={save} canSave={canSave} />
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
- <div className="mb-5">
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{tb("title")}</h2>
- </div>
+ <Page grid title={tb("title")} onBack={onBack} actions={<SaveButton onSave={save} canSave={canSave} />}>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
  <div>
@@ -1334,8 +1295,7 @@ export function BookingSettingsPage({
  ))}
  </div>
 
- </div>
- </div>
+ </Page>
  );
 }
 
@@ -1477,7 +1437,7 @@ export function LanguagesSettingsPage({
 }: {
  restaurant: Restaurant;
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
- onBack: () => void;
+ onBack?: () => void;
 }) {
  const t = useTranslations("dashboard.settings");
  const tl = useTranslations("dashboard.settings.languages");
@@ -1516,7 +1476,7 @@ export function LanguagesSettingsPage({
  qc.invalidateQueries({ queryKey: ["restaurant"] }),
  ]);
  setTranslating(false);
- onBack();
+ onBack?.();
  } catch (err) {
  if (willBackfill) setTranslateError(err instanceof Error ? err.message : String(err));
  setSaving(false);
@@ -1538,20 +1498,22 @@ export function LanguagesSettingsPage({
  }
 
  return (
- <div>
- <SubpageStickyBar onBack={() => { track("Click", "Languages back"); onBack(); }} onSave={save} canSave={canSave} />
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
- <div className="mb-5 flex items-start justify-between gap-3">
- <div>
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{tl("title")}</h2>
- </div>
- {draft.languages.length > 0 ? (
- <span className="shrink-0 inline-flex items-center h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md tabular-nums">
- {draft.languages.length} {tc("selected")}
- </span>
- ) : null}
- </div>
+ <>
+ <Page
+  grid
+  title={tl("title")}
+  onBack={onBack}
+  actions={
+   <>
+    {draft.languages.length > 0 ? (
+     <span className="shrink-0 inline-flex items-center h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md tabular-nums">
+      {draft.languages.length} {tc("selected")}
+     </span>
+    ) : null}
+    <SaveButton onSave={save} canSave={canSave} />
+   </>
+  }
+ >
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <div className="text-sm font-medium text-foreground mb-0.5">{tl("availableLabel")}</div>
  <p className="text-xs text-muted-foreground mb-3">
@@ -1603,7 +1565,7 @@ export function LanguagesSettingsPage({
  {tl("defaultTip")}
  </p>
  </div>
- </div>
+ </Page>
  {translating || translateError ? (
  <div className="fixed inset-0 z-[60] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
  <div className="w-full max-w-sm bg-card border border-border rounded-2xl shadow-xl p-6 text-center">
@@ -1629,7 +1591,7 @@ export function LanguagesSettingsPage({
  </div>
  </div>
  ) : null}
- </div>
+ </>
  );
 }
 
@@ -1745,7 +1707,7 @@ function CurrencyDropdown({
  );
 }
 
-export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
+export function BillingSettingsPage({ onBack }: { onBack?: () => void }) {
  const t = useTranslations("dashboard.settings");
  const tb = useTranslations("dashboard.settings.billing");
  const locale = useLocale();
@@ -1789,32 +1751,28 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt > new Date();
 
  return (
- <div>
- <SubpageStickyBar onBack={() => { track("Click", "Billing back"); onBack(); }} hideSave>
- <CurrencyDropdown value={currency} onChange={changeCurrency} disabled={paidPlan} />
- </SubpageStickyBar>
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
- <div className="mb-5">
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{tb("buildYourPlan")}</h2>
- </div>
+ <Page
+  title={tb("buildYourPlan")}
+  onBack={onBack}
+  actions={<CurrencyDropdown value={currency} onChange={changeCurrency} disabled={paidPlan} />}
+ >
 
  {pastDue ? (
- <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-4 mb-5">
+ <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-4">
  <div className="text-sm font-medium text-red-600 dark:text-red-400">{tb("pastDueTitle")}</div>
  <p className="text-xs text-red-600/80 dark:text-red-400/80 mt-1 leading-snug">
  {pastDueDays > 0 ? tb("pastDueTip", { days: pastDueDays }) : tb("pastDueBlockedTip")}
  </p>
  </div>
  ) : trialExpired ? (
- <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-4 mb-5">
+ <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-4">
  <div className="text-sm font-medium text-red-600 dark:text-red-400">{tb("menuUnavailable")}</div>
  <p className="text-xs text-red-600/80 dark:text-red-400/80 mt-1 leading-snug">
  {tb("menuUnavailableTip")}
  </p>
  </div>
  ) : trialing && trialEndsAt ? (
- <div className="bg-card border border-border rounded-2xl p-4 mb-5">
+ <div className="bg-card border border-border rounded-2xl p-4">
  <div className="text-sm font-medium text-foreground">{tb("trialActive")}</div>
  <p className="text-xs text-muted-foreground mt-1 leading-snug">
  {tb("trialEnds", { date: trialEndsAt.toLocaleDateString([], { day: "numeric", month: "long", year: "numeric" }) })}
@@ -1827,17 +1785,14 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  {/* billing-features-constructor: à-la-carte "build your plan" is the ONLY
      billing UI — always shown (incl. after a failed/past-due payment, so the
      user can retry a card on-page). No Stripe portal anywhere. */}
- <div className="mb-5">
  <BillingConstructor currency={currency} />
- </div>
- </div>
- </div>
+ </Page>
  );
 }
 
 // ── Support ──
 
-export function SupportPage({ onBack }: { onBack: () => void }) {
+export function SupportPage({ onBack }: { onBack?: () => void }) {
  const t = useTranslations("dashboard.settings");
  const ts = useTranslations("dashboard.settings.support");
  const [messages, setMessages] = useState<ApiSupportMessage[]>([]);
@@ -1917,27 +1872,24 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
  }
 
  return (
- <div
- className="flex flex-col h-[calc(100dvh-var(--topbar-h,0px)-116px)] md:h-[calc(100dvh-var(--topbar-h,0px)-56px)]"
- >
- <SubpageStickyBar onBack={() => { track("Click", "Support back"); onBack(); }} hideSave>
- <a
- href={`https://wa.me/${SUPPORT_WHATSAPP}`}
- target="_blank"
- rel="noopener noreferrer"
- onClick={() => track("Click", "Support WhatsApp")}
- className="h-8 px-2.5 text-xs font-medium text-white bg-[#25D366] rounded-md transition-colors inline-flex items-center gap-1.5"
- >
- <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
- {ts("whatsapp")}
- </a>
- </SubpageStickyBar>
- <div className="max-w-5xl mx-auto md:px-6 w-full pt-5 md:pt-4 flex-1 flex flex-col min-h-0">
- <div className="mb-3 shrink-0">
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{ts("title")}</h2>
- </div>
-
+  <Page
+   title={ts("title")}
+   onBack={onBack}
+   fill
+   actions={
+    <a
+     href={`https://wa.me/${SUPPORT_WHATSAPP}`}
+     target="_blank"
+     rel="noopener noreferrer"
+     onClick={() => track("Click", "Support WhatsApp")}
+     className="h-8 px-2.5 text-xs font-medium text-white bg-[#25D366] rounded-md transition-colors inline-flex items-center gap-1.5"
+    >
+     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+     {ts("whatsapp")}
+    </a>
+   }
+  >
+   <div className="flex-1 min-h-0 flex flex-col gap-3 p-4 md:p-6">
  <div
  ref={scrollRef}
  className="bg-card border border-border rounded-2xl overflow-y-auto p-4 space-y-3 flex-1 min-h-0 hide-scrollbar"
@@ -1975,8 +1927,8 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
  {ts("send")}
  </button>
  </div>
- </div>
- </div>
+   </div>
+  </Page>
  );
 }
 

@@ -223,7 +223,6 @@ function KitchenDemoBody() {
         categories={snapshot.categories}
         defaultLang={snapshot.restaurant.defaultLang}
         filterBarExtras={<ZoomControls initialZoom={demoZoom} persist={false} />}
-        fullWidthFilterBar
         kioskLayout
         demoMode
       />
@@ -725,7 +724,6 @@ function KitchenAppBody() {
             }}
             onOrderPendingChange={handleOrderPendingChange}
             filterBarExtras={<ZoomControls />}
-            fullWidthFilterBar
             kioskLayout
             onFiltersChange={handleFiltersChange}
           />

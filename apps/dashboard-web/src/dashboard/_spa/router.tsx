@@ -22,7 +22,7 @@ interface DashboardRouterCtx {
   push: (view: View) => void;
   /** Replace the top view (no new history entry within stack — but URL replaces). */
   replace: (view: View) => void;
-  /** Reset stack to a single root view (used by bottom tabs). */
+  /** Reset stack to a single root view (used by the sidebar nav). */
   resetTo: (view: View) => void;
   /** Trigger browser back. */
   back: () => void;
@@ -102,12 +102,21 @@ export function DashboardRouterProvider({ initialPath, locale, children }: Provi
     return () => window.removeEventListener("popstate", onPop);
   }, []);
 
-  // Forward navigation always reveals a fresh view — scroll the window back
-  // to the top so the new screen starts at its head, not where the previous
-  // one left off (matters most on iOS, where browsers don't auto-reset
-  // because the URL change is a single-page-app pushState, not a full nav).
+  // Forward navigation always reveals a fresh view — scroll back to the top so
+  // the new screen starts at its head, not where the previous one left off.
+  // The dashboard scrolls inside the page body (not the document), so reset
+  // both: the pane for the dashboard, the window for the kiosk hosts.
   const scrollTop = () => {
-    if (typeof window !== "undefined") window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    if (typeof window === "undefined") return;
+    // After the render that swaps the view in: the pane element may be the
+    // same node (menu → menu group), and resetting it before the swap would
+    // scroll the outgoing screen.
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      for (const el of document.querySelectorAll<HTMLElement>('[data-scroll-pane="page"]')) {
+        el.scrollTop = 0;
+      }
+    });
   };
 
   const push = useCallback((v: View) => {

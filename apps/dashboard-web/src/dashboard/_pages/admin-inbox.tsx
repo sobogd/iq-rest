@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { MessageCircle } from "lucide-react";
 import { apiUrl } from "@/lib/api";
 import { RefreshIcon } from "../_v2/icons";
-import { SubpageStickyBar } from "../_v2/ui";
+import { Page } from "../_v2/page";
 import { useDashboardRouter } from "../_spa/router";
 import { AVAILABLE_LANGUAGES } from "../_v2/i18n";
 import { phoneToFlag } from "./phone-country";
@@ -37,7 +37,7 @@ function fmtAt(iso: string): string {
   return `${d.getDate()} ${M[d.getMonth()]} ${p(d.getHours())}:${p(d.getMinutes())}`;
 }
 
-export function AdminInboxPage({ onBack }: { onBack: () => void }) {
+export function AdminInboxPage() {
   const router = useDashboardRouter();
   const [threads, setThreads] = useState<Thread[]>([]);
   const [loading, setLoading] = useState(true);
@@ -86,8 +86,10 @@ export function AdminInboxPage({ onBack }: { onBack: () => void }) {
   );
 
   return (
-    <div>
-      <SubpageStickyBar onBack={onBack} hideSave>
+      <Page
+        title="Inbox"
+        actions={
+         <>
         <button
           type="button"
           onClick={() => void load(filter)}
@@ -97,8 +99,9 @@ export function AdminInboxPage({ onBack }: { onBack: () => void }) {
         >
           <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
         </button>
-      </SubpageStickyBar>
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 space-y-3">
+         </>
+        }
+      >
         {waConfigured === false ? (
           <div className="text-[11px] text-amber-700 dark:text-amber-400 bg-amber-500/10 rounded-lg px-3 py-2">
             WhatsApp is not connected yet — only internal threads show. See the setup steps to link your number.
@@ -143,7 +146,6 @@ export function AdminInboxPage({ onBack }: { onBack: () => void }) {
             })}
           </div>
         )}
-      </div>
-    </div>
+      </Page>
   );
 }

@@ -12,7 +12,6 @@ export type View =
   | { name: "reservations" }
   | { name: "kitchen" }
   | { name: "analytics" }
-  | { name: "settings" }
   | { name: "settings.contacts" }
   | { name: "settings.branding" }
   | { name: "settings.general" }

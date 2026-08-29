@@ -10,7 +10,7 @@ import { createPortal } from "react-dom";
 import { Trash2, X as XIcon, Check } from "lucide-react";
 import { apiUrl } from "@/lib/api";
 import { RefreshIcon } from "../_v2/icons";
-import { SubpageStickyBar } from "../_v2/ui";
+import { Page } from "../_v2/page";
 import { useDashboardRouter } from "../_spa/router";
 import { useScrollLock } from "../_v2/use-scroll-lock";
 import {
@@ -31,17 +31,11 @@ const LONG_PRESS_MS = 500;
 const chip = "text-[10px] text-muted-foreground bg-secondary rounded px-1.5 py-0.5 shrink-0";
 
 export function TrafficPage({ restaurantId }: { restaurantId?: string }) {
-  const router = useDashboardRouter();
   const [toolbarHost, setToolbarHost] = useState<HTMLDivElement | null>(null);
   return (
-    <div>
-      <SubpageStickyBar onBack={() => router.push({ name: "settings" })} hideSave>
-        <div ref={setToolbarHost} className="flex items-center gap-1" />
-      </SubpageStickyBar>
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
-        <TrafficList toolbarHost={toolbarHost} restaurantId={restaurantId} />
-      </div>
-    </div>
+    <Page title="Traffic" actions={<div ref={setToolbarHost} className="flex items-center gap-1" />}>
+      <TrafficList toolbarHost={toolbarHost} restaurantId={restaurantId} />
+    </Page>
   );
 }
 

@@ -18,7 +18,8 @@ import {
  SwapIcon,
  TrashIcon,
 } from "./icons";
-import { ConfirmDialog, EmptyState, Modal, PageHeader } from "./ui";
+import { ConfirmDialog, EmptyState, Modal } from "./ui";
+import { Page } from "./page";
 import { DiscountModal } from "./discount-modal";
 import { FloorMap } from "./tables";
 import { CtaState } from "./reservations";
@@ -97,7 +98,7 @@ export function OrdersPage({
  categories: Category[];
  defaultLang: string;
  currency: string;
- // Waiter kiosk layout: removes PageHeader, makes the page a flex column
+ // Waiter kiosk layout: renders bare (no page header), a flex column
  // (lg: row) filling the viewport. Floor map keeps its square aspect ratio
  // as the priority element; the active-orders list lives next to it in a
  // single card with divider-separated rows, internally scrollable.
@@ -717,53 +718,43 @@ export function OrdersPage({
  );
 
  // Unified dual-pane layout: kanban-like floor map (square, priority on
- // desktop) + a single orders card with divider-separated rows that
- // scroll inside. Admin host adds the standard max-w-5xl container so
- // the page doesn't stretch on wide displays; kiosk host runs
- // edge-to-edge. Outer height pins to viewport (minus topbar) so the
- // orders card has an explicit height to fill — without that the
- // internal scroll has no upper bound and the card sprawls.
- const outerHeightStyle = {
- height:
- "calc(100dvh - var(--topbar-h, 0px) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 6rem)",
- } as React.CSSProperties;
+ // desktop) + a single orders card with divider-separated rows that scroll
+ // inside. Both hosts fill their column: the dashboard page body and the
+ // kiosk shell are already height-bounded flex containers, so the orders
+ // card inherits an explicit height and its internal scroll has a bound.
 
  // No tables → replace the whole orders surface with the same "add a table"
  // placeholder the bookings page uses. On the dashboard it offers a button to
  // settings; on the waiter kiosk (no admin access) it's just a message.
  if (!hasTables) {
- const showCta = !kioskLayout && !demoMode;
- return (
- <div className={kioskLayout ? "h-full p-4 md:p-6" : "max-w-5xl mx-auto md:px-6"}>
- {!kioskLayout ? <PageHeader title={t("title")} /> : null}
- <CtaState
- title={t("noTablesTitle")}
- body={t("noTablesBody")}
- cta={showCta ? t("noTablesCta") : undefined}
- onClick={showCta ? () => router.push({ name: "settings.tables" }) : undefined}
- />
- </div>
- );
+  const showCta = !kioskLayout && !demoMode;
+  const cta = (
+   <CtaState
+    title={t("noTablesTitle")}
+    body={t("noTablesBody")}
+    cta={showCta ? t("noTablesCta") : undefined}
+    onClick={showCta ? () => router.push({ name: "settings.tables" }) : undefined}
+   />
+  );
+  return kioskLayout ? <div className="h-full p-4 md:p-6">{cta}</div> : <Page title={t("title")}>{cta}</Page>;
  }
 
+ const board = (
+  <div className="flex-1 min-h-0 flex flex-col lg:flex-row gap-3 lg:gap-4 p-4 md:p-6">
+   {hasTables ? (
+    <div className="aspect-square w-full lg:w-auto lg:h-full lg:aspect-square shrink-0">
+     {floorPane}
+    </div>
+   ) : null}
+   <div className="flex-1 min-h-0 lg:min-w-0 flex flex-col gap-3">
+    {ordersPane}
+   </div>
+  </div>
+ );
+
  return (
- <>
- <div
- className={
- (kioskLayout ? "h-full p-4 md:p-6 " : "max-w-5xl mx-auto md:px-6 ") +
- "flex flex-col lg:flex-row gap-3 lg:gap-4 min-h-0"
- }
- style={kioskLayout ? undefined : outerHeightStyle}
- >
- {hasTables ? (
- <div className="aspect-square w-full lg:w-auto lg:h-full lg:aspect-square shrink-0">
- {floorPane}
- </div>
- ) : null}
- <div className="flex-1 min-h-0 lg:min-w-0 flex flex-col gap-3">
- {ordersPane}
- </div>
- </div>
+  <>
+   {kioskLayout ? board : <Page title={t("title")} fill>{board}</Page>}
 
 
  <Modal

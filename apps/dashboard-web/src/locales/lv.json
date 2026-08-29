@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Ēdienkarte",
+      "groupMain": "Galvenais",
       "reservations": "Rezervācijas",
       "orders": "Pasūtījumi",
       "kitchen": "Virtuve",

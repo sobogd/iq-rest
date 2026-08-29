@@ -5,7 +5,8 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { CalendarIcon, ChefHatIcon, CopyIcon, PlateForkKnifeIcon, PlusIcon, TrashIcon } from "./icons";
-import { ConfirmDialog, EmptyState, Modal, Select, SubpageStickyBar } from "./ui";
+import { ConfirmDialog, EmptyState, Modal, Select } from "./ui";
+import { Page } from "./page";
 import { inputClass } from "./tokens";
 import {
   createDevice,
@@ -18,11 +19,7 @@ import {
 } from "./devices-api";
 import { useRestaurantsOrNull } from "./restaurants-context";
 
-interface DevicesSettingsPageProps {
-  onBack: () => void;
-}
-
-export function DevicesSettingsPage({ onBack }: DevicesSettingsPageProps) {
+export function DevicesSettingsPage() {
   const t = useTranslations("dashboard.devices");
   const qc = useQueryClient();
   const restaurants = useRestaurantsOrNull();
@@ -94,14 +91,8 @@ export function DevicesSettingsPage({ onBack }: DevicesSettingsPageProps) {
   const devices = devicesQuery.data ?? [];
 
   return (
-    <div>
-      <SubpageStickyBar onBack={onBack} hideSave />
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
-        <div className="mb-5">
-          <h2 className="text-xl font-medium text-foreground">{t("title")}</h2>
-          <p className="text-[13px] text-muted-foreground leading-snug mt-1">{t("subtitle")}</p>
-        </div>
-
+    <>
+      <Page title={t("title")} subtitle={t("subtitle")}>
         <DevicesList
           items={devices}
           loading={devicesQuery.isLoading}
@@ -111,7 +102,7 @@ export function DevicesSettingsPage({ onBack }: DevicesSettingsPageProps) {
           onRegenerate={handleRegenerate}
           onAdd={() => setAddOpen(true)}
         />
-      </div>
+      </Page>
 
       <AddDeviceModal
         open={addOpen}
@@ -143,7 +134,7 @@ export function DevicesSettingsPage({ onBack }: DevicesSettingsPageProps) {
         onConfirm={() => confirmDelete && void handleDelete(confirmDelete)}
         onCancel={() => setConfirmDelete(null)}
       />
-    </div>
+    </>
   );
 }
 

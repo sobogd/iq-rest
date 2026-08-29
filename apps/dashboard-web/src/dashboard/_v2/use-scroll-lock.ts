@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 
 // Counts how many modal-style overlays are open. While count > 0 we lock
-// overflow on BOTH <html> and <body> so background content can't scroll
-// behind a modal (the dashboard chrome forces overflow-y:scroll on <html>,
-// so locking body alone isn't enough).
+// overflow on <html>/<body> (kiosk hosts still scroll the document) AND on the
+// page body — the dashboard scrolls there, not on the document, so locking the
+// document alone lets the screen slide behind an open modal / drawer. The
+// sidebar keeps its own scroll (it IS the drawer on mobile).
 let lockCount = 0;
 let prevHtmlOverflow: string | null = null;
 let prevBodyOverflow: string | null = null;
 let prevBodyPaddingRight: string | null = null;
+let lockedPanes: { el: HTMLElement; prev: string }[] = [];
 
 export function useScrollLock(active: boolean) {
   useEffect(() => {
@@ -26,6 +28,13 @@ export function useScrollLock(active: boolean) {
         const current = parseInt(body.style.paddingRight || "0", 10) || 0;
         body.style.paddingRight = `${current + scrollbarWidth}px`;
       }
+      lockedPanes = Array.from(
+        document.querySelectorAll<HTMLElement>('[data-scroll-pane="page"]'),
+      ).map((el) => {
+        const prev = el.style.overflow;
+        el.style.overflow = "hidden";
+        return { el, prev };
+      });
     }
     lockCount++;
     return () => {
@@ -37,6 +46,8 @@ export function useScrollLock(active: boolean) {
         prevHtmlOverflow = null;
         prevBodyOverflow = null;
         prevBodyPaddingRight = null;
+        for (const { el, prev } of lockedPanes) el.style.overflow = prev;
+        lockedPanes = [];
       }
     };
   }, [active]);

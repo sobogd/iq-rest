@@ -16,6 +16,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { showApiError } from "@/lib/show-api-error";
 import { EmptyState } from "./ui";
+import { Page } from "./page";
 import { formatElapsedHMS } from "./helpers";
 import { getMlWithFallback } from "./i18n";
 import { patchOrder } from "./api";
@@ -54,16 +55,8 @@ interface KitchenPageProps {
   // sticky sub-header. The kitchen kiosk uses this for zoom +/- buttons;
   // admin host passes nothing.
   filterBarExtras?: React.ReactNode;
-  // Drops the max-w-5xl container on the sticky filter bar. Kitchen
-  // kiosk uses full viewport width to fit more table cards per row;
-  // admin host keeps the constrained width for visual consistency
-  // with the rest of the dashboard.
-  fullWidthFilterBar?: boolean;
-  // Kiosk layout: switches to kanban-style rendering — the page itself
-  // never scrolls vertically, each table card scrolls internally. Filter
-  // bar becomes inline (not sticky) at the top of the column so the
-  // notch backplate sits flush behind it. Admin host (false) keeps the
-  // document-scroll layout the rest of the dashboard uses.
+  // Kiosk host: renders bare (its shell owns the frame + notch backplate).
+  // The dashboard host (false) wraps the same kanban in a `Page`.
   kioskLayout?: boolean;
   // Pushes the current filter state up to the kiosk shell so it can
   // decide whether an incoming SSE item deserves a chime. Empty arrays
@@ -98,12 +91,12 @@ export function KitchenPage({
   onItemAdvanced,
   onOrderPendingChange,
   filterBarExtras,
-  fullWidthFilterBar,
   kioskLayout,
   onFiltersChange,
   demoMode,
 }: KitchenPageProps) {
   const t = useTranslations("dashboard.orders");
+  const tn = useTranslations("dashboard.nav");
   const [, setTick] = useState(0);
   const [statusFilter, setStatusFilter] = useState<OrderItemStatus[]>([]);
   const [categoryFilter, setCategoryFilter] = useState<string[]>([]);
@@ -285,65 +278,53 @@ export function KitchenPage({
   const filterBtnOn = "bg-foreground text-background";
   const filterBtnOff = "bg-secondary text-muted-foreground hover:text-foreground";
 
-  return (
-    <div className={kioskLayout ? "h-full flex flex-col min-h-0" : undefined}>
-      <div
-        className={
-          (kioskLayout
-            ? "shrink-0 bg-subheader/90 backdrop-blur-md border-b border-border md:border-border/60"
-            : "sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-4 bg-subheader/90 backdrop-blur-md border-b border-border md:border-border/60")
-        }
-        style={kioskLayout ? undefined : { top: "var(--topbar-h, 0px)" }}
-      >
-        <div
-          className={
-            (fullWidthFilterBar ? "" : "max-w-5xl mx-auto md:px-6 ") +
-            "flex items-center gap-2 px-4 py-2"
-          }
-        >
+  const board = (
+    <div className="h-full flex flex-col min-h-0">
+      <div className="shrink-0 bg-subheader/90 backdrop-blur-md border-b border-border md:border-border/60">
+        <div className="flex items-center gap-2 px-4 py-2">
           <div className="flex items-center gap-2 flex-nowrap overflow-x-auto min-w-0 flex-1">
-          {STATUS_FILTERS.map((s) => {
-            const on = statusFilter.includes(s.id);
-            return (
-              <button
-                key={s.id}
-                type="button"
-                onClick={() =>
-                  setStatusFilter((cur) =>
-                    cur.includes(s.id) ? cur.filter((x) => x !== s.id) : [...cur, s.id],
-                  )
-                }
-                className={filterBtnBase + " " + (on ? filterBtnOn : filterBtnOff)}
-              >
-                <span className={"w-1.5 h-1.5 rounded-full shrink-0 " + STATUS_DOT_CLS[s.id]} aria-hidden />
-                {t(s.labelKey)}
-              </button>
-            );
-          })}
-          {categories.length > 0 ? (
-            <>
-              <span className="w-px h-5 bg-border shrink-0 mx-0.5" aria-hidden />
-              {categories.map((c) => {
-                const on = categoryFilter.includes(c.id);
-                return (
-                  <button
-                    key={c.id}
-                    type="button"
-                    onClick={() =>
-                      setCategoryFilter((cur) =>
-                        cur.includes(c.id) ? cur.filter((x) => x !== c.id) : [...cur, c.id],
-                      )
-                    }
-                    className={filterBtnBase + " " + (on ? filterBtnOn : filterBtnOff)}
-                  >
-                    {getMlWithFallback(c.name, defaultLang, defaultLang)}
-                  </button>
-                );
-              })}
-            </>
-          ) : null}
-          {/* Phone: zoom rides inside the scrolling chip row. */}
-          {filterBarExtras ? <div className="md:hidden shrink-0 flex items-center gap-1.5">{filterBarExtras}</div> : null}
+            {STATUS_FILTERS.map((s) => {
+              const on = statusFilter.includes(s.id);
+              return (
+                <button
+                  key={s.id}
+                  type="button"
+                  onClick={() =>
+                    setStatusFilter((cur) =>
+                      cur.includes(s.id) ? cur.filter((x) => x !== s.id) : [...cur, s.id],
+                    )
+                  }
+                  className={filterBtnBase + " " + (on ? filterBtnOn : filterBtnOff)}
+                >
+                  <span className={"w-1.5 h-1.5 rounded-full shrink-0 " + STATUS_DOT_CLS[s.id]} aria-hidden />
+                  {t(s.labelKey)}
+                </button>
+              );
+            })}
+            {categories.length > 0 ? (
+              <>
+                <span className="w-px h-5 bg-border shrink-0 mx-0.5" aria-hidden />
+                {categories.map((c) => {
+                  const on = categoryFilter.includes(c.id);
+                  return (
+                    <button
+                      key={c.id}
+                      type="button"
+                      onClick={() =>
+                        setCategoryFilter((cur) =>
+                          cur.includes(c.id) ? cur.filter((x) => x !== c.id) : [...cur, c.id],
+                        )
+                      }
+                      className={filterBtnBase + " " + (on ? filterBtnOn : filterBtnOff)}
+                    >
+                      {getMlWithFallback(c.name, defaultLang, defaultLang)}
+                    </button>
+                  );
+                })}
+              </>
+            ) : null}
+            {/* Phone: zoom rides inside the scrolling chip row. */}
+            {filterBarExtras ? <div className="md:hidden shrink-0 flex items-center gap-1.5">{filterBarExtras}</div> : null}
           </div>
           {/* Tablet/desktop: zoom pinned to the right, outside the scroll. */}
           {filterBarExtras ? <div className="hidden md:flex shrink-0 items-center gap-1.5 pl-2">{filterBarExtras}</div> : null}
@@ -351,10 +332,10 @@ export function KitchenPage({
       </div>
 
       {visibleGroups.length === 0 ? (
-        <div className={kioskLayout ? "flex-1 min-h-0 flex items-center justify-center" : "max-w-5xl mx-auto md:px-6 pt-7 md:pt-6"}>
+        <div className="flex-1 min-h-0 flex items-center justify-center">
           <EmptyState title={t("kitchenClear")} subtitle={t("kitchenClearSub")} />
         </div>
-      ) : kioskLayout ? (
+      ) : (
         <div className="flex-1 min-h-0 overflow-x-auto pb-1 px-4 md:px-6 mt-3">
           <div className="flex items-start gap-3 h-full" style={{ width: "max-content" }}>
             {visibleGroups.map((g) => (
@@ -373,29 +354,13 @@ export function KitchenPage({
             ))}
           </div>
         </div>
-      ) : (
-        <div className="-mx-4 md:-mx-6 mt-4 md:mt-3">
-          <div className="overflow-x-auto pb-1 px-4 md:px-6">
-            <div className="flex items-start gap-3" style={{ width: "max-content" }}>
-              {visibleGroups.map((g) => (
-                <KitchenOrderCard
-                  key={g.orderId}
-                  orderId={g.orderId}
-                  dailyNumber={g.dailyNumber}
-                  items={g.items}
-                  table={g.tableId ? tables.find((t) => t.id === g.tableId) || null : null}
-                  tableNumberFallback={g.tableNumber}
-                  createdAt={g.createdAt}
-                  defaultLang={defaultLang}
-                  onItemAdvance={advanceItemStatus}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
       )}
     </div>
   );
+
+  // The kiosk shell owns its own frame; the dashboard wraps the same kanban
+  // in a page (header + a body that fills the content column).
+  return kioskLayout ? board : <Page title={tn("kitchen")} fill>{board}</Page>;
 }
 
 function KitchenOrderCard({

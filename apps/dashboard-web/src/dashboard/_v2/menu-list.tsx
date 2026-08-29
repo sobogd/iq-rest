@@ -7,7 +7,6 @@ import { Collapsible } from "./collapsible";
 import { useDashboardRouter } from "../_spa/router";
 import {
  ArrowDownIcon,
- ArrowLeftIcon,
  ArrowUpIcon,
  ChevronDownIcon,
  CollapseIcon,
@@ -17,7 +16,8 @@ import {
  EyeOffIcon,
  PlusIcon,
 } from "./icons";
-import { EmptyState, PreviewButton, ShareButton, ShareModal, SubscriptionChip } from "./ui";
+import { EmptyState, PreviewButton, ShareButton, ShareModal } from "./ui";
+import { Page } from "./page";
 import { iconBtn, primaryBtn } from "./tokens";
 import { getMlWithFallback } from "./i18n";
 import { currencySymbolOf, moveItem } from "./helpers";
@@ -333,65 +333,42 @@ export function MenuList({
  }
 
  return (
- <>
- <div
- className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-4 px-4 md:px-6 h-14 flex items-center bg-subheader/90 backdrop-blur-md border-b border-border md:border-border/60"
- style={{ top: "var(--topbar-h, 0px)" }}
- >
- <div className="w-full max-w-5xl mx-auto md:px-6 flex items-center justify-between gap-3">
- <div className="flex items-center gap-2 min-w-0">
- {currentGroup ? (
- <button
- type="button"
- onClick={() => router.push({ name: "menu" })}
- className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md"
- aria-label={t("backToMenu", { defaultValue: "Back to menu" })}
- >
- <ArrowLeftIcon size={14} />
- <span className="truncate max-w-[200px]">
- {getMlWithFallback(currentGroup.name, defaultLang, defaultLang)}
- </span>
- </button>
- ) : (
- <>
- {menuUrl ? (
- <PreviewButton
- url={menuUrl}
- onOpen={() => track("Click", "Menu preview open")}
- />
- ) : null}
- {menuUrl ? (
- <ShareButton
- onClick={() => {
- track("Click", "Share open");
- setShareOpen(true);
- }}
- />
- ) : null}
- </>
- )}
- </div>
- {scopedLeaves.length > 0 ? (
- <button
- type="button"
- onClick={anyOpen ? collapseAll : expandAll}
- className="relative inline-flex items-center justify-center h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary hover:text-foreground rounded-md transition-colors shrink-0"
- >
- {/* width reservation: longer label fixes the width */}
- <span className="invisible inline-flex items-center gap-1.5" aria-hidden>
- <ExpandIcon size={14} />
- {t("expand").length >= t("collapse").length ? t("expand") : t("collapse")}
- </span>
- <span className="absolute inset-0 inline-flex items-center justify-center gap-1.5">
- {anyOpen ? <CollapseIcon size={14} /> : <ExpandIcon size={14} />}
- {anyOpen ? t("collapse") : t("expand")}
- </span>
- </button>
- ) : null}
- </div>
- </div>
-
- <div className="max-w-5xl mx-auto md:px-6 pt-4">
+  <Page
+   title={currentGroup ? getMlWithFallback(currentGroup.name, defaultLang, defaultLang) : t("title")}
+   onBack={currentGroup ? () => router.push({ name: "menu" }) : undefined}
+   actions={
+    <>
+     {!currentGroup && menuUrl ? (
+      <PreviewButton url={menuUrl} onOpen={() => track("Click", "Menu preview open")} />
+     ) : null}
+     {!currentGroup && menuUrl ? (
+      <ShareButton
+       onClick={() => {
+        track("Click", "Share open");
+        setShareOpen(true);
+       }}
+      />
+     ) : null}
+     {scopedLeaves.length > 0 ? (
+      <button
+       type="button"
+       onClick={anyOpen ? collapseAll : expandAll}
+       className="relative inline-flex items-center justify-center h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary hover:text-foreground rounded-md transition-colors shrink-0"
+      >
+       {/* width reservation: longer label fixes the width */}
+       <span className="invisible inline-flex items-center gap-1.5" aria-hidden>
+        <ExpandIcon size={14} />
+        {t("expand").length >= t("collapse").length ? t("expand") : t("collapse")}
+       </span>
+       <span className="absolute inset-0 inline-flex items-center justify-center gap-1.5">
+        {anyOpen ? <CollapseIcon size={14} /> : <ExpandIcon size={14} />}
+        {anyOpen ? t("collapse") : t("expand")}
+       </span>
+      </button>
+     ) : null}
+    </>
+   }
+  >
 
  {noCategories ? (
  <EmptyState
@@ -497,15 +474,14 @@ export function MenuList({
  </div>
  </div>
  )}
- </div>
-
- <ShareModal
- open={shareOpen}
- onClose={() => setShareOpen(false)}
- url={menuUrl}
- restaurantName={restaurant.name}
- />
- </>
+ 
+  <ShareModal
+   open={shareOpen}
+   onClose={() => setShareOpen(false)}
+   url={menuUrl}
+   restaurantName={restaurant.name}
+  />
+ </Page>
  );
 }
 

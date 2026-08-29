@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Μενού",
+      "groupMain": "Κύριο",
       "reservations": "Κρατήσεις",
       "orders": "Παραγγελίες",
       "kitchen": "Κουζίνα",

@@ -9,9 +9,10 @@ import {
  ConfirmDialog,
  EmptyState,
  PhotoPicker,
- SubpageStickyBar,
+ SaveButton,
  TableQrModal,
 } from "./ui";
+import { Page } from "./page";
 import { inputClass } from "./tokens";
 import { newId } from "./helpers";
 import { createTable, deleteTable, updateTable } from "./api";
@@ -494,14 +495,12 @@ export function TablesPage({
  orders,
  bookings,
  menuUrl,
- onBack,
 }: {
  tables: TableEntity[];
  setTables: React.Dispatch<React.SetStateAction<TableEntity[]>>;
  orders: Order[];
  bookings: Booking[];
  menuUrl: string;
- onBack: () => void;
 }) {
  const t = useTranslations("dashboard.tables");
  const qc = useQueryClient();
@@ -620,42 +619,43 @@ export function TablesPage({
  });
  }
 
- const goBack = () => { flush(); track("Click", "Tables back"); onBack(); };
-
  return (
- <div>
- <SubpageStickyBar onBack={goBack} hideSave>
- {selected ? (
- <>
- <button
- type="button"
- onClick={handleDelete}
- aria-label={t("deleteTable")}
- className="h-8 w-8 inline-flex items-center justify-center text-red-600 bg-secondary rounded-md"
- >
- <TrashIcon size={15} />
- </button>
- <button
- type="button"
- onClick={() => setQrOpen(true)}
- aria-label={t("showQr")}
- className="h-8 w-8 inline-flex items-center justify-center text-muted-foreground bg-secondary rounded-md"
- >
- <QrIcon size={15} />
- </button>
- </>
- ) : null}
- <button
- type="button"
- onClick={addTable}
- className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-md transition-colors"
- >
- <PlusIcon size={14} />
- {t("table")}
- </button>
- </SubpageStickyBar>
-
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 min-w-0">
+  <>
+   <Page
+    title={t("title")}
+    actions={
+     <>
+      {selected ? (
+       <>
+        <button
+         type="button"
+         onClick={handleDelete}
+         aria-label={t("deleteTable")}
+         className="h-8 w-8 inline-flex items-center justify-center text-red-600 bg-secondary rounded-md"
+        >
+         <TrashIcon size={15} />
+        </button>
+        <button
+         type="button"
+         onClick={() => setQrOpen(true)}
+         aria-label={t("showQr")}
+         className="h-8 w-8 inline-flex items-center justify-center text-muted-foreground bg-secondary rounded-md"
+        >
+         <QrIcon size={15} />
+        </button>
+       </>
+      ) : null}
+      <button
+       type="button"
+       onClick={addTable}
+       className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-md transition-colors"
+      >
+       <PlusIcon size={14} />
+       {t("table")}
+      </button>
+     </>
+    }
+   >
  {tables.length === 0 ? (
  <>
  <EmptyState title={t("emptyTitle")} subtitle={t("emptySubtitle")} />
@@ -688,7 +688,7 @@ export function TablesPage({
  </div>
  </div>
  )}
- </div>
+   </Page>
 
  <ConfirmDialog
  open={confirmState.open}
@@ -708,7 +708,7 @@ export function TablesPage({
  menuUrl={menuUrl}
  />
  ) : null}
- </div>
+  </>
  );
 }
 
@@ -786,7 +786,7 @@ export function TableFormPage({
 
  if (mode === "edit" && !tables.find((x) => x.id === tableId)) {
  return (
- <div className="max-w-5xl mx-auto md:px-6 py-10 text-center text-sm text-muted-foreground">
+ <div className="py-10 text-center text-sm text-muted-foreground">
  {t("emptyTitle")}
  </div>
  );
@@ -887,21 +887,13 @@ export function TableFormPage({
  }
 
  return (
- <div>
- <SubpageStickyBar onBack={() => { track("Click", "Table back"); onBack(); }} onSave={save} canSave={!saving} />
-
- <div className="max-w-2xl md:max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 min-w-0">
- <div className="mb-5">
- <div className="text-xs text-muted-foreground">
- {t("settingsBreadcrumb")} / {t("title")}
- </div>
- <h2 className="text-xl font-medium text-foreground mt-1">
- {mode === "new" ? t("addFirstTable") : t("tableLabelAria", { number: draft.number })}
- </h2>
- <p className="text-xs text-muted-foreground mt-1.5 leading-snug">
- {t("formTip")}
- </p>
- </div>
+  <>
+   <Page
+    title={mode === "new" ? t("addFirstTable") : t("tableLabelAria", { number: draft.number })}
+    subtitle={t("formTip")}
+    onBack={() => { track("Click", "Table back"); onBack(); }}
+    actions={<SaveButton onSave={save} canSave={!saving} />}
+   >
 
 
  <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-6 md:gap-8">
@@ -947,7 +939,7 @@ export function TableFormPage({
  ) : null}
  </div>
  </div>
- </div>
+   </Page>
 
  <ConfirmDialog
  open={confirmState.open}
@@ -965,7 +957,7 @@ export function TableFormPage({
  tableLabel={draft.name}
  menuUrl={menuUrl}
  />
- </div>
+  </>
  );
 }
 

@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { Star, EyeOff, Pencil, Trash2, Paperclip, X, FileText, Play, MessageSquare } from "lucide-react";
 import { apiUrl } from "@/lib/api";
 import { SendIcon, RefreshIcon } from "../_v2/icons";
+import { Page } from "../_v2/page";
 import { useDashboardRouter } from "../_spa/router";
 import { AVAILABLE_LANGUAGES } from "../_v2/i18n";
 
@@ -389,18 +390,12 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
   }
 
   return (
-    <div className="flex flex-col -mx-4 md:-mx-6 -mt-5 md:-mt-4 overflow-hidden bg-background h-[calc(100dvh-5rem-env(safe-area-inset-bottom))] md:h-[calc(100dvh-var(--topbar-h,0px))]">
-      {/* Pinned top bar: back + thread actions. */}
-      <div className="shrink-0 h-14 flex items-center gap-2 px-4 md:px-6 bg-subheader/90 backdrop-blur-md border-b border-border">
-        <button
-          type="button"
-          onClick={() => router.push({ name: "settings.admin.inbox" })}
-          className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md shrink-0"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
-          Back
-        </button>
-        <div className="flex-1" />
+    <Page
+      title={contact?.name ?? "Conversation"}
+      onBack={() => router.push({ name: "settings.admin.inbox" })}
+      fill
+      actions={
+        <>
         {contact && !isInternal ? (
           <>
             <button
@@ -438,8 +433,9 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
         >
           <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
         </button>
-      </div>
-
+        </>
+      }
+    >
       {/* Pinned contact header (phone + name + info). */}
       {contact ? (
         <div className="shrink-0 px-4 md:px-6 py-2.5 border-b border-border/60 bg-card/40">
@@ -765,7 +761,7 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
           </div>
         </div>
       ) : null}
-    </div>
+    </Page>
   );
 }
 

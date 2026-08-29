@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "القائمة",
+      "groupMain": "الرئيسية",
       "reservations": "الحجوزات",
       "orders": "الطلبات",
       "kitchen": "المطبخ",

@@ -1027,142 +1027,42 @@ export function Section({
  );
 }
 
-// Sticky bar used on edit/sub pages.
+// Page-header save button — the one save affordance on every edit screen.
 
-export function SubpageStickyBar({
- onBack,
+export function SaveButton({
  onSave,
  canSave,
- hideSave,
- title,
- children,
+ label,
 }: {
- onBack: () => void;
- onSave?: () => void | Promise<void>;
+ onSave: () => void | Promise<void>;
  canSave?: boolean;
- hideSave?: boolean;
- title?: ReactNode;
- children?: ReactNode;
+ label?: string;
 }) {
  const tc = useTranslations("dashboard.common");
  const [saving, setSaving] = useState(false);
  async function handleSave() {
- if (saving || !onSave) return;
- setSaving(true);
- try {
- await onSave();
- } finally {
- setSaving(false);
- }
+  if (saving) return;
+  setSaving(true);
+  try {
+   await onSave();
+  } finally {
+   setSaving(false);
+  }
  }
  return (
- <div
- className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-4 px-4 md:px-6 h-14 flex items-center bg-subheader/90 backdrop-blur-md border-b border-border md:border-border/60"
- style={{ top: "var(--topbar-h, 0px)" }}
- >
- <div className="w-full max-w-5xl mx-auto md:px-6 flex items-center justify-between gap-3">
- <div className="flex items-center gap-2.5 min-w-0">
- <button
- type="button"
- onClick={onBack}
- className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md shrink-0"
- >
- <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
- {tc("back")}
- </button>
- {title ? <span className="text-base font-medium text-foreground truncate min-w-0">{title}</span> : null}
- </div>
- <div className="flex items-center gap-2">
- {children}
- {!hideSave ? (
- <button
- type="button"
- onClick={handleSave}
- disabled={!canSave || saving}
- className="h-8 px-2.5 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-md transition-colors inline-flex items-center gap-1"
- >
- {saving ? (
- <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
- ) : (
- <CheckIcon size={14} />
- )}
- {tc("save")}
- </button>
- ) : null}
- </div>
- </div>
- </div>
- );
-}
-
-// EditPageHeader — bigger heading + sticky save bar (used for dish/option pages).
-
-export function EditPageHeader({
- onBack,
- title,
- breadcrumb,
- lang,
- onLangChange,
- languages,
- onSave,
- canSave,
- saving,
- onLangsOpen,
- onLangSelect,
-}: {
- onBack: () => void;
- title: string;
- breadcrumb?: string;
- lang?: string;
- onLangChange?: (code: string) => void;
- languages?: MiniLang[];
- onSave?: () => void;
- canSave?: boolean;
- saving?: boolean;
- onLangsOpen?: () => void;
- onLangSelect?: () => void;
-}) {
- const tc = useTranslations("dashboard.common");
- return (
- <>
- <div
- className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-4 px-4 md:px-6 h-14 flex items-center bg-subheader/90 backdrop-blur-md border-b border-border md:border-border/60"
- style={{ top: "var(--topbar-h, 0px)" }}
- >
- <div className="w-full max-w-5xl mx-auto md:px-6 flex items-center justify-between gap-3">
- <button
- type="button"
- onClick={onBack}
- className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md"
- >
- <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
- {tc("back")}
- </button>
- <div className="flex items-center gap-2">
- {onSave ? (
- <button
- type="button"
- onClick={onSave}
- disabled={!canSave || saving}
- className="h-8 px-2.5 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-md transition-colors inline-flex items-center gap-1"
- >
- {saving ? (
- <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
- ) : (
- <CheckIcon size={14} />
- )}
- {tc("save")}
- </button>
- ) : null}
- </div>
- </div>
- </div>
-
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 pb-5">
- {breadcrumb ? <div className="text-xs text-muted-foreground truncate">{breadcrumb}</div> : null}
- <h2 className="text-xl font-medium text-foreground truncate mt-1">{title}</h2>
- </div>
- </>
+  <button
+   type="button"
+   onClick={handleSave}
+   disabled={canSave === false || saving}
+   className="h-8 px-2.5 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-md transition-colors inline-flex items-center gap-1 disabled:opacity-60"
+  >
+   {saving ? (
+    <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+   ) : (
+    <CheckIcon size={14} />
+   )}
+   {label ?? tc("save")}
+  </button>
  );
 }
 

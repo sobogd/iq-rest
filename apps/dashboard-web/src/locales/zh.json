@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "菜单",
+      "groupMain": "主要",
       "reservations": "预订",
       "orders": "订单",
       "kitchen": "厨房",

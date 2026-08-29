@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
-import { LanguageSwitcher, SubpageStickyBar, TranslatedInput } from "./ui";
+import { LanguageSwitcher, SaveButton, TranslatedInput } from "./ui";
+import { Page } from "./page";
 import { SparklesIcon } from "./icons";
 import { AVAILABLE_LANGUAGES } from "./i18n";
 import type { Ml } from "./types";
@@ -103,7 +104,7 @@ function toCustomTexts(byKey: Record<string, Ml>): CustomTexts {
  return out;
 }
 
-export function CustomTextsSettingsPage({ onBack }: { onBack: () => void }) {
+export function CustomTextsSettingsPage() {
  const restaurant = useRestaurant();
  const t = useTranslations("dashboard.settings");
  const tct = useTranslations("dashboard.settings.customTexts");
@@ -154,7 +155,6 @@ export function CustomTextsSettingsPage({ onBack }: { onBack: () => void }) {
  try {
  await updateCustomTexts(toCustomTexts(byKey));
  await qc.invalidateQueries({ queryKey: ["restaurant"] });
- onBack();
  } finally {
  setSaving(false);
  }
@@ -179,38 +179,37 @@ export function CustomTextsSettingsPage({ onBack }: { onBack: () => void }) {
  const canTranslate = languages.length > 1 && loaded && !translating && !saving;
 
  return (
- <div>
- <SubpageStickyBar onBack={onBack} onSave={save} canSave={loaded && !saving} title={tct("title")}>
- {miniLangs.length > 1 ? (
- <LanguageSwitcher lang={lang} onChange={setLang} languages={miniLangs} />
- ) : null}
- {languages.length > 1 ? (
- <button
- type="button"
- onClick={doTranslateAll}
- disabled={!canTranslate}
- className="h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md inline-flex items-center gap-1 disabled:opacity-50"
+ <Page
+  title={tct("title")}
+  subtitle={tct("subtitle")}
+  actions={
+   <>
+    {miniLangs.length > 1 ? (
+     <LanguageSwitcher lang={lang} onChange={setLang} languages={miniLangs} />
+    ) : null}
+    {languages.length > 1 ? (
+     <button
+      type="button"
+      onClick={doTranslateAll}
+      disabled={!canTranslate}
+      className="h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md inline-flex items-center gap-1 disabled:opacity-50"
+     >
+      {translating ? (
+       <span className="w-3 h-3 border-2 border-input border-t-foreground rounded-full animate-spin" />
+      ) : (
+       <SparklesIcon size={14} />
+      )}
+      {tct("translateAll")}
+     </button>
+    ) : null}
+    <SaveButton onSave={save} canSave={loaded && !saving} />
+   </>
+  }
  >
- {translating ? (
- <span className="w-3 h-3 border-2 border-input border-t-foreground rounded-full animate-spin" />
- ) : (
- <SparklesIcon size={14} />
- )}
- {tct("translateAll")}
- </button>
- ) : null}
- </SubpageStickyBar>
-
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
- <div className="mb-6">
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{tct("title")}</h2>
- <p className="text-sm text-muted-foreground mt-1.5 max-w-xl">{tct("subtitle")}</p>
- </div>
 
  {CUSTOM_TEXT_GROUPS.map((group) => (
- <div key={group.titleKey} className="mb-8">
- <h3 className="text-sm font-medium text-foreground mb-3">
+ <div key={group.titleKey} className="flex flex-col gap-3">
+ <h3 className="text-sm font-medium text-foreground">
  {tct(`groups.${group.titleKey}` as never)}
  </h3>
  <div className="space-y-4">
@@ -230,7 +229,6 @@ export function CustomTextsSettingsPage({ onBack }: { onBack: () => void }) {
  </div>
  </div>
  ))}
- </div>
- </div>
+ </Page>
  );
 }

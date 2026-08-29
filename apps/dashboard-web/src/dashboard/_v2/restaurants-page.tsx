@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRestaurants } from "./restaurants-context";
-import { Modal, SubpageStickyBar } from "./ui";
+import { Modal, SaveButton } from "./ui";
+import { Page } from "./page";
 import { CheckIcon, PlusIcon } from "./icons";
 import { createRestaurant, deleteRestaurant, previewRestaurantSlug } from "./api";
 import { useDashboardRouter } from "../_spa/router";
@@ -61,7 +62,7 @@ function ModeCard({
   );
 }
 
-export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => void; isDemo?: boolean }) {
+export function RestaurantsListPage({ isDemo = false }: { isDemo?: boolean }) {
   const t = useTranslations("dashboard.restaurants");
   const tc = useTranslations("dashboard.common");
   const { list, activeId, isPaid, canAddVenue, venueLimit, switching, setActive, refresh } = useRestaurants();
@@ -110,14 +111,8 @@ export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => 
   };
 
   return (
-    <div>
-      <SubpageStickyBar onBack={onBack} hideSave />
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
-        <div className="mb-5">
-          <h2 className="text-xl font-medium text-foreground">{t("title")}</h2>
-          <p className="text-[13px] text-muted-foreground leading-snug mt-1">{t("subtitle")}</p>
-        </div>
-
+    <>
+      <Page title={t("title")} subtitle={t("subtitle")}>
         <div className="space-y-2.5">
           {list.map((r) => {
             const isActive = r.id === activeId;
@@ -197,7 +192,7 @@ export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => 
             </div>
           )}
         </div>
-      </div>
+      </Page>
       <Modal
         open={!!pendingDelete}
         onClose={() => { if (!deleting) setPendingDelete(null); }}
@@ -237,7 +232,7 @@ export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => 
           </div>
         </div>
       ) : null}
-    </div>
+    </>
   );
 }
 
@@ -322,14 +317,12 @@ export function RestaurantNewPage({ onBack, isDemo = false }: { onBack: () => vo
   };
 
   return (
-    <div>
-      <SubpageStickyBar onBack={onBack} onSave={submit} canSave={canSave} />
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
-        <div className="mb-5">
-          <h2 className="text-xl font-medium text-foreground">{t("newTitle")}</h2>
-          <p className="text-[13px] text-muted-foreground leading-snug mt-1">{t("newSubtitle")}</p>
-        </div>
-
+    <Page
+      title={t("newTitle")}
+      subtitle={t("newSubtitle")}
+      onBack={onBack}
+      actions={<SaveButton onSave={submit} canSave={canSave} />}
+    >
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -384,7 +377,6 @@ export function RestaurantNewPage({ onBack, isDemo = false }: { onBack: () => vo
             )}
           </div>
         </form>
-      </div>
-    </div>
+    </Page>
   );
 }

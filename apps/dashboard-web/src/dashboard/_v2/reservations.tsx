@@ -10,6 +10,7 @@ import {
  UsersIcon,
 } from "./icons";
 import { Modal, PageHeader } from "./ui";
+import { Page } from "./page";
 import { formatTime, isSameDay } from "./helpers";
 import { patchReservation } from "./api";
 import { useDashboardRouter } from "../_spa/router";
@@ -51,15 +52,13 @@ export function ReservationsPage({
  bookings: Booking[];
  setBookings: React.Dispatch<React.SetStateAction<Booking[]>>;
  tables: TableEntity[];
- // Reservation kiosk: drop the centered max-width container so the day /
- // month views stretch edge-to-edge on the tablet, mirroring OrdersPage.
+ // Reservation kiosk: renders its own sub-header + notch backplate instead
+ // of the dashboard page frame.
  kioskLayout?: boolean;
  // Public landing demo: accept/reject runs on local state only — no API.
  // A reload resets the board.
  demoMode?: boolean;
 }) {
- // Centered + width-capped in the admin tab; full-bleed on the kiosk.
- const wrapWidth = kioskLayout ? "w-full" : "max-w-5xl mx-auto";
  const t = useTranslations("dashboard.reservations");
  const router = useDashboardRouter();
 
@@ -136,112 +135,94 @@ export function ReservationsPage({
   }
  }
 
- return (
+ const controls = (
   <>
-   {/* Sticky sub-header — view toggle on the left, prev/next on the right. */}
-   <div
-    className={
-      // Admin tab breaks out of the centered content padding with negative
-      // margins so the bar's background spans edge-to-edge. The kiosk shell
-      // has no horizontal padding to break out of, so keep the bar in-flow —
-      // its own px-4/px-6 then gives the content real side padding.
-      (kioskLayout
-        ? "bg-subheader min-h-14"
-        : "-mx-4 md:-mx-6 -mt-5 md:-mt-4 h-14 bg-subheader/90 backdrop-blur-md") +
-      " sticky z-10 px-4 md:px-6 flex items-center border-b border-border md:border-border/60"
-    }
-    style={
-      kioskLayout
-        ? // In the embedded phone-frame demo there's no real safe area, so the
-          // preview passes the notch height via --kiosk-notch. Add it as opaque
-          // top padding here so the bar covers the cutout and content scrolls
-          // beneath it. Real devices keep env() via the shell.
-          { top: 0, paddingTop: "var(--kiosk-notch, 0px)" }
-        : { top: "var(--topbar-h, 0px)" }
-    }
-   >
-    <div className={(kioskLayout ? "w-full" : "max-w-5xl mx-auto md:px-6 w-full") + " flex items-center justify-between gap-3"}>
-     <div className="flex items-center rounded-lg border border-border bg-card overflow-hidden">
-      <ViewBtn active={view === "month"} onClick={() => { track("Click", "Booking month view"); setView("month"); }}>
-       {t("viewMonth")}
-      </ViewBtn>
-      <ViewBtn active={view === "day"} onClick={() => { track("Click", "Booking day view"); setView("day"); }}>
-       {t("viewDay")}
-      </ViewBtn>
-     </div>
-     <div className="flex items-center gap-1">
-      <NavBtn onClick={() => shift(-1)} aria-label={t("prev")}>
-       <ChevronLeftIcon size={16} />
-      </NavBtn>
-      <NavBtn onClick={() => shift(1)} aria-label={t("next")}>
-       <ChevronRightIcon size={16} />
-      </NavBtn>
-     </div>
+   <div className="flex items-center rounded-lg border border-border bg-card overflow-hidden">
+    <ViewBtn active={view === "month"} onClick={() => { track("Click", "Booking month view"); setView("month"); }}>
+     {t("viewMonth")}
+    </ViewBtn>
+    <ViewBtn active={view === "day"} onClick={() => { track("Click", "Booking day view"); setView("day"); }}>
+     {t("viewDay")}
+    </ViewBtn>
+   </div>
+   <div className="flex items-center gap-1">
+    <NavBtn onClick={() => shift(-1)} aria-label={t("prev")}>
+     <ChevronLeftIcon size={16} />
+    </NavBtn>
+    <NavBtn onClick={() => shift(1)} aria-label={t("next")}>
+     <ChevronRightIcon size={16} />
+    </NavBtn>
+   </div>
+  </>
+ );
+
+ const board =
+  view === "month" ? (
+   <div className="flex flex-col gap-6 lg:flex-row lg:gap-8 lg:items-start">
+    <div className="lg:flex-1 lg:min-w-0 order-2 lg:order-1">
+     <PendingList bookings={bookings} tables={tables} onClickBooking={setSelected} />
+    </div>
+    <div className="order-1 lg:order-2 lg:shrink-0 lg:w-[26rem] aspect-[1.2/1]">
+     <MonthView
+      focusDate={focusDate}
+      bookings={monthBookings}
+      onClickDay={(d) => {
+       track("Click", "Booking day drilldown");
+       setFocusDate(d);
+       setView("day");
+      }}
+     />
     </div>
    </div>
+  ) : (
+   <DayView
+    focusDate={focusDate}
+    bookings={dayBookings}
+    tables={tables}
+    schedule={restaurant.bookingSettings.schedule}
+    onClickBooking={setSelected}
+   />
+  );
 
-   <div className={wrapWidth + (kioskLayout ? " px-4 pt-8 md:pt-8" : " pt-5 md:pt-4") + " md:px-6"}>
-    {view === "month" ? (
-     <div className="lg:flex lg:gap-8 lg:items-stretch">
-      <div className="lg:flex-1 lg:min-w-0 lg:flex lg:flex-col lg:h-[calc(100dvh-var(--topbar-h,0px)-160px)]">
-       <PageHeader title={title} subtitle={subtitle} />
-       <div className="mt-6 hidden lg:flex lg:flex-1 lg:min-h-[200px] lg:overflow-y-auto pr-1">
-        <div className="w-full">
-         <PendingList
-          bookings={bookings}
-          tables={tables}
-          onClickBooking={setSelected}
-         />
-        </div>
-       </div>
-      </div>
-      <div className="mt-6 lg:mt-0 lg:shrink-0 lg:h-[calc(100dvh-var(--topbar-h,0px)-160px)] lg:aspect-[1.2/1] lg:max-h-[calc((100vw-360px)/1.2)]">
-       <MonthView
-        focusDate={focusDate}
-        bookings={monthBookings}
-        onClickDay={(d) => {
-         track("Click", "Booking day drilldown");
-         setFocusDate(d);
-         setView("day");
-        }}
-       />
-      </div>
-      <div className="mt-6 lg:hidden">
-       <PendingList
-        bookings={bookings}
-        tables={tables}
-        onClickBooking={setSelected}
-       />
-      </div>
-     </div>
-    ) : (
-     <>
-      <PageHeader title={title} subtitle={subtitle} />
-      <div className="mt-6">
-       <DayView
-        focusDate={focusDate}
-        bookings={dayBookings}
-        tables={tables}
-        schedule={restaurant.bookingSettings.schedule}
-        onClickBooking={setSelected}
-       />
-      </div>
-     </>
-    )}
-   </div>
+ const modal = selected ? (
+  <BookingDetailModal
+   booking={selected}
+   tables={tables}
+   onClose={() => setSelected(null)}
+   onStatusChange={async (status) => {
+    const id = selected.id;
+    setSelected(null);
+    await setBookingStatus(id, status);
+   }}
+  />
+ ) : null;
 
-   {selected ? (
-    <BookingDetailModal
-     booking={selected}
-     tables={tables}
-     onClose={() => setSelected(null)}
-     onStatusChange={async (status) => {
-      const id = selected.id;
-      setSelected(null);
-      await setBookingStatus(id, status);
-     }}
-    />
-   ) : null}
+ if (kioskLayout) {
+  return (
+   <>
+    {/* Kiosk sub-header — the shell has no padding to break out of, so the
+        bar stays in-flow and paints its own notch backplate. */}
+    <div
+     className="bg-subheader min-h-14 sticky top-0 z-10 px-4 md:px-6 flex items-center border-b border-border md:border-border/60"
+     style={{ paddingTop: "var(--kiosk-notch, 0px)" }}
+    >
+     <div className="w-full flex items-center justify-between gap-3">{controls}</div>
+    </div>
+    <div className="w-full px-4 md:px-6 pt-8">
+     <PageHeader title={title} subtitle={subtitle} />
+     <div className="mt-6">{board}</div>
+    </div>
+    {modal}
+   </>
+  );
+ }
+
+ return (
+  <>
+   <Page title={title} subtitle={subtitle} actions={controls}>
+    {board}
+   </Page>
+   {modal}
   </>
  );
 }
@@ -279,12 +260,7 @@ function NavBtn({ children, onClick, ...rest }: { children: React.ReactNode; onC
 // ---------- Empty / disabled states ----------
 
 function CtaWrapper({ title, children }: { title: string; children: React.ReactNode }) {
- return (
-  <div className="max-w-5xl mx-auto md:px-6">
-   <PageHeader title={title} />
-   {children}
-  </div>
- );
+ return <Page title={title}>{children}</Page>;
 }
 
 export function CtaState({ title, body, cta, onClick }: { title: string; body: string; cta?: string; onClick?: () => void }) {

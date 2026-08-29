@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Menü",
+      "groupMain": "Ana",
       "reservations": "Rezervasyonlar",
       "orders": "Siparişler",
       "kitchen": "Mutfak",

@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Menu",
+      "groupMain": "Hoofd",
       "reservations": "Reserveringen",
       "orders": "Bestellingen",
       "kitchen": "Keuken",

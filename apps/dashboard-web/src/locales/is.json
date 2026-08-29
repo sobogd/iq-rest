@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Matseðill",
+      "groupMain": "Aðalvalmynd",
       "reservations": "Bókanir",
       "orders": "Pantanir",
       "kitchen": "Eldhús",

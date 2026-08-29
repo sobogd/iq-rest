@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Étlap",
+      "groupMain": "Fő",
       "reservations": "Foglalások",
       "orders": "Rendelések",
       "kitchen": "Konyha",

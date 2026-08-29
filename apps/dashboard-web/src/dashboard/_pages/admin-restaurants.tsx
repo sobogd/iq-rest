@@ -6,7 +6,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { apiUrl } from "@/lib/api";
 import { EyeIcon, RefreshIcon } from "../_v2/icons";
-import { SubpageStickyBar } from "../_v2/ui";
+import { Page } from "../_v2/page";
 import { useDashboardRouter } from "../_spa/router";
 import { AVAILABLE_LANGUAGES } from "../_v2/i18n";
 
@@ -27,7 +27,7 @@ interface RestaurantRow {
 
 type Filter = "all" | "subscribed";
 
-export function AdminRestaurantsPage({ onBack }: { onBack: () => void }) {
+export function AdminRestaurantsPage() {
   const router = useDashboardRouter();
   const [rows, setRows] = useState<RestaurantRow[]>([]);
   const [loading, setLoading] = useState(true);
@@ -65,8 +65,10 @@ export function AdminRestaurantsPage({ onBack }: { onBack: () => void }) {
   ];
 
   return (
-    <div>
-      <SubpageStickyBar onBack={onBack} hideSave>
+      <Page
+        title="Restaurants"
+        actions={
+         <>
         <span className="text-[10px] text-muted-foreground tabular-nums">
           {visible.length} / {rows.length}
         </span>
@@ -94,8 +96,9 @@ export function AdminRestaurantsPage({ onBack }: { onBack: () => void }) {
         >
           <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
         </button>
-      </SubpageStickyBar>
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
+         </>
+        }
+      >
         {loading && rows.length === 0 ? (
           <div className="text-xs text-muted-foreground py-8 text-center">Loading…</div>
         ) : visible.length === 0 ? (
@@ -181,7 +184,6 @@ export function AdminRestaurantsPage({ onBack }: { onBack: () => void }) {
             })}
           </div>
         )}
-      </div>
-    </div>
+      </Page>
   );
 }

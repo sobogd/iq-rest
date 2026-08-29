@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Menu",
+      "groupMain": "Główne",
       "reservations": "Rezerwacje",
       "orders": "Zamówienia",
       "kitchen": "Kuchnia",

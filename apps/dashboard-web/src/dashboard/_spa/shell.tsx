@@ -29,7 +29,6 @@ import {
 } from "../_v2/settings";
 import { CustomTextsSettingsPage } from "../_v2/custom-texts";
 import { AnalyticsClient } from "../analytics/analytics-client";
-import { SettingsHubView } from "./views/settings-hub";
 import { DevicesSettingsPage } from "../_v2/devices-settings";
 import { RestaurantsListPage, RestaurantNewPage } from "../_v2/restaurants-page";
 import { FirstRunModals } from "../_v2/first-run-modals";
@@ -42,6 +41,7 @@ import { AdminLeadsPage } from "../_pages/admin-leads";
 import { AdminInboxPage } from "../_pages/admin-inbox";
 import { AdminInboxThreadPage } from "../_pages/admin-inbox-thread";
 import { LandingRedirect, LogoutRedirect } from "../../auth/landing-redirect";
+import { Page } from "../_v2/page";
 
 import type { Booking, Category, Dish, DishOption, Order, Restaurant, Restaurant as UIRestaurant, TableEntity } from "../_v2/types";
 
@@ -51,7 +51,6 @@ export interface ShellInitialData {
   initialBookings: Booking[];
   initialTables: TableEntity[];
   initialSub: { subscriptionStatus: string | null; trialEndsAt: string | null; currentPeriodEnd?: string | null; pastDueSince?: string | null; interval?: string | null; proFeatures?: boolean; reservationsFeature?: boolean; menuOnline?: boolean } | null;
-  isAdmin: boolean;
   isDemo?: boolean;
   impersonatedBy?: string | null;
   userEmail?: string;
@@ -107,7 +106,6 @@ function ShellBody(props: ShellInitialData) {
     }
   }, [view.name, queryClient]);
 
-  const backToSettings = useCallback(() => router.push({ name: "settings" }), [router]);
   const backToMenu = useCallback(() => router.resetTo({ name: "menu" }), [router]);
 
   // Persistent stateful data — survives navigation between views.
@@ -202,20 +200,18 @@ function ShellBody(props: ShellInitialData) {
   return (
     <>
       {menuOffline ? (
-        <div className="max-w-5xl mx-auto md:px-6 pt-3">
-          <div className="flex items-center justify-between gap-3 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3">
-            <div className="min-w-0">
-              <div className="text-sm font-medium text-amber-900">{tUpsell("menuOffline.title")}</div>
-              <div className="text-xs text-amber-800 leading-snug mt-0.5">{tUpsell("menuOffline.body")}</div>
-            </div>
-            <button
-              type="button"
-              onClick={() => router.push({ name: "settings.billing" })}
-              className="shrink-0 h-8 px-3 rounded-lg bg-amber-600 text-white text-xs font-medium"
-            >
-              {tUpsell("cta")}
-            </button>
+        <div className="shrink-0 flex items-center justify-between gap-3 border-b border-amber-300 bg-amber-50 px-4 md:px-6 py-2.5">
+          <div className="min-w-0">
+            <div className="text-sm font-medium text-amber-900">{tUpsell("menuOffline.title")}</div>
+            <div className="text-xs text-amber-800 leading-snug mt-0.5">{tUpsell("menuOffline.body")}</div>
           </div>
+          <button
+            type="button"
+            onClick={() => router.push({ name: "settings.billing" })}
+            className="shrink-0 h-8 px-3 rounded-lg bg-amber-600 text-white text-xs font-medium"
+          >
+            {tUpsell("cta")}
+          </button>
         </div>
       ) : null}
       <ViewSwitch
@@ -229,10 +225,8 @@ function ShellBody(props: ShellInitialData) {
         tables={tables}
         setTables={setTables}
         sub={props.initialSub}
-        isAdmin={props.isAdmin}
         isDemo={!!props.isDemo}
         impersonatedBy={props.impersonatedBy ?? null}
-        backToSettings={backToSettings}
         backToMenu={backToMenu}
         refreshMenu={refreshMenu}
       />
@@ -269,10 +263,8 @@ interface SwitchProps {
   tables: TableEntity[];
   setTables: React.Dispatch<React.SetStateAction<TableEntity[]>>;
   sub: ShellInitialData["initialSub"];
-  isAdmin: boolean;
   isDemo: boolean;
   impersonatedBy: string | null;
-  backToSettings: () => void;
   backToMenu: () => void;
   refreshMenu: () => Promise<void>;
 }
@@ -292,20 +284,27 @@ const PRO_FEATURE_VIEWS: Record<string, ProFeature> = {
 
 function ProUpsell({ feature, onUpgrade }: { feature: ProFeature; onUpgrade: () => void }) {
   const t = useTranslations("dashboard.proUpsell");
+  const tn = useTranslations("dashboard.nav");
+  const navTitle: Record<ProFeature, string> = {
+    orders: tn("orders"),
+    kitchen: tn("kitchen"),
+    reservations: tn("reservations"),
+    devices: tn("settings"),
+  };
   return (
-    <div className="max-w-5xl mx-auto md:px-6">
+    <Page title={navTitle[feature]}>
       <CtaState
         title={t(`${feature}.title`)}
         body={t(`${feature}.body`)}
         cta={t("cta")}
         onClick={onUpgrade}
       />
-    </div>
+    </Page>
   );
 }
 
 function ViewSwitch(p: SwitchProps) {
-  const { view, restaurant, categories, orders, setOrders, bookings, setBookings, tables, setTables, sub, isAdmin, isDemo, impersonatedBy, backToSettings, backToMenu, refreshMenu } = p;
+  const { view, restaurant, categories, orders, setOrders, bookings, setBookings, tables, setTables, sub, isDemo, impersonatedBy, backToMenu, refreshMenu } = p;
   const router = useDashboardRouter();
 
   const onSavedMenu = async () => {
@@ -357,38 +356,24 @@ function ViewSwitch(p: SwitchProps) {
     case "reservations":
       return <ReservationsPage restaurant={restaurant} bookings={bookings} setBookings={setBookings} tables={tables} />;
     case "kitchen":
-      // Fixed-height kanban inside the document-scroll dashboard: cancel the
-      // <main> padding (top + sides + the inline bottom-nav clearance) and pin
-      // the board to the viewport below the sticky topbar (desktop) / above the
-      // bottom nav (mobile, where --topbar-h is 0). Only the columns scroll
-      // internally — the page itself doesn't.
       return (
-        <div
-          className="-mx-4 md:-mx-6 -mt-5 md:-mt-4 h-[calc(100dvh-5rem-env(safe-area-inset-bottom))] md:h-[calc(100dvh-var(--topbar-h,0px))]"
-          style={{ marginBottom: "calc(-5rem - env(safe-area-inset-bottom))" }}
-        >
-          <KitchenPage
-            orders={orders}
-            setOrders={setOrders}
-            tables={tables}
-            categories={categories}
-            defaultLang={restaurant.defaultLang}
-            kioskLayout
-            fullWidthFilterBar
-          />
-        </div>
+        <KitchenPage
+          orders={orders}
+          setOrders={setOrders}
+          tables={tables}
+          categories={categories}
+          defaultLang={restaurant.defaultLang}
+        />
       );
     case "analytics":
       return <AnalyticsClient />;
 
-    case "settings":
-      return <SettingsHubView isAdmin={isAdmin} impersonatedBy={impersonatedBy} />;
     case "settings.contacts":
-      return <SettingsContactsWrapper onBack={backToSettings} />;
+      return <SettingsContactsWrapper />;
     case "settings.branding":
-      return <SettingsBrandingWrapper onBack={backToSettings} />;
+      return <SettingsBrandingWrapper />;
     case "settings.general":
-      return <SettingsGeneralWrapper onBack={backToSettings} />;
+      return <SettingsGeneralWrapper />;
     case "settings.tables":
       return (
         <TablesPage
@@ -397,7 +382,6 @@ function ViewSwitch(p: SwitchProps) {
           orders={orders}
           bookings={bookings}
           menuUrl={restaurant.menuUrl}
-          onBack={backToSettings}
         />
       );
     case "settings.tables.new":
@@ -426,30 +410,30 @@ function ViewSwitch(p: SwitchProps) {
         />
       );
     case "settings.orders":
-      return <SettingsOrdersWrapper onBack={backToSettings} />;
+      return <SettingsOrdersWrapper />;
     case "settings.bookings":
-      return <SettingsBookingsWrapper onBack={backToSettings} />;
+      return <SettingsBookingsWrapper />;
     case "settings.languages":
-      return <SettingsLanguagesWrapper onBack={backToSettings} />;
+      return <SettingsLanguagesWrapper />;
     case "settings.customTexts":
       // Admin-only surface — a non-impersonation deep-link bounces to the hub
       // (the save/translate endpoints are also 403'd server-side).
-      return impersonatedBy ? <CustomTextsSettingsPage onBack={backToSettings} /> : <SettingsHubView isAdmin={isAdmin} impersonatedBy={impersonatedBy} />;
+      return impersonatedBy ? <CustomTextsSettingsPage /> : <MenuRedirect onDone={backToMenu} />;
     case "settings.billing":
-      return <SettingsBillingWrapper onBack={view.from === "menu" ? backToMenu : backToSettings} />;
+      return <SettingsBillingWrapper onBack={view.from === "menu" ? backToMenu : undefined} />;
     case "settings.support":
-      return <SettingsSupportWrapper onBack={backToSettings} />;
+      return <SettingsSupportWrapper />;
     case "settings.devices":
-      return <DevicesSettingsPage onBack={backToSettings} />;
+      return <DevicesSettingsPage />;
     case "settings.restaurants":
-      return <RestaurantsListPage onBack={backToSettings} isDemo={isDemo} />;
+      return <RestaurantsListPage isDemo={isDemo} />;
     case "settings.restaurants.new":
       return <RestaurantNewPage onBack={() => router.push({ name: "settings.restaurants" })} isDemo={isDemo} />;
 
     case "settings.admin.restaurants":
-      return <AdminRestaurantsPage onBack={backToSettings} />;
+      return <AdminRestaurantsPage />;
     case "settings.admin.users":
-      return <AdminUsersPage onBack={backToSettings} />;
+      return <AdminUsersPage />;
     case "settings.admin.restaurant":
       return <AdminRestaurantPage restaurantId={view.id} />;
     case "settings.admin.traffic":
@@ -457,9 +441,9 @@ function ViewSwitch(p: SwitchProps) {
     case "settings.admin.trafficSession":
       return <TrafficSessionPage id={view.id} restaurantId={view.restaurantId} />;
     case "settings.admin.leads":
-      return <AdminLeadsPage onBack={backToSettings} />;
+      return <AdminLeadsPage />;
     case "settings.admin.inbox":
-      return <AdminInboxPage onBack={backToSettings} />;
+      return <AdminInboxPage />;
     case "settings.admin.inboxThread":
       return <AdminInboxThreadPage threadId={view.id} />;
 
@@ -591,15 +575,25 @@ function ViewSwitch(p: SwitchProps) {
   }
 }
 
+/** Deep link to a surface the current account may not open — bounce home. */
+function MenuRedirect({ onDone }: { onDone: () => void }) {
+  useEffect(() => {
+    onDone();
+  }, [onDone]);
+  return null;
+}
+
 function NotMigrated({ label }: { label: string }) {
   return (
-    <div className="max-w-5xl mx-auto md:px-6 py-10 text-center text-sm text-muted-foreground">{label}</div>
+    <Page title={label}>
+      <div className="py-10 text-center text-sm text-muted-foreground">{label}</div>
+    </Page>
   );
 }
 
 // ── Settings sub-view wrappers ──
 
-interface BackProp { onBack: () => void }
+interface BackProp { onBack?: () => void }
 
 /** Wraps Restaurant draft state and invalidates ["restaurant"] cache on every
  *  setRestaurant call so Shell's RestaurantProvider re-renders with fresh

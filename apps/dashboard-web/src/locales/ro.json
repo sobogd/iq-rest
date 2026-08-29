@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Meniu",
+      "groupMain": "Principal",
       "reservations": "Rezervări",
       "orders": "Comenzi",
       "kitchen": "Bucătărie",

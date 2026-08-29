@@ -17,14 +17,15 @@ import {
 import {
  AiImageModal,
  ConfirmDialog,
- EditPageHeader,
  Modal,
  PhotoPicker,
+ SaveButton,
  Select,
  ToggleSwitch,
  TranslatedInput,
  UnsavedChangesDialog,
 } from "./ui";
+import { Page } from "./page";
 import { iconBtn, inputClass } from "./tokens";
 import {
  ALLERGENS,
@@ -173,26 +174,15 @@ export function CategoryForm({
  : (getMlWithFallback(form.name, lang, defaultLang) || tc("untitled"));
 
  return (
- <div>
- <EditPageHeader
- onBack={() => {
- track("Click", "Category back");
- if (isDirty && !saving) { setUnsavedOpen(true); return; }
- onBack();
- }}
- title={titleText}
- breadcrumb={t("breadcrumb")}
- lang={lang}
- onLangChange={setLang}
- languages={langMetas}
- onSave={save}
- canSave={!saving}
- saving={saving}
- onLangsOpen={() => track("Click", "Category languages")}
- onLangSelect={() => track("Click", "Category language")}
- />
-
- <div className="max-w-5xl mx-auto md:px-6">
+ <Page
+  title={titleText}
+  onBack={() => {
+   track("Click", "Category back");
+   if (isDirty && !saving) { setUnsavedOpen(true); return; }
+   onBack();
+  }}
+  actions={<SaveButton onSave={save} canSave={!saving} />}
+ >
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <TranslatedInput
  id="cat-name"
@@ -227,10 +217,9 @@ export function CategoryForm({
  </div>
  ) : null}
  </div>
- </div>
 
  {!isNew ? (
- <div className="max-w-5xl mx-auto md:px-6 mt-6 flex justify-center">
+ <div className="flex justify-center">
  <button
  type="button"
  onClick={() => setConfirmOpen(true)}
@@ -293,7 +282,7 @@ export function CategoryForm({
  </div>
  </div>
  ) : null}
- </div>
+ </Page>
  );
 }
 
@@ -656,26 +645,15 @@ export function DishForm({
  const divider = <div className="border-t border-border my-5" />;
 
  return (
- <div>
- <EditPageHeader
- onBack={() => {
- track("Click", "Item back");
- if (isDirty && !saving) { setUnsavedOpen(true); return; }
- onBack();
- }}
- title={titleText}
- breadcrumb={categoryName ? t("breadcrumb") + " / " + categoryName : t("breadcrumb")}
- lang={lang}
- onLangChange={setLang}
- languages={langMetas}
- onSave={save}
- canSave={!saving}
- saving={saving}
- onLangsOpen={() => track("Click", "Item languages")}
- onLangSelect={() => track("Click", "Item language")}
- />
-
- <div className="max-w-5xl mx-auto md:px-6 space-y-3">
+ <Page
+  title={titleText}
+  onBack={() => {
+   track("Click", "Item back");
+   if (isDirty && !saving) { setUnsavedOpen(true); return; }
+   onBack();
+  }}
+  actions={<SaveButton onSave={save} canSave={!saving} />}
+ >
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <div className="flex flex-col-reverse md:flex-row-reverse gap-4 md:gap-5">
  <div className="w-full md:w-[7.6rem] shrink-0">
@@ -847,10 +825,9 @@ export function DishForm({
  />
  </label>
  </div>
- </div>
 
  {!isNew ? (
- <div className="max-w-5xl mx-auto md:px-6 mt-6 flex items-center justify-center gap-3">
+ <div className="flex items-center justify-center gap-3">
  {categoryId ? (
  <button
  type="button"
@@ -958,7 +935,7 @@ export function DishForm({
  </div>
  </div>
  ) : null}
- </div>
+ </Page>
  );
 }
 
@@ -1317,25 +1294,9 @@ export function OptionForm({
  ? getMlWithFallback(currentDishName, defaultLang, defaultLang)
  : "";
 
- return (
- <div>
- {!embedded ? (
- <EditPageHeader
- onBack={onBack}
- title={titleText}
- breadcrumb={dishName ? t("breadcrumb") + " / " + dishName : t("breadcrumb")}
- lang={lang}
- onLangChange={setLang}
- languages={langMetas}
- onSave={save}
- canSave={!saving}
- saving={saving}
- />
- ) : null}
-
- <div className={embedded
- ? ""
- : "max-w-5xl mx-auto bg-card border border-border rounded-2xl p-5 md:p-6"}>
+ const content = (
+  <>
+ <div className={embedded ? "" : "bg-card border border-border rounded-2xl p-5 md:p-6"}>
  <TranslatedInput
  id="opt-name"
  label={t("nameLabel")}
@@ -1461,7 +1422,7 @@ export function OptionForm({
  </div>
  </div>
  ) : !isNew ? (
- <div className="max-w-5xl mx-auto md:px-6 mt-6 flex justify-center">
+ <div className="flex justify-center">
  <button
  type="button"
  onClick={() => setConfirmOpen(true)}
@@ -1488,7 +1449,19 @@ export function OptionForm({
  message={alert?.message}
  onCancel={() => setAlert(null)}
  />
- </div>
+  </>
+ );
+
+ // Embedded: the dish form renders this inside a modal, which already owns the
+ // title bar + save affordance. Standalone: it is a page of its own.
+ return embedded ? content : (
+  <Page
+   title={titleText}
+   onBack={onBack}
+   actions={<SaveButton onSave={save} canSave={!saving} />}
+  >
+   {content}
+  </Page>
  );
 }
 

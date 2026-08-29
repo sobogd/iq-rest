@@ -6,7 +6,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { apiUrl } from "@/lib/api";
-import { SubpageStickyBar } from "../_v2/ui";
+import { Page } from "../_v2/page";
 import { AdminRestaurantPage } from "./admin-restaurant";
 import { useScrollLock } from "../_v2/use-scroll-lock";
 
@@ -28,7 +28,7 @@ interface UserRow {
   }[];
 }
 
-export function AdminUsersPage({ onBack }: { onBack: () => void }) {
+export function AdminUsersPage() {
   const [rows, setRows] = useState<UserRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [modalRestaurantId, setModalRestaurantId] = useState<string | null>(null);
@@ -52,9 +52,8 @@ export function AdminUsersPage({ onBack }: { onBack: () => void }) {
   }, [fetchRows]);
 
   return (
-    <div>
-      <SubpageStickyBar onBack={onBack} hideSave />
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
+    <>
+      <Page title="Users">
         {loading && rows.length === 0 ? (
           <div className="text-xs text-muted-foreground py-8 text-center">Loading…</div>
         ) : rows.length === 0 ? (
@@ -112,7 +111,7 @@ export function AdminUsersPage({ onBack }: { onBack: () => void }) {
             })}
           </div>
         )}
-      </div>
+      </Page>
 
       {modalRestaurantId ? (
         <div
@@ -127,6 +126,6 @@ export function AdminUsersPage({ onBack }: { onBack: () => void }) {
           </div>
         </div>
       ) : null}
-    </div>
+    </>
   );
 }

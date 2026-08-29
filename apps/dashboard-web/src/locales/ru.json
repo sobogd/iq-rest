@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Меню",
+      "groupMain": "Основное",
       "reservations": "Бронирования",
       "orders": "Заказы",
       "kitchen": "Кухня",

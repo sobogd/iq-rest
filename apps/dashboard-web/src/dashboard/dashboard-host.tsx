@@ -240,14 +240,18 @@ export function DashboardHost() {
 
   return (
     <DashboardSpaWrapper locale={locale || "en"}>
-      <DashboardChrome restaurant={uiRestaurant} sub={initialSub}>
+      <DashboardChrome
+        restaurant={uiRestaurant}
+        sub={initialSub}
+        isAdmin={isAdminEmail(authData.email)}
+        impersonatedBy={authData.impersonatedBy ?? null}
+      >
         <Shell
           initialCategories={initialCategories}
           initialOrders={initialOrders}
           initialBookings={initialBookings}
           initialTables={initialTables}
           initialSub={initialSub}
-          isAdmin={isAdminEmail(authData.email)}
           isDemo={!!authData.isDemo}
           impersonatedBy={authData.impersonatedBy ?? null}
           accountCreatedAt={authData.accountCreatedAt ?? null}

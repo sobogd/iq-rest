@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "메뉴",
+      "groupMain": "기본",
       "reservations": "예약",
       "orders": "주문",
       "kitchen": "주방",

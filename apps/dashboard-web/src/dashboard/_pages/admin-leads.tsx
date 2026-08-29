@@ -8,7 +8,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { apiUrl } from "@/lib/api";
-import { SubpageStickyBar } from "../_v2/ui";
+import { Page } from "../_v2/page";
 
 interface LeadRow {
   leadgenId: string;
@@ -23,7 +23,7 @@ interface LeadRow {
   welcomeSentAt: string | null;
 }
 
-export function AdminLeadsPage({ onBack }: { onBack: () => void }) {
+export function AdminLeadsPage() {
   const [rows, setRows] = useState<LeadRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -75,9 +75,7 @@ export function AdminLeadsPage({ onBack }: { onBack: () => void }) {
   );
 
   return (
-    <div>
-      <SubpageStickyBar onBack={onBack} hideSave />
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
+      <Page title="Leads">
         {error ? <div className="text-xs text-red-500 py-2 text-center">{error}</div> : null}
         {loading && rows.length === 0 ? (
           <div className="text-xs text-muted-foreground py-8 text-center">Loading…</div>
@@ -161,7 +159,6 @@ export function AdminLeadsPage({ onBack }: { onBack: () => void }) {
             })}
           </div>
         )}
-      </div>
-    </div>
+      </Page>
   );
 }

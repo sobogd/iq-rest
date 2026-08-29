@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Menüü",
+      "groupMain": "Peamine",
       "reservations": "Broneeringud",
       "orders": "Tellimused",
       "kitchen": "Köök",

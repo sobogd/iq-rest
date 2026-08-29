@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Biachlár",
+      "groupMain": "Príomhroghchlár",
       "reservations": "Áirithintí",
       "orders": "Orduithe",
       "kitchen": "Cistin",

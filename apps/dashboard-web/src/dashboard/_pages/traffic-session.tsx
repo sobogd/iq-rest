@@ -8,7 +8,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
 import { apiUrl } from "@/lib/api";
 import { RefreshIcon } from "../_v2/icons";
-import { SubpageStickyBar } from "../_v2/ui";
+import { Page } from "../_v2/page";
 import { useDashboardRouter } from "../_spa/router";
 import { invalidateTrafficCache } from "./traffic";
 import {
@@ -92,8 +92,11 @@ export function TrafficSessionPage({ id, restaurantId }: { id: string; restauran
   }
 
   return (
-    <div>
-      <SubpageStickyBar onBack={back} hideSave>
+      <Page
+        title="Session"
+        onBack={back}
+        actions={
+         <>
         <button
           type="button"
           onClick={() => void load()}
@@ -112,9 +115,9 @@ export function TrafficSessionPage({ id, restaurantId }: { id: string; restauran
         >
           <Trash2 className="h-3.5 w-3.5" />
         </button>
-      </SubpageStickyBar>
-
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 space-y-3 pb-10">
+         </>
+        }
+      >
         {deleteError ? (
           <div className="rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-2 text-xs text-red-700 dark:text-red-400">
             {deleteError}
@@ -134,8 +137,7 @@ export function TrafficSessionPage({ id, restaurantId }: { id: string; restauran
             <OtherVisits data={data} onOpen={(id) => router.push({ name: "settings.admin.trafficSession", id })} />
           </>
         ) : null}
-      </div>
-    </div>
+      </Page>
   );
 }
 

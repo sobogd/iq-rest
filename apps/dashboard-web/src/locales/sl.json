@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Meni",
+      "groupMain": "Glavno",
       "reservations": "Rezervacije",
       "orders": "Naročila",
       "kitchen": "Kuhinja",

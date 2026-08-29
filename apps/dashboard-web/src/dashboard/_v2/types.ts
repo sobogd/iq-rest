@@ -193,5 +193,3 @@ export interface Restaurant {
  orderSettings: OrderSettings;
  subscription: SubscriptionInfo;
 }
-
-export type TabId = "menu" | "reservations" | "orders" | "kitchen" | "analytics" | "settings";

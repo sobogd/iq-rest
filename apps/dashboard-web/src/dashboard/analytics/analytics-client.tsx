@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { apiUrl } from "@/lib/api";
 import { useTranslations } from "next-intl";
-import { EmptyState, PageHeader } from "../_v2/ui";
+import { EmptyState } from "../_v2/ui";
+import { Page } from "../_v2/page";
 import { AVAILABLE_LANGUAGES } from "../_v2/i18n";
 import { track } from "@/lib/dashboard-events";
 import { OrdersListModal } from "./orders-modal";
@@ -166,24 +167,22 @@ export function AnalyticsClient() {
     !stats || (stats.totalViews === 0 && (stats.orders?.ordersCount ?? 0) === 0);
 
   return (
-    <div className="max-w-5xl mx-auto md:px-6">
-      <PageHeader
-        title={t("title")}
-        subtitle={t("subtitle")}
-        action={
-          months.length > 0 ? (
-            <PeriodDropdown
-              months={months}
-              period={period}
-              onChange={(p) => {
-                track("Click", "Analytics period selector");
-                setPeriod(p);
-              }}
-            />
-          ) : null
-        }
-      />
-
+    <Page
+      title={t("title")}
+      subtitle={t("subtitle")}
+      actions={
+        months.length > 0 ? (
+          <PeriodDropdown
+            months={months}
+            period={period}
+            onChange={(p) => {
+              track("Click", "Analytics period selector");
+              setPeriod(p);
+            }}
+          />
+        ) : null
+      }
+    >
       {loading && !stats ? (
         <div className="bg-card border border-border rounded-xl min-h-[280px] flex items-center justify-center">
           <div className="w-5 h-5 border-2 border-input border-t-foreground rounded-full animate-spin" />
@@ -228,7 +227,7 @@ export function AnalyticsClient() {
           onClose={() => setOrdersModalOpen(false)}
         />
       ) : null}
-    </div>
+    </Page>
   );
 }
 

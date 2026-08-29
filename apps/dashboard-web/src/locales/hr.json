@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Jelovnik",
+      "groupMain": "Glavno",
       "reservations": "Rezervacije",
       "orders": "Narudžbe",
       "kitchen": "Kuhinja",

@@ -2,6 +2,7 @@
   "dashboard": {
     "nav": {
       "menu": "Menu",
+      "groupMain": "Päätoiminnot",
       "reservations": "Varaukset",
       "orders": "Tilaukset",
       "kitchen": "Keittiö",

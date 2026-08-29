@@ -9,7 +9,8 @@ import {
   Trash2,
 } from "lucide-react";
 import { apiUrl } from "@/lib/api";
-import { Select, SubpageStickyBar, ToggleSwitch } from "../_v2/ui";
+import { Select, ToggleSwitch } from "../_v2/ui";
+import { Page } from "../_v2/page";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { getMenuUrl } from "@/lib/menu-url";
 import { useDashboardRouter } from "../_spa/router";
@@ -406,25 +407,8 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
     </>
   );
 
-  return (
+  const content = (
     <>
-      {onClose ? (
-        <div className="shrink-0 px-5 py-3 border-b border-border flex items-center justify-between gap-3">
-          <h3 className="text-sm font-semibold text-foreground truncate">{title}</h3>
-          <button
-            type="button"
-            onClick={close}
-            className="h-8 w-8 inline-flex items-center justify-center bg-secondary rounded-md text-muted-foreground hover:text-foreground shrink-0"
-            title="Close"
-          >
-            <CloseIcon className="h-4 w-4" />
-          </button>
-        </div>
-      ) : (
-        <SubpageStickyBar onBack={close} hideSave>{headerActions}</SubpageStickyBar>
-      )}
-
-      <div className={onClose ? "flex-1 overflow-y-auto p-5" : "max-w-5xl mx-auto md:px-6 pt-5 md:pt-4"}>
         <div className="space-y-4">
           <div className="bg-card border border-border rounded-xl overflow-hidden divide-y divide-border">
             {restaurantRows.map((row) => (
@@ -532,7 +516,31 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
             </div>
           </div>
         </div>
-      </div>
+    </>
+  );
+
+  return (
+    <>
+      {onClose ? (
+        <>
+          <div className="shrink-0 px-5 py-3 border-b border-border flex items-center justify-between gap-3">
+            <h3 className="text-sm font-semibold text-foreground truncate">{title}</h3>
+            <button
+              type="button"
+              onClick={close}
+              className="h-8 w-8 inline-flex items-center justify-center bg-secondary rounded-md text-muted-foreground hover:text-foreground shrink-0"
+              title="Close"
+            >
+              <CloseIcon className="h-4 w-4" />
+            </button>
+          </div>
+          <div className="flex-1 overflow-y-auto p-5">{content}</div>
+        </>
+      ) : (
+        <Page title={title} onBack={close} actions={headerActions}>
+          {content}
+        </Page>
+      )}
 
       {onClose ? (
         <div className="shrink-0 px-5 py-3 border-t border-border flex items-center gap-2">
