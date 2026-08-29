@@ -143,8 +143,13 @@ export function Sidebar({
         }
       >
         <SidebarHeader restaurant={restaurant} />
-        <SidebarQuickActions restaurant={restaurant} />
-        <SidebarNav isAdmin={isAdmin} impersonatedBy={impersonatedBy} viewName={view.name} />
+        <nav
+          data-scroll-pane="sidebar"
+          className="flex-1 min-h-0 overflow-y-auto flex flex-col gap-4 px-2 py-3"
+        >
+          <SidebarQuickActions restaurant={restaurant} />
+          <SidebarNav isAdmin={isAdmin} impersonatedBy={impersonatedBy} viewName={view.name} />
+        </nav>
         <SidebarFooter impersonatedBy={impersonatedBy} />
       </aside>
     </>
@@ -192,9 +197,9 @@ function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
   if (!menuUrl) return null;
   const fullUrl = menuUrl.startsWith("http") ? menuUrl : "https://" + menuUrl;
   return (
-    // No divider: these read as ordinary nav rows. The 4px bottom pad plus the
-    // nav's own top pad add up to the same 16px that separates nav groups.
-    <div className="shrink-0 flex flex-col gap-0.5 px-2 pt-2 pb-1">
+    // An unlabelled first group inside the nav scroll area — same rows, same
+    // rhythm, scrolls with everything else.
+    <div className="flex flex-col gap-0.5">
       <button
         type="button"
         onClick={() => {
@@ -319,7 +324,7 @@ function SidebarNav({
   ];
 
   return (
-    <nav data-scroll-pane="sidebar" className="flex-1 min-h-0 overflow-y-auto flex flex-col gap-4 px-2 py-3">
+    <>
       <NavGroup title={t("groupMain")} items={main} viewName={viewName} />
       <NavGroup title={t("settings")} items={settings} viewName={viewName} />
       {isAdmin ? (
@@ -327,7 +332,7 @@ function SidebarNav({
           <ReloadTabletsButton />
         </NavGroup>
       ) : null}
-    </nav>
+    </>
   );
 }
 
