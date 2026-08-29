@@ -353,15 +353,18 @@ export function MenuList({
       <button
        type="button"
        onClick={anyOpen ? collapseAll : expandAll}
-       className={headerBtn + " relative justify-center shrink-0 bg-secondary text-foreground hover:bg-muted"}
+       /* Wears the header back button's chrome — no surface of its own, colour
+          and hover borrowed from it, 16px glyph — so the two controls on this
+          bar read as one family. */
+       className={headerBtn + " relative justify-center shrink-0 text-foreground hover:bg-secondary"}
       >
        {/* width reservation: longer label fixes the width */}
        <span className="invisible inline-flex items-center gap-2.5" aria-hidden>
-        <ExpandIcon size={14} />
+        <ExpandIcon size={16} />
         {t("expand").length >= t("collapse").length ? t("expand") : t("collapse")}
        </span>
        <span className="absolute inset-0 inline-flex items-center justify-center gap-2.5">
-        {anyOpen ? <CollapseIcon size={14} /> : <ExpandIcon size={14} />}
+        {anyOpen ? <CollapseIcon size={16} /> : <ExpandIcon size={16} />}
         {anyOpen ? t("collapse") : t("expand")}
        </span>
       </button>
