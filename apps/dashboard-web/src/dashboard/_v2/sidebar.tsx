@@ -119,19 +119,19 @@ export function Sidebar({
       {open ? (
         <>
           <div
-            className="md:hidden fixed inset-0 z-40 bg-black/50"
+            className="md:hidden fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
             onClick={() => setOpen(false)}
             aria-hidden
           />
           {/* Sits on the backdrop, level with the venue row's swap button: the
               header is h-14 and this is h-9, so 10px of top offset centres it,
-              and the same 10px separates it from the drawer's right edge. The
+              and the same 10px separates it from the drawer's 250px right edge. The
               min() keeps it on screen on very narrow phones. */}
           <button
             type="button"
             onClick={() => setOpen(false)}
             aria-label="Close menu"
-            className="md:hidden fixed top-2.5 left-[min(18.625rem,calc(100vw-2.75rem))] z-50 h-9 w-9 flex items-center justify-center text-white"
+            className="md:hidden fixed top-2.5 left-[min(16.25rem,calc(100vw-2.75rem))] z-50 h-9 w-9 flex items-center justify-center text-white"
           >
             <CloseIcon size={16} />
           </button>
@@ -139,10 +139,11 @@ export function Sidebar({
       ) : null}
       <aside
         className={
-          "fixed md:static inset-y-0 left-0 z-50 w-72 md:w-64 shrink-0 flex flex-col " +
-          // Same surface as the page header: nav colour at 90% over the page
-          // background, blurred — so the two chrome edges read as one material.
-          "bg-nav/90 backdrop-blur-md border-r border-border transition-transform md:transition-none " +
+          "fixed md:static inset-y-0 left-0 z-50 w-[250px] md:w-64 shrink-0 flex flex-col " +
+          // Mobile: an opaque panel over a blurred backdrop — at 90% the panel
+          // read as see-through with page content bleeding into it. Desktop:
+          // the page header's own surface, so the two chrome edges match.
+          "bg-nav md:bg-nav/90 md:backdrop-blur-md border-r border-border transition-transform md:transition-none " +
           (open ? "translate-x-0" : "-translate-x-full md:translate-x-0")
         }
       >
