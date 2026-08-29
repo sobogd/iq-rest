@@ -8,7 +8,7 @@ import {
  ChevronLeftIcon,
  ChevronRightIcon,
  MapPinIcon,
- SettingsIcon,
+ SlidersIcon,
  UsersIcon,
 } from "./icons";
 import { Modal, PageHeader } from "./ui";
@@ -178,7 +178,7 @@ export function ReservationsPage({
      aria-label={ts("rows.bookings")}
      title={ts("rows.bookings")}
     >
-     <SettingsIcon size={14} />
+     <SlidersIcon size={14} />
     </NavBtn>
    ) : null}
   </div>
