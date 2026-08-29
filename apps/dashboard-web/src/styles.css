@@ -24,6 +24,32 @@ html {
   -ms-overflow-style: none;
 }
 
+/* …which leaves a scrollable pane looking exactly like one that ends at the
+   fold. This dissolves the pane's own pixels toward any edge with content
+   behind it; the stop distances come from useScrollFade. Masking the content
+   rather than laying a gradient over it matters because the sidebar is
+   translucent on desktop (bg-nav/90 + backdrop-blur) — an opaque gradient
+   would seam against the blur. Unsupported browsers simply ignore the rule
+   and show the pane as it is today. */
+.scroll-fade {
+  --fade-top: 0px;
+  --fade-bottom: 0px;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 var(--fade-top),
+    #000 calc(100% - var(--fade-bottom)),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 var(--fade-top),
+    #000 calc(100% - var(--fade-bottom)),
+    transparent 100%
+  );
+}
+
 
 @layer base {
   /* Palette mirrors the landing (apps/landing/app/globals.css): warm, brand-

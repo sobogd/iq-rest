@@ -32,6 +32,7 @@ import {
   UsersIcon,
 } from "./icons";
 import { headerBtnSurface, headerIconBtn, navRow, navRowActive } from "./tokens";
+import { useScrollFade } from "./use-scroll-fade";
 import { apiUrl } from "@/lib/api";
 import { track } from "@/lib/dashboard-events";
 import { useOrdersStreamStateStore } from "./orders-sync-state";
@@ -92,6 +93,7 @@ export function Sidebar({
   impersonatedBy: string | null;
 }) {
   const { open, setOpen } = useSidebar();
+  const navFadeRef = useScrollFade<HTMLElement>();
 
   // Close the drawer whenever the route changes — tapping an item navigates
   // and the overlay must not stay on top of the freshly opened page.
@@ -140,8 +142,9 @@ export function Sidebar({
       >
         <SidebarHeader restaurant={restaurant} />
         <nav
+          ref={navFadeRef}
           data-scroll-pane="sidebar"
-          className="flex-1 min-h-0 overflow-y-auto overscroll-contain flex flex-col gap-4 px-2 py-2"
+          className="scroll-fade flex-1 min-h-0 overflow-y-auto overscroll-contain flex flex-col gap-4 px-2 py-2"
         >
           <SidebarQuickActions restaurant={restaurant} />
           <SidebarNav isAdmin={isAdmin} impersonatedBy={impersonatedBy} viewName={view.name} />
