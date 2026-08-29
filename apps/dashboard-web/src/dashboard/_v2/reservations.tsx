@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import {
  ArrowLeftIcon,
@@ -63,6 +63,10 @@ export function ReservationsPage({
 }) {
  const t = useTranslations("dashboard.reservations");
  const tc = useTranslations("dashboard.common");
+ // Dates follow the dashboard's own language, not the browser's: someone
+ // running the app in Spanish on an English-configured phone was reading
+ // Spanish labels above English month names.
+ const locale = useLocale();
  const router = useDashboardRouter();
 
  // The month is the page; a day is a screen inside it, entered by tapping a
@@ -106,9 +110,9 @@ export function ReservationsPage({
  }
 
  const title = view === "month"
-  ? capitalize(focusDate.toLocaleDateString([], { month: "long", year: "numeric" }))
+  ? capitalize(focusDate.toLocaleDateString(locale, { month: "long", year: "numeric" }))
   // No year inside a day: it is reached from a month that already named one.
-  : capitalize(focusDate.toLocaleDateString([], { weekday: "long", day: "numeric", month: "long" }));
+  : capitalize(focusDate.toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "long" }));
 
  const count = view === "month" ? monthBookings.length : dayBookings.length;
  const subtitle = count === 0
@@ -298,6 +302,7 @@ function PendingList({
  onClickBooking: (b: Booking) => void;
 }) {
  const t = useTranslations("dashboard.reservations");
+ const locale = useLocale();
  const items = useMemo(() => {
   return bookings
    .filter((b) => b.status === "pending")
@@ -334,7 +339,7 @@ function PendingList({
        <div className="flex items-center gap-2 flex-wrap">
         <div className="text-sm font-medium tabular-nums">{formatTime(dt)}</div>
         <div className="text-xs text-muted-foreground tabular-nums">
-         {dt.toLocaleDateString([], { day: "numeric", month: "short" })}
+         {dt.toLocaleDateString(locale, { day: "numeric", month: "short" })}
         </div>
         <span className={"ml-auto inline-flex items-center h-5 px-2 text-[10px] font-medium border rounded-full " + STATUS_PILL.pending}>
          {t("statusPending")}
@@ -366,6 +371,7 @@ function MonthView({
  onClickDay: (d: Date) => void;
 }) {
  const t = useTranslations("dashboard.reservations");
+ const locale = useLocale();
  const today = todayMidnight();
 
  // Build day cells for the visible month only. Leading empty slots are
@@ -398,9 +404,9 @@ function MonthView({
   return Array.from({ length: 7 }, (_, i) => {
    const d = new Date(start);
    d.setDate(start.getDate() + i);
-   return d.toLocaleDateString([], { weekday: "short" });
+   return d.toLocaleDateString(locale, { weekday: "short" });
   });
- }, []);
+ }, [locale]);
 
  const weeks = Math.max(1, cells.length / 7);
 
@@ -647,6 +653,7 @@ function BookingDetailModal({
  onStatusChange: (status: Booking["status"]) => void;
 }) {
  const t = useTranslations("dashboard.reservations");
+ const locale = useLocale();
  const dt = new Date(booking.datetime);
  const table = tables.find((tb) => tb.id === booking.tableId);
  const statusKey = STATUS_KEY[booking.status];
@@ -684,7 +691,7 @@ function BookingDetailModal({
    <div className="space-y-4">
     <div className="flex items-center gap-2 flex-wrap">
      <div className="text-base font-semibold tabular-nums">
-      {capitalize(dt.toLocaleDateString([], { weekday: "long", day: "numeric", month: "long" }))} · {formatTime(dt)}
+      {capitalize(dt.toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "long" }))} · {formatTime(dt)}
      </div>
      <span className={"inline-flex items-center h-5 px-2 text-[10px] font-medium border rounded-full " + statusCls}>
       {t(statusKey)}
