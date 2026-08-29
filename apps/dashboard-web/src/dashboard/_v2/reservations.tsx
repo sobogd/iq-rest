@@ -8,6 +8,7 @@ import {
  ChevronLeftIcon,
  ChevronRightIcon,
  MapPinIcon,
+ SettingsIcon,
  UsersIcon,
 } from "./icons";
 import { Modal, PageHeader } from "./ui";
@@ -63,6 +64,7 @@ export function ReservationsPage({
 }) {
  const t = useTranslations("dashboard.reservations");
  const tc = useTranslations("dashboard.common");
+ const ts = useTranslations("dashboard.settingsHub");
  // Dates follow the dashboard's own language, not the browser's: someone
  // running the app in Spanish on an English-configured phone was reading
  // Spanish labels above English month names.
@@ -164,6 +166,21 @@ export function ReservationsPage({
    <NavBtn onClick={() => shift(1)} aria-label={t("next")}>
     <ChevronRightIcon size={14} />
    </NavBtn>
+   {/* Booking settings belong to this section, so they are reached from it.
+       Only from the month — inside a day the header's back already means
+       "out of the day", and a second exit beside it would be one too many. */}
+   {view === "month" && !kioskLayout ? (
+    <NavBtn
+     onClick={() => {
+      track("Click", "Booking settings");
+      router.push({ name: "settings.bookings", from: "reservations" });
+     }}
+     aria-label={ts("rows.bookings")}
+     title={ts("rows.bookings")}
+    >
+     <SettingsIcon size={14} />
+    </NavBtn>
+   ) : null}
   </div>
  );
 

@@ -412,7 +412,17 @@ function ViewSwitch(p: SwitchProps) {
     case "settings.orders":
       return <SettingsOrdersWrapper />;
     case "settings.bookings":
-      return <SettingsBookingsWrapper />;
+      // Opened from the reservations board, back returns there rather than to
+      // the settings hub the sidebar would imply.
+      return (
+        <SettingsBookingsWrapper
+          onBack={
+            view.from === "reservations"
+              ? () => router.resetTo({ name: "reservations" })
+              : undefined
+          }
+        />
+      );
     case "settings.languages":
       return <SettingsLanguagesWrapper />;
     case "settings.customTexts":

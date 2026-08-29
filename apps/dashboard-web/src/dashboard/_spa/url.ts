@@ -40,7 +40,7 @@ export function viewToPath(view: View): string {
     case "settings.orders":
       return "/dashboard/settings/orders";
     case "settings.bookings":
-      return "/dashboard/settings/bookings";
+      return view.from ? `/dashboard/settings/bookings?from=${view.from}` : "/dashboard/settings/bookings";
     case "settings.languages":
       return "/dashboard/settings/languages";
     case "settings.customTexts":
@@ -131,7 +131,12 @@ export function pathToView(path: string): View {
   const tableEdit = stripped.match(/^\/dashboard\/settings\/tables\/([^/]+)\/edit$/);
   if (tableEdit) return { name: "settings.tables.edit", id: tableEdit[1] };
   if (stripped === "/dashboard/settings/orders") return { name: "settings.orders" };
-  if (stripped === "/dashboard/settings/bookings") return { name: "settings.bookings" };
+  if (stripped === "/dashboard/settings/bookings") {
+    const from = params.get("from");
+    return from === "reservations"
+      ? { name: "settings.bookings", from: "reservations" }
+      : { name: "settings.bookings" };
+  }
   if (stripped === "/dashboard/settings/languages") return { name: "settings.languages" };
   if (stripped === "/dashboard/settings/menu-texts") return { name: "settings.customTexts" };
   if (stripped === "/dashboard/settings/billing") {

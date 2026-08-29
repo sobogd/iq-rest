@@ -19,7 +19,7 @@ export type View =
   | { name: "settings.tables.new" }
   | { name: "settings.tables.edit"; id: string }
   | { name: "settings.orders" }
-  | { name: "settings.bookings" }
+  | { name: "settings.bookings"; from?: "reservations" }
   | { name: "settings.languages" }
   | { name: "settings.customTexts" }
   | { name: "settings.billing"; from?: "menu" }
