@@ -349,21 +349,19 @@ export function MenuList({
       <button
        type="button"
        onClick={anyOpen ? collapseAll : expandAll}
-       /* Wears the header back button's chrome — no surface of its own, colour
-          and hover borrowed from it, 16px glyph — so the two controls on this
-          bar read as one family. Spelled out rather than built from headerBtn
-          because the label runs one step larger than that token's text-xs, and
-          two competing text-* utilities would be settled by CSS order, not by
-          the order they appear here. */
-       className="relative justify-center shrink-0 h-9 px-3 rounded-lg inline-flex items-center gap-2.5 text-sm font-medium transition-colors text-foreground hover:bg-secondary"
+       /* The shipped release's treatment, restored verbatim: 32px tall, muted
+          label that warms on hover, quiet secondary fill. Spelled out rather
+          than built from headerBtn because that token is a size up (h-9,
+          px-3, rounded-lg) and its text-xs would race this one. */
+       className="relative inline-flex items-center justify-center h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary hover:text-foreground rounded-md transition-colors shrink-0"
       >
        {/* width reservation: longer label fixes the width */}
-       <span className="invisible inline-flex items-center gap-2.5" aria-hidden>
-        <ExpandIcon size={16} />
+       <span className="invisible inline-flex items-center gap-1.5" aria-hidden>
+        <ExpandIcon size={14} />
         {t("expand").length >= t("collapse").length ? t("expand") : t("collapse")}
        </span>
-       <span className="absolute inset-0 inline-flex items-center justify-center gap-2.5">
-        {anyOpen ? <CollapseIcon size={16} /> : <ExpandIcon size={16} />}
+       <span className="absolute inset-0 inline-flex items-center justify-center gap-1.5">
+        {anyOpen ? <CollapseIcon size={14} /> : <ExpandIcon size={14} />}
         {anyOpen ? t("collapse") : t("expand")}
        </span>
       </button>
