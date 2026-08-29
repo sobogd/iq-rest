@@ -109,15 +109,12 @@ export function ReservationsPage({
   );
  }
 
- // A day reads "29 August (Sat)": the date leads because it is what was picked,
- // and the weekday trails in brackets as the context it is. No year — the month
- // it was entered from already named one. Both halves are formatted separately
- // rather than sliced out of one string, so each locale keeps its own order and
- // its own abbreviation ("Sat", "сб", "土").
+ // A day shows the date alone — no weekday, and no year either: it is entered
+ // from a month that named one, and from a calendar cell whose column already
+ // said which day of the week it was.
  const title = view === "month"
   ? capitalize(formatMonthYear(focusDate, locale))
-  : capitalize(focusDate.toLocaleDateString(locale, { day: "numeric", month: "long" }))
-    + " (" + focusDate.toLocaleDateString(locale, { weekday: "short" }) + ")";
+  : capitalize(focusDate.toLocaleDateString(locale, { day: "numeric", month: "long" }));
 
  const count = view === "month" ? monthBookings.length : dayBookings.length;
  const subtitle = count === 0
