@@ -382,8 +382,6 @@
       "markComplete": "Completar",
       "showPast": "Mostrar reservas pasadas ({count})",
       "hidePast": "Ocultar reservas pasadas",
-      "viewMonth": "Mes",
-      "viewDay": "Día",
       "prev": "Anterior",
       "next": "Siguiente",
       "noBookingsHere": "No hay reservas aquí.",

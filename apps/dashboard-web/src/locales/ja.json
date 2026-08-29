@@ -382,8 +382,6 @@
       "markComplete": "完了",
       "showPast": "過去の予約を表示 ({count})",
       "hidePast": "過去の予約を非表示",
-      "viewMonth": "月",
-      "viewDay": "日",
       "prev": "前へ",
       "next": "次へ",
       "noBookingsHere": "予約はありません。",

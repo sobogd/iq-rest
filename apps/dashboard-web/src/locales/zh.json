@@ -382,8 +382,6 @@
       "markComplete": "完成",
       "showPast": "显示历史预订 ({count})",
       "hidePast": "隐藏历史预订",
-      "viewMonth": "月",
-      "viewDay": "日",
       "prev": "上一个",
       "next": "下一个",
       "noBookingsHere": "此处无预订。",

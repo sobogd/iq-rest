@@ -382,8 +382,6 @@
       "markComplete": "Завърши",
       "showPast": "Покажи минали резервации ({count})",
       "hidePast": "Скрий минали резервации",
-      "viewMonth": "Месец",
-      "viewDay": "Ден",
       "prev": "Назад",
       "next": "Напред",
       "noBookingsHere": "Няма резервации тук.",

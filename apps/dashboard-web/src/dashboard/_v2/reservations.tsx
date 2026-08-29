@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import {
+ ArrowLeftIcon,
  ChevronLeftIcon,
  ChevronRightIcon,
  MapPinIcon,
@@ -61,8 +62,12 @@ export function ReservationsPage({
  demoMode?: boolean;
 }) {
  const t = useTranslations("dashboard.reservations");
+ const tc = useTranslations("dashboard.common");
  const router = useDashboardRouter();
 
+ // The month is the page; a day is a screen inside it, entered by tapping a
+ // cell and left through the header's back control. There is no switch between
+ // the two — a day only exists once one has been chosen.
  const [view, setView] = useState<ViewMode>("month");
  const [focusDate, setFocusDate] = useState<Date>(() => {
   const d = new Date();
@@ -136,25 +141,22 @@ export function ReservationsPage({
   }
  }
 
+ function leaveDay() {
+  track("Click", "Booking day back");
+  setView("month");
+ }
+
+ // The arrows step whatever is on screen — months on the calendar, days inside
+ // one. Same control, so a day is navigable without going back out first.
  const controls = (
-  <>
-   <div className="flex items-center rounded-lg border border-border bg-card overflow-hidden">
-    <ViewBtn active={view === "month"} onClick={() => { track("Click", "Booking month view"); setView("month"); }}>
-     {t("viewMonth")}
-    </ViewBtn>
-    <ViewBtn active={view === "day"} onClick={() => { track("Click", "Booking day view"); setView("day"); }}>
-     {t("viewDay")}
-    </ViewBtn>
-   </div>
-   <div className="flex items-center gap-1">
-    <NavBtn onClick={() => shift(-1)} aria-label={t("prev")}>
-     <ChevronLeftIcon size={14} />
-    </NavBtn>
-    <NavBtn onClick={() => shift(1)} aria-label={t("next")}>
-     <ChevronRightIcon size={14} />
-    </NavBtn>
-   </div>
-  </>
+  <div className="flex items-center gap-1">
+   <NavBtn onClick={() => shift(-1)} aria-label={t("prev")}>
+    <ChevronLeftIcon size={14} />
+   </NavBtn>
+   <NavBtn onClick={() => shift(1)} aria-label={t("next")}>
+    <ChevronRightIcon size={14} />
+   </NavBtn>
+  </div>
  );
 
  const board =
@@ -207,7 +209,16 @@ export function ReservationsPage({
      className="bg-subheader min-h-14 sticky top-0 z-10 px-4 md:px-6 flex items-center border-b border-border md:border-border/60"
      style={{ paddingTop: "var(--kiosk-notch, 0px)" }}
     >
-     <div className="w-full flex items-center justify-between gap-3">{controls}</div>
+     <div className="w-full flex items-center justify-between gap-3">
+      {view === "day" ? (
+       <NavBtn onClick={leaveDay} aria-label={tc("back")}>
+        <ArrowLeftIcon size={14} />
+       </NavBtn>
+      ) : (
+       <span />
+      )}
+      {controls}
+     </div>
     </div>
     <div className="w-full px-4 md:px-6 pt-8">
      <PageHeader title={title} subtitle={subtitle} />
@@ -222,7 +233,11 @@ export function ReservationsPage({
   <>
    {/* One self-sufficient header line: the period plus how many bookings
        fall in it — the count used to live in a subtitle. */}
-   <Page title={`${title} · ${subtitle}`} actions={controls}>
+   <Page
+    title={`${title} · ${subtitle}`}
+    actions={controls}
+    onBack={view === "day" ? leaveDay : undefined}
+   >
     {board}
    </Page>
    {modal}
@@ -231,21 +246,6 @@ export function ReservationsPage({
 }
 
 // ---------- Sub-header buttons ----------
-
-function ViewBtn({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
- return (
-  <button
-   type="button"
-   onClick={onClick}
-   className={
-    "h-9 px-3 text-xs font-medium transition-colors " +
-    (active ? "bg-primary-gradient text-primary-foreground" : "text-muted-foreground hover:text-foreground")
-   }
-  >
-   {children}
-  </button>
- );
-}
 
 function NavBtn({ children, onClick, ...rest }: { children: React.ReactNode; onClick: () => void } & React.ButtonHTMLAttributes<HTMLButtonElement>) {
  return (

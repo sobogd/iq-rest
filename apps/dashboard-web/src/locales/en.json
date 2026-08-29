@@ -458,8 +458,6 @@
       "markComplete": "Mark complete",
       "showPast": "Show past bookings ({count})",
       "hidePast": "Hide past bookings",
-      "viewMonth": "Month",
-      "viewDay": "Day",
       "prev": "Previous",
       "next": "Next",
       "noBookingsHere": "No bookings here.",

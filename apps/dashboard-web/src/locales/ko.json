@@ -382,8 +382,6 @@
       "markComplete": "완료",
       "showPast": "지난 예약 보기 ({count})",
       "hidePast": "지난 예약 숨기기",
-      "viewMonth": "월",
-      "viewDay": "일",
       "prev": "이전",
       "next": "다음",
       "noBookingsHere": "예약이 없습니다.",

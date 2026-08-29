@@ -382,8 +382,6 @@
       "markComplete": "Merkitse valmiiksi",
       "showPast": "Näytä menneet varaukset ({count})",
       "hidePast": "Piilota menneet varaukset",
-      "viewMonth": "Kuukausi",
-      "viewDay": "Päivä",
       "prev": "Edellinen",
       "next": "Seuraava",
       "noBookingsHere": "Ei varauksia.",

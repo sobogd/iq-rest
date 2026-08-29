@@ -382,8 +382,6 @@
       "markComplete": "Slutför",
       "showPast": "Visa tidigare bokningar ({count})",
       "hidePast": "Dölj tidigare bokningar",
-      "viewMonth": "Månad",
-      "viewDay": "Dag",
       "prev": "Föregående",
       "next": "Nästa",
       "noBookingsHere": "Inga bokningar här.",
