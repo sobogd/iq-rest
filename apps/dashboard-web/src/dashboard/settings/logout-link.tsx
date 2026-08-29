@@ -8,7 +8,7 @@ import { track } from "@/lib/dashboard-events";
 import { flushEvents } from "@/lib/analytics";
 import { logoutAndBounceToLanding } from "@/lib/logout-bounce";
 
-const ROW = navRow + " text-red-600 hover:text-red-600";
+const ROW = navRow + " text-red-600";
 
 export function LogoutButton() {
   const t = useTranslations("dashboard.settingsHub");

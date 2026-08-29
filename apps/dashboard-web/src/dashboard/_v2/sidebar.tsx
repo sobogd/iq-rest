@@ -163,7 +163,7 @@ function SidebarHeader({ restaurant }: { restaurant: Restaurant }) {
       {/* Name truncates first so the live-sync dot stays pinned right after it,
           never drifting to the far edge of the panel. */}
       <div className="min-w-0 flex-1 flex items-center gap-2 px-3">
-        <span className="min-w-0 text-sm font-medium text-foreground truncate">
+        <span className="min-w-0 text-base font-medium text-foreground truncate">
           {restaurant.name || t("untitledRestaurant")}
         </span>
         <SyncIndicator />
@@ -201,7 +201,7 @@ function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
           track("Click", "Menu preview open");
           setPreviewOpen(true);
         }}
-        className={navRow + " text-primary hover:text-primary"}
+        className={navRow + " text-primary"}
       >
         <EyeIcon size={16} className="shrink-0" />
         <span className="min-w-0 truncate">{tp("preview")}</span>
@@ -212,7 +212,7 @@ function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
           track("Click", "Share open");
           setShareOpen(true);
         }}
-        className={navRow}
+        className={navRow + " text-foreground"}
       >
         <ShareIcon size={16} className="shrink-0" />
         <span className="min-w-0 truncate">{tp("share")}</span>
@@ -345,7 +345,7 @@ function NavGroup({
   const router = useDashboardRouter();
   return (
     <div className="flex flex-col gap-0.5">
-      <div className="px-3 pb-1 text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
+      <div className="px-3 pb-1 text-[11px] font-medium uppercase tracking-wide text-muted-foreground/80">
         {title}
       </div>
       {items.map((item) => {
@@ -362,7 +362,7 @@ function NavGroup({
             className={
               active
                 ? navRowActive
-                : navRow
+                : navRow + " text-foreground"
             }
           >
             <Icon size={16} className="shrink-0" />
@@ -405,7 +405,7 @@ function ReloadTabletsButton() {
       onClick={reloadAllTablets}
       disabled={reloading}
       title="Reload every paired tablet system-wide"
-      className={navRow}
+      className={navRow + " text-foreground"}
     >
       <RefreshIcon size={16} className="shrink-0" />
       <span className="min-w-0 truncate">{reloading ? "Sending…" : "Reload tablets"}</span>
@@ -443,7 +443,7 @@ function SidebarFooter({ impersonatedBy }: { impersonatedBy: string | null }) {
           onClick={handleExitImpersonation}
           disabled={exiting}
           title={t("exitImpersonationDesc", { email: impersonatedBy })}
-          className={navRow + " text-red-600 hover:text-red-600"}
+          className={navRow + " text-red-600"}
         >
           <LogoutIcon size={16} className="shrink-0" />
           <span className="min-w-0 truncate">{t("exitImpersonation")}</span>
