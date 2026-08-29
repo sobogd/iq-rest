@@ -15,7 +15,7 @@ import {
 } from "./icons";
 import { EmptyState, ToggleSwitch } from "./ui";
 import { Page } from "./page";
-import { headerBtn, headerBtnSurface, iconBtn, primaryBtn } from "./tokens";
+import { headerBtn, headerBtnSurface, primaryBtn, sortIconBtn } from "./tokens";
 import { getMlWithFallback } from "./i18n";
 import { currencySymbolOf, moveItem } from "./helpers";
 import { fetchSubscriptionStatus, patchItem, reorderCategories, reorderItemsBulk } from "./api";
@@ -531,7 +531,7 @@ function GroupBlock({
  type="button"
  onClick={(e) => { e.stopPropagation(); sort.onUp(); }}
  disabled={sort.upDisabled}
- className={iconBtn}
+ className={sortIconBtn}
  aria-label={t("moveCategoryUp")}
  >
  <ArrowUpIcon size={14} />
@@ -540,7 +540,7 @@ function GroupBlock({
  type="button"
  onClick={(e) => { e.stopPropagation(); sort.onDown(); }}
  disabled={sort.downDisabled}
- className={iconBtn}
+ className={sortIconBtn}
  aria-label={t("moveCategoryDown")}
  >
  <ArrowDownIcon size={14} />
@@ -639,7 +639,7 @@ function CategoryAccordion({
  type="button"
  onClick={(e) => { e.stopPropagation(); onMoveUp(); }}
  disabled={isFirst}
- className={iconBtn}
+ className={sortIconBtn}
  aria-label={t("moveCategoryUp")}
  >
  <ArrowUpIcon size={14} />
@@ -648,7 +648,7 @@ function CategoryAccordion({
  type="button"
  onClick={(e) => { e.stopPropagation(); onMoveDown(); }}
  disabled={isLast}
- className={iconBtn}
+ className={sortIconBtn}
  aria-label={t("moveCategoryDown")}
  >
  <ArrowDownIcon size={14} />
@@ -773,7 +773,7 @@ function DishRow({
  type="button"
  onClick={(e) => { e.stopPropagation(); onMoveUp(); }}
  disabled={isFirst}
- className={iconBtn}
+ className={sortIconBtn}
  aria-label={tc("moveUp")}
  >
  <ArrowUpIcon size={14} />
@@ -782,7 +782,7 @@ function DishRow({
  type="button"
  onClick={(e) => { e.stopPropagation(); onMoveDown(); }}
  disabled={isLast}
- className={iconBtn}
+ className={sortIconBtn}
  aria-label={tc("moveDown")}
  >
  <ArrowDownIcon size={14} />

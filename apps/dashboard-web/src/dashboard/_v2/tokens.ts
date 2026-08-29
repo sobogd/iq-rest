@@ -18,6 +18,15 @@ export const dangerBtn =
 export const iconBtn =
  "w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground transition-colors disabled:text-muted-foreground/50 disabled:cursor-not-allowed";
 
+/** The up/down pair reads as one control, so each half is narrower than a
+ *  standalone icon button — a 14px glyph inside 32px of width put 18px of air
+ *  between two arrows that belong together. Full height is kept: the tap
+ *  target shrinks in one direction only. Its own token rather than
+ *  `iconBtn + " w-6"`, because two width utilities are settled by CSS order
+ *  and w-8 would win. */
+export const sortIconBtn =
+ "w-6 h-8 flex items-center justify-center rounded-md text-muted-foreground transition-colors disabled:text-muted-foreground/50 disabled:cursor-not-allowed";
+
 /** Every clickable line in the sidebar wears this: same height, same inset, so
  *  icons, labels and hover rectangles line up down the whole rail. Carries no
  *  text colour on purpose — the caller adds one, so two `text-*` utilities
