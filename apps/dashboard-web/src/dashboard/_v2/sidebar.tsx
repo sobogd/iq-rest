@@ -16,7 +16,6 @@ import { useIsFetching, useQueryClient } from "@tanstack/react-query";
 import {
   CalendarIcon,
   ChefHatIcon,
-  CloseIcon,
   EyeIcon,
   GlobeIcon,
   GridIcon,
@@ -116,26 +115,13 @@ export function Sidebar({
 
   return (
     <>
+      {/* Tap-anywhere-outside closes the drawer (Escape too) — no chip. */}
       {open ? (
-        <>
-          <div
-            className="md:hidden fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
-            onClick={() => setOpen(false)}
-            aria-hidden
-          />
-          {/* Sits on the backdrop, level with the venue row's swap button: the
-              header is h-14 and this is h-9, so 10px of top offset centres it,
-              and the same 10px separates it from the drawer's 250px right edge. The
-              min() keeps it on screen on very narrow phones. */}
-          <button
-            type="button"
-            onClick={() => setOpen(false)}
-            aria-label="Close menu"
-            className="md:hidden fixed top-2.5 left-[min(16.25rem,calc(100vw-2.75rem))] z-50 h-9 w-9 flex items-center justify-center text-white"
-          >
-            <CloseIcon size={16} />
-          </button>
-        </>
+        <div
+          className="md:hidden fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
+          onClick={() => setOpen(false)}
+          aria-hidden
+        />
       ) : null}
       <aside
         className={
