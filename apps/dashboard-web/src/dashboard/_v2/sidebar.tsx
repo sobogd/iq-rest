@@ -125,7 +125,12 @@ export function Sidebar({
       ) : null}
       <aside
         className={
-          "fixed md:static inset-y-0 left-0 z-50 w-[250px] md:w-64 shrink-0 flex flex-col " +
+          // Mobile drawer scales with the viewport instead of sitting at a flat
+          // 250px, which left only 70px of page visible on a 320px phone and
+          // wasted the room a 430px one has. Capped at 300px so it stays a
+          // drawer rather than a full-screen takeover. Desktop keeps its fixed
+          // rail (256px, below the cap, so max-w never bites).
+          "fixed md:static inset-y-0 left-0 z-50 w-[80vw] max-w-[300px] md:w-64 shrink-0 flex flex-col " +
           // Mobile: an opaque panel over a blurred backdrop — at 90% the panel
           // read as see-through with page content bleeding into it. Desktop:
           // the page header's own surface, so the two chrome edges match.
