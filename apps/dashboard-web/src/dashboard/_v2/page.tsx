@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { ChevronLeftIcon } from "./icons";
+import { ArrowLeftIcon } from "./icons";
 import { useSidebar } from "./sidebar";
 
 /**
@@ -87,7 +87,7 @@ function PageHeaderBar({
           aria-label="Back"
           className="shrink-0 h-9 w-9 -ml-2 flex items-center justify-center rounded-lg text-foreground hover:bg-secondary transition-colors"
         >
-          <ChevronLeftIcon size={16} />
+          <ArrowLeftIcon size={16} />
         </button>
       ) : null}
       <h1 className="min-w-0 flex-1 text-base font-medium text-foreground truncate leading-5">
