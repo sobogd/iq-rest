@@ -63,11 +63,16 @@ function PageHeaderBar({
   const { setOpen } = useSidebar();
   return (
     <header className="shrink-0 relative h-14 flex items-center gap-2 px-4 md:px-6 bg-nav/90 backdrop-blur-md after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-border">
+      {/* On a phone the bar carries exactly one leading control: back when the
+          screen has a parent, the burger otherwise. */}
       <button
         type="button"
         onClick={() => setOpen(true)}
         aria-label="Open menu"
-        className="md:hidden shrink-0 h-9 w-9 -ml-2 flex items-center justify-center rounded-lg text-foreground hover:bg-secondary transition-colors"
+        className={
+          (onBack ? "hidden" : "md:hidden") +
+          " shrink-0 h-9 w-9 -ml-2 flex items-center justify-center rounded-lg text-foreground hover:bg-secondary transition-colors"
+        }
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
           <line x1="3" y1="6" x2="21" y2="6" />
@@ -80,7 +85,7 @@ function PageHeaderBar({
           type="button"
           onClick={onBack}
           aria-label="Back"
-          className="shrink-0 h-9 w-9 md:-ml-2 flex items-center justify-center rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+          className="shrink-0 h-9 w-9 -ml-2 flex items-center justify-center rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
         >
           <ChevronLeftIcon size={16} />
         </button>
