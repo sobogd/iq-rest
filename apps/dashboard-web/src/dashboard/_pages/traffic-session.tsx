@@ -9,6 +9,7 @@ import { Trash2 } from "lucide-react";
 import { apiUrl } from "@/lib/api";
 import { RefreshIcon } from "../_v2/icons";
 import { Page } from "../_v2/page";
+import { headerIconBtn } from "../_v2/tokens";
 import { useDashboardRouter } from "../_spa/router";
 import { invalidateTrafficCache } from "./traffic";
 import {
@@ -101,19 +102,19 @@ export function TrafficSessionPage({ id, restaurantId }: { id: string; restauran
           type="button"
           onClick={() => void load()}
           disabled={loading}
-          className="h-8 w-8 inline-flex items-center justify-center bg-secondary rounded-md text-muted-foreground hover:text-foreground disabled:opacity-60"
+          className={headerIconBtn + " bg-secondary text-foreground hover:bg-muted"}
           title="Refresh"
         >
-          <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
+          <RefreshIcon size={16} className={loading ? "animate-spin" : ""} />
         </button>
         <button
           type="button"
           onClick={() => void remove()}
           disabled={deleting || !data}
-          className="h-8 w-8 inline-flex items-center justify-center rounded-md bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/40 disabled:opacity-40"
+          className={headerIconBtn + " bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/40"}
           title="Delete session"
         >
-          <Trash2 className="h-3.5 w-3.5" />
+          <Trash2 className="h-4 w-4" />
         </button>
          </>
         }

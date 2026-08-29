@@ -6,14 +6,14 @@ import { useSidebar } from "./sidebar";
 
 /**
  * Every dashboard screen renders through Page: a fixed header (burger on
- * mobile, title, page actions) plus the single scrollable body. The sidebar
+ * mobile, one self-sufficient title, page actions) plus the single scrollable
+ * body. There is no subtitle slot — a title that needs one is a bad title. The sidebar
  * and this body are the only two scroll containers in the app — the document
  * itself never scrolls, so sticky sub-bars inside `children` anchor to
  * `top-0` of the body, no viewport math needed.
  */
 export function Page({
   title,
-  subtitle,
   actions,
   onBack,
   children,
@@ -25,7 +25,6 @@ export function Page({
   bodyClassName = "",
 }: {
   title: ReactNode;
-  subtitle?: ReactNode;
   actions?: ReactNode;
   onBack?: () => void;
   children: ReactNode;
@@ -35,7 +34,7 @@ export function Page({
 }) {
   return (
     <>
-      <PageHeaderBar title={title} subtitle={subtitle} actions={actions} onBack={onBack} />
+      <PageHeaderBar title={title} actions={actions} onBack={onBack} />
       <div
         data-scroll-pane="page"
         className={
@@ -54,12 +53,10 @@ export function Page({
 
 function PageHeaderBar({
   title,
-  subtitle,
   actions,
   onBack,
 }: {
   title: ReactNode;
-  subtitle?: ReactNode;
   actions?: ReactNode;
   onBack?: () => void;
 }) {
@@ -88,12 +85,9 @@ function PageHeaderBar({
           <ChevronLeftIcon size={16} />
         </button>
       ) : null}
-      <div className="min-w-0 flex-1 flex flex-col justify-center">
-        <h1 className="text-base font-medium text-foreground truncate leading-5">{title}</h1>
-        {subtitle ? (
-          <p className="text-xs text-muted-foreground truncate leading-4">{subtitle}</p>
-        ) : null}
-      </div>
+      <h1 className="min-w-0 flex-1 text-base font-medium text-foreground truncate leading-5">
+        {title}
+      </h1>
       {actions ? <div className="shrink-0 flex items-center gap-2">{actions}</div> : null}
     </header>
   );

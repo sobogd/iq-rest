@@ -5,6 +5,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher, SaveButton, TranslatedInput } from "./ui";
 import { Page } from "./page";
+import { headerBtn } from "./tokens";
 import { SparklesIcon } from "./icons";
 import { AVAILABLE_LANGUAGES } from "./i18n";
 import type { Ml } from "./types";
@@ -181,7 +182,6 @@ export function CustomTextsSettingsPage() {
  return (
  <Page
   title={tct("title")}
-  subtitle={tct("subtitle")}
   actions={
    <>
     {miniLangs.length > 1 ? (
@@ -192,12 +192,12 @@ export function CustomTextsSettingsPage() {
       type="button"
       onClick={doTranslateAll}
       disabled={!canTranslate}
-      className="h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md inline-flex items-center gap-1 disabled:opacity-50"
+      className={headerBtn + " bg-secondary text-foreground hover:bg-muted"}
      >
       {translating ? (
-       <span className="w-3 h-3 border-2 border-input border-t-foreground rounded-full animate-spin" />
+       <span className="w-4 h-4 border-2 border-input border-t-foreground rounded-full animate-spin" />
       ) : (
-       <SparklesIcon size={14} />
+       <SparklesIcon size={16} />
       )}
       {tct("translateAll")}
      </button>

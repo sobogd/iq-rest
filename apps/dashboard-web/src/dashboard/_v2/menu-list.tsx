@@ -18,7 +18,7 @@ import {
 } from "./icons";
 import { EmptyState } from "./ui";
 import { Page } from "./page";
-import { iconBtn, primaryBtn } from "./tokens";
+import { headerBtn, iconBtn, primaryBtn } from "./tokens";
 import { getMlWithFallback } from "./i18n";
 import { currencySymbolOf, moveItem } from "./helpers";
 import { fetchSubscriptionStatus, patchItem, reorderCategories, reorderItemsBulk } from "./api";
@@ -341,15 +341,15 @@ export function MenuList({
       <button
        type="button"
        onClick={anyOpen ? collapseAll : expandAll}
-       className="relative inline-flex items-center justify-center h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary hover:text-foreground rounded-md transition-colors shrink-0"
+       className={headerBtn + " relative justify-center shrink-0 bg-secondary text-foreground hover:bg-muted"}
       >
        {/* width reservation: longer label fixes the width */}
-       <span className="invisible inline-flex items-center gap-1.5" aria-hidden>
-        <ExpandIcon size={14} />
+       <span className="invisible inline-flex items-center gap-2.5" aria-hidden>
+        <ExpandIcon size={16} />
         {t("expand").length >= t("collapse").length ? t("expand") : t("collapse")}
        </span>
-       <span className="absolute inset-0 inline-flex items-center justify-center gap-1.5">
-        {anyOpen ? <CollapseIcon size={14} /> : <ExpandIcon size={14} />}
+       <span className="absolute inset-0 inline-flex items-center justify-center gap-2.5">
+        {anyOpen ? <CollapseIcon size={16} /> : <ExpandIcon size={16} />}
         {anyOpen ? t("collapse") : t("expand")}
        </span>
       </button>

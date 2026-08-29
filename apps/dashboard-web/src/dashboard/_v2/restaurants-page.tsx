@@ -112,7 +112,7 @@ export function RestaurantsListPage({ isDemo = false }: { isDemo?: boolean }) {
 
   return (
     <>
-      <Page title={t("title")} subtitle={t("subtitle")}>
+      <Page title={t("title")}>
         <div className="space-y-2.5">
           {list.map((r) => {
             const isActive = r.id === activeId;
@@ -319,7 +319,6 @@ export function RestaurantNewPage({ onBack, isDemo = false }: { onBack: () => vo
   return (
     <Page
       title={t("newTitle")}
-      subtitle={t("newSubtitle")}
       onBack={onBack}
       actions={<SaveButton onSave={submit} canSave={canSave} />}
     >

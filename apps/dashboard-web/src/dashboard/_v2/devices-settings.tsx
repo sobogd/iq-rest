@@ -92,7 +92,7 @@ export function DevicesSettingsPage() {
 
   return (
     <>
-      <Page title={t("title")} subtitle={t("subtitle")}>
+      <Page title={t("title")}>
         <DevicesList
           items={devices}
           loading={devicesQuery.isLoading}

@@ -5,6 +5,7 @@ import { MessageCircle } from "lucide-react";
 import { apiUrl } from "@/lib/api";
 import { RefreshIcon } from "../_v2/icons";
 import { Page } from "../_v2/page";
+import { headerIconBtn } from "../_v2/tokens";
 import { useDashboardRouter } from "../_spa/router";
 import { AVAILABLE_LANGUAGES } from "../_v2/i18n";
 import { phoneToFlag } from "./phone-country";
@@ -94,10 +95,10 @@ export function AdminInboxPage() {
           type="button"
           onClick={() => void load(filter)}
           disabled={loading}
-          className="h-8 w-8 inline-flex items-center justify-center bg-secondary rounded-md text-muted-foreground hover:text-foreground disabled:opacity-60"
+          className={headerIconBtn + " bg-secondary text-foreground hover:bg-muted"}
           title="Refresh"
         >
-          <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
+          <RefreshIcon size={16} className={loading ? "animate-spin" : ""} />
         </button>
          </>
         }

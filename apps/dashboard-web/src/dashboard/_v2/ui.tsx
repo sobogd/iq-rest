@@ -8,6 +8,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import {
  CheckIcon,
+ ChevronDownIcon,
  ChevronLeftIcon,
  CloseIcon,
  CopyIcon,
@@ -17,7 +18,7 @@ import {
  HelpCircleIcon,
  SparklesIcon,
 } from "./icons";
-import { inputClass, labelClass, primaryBtn, secondaryBtn } from "./tokens";
+import { headerBtn, inputClass, labelClass, primaryBtn, secondaryBtn } from "./tokens";
 import { AVAILABLE_LANGUAGES, getMl, setMl, translateText } from "./i18n";
 import { useLocale } from "@/lib/i18n-compat";
 import { useAiImageAccess } from "./sub-context";
@@ -417,15 +418,13 @@ export function LanguageSwitcher({
  return !v;
  });
  }}
- className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium bg-secondary text-foreground rounded-md transition-colors"
+ className={headerBtn + " bg-secondary text-foreground hover:bg-muted"}
  title={active.label}
  aria-haspopup="listbox"
  aria-expanded={open}
  >
  <span className="uppercase">{active.short}</span>
- <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
- <polyline points="6 9 12 15 18 9" />
- </svg>
+ <ChevronDownIcon size={16} />
  </button>
  {open ? (
  <div
@@ -1051,12 +1050,12 @@ export function SaveButton({
    type="button"
    onClick={handleSave}
    disabled={canSave === false || saving}
-   className="h-8 px-2.5 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-md transition-colors inline-flex items-center gap-1 disabled:opacity-60"
+   className={headerBtn + " text-primary-foreground bg-primary-gradient"}
   >
    {saving ? (
-    <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+    <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
    ) : (
-    <CheckIcon size={14} />
+    <CheckIcon size={16} />
    )}
    {label ?? tc("save")}
   </button>

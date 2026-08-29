@@ -11,6 +11,7 @@ import {
 } from "./icons";
 import { Modal, PageHeader } from "./ui";
 import { Page } from "./page";
+import { headerIconBtn } from "./tokens";
 import { formatTime, isSameDay } from "./helpers";
 import { patchReservation } from "./api";
 import { useDashboardRouter } from "../_spa/router";
@@ -219,7 +220,9 @@ export function ReservationsPage({
 
  return (
   <>
-   <Page title={title} subtitle={subtitle} actions={controls}>
+   {/* One self-sufficient header line: the period plus how many bookings
+       fall in it — the count used to live in a subtitle. */}
+   <Page title={`${title} · ${subtitle}`} actions={controls}>
     {board}
    </Page>
    {modal}
@@ -235,7 +238,7 @@ function ViewBtn({ active, onClick, children }: { active: boolean; onClick: () =
    type="button"
    onClick={onClick}
    className={
-    "h-8 px-3 text-xs font-medium transition-colors " +
+    "h-9 px-3 text-sm font-medium transition-colors " +
     (active ? "bg-primary-gradient text-primary-foreground" : "text-muted-foreground hover:text-foreground")
    }
   >
@@ -249,7 +252,7 @@ function NavBtn({ children, onClick, ...rest }: { children: React.ReactNode; onC
   <button
    type="button"
    onClick={onClick}
-   className="h-8 w-8 rounded-md hover:bg-muted/50 inline-flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
+   className={headerIconBtn + " text-muted-foreground hover:bg-secondary hover:text-foreground"}
    {...rest}
   >
    {children}

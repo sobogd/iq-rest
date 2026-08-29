@@ -11,6 +11,7 @@ import {
 import { apiUrl } from "@/lib/api";
 import { Select, ToggleSwitch } from "../_v2/ui";
 import { Page } from "../_v2/page";
+import { headerIconBtn } from "../_v2/tokens";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { getMenuUrl } from "@/lib/menu-url";
 import { useDashboardRouter } from "../_spa/router";
@@ -381,7 +382,7 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
   const menuLink = restaurant.slug ? getMenuUrl(restaurant.slug) : null;
   const owner = restaurant.users.find((u) => u.isOwner) ?? restaurant.users[0];
   const ownerHandle = owner?.email.split("@")[0] ?? "";
-  const iconBtn = "h-8 w-8 inline-flex items-center justify-center bg-secondary rounded-md text-muted-foreground hover:text-foreground disabled:opacity-60";
+  const iconBtn = headerIconBtn + " bg-secondary text-foreground hover:bg-muted";
   function openSession() {
     router.push({ name: "settings.admin.traffic", restaurantId });
   }
@@ -528,7 +529,7 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
             <button
               type="button"
               onClick={close}
-              className="h-8 w-8 inline-flex items-center justify-center bg-secondary rounded-md text-muted-foreground hover:text-foreground shrink-0"
+              className={headerIconBtn + " shrink-0 bg-secondary text-foreground hover:bg-muted"}
               title="Close"
             >
               <CloseIcon className="h-4 w-4" />

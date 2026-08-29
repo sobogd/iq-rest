@@ -5,6 +5,8 @@ import { apiUrl } from "@/lib/api";
 import { useTranslations } from "next-intl";
 import { EmptyState } from "../_v2/ui";
 import { Page } from "../_v2/page";
+import { headerBtn } from "../_v2/tokens";
+import { ChevronDownIcon } from "../_v2/icons";
 import { AVAILABLE_LANGUAGES } from "../_v2/i18n";
 import { track } from "@/lib/dashboard-events";
 import { OrdersListModal } from "./orders-modal";
@@ -169,7 +171,6 @@ export function AnalyticsClient() {
   return (
     <Page
       title={t("title")}
-      subtitle={t("subtitle")}
       actions={
         months.length > 0 ? (
           <PeriodDropdown
@@ -272,14 +273,12 @@ function PeriodDropdown({
           if (!open) track("Click", "Analytics period");
           setOpen((v) => !v);
         }}
-        className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium bg-secondary text-foreground rounded-md transition-colors"
+        className={headerBtn + " bg-secondary text-foreground hover:bg-muted"}
         aria-haspopup="listbox"
         aria-expanded={open}
       >
         <span>{active?.label}</span>
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
+        <ChevronDownIcon size={16} />
       </button>
       {open ? (
         <div

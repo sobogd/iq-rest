@@ -11,6 +11,7 @@ import { Trash2, X as XIcon, Check } from "lucide-react";
 import { apiUrl } from "@/lib/api";
 import { RefreshIcon } from "../_v2/icons";
 import { Page } from "../_v2/page";
+import { headerBtn, headerIconBtn } from "../_v2/tokens";
 import { useDashboardRouter } from "../_spa/router";
 import { useScrollLock } from "../_v2/use-scroll-lock";
 import {
@@ -193,23 +194,23 @@ function TrafficList({
   }
 
   const toolbar = selectMode ? (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-2">
       <button
         type="button"
         onClick={() => selected.size > 0 && setConfirmOpen(true)}
         disabled={selected.size === 0 || deleting}
-        className="h-8 inline-flex items-center gap-1.5 px-2.5 rounded-md bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/40 disabled:opacity-40 text-xs font-medium"
+        className={headerBtn + " bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/40"}
         title={`Delete ${selected.size}`}
       >
-        <Trash2 className="h-3.5 w-3.5" /> {selected.size}
+        <Trash2 className="h-4 w-4" /> {selected.size}
       </button>
       <button
         type="button"
         onClick={exitSelect}
-        className="h-8 w-8 inline-flex items-center justify-center bg-secondary rounded-md text-muted-foreground hover:text-foreground"
+        className={headerIconBtn + " bg-secondary text-foreground hover:bg-muted"}
         title="Cancel"
       >
-        <XIcon className="h-3.5 w-3.5" />
+        <XIcon className="h-4 w-4" />
       </button>
     </div>
   ) : (
@@ -217,10 +218,10 @@ function TrafficList({
       type="button"
       onClick={() => void load()}
       disabled={loading}
-      className="h-8 w-8 inline-flex items-center justify-center bg-secondary rounded-md text-muted-foreground hover:text-foreground disabled:opacity-60"
+      className={headerIconBtn + " bg-secondary text-foreground hover:bg-muted"}
       title="Refresh"
     >
-      <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
+      <RefreshIcon size={16} className={loading ? "animate-spin" : ""} />
     </button>
   );
 

@@ -13,7 +13,7 @@ import {
  TableQrModal,
 } from "./ui";
 import { Page } from "./page";
-import { inputClass } from "./tokens";
+import { headerBtn, headerIconBtn, inputClass } from "./tokens";
 import { newId } from "./helpers";
 import { createTable, deleteTable, updateTable } from "./api";
 import { apiTableToTable } from "./mappers";
@@ -631,26 +631,26 @@ export function TablesPage({
          type="button"
          onClick={handleDelete}
          aria-label={t("deleteTable")}
-         className="h-8 w-8 inline-flex items-center justify-center text-red-600 bg-secondary rounded-md"
+         className={headerIconBtn + " text-red-600 bg-secondary hover:bg-muted"}
         >
-         <TrashIcon size={15} />
+         <TrashIcon size={16} />
         </button>
         <button
          type="button"
          onClick={() => setQrOpen(true)}
          aria-label={t("showQr")}
-         className="h-8 w-8 inline-flex items-center justify-center text-muted-foreground bg-secondary rounded-md"
+         className={headerIconBtn + " text-foreground bg-secondary hover:bg-muted"}
         >
-         <QrIcon size={15} />
+         <QrIcon size={16} />
         </button>
        </>
       ) : null}
       <button
        type="button"
        onClick={addTable}
-       className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-md transition-colors"
+       className={headerBtn + " text-primary-foreground bg-primary-gradient"}
       >
-       <PlusIcon size={14} />
+       <PlusIcon size={16} />
        {t("table")}
       </button>
      </>
@@ -890,7 +890,6 @@ export function TableFormPage({
   <>
    <Page
     title={mode === "new" ? t("addFirstTable") : t("tableLabelAria", { number: draft.number })}
-    subtitle={t("formTip")}
     onBack={() => { track("Click", "Table back"); onBack(); }}
     actions={<SaveButton onSave={save} canSave={!saving} />}
    >
