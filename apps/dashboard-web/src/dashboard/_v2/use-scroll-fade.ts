@@ -1,9 +1,12 @@
 import { useEffect, useRef } from "react";
 
-/** How far the content dissolves at an edge that has more behind it. Around two
- *  nav rows — the ramp inside that distance is weighted toward the edge (see
- *  `.scroll-fade`), so the depth buys reach without dimming readable rows. */
-const MAX = 80;
+/** How far the content dissolves at an edge that has more behind it. The two
+ *  edges differ because they mean different things: the top only marks what
+ *  was left behind, while the bottom is where the reader is heading and has to
+ *  announce itself early. The ramp inside each distance also differs — see
+ *  `.scroll-fade`. */
+const MAX_TOP = 80;
+const MAX_BOTTOM = 160;
 
 /**
  * Marks a scroll container as scrollable by dissolving its own pixels toward
@@ -32,9 +35,9 @@ export function useScrollFade<T extends HTMLElement>() {
     const apply = () => {
       pending = false;
       const scrollTop = el.scrollTop;
-      const top = Math.min(MAX, Math.max(0, Math.round(scrollTop)));
+      const top = Math.min(MAX_TOP, Math.max(0, Math.round(scrollTop)));
       const bottom = Math.min(
-        MAX,
+        MAX_BOTTOM,
         Math.max(0, Math.round(el.scrollHeight - el.clientHeight - scrollTop)),
       );
       if (top === lastTop && bottom === lastBottom) return;
