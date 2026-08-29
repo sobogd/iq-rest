@@ -184,7 +184,7 @@ function SidebarHeader({ restaurant }: { restaurant: Restaurant }) {
         onClick={() => router.push({ name: "settings.restaurants" })}
         aria-label={many ? th("switcherDescMany", { count: restaurants!.list.length }) : th("switcherDescOne")}
         title={many ? th("switcherDescMany", { count: restaurants!.list.length }) : th("switcherDescOne")}
-        className="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+        className="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center text-foreground hover:bg-secondary transition-colors"
       >
         <SwapIcon size={15} />
       </button>

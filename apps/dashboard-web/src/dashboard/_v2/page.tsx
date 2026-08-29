@@ -85,7 +85,7 @@ function PageHeaderBar({
           type="button"
           onClick={onBack}
           aria-label="Back"
-          className="shrink-0 h-9 w-9 -ml-2 flex items-center justify-center rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+          className="shrink-0 h-9 w-9 -ml-2 flex items-center justify-center rounded-lg text-foreground hover:bg-secondary transition-colors"
         >
           <ChevronLeftIcon size={16} />
         </button>
