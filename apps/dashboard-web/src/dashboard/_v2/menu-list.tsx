@@ -10,7 +10,6 @@ import {
  ArrowUpIcon,
  ChevronDownIcon,
  CollapseIcon,
- EditIcon,
  ExpandIcon,
  EyeIcon,
  EyeOffIcon,
@@ -502,29 +501,28 @@ function GroupBlock({
  const kidsFlipRef = useFlip<HTMLDivElement>([kids.map((c) => c.id).join(",")]);
  return (
  <div data-flip-id={g.id} className="space-y-3">
- <div
- role="button"
- tabIndex={0}
+ <div className="flex items-center gap-2 py-1">
+ <button
+ type="button"
  onClick={() => toggleCategory(g.id)}
- onKeyDown={(e) => {
- if (e.key === "Enter" || e.key === " ") {
- e.preventDefault();
- toggleCategory(g.id);
- }
- }}
- className="flex items-center gap-2 pl-0 pr-0 py-1 cursor-pointer select-none"
+ aria-expanded={isGroupOpen}
+ aria-label={isGroupOpen ? t("collapseCategory") : t("expandCategory")}
+ className="w-6 h-6 -ml-1 inline-flex items-center justify-center rounded-md text-muted-foreground hover:bg-secondary transition-colors shrink-0"
  >
- <span className="w-6 h-6 -ml-1 inline-flex items-center justify-center text-muted-foreground shrink-0">
  <span
  className="transition-transform duration-150 inline-flex"
  style={{ transform: isGroupOpen ? "rotate(0deg)" : "rotate(-90deg)" }}
  >
  <ChevronDownIcon size={14} />
  </span>
- </span>
- <span className="min-w-0 text-lg font-semibold text-foreground/70 truncate">
+ </button>
+ <button
+ type="button"
+ onClick={onEditGroup}
+ className="min-w-0 text-left text-lg font-semibold text-foreground/70 truncate hover:text-foreground transition-colors"
+ >
  {getMlWithFallback(g.name, defaultLang, defaultLang)}
- </span>
+ </button>
  <span className="flex-1" />
  <div className="flex items-center gap-0.5 shrink-0">
  <span className="inline-flex items-center gap-0">
@@ -547,14 +545,6 @@ function GroupBlock({
  <ArrowDownIcon size={14} />
  </button>
  </span>
- <button
- type="button"
- onClick={(e) => { e.stopPropagation(); onEditGroup(); }}
- className={iconBtn + " justify-end pr-0 -mr-1"}
- aria-label={t("editCategory")}
- >
- <EditIcon size={14} />
- </button>
  </div>
  </div>
 
@@ -613,40 +603,37 @@ function CategoryAccordion({
  const dishesFlipRef = useFlip<HTMLDivElement>([category.dishes.map((d) => d.id).join(",")]);
  return (
  <div className="bg-card border border-border/60 rounded-xl overflow-hidden">
- <div
- role="button"
- tabIndex={0}
+ <div className="flex items-center gap-1.5 pl-2 pr-3 py-2">
+ <button
+ type="button"
  onClick={() => {
  track("Click", "Menu category");
  onToggle();
  }}
- onKeyDown={(e) => {
- if (e.key === "Enter" || e.key === " ") {
- e.preventDefault();
- track("Click", "Menu category");
- onToggle();
- }
- }}
  aria-expanded={isOpen}
  aria-label={isOpen ? t("collapseCategory") : t("expandCategory")}
- className="flex items-center gap-1.5 pl-2 pr-3 py-2 cursor-pointer select-none"
+ className="w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground hover:bg-secondary transition-colors shrink-0"
  >
- <span className="w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground shrink-0">
  <span
  className="transition-transform duration-150 inline-flex"
  style={{ transform: isOpen ? "rotate(0deg)" : "rotate(-90deg)" }}
  >
  <ChevronDownIcon size={14} />
  </span>
- </span>
- <span className="flex-1 min-w-0 text-sm font-semibold text-foreground/70 truncate block">
+ </button>
+ <button
+ type="button"
+ onClick={() => {
+ track("Click", "Menu category edit");
+ router.push({ name: "category.edit", id: category.id });
+ }}
+ className="flex-1 min-w-0 text-left text-sm font-semibold text-foreground/70 truncate hover:text-foreground transition-colors"
+ >
  {getMlWithFallback(category.name, defaultLang, defaultLang)}
- </span>
+ </button>
 
  <div className="flex items-center gap-0.5 shrink-0">
- <span
- className="inline-flex items-center gap-0"
- >
+ <span className="inline-flex items-center gap-0">
  <button
  type="button"
  onClick={(e) => { e.stopPropagation(); onMoveUp(); }}
@@ -666,18 +653,6 @@ function CategoryAccordion({
  <ArrowDownIcon size={14} />
  </button>
  </span>
- <button
- type="button"
- onClick={(e) => {
- e.stopPropagation();
- track("Click", "Menu category edit");
- router.push({ name: "category.edit", id: category.id });
- }}
- className={iconBtn}
- aria-label={t("editCategory")}
- >
- <EditIcon size={14} />
- </button>
  </div>
  </div>
 
@@ -808,18 +783,6 @@ function DishRow({
  aria-label={dish.visible ? t("hideDish") : t("showDish")}
  >
  {dish.visible ? <EyeIcon size={14} /> : <EyeOffIcon size={14} />}
- </button>
- <button
- type="button"
- onClick={(e) => {
- e.stopPropagation();
- track("Click", "Menu item edit");
- router.push({ name: "item.edit", id: dish.id });
- }}
- className={iconBtn}
- aria-label={t("editDish")}
- >
- <EditIcon size={14} />
  </button>
  </div>
  </div>
