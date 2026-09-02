@@ -9,9 +9,15 @@ const ROOT = __dirname;
 const E = process.env;
 
 // translator is a separate repo/product (not part of this monorepo) — its own
-// port, not sourced from the iq-rest root .env.
+// port and env, not sourced from the iq-rest root .env. Loaded explicitly
+// (rather than relying on Next's own .env.local pickup) because the pm2
+// daemon inherits DATABASE_URL from the shell that first started it (set for
+// the iq-rest apps), and an already-set process.env var wins over .env.local.
 const TRANSLATOR_PORT = 8010;
 const TRANSLATOR_DIR = path.join(ROOT, "..", "translator");
+const TRANSLATOR_ENV = require("dotenv").parse(
+  require("fs").readFileSync(path.join(TRANSLATOR_DIR, ".env.local")),
+);
 
 const base = {
   script: "npm",
@@ -65,6 +71,7 @@ module.exports = {
       name: "translator",
       cwd: TRANSLATOR_DIR,
       args: `run dev -- -p ${TRANSLATOR_PORT}`,
+      env: { ...TRANSLATOR_ENV, PORT: String(TRANSLATOR_PORT) },
     },
   ],
 };
