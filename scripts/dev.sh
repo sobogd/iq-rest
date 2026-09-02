@@ -5,11 +5,13 @@
 # 3) (re)start all 5 services via PM2
 #
 # Usage:
-#   ./scripts/dev.sh                 # fresh restart of all 5
+#   ./scripts/dev.sh                 # fresh restart of all 6
 #   ./scripts/dev.sh dashboard-web   # restart just one (or a subset)
 #   pm2 status        |  pm2 logs <name>
 #
-# Services: landing dashboard-web dashboard-api public-menu-api public-menu
+# Services: landing dashboard-web dashboard-api public-menu-api public-menu translator
+# (translator is a separate repo, ../translator — piggybacks on this launcher
+# for convenience only; its port is not part of the iq-rest root .env)
 
 set -e
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -25,13 +27,14 @@ fi
 
 # --- read ports from root .env (single source of truth) ---
 port_of() { grep -E "^$1=" "$ENVF" | head -1 | cut -d= -f2-; }
-ALL_NAMES=(landing dashboard-web dashboard-api public-menu-api public-menu)
+ALL_NAMES=(landing dashboard-web dashboard-api public-menu-api public-menu translator)
 ALL_PORTS=(
   "$(port_of LANDING_PORT)"
   "$(port_of DASHBOARD_WEB_PORT)"
   "$(port_of DASHBOARD_API_PORT)"
   "$(port_of PUBLIC_MENU_API_PORT)"
   "$(port_of PUBLIC_MENU_PORT)"
+  8010 # translator — separate repo, not sourced from this .env (see ecosystem.config.js)
 )
 
 port_for() {
@@ -101,6 +104,7 @@ echo "   dashboard-web    http://localhost:$(port_for dashboard-web)"
 echo "   dashboard-api    http://localhost:$(port_for dashboard-api)/api/health"
 echo "   public-menu-api  http://localhost:$(port_for public-menu-api)/api/health"
 echo "   public-menu      http://localhost:$(port_for public-menu)?slug=<slug>"
+echo "   translator       http://localhost:$(port_for translator)"
 echo
 pm2 status
 echo

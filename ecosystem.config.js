@@ -8,6 +8,11 @@ require("dotenv").config({ path: path.join(__dirname, ".env") });
 const ROOT = __dirname;
 const E = process.env;
 
+// translator is a separate repo/product (not part of this monorepo) — its own
+// port, not sourced from the iq-rest root .env.
+const TRANSLATOR_PORT = 8010;
+const TRANSLATOR_DIR = path.join(ROOT, "..", "translator");
+
 const base = {
   script: "npm",
   args: "run dev",
@@ -54,6 +59,12 @@ module.exports = {
       name: "landing",
       cwd: `${ROOT}/apps/landing`,
       args: `run dev -- -p ${E.LANDING_PORT}`,
+    },
+    {
+      ...base,
+      name: "translator",
+      cwd: TRANSLATOR_DIR,
+      args: `run dev -- -p ${TRANSLATOR_PORT}`,
     },
   ],
 };
