@@ -24,8 +24,18 @@ import {
 } from "../common/session-utils";
 import { validateEmail } from "../common/validate-email";
 import type { SessionMeta } from "../common/session-meta";
+import { createRemoteJWKSet, jwtVerify } from "jose";
 
 export type SignupContext = { cuisine?: string; restaurantName: string };
+
+// Verifies Google Sign-In id_tokens ourselves via `jose` rather than
+// google-auth-library's OAuth2Client.verifyIdToken(): in this dependency
+// graph gaxios's internal cert fetch throws "config.headers.has is not a
+// function" — a Headers-realm mismatch, the same family of bug as the
+// URLSearchParams one worked around in exchangeGoogleCode. createRemoteJWKSet
+// caches the fetched keys itself, so this stays a module-level singleton
+// rather than being recreated per call.
+const googleJWKS = createRemoteJWKSet(new URL("https://www.googleapis.com/oauth2/v3/certs"));
 
 const SEND_LIMIT_WINDOW = 15 * 60 * 1000;
 const SEND_LIMIT_MAX = 5;
@@ -605,14 +615,15 @@ export class AuthService implements OnModuleDestroy {
     const clientId = this.config.get<string>("GOOGLE_CLIENT_ID");
     if (!clientId) throw new HttpException("Google auth not configured", HttpStatus.INTERNAL_SERVER_ERROR);
 
-    const { OAuth2Client } = await import("google-auth-library");
-    const oauth = new OAuth2Client(clientId);
     let payload: { email?: string; name?: string } | undefined;
     try {
-      const ticket = await oauth.verifyIdToken({ idToken: credential, audience: clientId });
-      payload = ticket.getPayload() as { email?: string; name?: string } | undefined;
+      const { payload: verified } = await jwtVerify(credential, googleJWKS, {
+        issuer: ["https://accounts.google.com", "accounts.google.com"],
+        audience: clientId,
+      });
+      payload = verified as { email?: string; name?: string };
     } catch (e) {
-      console.error(`verifyIdToken failed: ${e instanceof Error ? e.stack || e.message : JSON.stringify(e)}`);
+      console.error(`Google id_token verify failed: ${e instanceof Error ? e.stack || e.message : JSON.stringify(e)}`);
       throw new BadRequestException("Invalid Google token");
     }
     if (!payload?.email) throw new BadRequestException("Invalid Google token");
