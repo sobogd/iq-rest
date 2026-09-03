@@ -387,7 +387,7 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
     // The old in-app Traffic screen is gone — analytics now lives in the
     // standalone iq-metrix admin, opened in its own tab like an external tool.
     window.open(
-      `https://iq-analytics.iq-rest.com/?site=iq-rest&meta.restaurantId=${encodeURIComponent(restaurantId)}`,
+      `https://iq-metrix.iq-rest.com/?site=iq-rest&meta.restaurantId=${encodeURIComponent(restaurantId)}`,
       "_blank",
       "noopener,noreferrer",
     );
