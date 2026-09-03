@@ -567,6 +567,10 @@ export class AuthService implements OnModuleDestroy {
       return tokens.id_token;
     } catch (e) {
       if (e instanceof BadRequestException) throw e;
+      // TEMP diagnostic (remove once the redirect_uri mismatch is found):
+      // the wrapped BadRequestException below hid this from prod logs.
+      const detail = (e as { response?: { data?: unknown } })?.response?.data ?? (e instanceof Error ? e.message : e);
+      console.error(`exchangeGoogleCode raw failure (redirectUri=${redirectUri}):`, JSON.stringify(detail));
       throw new BadRequestException("Invalid Google authorization code");
     }
   }
