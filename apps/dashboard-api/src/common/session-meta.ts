@@ -1,5 +1,5 @@
 import type { Request } from "express";
-import { clientIp } from "../analytics-v2/request-facts";
+import { clientIp } from "./client-ip";
 
 /** What we record on a Session row about the device that created it. Kept for
  *  the account's own security surface — "log out everywhere" is the blunt

@@ -1,16 +1,15 @@
 import { Module } from "@nestjs/common";
-import { AnalyticsSaltService } from "./salt.service";
 import { TrackV2Controller } from "./track-v2.controller";
-import { ConversionV2Service } from "./conversion-v2.service";
-import { VisitService } from "./visit.service";
 import { VisitorIdentityService } from "./identity.service";
+import { IngestRelayService } from "./ingest-relay.service";
 
-// Cookieless analytics for the whole product (landing + dashboard): salt-hash
-// visits, per-event venue attribution, instant registration conversions.
-// See packages/db schema comments for the privacy model.
+// Analytics relay for the whole product (landing + dashboard): resolves who's
+// behind the request from this app's own cookies/DB (VisitorIdentityService,
+// unchanged), then forwards the event batch to the standalone iq-metrix
+// service (IngestRelayService), which owns the hashing/session/storage this
+// module used to do itself.
 @Module({
   controllers: [TrackV2Controller],
-  providers: [AnalyticsSaltService, ConversionV2Service, VisitService, VisitorIdentityService],
-  exports: [ConversionV2Service],
+  providers: [VisitorIdentityService, IngestRelayService],
 })
 export class AnalyticsV2Module {}
