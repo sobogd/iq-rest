@@ -67,16 +67,17 @@ export class VisitorIdentityService {
     private readonly prisma: PrismaService,
     config: ConfigService,
   ) {
+    // No default exclusions: every account, including internal/admin ones,
+    // is tracked unless ANALYTICS_EXCLUDE_EMAILS / _USER_IDS is explicitly
+    // set. Was "support@iq-rest.com" / a hardcoded owner-account id.
     this.excludedEmails = new Set(
-      (config.get<string>("ANALYTICS_EXCLUDE_EMAILS") || "support@iq-rest.com")
+      (config.get<string>("ANALYTICS_EXCLUDE_EMAILS") || "")
         .split(",")
         .map((s) => s.trim().toLowerCase())
         .filter(Boolean),
     );
     this.excludedUserIds = new Set(
-      // Default keeps the internal account that was hardcoded here before, so
-      // moving this to config does not silently start recording its traffic.
-      (config.get<string>("ANALYTICS_EXCLUDE_USER_IDS") || "cmi5yzq780001vx0hiz2ti7fo")
+      (config.get<string>("ANALYTICS_EXCLUDE_USER_IDS") || "")
         .split(",")
         .map((s) => s.trim())
         .filter(Boolean),
