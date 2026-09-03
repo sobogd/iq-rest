@@ -1,20 +1,26 @@
-import { apiUrl } from "@/lib/api";
 import { isKioskHost } from "@/lib/device-mode";
 
-// Analytics v2: every event is a page/action/name/ts quad POSTed to
-// dashboard-api /api/e. The whole dashboard reports under one page
-// ("Dashboard") — the name carries the detail — so the admin can filter the
-// product surface with a single predicate.
+// Analytics v2: every event is a page/action/name/ts quad POSTed directly to
+// iq-metrix under the e.iq-rest.com alias — same target as landing's
+// lib/analytics.ts, same reasoning (a domain that carries only analytics
+// traffic, with nothing else reachable on it, is a harder ad-blocker target
+// than dashboard-api itself would be once it also carries an "e" path). The
+// whole dashboard reports under one page ("Dashboard") — the name carries
+// the detail — so the admin can filter the product surface with a single
+// predicate.
 //
 // Wire shape is deliberately CORS-*simple*: text/plain body (a JSON string) so
 // the browser never fires an OPTIONS preflight, and a short opaque path —
 // readable "track"-style paths are blocked by common ad-blocker filter lists.
 //
-// The server derives the visit itself (salt-hash of ip+ua, promoted to the
-// signed-in identity via the session cookie); nothing is stored on the device.
+// `credentials: "include"` (below, unchanged) is what lets iq-metrix read the
+// UI-readable `iqr_email` cookie off the .iq-rest.com apex for attribution —
+// same-site subdomain requests carry it regardless of SameSite; nothing is
+// stored on the visitor's device beyond that already-existing cookie.
 
 const PAGE = "Dashboard";
-const ENDPOINT = "/api/e";
+const ENDPOINT_BASE = import.meta.env.VITE_ANALYTICS_BASE || "https://e.iq-rest.com";
+const ENDPOINT = `${ENDPOINT_BASE.replace(/\/$/, "")}/e`;
 const CONTENT_TYPE = "text/plain;charset=UTF-8";
 
 const SEARCH_HOST_REGEX =
@@ -137,7 +143,7 @@ function send(): void {
   queue = queue.slice(MAX_BATCH);
   pendingCtx = undefined;
   sending = true;
-  fetch(apiUrl(ENDPOINT), {
+  fetch(ENDPOINT, {
     method: "POST",
     headers: { "Content-Type": CONTENT_TYPE },
     body: body(events, ctx),
@@ -206,7 +212,7 @@ function flushOnUnload(): void {
     let queued = false;
     try {
       queued = navigator.sendBeacon(
-        apiUrl(ENDPOINT),
+        ENDPOINT,
         new Blob([payload], { type: "text/plain" }),
       );
     } catch {
@@ -215,7 +221,7 @@ function flushOnUnload(): void {
     if (!queued) {
       // No beacon (or it refused the payload): keepalive fetch is the last
       // fire-and-forget option that can outlive the document.
-      fetch(apiUrl(ENDPOINT), {
+      fetch(ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": CONTENT_TYPE },
         body: payload,

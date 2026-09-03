@@ -1,18 +1,26 @@
-import { dashboardApi } from "./dashboard-url";
-
 // Analytics v2: every event is a page/action/name triple ("Home" / "Click" /
-// "Header SignIn") POSTed to dashboard-api /api/e. The server derives the
-// cookieless session (salt-hash of ip+ua) — nothing is stored on the visitor's
-// device. The first event of a visit carries ctx (paid click ids, ?from=,
-// search referrer host) so the session row can be attributed.
+// "Header SignIn") POSTed directly to iq-metrix (the shared analytics
+// service also used by the dashboard and by translator), under the
+// e.iq-rest.com alias rather than iq-metrix.iq-rest.com — a domain that
+// gives no hint it carries analytics is a harder target to add to an
+// ad-blocker list than one that visibly does, and e.iq-rest.com's nginx
+// vhost exposes nothing but this one path (no admin UI reachable there).
+// The server derives the cookieless session (salt-hash of ip+ua) — nothing
+// is stored on the visitor's device. The first event of a visit carries ctx
+// (paid click ids, ?from=, search referrer host) so the session row can be
+// attributed. `credentials: "include"` below is what lets iq-metrix read the
+// UI-readable `iqr_email` cookie off the .iq-rest.com apex for attribution —
+// same-site subdomain requests carry it regardless of SameSite, this only
+// opts out of fetch's own same-origin-only credential default.
 //
 // Two wire details are load-bearing:
-//   • `/api/e` — a readable "track"-style path is on every ad-blocker list.
+//   • `/e` — a readable "track"-style path is on every ad-blocker list.
 //   • `text/plain` body — keeps the POST a CORS-*simple* request, so the
 //     browser skips the OPTIONS preflight. A preflight would double the
 //     latency and is itself frequently blocked; it also cannot be sent by
 //     `navigator.sendBeacon`, which we rely on during unload.
-const ENDPOINT = "/api/e";
+const ENDPOINT_BASE = process.env.NEXT_PUBLIC_ANALYTICS_BASE || "https://e.iq-rest.com";
+const ENDPOINT = `${ENDPOINT_BASE.replace(/\/$/, "")}/e`;
 const CONTENT_TYPE = "text/plain;charset=UTF-8";
 
 const SEARCH_HOST_REGEX =
@@ -184,7 +192,7 @@ function send(): void {
   const batch = takeBatch();
   if (!batch) return;
   inFlight = true;
-  fetch(dashboardApi(ENDPOINT), {
+  fetch(ENDPOINT, {
     method: "POST",
     headers: { "Content-Type": CONTENT_TYPE },
     body: serialize(batch.events, batch.ctx),
@@ -223,7 +231,7 @@ function send(): void {
 function beacon(body: string): boolean {
   try {
     return navigator.sendBeacon(
-      dashboardApi(ENDPOINT),
+      ENDPOINT,
       new Blob([body], { type: CONTENT_TYPE }),
     );
   } catch {
@@ -252,7 +260,7 @@ function flushOnUnload(): void {
     if (!beacon(body)) {
       // Beacon refused (unsupported, or over the UA's queue limit) — a
       // keepalive fetch is the next best fire-and-forget option.
-      fetch(dashboardApi(ENDPOINT), {
+      fetch(ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": CONTENT_TYPE },
         body,
