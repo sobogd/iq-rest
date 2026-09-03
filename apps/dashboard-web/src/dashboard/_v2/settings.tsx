@@ -822,7 +822,6 @@ export function BrandingSettingsPage({
  })}
  </div>
  </div>
- </div>
  </Page>
 
  <AiImageModal
