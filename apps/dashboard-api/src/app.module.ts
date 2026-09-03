@@ -22,7 +22,6 @@ import { StripeModule } from "./stripe/stripe.module";
 import { BillingModule } from "./billing/billing.module";
 import { GeoModule } from "./geo/geo.module";
 import { AnalyticsModule } from "./analytics/analytics.module";
-import { AnalyticsV2Module } from "./analytics-v2/analytics-v2.module";
 import { AdminModule } from "./admin/admin.module";
 import { ScanMenuModule } from "./scan-menu/scan-menu.module";
 import { InboxModule } from "./inbox/inbox.module";
@@ -77,7 +76,6 @@ import { HealthController } from "./health/health.controller";
     BillingModule,
     GeoModule,
     AnalyticsModule,
-    AnalyticsV2Module,
     AdminModule,
     ScanMenuModule,
     InboxModule,
