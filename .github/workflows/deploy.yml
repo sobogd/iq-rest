@@ -115,6 +115,7 @@ jobs:
           WHATSAPP_WABA_ID: ${{ secrets.WHATSAPP_WABA_ID }}
           META_DEVELOPER_TOKEN: ${{ secrets.META_DEVELOPER_TOKEN }}
           META_APP_SECRET: ${{ secrets.META_APP_SECRET }}
+          INGEST_SHARED_SECRET: ${{ secrets.INGEST_SHARED_SECRET }}
         with:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
