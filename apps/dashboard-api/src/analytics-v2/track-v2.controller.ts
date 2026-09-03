@@ -1,16 +1,11 @@
-import { BadRequestException, Body, Controller, HttpCode, HttpStatus, Logger, Post, Req } from "@nestjs/common";
+import { BadRequestException, Body, Controller, HttpCode, HttpStatus, Post, Req } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { Throttle, seconds, minutes } from "@nestjs/throttler";
 import type { Request } from "express";
 import { isbot } from "isbot";
-import type { SessionNew } from "@iq-rest/db";
-import { PrismaService } from "../prisma/prisma.service";
-import { AnalyticsSaltService } from "./salt.service";
-import { VisitService } from "./visit.service";
+import { clientIp } from "../common/client-ip";
 import { VisitorIdentityService } from "./identity.service";
-import { clientNetwork, clientUa, hashEntropy, visitSeed } from "./request-facts";
-import { sessionHash } from "./session-hash";
-import { signVisitToken, verifyVisitToken } from "./visit-token";
+import { IngestRelayService, type IngestPayload } from "./ingest-relay.service";
 
 // page / action / name: short human-readable English labels ("Home", "Click",
 // "Header SignIn"). Free-form by design — no enums.
@@ -43,6 +38,12 @@ const HARD_BOT_UA_REGEX =
 const CRAWLER_UA_REGEX =
   /AdsBot|Google-InspectionTool|GoogleOther|APIs-Google|FeedFetcher-Google|Storebot-Google|GoogleProducer|ChromeOS-Default-Bot/i;
 
+// Raw signals forwarded to iq-metrix beyond ip/ua: Accept-Language plus
+// Cloudflare's geo headers. iq-metrix now does its own hashing/geo derivation
+// (what request-facts.ts used to do here), so these ride over unprocessed
+// instead of being derived locally.
+const FORWARD_HEADER_NAMES = ["accept-language", "cf-ipcountry", "cf-region", "cf-ipcity"] as const;
+
 interface TrackCtx {
   from?: unknown;
   ref?: unknown;
@@ -66,9 +67,8 @@ interface TrackBody extends RawEvent {
    *  accepted so a page can fire one event without buffering. */
   events?: unknown;
   ctx?: TrackCtx;
-  /** Visit continuation token echoed from a previous response (see
-   *  visit-token.ts) — pins the batch to its visit across mid-visit hash
-   *  flaps. Held by the client in page memory only. */
+  /** Visit continuation token echoed from a previous response, forwarded to
+   *  iq-metrix verbatim — this app no longer mints or verifies it. */
   tok?: unknown;
 }
 
@@ -78,14 +78,6 @@ interface ParsedEvent {
   name: string;
   at: Date | null;
   locale: string | null;
-}
-
-/** Buffered events arrive together; spacing the fallbacks 1ms apart keeps them
- *  in the order the visitor produced them. */
-function clampToVisit(at: Date | null, firstAt: Date, now: Date, index: number): Date {
-  const fallback = new Date(now.getTime() + index);
-  if (!at) return fallback;
-  return at < firstAt ? firstAt : at;
 }
 
 function parseTs(raw: unknown, now: Date): Date | null {
@@ -121,22 +113,54 @@ function parseBody(body: unknown): TrackBody {
   return body && typeof body === "object" ? (body as TrackBody) : {};
 }
 
+/** Buffered events land together; spacing missing timestamps 1ms apart keeps
+ *  them in the order the visitor produced them once no local session start
+ *  exists to clamp them against (that clamping lived in visit.service.ts,
+ *  which moved to iq-metrix with the rest of the visit logic). */
+function eventAt(at: Date | null, now: Date, index: number): Date {
+  return at ?? new Date(now.getTime() + index);
+}
+
+function clientUa(req: Request): string {
+  const v = req.headers["user-agent"];
+  return typeof v === "string" ? v : "";
+}
+
+function rawHeaders(req: Request): Record<string, string> | undefined {
+  const out: Record<string, string> = {};
+  for (const name of FORWARD_HEADER_NAMES) {
+    const v = req.headers[name];
+    if (typeof v === "string" && v) out[name] = v;
+  }
+  return Object.keys(out).length ? out : undefined;
+}
+
 @Controller()
 export class TrackV2Controller {
-  private readonly logger = new Logger(TrackV2Controller.name);
-  /** HMAC key for visit continuation tokens. Shares JWT_SECRET with the device
-   *  tokens (domain-separated inside visit-token.ts); empty disables tokens —
-   *  the pipeline degrades to pure hash matching, nothing breaks. */
-  private readonly tokenSecret: string;
+  private readonly landingOrigin: string;
+  private readonly dashboardOrigin: string;
 
   constructor(
-    private readonly prisma: PrismaService,
-    private readonly salt: AnalyticsSaltService,
-    private readonly visits: VisitService,
     private readonly identity: VisitorIdentityService,
+    private readonly relay: IngestRelayService,
     config: ConfigService,
   ) {
-    this.tokenSecret = config.get<string>("JWT_SECRET") || "";
+    // Same env vars + fallbacks auth.controller.ts / mail.service.ts already
+    // use for these two origins.
+    this.landingOrigin = config.get<string>("LANDING_URL") || "https://iq-rest.com";
+    this.dashboardOrigin = config.get<string>("DASHBOARD_URL") || "https://dashboard.iq-rest.com";
+  }
+
+  /** Both landing and dashboard-web post here cross-origin with
+   *  `credentials: "include"`, so the browser always attaches Origin even
+   *  though the simple-request body avoids a preflight. Exact match against
+   *  the same two origins CORS already trusts (see main.ts enableCors) — not
+   *  guessed, and undefined (not a fragile default) when neither matches. */
+  private resolveApp(req: Request): string | undefined {
+    const origin = req.headers.origin;
+    if (origin === this.landingOrigin) return "landing";
+    if (origin === this.dashboardOrigin) return "dashboard-web";
+    return undefined;
   }
 
   /** The one ingest path (`POST /api/e`). Deliberately not named "track": that
@@ -170,65 +194,47 @@ export class TrackV2Controller {
     if (!ua || HARD_BOT_UA_REGEX.test(ua)) return {};
     if (isbot(ua) || CRAWLER_UA_REGEX.test(ua)) return {};
 
-    // One identity resolution per batch, not per event.
+    // One identity resolution per batch, not per event. iq-metrix has no
+    // access to this product's cookies/DB, so identity stays resolved here
+    // and only the result (email, restaurant) rides along in the payload.
     const who = await this.identity.resolve(req);
     if (who.skip) return {};
 
-    // A batch carrying a valid continuation token lands on its own visit row
-    // directly — immune to the hash flapping mid-visit (mobile network prefix
-    // or Cloudflare region changing between batches).
-    let session: SessionNew | null = null;
-    if (this.tokenSecret && typeof body.tok === "string") {
-      const sid = verifyVisitToken(body.tok, this.tokenSecret, now);
-      if (sid) session = await this.visits.continueVisit(sid, who.userId, now);
-    }
+    const from = typeof ctx.from === "string" && FROM_REGEX.test(ctx.from) ? ctx.from : undefined;
+    const ref = typeof ctx.ref === "string" && HOST_REGEX.test(ctx.ref) ? ctx.ref.toLowerCase() : undefined;
+    const theme = typeof ctx.theme === "string" && THEME_REGEX.test(ctx.theme) ? ctx.theme : undefined;
+    const meta =
+      who.restaurantId || from || ref || theme
+        ? {
+            ...(who.restaurantId ? { restaurantId: who.restaurantId } : {}),
+            ...(from ? { from } : {}),
+            ...(ref ? { ref } : {}),
+            ...(theme ? { theme } : {}),
+          }
+        : undefined;
 
-    if (!session) {
-      // Raw IP and raw UA live only on this stack frame — hashed and derived,
-      // never stored.
-      const network = clientNetwork(req);
-      const entropy = hashEntropy(req);
-      const hash = sessionHash(await this.salt.getSalt(), network, ua, entropy);
-      session = await this.visits.resolveVisit(hash, who.userId, visitSeed(req), now);
-      // TEMP diagnostic (remove once hash inputs are tuned): every fresh visit
-      // logs its coarse hash inputs, so a split visitor shows up as two
-      // creations whose logged inputs differ in exactly the flapping field.
-      // No raw IP here — `network` is already the /24 / /64 prefix.
-      if (session.firstAt.getTime() === now.getTime()) {
-        this.logger.log(
-          `visit created ${session.id} hash=${hash.slice(0, 10)} net=${network} entropy=${entropy}`,
-        );
-      }
-    }
-
-    await this.visits.enrich(session, {
-      from: typeof ctx.from === "string" && FROM_REGEX.test(ctx.from) ? ctx.from : null,
-      ref: typeof ctx.ref === "string" && HOST_REGEX.test(ctx.ref) ? ctx.ref.toLowerCase() : null,
-      theme: typeof ctx.theme === "string" && THEME_REGEX.test(ctx.theme) ? ctx.theme : null,
-    }, now);
-
-    await this.prisma.eventNew.createMany({
-      // Clients stamp each event with the moment it happened; a batch can sit
-      // in the buffer for seconds (longer if it had to be retried).
-      data: events.map((e, i) => ({
-        sessionId: session.id,
+    const payload: IngestPayload = {
+      site: "iq-rest",
+      app: this.resolveApp(req),
+      ip: clientIp(req),
+      ua,
+      headers: rawHeaders(req),
+      email: who.email,
+      meta,
+      tok: typeof body.tok === "string" ? body.tok : undefined,
+      events: events.map((e, i) => ({
         page: e.page,
         action: e.action,
         name: e.name,
-        restaurantId: who.restaurantId,
         locale: e.locale,
-        // Client time, but never before the visit it lands on. A buffer that
-        // survived a long offline stretch arrives with timestamps from a visit
-        // that has since been closed by the 30-minute cut, and an event dated
-        // before its own session's firstAt corrupts every "first page" and
-        // first-touch-venue aggregate the admin computes by ordering on `at`.
-        at: clampToVisit(e.at, session.firstAt, now, i),
+        at: eventAt(e.at, now, i).toISOString(),
       })),
-    });
+    };
 
-    // Fresh token every response: its liveness window slides with the visit's
-    // lastAt, and the beacon/keepalive callers that cannot read a body simply
-    // keep their previous one.
-    return this.tokenSecret ? { v: signVisitToken(session.id, this.tokenSecret, now) } : {};
+    // Relay handles its own timeout + spool-on-failure; a failed/slow forward
+    // still answers the client with a plain 200 (no token — it just re-resolves
+    // on the next batch), never an error.
+    const res = await this.relay.forward(payload);
+    return res?.tok ? { v: res.tok } : {};
   }
 }

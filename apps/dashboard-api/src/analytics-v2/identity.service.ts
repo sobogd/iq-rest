@@ -3,7 +3,18 @@ import { ConfigService } from "@nestjs/config";
 import type { Request } from "express";
 import { PrismaService } from "../prisma/prisma.service";
 import { hashSessionToken } from "../common/session-utils";
-import { readCookie } from "./session-hash";
+
+// Was shared with the rest of analytics-v2 via session-hash.ts before that
+// file (hashing/visit logic that moved to iq-metrix) was deleted; this is a
+// plain cookie reader with no hashing in it, so it stays here, inlined —
+// identity resolution is the only remaining consumer.
+function readCookie(req: Request, name: string): string | undefined {
+  const fromParser = (req.cookies as Record<string, string | undefined> | undefined)?.[name];
+  if (fromParser) return fromParser;
+  const raw = req.headers.cookie || "";
+  const m = raw.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+  return m ? decodeURIComponent(m[1]) : undefined;
+}
 
 // Who is behind an ingest call. Deliberately does NOT go through AuthService:
 // analytics has no business triggering auth side effects, and pulling in the
@@ -23,6 +34,10 @@ const MAX_ENTRIES = 5_000;
 export interface VisitIdentity {
   /** null = anonymous (or an admin/impersonated call the caller must drop). */
   userId: string | null;
+  /** Resolved account email — already computed below to check the exclude
+   *  list, just not previously exposed. iq-metrix has no DB access of its own,
+   *  so email (not userId) is the identity key forwarded to it; null = anonymous. */
+  email: string | null;
   /** Active venue, membership-validated. */
   restaurantId: string | null;
   /** True when the call must be discarded entirely (admin / impersonation). */
@@ -104,19 +119,19 @@ export class VisitorIdentityService {
     if (impersonation) {
       const original = await this.identityForToken(impersonation, undefined);
       if (original && this.isAdminEmail(original.email)) {
-        return { userId: null, restaurantId: null, skip: true };
+        return { userId: null, email: null, restaurantId: null, skip: true };
       }
     }
 
     const token = readCookie(req, "iqr_session");
-    if (!token) return { userId: null, restaurantId: null, skip: false };
+    if (!token) return { userId: null, email: null, restaurantId: null, skip: false };
 
     const who = await this.identityForToken(token, readCookie(req, "iqr_email"));
-    if (!who) return { userId: null, restaurantId: null, skip: false };
-    if (this.isExcluded(who)) return { userId: null, restaurantId: null, skip: true };
+    if (!who) return { userId: null, email: null, restaurantId: null, skip: false };
+    if (this.isExcluded(who)) return { userId: null, email: null, restaurantId: null, skip: true };
 
     const restaurantId = await this.activeRestaurant(who.userId, readCookie(req, "iqr_active_restaurant_id"));
-    return { userId: who.userId, restaurantId, skip: false };
+    return { userId: who.userId, email: who.email, restaurantId, skip: false };
   }
 
   private async identityForToken(token: string, email: string | undefined): Promise<TokenIdentity | null> {

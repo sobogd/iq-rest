@@ -333,7 +333,6 @@ function SidebarNav({
   const admin: NavItem[] = [
     { view: { name: "settings.admin.restaurants" }, label: "Restaurants", icon: GridIcon, track: "admin restaurants", match: ["settings.admin.restaurant"] },
     { view: { name: "settings.admin.users" }, label: "Users", icon: UsersIcon, track: "admin users" },
-    { view: { name: "settings.admin.traffic" }, label: "Traffic", icon: BarChart3, track: "admin traffic", match: ["settings.admin.trafficSession"] },
     { view: { name: "settings.admin.leads" }, label: "Leads", icon: UsersIcon, track: "admin leads" },
     { view: { name: "settings.admin.inbox" }, label: "Inbox", icon: MessageIcon, track: "admin inbox", match: ["settings.admin.inboxThread"] },
   ];

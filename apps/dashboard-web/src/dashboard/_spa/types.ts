@@ -30,8 +30,6 @@ export type View =
   | { name: "settings.admin.restaurants" }
   | { name: "settings.admin.users" }
   | { name: "settings.admin.restaurant"; id: string }
-  | { name: "settings.admin.traffic"; restaurantId?: string }
-  | { name: "settings.admin.trafficSession"; id: string; restaurantId?: string }
   | { name: "settings.admin.leads" }
   | { name: "settings.admin.inbox" }
   | { name: "settings.admin.inboxThread"; id: string }

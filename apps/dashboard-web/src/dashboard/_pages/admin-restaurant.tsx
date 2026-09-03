@@ -384,7 +384,13 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
   const ownerHandle = owner?.email.split("@")[0] ?? "";
   const iconBtn = headerIconBtn + " " + headerBtnSurface;
   function openSession() {
-    router.push({ name: "settings.admin.traffic", restaurantId });
+    // The old in-app Traffic screen is gone — analytics now lives in the
+    // standalone iq-metrix admin, opened in its own tab like an external tool.
+    window.open(
+      `https://iq-analytics.iq-rest.com/?site=iq-rest&meta.restaurantId=${encodeURIComponent(restaurantId)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
   }
 
   const headerActions = (
