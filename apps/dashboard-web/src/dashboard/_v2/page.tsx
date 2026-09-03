@@ -42,7 +42,7 @@ export function Page({
           (fill
             ? "flex-1 min-h-0 flex flex-col "
             : grid
-              ? "flex-1 min-h-0 overflow-y-auto grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 items-start gap-4 p-4 md:p-6 "
+              ? "flex-1 min-h-0 overflow-y-auto grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4 p-4 md:p-6 "
               : "flex-1 min-h-0 overflow-y-auto flex flex-col gap-4 p-4 md:p-6 ") + bodyClassName
         }
       >
