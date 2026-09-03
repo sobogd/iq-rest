@@ -559,20 +559,32 @@ export class AuthService implements OnModuleDestroy {
     if (!clientId || !clientSecret) {
       throw new HttpException("Google auth not configured", HttpStatus.INTERNAL_SERVER_ERROR);
     }
-    const { OAuth2Client } = await import("google-auth-library");
-    const oauth = new OAuth2Client(clientId, clientSecret, redirectUri);
-    try {
-      const { tokens } = await oauth.getToken(code);
-      if (!tokens.id_token) throw new BadRequestException("Google did not return id_token");
-      return tokens.id_token;
-    } catch (e) {
-      if (e instanceof BadRequestException) throw e;
-      // TEMP diagnostic (remove once the redirect_uri mismatch is found):
-      // the wrapped BadRequestException below hid this from prod logs.
-      const detail = (e as { response?: { data?: unknown } })?.response?.data ?? (e instanceof Error ? e.message : e);
-      console.error(`exchangeGoogleCode raw failure (redirectUri=${redirectUri}):`, JSON.stringify(detail));
+    // Not using google-auth-library's OAuth2Client.getToken() here: in this
+    // dependency graph its `instanceof URLSearchParams` check against the
+    // request body fails (a second URLSearchParams ends up on the realm from
+    // some other bundled package), so gaxios falls through to its
+    // JSON.stringify(object) branch — and URLSearchParams has no enumerable
+    // own properties, so that serializes to "{}", sending Google an empty
+    // grant_type. Pre-stringifying the body ourselves sidesteps the whole
+    // instanceof check.
+    const body = new URLSearchParams({
+      client_id: clientId,
+      client_secret: clientSecret,
+      code,
+      grant_type: "authorization_code",
+      redirect_uri: redirectUri,
+    }).toString();
+    const res = await fetch("https://oauth2.googleapis.com/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body,
+    });
+    const json = (await res.json()) as { id_token?: string; error?: string; error_description?: string };
+    if (!res.ok || !json.id_token) {
+      console.error(`exchangeGoogleCode failed (redirectUri=${redirectUri}): ${JSON.stringify(json)}`);
       throw new BadRequestException("Invalid Google authorization code");
     }
+    return json.id_token;
   }
 
   async verifyGoogleCredential(
