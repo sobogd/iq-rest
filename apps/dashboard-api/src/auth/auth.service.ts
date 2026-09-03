@@ -611,7 +611,8 @@ export class AuthService implements OnModuleDestroy {
     try {
       const ticket = await oauth.verifyIdToken({ idToken: credential, audience: clientId });
       payload = ticket.getPayload() as { email?: string; name?: string } | undefined;
-    } catch {
+    } catch (e) {
+      console.error(`verifyIdToken failed: ${e instanceof Error ? e.stack || e.message : JSON.stringify(e)}`);
       throw new BadRequestException("Invalid Google token");
     }
     if (!payload?.email) throw new BadRequestException("Invalid Google token");
