@@ -6,9 +6,9 @@ import { hashSessionToken } from "../common/session-utils";
 import { readCookie } from "./session-hash";
 
 // Who is behind an ingest call. Deliberately does NOT go through AuthService:
-// AuthModule already depends on AnalyticsV2Module (registration hook), so the
-// reverse import would be circular — and analytics has no business triggering
-// auth side effects. Two indexed lookups at worst, both memoised.
+// analytics has no business triggering auth side effects, and pulling in the
+// whole service for a read-only identity lookup is unwarranted coupling. Two
+// indexed lookups at worst, both memoised.
 //
 // This is attribution, not authorisation: a bad cookie can only mis-attribute
 // the caller's own events, never expose anything. Every exclusion decision is

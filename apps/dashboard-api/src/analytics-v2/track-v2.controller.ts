@@ -18,8 +18,6 @@ const LABEL_REGEX = /^[A-Za-z0-9][A-Za-z0-9 _\-./+]{0,63}$/;
 // Names carry the detail (error slugs especially), so they get more room. `%`
 // is in the set because scroll-depth names read "Hero - Pricing (75%)".
 const NAME_REGEX = /^[A-Za-z0-9][A-Za-z0-9 _\-./+()#:,'%]{0,119}$/;
-const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
-const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 const FROM_REGEX = /^[A-Za-z0-9_.-]{1,64}$/;
 const HOST_REGEX = /^[a-z0-9.-]{1,253}$/i;
 // Client's prefers-color-scheme. Fixed set, not free text.
@@ -37,22 +35,15 @@ const MAX_BODY_CHARS = 64_000;
 const TS_MAX_PAST_MS = 6 * 3600_000;
 const TS_MAX_FUTURE_MS = 60_000;
 
-// Server-side clients (curl/axios/headless) and crawlers that `isbot` misses.
-// Unlike the generic heuristic below, a paid click does NOT buy an exemption
-// from this list — nothing that identifies itself as a script is a real visit.
+// Server-side clients (curl/axios/headless) and crawlers that `isbot` misses —
+// nothing that identifies itself as a script is a real visit.
 const HARD_BOT_UA_REGEX =
   /axios\/|node-fetch|got\/|http_request|httpclient|java\/|okhttp|libwww|lwp-trivial|HttpClient|Apache-HttpClient|python-requests|curl\/|wget|HeadlessChrome|PhantomJS|Screaming Frog|Sitebulb/i;
-// Crawlers proper. A request carrying a paid click id is exempt from these:
-// ad-network click checkers and in-app webviews routinely look like bots, and
-// losing an ad click loses the conversion.
+// Crawlers proper.
 const CRAWLER_UA_REGEX =
   /AdsBot|Google-InspectionTool|GoogleOther|APIs-Google|FeedFetcher-Google|Storebot-Google|GoogleProducer|ChromeOS-Default-Bot/i;
 
 interface TrackCtx {
-  fbclid?: unknown;
-  gclid?: unknown;
-  gbraid?: unknown;
-  wbraid?: unknown;
   from?: unknown;
   ref?: unknown;
   theme?: unknown;
@@ -81,30 +72,12 @@ interface TrackBody extends RawEvent {
   tok?: unknown;
 }
 
-interface Aid {
-  aid: string;
-  atype: "F" | "G";
-  aidField: "fbclid" | "gclid" | "gbraid" | "wbraid";
-}
-
 interface ParsedEvent {
   page: string;
   action: string;
   name: string;
   at: Date | null;
   locale: string | null;
-}
-
-/** Pick the paid click id out of ctx. fbclid wins over the Google family (a URL
- *  carrying both is malformed anyway); within Google, gclid > gbraid > wbraid. */
-function resolveAid(ctx: TrackCtx): Aid | null {
-  const fbclid = typeof ctx.fbclid === "string" && FBCLID_REGEX.test(ctx.fbclid) ? ctx.fbclid : null;
-  if (fbclid) return { aid: fbclid, atype: "F", aidField: "fbclid" };
-  for (const field of ["gclid", "gbraid", "wbraid"] as const) {
-    const v = ctx[field];
-    if (typeof v === "string" && GCLID_REGEX.test(v)) return { aid: v, atype: "G", aidField: field };
-  }
-  return null;
 }
 
 /** Buffered events arrive together; spacing the fallbacks 1ms apart keeps them
@@ -168,7 +141,7 @@ export class TrackV2Controller {
 
   /** The one ingest path (`POST /api/e`). Deliberately not named "track": that
    *  word is a literal entry in the common ad-blocker filter lists, and a
-   *  blocked first batch loses the visit's ad attribution for good. */
+   *  blocked first batch loses the visit's first-touch attribution for good. */
   @Throttle({
     burst: { ttl: seconds(1), limit: 10 },
     sustained: { ttl: minutes(1), limit: 200 },
@@ -192,13 +165,10 @@ export class TrackV2Controller {
     if (events.length === 0) throw new BadRequestException("event invalid");
 
     const ctx: TrackCtx = body.ctx && typeof body.ctx === "object" ? body.ctx : {};
-    const aid = resolveAid(ctx);
 
     const ua = clientUa(req);
     if (!ua || HARD_BOT_UA_REGEX.test(ua)) return {};
-    // A paid click is exempt from the crawler heuristics only — every ad click
-    // must be recorded regardless of how odd its UA looks.
-    if (!aid && (isbot(ua) || CRAWLER_UA_REGEX.test(ua))) return {};
+    if (isbot(ua) || CRAWLER_UA_REGEX.test(ua)) return {};
 
     // One identity resolution per batch, not per event.
     const who = await this.identity.resolve(req);
@@ -235,7 +205,6 @@ export class TrackV2Controller {
       from: typeof ctx.from === "string" && FROM_REGEX.test(ctx.from) ? ctx.from : null,
       ref: typeof ctx.ref === "string" && HOST_REGEX.test(ctx.ref) ? ctx.ref.toLowerCase() : null,
       theme: typeof ctx.theme === "string" && THEME_REGEX.test(ctx.theme) ? ctx.theme : null,
-      aid,
     }, now);
 
     await this.prisma.eventNew.createMany({

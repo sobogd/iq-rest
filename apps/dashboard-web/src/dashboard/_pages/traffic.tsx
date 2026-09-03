@@ -334,12 +334,6 @@ function SessionItem({
 
   const place = [s.city, s.region].filter(Boolean).join(", ");
   const source = sourceLabel(s);
-  const sourceClass =
-    s.atype === "F"
-      ? "bg-blue-500/10 text-blue-700 dark:text-blue-400"
-      : s.atype === "G"
-        ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400"
-        : "bg-secondary text-muted-foreground";
 
   return (
     <button
@@ -433,21 +427,8 @@ function SessionItem({
             ⇋{s.mergeCount}
           </span>
         ) : null}
-        {s.convStatus ? (
-          <span
-            className={
-              "text-[10px] rounded px-1.5 py-0.5 shrink-0 " +
-              (s.convStatus === "success"
-                ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
-                : "bg-red-500/15 text-red-700 dark:text-red-400")
-            }
-            title={`${s.convNetwork} conversion ${s.convStatus}`}
-          >
-            ↑
-          </span>
-        ) : null}
         {source ? (
-          <span className={`text-[10px] rounded px-1.5 py-0.5 shrink-0 ${sourceClass}`} title={source}>
+          <span className="text-[10px] rounded px-1.5 py-0.5 shrink-0 bg-secondary text-muted-foreground" title={source}>
             {source}
           </span>
         ) : null}

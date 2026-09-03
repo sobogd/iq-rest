@@ -638,7 +638,7 @@ model AnalyticsSalt {
 
 // One row = one VISIT: a device hash (see AnalyticsSalt) plus an identity, cut
 // after 30 minutes of silence. The hash also changes with the daily salt, so
-// the same person tomorrow is unlinkable unless they sign in. Device/geo/click
+// the same person tomorrow is unlinkable unless they sign in. Device/geo/source
 // attribution live here so event rows stay minimal.
 model SessionNew {
   id String @id @default(cuid())
@@ -661,14 +661,6 @@ model SessionNew {
   theme   String? // 'dark' | 'light' — client's prefers-color-scheme, first-write-wins
   from    String? // ?from= campaign tag, first-write-wins
   ref     String? // first-touch referrer host (search-engine detection)
-  // Paid click id. aid holds the raw click id; atype ('F' | 'G') drives source
-  // aggregation; aidField remembers which URL param carried it ('fbclid' |
-  // 'gclid' | 'gbraid' | 'wbraid') because Google's upload API needs the exact
-  // field.
-  aid      String?
-  atype    String?
-  aidField String?
-  clickAt  DateTime? // when the click id arrived — Meta fbc timestamp
   // Identity of the visit. Stamped as soon as a session cookie resolves, so a
   // visit that starts anonymous is promoted in place (pre-login events keep
   // their row). Visits of the same human on other days are separate rows that
@@ -688,7 +680,6 @@ model SessionNew {
   // 30-day window by lastAt.
   @@index([hash, lastAt])
   @@index([lastAt])
-  @@index([atype, firstAt])
   @@map("sessions_new")
 }
 
@@ -716,22 +707,6 @@ model EventNew {
   @@index([restaurantId, at])
   @@index([at])
   @@map("events_new")
-}
-
-// Journal of instant conversion sends (Meta CAPI / Google Ads) for the v2
-// pipeline. Keyed by session — no raw click id is duplicated here. A success
-// row blocks re-sending; error rows feed the hourly retry sweep.
-model ConversionSendNew {
-  id        String   @id @default(cuid())
-  sessionId String
-  network   String // "meta" | "google"
-  status    String // "success" | "error"
-  response  Json?
-  createdAt DateTime @default(now())
-
-  @@index([sessionId, network, status])
-  @@index([createdAt])
-  @@map("conversion_sends_new")
 }
 
 model Order {

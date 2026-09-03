@@ -17,12 +17,6 @@ export interface TrafficSession {
   theme: string | null;
   from: string | null;
   ref: string | null;
-  /** Raw paid click id — nulled 7 days after the visit; `atype` outlives it. */
-  aid: string | null;
-  /** "F" = Facebook/Meta click, "G" = Google click. */
-  atype: string | null;
-  aidField: string | null;
-  clickAt: string | null;
   eventCount: number;
   pageCount: number;
   firstPage: string | null;
@@ -39,8 +33,6 @@ export interface TrafficSession {
   userVisits: number;
   /** Venues touched by the visit's events (a switcher can hit several). */
   restaurants: { id: string; title: string }[];
-  convStatus: string | null;
-  convNetwork: string | null;
 }
 
 export interface TrafficSessionList {
@@ -71,18 +63,9 @@ export interface TrafficOtherVisit {
   device: string | null;
 }
 
-export interface TrafficSend {
-  id: string;
-  network: string;
-  status: string;
-  response: unknown;
-  createdAt: string;
-}
-
 export interface TrafficSessionDetail {
   session: TrafficSession & { hash: string };
   events: TrafficEvent[];
-  sends: TrafficSend[];
   otherVisits: TrafficOtherVisit[];
 }
 
@@ -105,8 +88,6 @@ export function deviceShort(device: string | null, os: string | null): string {
 
 /** Where the visit came from, as one short chip label. */
 export function sourceLabel(s: TrafficSession): string | null {
-  if (s.atype === "F") return "FB";
-  if (s.atype === "G") return "G";
   if (s.from) return s.from;
   if (s.ref) return s.ref.replace(/^www\./, "");
   return null;

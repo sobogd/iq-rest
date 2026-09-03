@@ -16,8 +16,7 @@ import { PrismaService } from "../prisma/prisma.service";
 import { AdminGuard } from "./admin.guard";
 
 // Admin read surface for the cookieless analytics-v2 pipeline (sessions_new /
-// events_new). Lives in the admin module because AdminGuard needs AuthModule,
-// which itself depends on AnalyticsV2Module for the conversion hook.
+// events_new). Lives in the admin module because AdminGuard needs AuthModule.
 
 const MAX_ROWS = 2000;
 const DEFAULT_DAYS = 30;
@@ -27,10 +26,10 @@ const MAX_DELETE_IDS = 5000;
 
 const DATE_ONLY = /^\d{4}-\d{2}-\d{2}$/;
 
-/** Same rule the live sender uses (analytics-v2/conversion-v2.service.ts):
- *  the demo account is flagged in the DB, but its per-visitor aliases
- *  (demo+<something>@…) are not. Duplicated rather than imported so the admin
- *  read surface cannot drag the conversion pipeline into its module graph. */
+/** Marks demo-account visits for the admin UI: the demo account is flagged in
+ *  the DB, but its per-visitor aliases (demo+<something>@…) are not. Kept
+ *  local rather than shared — this is the only place in analytics-v2 that
+ *  needs it. */
 function isDemoEmail(email: string | null | undefined): boolean {
   return !!email && (email === "demo@iq-rest.com" || email.startsWith("demo+"));
 }
@@ -48,10 +47,6 @@ interface SessionListRow {
   theme: string | null;
   from: string | null;
   ref: string | null;
-  aid: string | null;
-  atype: string | null;
-  aidField: string | null;
-  clickAt: Date | null;
   userId: string | null;
   mergeCount: number;
   event_count: number;
@@ -64,8 +59,6 @@ interface SessionListRow {
   user_is_demo: boolean | null;
   /** All-time visit count of the account, this visit included (1 if signed out). */
   user_visits: number;
-  conv_status: string | null;
-  conv_network: string | null;
 }
 
 @Controller("admin")
@@ -74,8 +67,7 @@ export class AnalyticsV2AdminController {
   constructor(private readonly prisma: PrismaService) {}
 
   /** Session list over a window. One query: session row + event aggregates +
-   *  resolved account/venue + the conversion outcome (success wins over the
-   *  newest error, so a retried send shows as sent). */
+   *  resolved account/venue. */
   @Get("sessions")
   async sessions(
     @Query("from") from?: string,
@@ -101,7 +93,7 @@ export class AnalyticsV2AdminController {
     const rows = await this.prisma.$queryRaw<SessionListRow[]>(Prisma.sql`
       SELECT
         s.id, s."firstAt", s."lastAt", s.device, s.os, s.country, s.region, s.city,
-        s.lang, s.theme, s."from", s.ref, s.aid, s.atype, s."aidField", s."clickAt",
+        s.lang, s.theme, s."from", s.ref,
         s."userId", s."mergeCount",
         ev.event_count,
         ev.page_count,
@@ -128,9 +120,7 @@ export class AnalyticsV2AdminController {
         -- account been here", not "how many rows survived the current filter".
         CASE WHEN s."userId" IS NULL THEN 1
              ELSE (SELECT COUNT(*)::int FROM sessions_new uv WHERE uv."userId" = s."userId")
-        END AS user_visits,
-        cs.status AS conv_status,
-        cs.network AS conv_network
+        END AS user_visits
       FROM sessions_new s
       LEFT JOIN LATERAL (
         SELECT
@@ -150,13 +140,6 @@ export class AnalyticsV2AdminController {
         WHERE e."sessionId" = s.id
       ) ev ON TRUE
       LEFT JOIN users u ON u.id = s."userId"
-      LEFT JOIN LATERAL (
-        SELECT c.status, c.network
-        FROM conversion_sends_new c
-        WHERE c."sessionId" = s.id
-        ORDER BY (c.status = 'success') DESC, c."createdAt" DESC
-        LIMIT 1
-      ) cs ON TRUE
       WHERE s."firstAt" >= ${fromDate} AND s."firstAt" < ${toDate}
       ${venueFilter}
       ORDER BY s."lastAt" DESC
@@ -191,10 +174,6 @@ export class AnalyticsV2AdminController {
         theme: r.theme,
         from: r.from,
         ref: r.ref,
-        aid: r.aid,
-        atype: r.atype,
-        aidField: r.aidField,
-        clickAt: r.clickAt ? r.clickAt.toISOString() : null,
         eventCount: r.event_count,
         pageCount: r.page_count,
         firstPage: r.first_page,
@@ -208,28 +187,21 @@ export class AnalyticsV2AdminController {
         restaurants: (r.restaurant_ids ?? [])
           .filter((v): v is string => !!v)
           .map((id) => ({ id, title: venueTitle.get(id) ?? id })),
-        convStatus: r.conv_status,
-        convNetwork: r.conv_network,
       })),
     };
   }
 
-  /** One session: every field plus its full event timeline and the raw
-   *  conversion-send journal (Meta/Google responses). */
+  /** One session: every field plus its full event timeline. */
   @Get("sessions/:id")
   async session(@Param("id") id: string) {
     const session = await this.prisma.sessionNew.findUnique({ where: { id } });
     if (!session) throw new NotFoundException("session not found");
 
-    const [events, sends, user] = await Promise.all([
+    const [events, user] = await Promise.all([
       this.prisma.eventNew.findMany({
         where: { sessionId: id },
         orderBy: { at: "asc" },
         select: { id: true, page: true, action: true, name: true, at: true, restaurantId: true, locale: true },
-      }),
-      this.prisma.conversionSendNew.findMany({
-        where: { sessionId: id },
-        orderBy: { createdAt: "asc" },
       }),
       session.userId
         ? this.prisma.user.findUnique({
@@ -265,11 +237,6 @@ export class AnalyticsV2AdminController {
       : [];
     const venueTitle = new Map(venues.map((v) => [v.id, v.title]));
 
-    // Same tie-break as the list query: the newest success wins (a retried send
-    // must read as sent), otherwise the newest failure. `sends` is ascending.
-    const successes = sends.filter((x) => x.status === "success");
-    const convOutcome = successes[successes.length - 1] ?? sends[sends.length - 1] ?? null;
-
     // The detail must carry the SAME shape the list does — the UI types both as
     // one TrafficSession, so a field present only in the list reads back as
     // undefined here. The aggregates come from the events already loaded.
@@ -279,7 +246,6 @@ export class AnalyticsV2AdminController {
         ...rest,
         firstAt: session.firstAt.toISOString(),
         lastAt: session.lastAt.toISOString(),
-        clickAt: session.clickAt ? session.clickAt.toISOString() : null,
         // The hash is the raw visit key — of no use in the UI and better not
         // echoed around; expose only a short prefix for eyeballing duplicates.
         hash: session.hash.slice(0, 12),
@@ -294,15 +260,12 @@ export class AnalyticsV2AdminController {
         // venueIds keeps the order of `events` (ascending `at`), i.e. first
         // venue touched first — the same rule the session list applies.
         restaurants: venueIds.map((vid) => ({ id: vid, title: venueTitle.get(vid) ?? vid })),
-        convStatus: convOutcome?.status ?? null,
-        convNetwork: convOutcome?.network ?? null,
       },
       events: events.map((e) => ({
         ...e,
         at: e.at.toISOString(),
         restaurantTitle: e.restaurantId ? (venueTitle.get(e.restaurantId) ?? e.restaurantId) : null,
       })),
-      sends: sends.map((s) => ({ ...s, createdAt: s.createdAt.toISOString() })),
       otherVisits: otherVisits.map((v) => ({ ...v, firstAt: v.firstAt.toISOString() })),
     };
   }
@@ -318,13 +281,7 @@ export class AnalyticsV2AdminController {
     if (ids.length > MAX_DELETE_IDS) {
       throw new BadRequestException(`too many ids (max ${MAX_DELETE_IDS})`);
     }
-    // conversion_sends_new has no FK (it is a journal), so clear it explicitly —
-    // in the SAME transaction as the sessions, or a failure on the second step
-    // leaves live visits with their send history already destroyed.
-    const [, res] = await this.prisma.$transaction([
-      this.prisma.conversionSendNew.deleteMany({ where: { sessionId: { in: ids } } }),
-      this.prisma.sessionNew.deleteMany({ where: { id: { in: ids } } }),
-    ]);
+    const res = await this.prisma.sessionNew.deleteMany({ where: { id: { in: ids } } });
     return { deleted: res.count };
   }
 }

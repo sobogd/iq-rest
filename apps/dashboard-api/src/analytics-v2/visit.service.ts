@@ -27,7 +27,6 @@ export interface VisitAttribution {
   from: string | null;
   ref: string | null;
   theme: string | null;
-  aid: { aid: string; atype: "F" | "G"; aidField: string } | null;
 }
 
 @Injectable()
@@ -38,7 +37,7 @@ export class VisitService {
    *  `seed` is only used when a row has to be created. */
   async resolveVisit(hash: string, userId: string | null, seed: VisitSeed, now: Date): Promise<SessionNew> {
     // Only rows still inside the idle window can continue; anything older is a
-    // finished visit and must not absorb new events (or lend out its click id).
+    // finished visit and must not absorb new events.
     const liveSince = new Date(now.getTime() - VISIT_IDLE_MS);
     const rows = await this.prisma.sessionNew.findMany({
       where: { hash, lastAt: { gte: liveSince } },
@@ -55,8 +54,8 @@ export class VisitService {
     }
 
     if (anon && userId) {
-      // Promote in place — keeps firstAt (the ad click) and every pre-login
-      // event on the row. Keyed off the visit's own start so two racing
+      // Promote in place — keeps firstAt (the visit's first touch) and every
+      // pre-login event on the row. Keyed off the visit's own start so two racing
       // promotions produce the same key and one of them loses cleanly.
       const key = visitKey(hash, userId, anon.firstAt);
       try {
@@ -123,15 +122,8 @@ export class VisitService {
 
   /** Move an anonymous row's events onto the signed-in row and drop it. */
   private async fold(anon: SessionNew, target: SessionNew, now: Date): Promise<SessionNew> {
-    const [, , merged] = await this.prisma.$transaction([
+    const [, merged] = await this.prisma.$transaction([
       this.prisma.eventNew.updateMany({
-        where: { sessionId: anon.id },
-        data: { sessionId: target.id },
-      }),
-      // The journal has no FK, so its rows would be orphaned by the delete
-      // below — and an orphaned success row stops blocking a re-send, which
-      // means the same registration could be reported twice.
-      this.prisma.conversionSendNew.updateMany({
         where: { sessionId: anon.id },
         data: { sessionId: target.id },
       }),
@@ -145,9 +137,6 @@ export class VisitService {
           ...(target.from === null && anon.from !== null ? { from: anon.from } : {}),
           ...(target.ref === null && anon.ref !== null ? { ref: anon.ref } : {}),
           ...(target.theme === null && anon.theme !== null ? { theme: anon.theme } : {}),
-          ...(target.aid === null && anon.aid !== null
-            ? { aid: anon.aid, atype: anon.atype, aidField: anon.aidField, clickAt: anon.clickAt }
-            : {}),
         },
       }),
       // deleteMany, not delete: two concurrent batches can both decide to fold,
@@ -171,13 +160,7 @@ export class VisitService {
     // Each field is written under a "still empty" condition instead of being
     // decided from the `session` object, which was read before any concurrent
     // batch got its write in. Otherwise two batches racing to be first with a
-    // click id both see null and the loser overwrites the winner.
-    if (attr.aid && !session.aid) {
-      await this.prisma.sessionNew.updateMany({
-        where: { id: session.id, aid: null },
-        data: { aid: attr.aid.aid, atype: attr.aid.atype, aidField: attr.aid.aidField, clickAt: now },
-      });
-    }
+    // value both see null and the loser overwrites the winner.
     if (attr.from && !session.from) {
       await this.prisma.sessionNew.updateMany({
         where: { id: session.id, from: null },

@@ -1,8 +1,8 @@
 "use client";
 
-// Admin: one traffic visit — every stored field, the full event timeline (with
-// the venue active at each step) and the raw conversion-send journal. Read-only
-// except for deleting the visit.
+// Admin: one traffic visit — every stored field and the full event timeline
+// (with the venue active at each step). Read-only except for deleting the
+// visit.
 
 import { useCallback, useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
@@ -133,7 +133,6 @@ export function TrafficSessionPage({ id, restaurantId }: { id: string; restauran
         ) : data ? (
           <>
             <SessionCard data={data} />
-            <SendsCard data={data} />
             <Timeline data={data} />
             <OtherVisits data={data} onOpen={(id) => router.push({ name: "settings.admin.trafficSession", id })} />
           </>
@@ -180,13 +179,6 @@ function SessionCard({ data }: { data: TrafficSessionDetail }) {
         <div>
           <Row label="From" value={s.from} />
           <Row label="Referrer" value={s.ref} />
-          <Row
-            label="Click id"
-            value={s.aid ? `${s.aidField}: ${s.aid}` : s.atype ? "(purged after 7 days)" : null}
-            mono
-          />
-          <Row label="Source" value={s.atype === "F" ? "Facebook / Meta" : s.atype === "G" ? "Google Ads" : null} />
-          <Row label="Clicked at" value={s.clickAt ? hmsDate(s.clickAt) : null} />
           <Row label="Account" value={s.userEmail} />
           <Row
             label="Venues"
@@ -195,47 +187,6 @@ function SessionCard({ data }: { data: TrafficSessionDetail }) {
           <Row label="Merged" value={(s.mergeCount ?? 0) > 0 ? `${s.mergeCount} anonymous row(s)` : null} />
           <Row label="Hash" value={`${s.hash}…`} mono />
         </div>
-      </div>
-    </div>
-  );
-}
-
-function SendsCard({ data }: { data: TrafficSessionDetail }) {
-  const [openId, setOpenId] = useState<string | null>(null);
-  if (data.sends.length === 0) return null;
-  return (
-    <div className="bg-card border border-border rounded-xl overflow-hidden">
-      <div className="px-4 py-2 border-b border-border text-[10px] uppercase tracking-wide text-muted-foreground">
-        Conversion sends
-      </div>
-      <div className="divide-y divide-border">
-        {data.sends.map((snd) => (
-          <div key={snd.id}>
-            <button
-              type="button"
-              onClick={() => setOpenId(openId === snd.id ? null : snd.id)}
-              className="w-full flex items-center gap-2 px-4 py-2 text-xs text-left hover:bg-muted/40"
-            >
-              <span
-                className={
-                  "text-[10px] rounded px-1.5 py-0.5 " +
-                  (snd.status === "success"
-                    ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
-                    : "bg-red-500/15 text-red-700 dark:text-red-400")
-                }
-              >
-                {snd.status}
-              </span>
-              <span className="text-foreground">{snd.network}</span>
-              <span className="ml-auto text-muted-foreground tabular-nums">{hmsDate(snd.createdAt)}</span>
-            </button>
-            {openId === snd.id ? (
-              <pre className="px-4 pb-3 text-[10px] font-mono text-muted-foreground whitespace-pre-wrap break-all">
-                {JSON.stringify(snd.response, null, 2)}
-              </pre>
-            ) : null}
-          </div>
-        ))}
       </div>
     </div>
   );
