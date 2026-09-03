@@ -438,7 +438,6 @@ export function BrandingSettingsPage({
  <p className="text-xs text-red-600 mt-1">{tg("slugError")}</p>
  ) : null}
  </div>
- <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <div className="text-sm font-medium text-foreground">{tb("accentLabel")}</div>
  <p className="text-xs text-muted-foreground mb-3 mt-0.5 leading-snug">
@@ -597,7 +596,7 @@ export function BrandingSettingsPage({
  {tb("backgroundTip")}
  </p>
  </div>
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6 xl:col-span-full">
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <div className="text-sm font-medium text-foreground mb-1">
  {tb("logoLabel", { defaultValue: "Logo" })}
  </div>
@@ -706,7 +705,7 @@ export function BrandingSettingsPage({
  ) : null}
  </div>
  </div>
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6 xl:col-span-full">
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <div className="text-sm font-medium text-foreground mb-1">
  {tb("titleScaleLabel", { defaultValue: "Title size" })}
  </div>
@@ -746,7 +745,7 @@ export function BrandingSettingsPage({
  })}
  </div>
  </div>
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6 xl:col-span-full">
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <div className="text-sm font-medium text-foreground mb-1">
  {tb("langSwitcherLabel", { defaultValue: "Language switcher" })}
  </div>
@@ -779,7 +778,7 @@ export function BrandingSettingsPage({
  })}
  </div>
  </div>
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6 xl:col-span-full">
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <div className="text-sm font-medium text-foreground mb-1">
  {tb("layoutLabel", { defaultValue: "Menu layout" })}
  </div>
