@@ -141,7 +141,7 @@ export function DemoButton({
   const handleOpen = () => {
     setOpen(true);
     setLoading(true);
-    analytics.track("Click", `${trackName} open`);
+    analytics.track("Click", `${trackName} open`, undefined, { instant: true });
   };
 
   const handleClose = () => {

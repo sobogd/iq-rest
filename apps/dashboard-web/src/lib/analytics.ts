@@ -46,11 +46,11 @@ export interface TrackCtx {
   ref?: string;
 }
 
-// The dashboard is chatty (a save is focus → click → save within a second), so
-// events are buffered and posted in batches: one request instead of ten, one
-// identity resolution per batch server-side, and no 429s against the endpoint's
-// 10 req/s burst limit.
-const FLUSH_MS = 2000;
+// Every event fires immediately (see `trackEvent()`) — no buffer window. The
+// dashboard is chatty (a save is focus → click → save within a second), so
+// `MAX_BATCH` still matters: while one request is in flight, events that land
+// in that window queue up and go out together in the next `send()`, which is
+// also what keeps this under the endpoint's 10 req/s burst limit.
 const MAX_BATCH = 20;
 // The server rejects anything larger, so this is the hard ceiling for the
 // one-shot unload beacon (which should drain as much as it legally can).
@@ -88,13 +88,6 @@ function body(events: QueuedEvent[], ctx: TrackCtx | undefined): string {
     ...(ctx ? { ctx } : {}),
     ...(visitToken ? { tok: visitToken } : {}),
   });
-}
-
-/** Timer callback: the handle is spent, so clear it before sending — the
- *  scheduler checks it to decide whether a flush is already pending. */
-function timedFlush(): void {
-  flushTimer = null;
-  send();
 }
 
 function clearTimers(): void {
@@ -175,10 +168,8 @@ function send(): void {
     .catch(() => onFailure(events, ctx))
     .finally(() => {
       sending = false;
-      // Drain whatever piled up while the request was in flight.
-      if (queue.length > 0 && !flushTimer && !retryTimer) {
-        flushTimer = setTimeout(timedFlush, FLUSH_MS);
-      }
+      // Drain whatever piled up while the request was in flight, right away.
+      if (queue.length > 0 && !retryTimer) send();
     });
 }
 
@@ -277,12 +268,11 @@ export function trackEvent(action: string, name: string, ctx?: TrackCtx, opts?: 
   if (queue.length > MAX_QUEUE) queue = queue.slice(queue.length - MAX_QUEUE);
   if (ctx) pendingCtx = { ...pendingCtx, ...ctx };
 
-  if (queue.length >= MAX_BATCH || opts?.instant) {
-    // Goes out over the retryable path, not the beacon — this is an ordinary
-    // flush, not a page teardown.
-    clearTimers();
-    send();
-    return;
-  }
-  if (!flushTimer && !retryTimer) flushTimer = setTimeout(timedFlush, FLUSH_MS);
+  // Every event fires immediately, over the retryable path (not the beacon —
+  // this is an ordinary flush, not a page teardown). `send()`'s own
+  // single-flight guard is the only rate limiter left: while a request is in
+  // flight, a new event just sits in `queue` until that request's `finally`
+  // below calls `send()` again.
+  clearTimers();
+  send();
 }
