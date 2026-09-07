@@ -11,7 +11,7 @@ const BRAND_JSON_LD = JSON.stringify({
       logo: {
         "@type": "ImageObject",
         url: `${SITE}/logo.png`,
-        width: 512,
+        width: 1408,
         height: 512,
       },
       sameAs: ["https://www.facebook.com/people/IQ-Rest/100066874241445/"],

@@ -43,7 +43,7 @@ const JSON_LD = JSON.stringify({
     "@id": `${SITE}/#organization`,
     name: "IQ Rest",
     url: SITE,
-    logo: `${SITE}/logo.png`,
+    logo: { "@type": "ImageObject", url: `${SITE}/logo.png`, width: 1408, height: 512 },
     founder: { "@type": "Person", name: "Bogdan Sokolov" },
     address: {
       "@type": "PostalAddress",

@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   // `%s` passes the page title through verbatim; `default` covers segments
   // that set no title of their own.
   title: {
-    default: "IQ Rest - QR Menu for Restaurant & Cafe | Digital Menu Website",
+    default: "Digital Menu, Kitchen Display and Reservations — IQ Rest",
     template: "%s"
   },
   description:
-    "Create professional QR menu for restaurant and cafe in minutes. Digital menu website solution with instant updates, multilingual support, and analytics. Perfect for restaurants and cafes.",
+    "Run your restaurant from one app: multilingual digital menu, kitchen display and 24/7 reservations. Launch in 5 minutes. 14 days free, no card required.",
   authors: [{ name: "IQ Rest" }],
   creator: "IQ Rest",
   publisher: "IQ Rest",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     alternateLocale: ['ar_SA', 'bg_BG', 'ca_ES', 'cs_CZ', 'da_DK', 'de_DE', 'el_GR', 'es_ES', 'et_EE', 'fa_IR', 'fi_FI', 'fr_FR', 'ga_IE', 'hr_HR', 'hu_HU', 'is_IS', 'it_IT', 'ja_JP', 'ko_KR', 'lt_LT', 'lv_LV', 'nl_NL', 'no_NO', 'pl_PL', 'pt_PT', 'ro_RO', 'ru_RU', 'sk_SK', 'sl_SI', 'sr_RS', 'sv_SE', 'tr_TR', 'uk_UA', 'zh_CN'],
     url: 'https://iq-rest.com',
-    title: 'IQ Rest - QR Menu for Restaurant & Cafe',
-    description: 'Create professional QR menu for restaurant and cafe in minutes. Digital menu website solution with instant updates.',
+    title: 'Digital Menu, Kitchen Display and Reservations',
+    description: 'Run your restaurant from one app: multilingual digital menu, kitchen display and 24/7 reservations. Launch in 5 minutes. 14 days free, no card required.',
     siteName: 'IQ Rest',
     images: [
       {
@@ -59,8 +59,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'IQ Rest - QR Menu for Restaurant & Cafe',
-    description: 'Create professional QR menu for restaurant and cafe in minutes.',
+    title: 'Digital Menu, Kitchen Display and Reservations',
+    description: 'Run your restaurant from one app: multilingual digital menu, kitchen display and 24/7 reservations. Launch in 5 minutes. 14 days free, no card required.',
     images: ['/og-image.png'],
   },
   icons: {

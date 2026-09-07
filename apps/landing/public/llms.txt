@@ -29,6 +29,27 @@ Build-your-plan model: the digital menu is the base module, everything else is a
 - [Table booking system](https://iq-rest.com/table-booking-system): 24/7 self-service reservations.
 - [Kitchen display system](https://iq-rest.com/kitchen-display-system): live kitchen tickets on any screen.
 - [QR code menu for restaurants](https://iq-rest.com/qr-code-menu-for-restaurants): QR menu setup and use.
+- [About IQ Rest](https://iq-rest.com/about): who we are, the founder, and how support works.
+- [Help guide](https://iq-rest.com/help): step-by-step product guide and FAQ.
+
+## Blog
+
+- [Blog](https://iq-rest.com/blog): guides and comparisons for restaurant owners.
+- [Digital menu vs paper menu](https://iq-rest.com/blog/digital-menu-vs-paper-menu)
+- [How to create a QR code menu](https://iq-rest.com/blog/how-to-create-qr-code-menu)
+- [QR code to a PDF menu](https://iq-rest.com/blog/pdf-menu-vs-digital-menu)
+- [QR code menu cost](https://iq-rest.com/blog/qr-code-menu-cost)
+- [Free QR code menu](https://iq-rest.com/blog/free-qr-code-menu)
+- [Allergens on the menu: EU rules](https://iq-rest.com/blog/allergen-menu-restaurant-eu-rules)
+- [Restaurant menu translation](https://iq-rest.com/blog/restaurant-menu-translation)
+- [Kitchen display system](https://iq-rest.com/blog/kitchen-display-system-for-restaurants)
+- [Restaurant table management](https://iq-rest.com/blog/restaurant-table-management)
+- [Restaurant no-shows](https://iq-rest.com/blog/restaurant-no-shows)
+- [Own ordering vs delivery apps](https://iq-rest.com/blog/online-ordering-vs-delivery-apps)
+
+## Full reference
+
+- [Full reference](https://iq-rest.com/llms-full.txt): the complete, unabridged product reference for language models.
 
 ## Facts
 
