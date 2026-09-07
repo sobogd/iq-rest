@@ -6,9 +6,17 @@ import { analytics, isValidPageLabel, searchReferrerHost, setTrackLocale, type T
 import { readBillingCurrencyFromDocument } from "@/lib/country-currency-map";
 import { sectionLabel } from "@/lib/track-keys";
 
-const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
-const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
 const FROM_REGEX = /^[A-Za-z0-9_.-]{1,64}$/;
+// Click-id params the analytics server keeps as attribution (mirrors the
+// server-side allowlist — anything else in the query never leaves the page).
+const CLICK_ID_KEYS = new Set(["gclid", "gbraid", "wbraid", "fbclid", "msclkid", "yclid"]);
+// UTM keys accepted by the server: utm_ + 1..24 lowercase alphanumerics or _.
+const UTM_KEY_RE = /^utm_[a-z0-9_]{1,24}$/i;
+// Client-side mirrors of the server caps: total captured params, and per-value
+// length limits (click-id keys get more room than utm values).
+const Q_MAX_KEYS = 16;
+const Q_MAX_CLICK_ID = 512;
+const Q_MAX_UTM = 256;
 const CURRENCY_REGEX = /^[A-Z]{3}$/;
 
 // Document-scoped (not pageview-scoped) facts. They describe the visit, not
@@ -43,14 +51,20 @@ function collectCtxAndCleanUrl(): TrackCtx | undefined {
   const ctx: TrackCtx = {};
   const sp = new URLSearchParams(window.location.search);
 
-  const fbclid = sp.get("fbclid");
-  if (fbclid && FBCLID_REGEX.test(fbclid)) ctx.fbclid = fbclid;
-  for (const key of ["gclid", "gbraid", "wbraid"] as const) {
-    const v = sp.get(key);
-    if (v && GCLID_REGEX.test(v)) ctx[key] = v;
-  }
   const from = sp.get("from");
   if (from && FROM_REGEX.test(from)) ctx.from = from;
+  // Allowlisted ad/campaign params (?gclid=, ?utm_source=, …) — the paid
+  // click and campaign equivalent of ?from=. Values stay RAW: the server
+  // validates shape and length, so do not lower-case or sanitize here.
+  let q: Record<string, string> | undefined;
+  for (const [key, value] of sp) {
+    if (q && Object.keys(q).length >= Q_MAX_KEYS) break;
+    const isClickId = CLICK_ID_KEYS.has(key);
+    if (!isClickId && !UTM_KEY_RE.test(key)) continue;
+    if (value.length > (isClickId ? Q_MAX_CLICK_ID : Q_MAX_UTM)) continue;
+    (q ??= {})[key] = value;
+  }
+  if (q) ctx.q = q;
   const ref = searchReferrerHost();
   if (ref) ctx.ref = ref;
   if (window.matchMedia) {
@@ -71,12 +85,12 @@ function collectCtxAndCleanUrl(): TrackCtx | undefined {
   return Object.keys(ctx).length > 0 ? ctx : undefined;
 }
 
-/** Click ids / ?from= only ever come from a fresh entry URL, so seeing one
- *  means a genuinely new attribution — worth sending even mid-visit. `ref` is
- *  derived from document.referrer, which survives soft navigations and would
+/** Click ids / utm_* / ?from= only ever come from a fresh entry URL, so seeing
+ *  one means a genuinely new attribution — worth sending even mid-visit. `ref`
+ *  is derived from document.referrer, which survives soft navigations and would
  *  otherwise re-attribute the session on every route change. */
 function hasFreshAttribution(ctx: TrackCtx): boolean {
-  return Boolean(ctx.fbclid || ctx.gclid || ctx.gbraid || ctx.wbraid || ctx.from);
+  return Boolean(ctx.from || (ctx.q && Object.keys(ctx.q).length > 0));
 }
 
 /** Which currency this visitor was quoted, as its own event type so the admin

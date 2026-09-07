@@ -42,13 +42,14 @@ export function isValidPageLabel(label: string): boolean {
 }
 
 export interface TrackCtx {
-  fbclid?: string;
-  gclid?: string;
-  gbraid?: string;
-  wbraid?: string;
   from?: string;
   ref?: string;
   theme?: string;
+  /** Captured URL query params (allowlisted click-id / utm_* keys) sent with
+   *  the visit attribution. The server keeps only those keys (iq-metrix
+   *  src/lib/query-params.ts); the client mirrors the allowlist so non-ad
+   *  junk in the URL never leaves the page. */
+  q?: Record<string, string>;
 }
 
 // Current page label, set by PageTracker on mount so deep components (header,

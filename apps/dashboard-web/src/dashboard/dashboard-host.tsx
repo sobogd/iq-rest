@@ -68,12 +68,34 @@ interface SubData {
 // query). Consume them once on boot: pass the source as batch ctx, so the
 // server writes it onto the visit row (`SessionNew.from`, first-write-wins)
 // and it shows on the session in the admin sessions list — no event of its
-// own. Strip ONLY these two params — the rest of the query string belongs to
-// SPA routing (?demo= etc).
+// own. Ad clicks also land with click ids / utm_* in the URL — capture those
+// into ctx.q the same way. Strip ONLY the params consumed here (from/ec plus
+// the allowlisted ad/utm keys) — the rest of the query string belongs to SPA
+// routing (?demo= etc).
 const ATTRIBUTION_PARAMS = ["from", "ec"];
+// Allowlisted ad/campaign query params (mirror of iq-metrix's server-side
+// allowlist — the server keeps only these keys).
+const CLICK_ID_KEYS = new Set(["gclid", "gbraid", "wbraid", "fbclid", "msclkid", "yclid"]);
+const UTM_KEY_RE = /^utm_[a-z0-9_]{1,24}$/i;
+const Q_MAX_KEYS = 16;
+const Q_MAX_CLICK_ID = 512;
+const Q_MAX_UTM = 256;
 function consumeAttributionParams(): void {
   const sp = new URLSearchParams(window.location.search);
-  if (!ATTRIBUTION_PARAMS.some((k) => sp.get(k))) return;
+
+  // Allowlisted ad/utm params, kept RAW (the server validates shape/length).
+  const q: Record<string, string> = {};
+  for (const [key, value] of Array.from(sp.entries())) {
+    if (ATTRIBUTION_PARAMS.includes(key)) continue; // consumed below
+    const isClickId = CLICK_ID_KEYS.has(key);
+    if (!isClickId && !UTM_KEY_RE.test(key)) continue;
+    if (Object.keys(q).length >= Q_MAX_KEYS) break;
+    if (value.length > (isClickId ? Q_MAX_CLICK_ID : Q_MAX_UTM)) continue;
+    q[key] = value;
+    sp.delete(key);
+  }
+  if (Object.keys(q).length > 0) queueCtx({ q });
+
   for (const k of ATTRIBUTION_PARAMS) {
     const raw = sp.get(k);
     sp.delete(k);

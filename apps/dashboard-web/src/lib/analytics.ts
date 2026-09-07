@@ -44,6 +44,11 @@ function searchReferrerHost(): string | null {
 export interface TrackCtx {
   from?: string;
   ref?: string;
+  /** Captured URL query params (allowlisted click-id / utm_* keys) sent with
+   *  the visit attribution. The server keeps only those keys (iq-metrix
+   *  src/lib/query-params.ts); the client mirrors the allowlist so non-ad
+   *  junk in the URL never leaves the page. */
+  q?: Record<string, string>;
 }
 
 // Every event fires immediately (see `trackEvent()`) — no buffer window. The

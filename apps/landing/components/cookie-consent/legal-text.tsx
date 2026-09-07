@@ -26,7 +26,7 @@ export const OPERATOR = {
 export const COOKIE_POLICY_TITLE = "Cookie Policy";
 
 // Each document carries its own revision date.
-export const COOKIE_LAST_UPDATED = "August 10, 2026";
+export const COOKIE_LAST_UPDATED = "September 7, 2026";
 
 export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
   {
@@ -64,15 +64,15 @@ export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[
     ],
   },
   {
-    heading: "5. Ad-click identifiers (gclid, fbclid)",
+    heading: "5. Advertising measurement (ad-click identifiers)",
     paragraphs: [
-      `If you arrive at the Site by clicking one of our own ads, the ad platform includes a click identifier in the URL (Google Ads: gclid; Meta: fbclid). We store this identifier in our own database for up to 90 days and use it to report conversions back to the ad platform (server-to-server) so we can measure which ads work. This relies on our legitimate interest in evaluating advertising effectiveness (GDPR Art. 6(1)(f)). It does not require a cookie banner because no cookie is set on your device for this purpose. You may object at any time by emailing ${OPERATOR.contactEmail} with the click identifier from your original ad URL.`,
+      `If you arrive at the Site by clicking one of our own ads, the ad platform includes a click identifier in the URL (Google Ads: gclid; Meta: fbclid). We capture that identifier on our own servers solely to measure how many visits and sign-ups each of our ads brings. The raw identifier is stored for at most 24 hours and is then irreversibly anonymised (hashed with an ephemeral key that is destroyed immediately), after which it can no longer be linked to you or to a specific ad click. It is never shared with the ad platforms or any third party. This relies on our legitimate interest in evaluating the effectiveness of our own advertising (GDPR Art. 6(1)(f)). It does not require a cookie banner because no cookie is set on your device for this purpose. You may object at any time by emailing ${OPERATOR.contactEmail} with the click identifier from your original ad URL.`,
     ],
   },
   {
     heading: "6. No marketing or third-party trackers",
     paragraphs: [
-      `We do not use advertising cookies, retargeting pixels, third-party marketing trackers, Google Analytics, Facebook Pixel, Hotjar, or similar services. The only advertising-related data leaving our servers is the server-to-server conversion reporting described above.`,
+      `We do not use advertising cookies, retargeting pixels, third-party marketing trackers, Google Analytics, Facebook Pixel, Hotjar, or similar services. No advertising-related data leaves our servers.`,
     ],
   },
   {
@@ -99,14 +99,14 @@ export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[
  *  per GDPR Article 13/14 transparency requirements. */
 export const PRIVACY_POLICY_TITLE = "Privacy Policy";
 
-export const PRIVACY_LAST_UPDATED = "August 10, 2026";
+export const PRIVACY_LAST_UPDATED = "September 7, 2026";
 
 export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
   {
     paragraphs: [
       `Last updated: ${PRIVACY_LAST_UPDATED}`,
       `This Privacy Policy explains how ${OPERATOR.brand} — a service operated by ${OPERATOR.legalName}, ${OPERATOR.status}, with fiscal address at ${OPERATOR.fiscalAddress} (Tax ID: ${OPERATOR.taxId}) ("${OPERATOR.brand}", "we", "us") — collects, uses, stores and protects your personal data when you use the ${OPERATOR.brand} platform at ${OPERATOR.domain} and its subdomains.`,
-      `The short version: everything you and your guests enter into the Service lives in our own database, on our own servers in the European Union. We run no third-party analytics or advertising trackers, and our own usage tracking contains no personal data.`,
+      `The short version: everything you and your guests enter into the Service lives in our own database, on our own servers in the European Union. We run no third-party analytics or advertising trackers, and our own usage tracking stores no personal data about you beyond the short-lived ad-click identifiers described in section 6.`,
       `We comply with the General Data Protection Regulation (GDPR), the Spanish Organic Law on Data Protection and Guarantee of Digital Rights (LOPDGDD), and the ePrivacy Directive.`,
     ],
   },
@@ -165,7 +165,7 @@ export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }
   {
     heading: "6. Advertising measurement (ad-click identifiers)",
     paragraphs: [
-      `If you arrive at our site by clicking one of our own ads, the ad platform appends a click identifier to the URL (Google Ads: gclid; Meta: fbclid). We store that identifier in our own database and, if you later sign up, report the conversion back to the ad platform server-to-server so we can tell which ads work. No pixel, tag, or tracker from these platforms runs on our site, and the identifier is not linked to your name or email in these reports.`,
+      `If you arrive at our site by clicking one of our own ads, the ad platform appends a click identifier to the URL (Google Ads: gclid; Meta: fbclid). We capture it on our own servers to measure which of our ads bring visitors and sign-ups. The raw identifier is stored for at most 24 hours and is then irreversibly anonymised (hashed with an ephemeral key that is destroyed), so it can no longer be linked to you or to a specific click. No pixel, tag, or tracker from these platforms runs on our site, and we never share the identifier with the ad platforms or other third parties.`,
       `This processing relies on our legitimate interest in measuring our own advertising (GDPR Art. 6(1)(f)). You may object at any time by emailing ${OPERATOR.contactEmail} (include the click identifier from your original ad URL if you want past attribution excluded).`,
     ],
   },
@@ -184,9 +184,9 @@ export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }
       `Stripe — payment processing. Receives your billing email and the amount and product of each transaction. Privacy: https://stripe.com/privacy`,
       `Hetzner Online GmbH — hosts our server (Germany, EU). A data processor under a Data Processing Agreement; cannot access database contents in normal operation.`,
       `Cloudflare — CDN and DDoS protection in front of our server; sees inbound requests as any network carrier does. A data processor.`,
-      `Google — only in three narrow cases: if you choose "Sign in with Google" (standard OAuth: email, name, picture); if you use the AI menu-import or translation features (the submitted images/text are processed by Google's AI API and not used to train models); and server-to-server ad-conversion reports described in section 6.`,
+      `Google — only in two narrow cases: if you choose "Sign in with Google" (standard OAuth: email, name, picture); or if you use the AI menu-import or translation features (the submitted images/text are processed by Google's AI API and not used to train models).`,
       `Apple — only if you choose "Sign in with Apple" (standard OAuth scope).`,
-      `Meta — only if you message us on WhatsApp (WhatsApp relays the messages, as with any WhatsApp conversation) and for the server-to-server ad-conversion reports described in section 6.`,
+      `Meta — only if you message us on WhatsApp (WhatsApp relays the messages, as with any WhatsApp conversation).`,
     ],
   },
   {
@@ -202,7 +202,7 @@ export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }
       `OTPs — deleted immediately on successful verification or after 15 minutes (whichever comes first).`,
       `Reservations and orders — retained for as long as you keep your restaurant in the Service (they power your order history and statistics), then removed with the account.`,
       `Anonymous usage events — retained without a fixed limit; they contain no personal data.`,
-      `Ad-click identifiers — used for conversion reporting for up to 90 days after the click.`,
+      `Ad-click identifiers — the raw identifier is retained for at most 24 hours on our own servers and then irreversibly anonymised; it is never shared with the ad platforms.`,
       `Invoicing data — retained for 6 years as required by Spanish tax law (Ley General Tributaria).`,
       `Support messages — retained for 24 months after the last reply.`,
     ],
