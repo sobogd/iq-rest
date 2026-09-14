@@ -1,7 +1,7 @@
 // One-off: send a personal-email template to a mail-tester.com inbox to check
 // the spam score. Reuses the real templates + the exact HTML/text/header shape
-// from MailService.sendPersonalEmail. SMTP creds are read from
-// soqrmenuweb/.env (the shared source of truth) — nothing is printed.
+// from MailService.sendPersonalEmail. SMTP creds are read from the monorepo's
+// root .env (the shared source of truth, i.e. the Brevo relay) — nothing is printed.
 //
 // Run: npx ts-node scripts/send-test-mailtester.ts <to-address> [welcome|menu]
 
@@ -41,13 +41,13 @@ async function main() {
   const kind = process.argv[3] || "menu";
   if (!to) throw new Error("usage: ts-node scripts/send-test-mailtester.ts <to-address> [welcome|menu]");
 
-  const env = loadEnv(resolve(__dirname, "../../soqrmenuweb/.env"));
+  const env = loadEnv(resolve(__dirname, "../../../.env"));
   const host = env.SMTP_HOST;
   const port = Number(env.SMTP_PORT || 587);
   const user = env.SMTP_USER;
   const pass = env.SMTP_PASS;
   const from = env.FROM_EMAIL || user;
-  if (!host || !user || !pass || !from) throw new Error("SMTP creds missing in soqrmenuweb/.env");
+  if (!host || !user || !pass || !from) throw new Error("SMTP creds missing in the root .env");
 
   const { t, dir, url } = pick(kind, "en");
   const button = `<p style="margin:0 0 24px"><a href="${url}" style="display:inline-block;background:#FF6229;color:#ffffff;text-decoration:none;font-size:16px;font-weight:600;padding:12px 24px;border-radius:8px">${t.cta}</a></p>`;

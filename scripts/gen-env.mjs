@@ -142,15 +142,11 @@ write("public-menu", {
 });
 
 // ------------------------------- landing --------------------------------
+// No SMTP_* here: the landing sends no mail (the auth modal talks to
+// dashboard-api, which owns MailService).
 write("landing", {
   NODE_ENV: "development",
   DATABASE_URL: E.DATABASE_URL,
-  SMTP_HOST: E.SMTP_HOST,
-  SMTP_PORT: E.SMTP_PORT,
-  SMTP_USER: E.SMTP_USER,
-  SMTP_PASS: E.SMTP_PASS,
-  FROM_EMAIL: E.FROM_EMAIL,
-  TO_EMAIL: E.TO_EMAIL,
   S3_HOST: E.S3_HOST,
   S3_KEY: E.S3_KEY,
   S3_TOKEN: E.S3_TOKEN,
