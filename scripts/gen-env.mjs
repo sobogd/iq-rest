@@ -142,11 +142,10 @@ write("public-menu", {
 });
 
 // ------------------------------- landing --------------------------------
-// No SMTP_* here: the landing sends no mail (the auth modal talks to
-// dashboard-api, which owns MailService).
+// No SMTP_* and no DATABASE_URL here: the landing sends no mail (the auth modal
+// talks to dashboard-api, which owns MailService) and ships no Prisma client.
 write("landing", {
   NODE_ENV: "development",
-  DATABASE_URL: E.DATABASE_URL,
   S3_HOST: E.S3_HOST,
   S3_KEY: E.S3_KEY,
   S3_TOKEN: E.S3_TOKEN,
