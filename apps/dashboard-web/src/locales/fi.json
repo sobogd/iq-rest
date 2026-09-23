@@ -557,7 +557,15 @@
           "lunchOutside": "Tauon on oltava aukioloaikojen sisällä."
         },
         "timezoneLabel": "Aikavyöhyke",
-        "timezoneTip": "Käytetään varausaikojen laskemiseen paikallista aikaa käyttäen."
+        "timezoneTip": "Käytetään varausaikojen laskemiseen paikallista aikaa käyttäen.",
+        "eventOnlyLabel": "Vain tietyt päivät (tapahtumat)",
+        "eventOnlyTip": "Asiakkaat voivat varata vain alla lueteltuja päiviä. Viikkoaikataulua ei huomioida, kun tämä asetus on käytössä.",
+        "eventScheduleIgnored": "Ohitetaan, kun tapahtumapäiviä on asetettu.",
+        "eventAddDate": "Lisää päivämäärä",
+        "eventRemoveDate": "Poista päivämäärä",
+        "eventEmptyError": "Lisää vähintään yksi päivämäärä.",
+        "eventDuplicateError": "Sama päivämäärä on lisätty kahdesti.",
+        "eventInvalidError": "Jokaisella rivillä on oltava päivämäärä sekä alkamisajan jälkeinen päättymisaika."
       },
       "languages": {
         "title": "Kielet",

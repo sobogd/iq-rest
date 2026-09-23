@@ -557,7 +557,15 @@
           "lunchOutside": "Pertrauka turi būti darbo valandomis."
         },
         "timezoneLabel": "Laiko juosta",
-        "timezoneTip": "Naudojama apskaičiuoti rezervacijų laikus pagal vietos laiką."
+        "timezoneTip": "Naudojama apskaičiuoti rezervacijų laikus pagal vietos laiką.",
+        "eventOnlyLabel": "Tik konkrečios datos (renginiai)",
+        "eventOnlyTip": "Svečiai gali rezervuoti tik žemiau nurodytomis datomis. Įjungus šią parinktį, savaitės tvarkaraštis ignoruojamas.",
+        "eventScheduleIgnored": "Ignoruojama, kol nustatytos renginių datos.",
+        "eventAddDate": "Pridėti datą",
+        "eventRemoveDate": "Pašalinti datą",
+        "eventEmptyError": "Pridėkite bent vieną datą.",
+        "eventDuplicateError": "Ta pati data nurodyta du kartus.",
+        "eventInvalidError": "Kiekvienoje eilutėje turi būti data, o pabaigos laikas turi būti vėlesnis nei pradžios."
       },
       "languages": {
         "title": "Kalbos",

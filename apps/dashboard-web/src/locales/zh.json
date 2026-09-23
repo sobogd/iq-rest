@@ -557,7 +557,15 @@
           "lunchOutside": "午休必须在营业时间内。"
         },
         "timezoneLabel": "时区",
-        "timezoneTip": "用于按本地时间计算预订时间。"
+        "timezoneTip": "用于按本地时间计算预订时间。",
+        "eventOnlyLabel": "仅限特定日期（活动）",
+        "eventOnlyTip": "顾客仅可预订下方列出的日期。开启此项后，将忽略每周排程。",
+        "eventScheduleIgnored": "设置活动日期后将被忽略。",
+        "eventAddDate": "添加日期",
+        "eventRemoveDate": "删除日期",
+        "eventEmptyError": "请至少添加一个日期。",
+        "eventDuplicateError": "同一日期被列出两次。",
+        "eventInvalidError": "每行都需填写日期，且结束时间须晚于开始时间。"
       },
       "languages": {
         "title": "语言",

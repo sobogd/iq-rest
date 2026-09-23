@@ -557,7 +557,15 @@
           "lunchOutside": "Pauza musí být uvnitř otevírací doby."
         },
         "timezoneLabel": "Časové pásmo",
-        "timezoneTip": "Používá se k výpočtu časů rezervací v místním čase."
+        "timezoneTip": "Používá se k výpočtu časů rezervací v místním čase.",
+        "eventOnlyLabel": "Pouze konkrétní data (události)",
+        "eventOnlyTip": "Hosté mohou rezervovat pouze níže uvedená data. Běžný týdenní rozvrh je při této volbě ignorován.",
+        "eventScheduleIgnored": "Ignorováno při nastavení událostí.",
+        "eventAddDate": "Přidat datum",
+        "eventRemoveDate": "Odebrat datum",
+        "eventEmptyError": "Přidejte alespoň jedno datum.",
+        "eventDuplicateError": "Stejné datum je uvedeno dvakrát.",
+        "eventInvalidError": "Každý řádek musí mít datum a čas konce musí být pozdější než čas začátku."
       },
       "languages": {
         "title": "Jazyky",

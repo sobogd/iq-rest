@@ -557,7 +557,15 @@
           "lunchOutside": "Przerwa musi mieścić się w godzinach pracy."
         },
         "timezoneLabel": "Strefa czasowa",
-        "timezoneTip": "Używana do obliczania godzin rezerwacji w czasie lokalnym."
+        "timezoneTip": "Używana do obliczania godzin rezerwacji w czasie lokalnym.",
+        "eventOnlyLabel": "Tylko wybrane daty (wydarzenia)",
+        "eventOnlyTip": "Goście mogą rezerwować tylko w datach z listy poniżej. Harmonogram tygodniowy jest wtedy ignorowany.",
+        "eventScheduleIgnored": "Ignorowany, gdy ustawiono daty wydarzeń.",
+        "eventAddDate": "Dodaj datę",
+        "eventRemoveDate": "Usuń datę",
+        "eventEmptyError": "Dodaj co najmniej jedną datę.",
+        "eventDuplicateError": "Ta sama data występuje na liście dwukrotnie.",
+        "eventInvalidError": "Każdy wiersz musi mieć datę, a godzina zakończenia musi być późniejsza niż godzina rozpoczęcia."
       },
       "languages": {
         "title": "Języki",

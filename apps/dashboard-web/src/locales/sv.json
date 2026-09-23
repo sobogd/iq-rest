@@ -557,7 +557,15 @@
           "lunchOutside": "Rasten måste vara inom öppettiderna."
         },
         "timezoneLabel": "Tidszon",
-        "timezoneTip": "Används för att beräkna bokningstider i lokal tid."
+        "timezoneTip": "Används för att beräkna bokningstider i lokal tid.",
+        "eventOnlyLabel": "Endast specifika datum (evenemang)",
+        "eventOnlyTip": "Gäster kan endast boka datumen som listas nedan. Veckoschemat ignoreras när detta är aktivt.",
+        "eventScheduleIgnored": "Ignoreras när evenemangsdatum är inställda.",
+        "eventAddDate": "Lägg till datum",
+        "eventRemoveDate": "Ta bort datum",
+        "eventEmptyError": "Lägg till minst ett datum.",
+        "eventDuplicateError": "Samma datum är listat två gånger.",
+        "eventInvalidError": "Varje rad behöver ett datum och en sluttid som är efter starttiden."
       },
       "languages": {
         "title": "Språk",

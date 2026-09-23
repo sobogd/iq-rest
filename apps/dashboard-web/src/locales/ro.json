@@ -557,7 +557,15 @@
           "lunchOutside": "Pauza trebuie să fie în programul de lucru."
         },
         "timezoneLabel": "Fus orar",
-        "timezoneTip": "Folosit pentru a calcula orele rezervărilor în ora locală."
+        "timezoneTip": "Folosit pentru a calcula orele rezervărilor în ora locală.",
+        "eventOnlyLabel": "Doar date specifice (evenimente)",
+        "eventOnlyTip": "Clienții pot rezerva doar datele listate mai jos. Programul săptămânal este ignorat cât timp această opțiune este activă.",
+        "eventScheduleIgnored": "Ignorat cât timp sunt setate date de eveniment.",
+        "eventAddDate": "Adaugă dată",
+        "eventRemoveDate": "Șterge data",
+        "eventEmptyError": "Adăugați cel puțin o dată.",
+        "eventDuplicateError": "Aceeași dată este listată de două ori.",
+        "eventInvalidError": "Fiecare rând necesită o dată și o oră de sfârșit după ora de început."
       },
       "languages": {
         "title": "Limbi",

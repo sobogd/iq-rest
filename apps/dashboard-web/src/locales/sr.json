@@ -557,7 +557,15 @@
           "lunchOutside": "Пауза мора бити у радном времену."
         },
         "timezoneLabel": "Временска зона",
-        "timezoneTip": "Користи се за израчунавање времена резервација у локалном времену."
+        "timezoneTip": "Користи се за израчунавање времена резервација у локалном времену.",
+        "eventOnlyLabel": "Samo posebni datumi (događaji)",
+        "eventOnlyTip": "Gosti mogu rezervisati samo datume navedene ispod. Nedeljni raspored se ignoriše dok je ova opcija uključena.",
+        "eventScheduleIgnored": "Ignorisano dok su postavljeni datumi događaja.",
+        "eventAddDate": "Dodaj datum",
+        "eventRemoveDate": "Ukloni datum",
+        "eventEmptyError": "Dodajte bar jedan datum.",
+        "eventDuplicateError": "Isti datum je naveden dva puta.",
+        "eventInvalidError": "Svaki red mora imati datum i vreme završetka koje je nakon vremena početka."
       },
       "languages": {
         "title": "Jezici",

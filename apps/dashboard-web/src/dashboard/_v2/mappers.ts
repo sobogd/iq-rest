@@ -8,6 +8,7 @@ import type {
  ApiReservation,
  ApiOrder,
  ApiScheduleDay,
+ ApiEventDate,
 } from "./api";
 import type {
  Category,
@@ -18,6 +19,7 @@ import type {
  Order,
  Ml,
  ReservationSchedule,
+ EventDate,
 } from "./types";
 import { normalizeOrderItems } from "./api";
 import { getMenuUrl } from "@/lib/menu-url";
@@ -193,6 +195,16 @@ export function apiTableToTable(t: ApiTable): TableEntity {
  };
 }
 
+// Event-mode bookable dates. Defensive like scheduleFromApi: the column is JSON
+// written by our own API, so a malformed row should degrade to "no event dates"
+// (weekly mode) instead of crashing the settings screen.
+export function eventDatesFromApi(raw: ApiEventDate[] | null | undefined): EventDate[] {
+ if (!Array.isArray(raw)) return [];
+ return raw
+  .filter((d) => d && typeof d.date === "string" && typeof d.from === "string" && typeof d.to === "string")
+  .map((d) => ({ date: d.date, from: d.from, to: d.to }));
+}
+
 export function apiRestaurantToRestaurant(r: ApiRestaurant): Restaurant {
  const slug = r.slug || "";
  return {
@@ -245,6 +257,7 @@ export function apiRestaurantToRestaurant(r: ApiRestaurant): Restaurant {
  duration: r.reservationSlotMinutes,
  schedule: scheduleFromApi(r.reservationSchedule, r.workingHoursStart, r.workingHoursEnd),
  timezone: r.timezone || "UTC",
+ eventDates: eventDatesFromApi(r.reservationDates),
  },
  orderSettings: {
  acceptOrders: r.ordersEnabled,

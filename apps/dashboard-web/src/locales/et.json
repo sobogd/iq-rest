@@ -557,7 +557,15 @@
           "lunchOutside": "Paus peab olema lahtiolekuajas."
         },
         "timezoneLabel": "Ajavöönd",
-        "timezoneTip": "Kasutatakse broneeringuaegade arvutamiseks kohaliku aja järgi."
+        "timezoneTip": "Kasutatakse broneeringuaegade arvutamiseks kohaliku aja järgi.",
+        "eventOnlyLabel": "Ainult kindlad kuupäevad (sündmused)",
+        "eventOnlyTip": "Külalised saavad broneerida ainult allpool loetletud kuupäevadel. Selle valiku puhul nädalagraafikut eiratakse.",
+        "eventScheduleIgnored": "Eiratakse, kui sündmuste kuupäevad on määratud.",
+        "eventAddDate": "Lisa kuupäev",
+        "eventRemoveDate": "Eemalda kuupäev",
+        "eventEmptyError": "Lisa vähemalt üks kuupäev.",
+        "eventDuplicateError": "Sama kuupäev on lisatud kaks korda.",
+        "eventInvalidError": "Igal real peab olema kuupäev ja algusajast hilisem lõpuaeg."
       },
       "languages": {
         "title": "Keeled",

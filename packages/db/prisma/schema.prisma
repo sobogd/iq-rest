@@ -181,6 +181,14 @@ model Restaurant {
   // [{ closed, from, to, lunchFrom, lunchTo }]. Null = legacy single-window
   // mode driven by workingHoursStart/End.
   reservationSchedule    Json?
+  // Event mode: explicit list of bookable dates, [{ date: "2026-10-06",
+  // from: "18:00", to: "23:00" }] (restaurant-local date, own window per
+  // date). Non-empty ⇒ the weekday schedule above is IGNORED and these are the
+  // only days the public booking flow offers — used for one-off events
+  // ("reservations only on 6-8 October"). Each date carries its own hours
+  // because an event often falls on a normally-closed weekday. Null / empty
+  // ⇒ normal weekly mode.
+  reservationDates       Json?
   // IANA timezone identifier (e.g. "Europe/Rome", "America/New_York"). Used
   // by the public booking flow to interpret workingHours / reservationSchedule
   // strings and the "is slot in the past" check against the restaurant's

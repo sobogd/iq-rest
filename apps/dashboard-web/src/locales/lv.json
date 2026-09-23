@@ -557,7 +557,15 @@
           "lunchOutside": "Pārtraukumam jābūt darba laikā."
         },
         "timezoneLabel": "Laika josla",
-        "timezoneTip": "Tiek izmantota rezervāciju laiku aprēķināšanai vietējā laikā."
+        "timezoneTip": "Tiek izmantota rezervāciju laiku aprēķināšanai vietējā laikā.",
+        "eventOnlyLabel": "Tikai konkrētos datumos (pasākumi)",
+        "eventOnlyTip": "Viesi var rezervēt tikai zemāk norādītajos datumos. Kamēr šī opcija ir ieslēgta, nedēļas grafiks tiek ignorēts.",
+        "eventScheduleIgnored": "Tiek ignorēts, kamēr ir norādīti pasākumu datumi.",
+        "eventAddDate": "Pievienot datumu",
+        "eventRemoveDate": "Noņemt datumu",
+        "eventEmptyError": "Pievienojiet vismaz vienu datumu.",
+        "eventDuplicateError": "Viens un tas pats datums ir norādīts divreiz.",
+        "eventInvalidError": "Katrā rindā nepieciešams datums un beigu laiks, kas ir vēlāks par sākuma laiku."
       },
       "languages": {
         "title": "Valodas",

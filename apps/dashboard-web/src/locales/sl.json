@@ -557,7 +557,15 @@
           "lunchOutside": "Odmor mora biti v delovnem času."
         },
         "timezoneLabel": "Časovni pas",
-        "timezoneTip": "Uporablja se za izračun časov rezervacij v lokalnem času."
+        "timezoneTip": "Uporablja se za izračun časov rezervacij v lokalnem času.",
+        "eventOnlyLabel": "Samo določeni datumi (dogodki)",
+        "eventOnlyTip": "Gostje lahko rezervirajo samo spodaj navedene datume. Tedenski urnik se medtem ne upošteva.",
+        "eventScheduleIgnored": "Ne upošteva se, ko so nastavljeni datumi dogodkov.",
+        "eventAddDate": "Dodaj datum",
+        "eventRemoveDate": "Odstrani datum",
+        "eventEmptyError": "Dodajte vsaj en datum.",
+        "eventDuplicateError": "Isti datum je naveden dvakrat.",
+        "eventInvalidError": "Vsaka vrstica potrebuje datum in končni čas, ki je poznejši od začetnega."
       },
       "languages": {
         "title": "Jeziki",

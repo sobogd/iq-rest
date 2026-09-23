@@ -32,6 +32,7 @@ import { useRestaurant } from "./restaurant-context";
 import { BillingConstructor } from "./billing-constructor";
 import type { Booking, Order, Restaurant, TableEntity } from "./types";
 import { track } from "@/lib/dashboard-events";
+import { showApiError } from "@/lib/show-api-error";
 
 // Support WhatsApp number (Uzbek), digits only for wa.me deep links.
 const SUPPORT_WHATSAPP = "998948663743";
@@ -42,6 +43,11 @@ const ACCENT_COLORS = [
 ];
 
 const DURATION_OPTIONS = [15, 30, 45, 60, 90, 120, 150, 180];
+
+// Upper bound on owner-defined event dates, mirroring reservationDatesSchema in
+// dashboard-api. The form enforces it instead of letting the server answer 400
+// with a message the owner can't act on.
+const MAX_EVENT_DATES = 365;
 
 const TIME_OPTIONS = (() => {
  const out: string[] = [];
@@ -1087,6 +1093,11 @@ export function BookingSettingsPage({
  const t = useTranslations("dashboard.settings");
  const tb = useTranslations("dashboard.settings.bookings");
  const [draft, setDraft] = useState(restaurant.bookingSettings);
+ // Event mode UI flag: the DB only stores the date list (empty = weekly mode),
+ // so the toggle lives here. Switching it off clears the column on save, but the
+ // list stays in this draft until then — flipping the toggle back before saving
+ // restores it.
+ const [eventOnly, setEventOnly] = useState(restaurant.bookingSettings.eventDates.length > 0);
 
  useEffect(() => {
  window.scrollTo({ top: 0, behavior: "auto" });
@@ -1102,7 +1113,22 @@ export function BookingSettingsPage({
  }
  return null;
  });
- const canSave = !draft.enabled || dayErrors.every((e) => e === null);
+ // Event-mode validation. A date resolves to exactly one window on the public
+ // side, so a repeated date would only be a silently ignored row, and the
+ // native date input can be cleared to "".
+ const eventDatesError: "empty" | "invalid" | "duplicate" | null = (() => {
+ if (draft.eventDates.length === 0) return "empty";
+ if (draft.eventDates.some((e) => !/^\d{4}-\d{2}-\d{2}$/.test(e.date) || !(e.from < e.to))) return "invalid";
+ if (new Set(draft.eventDates.map((e) => e.date)).size !== draft.eventDates.length) return "duplicate";
+ return null;
+ })();
+ // The weekly schedule keeps its errors in event mode: save() sends it either
+ // way (the server validates it and would reject the whole request), and the
+ // schedule card stays editable, so an invalid day is something the owner has
+ // to fix rather than something event mode can paper over.
+ const canSave =
+ !draft.enabled ||
+ (dayErrors.every((e) => e === null) && (!eventOnly || eventDatesError === null));
 
  async function save() {
  track("Click", "Booking settings save");
@@ -1117,14 +1143,26 @@ export function BookingSettingsPage({
  reservationSlotMinutes: draft.duration,
  reservationSchedule: draft.schedule,
  timezone: draft.timezone,
+ // Event mode: chronological list of bookable dates; `null` switches the
+ // public flow back to the weekly schedule. The server re-validates.
+ reservationDates: eventOnly
+ ? [...draft.eventDates].sort((a, b) => (a.date < b.date ? -1 : 1))
+ : null,
  ...(firstOpen
  ? { workingHoursStart: firstOpen.from, workingHoursEnd: firstOpen.to }
  : {}),
  });
- } catch {
+ } catch (err) {
+ // Without this the request failure was invisible: the page just stayed put.
+ // Reachable now that a server-side rejection (unexpected payload, network,
+ // 401) is no longer pre-empted by client validation in every case.
+ showApiError(err, "Booking settings save");
  return;
  }
- setRestaurant((r) => ({ ...r, bookingSettings: draft }));
+ setRestaurant((r) => ({
+ ...r,
+ bookingSettings: { ...draft, eventDates: eventOnly ? draft.eventDates : [] },
+ }));
  onBack?.();
  }
 
@@ -1133,6 +1171,31 @@ export function BookingSettingsPage({
  ...d,
  schedule: d.schedule.map((day, i) => (i === idx ? { ...day, ...patch } : day)),
  }));
+ }
+
+ function updateEventDate(idx: number, patch: Partial<typeof draft.eventDates[0]>) {
+ setDraft((d) => ({
+ ...d,
+ eventDates: d.eventDates.map((e, i) => (i === idx ? { ...e, ...patch } : e)),
+ }));
+ }
+
+ /** Append a date row, prefilled with tomorrow at the first open weekday's
+  *  hours — the owner normally only adjusts the day, so two empty pickers
+  *  would be busywork. No-op once the server-side cap is reached. */
+ function addEventDate() {
+ const base = draft.schedule.find((d) => !d.closed);
+ const tomorrow = new Date(Date.now() + 24 * 60 * 60 * 1000);
+ const iso = `${tomorrow.getFullYear()}-${String(tomorrow.getMonth() + 1).padStart(2, "0")}-${String(tomorrow.getDate()).padStart(2, "0")}`;
+ setDraft((d) =>
+ d.eventDates.length >= MAX_EVENT_DATES
+ ? d
+ : { ...d, eventDates: [...d.eventDates, { date: iso, from: base?.from || "10:00", to: base?.to || "22:00" }] },
+ );
+ }
+
+ function removeEventDate(idx: number) {
+ setDraft((d) => ({ ...d, eventDates: d.eventDates.filter((_, i) => i !== idx) }));
  }
 
  const disabled = !draft.enabled;
@@ -1209,6 +1272,9 @@ export function BookingSettingsPage({
 
  {/* All weekdays in one card, separated by dividers. */}
  <div className={"mt-5 bg-card border border-border rounded-2xl p-5 md:p-6 " + (disabled ? "opacity-50 pointer-events-none" : "")}>
+ {eventOnly ? (
+ <p className="text-xs text-muted-foreground mb-3">{tb("eventScheduleIgnored")}</p>
+ ) : null}
  {draft.schedule.map((day, idx) => (
  <div key={idx}>
  {idx > 0 ? <Divider /> : null}
@@ -1222,6 +1288,94 @@ export function BookingSettingsPage({
  />
  </div>
  ))}
+ </div>
+
+ {/* Event mode: an explicit list of bookable dates ("reservations only on
+ 6-8 October"). While it's on, guests can book ONLY these dates and the
+ weekly schedule above is ignored — the two modes are exclusive on purpose. */}
+ <div className={"mt-5 bg-card border border-border rounded-2xl p-5 md:p-6 " + (disabled ? "opacity-50 pointer-events-none" : "")}>
+ <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
+ <div>
+ <div className="text-sm font-medium text-foreground">{tb("eventOnlyLabel")}</div>
+ <div className="text-xs text-muted-foreground leading-snug mt-0.5">
+ {tb("eventOnlyTip")}
+ </div>
+ </div>
+ <ToggleSwitch
+ checked={eventOnly}
+ onChange={() => {
+ track("Toggle", "Booking settings event dates");
+ setEventOnly((v) => !v);
+ }}
+ />
+ </label>
+
+ {eventOnly ? (
+ <>
+ <Divider />
+ {draft.eventDates.map((e, idx) => (
+ <div key={idx} className={idx > 0 ? "mt-3" : ""}>
+ <div className="flex items-center gap-2">
+ <input
+ type="date"
+ value={e.date}
+ onChange={(ev) => {
+ track("Change", "Booking settings event date");
+ updateEventDate(idx, { date: ev.target.value });
+ }}
+ className={inputClass + " w-40"}
+ />
+ <Select<string>
+ value={e.from}
+ onChange={(next) => updateEventDate(idx, { from: next })}
+ className="w-24 tabular-nums"
+ options={TIME_OPTIONS.map((tm) => ({ value: tm, label: tm }))}
+ />
+ <span className="text-muted-foreground">—</span>
+ <Select<string>
+ value={e.to}
+ onChange={(next) => updateEventDate(idx, { to: next })}
+ className="w-24 tabular-nums"
+ options={TIME_OPTIONS.map((tm) => ({ value: tm, label: tm }))}
+ />
+ <button
+ type="button"
+ onClick={() => removeEventDate(idx)}
+ aria-label={tb("eventRemoveDate", { defaultValue: "Remove date" })}
+ className="ml-auto shrink-0 text-muted-foreground hover:text-foreground"
+ >
+ <CloseIcon size={16} />
+ </button>
+ </div>
+ </div>
+ ))}
+ <button
+ type="button"
+ disabled={draft.eventDates.length >= MAX_EVENT_DATES}
+ onClick={() => {
+ track("Click", "Booking settings add event date");
+ addEventDate();
+ }}
+ className={
+ "mt-4 text-sm font-medium " +
+ (draft.eventDates.length >= MAX_EVENT_DATES
+ ? "text-muted-foreground cursor-not-allowed"
+ : "text-primary")
+ }
+ >
+ + {tb("eventAddDate")}
+ </button>
+ {eventDatesError ? (
+ <p className="text-xs text-red-500 mt-2">
+ {eventDatesError === "empty"
+ ? tb("eventEmptyError")
+ : eventDatesError === "duplicate"
+ ? tb("eventDuplicateError")
+ : tb("eventInvalidError")}
+ </p>
+ ) : null}
+ </>
+ ) : null}
  </div>
 
  </Page>

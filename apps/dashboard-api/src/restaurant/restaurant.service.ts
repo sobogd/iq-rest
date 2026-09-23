@@ -41,7 +41,29 @@ const reservationDaySchema = z
 
 const reservationScheduleSchema = z.array(reservationDaySchema).length(7);
 
+// Event mode ("reservations only on 6-8 October"): the owner lists the exact
+// bookable dates. While the list is non-empty it is the whole truth for the
+// public booking flow and the weekday schedule above is ignored, so each entry
+// carries its own window (an event often lands on a normally-closed weekday).
+// Duplicate dates are rejected: the resolver picks the matching entry by date,
+// so two entries for one day would be ambiguous.
+const eventDateSchema = z
+  .object({
+    date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    from: z.string().regex(HHMM),
+    to: z.string().regex(HHMM),
+  })
+  .refine((d) => d.from < d.to, { message: "from must be < to" });
+
+const reservationDatesSchema = z
+  .array(eventDateSchema)
+  .max(365)
+  .refine((dates) => new Set(dates.map((d) => d.date)).size === dates.length, {
+    message: "dates must be unique",
+  });
+
 type ReservationSchedule = z.infer<typeof reservationScheduleSchema>;
+type ReservationDates = z.infer<typeof reservationDatesSchema>;
 
 interface RestaurantInput {
   title?: string;
@@ -77,6 +99,7 @@ interface RestaurantInput {
   workingHoursStart?: string;
   workingHoursEnd?: string;
   reservationSchedule?: ReservationSchedule | null;
+  reservationDates?: ReservationDates | null;
   timezone?: string;
   ordersEnabled?: boolean;
   orderNameEnabled?: boolean;
@@ -91,7 +114,7 @@ const FIELDS: (keyof RestaurantInput)[] = [
   "defaultLanguage", "hideTitle", "hideDescription", "logoUrl", "hideLogo", "logoScale",
   "menuLayout", "titleScale", "languageSwitcher", "paymentMethods", "reservationsEnabled", "reservationMode",
   "reservationSlotMinutes", "workingHoursStart", "workingHoursEnd",
-  "reservationSchedule", "timezone", "ordersEnabled",
+  "reservationSchedule", "reservationDates", "timezone", "ordersEnabled",
   "orderNameEnabled", "orderPhoneEnabled", "orderAddressEnabled", "orderMode",
 ];
 
@@ -115,6 +138,15 @@ function pickFields(raw: Record<string, unknown>): RestaurantInput {
       );
     }
     out.reservationSchedule = parsed.data;
+  }
+  if (out.reservationDates !== undefined && out.reservationDates !== null) {
+    const parsed = reservationDatesSchema.safeParse(out.reservationDates);
+    if (!parsed.success) {
+      throw new BadRequestException(
+        "Invalid reservationDates: " + parsed.error.issues[0]?.message
+      );
+    }
+    out.reservationDates = parsed.data;
   }
   if (out.timezone !== undefined) {
     const tz = String(out.timezone).trim();
@@ -343,13 +375,22 @@ export class RestaurantService {
       delete input.billingCurrency;
     }
 
-    const { reservationSchedule, ...rest } = input;
+    const { reservationSchedule, reservationDates, ...rest } = input;
     const scheduleField =
       reservationSchedule === undefined
         ? {}
         : reservationSchedule === null
           ? { reservationSchedule: Prisma.DbNull }
           : { reservationSchedule: reservationSchedule as Prisma.InputJsonValue };
+    // Same JSON-column dance as the schedule: `undefined` = field not in the
+    // request (leave it alone), `null` = switch back to weekly mode (SQL NULL),
+    // array = event mode.
+    const datesField =
+      reservationDates === undefined
+        ? {}
+        : reservationDates === null
+          ? { reservationDates: Prisma.DbNull }
+          : { reservationDates: reservationDates as Prisma.InputJsonValue };
 
     if (restaurantId) {
       // Ownership check: the user must be attached to this restaurant.
@@ -362,7 +403,7 @@ export class RestaurantService {
       if (!existing) throw new NotFoundException("Restaurant not found");
       const updated = await this.prisma.restaurant.update({
         where: { id: existing.id },
-        data: { ...(rest as Prisma.RestaurantUpdateInput), ...scheduleField },
+        data: { ...(rest as Prisma.RestaurantUpdateInput), ...scheduleField, ...datesField },
       });
       // Billing currency (account-level) — apply to the venue's account.
       if (billingCurrencyUpdate && existing.accountId) {
@@ -425,6 +466,7 @@ export class RestaurantService {
       startedFromScratch: true,
       ...rest,
       ...scheduleField,
+      ...datesField,
       ...firstVenueFlags,
       accountId: account.id,
     };

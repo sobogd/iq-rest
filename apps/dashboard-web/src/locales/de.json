@@ -557,7 +557,15 @@
           "lunchOutside": "Pause muss innerhalb der Öffnungszeiten liegen."
         },
         "timezoneLabel": "Zeitzone",
-        "timezoneTip": "Wird verwendet, um Reservierungszeiten in der lokalen Uhrzeit zu berechnen."
+        "timezoneTip": "Wird verwendet, um Reservierungszeiten in der lokalen Uhrzeit zu berechnen.",
+        "eventOnlyLabel": "Nur bestimmte Termine (Events)",
+        "eventOnlyTip": "Gäste können nur die unten aufgeführten Termine buchen. Der Wochenplan wird dabei ignoriert.",
+        "eventScheduleIgnored": "Wird ignoriert, solange Event-Termine festgelegt sind.",
+        "eventAddDate": "Datum hinzufügen",
+        "eventRemoveDate": "Datum entfernen",
+        "eventEmptyError": "Fügen Sie mindestens ein Datum hinzu.",
+        "eventDuplicateError": "Das gleiche Datum ist doppelt vorhanden.",
+        "eventInvalidError": "Jede Zeile benötigt ein Datum und eine Endzeit, die nach der Startzeit liegt."
       },
       "languages": {
         "title": "Sprachen",

@@ -143,12 +143,22 @@ export interface ScheduleDay {
 // Length 7. Index 0=Mon ... 6=Sun.
 export type ReservationSchedule = ScheduleDay[];
 
+// One bookable date in event mode: a restaurant-local date plus its own window.
+export interface EventDate {
+ date: string;
+ from: string;
+ to: string;
+}
+
 export interface BookingSettings {
  enabled: boolean;
  approval: "manual" | "auto";
  duration: number;
  schedule: ReservationSchedule;
  timezone: string;
+ // Event mode: the owner's explicit bookable dates. Non-empty ⇒ guests can
+ // book ONLY these dates and `schedule` above is ignored. Empty ⇒ weekly mode.
+ eventDates: EventDate[];
 }
 
 export interface OrderSettings {

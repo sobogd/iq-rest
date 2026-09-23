@@ -557,7 +557,15 @@
           "lunchOutside": "Pausen skal være inden for åbningstiden."
         },
         "timezoneLabel": "Tidszone",
-        "timezoneTip": "Bruges til at beregne reservationstider i lokal tid."
+        "timezoneTip": "Bruges til at beregne reservationstider i lokal tid.",
+        "eventOnlyLabel": "Kun specifikke datoer (begivenheder)",
+        "eventOnlyTip": "Gæster kan kun booke de datoer, der er angivet nedenfor. Ugeplanen ignoreres, mens dette er slået til.",
+        "eventScheduleIgnored": "Ignoreres, mens begivenhedsdatoer er angivet.",
+        "eventAddDate": "Tilføj dato",
+        "eventRemoveDate": "Fjern dato",
+        "eventEmptyError": "Tilføj mindst én dato.",
+        "eventDuplicateError": "Den samme dato er angivet to gange.",
+        "eventInvalidError": "Hver række skal have en dato og et sluttidspunkt efter starttidspunktet."
       },
       "languages": {
         "title": "Sprog",

@@ -633,7 +633,15 @@
           "lunchOutside": "Lunch break must be within working hours."
         },
         "timezoneLabel": "Time zone",
-        "timezoneTip": "Used to compute reservation slot times in your local clock."
+        "timezoneTip": "Used to compute reservation slot times in your local clock.",
+        "eventOnlyLabel": "Only specific dates (events)",
+        "eventOnlyTip": "Guests can book only the dates listed below. The weekly schedule is ignored while this is on.",
+        "eventScheduleIgnored": "Ignored while event dates are set.",
+        "eventAddDate": "Add date",
+        "eventRemoveDate": "Remove date",
+        "eventEmptyError": "Add at least one date.",
+        "eventDuplicateError": "The same date is listed twice.",
+        "eventInvalidError": "Each row needs a date and an end time after the start time."
       },
       "languages": {
         "title": "Languages",

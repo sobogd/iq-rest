@@ -503,6 +503,7 @@ function buildDemoRestaurant(lang: string): Restaurant {
       duration: 60,
       schedule: [],
       timezone: "UTC",
+      eventDates: [],
     },
     orderSettings: {
       acceptOrders: true,
@@ -607,6 +608,7 @@ export function buildReservationsDemoSnapshot(lang: string): ReservationsDemoSna
       duration: 90,
       schedule: DEMO_SCHEDULE,
       timezone: "UTC",
+      eventDates: [],
     },
   };
 

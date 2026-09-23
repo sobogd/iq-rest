@@ -557,7 +557,15 @@
           "lunchOutside": "Pauze moet binnen openingstijden vallen."
         },
         "timezoneLabel": "Tijdzone",
-        "timezoneTip": "Wordt gebruikt om reserveringstijden in lokale tijd te berekenen."
+        "timezoneTip": "Wordt gebruikt om reserveringstijden in lokale tijd te berekenen.",
+        "eventOnlyLabel": "Alleen specifieke datums (evenementen)",
+        "eventOnlyTip": "Gasten kunnen alleen reserveren op de onderstaande datums. Het weekschema wordt genegeerd zolang dit is ingeschakeld.",
+        "eventScheduleIgnored": "Genegeerd zolang evenementdatums zijn ingesteld.",
+        "eventAddDate": "Datum toevoegen",
+        "eventRemoveDate": "Datum verwijderen",
+        "eventEmptyError": "Voeg minimaal één datum toe.",
+        "eventDuplicateError": "Dezelfde datum is tweemaal vermeld.",
+        "eventInvalidError": "Elke rij vereist een datum en een eindtijd na de starttijd."
       },
       "languages": {
         "title": "Talen",

@@ -31,6 +31,33 @@ function getTranslatedZone(table: TableInfo, locale: string): string | null {
   return translated || table.zone;
 }
 
+/** Build a Date at the device's local midnight from a restaurant-local
+ *  YYYY-MM-DD string. Used for event dates so that `format(date, "yyyy-MM-dd")`
+ *  on submit round-trips to exactly the string we started from. */
+function parseLocalDate(dateStr: string): Date {
+  const [y, m, d] = dateStr.split("-").map(Number);
+  return new Date(y, m - 1, d);
+}
+
+/** Today as a restaurant-local YYYY-MM-DD string.
+ *
+ *  Event dates are restaurant-local, so "is this day still bookable" must be
+ *  answered on the restaurant's clock, not the guest's: a diner in Tokyo must
+ *  still see the event's first day while it is still running in Rome. Falls
+ *  back to the device clock if the time zone is missing or unknown. */
+function todayInTz(tz: string | undefined): string {
+  try {
+    return new Intl.DateTimeFormat("en-CA", {
+      timeZone: tz || "UTC",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).format(new Date());
+  } catch {
+    return format(new Date(), "yyyy-MM-dd");
+  }
+}
+
 export function ReserveForm() {
   const { restaurant } = useMenu();
   const { t, i18n } = useTranslation();
@@ -80,6 +107,21 @@ export function ReserveForm() {
   const today = useMemo(() => new Date(), []);
   const maxDate = useMemo(() => addDays(today, 60), [today]);
   const currentWeekStart = useMemo(() => startOfWeek(today, { weekStartsOn: 1 }), [today]);
+
+  // Event mode: the owner listed the exact bookable dates ("reservations only on
+  // 6-8 October"). While that list is non-empty the weekly strip is replaced by
+  // those dates and the 60-day horizon below does not apply — the list is
+  // already bounded by the owner, and events are usually planned further ahead
+  // than two months. Dates already past are dropped here (on the restaurant's
+  // clock, not the device's); if nothing is left the form says there is nothing
+  // to book. The public API refuses past dates anyway — this is what keeps them
+  // out of the picker.
+  const eventMode = Array.isArray(restaurant.reservationDates) && restaurant.reservationDates.length > 0;
+  const eventDates = useMemo(() => {
+    const raw = Array.isArray(restaurant.reservationDates) ? restaurant.reservationDates : [];
+    const todayStr = todayInTz(restaurant.timezone);
+    return raw.filter((d) => d.date >= todayStr).sort((a, b) => (a.date < b.date ? -1 : 1));
+  }, [restaurant.reservationDates, restaurant.timezone]);
 
   const weekDates = useMemo(() => {
     const weekStart = addWeeks(currentWeekStart, currentWeekOffset);
@@ -277,65 +319,111 @@ export function ReserveForm() {
       {guestsCount > 0 ? (
         <div ref={dateRef} className="space-y-3">
           <label className="text-base font-semibold text-black">{t("publicReserve.selectDate")}:</label>
-          <div className="flex items-center justify-between mb-2">
-            <button
-              type="button"
-              disabled={!canGoPrev || loadingSlots}
-              onClick={() => setCurrentWeekOffset((p) => p - 1)}
-              className={cls(
-                "p-2 rounded-lg border-2 transition-colors",
-                canGoPrev && !loadingSlots
-                  ? "border-gray-200 text-black hover:border-black hover:bg-black hover:text-white"
-                  : "border-gray-100 text-gray-300 cursor-not-allowed",
+          {eventMode ? (
+            /* Event mode: one chip per owner-listed date, with that date's own
+               hours. No week navigation — there is nothing to navigate to. */
+            <div className="flex flex-col gap-2">
+              {eventDates.length === 0 ? (
+                <p className="text-center text-gray-500 py-4">{t("publicReserve.noTimeSlotsAvailable")}</p>
+              ) : (
+                eventDates.map((d) => {
+                  const date = parseLocalDate(d.date);
+                  const isSelected = selectedDate && isSameDay(selectedDate, date);
+                  const isLoading = isSelected && loadingSlots;
+                  return (
+                    <button
+                      key={d.date}
+                      type="button"
+                      disabled={loadingSlots}
+                      onClick={() => handleDateSelect(date)}
+                      className="h-14 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-between px-4"
+                      style={
+                        isSelected
+                          ? { borderColor: accentColor, backgroundColor: accentColor, color: "#fff" }
+                          : { borderColor: "#e5e7eb", backgroundColor: "#fff", color: "#000" }
+                      }
+                    >
+                      <span className="capitalize">
+                        {date.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short" })}
+                      </span>
+                      {isLoading ? (
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                      ) : (
+                        <span
+                          className="text-xs font-normal"
+                          style={{ color: isSelected ? "rgba(255,255,255,0.8)" : "#6b7280" }}
+                        >
+                          {d.from} — {d.to}
+                        </span>
+                      )}
+                    </button>
+                  );
+                })
               )}
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <span className="text-sm font-medium text-gray-600 capitalize">{monthYearLabel}</span>
-            <button
-              type="button"
-              disabled={!canGoNext || loadingSlots}
-              onClick={() => setCurrentWeekOffset((p) => p + 1)}
-              className={cls(
-                "p-2 rounded-lg border-2 transition-colors",
-                canGoNext && !loadingSlots
-                  ? "border-gray-200 text-black hover:border-black hover:bg-black hover:text-white"
-                  : "border-gray-100 text-gray-300 cursor-not-allowed",
-              )}
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            {weekDates.map((date) => {
-              const isSelected = selectedDate && isSameDay(selectedDate, date);
-              const isLoading = isSelected && loadingSlots;
-              const isPast = isBefore(date, today) && !isSameDay(date, today);
-              const isFuture = isAfter(date, maxDate);
-              const isClosed = dayIsClosed(date);
-              const isDisabled = isPast || isFuture || isClosed || loadingSlots;
-              const dateLabel = date.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short" });
-              return (
+            </div>
+          ) : (
+            <>
+              <div className="flex items-center justify-between mb-2">
                 <button
-                  key={date.toISOString()}
                   type="button"
-                  disabled={isDisabled}
-                  onClick={() => handleDateSelect(date)}
-                  className="h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center px-4 capitalize"
-                  style={
-                    isSelected
-                      ? { borderColor: accentColor, backgroundColor: accentColor, color: "#fff" }
-                      : isPast || isFuture || isClosed
-                      ? { borderColor: "#f3f4f6", backgroundColor: "#f9fafb", color: "#d1d5db" }
-                      : { borderColor: "#e5e7eb", backgroundColor: "#fff", color: "#000" }
-                  }
+                  disabled={!canGoPrev || loadingSlots}
+                  onClick={() => setCurrentWeekOffset((p) => p - 1)}
+                  className={cls(
+                    "p-2 rounded-lg border-2 transition-colors",
+                    canGoPrev && !loadingSlots
+                      ? "border-gray-200 text-black hover:border-black hover:bg-black hover:text-white"
+                      : "border-gray-100 text-gray-300 cursor-not-allowed",
+                  )}
                 >
-                  {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : dateLabel}
+                  <ChevronLeft className="h-5 w-5" />
                 </button>
-              );
-            })}
-          </div>
+                <span className="text-sm font-medium text-gray-600 capitalize">{monthYearLabel}</span>
+                <button
+                  type="button"
+                  disabled={!canGoNext || loadingSlots}
+                  onClick={() => setCurrentWeekOffset((p) => p + 1)}
+                  className={cls(
+                    "p-2 rounded-lg border-2 transition-colors",
+                    canGoNext && !loadingSlots
+                      ? "border-gray-200 text-black hover:border-black hover:bg-black hover:text-white"
+                      : "border-gray-100 text-gray-300 cursor-not-allowed",
+                  )}
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                {weekDates.map((date) => {
+                  const isSelected = selectedDate && isSameDay(selectedDate, date);
+                  const isLoading = isSelected && loadingSlots;
+                  const isPast = isBefore(date, today) && !isSameDay(date, today);
+                  const isFuture = isAfter(date, maxDate);
+                  const isClosed = dayIsClosed(date);
+                  const isDisabled = isPast || isFuture || isClosed || loadingSlots;
+                  const dateLabel = date.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short" });
+                  return (
+                    <button
+                      key={date.toISOString()}
+                      type="button"
+                      disabled={isDisabled}
+                      onClick={() => handleDateSelect(date)}
+                      className="h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center px-4 capitalize"
+                      style={
+                        isSelected
+                          ? { borderColor: accentColor, backgroundColor: accentColor, color: "#fff" }
+                          : isPast || isFuture || isClosed
+                          ? { borderColor: "#f3f4f6", backgroundColor: "#f9fafb", color: "#d1d5db" }
+                          : { borderColor: "#e5e7eb", backgroundColor: "#fff", color: "#000" }
+                      }
+                    >
+                      {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : dateLabel}
+                    </button>
+                  );
+                })}
+              </div>
+            </>
+          )}
         </div>
       ) : null}
 

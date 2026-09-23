@@ -557,7 +557,15 @@
           "lunchOutside": "Mola çalışma saatleri içinde olmalı."
         },
         "timezoneLabel": "Saat dilimi",
-        "timezoneTip": "Rezervasyon saatlerini yerel saatte hesaplamak için kullanılır."
+        "timezoneTip": "Rezervasyon saatlerini yerel saatte hesaplamak için kullanılır.",
+        "eventOnlyLabel": "Yalnızca belirli tarihler (etkinlikler)",
+        "eventOnlyTip": "Misafirler yalnızca aşağıda listelenen tarihler için rezervasyon yapabilir. Bu seçenek etkinken haftalık program yok sayılır.",
+        "eventScheduleIgnored": "Etkinlik tarihleri ayarlandığında yok sayılır.",
+        "eventAddDate": "Tarih ekle",
+        "eventRemoveDate": "Tarihi kaldır",
+        "eventEmptyError": "En az bir tarih ekleyin.",
+        "eventDuplicateError": "Aynı tarih iki kez listelenmiş.",
+        "eventInvalidError": "Her satırda bir tarih ve başlangıçtan sonra bir bitiş saati olmalıdır."
       },
       "languages": {
         "title": "Diller",

@@ -557,7 +557,15 @@
           "lunchOutside": "Caithfidh an sos a bheith laistigh d'uaireanta oibre."
         },
         "timezoneLabel": "Crios ama",
-        "timezoneTip": "Úsáidte chun amanna áirithinte a ríomh san am áitiúil."
+        "timezoneTip": "Úsáidte chun amanna áirithinte a ríomh san am áitiúil.",
+        "eventOnlyLabel": "Dátaí sonracha amháin (imeachtaí)",
+        "eventOnlyTip": "Ní féidir le haíonna ach na dátaí thíos a chur in áirithe. Déantar neamhaird den sceideal seachtainiúil fad is atá sé seo ar siúl.",
+        "eventScheduleIgnored": "Déantar neamhaird de fad is atá dátaí imeachta socraithe.",
+        "eventAddDate": "Cuir dáta leis",
+        "eventRemoveDate": "Bain dáta",
+        "eventEmptyError": "Cuir dáta amháin ar a laghad leis.",
+        "eventDuplicateError": "Tá an dáta céanna liostaithe faoi dhó.",
+        "eventInvalidError": "Caithfidh dáta agus am deiridh tar éis an ama tosaigh a bheith i ngach ró."
       },
       "languages": {
         "title": "Teangacha",

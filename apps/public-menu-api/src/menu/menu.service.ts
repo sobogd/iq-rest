@@ -37,6 +37,12 @@ export class MenuService {
         reservationMode: true,
         reservationSlotMinutes: true,
         reservationSchedule: true,
+        // Event mode (owner's explicit bookable dates). Non-empty ⇒ the diner
+        // picker shows only these dates instead of the weekly strip.
+        reservationDates: true,
+        // The diner SPA needs the restaurant's clock to drop past dates from
+        // that list (the device may sit in another time zone).
+        timezone: true,
         ordersEnabled: true,
         orderMode: true,
         orderNameEnabled: true,

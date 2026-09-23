@@ -29,6 +29,13 @@ export interface RestaurantPayload {
   reservationMode: string;
   reservationSlotMinutes: number;
   reservationSchedule: Array<{ closed: boolean; from: string; to: string; lunchFrom: string | null; lunchTo: string | null }> | null;
+  // Event mode: the owner's explicit bookable dates (each with its own window).
+  // Non-empty ⇒ the reserve form offers ONLY these dates and ignores
+  // reservationSchedule entirely.
+  reservationDates: Array<{ date: string; from: string; to: string }> | null;
+  // IANA timezone of the venue. The reserve form uses it to judge which event
+  // dates are still ahead on the restaurant's clock rather than the device's.
+  timezone: string;
   ordersEnabled: boolean;
   orderMode: string;
   orderNameEnabled: boolean;

@@ -58,6 +58,14 @@ export interface ApiScheduleDay {
  lunchTo: string | null;
 }
 
+// One owner-defined bookable date in event mode ("reservations only on 6-8
+// October"). Each date carries its own window.
+export interface ApiEventDate {
+ date: string;
+ from: string;
+ to: string;
+}
+
 export interface ApiRestaurant {
  id: string;
  title: string;
@@ -96,6 +104,9 @@ export interface ApiRestaurant {
  workingHoursStart: string;
  workingHoursEnd: string;
  reservationSchedule: ApiScheduleDay[] | null;
+ // Event mode. Non-empty ⇒ the public booking flow offers ONLY these dates and
+ // ignores reservationSchedule; null / empty ⇒ normal weekly mode.
+ reservationDates: ApiEventDate[] | null;
  timezone: string;
  ordersEnabled: boolean;
  orderNameEnabled: boolean;

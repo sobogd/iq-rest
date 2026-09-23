@@ -557,7 +557,15 @@
           "lunchOutside": "Hlé verður að vera innan opnunartíma."
         },
         "timezoneLabel": "Tímabelti",
-        "timezoneTip": "Notað til að reikna pöntunartíma í staðartíma."
+        "timezoneTip": "Notað til að reikna pöntunartíma í staðartíma.",
+        "eventOnlyLabel": "Aðeins tilteknar dagsetningar (viðburðir)",
+        "eventOnlyTip": "Gestir geta aðeins bókað dagsetningarnar hér að neðan. Vikuáætlunin er hunsuð á meðan þetta er virkt.",
+        "eventScheduleIgnored": "Hunsað á meðan dagsetningar viðburða eru stilltar.",
+        "eventAddDate": "Bæta við dagsetningu",
+        "eventRemoveDate": "Fjarlægja dagsetningu",
+        "eventEmptyError": "Bættu við að minnsta kosti einni dagsetningu.",
+        "eventDuplicateError": "Sama dagsetning er skráð tvisvar.",
+        "eventInvalidError": "Hver lína þarf dagsetningu og lokatíma sem er seinni en upphafstíminn."
       },
       "languages": {
         "title": "Tungumál",

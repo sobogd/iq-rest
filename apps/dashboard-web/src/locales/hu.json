@@ -557,7 +557,15 @@
           "lunchOutside": "A szünetnek a nyitvatartási időn belül kell lennie."
         },
         "timezoneLabel": "Időzóna",
-        "timezoneTip": "A foglalási idők helyi idő szerinti számításához használatos."
+        "timezoneTip": "A foglalási idők helyi idő szerinti számításához használatos.",
+        "eventOnlyLabel": "Csak adott napokon (események)",
+        "eventOnlyTip": "A vendégek csak az alább felsorolt dátumokra foglalhatnak. Amíg ez aktív, a heti beosztás nem érvényes.",
+        "eventScheduleIgnored": "Eseménydátumok beállításakor figyelmen kívül hagyva.",
+        "eventAddDate": "Dátum hozzáadása",
+        "eventRemoveDate": "Dátum eltávolítása",
+        "eventEmptyError": "Adjon meg legalább egy dátumot.",
+        "eventDuplicateError": "Ugyanaz a dátum kétszer szerepel.",
+        "eventInvalidError": "Minden sorhoz adjon meg egy dátumot, és a befejezési időpont legyen későbbi, mint a kezdési."
       },
       "languages": {
         "title": "Nyelvek",

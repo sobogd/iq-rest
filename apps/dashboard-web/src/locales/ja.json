@@ -557,7 +557,15 @@
           "lunchOutside": "昼休憩は営業時間内でなければなりません。"
         },
         "timezoneLabel": "タイムゾーン",
-        "timezoneTip": "現地時間で予約時間を計算するために使用されます。"
+        "timezoneTip": "現地時間で予約時間を計算するために使用されます。",
+        "eventOnlyLabel": "特定日のみ（イベント）",
+        "eventOnlyTip": "下記の日付のみ予約を受け付けます。この設定が有効な間、週ごとのスケジュールは無視されます。",
+        "eventScheduleIgnored": "イベント日設定中は無視されます",
+        "eventAddDate": "日付を追加",
+        "eventRemoveDate": "日付を削除",
+        "eventEmptyError": "日付を1つ以上追加してください。",
+        "eventDuplicateError": "同じ日付が重複しています。",
+        "eventInvalidError": "各行に日付を入力し、終了時刻が開始時刻より後になるように設定してください。"
       },
       "languages": {
         "title": "言語",

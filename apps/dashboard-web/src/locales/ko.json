@@ -557,7 +557,15 @@
           "lunchOutside": "휴식은 영업 시간 내에 있어야 합니다."
         },
         "timezoneLabel": "시간대",
-        "timezoneTip": "현지 시간으로 예약 시간을 계산하는 데 사용됩니다."
+        "timezoneTip": "현지 시간으로 예약 시간을 계산하는 데 사용됩니다.",
+        "eventOnlyLabel": "특정 날짜만 (이벤트)",
+        "eventOnlyTip": "아래에 명시된 날짜에만 예약을 받습니다. 이 옵션을 켜면 주간 스케줄은 무시됩니다.",
+        "eventScheduleIgnored": "이벤트 날짜 설정 시 무시됨",
+        "eventAddDate": "날짜 추가",
+        "eventRemoveDate": "날짜 삭제",
+        "eventEmptyError": "날짜를 하나 이상 추가해 주세요.",
+        "eventDuplicateError": "중복된 날짜가 있습니다.",
+        "eventInvalidError": "각 항목에 날짜를 입력하고, 종료 시간은 시작 시간보다 늦어야 합니다."
       },
       "languages": {
         "title": "언어",

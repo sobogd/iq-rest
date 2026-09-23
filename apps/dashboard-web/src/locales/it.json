@@ -557,7 +557,15 @@
           "lunchOutside": "La pausa deve essere all'interno dell'orario."
         },
         "timezoneLabel": "Fuso orario",
-        "timezoneTip": "Usato per calcolare gli orari delle prenotazioni nell'ora locale."
+        "timezoneTip": "Usato per calcolare gli orari delle prenotazioni nell'ora locale.",
+        "eventOnlyLabel": "Solo date specifiche (eventi)",
+        "eventOnlyTip": "Gli ospiti possono prenotare solo nelle date elencate di seguito. L'orario settimanale viene ignorato finché questa opzione è attiva.",
+        "eventScheduleIgnored": "Ignorato se sono impostate date per eventi.",
+        "eventAddDate": "Aggiungi data",
+        "eventRemoveDate": "Rimuovi data",
+        "eventEmptyError": "Aggiungi almeno una data.",
+        "eventDuplicateError": "La stessa data è stata inserita due volte.",
+        "eventInvalidError": "Ogni riga deve avere una data e un orario di fine successivo a quello di inizio."
       },
       "languages": {
         "title": "Lingue",
