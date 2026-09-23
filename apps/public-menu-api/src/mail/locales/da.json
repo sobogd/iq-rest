@@ -9,7 +9,7 @@
   "guests": "Gæster",
   "table": "Bord",
   "notes": "Bemærkninger",
-  "guestOutro": "Hvis du har brug for at foretage ændringer, bedes du kontakte restauranten direkte.",
+  "guestOutro": "Hvis du har brug for at foretage ændringer, bedes du kontakte {restaurant} direkte.",
   "signature": "Med venlig hilsen,<br>{restaurant}",
   "ownerSubject": "Ny reservation fra {name}",
   "ownerGreeting": "Ny reservation!",

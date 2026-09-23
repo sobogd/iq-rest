@@ -9,7 +9,7 @@
   "guests": "Oaspeți",
   "table": "Masă",
   "notes": "Note",
-  "guestOutro": "Dacă trebuie să faceți modificări, vă rugăm să contactați direct restaurantul.",
+  "guestOutro": "Dacă trebuie să faceți modificări, vă rugăm să contactați direct {restaurant}.",
   "signature": "Cu stimă,<br>{restaurant}",
   "ownerSubject": "Rezervare nouă de la {name}",
   "ownerGreeting": "Rezervare nouă!",

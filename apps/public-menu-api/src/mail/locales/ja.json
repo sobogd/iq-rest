@@ -9,7 +9,7 @@
   "guests": "人数",
   "table": "テーブル",
   "notes": "備考",
-  "guestOutro": "変更が必要な場合は、レストランに直接お問い合わせください。",
+  "guestOutro": "変更が必要な場合は、{restaurant}まで直接お問い合わせください。",
   "signature": "{restaurant}より",
   "ownerSubject": "{name}様からの新しい予約",
   "ownerGreeting": "新しい予約！",

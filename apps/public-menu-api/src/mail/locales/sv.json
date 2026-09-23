@@ -9,7 +9,7 @@
   "guests": "Gäster",
   "table": "Bord",
   "notes": "Anteckningar",
-  "guestOutro": "Om du behöver göra ändringar är du välkommen att kontakta restaurangen direkt.",
+  "guestOutro": "Om du behöver göra ändringar är du välkommen att kontakta {restaurant} direkt.",
   "signature": "Med vänliga hälsningar,<br>{restaurant}",
   "ownerSubject": "Ny bokning från {name}",
   "ownerGreeting": "Ny bokning!",

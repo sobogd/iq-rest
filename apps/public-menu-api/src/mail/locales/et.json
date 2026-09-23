@@ -9,7 +9,7 @@
   "guests": "Külalised",
   "table": "Laud",
   "notes": "Märkused",
-  "guestOutro": "Kui soovite muudatusi teha, võtke palun otse restoraniga ühendust.",
+  "guestOutro": "Kui soovite muudatusi teha, võtke palun otse ühendust: {restaurant}.",
   "signature": "Lugupidamisega,<br>{restaurant}",
   "ownerSubject": "Uus broneering külaliselt {name}",
   "ownerGreeting": "Uus broneering!",

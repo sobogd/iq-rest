@@ -9,7 +9,7 @@
   "guests": "Svečiai",
   "table": "Stalas",
   "notes": "Pastabos",
-  "guestOutro": "Jei reikia atlikti pakeitimus, susisiekite tiesiogiai su restoranu.",
+  "guestOutro": "Jei reikia atlikti pakeitimus, susisiekite tiesiogiai su {restaurant}.",
   "signature": "Pagarbiai,<br>{restaurant}",
   "ownerSubject": "Nauja rezervacija nuo {name}",
   "ownerGreeting": "Nauja rezervacija!",

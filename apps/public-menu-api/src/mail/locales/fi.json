@@ -9,7 +9,7 @@
   "guests": "Vieraat",
   "table": "Pöytä",
   "notes": "Huomautukset",
-  "guestOutro": "Jos sinun täytyy tehdä muutoksia, ota yhteyttä suoraan ravintolaan.",
+  "guestOutro": "Jos sinun täytyy tehdä muutoksia, ota yhteyttä suoraan: {restaurant}.",
   "signature": "Ystävällisin terveisin,<br>{restaurant}",
   "ownerSubject": "Uusi varaus henkilöltä {name}",
   "ownerGreeting": "Uusi varaus!",

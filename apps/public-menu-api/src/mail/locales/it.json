@@ -9,7 +9,7 @@
   "guests": "Ospiti",
   "table": "Tavolo",
   "notes": "Note",
-  "guestOutro": "Se hai bisogno di apportare modifiche, contatta direttamente il ristorante.",
+  "guestOutro": "Se hai bisogno di apportare modifiche, contatta direttamente {restaurant}.",
   "signature": "Cordiali saluti,<br>{restaurant}",
   "ownerSubject": "Nuova prenotazione da {name}",
   "ownerGreeting": "Nuova prenotazione!",

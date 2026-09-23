@@ -9,7 +9,7 @@
   "guests": "Gosti",
   "table": "Stol",
   "notes": "Napomene",
-  "guestOutro": "Ako trebate napraviti promjene, molimo kontaktirajte restoran izravno.",
+  "guestOutro": "Ako trebate napraviti promjene, molimo kontaktirajte {restaurant} izravno.",
   "signature": "S poštovanjem,<br>{restaurant}",
   "ownerSubject": "Nova rezervacija od {name}",
   "ownerGreeting": "Nova rezervacija!",

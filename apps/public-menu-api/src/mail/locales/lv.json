@@ -9,7 +9,7 @@
   "guests": "Viesi",
   "table": "Galds",
   "notes": "Piezīmes",
-  "guestOutro": "Ja jums ir nepieciešams veikt izmaiņas, lūdzu, sazinieties tieši ar restorānu.",
+  "guestOutro": "Ja jums ir nepieciešams veikt izmaiņas, lūdzu, sazinieties tieši ar {restaurant}.",
   "signature": "Ar cieņu,<br>{restaurant}",
   "ownerSubject": "Jauna rezervācija no {name}",
   "ownerGreeting": "Jauna rezervācija!",

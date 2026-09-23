@@ -113,6 +113,9 @@ export class MailService implements OnModuleDestroy {
     const subject = t.guestSubject.replace("{restaurant}", params.restaurantTitle);
     const greeting = t.guestGreeting.replace("{name}", params.guestName);
     const statusText = params.status === "confirmed" ? t.guestConfirmed : t.guestPending;
+    // The outro names the venue ("...contact Alifarma") so the guest knows
+    // exactly who to reach — some venues can only be changed by calling them.
+    const outro = t.guestOutro.replace("{restaurant}", params.restaurantTitle);
     const sig = t.signature.replace("{restaurant}", params.restaurantTitle);
 
     let rows = "";
@@ -132,11 +135,11 @@ export class MailService implements OnModuleDestroy {
           <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${statusText}</p>
           <p style="font-size:15px;font-weight:600;margin:0 0 8px">${t.details}</p>
           <table style="border-collapse:collapse;margin:0 0 24px;background:#f5f5f5;border-radius:12px;overflow:hidden;width:100%">${rows}</table>
-          <p style="font-size:15px;line-height:1.7;margin:0 0 24px;color:#666">${t.guestOutro}</p>
+          <p style="font-size:15px;line-height:1.7;margin:0 0 24px;color:#666">${outro}</p>
           <p style="font-size:15px;margin:0;color:#1a1a1a">${sig}</p>
         </div>
       `,
-      text: `${greeting}\n\n${statusText}\n\n${t.details}\n${t.date}: ${params.date}\n${t.time}: ${params.startTime}\n${t.guests}: ${params.guestsCount}${params.tableNumber !== null ? `\n${t.table}: ${params.tableNumber}` : ""}${params.notes ? `\n${t.notes}: ${params.notes}` : ""}\n\n${t.guestOutro}\n\n${sig.replace("<br>", "\n")}`,
+      text: `${greeting}\n\n${statusText}\n\n${t.details}\n${t.date}: ${params.date}\n${t.time}: ${params.startTime}\n${t.guests}: ${params.guestsCount}${params.tableNumber !== null ? `\n${t.table}: ${params.tableNumber}` : ""}${params.notes ? `\n${t.notes}: ${params.notes}` : ""}\n\n${outro}\n\n${sig.replace("<br>", "\n")}`,
     });
   }
 

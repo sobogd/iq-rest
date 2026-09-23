@@ -9,7 +9,7 @@
   "guests": "Hosté",
   "table": "Stůl",
   "notes": "Poznámky",
-  "guestOutro": "Pokud potřebujete provést změny, kontaktujte prosím přímo restauraci.",
+  "guestOutro": "Pokud potřebujete provést změny, kontaktujte prosím přímo {restaurant}.",
   "signature": "S pozdravem,<br>{restaurant}",
   "ownerSubject": "Nová rezervace od {name}",
   "ownerGreeting": "Nová rezervace!",

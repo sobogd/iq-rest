@@ -9,7 +9,7 @@
   "guests": "مهمانان",
   "table": "میز",
   "notes": "یادداشت‌ها",
-  "guestOutro": "اگر نیاز به تغییر دارید، لطفاً مستقیماً با رستوران تماس بگیرید.",
+  "guestOutro": "اگر نیاز به تغییر دارید، لطفاً مستقیماً با {restaurant} تماس بگیرید.",
   "signature": "با احترام،<br>{restaurant}",
   "ownerSubject": "رزرو جدید از {name}",
   "ownerGreeting": "رزرو جدید!",

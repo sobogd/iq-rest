@@ -9,7 +9,7 @@
   "guests": "Vendégek",
   "table": "Asztal",
   "notes": "Megjegyzések",
-  "guestOutro": "Ha módosítani szeretnél, kérjük, vedd fel a kapcsolatot közvetlenül az étteremmel.",
+  "guestOutro": "Ha módosítani szeretnél, kérjük, vedd fel a kapcsolatot közvetlenül: {restaurant}.",
   "signature": "Üdvözlettel,<br>{restaurant}",
   "ownerSubject": "Új foglalás {name} részéről",
   "ownerGreeting": "Új foglalás!",

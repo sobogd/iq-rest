@@ -9,7 +9,7 @@
   "guests": "Gasten",
   "table": "Tafel",
   "notes": "Opmerkingen",
-  "guestOutro": "Als u wijzigingen wilt aanbrengen, neem dan rechtstreeks contact op met het restaurant.",
+  "guestOutro": "Als u wijzigingen wilt aanbrengen, neem dan rechtstreeks contact op met {restaurant}.",
   "signature": "Met vriendelijke groet,<br>{restaurant}",
   "ownerSubject": "Nieuwe reservering van {name}",
   "ownerGreeting": "Nieuwe reservering!",

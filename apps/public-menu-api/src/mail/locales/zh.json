@@ -9,7 +9,7 @@
   "guests": "人数",
   "table": "桌号",
   "notes": "备注",
-  "guestOutro": "如需更改，请直接联系餐厅。",
+  "guestOutro": "如需更改，请直接联系{restaurant}。",
   "signature": "祝好，<br>{restaurant}",
   "ownerSubject": "来自{name}的新预约",
   "ownerGreeting": "新预约！",
