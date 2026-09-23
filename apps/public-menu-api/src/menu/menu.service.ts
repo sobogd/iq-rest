@@ -60,8 +60,8 @@ export class MenuService {
     if (!restaurant) throw new NotFoundException("restaurant not found");
 
     // Resolve capabilities from the account once, server-side. `menuOnline`
-    // gates the diner paywall overlay; `proFeatures` hides the order/booking
-    // surfaces for BASIC (menu-only). The SPA consumes these directly instead of
+    // gates the diner paywall overlay; the per-feature flags below gate the
+    // order/booking surfaces. The SPA consumes these directly instead of
     // re-deriving plan logic (kills the __root.tsx duplicate).
     const caps = restaurantCapsFromRow(restaurant);
 
@@ -107,11 +107,18 @@ export class MenuService {
     } = restaurant as typeof restaurant & Record<string, unknown>;
 
     return {
-      // `menuOnline` drives the diner paywall overlay; `proFeatures` hides the
-      // order/booking surfaces for BASIC (menu-only). Both resolved account-side
-      // so the SPA doesn't re-derive plan logic.
+      // `menuOnline` drives the diner paywall overlay. Orders and bookings are
+      // separate à-la-carte entitlements (`featOrders` / `featReservations`), so
+      // each surface folds in its OWN capability: a venue that bought only
+      // reservations must still get the booking button, and one that bought only
+      // orders must not be offered a booking it can't take. Both resolved
+      // account-side so the SPA doesn't re-derive plan logic.
       restaurant: {
         ...restaurantPublic,
+        ordersEnabled: restaurant.ordersEnabled && caps.orders,
+        reservationsEnabled: restaurant.reservationsEnabled && caps.reservations,
+        // Legacy all-or-nothing PRO flag, kept only for already-cached older
+        // clients — the SPA gates on the two flags above now.
         proFeatures: caps.orders,
         menuOnline: caps.menuOnline,
       },

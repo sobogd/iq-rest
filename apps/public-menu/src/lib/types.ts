@@ -44,8 +44,9 @@ export interface RestaurantPayload {
   x: string | null;
   y: string | null;
   googlePlaceId: string | null;
-  // PRO-feature entitlement: orders + reservations are PRO-only. When false the
-  // diner sees a menu-only experience (no order/booking surfaces).
+  // Legacy all-or-nothing PRO flag from the API, derived from the orders
+  // capability. The SPA no longer reads it: each surface gates on the
+  // per-feature `ordersEnabled` / `reservationsEnabled` flags instead.
   proFeatures: boolean;
   // Account entitlement (§3), resolved server-side. false → the diner sees the
   // paywall overlay (inactive account: no active sub, expired/never trial, not

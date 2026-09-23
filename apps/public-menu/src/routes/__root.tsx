@@ -112,23 +112,12 @@ function RootLayout() {
   const isDemo = data.restaurant.slug === "love-eatery";
   const menuBlocked = !data.restaurant.menuOnline && !isDemo;
 
-  // Orders + reservations are PRO-only. For a BASIC (menu-only) restaurant the
-  // menu still shows, but the order/booking surfaces are hidden. Force the
-  // enabled flags off here so every downstream consumer respects it without a
-  // separate proFeatures check.
-  const menu: MenuPayload = data.restaurant.proFeatures
-    ? data
-    : {
-        ...data,
-        restaurant: {
-          ...data.restaurant,
-          ordersEnabled: false,
-          reservationsEnabled: false,
-        },
-      };
-
+  // Orders and bookings are separate purchased features, and the API already
+  // folds each entitlement into `ordersEnabled` / `reservationsEnabled`. The
+  // SPA therefore gates on those flags directly — no blanket PRO check here
+  // (that used to hide bookings for a reservations-only venue).
   return (
-    <MenuProvider menu={menu}>
+    <MenuProvider menu={data}>
       <MenuPageTracker slug={slug} />
       <Outlet />
       {menuBlocked ? <TrialExpiredOverlay defaultLanguage={data.restaurant.defaultLanguage} /> : null}
