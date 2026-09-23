@@ -499,6 +499,9 @@ function MonthView({
 // ---------- Day view ----------
 
 const TABLE_ROW_PX = 44;
+// Height of one stacked lane inside the table-less (event) row. The row grows by
+// this per overlap track, so several bookings at the same time stay readable.
+const UNASSIGNED_TRACK_PX = 34;
 const TABLE_COL_PX_RESPONSIVE = 36;
 
 function DayView({
@@ -555,6 +558,36 @@ function DayView({
  const totalMinutes = (DAY_END_HOUR - DAY_START_HOUR) * 60;
  const pct = (min: number) => ((min - DAY_START_HOUR * 60) / totalMinutes) * 100;
 
+ // Event-mode bookings carry no table, and the per-table grid skips them (see
+ // the `if (!b.tableId) continue` in byTable). They get their own lane above
+ // the table rows so they never become invisible.
+ const unassigned = useMemo(() => bookings.filter((b) => !b.tableId), [bookings]);
+
+ // Overlapping table-less bookings — event mode takes many bookings per slot —
+ // are packed into horizontal tracks so they don't draw on top of each other.
+ // Greedy interval packing: a booking goes into the first track whose last
+ // booking ends at or before it starts; each track holds non-overlapping bars.
+ const unassignedTracks = useMemo(() => {
+  const tracks: { end: number; booking: Booking }[][] = [];
+  const sorted = [...unassigned].sort(
+   (a, b) => new Date(a.datetime).getTime() - new Date(b.datetime).getTime(),
+  );
+  for (const b of sorted) {
+   const start = new Date(b.datetime).getTime() / 60000;
+   const end = start + b.duration;
+   const track = tracks.find((t) => t[t.length - 1].end <= start);
+   if (track) track.push({ end, booking: b });
+   else tracks.push([{ end, booking: b }]);
+  }
+  return tracks.map((t) => t.map((x) => x.booking));
+ }, [unassigned]);
+ // One track is the normal case; more means same-time bookings. Never shorter
+ // than a table row so the lane reads as the same kind of row.
+ const unassignedLaneHeight = Math.max(
+  TABLE_ROW_PX,
+  unassignedTracks.length * UNASSIGNED_TRACK_PX + 8,
+ );
+
  const stripesBg =
   "repeating-linear-gradient(45deg, rgba(148,163,184,0.2) 0 4px, transparent 4px 10px)";
 
@@ -585,6 +618,38 @@ function DayView({
      </div>
     ))}
    </div>
+
+   {/* Bookings without a table (event mode) — see `unassigned` above. */}
+   {unassigned.length > 0 ? (
+    <div className="relative bg-card border border-border rounded-xl overflow-hidden" style={{ height: unassignedLaneHeight }}>
+     {hours.map((h, i) => (
+      <div
+       key={h}
+       className="absolute top-0 bottom-0 border-l border-border/40 first:border-l-0"
+       style={{ left: `${(i / (DAY_END_HOUR - DAY_START_HOUR)) * 100}%` }}
+      />
+     ))}
+     {isClosed ? (
+      <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: stripesBg }} />
+     ) : null}
+     <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none text-[11px] sm:text-xs font-medium text-muted-foreground/50">
+      {t("notAssigned")}
+     </div>
+     {unassignedTracks.map((track, ti) =>
+      track.map((b) => (
+       <BookingBar
+        key={b.id}
+        booking={b}
+        dayStartHour={DAY_START_HOUR}
+        totalMinutes={totalMinutes}
+        topPx={ti * UNASSIGNED_TRACK_PX + 4}
+        heightPx={UNASSIGNED_TRACK_PX - 8}
+        onClick={() => onClickBooking(b)}
+       />
+      )),
+     )}
+    </div>
+   ) : null}
 
    {/* One card per table. */}
    {sortedTables.map((tbl) => {
@@ -629,33 +694,65 @@ function DayView({
        <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none text-[11px] sm:text-xs font-medium text-muted-foreground/50 tabular-nums">
         {t("tableLabel", { number: tbl.number })}
        </div>
-       {items.map((b) => {
-         const dt = new Date(b.datetime);
-         const startMin = dt.getHours() * 60 + dt.getMinutes();
-         const left = pct(startMin);
-         const width = (b.duration / totalMinutes) * 100;
-         if (left + width <= 0 || left >= 100) return null;
-         return (
-          <button
-           key={b.id}
-           type="button"
-           onClick={() => onClickBooking(b)}
-           className={
-            "absolute top-1 bottom-1 rounded-md px-1.5 text-[10px] sm:text-[11px] font-medium text-left truncate transition-colors " +
-            STATUS_BAR[b.status]
-           }
-           style={{ left: `${Math.max(0, left)}%`, width: `${Math.min(100 - Math.max(0, left), width)}%` }}
-          >
-           <span className="tabular-nums">{formatTime(dt)}</span>
-           {" "}
-           <span>{b.guestName}</span>
-          </button>
-         );
-        })}
+       {items.map((b) => (
+        <BookingBar
+         key={b.id}
+         booking={b}
+         dayStartHour={DAY_START_HOUR}
+         totalMinutes={totalMinutes}
+         onClick={() => onClickBooking(b)}
+        />
+       ))}
       </div>
      );
     })}
   </div>
+ );
+}
+
+// One booking drawn on the day timeline. Shared by the per-table rows and the
+// table-less (event) lane so both keep identical bar sizing and status colours.
+function BookingBar({
+ booking,
+ dayStartHour,
+ totalMinutes,
+ onClick,
+ topPx,
+ heightPx,
+}: {
+ booking: Booking;
+ dayStartHour: number;
+ totalMinutes: number;
+ onClick: () => void;
+ // Stacked mode (table-less lane): pin the bar to one track instead of
+ // stretching across the whole row. Omitted for normal table rows.
+ topPx?: number;
+ heightPx?: number;
+}) {
+ const dt = new Date(booking.datetime);
+ const startMin = dt.getHours() * 60 + dt.getMinutes();
+ const left = ((startMin - dayStartHour * 60) / totalMinutes) * 100;
+ const width = (booking.duration / totalMinutes) * 100;
+ if (left + width <= 0 || left >= 100) return null;
+ return (
+  <button
+   type="button"
+   onClick={onClick}
+   className={
+    "absolute rounded-md px-1.5 text-[10px] sm:text-[11px] font-medium text-left truncate transition-colors " +
+    STATUS_BAR[booking.status] +
+    (topPx === undefined ? " top-1 bottom-1" : "")
+   }
+   style={{
+    left: `${Math.max(0, left)}%`,
+    width: `${Math.min(100 - Math.max(0, left), width)}%`,
+    ...(topPx !== undefined ? { top: `${topPx}px`, height: `${heightPx}px` } : {}),
+   }}
+  >
+   <span className="tabular-nums">{formatTime(dt)}</span>
+   {" "}
+   <span>{booking.guestName}</span>
+  </button>
  );
 }
 

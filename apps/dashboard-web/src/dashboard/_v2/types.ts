@@ -144,10 +144,14 @@ export interface ScheduleDay {
 export type ReservationSchedule = ScheduleDay[];
 
 // One bookable date in event mode: a restaurant-local date plus its own window.
+//
+// Event bookings are seat-based and table-free, so a date may also cap how many
+// guests it can hold. `capacity` null / 0 ⇒ unlimited.
 export interface EventDate {
  date: string;
  from: string;
  to: string;
+ capacity: number | null;
 }
 
 export interface BookingSettings {

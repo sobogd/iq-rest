@@ -1190,7 +1190,7 @@ export function BookingSettingsPage({
  setDraft((d) =>
  d.eventDates.length >= MAX_EVENT_DATES
  ? d
- : { ...d, eventDates: [...d.eventDates, { date: iso, from: base?.from || "10:00", to: base?.to || "22:00" }] },
+ : { ...d, eventDates: [...d.eventDates, { date: iso, from: base?.from || "10:00", to: base?.to || "22:00", capacity: null }] },
  );
  }
 
@@ -1337,6 +1337,22 @@ export function BookingSettingsPage({
  onChange={(next) => updateEventDate(idx, { to: next })}
  className="w-24 tabular-nums"
  options={TIME_OPTIONS.map((tm) => ({ value: tm, label: tm }))}
+ />
+ <input
+ type="number"
+ min={0}
+ value={e.capacity ?? ""}
+ onChange={(ev) => {
+  // Empty = unlimited; anything else is floored to a non-negative integer
+  // so a stray "1.5"/"abc" can't reach the server.
+  const raw = ev.target.value;
+  const n = Number(raw);
+  updateEventDate(idx, { capacity: raw === "" || !Number.isFinite(n) ? null : Math.max(0, Math.floor(n)) });
+ }}
+ placeholder={tb("eventCapacityPlaceholder", { defaultValue: "Seats" })}
+ title={tb("eventCapacityTip", { defaultValue: "Seats for this date. Empty = unlimited." })}
+ aria-label={tb("eventCapacityPlaceholder", { defaultValue: "Seats" })}
+ className={inputClass + " w-24"}
  />
  <button
  type="button"

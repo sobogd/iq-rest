@@ -52,6 +52,10 @@ const eventDateSchema = z
     date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
     from: z.string().regex(HHMM),
     to: z.string().regex(HHMM),
+    // Seats the event date can hold. Absent / null / 0 ⇒ unlimited: the event
+    // flow does not cap on tables, so without this the owner can take any
+    // number of bookings for the day.
+    capacity: z.number().int().min(0).max(100000).nullable().optional(),
   })
   .refine((d) => d.from < d.to, { message: "from must be < to" });
 

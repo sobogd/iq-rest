@@ -202,7 +202,16 @@ export function eventDatesFromApi(raw: ApiEventDate[] | null | undefined): Event
  if (!Array.isArray(raw)) return [];
  return raw
   .filter((d) => d && typeof d.date === "string" && typeof d.from === "string" && typeof d.to === "string")
-  .map((d) => ({ date: d.date, from: d.from, to: d.to }));
+  .map((d) => ({
+   date: d.date,
+   from: d.from,
+   to: d.to,
+   // Seat cap: keep only a sane non-negative number, otherwise unlimited.
+   capacity:
+    typeof d.capacity === "number" && Number.isFinite(d.capacity) && d.capacity > 0
+     ? Math.floor(d.capacity)
+     : null,
+  }));
 }
 
 export function apiRestaurantToRestaurant(r: ApiRestaurant): Restaurant {

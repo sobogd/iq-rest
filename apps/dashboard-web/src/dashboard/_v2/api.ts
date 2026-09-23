@@ -59,11 +59,13 @@ export interface ApiScheduleDay {
 }
 
 // One owner-defined bookable date in event mode ("reservations only on 6-8
-// October"). Each date carries its own window.
+// October"). Each date carries its own window; `capacity` is the optional seat
+// cap for the day (null / absent ⇒ unlimited).
 export interface ApiEventDate {
  date: string;
  from: string;
  to: string;
+ capacity?: number | null;
 }
 
 export interface ApiRestaurant {
@@ -630,8 +632,11 @@ export interface ApiReservation {
  guestsCount: number;
  status: string;
  notes: string | null;
- tableId: string;
- table: { number: number; zone: string | null };
+ // Null for event-mode bookings: they are seat-based and carry no table.
+ tableId: string | null;
+ // Only populated by endpoints that include the relation (booking updates);
+ // the list returns the raw row, so treat it as optional.
+ table: { number: number; zone: string | null } | null;
 }
 
 export async function fetchReservations(): Promise<ApiReservation[]> {

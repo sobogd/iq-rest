@@ -482,7 +482,9 @@ model Table {
 model Reservation {
   id           String   @id @default(cuid())
   restaurantId String
-  tableId      String
+  // Nullable: event-mode bookings are seat-based and carry no table (the venue
+  // takes more bookings than it has tables). Weekly bookings still always set it.
+  tableId      String?
   date         DateTime @db.Date
   startTime    String // "19:00"
   duration     Int // minutes
@@ -496,7 +498,10 @@ model Reservation {
   updatedAt    DateTime @updatedAt
 
   restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
-  table      Table      @relation(fields: [tableId], references: [id], onDelete: Cascade)
+  // SetNull, not Cascade: hard-deleting a table must not wipe event bookings
+  // that never referenced a table in the first place. (Tables are soft-deleted
+  // in practice, so this is a safety net.)
+  table      Table?     @relation(fields: [tableId], references: [id], onDelete: SetNull)
 
   @@index([restaurantId, date])
   @@index([restaurantId, status])

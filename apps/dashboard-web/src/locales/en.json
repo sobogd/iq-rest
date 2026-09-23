@@ -639,6 +639,8 @@
         "eventScheduleIgnored": "Ignored while event dates are set.",
         "eventAddDate": "Add date",
         "eventRemoveDate": "Remove date",
+        "eventCapacityPlaceholder": "Seats",
+        "eventCapacityTip": "Seats for this date. Empty = unlimited.",
         "eventEmptyError": "Add at least one date.",
         "eventDuplicateError": "The same date is listed twice.",
         "eventInvalidError": "Each row needs a date and an end time after the start time."

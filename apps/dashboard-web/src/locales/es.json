@@ -563,6 +563,8 @@
         "eventScheduleIgnored": "Ignorado mientras haya fechas de evento configuradas.",
         "eventAddDate": "Añadir fecha",
         "eventRemoveDate": "Eliminar fecha",
+        "eventCapacityPlaceholder": "Plazas",
+        "eventCapacityTip": "Plazas para esta fecha. Vacío = sin límite.",
         "eventEmptyError": "Añade al menos una fecha.",
         "eventDuplicateError": "La misma fecha está listada dos veces.",
         "eventInvalidError": "Cada fila necesita una fecha y una hora de fin posterior a la hora de inicio."

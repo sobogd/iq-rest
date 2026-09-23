@@ -31,7 +31,9 @@ interface ReservationParams {
   date: string;
   startTime: string;
   guestsCount: number;
-  tableNumber: number;
+  // Null for event-mode bookings, which carry no table. Mail rows for the
+  // table are skipped when it is null.
+  tableNumber: number | null;
   notes: string | null;
   status: string;
   locale: string;
@@ -117,7 +119,7 @@ export class MailService implements OnModuleDestroy {
     rows += detailRow(t.date, params.date);
     rows += detailRow(t.time, params.startTime);
     rows += detailRow(t.guests, String(params.guestsCount));
-    rows += detailRow(t.table, String(params.tableNumber));
+    if (params.tableNumber !== null) rows += detailRow(t.table, String(params.tableNumber));
     if (params.notes) rows += detailRow(t.notes, params.notes);
 
     await transporter.sendMail({
@@ -134,7 +136,7 @@ export class MailService implements OnModuleDestroy {
           <p style="font-size:15px;margin:0;color:#1a1a1a">${sig}</p>
         </div>
       `,
-      text: `${greeting}\n\n${statusText}\n\n${t.details}\n${t.date}: ${params.date}\n${t.time}: ${params.startTime}\n${t.guests}: ${params.guestsCount}\n${t.table}: ${params.tableNumber}${params.notes ? `\n${t.notes}: ${params.notes}` : ""}\n\n${t.guestOutro}\n\n${sig.replace("<br>", "\n")}`,
+      text: `${greeting}\n\n${statusText}\n\n${t.details}\n${t.date}: ${params.date}\n${t.time}: ${params.startTime}\n${t.guests}: ${params.guestsCount}${params.tableNumber !== null ? `\n${t.table}: ${params.tableNumber}` : ""}${params.notes ? `\n${t.notes}: ${params.notes}` : ""}\n\n${t.guestOutro}\n\n${sig.replace("<br>", "\n")}`,
     });
   }
 
@@ -150,7 +152,7 @@ export class MailService implements OnModuleDestroy {
     rows += detailRow(t.date, params.date);
     rows += detailRow(t.time, params.startTime);
     rows += detailRow(t.guests, String(params.guestsCount));
-    rows += detailRow(t.table, String(params.tableNumber));
+    if (params.tableNumber !== null) rows += detailRow(t.table, String(params.tableNumber));
     rows += detailRow("Email", params.guestEmail);
     if (params.guestPhone) rows += detailRow("Phone", params.guestPhone);
     if (params.notes) rows += detailRow(t.notes, params.notes);
@@ -170,7 +172,7 @@ export class MailService implements OnModuleDestroy {
           <p style="font-size:15px;margin:0;color:#1a1a1a">${t.ownerSignature}</p>
         </div>
       `,
-      text: `${t.ownerGreeting}\n\n${t.ownerBody}\n\n${t.date}: ${params.date}\n${t.time}: ${params.startTime}\n${t.guests}: ${params.guestsCount}\n${t.table}: ${params.tableNumber}\nEmail: ${params.guestEmail}${params.notes ? `\n${t.notes}: ${params.notes}` : ""}\n\n${t.ownerCta}: ${this.dashboardUrl("/dashboard/reservations?from=email")}\n\n${t.ownerSignature.replace("<br>", "\n")}`,
+      text: `${t.ownerGreeting}\n\n${t.ownerBody}\n\n${t.date}: ${params.date}\n${t.time}: ${params.startTime}\n${t.guests}: ${params.guestsCount}${params.tableNumber !== null ? `\n${t.table}: ${params.tableNumber}` : ""}\nEmail: ${params.guestEmail}${params.notes ? `\n${t.notes}: ${params.notes}` : ""}\n\n${t.ownerCta}: ${this.dashboardUrl("/dashboard/reservations?from=email")}\n\n${t.ownerSignature.replace("<br>", "\n")}`,
     });
   }
 }

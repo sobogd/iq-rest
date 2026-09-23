@@ -31,6 +31,9 @@ interface EventDate {
   date: string; // restaurant-local YYYY-MM-DD
   from: string;
   to: string;
+  // Seats the date can hold; null / 0 ⇒ unlimited (the event flow has no
+  // table-based cap, so without this the owner takes any number of bookings).
+  capacity: number | null;
 }
 
 function timeToMinutes(t: string): number {
@@ -42,7 +45,9 @@ function isTableBooked(
   tableId: string,
   startTime: string,
   slotDuration: number,
-  rs: { tableId: string; startTime: string; duration: number }[],
+  // tableId may be null on existing rows (event-mode bookings have no table);
+  // those can never match a real table id and are skipped below.
+  rs: { tableId: string | null; startTime: string; duration: number }[],
 ): boolean {
   const reqStart = timeToMinutes(startTime);
   const reqEnd = reqStart + slotDuration;
@@ -53,6 +58,24 @@ function isTableBooked(
     if (reqStart < bookedEnd && reqEnd > bookedStart) return true;
   }
   return false;
+}
+
+/** Party sizes of all reservations overlapping [startTime, startTime+duration).
+ *  Event mode is seat-based, so this total is its whole occupancy signal (there
+ *  is no per-table check to run). */
+function bookedGuests(
+  startTime: string,
+  slotDuration: number,
+  rs: { startTime: string; duration: number; guestsCount: number }[],
+): number {
+  const reqStart = timeToMinutes(startTime);
+  const reqEnd = reqStart + slotDuration;
+  let sum = 0;
+  for (const r of rs) {
+    const bookedStart = timeToMinutes(r.startTime);
+    if (reqStart < bookedStart + r.duration && reqEnd > bookedStart) sum += r.guestsCount;
+  }
+  return sum;
 }
 
 /** Return the restaurant's current local date/time as a plain object,
@@ -159,7 +182,13 @@ function parseEventDates(raw: unknown, logger?: Logger): EventDate[] {
       dropped++;
       continue;
     }
-    out.push({ date, from, to });
+    // Seats cap: malformed / negative ⇒ null (unlimited) rather than dropping
+    // the whole date, so a bad number can't silently close the event day.
+    const capacity =
+      typeof e.capacity === "number" && Number.isFinite(e.capacity) && e.capacity >= 0
+        ? Math.floor(e.capacity)
+        : null;
+    out.push({ date, from, to, capacity });
   }
   if (dropped > 0) {
     logger?.warn(
@@ -235,23 +264,37 @@ export class ReservationsController {
     )
       throw new BadRequestException("reservations_disabled");
 
+    // Event mode is seat-based and table-free: the owner takes more bookings
+    // than there are tables (standing events, general admission). Weekly mode
+    // stays table-based. The two branches differ only in how a slot's remaining
+    // capacity is computed — windows and past-slot skipping are shared below.
+    const eventDates = parseEventDates(restaurant.reservationDates, this.logger);
+    const isEvent = eventDates.length > 0;
+
     const tables = await this.prisma.table.findMany({
       where: { restaurantId: restaurant.id, isActive: true, deletedAt: null },
       select: { id: true, number: true, capacity: true, zone: true, translations: true, imageUrl: true },
       orderBy: { sortOrder: "asc" },
     });
     const suitable = tables.filter((t) => t.capacity >= guestsCount);
-    if (suitable.length === 0) {
+    // Weekly mode can't seat the party without a big-enough table; event mode
+    // ignores table capacity entirely, so this early exit only applies there.
+    if (!isEvent && suitable.length === 0) {
       return { timeSlots: [], tables: [], message: "No tables available for the requested number of guests" };
     }
 
     const reservationDate = new Date(dateStr);
     const existing = await this.prisma.reservation.findMany({
       where: { restaurantId: restaurant.id, date: reservationDate, status: { in: ["pending", "confirmed"] } },
-      select: { tableId: true, startTime: true, duration: true },
+      // guestsCount is only read in event mode (seat counting); weekly mode
+      // uses tableId/startTime/duration for the per-table overlap check.
+      select: { tableId: true, startTime: true, duration: true, guestsCount: true },
     });
     const slotDuration = restaurant.reservationSlotMinutes;
-    const eventDates = parseEventDates(restaurant.reservationDates, this.logger);
+    // Seats this event date holds; null ⇒ unlimited.
+    const eventCapacity = isEvent
+      ? (eventDates.find((e) => e.date === dateStr)?.capacity ?? null)
+      : null;
     // The restaurant's local clock drives both "is this date still in the
     // future" and "is this slot today but already past" below.
     const { todayStr, currentMinutes } = nowInTz(restaurant.timezone || "UTC");
@@ -279,8 +322,20 @@ export class ReservationsController {
         for (let m = window.start; m + slotDuration <= window.end; m += 30) {
           if (isToday && m <= currentMinutes) continue;
           const timeStr = `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
-          const free = suitable.filter((t) => !isTableBooked(t.id, timeStr, slotDuration, existing)).length;
-          timeSlots.push({ time: timeStr, available: free > 0, availableTables: free });
+          if (isEvent) {
+            // Unlimited cap (null/0) ⇒ every non-past slot is bookable;
+            // otherwise the party has to fit into the seats left.
+            const seatsLeft =
+              eventCapacity && eventCapacity > 0 ? eventCapacity - bookedGuests(timeStr, slotDuration, existing) : null;
+            timeSlots.push({
+              time: timeStr,
+              available: seatsLeft === null || seatsLeft >= guestsCount,
+              availableTables: 0,
+            });
+          } else {
+            const free = suitable.filter((t) => !isTableBooked(t.id, timeStr, slotDuration, existing)).length;
+            timeSlots.push({ time: timeStr, available: free > 0, availableTables: free });
+          }
         }
       }
     }
@@ -294,7 +349,9 @@ export class ReservationsController {
       imageUrl: string | null;
       available: boolean;
     }> = [];
-    if (time) {
+    // Event mode returns no table list at all: the diner skips the picker and
+    // the booking is created without a table.
+    if (time && !isEvent) {
       tablesAvailability = suitable.map((t) => ({
         ...t,
         translations: t.translations as Record<string, { zone?: string }> | null,
@@ -351,7 +408,10 @@ export class ReservationsController {
     // old behaviour of validating neither the schedule nor the time: there the
     // availability endpoint is what shapes the flow.
     const eventDates = parseEventDates(restaurant.reservationDates, this.logger);
-    if (eventDates.length > 0) {
+    const isEvent = eventDates.length > 0;
+    // Seats the requested date holds; null / 0 ⇒ unlimited.
+    let eventCapacity: number | null = null;
+    if (isEvent) {
       const entry = eventDates.find((e) => e.date === date);
       if (!entry) throw new BadRequestException("date_not_available");
       // Same day, and the whole sitting has to fit the window: the picker only
@@ -360,31 +420,48 @@ export class ReservationsController {
       if (startMin < timeToMinutes(entry.from) || startMin + slotDuration > timeToMinutes(entry.to)) {
         throw new BadRequestException("time_not_available");
       }
+      eventCapacity = entry.capacity;
     }
 
     const status = restaurant.reservationMode === "auto" ? "confirmed" : "pending";
 
-    const tables = await this.prisma.table.findMany({
-      where: { restaurantId, isActive: true, deletedAt: null, capacity: { gte: guestsCount } },
-      select: { id: true, number: true, capacity: true },
-    });
-
     const existing = await this.prisma.reservation.findMany({
       where: { restaurantId, date: reservationDate, status: { in: ["pending", "confirmed"] } },
-      select: { tableId: true, startTime: true, duration: true },
+      select: { tableId: true, startTime: true, duration: true, guestsCount: true },
     });
 
-    let chosenTableId = tableId;
-    if (chosenTableId) {
-      const tbl = tables.find((t) => t.id === chosenTableId);
-      if (!tbl) throw new BadRequestException("table_not_suitable");
-      if (isTableBooked(chosenTableId, startTime, slotDuration, existing)) {
-        throw new BadRequestException("table_taken");
+    // Event mode: no table is assigned (seat-based, more bookings than tables),
+    // so only the day's seat cap is enforced. Weekly mode picks/validates a
+    // concrete table as before. `tableNumber` feeds the mail and stays null for
+    // event bookings.
+    let chosenTableId: string | null = null;
+    let tableNumber: number | null = null;
+    if (isEvent) {
+      if (eventCapacity && eventCapacity > 0) {
+        // Guard the seat cap on create too: the picker already hides full
+        // slots, but a hand-made POST must not oversell the event.
+        if (bookedGuests(startTime, slotDuration, existing) + guestsCount > eventCapacity) {
+          throw new BadRequestException("no_tables_at_time");
+        }
       }
     } else {
-      const free = tables.find((t) => !isTableBooked(t.id, startTime, slotDuration, existing));
-      if (!free) throw new BadRequestException("no_tables_at_time");
-      chosenTableId = free.id;
+      const tables = await this.prisma.table.findMany({
+        where: { restaurantId, isActive: true, deletedAt: null, capacity: { gte: guestsCount } },
+        select: { id: true, number: true, capacity: true },
+      });
+      if (tableId) {
+        const tbl = tables.find((t) => t.id === tableId);
+        if (!tbl) throw new BadRequestException("table_not_suitable");
+        if (isTableBooked(tableId, startTime, slotDuration, existing)) {
+          throw new BadRequestException("table_taken");
+        }
+        chosenTableId = tableId;
+      } else {
+        const free = tables.find((t) => !isTableBooked(t.id, startTime, slotDuration, existing));
+        if (!free) throw new BadRequestException("no_tables_at_time");
+        chosenTableId = free.id;
+      }
+      tableNumber = tables.find((t) => t.id === chosenTableId)?.number ?? null;
     }
 
     const reservation = await this.prisma.reservation.create({
@@ -404,7 +481,6 @@ export class ReservationsController {
     });
 
     {
-      const tableNumber = tables.find((t) => t.id === chosenTableId)?.number ?? 0;
       const ownerEmails = restaurant.restaurantUsers
         .map((ru) => ru.user.email)
         .filter((e): e is string => !!e);

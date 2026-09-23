@@ -180,7 +180,13 @@ export function ReserveForm() {
         );
         if (res.ok) {
           const data = await res.json();
-          setTables(data.tables || []);
+          const list: TableInfo[] = data.tables || [];
+          setTables(list);
+          // A single free table means there is nothing to choose: pre-select it
+          // so the picker is skipped and the guest lands straight on the details
+          // form. The POST can send this id like a hand-picked one.
+          const free = list.filter((t) => t.available);
+          if (free.length === 1) setSelectedTableId(free[0].id);
         } else {
           setTables([]);
         }
@@ -218,6 +224,13 @@ export function ReserveForm() {
     setSelectedTime(time);
     setSelectedTableId("");
     setTablesLoaded(false);
+    if (eventMode) {
+      // Event mode is seat-based: there is no table to pick, so the guest goes
+      // straight to their details (the API returns no table list at all).
+      setTablesLoaded(true);
+      setTimeout(() => detailsRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }), 100);
+      return;
+    }
     if (selectedDate) void fetchTables(selectedDate, time);
   }
 
@@ -229,7 +242,10 @@ export function ReserveForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
-    if (!selectedDate || !selectedTime || !selectedTableId || !name.trim() || !email.trim()) {
+    // Event mode has no table to select, so it only needs date + time; weekly
+    // mode additionally requires the guest's table pick.
+    const tableMissing = !eventMode && !selectedTableId;
+    if (!selectedDate || !selectedTime || tableMissing || !name.trim() || !email.trim()) {
       setError(t("publicReserve.fillRequired"));
       return;
     }
@@ -240,7 +256,9 @@ export function ReserveForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           restaurantId,
-          tableId: selectedTableId,
+          // Event mode creates a table-less booking, so the key is omitted and
+          // the API takes its seat-based branch.
+          ...(selectedTableId ? { tableId: selectedTableId } : {}),
           date: format(selectedDate, "yyyy-MM-dd"),
           startTime: selectedTime,
           duration: slotMinutes,
@@ -457,7 +475,11 @@ export function ReserveForm() {
         </div>
       ) : null}
 
-      {selectedTime && tablesLoaded ? (
+      {/* Event mode has no tables, so the picker is skipped entirely there. */}
+      {/* With exactly one free table the picker is pointless — fetchTables has
+          already selected it — so it only renders for 0 ("no tables" notice)
+          or 2+ (an actual choice). */}
+      {!eventMode && selectedTime && tablesLoaded && availableTables.length !== 1 ? (
         <div ref={tableRef} className="space-y-3">
           <label className="text-base font-semibold text-black">{t("publicReserve.selectTable")}:</label>
           {availableTables.length === 0 ? (
@@ -498,7 +520,7 @@ export function ReserveForm() {
         </div>
       ) : null}
 
-      {selectedTableId ? (
+      {(eventMode ? !!selectedTime : !!selectedTableId) ? (
         <div ref={detailsRef} className="space-y-4 pt-4 border-t border-gray-200">
           <div className="space-y-2">
             <label htmlFor="name" className="text-base font-semibold text-black">{t("publicReserve.name")}:</label>
