@@ -93,6 +93,8 @@ export interface Order {
  tableNumber: number | null;
  dailyNumber: number;
  guestName: string;
+ // Diner email, empty unless the venue collects it (`orderEmailEnabled`).
+ guestEmail: string;
  createdAt: string;
  status: "active" | "completed" | "cancelled";
  items: OrderItem[];
@@ -163,12 +165,15 @@ export interface BookingSettings {
  // Event mode: the owner's explicit bookable dates. Non-empty ⇒ guests can
  // book ONLY these dates and `schedule` above is ignored. Empty ⇒ weekly mode.
  eventDates: EventDate[];
+ // Event mode only: most guests one booking may hold. Null ⇒ no limit. The
+ // control is hidden while event mode is off and the column is cleared on save.
+ maxGuestsPerBooking: number | null;
 }
 
 export interface OrderSettings {
  acceptOrders: boolean;
  modes: { internal: boolean; whatsapp: boolean };
- requiredFields: { name: boolean; phone: boolean; address: boolean };
+ requiredFields: { name: boolean; phone: boolean; address: boolean; email: boolean };
 }
 
 export interface SubscriptionInfo {

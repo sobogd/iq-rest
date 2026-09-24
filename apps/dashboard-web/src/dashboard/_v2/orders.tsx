@@ -311,6 +311,7 @@ export function OrdersPage({
  tableNumber: table?.number ?? null,
  dailyNumber: created.dailyNumber,
  guestName: "",
+ guestEmail: "",
  createdAt: created.createdAt,
  status: "active",
  items: [],
@@ -368,6 +369,7 @@ export function OrdersPage({
  tableNumber: source.tableNumber,
  dailyNumber: res.created.dailyNumber,
  guestName: "",
+ guestEmail: "",
  createdAt: res.created.createdAt,
  status: "active",
  items: taken,
@@ -485,6 +487,14 @@ export function OrdersPage({
  {t("createdLabel", { defaultValue: "Created" })}: {formatTimeShort(currentOrder.createdAt)}
  {" · "}
  {t("total")}: {formatPrice(total, currencySymbol)}
+ {/* Diner email — the third header field. Shown only when the venue
+ collects it, so it doubles as the order's booking-matching key. */}
+ {currentOrder.guestEmail ? (
+ <>
+ {" · "}
+ {t("emailLabel", { defaultValue: "Email" })}: {currentOrder.guestEmail}
+ </>
+ ) : null}
  {currentOrder.discount ? (
  <>
  {" "}

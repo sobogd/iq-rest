@@ -267,6 +267,11 @@ export function apiRestaurantToRestaurant(r: ApiRestaurant): Restaurant {
  schedule: scheduleFromApi(r.reservationSchedule, r.workingHoursStart, r.workingHoursEnd),
  timezone: r.timezone || "UTC",
  eventDates: eventDatesFromApi(r.reservationDates),
+ // Party cap for event bookings: keep a sane positive integer, else no limit.
+ maxGuestsPerBooking:
+  typeof r.eventMaxGuestsPerBooking === "number" && Number.isFinite(r.eventMaxGuestsPerBooking) && r.eventMaxGuestsPerBooking > 0
+   ? Math.floor(r.eventMaxGuestsPerBooking)
+   : null,
  },
  orderSettings: {
  acceptOrders: r.ordersEnabled,
@@ -278,6 +283,7 @@ export function apiRestaurantToRestaurant(r: ApiRestaurant): Restaurant {
  name: r.orderNameEnabled,
  phone: r.orderPhoneEnabled,
  address: r.orderAddressEnabled,
+ email: r.orderEmailEnabled,
  },
  },
  subscription: { plan: null, status: null, renewsAt: null },
@@ -319,6 +325,7 @@ export function apiOrderToOrder(o: ApiOrder, tablesByNumber: Map<number, string>
  tableNumber: o.tableNumber,
  dailyNumber: o.dailyNumber,
  guestName: o.customerName || "",
+ guestEmail: o.customerEmail || "",
  createdAt: o.createdAt,
  status,
  items: items.map((it) => ({

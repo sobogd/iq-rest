@@ -189,6 +189,12 @@ model Restaurant {
   // because an event often falls on a normally-closed weekday. Null / empty
   // ⇒ normal weekly mode.
   reservationDates       Json?
+  // Event mode only: the most guests a single booking may hold. The public
+  // flow is seat-based and table-free, so without this an owner taking
+  // general-admission bookings has no per-party ceiling. Null ⇒ no limit.
+  // Ignored in weekly (table) mode, where the table's own capacity caps the
+  // party instead.
+  eventMaxGuestsPerBooking Int?
   // IANA timezone identifier (e.g. "Europe/Rome", "America/New_York"). Used
   // by the public booking flow to interpret workingHours / reservationSchedule
   // strings and the "is slot in the past" check against the restaurant's
@@ -202,6 +208,10 @@ model Restaurant {
   orderNameEnabled    Boolean @default(true)
   orderPhoneEnabled   Boolean @default(false)
   orderAddressEnabled Boolean @default(false)
+  // Same show-and-require switch as the contact fields above, for the diner's
+  // email. Turned on when the owner wants to match a diner's order to their
+  // booking (bookings always carry an email). Off ⇒ no email field shown.
+  orderEmailEnabled   Boolean @default(false)
   orderMode           String  @default("internal") // "internal" | "whatsapp" | "both"
 
   // Per-restaurant billing. Each restaurant carries its own subscription —
@@ -638,6 +648,10 @@ model Order {
   customerName      String?
   customerPhone     String?
   customerAddress   String?
+  // Diner email, collected only when the restaurant enables `orderEmailEnabled`.
+  // Stored so the owner can line an order up with a booking by email by hand
+  // (the same person's reservation always has guestEmail).
+  customerEmail     String?
   comment           String?
   tableNumber       Int?
   status            String    @default("new") // new | in_progress | completed | cancelled

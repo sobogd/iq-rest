@@ -958,6 +958,7 @@ export function OrderSettingsPage({
  orderNameEnabled: draft.requiredFields.name,
  orderPhoneEnabled: draft.requiredFields.phone,
  orderAddressEnabled: draft.requiredFields.address,
+ orderEmailEnabled: draft.requiredFields.email,
  paymentMethods: paymentDraft,
  });
  } catch {
@@ -1025,12 +1026,18 @@ export function OrderSettingsPage({
  <p className="text-xs text-muted-foreground mb-4 mt-0.5">
  {to("requiredFieldsTip")}
  </p>
- {(["name", "phone", "address"] as const).map((key, idx) => (
+ {(["name", "phone", "address", "email"] as const).map((key, idx) => (
  <div key={key}>
  {idx > 0 ? <div className="border-t border-border my-2.5" /> : null}
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
  <div className="text-sm text-foreground">
- {key === "name" ? to("fieldName") : key === "phone" ? to("fieldPhone") : to("fieldAddress")}
+ {key === "name"
+ ? to("fieldName")
+ : key === "phone"
+ ? to("fieldPhone")
+ : key === "email"
+ ? to("fieldEmail")
+ : to("fieldAddress")}
  </div>
  <ToggleSwitch
  checked={draft.requiredFields[key]}
@@ -1148,6 +1155,9 @@ export function BookingSettingsPage({
  reservationDates: eventOnly
  ? [...draft.eventDates].sort((a, b) => (a.date < b.date ? -1 : 1))
  : null,
+ // Per-booking party cap: an event-mode-only setting, so it is cleared
+ // along with the date list when the owner switches back to weekly mode.
+ eventMaxGuestsPerBooking: eventOnly ? draft.maxGuestsPerBooking : null,
  ...(firstOpen
  ? { workingHoursStart: firstOpen.from, workingHoursEnd: firstOpen.to }
  : {}),
@@ -1161,7 +1171,11 @@ export function BookingSettingsPage({
  }
  setRestaurant((r) => ({
  ...r,
- bookingSettings: { ...draft, eventDates: eventOnly ? draft.eventDates : [] },
+ bookingSettings: {
+ ...draft,
+ eventDates: eventOnly ? draft.eventDates : [],
+ maxGuestsPerBooking: eventOnly ? draft.maxGuestsPerBooking : null,
+ },
  }));
  onBack?.();
  }
@@ -1196,6 +1210,11 @@ export function BookingSettingsPage({
 
  function removeEventDate(idx: number) {
  setDraft((d) => ({ ...d, eventDates: d.eventDates.filter((_, i) => i !== idx) }));
+ }
+
+ /** Set the event-mode per-booking party cap; null turns the limit off. */
+ function updateMaxGuestsPerBooking(value: number | null) {
+ setDraft((d) => ({ ...d, maxGuestsPerBooking: value }));
  }
 
  const disabled = !draft.enabled;
@@ -1312,6 +1331,48 @@ export function BookingSettingsPage({
 
  {eventOnly ? (
  <>
+ <Divider />
+ {/* Party cap for the whole event mode (applies to every listed date).
+ Off ⇒ null on the server, i.e. a booking may hold any number of
+ guests and only each date's total capacity limits it. */}
+ <div className="flex items-center justify-between gap-3">
+ <div className="min-w-0">
+ <div className="text-sm font-medium text-foreground">{tb("eventMaxGuestsLabel")}</div>
+ <div className="text-xs text-muted-foreground leading-snug mt-0.5">
+ {draft.maxGuestsPerBooking === null
+ ? tb("eventMaxGuestsOffTip")
+ : tb("eventMaxGuestsOnTip")}
+ </div>
+ </div>
+ <div className="flex items-center gap-2 shrink-0">
+ {draft.maxGuestsPerBooking !== null ? (
+ <input
+ type="number"
+ min={1}
+ max={50}
+ value={draft.maxGuestsPerBooking}
+ onChange={(ev) => {
+ // Empty / garbage ⇒ fall back to no limit; otherwise clamp into
+ // the same 1..50 range the server accepts.
+ const raw = ev.target.value;
+ const n = Number(raw);
+ updateMaxGuestsPerBooking(
+ raw === "" || !Number.isFinite(n) ? null : Math.min(50, Math.max(1, Math.floor(n))),
+ );
+ }}
+ aria-label={tb("eventMaxGuestsLabel")}
+ className={inputClass + " w-24"}
+ />
+ ) : null}
+ <ToggleSwitch
+ checked={draft.maxGuestsPerBooking !== null}
+ onChange={() => {
+ track("Toggle", "Booking settings max guests per booking");
+ updateMaxGuestsPerBooking(draft.maxGuestsPerBooking === null ? 10 : null);
+ }}
+ />
+ </div>
+ </div>
  <Divider />
  {draft.eventDates.map((e, idx) => (
  <div key={idx} className={idx > 0 ? "mt-3" : ""}>

@@ -33,6 +33,9 @@ export interface RestaurantPayload {
   // Non-empty ⇒ the reserve form offers ONLY these dates and ignores
   // reservationSchedule entirely.
   reservationDates: Array<{ date: string; from: string; to: string }> | null;
+  // Event mode only: max guests one booking may hold; null ⇒ no limit. The
+  // reserve form caps its guest buttons with this.
+  eventMaxGuestsPerBooking: number | null;
   // IANA timezone of the venue. The reserve form uses it to judge which event
   // dates are still ahead on the restaurant's clock rather than the device's.
   timezone: string;
@@ -41,6 +44,8 @@ export interface RestaurantPayload {
   orderNameEnabled: boolean;
   orderPhoneEnabled: boolean;
   orderAddressEnabled: boolean;
+  // When on, the order form shows an email field and requires it.
+  orderEmailEnabled: boolean;
   x: string | null;
   y: string | null;
   googlePlaceId: string | null;

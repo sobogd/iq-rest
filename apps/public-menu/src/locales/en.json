@@ -43,6 +43,8 @@
       "phonePlaceholder": "Your phone number",
       "yourAddress": "Address",
       "addressPlaceholder": "Delivery address",
+      "yourEmail": "Email",
+      "emailPlaceholder": "Your email address",
       "comment": "Comment",
       "commentPlaceholder": "Any special requests?",
       "sendWhatsApp": "Send via WhatsApp",

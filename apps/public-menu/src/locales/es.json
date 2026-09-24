@@ -41,6 +41,8 @@
       "phonePlaceholder": "Tu número de teléfono",
       "yourAddress": "Dirección",
       "addressPlaceholder": "Dirección de entrega",
+      "yourEmail": "Correo electrónico",
+      "emailPlaceholder": "Tu correo electrónico",
       "comment": "Comentario",
       "commentPlaceholder": "¿Alguna solicitud especial?",
       "sendWhatsApp": "Enviar por WhatsApp",

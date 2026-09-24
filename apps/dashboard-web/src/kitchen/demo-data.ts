@@ -462,6 +462,7 @@ function order(
     tableNumber,
     dailyNumber,
     guestName: "Guest",
+    guestEmail: "",
     createdAt: minsAgo(ageMin),
     status: "active",
     items,
@@ -504,11 +505,12 @@ function buildDemoRestaurant(lang: string): Restaurant {
       schedule: [],
       timezone: "UTC",
       eventDates: [],
+      maxGuestsPerBooking: null,
     },
     orderSettings: {
       acceptOrders: true,
       modes: { internal: true, whatsapp: false },
-      requiredFields: { name: false, phone: false, address: false },
+      requiredFields: { name: false, phone: false, address: false, email: false },
     },
     subscription: { plan: null, status: null, renewsAt: null },
   };
@@ -609,6 +611,7 @@ export function buildReservationsDemoSnapshot(lang: string): ReservationsDemoSna
       schedule: DEMO_SCHEDULE,
       timezone: "UTC",
       eventDates: [],
+      maxGuestsPerBooking: null,
     },
   };
 

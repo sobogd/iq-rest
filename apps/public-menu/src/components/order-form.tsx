@@ -22,6 +22,7 @@ export function OrderForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
+  const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
   const [sending, setSending] = useState(false);
 
@@ -66,7 +67,8 @@ export function OrderForm() {
     cartItems.length > 0
     && (!restaurant.orderNameEnabled || name.trim())
     && (!restaurant.orderPhoneEnabled || phone.trim())
-    && (!restaurant.orderAddressEnabled || address.trim());
+    && (!restaurant.orderAddressEnabled || address.trim())
+    && (!restaurant.orderEmailEnabled || email.trim());
 
   function openWhatsApp() {
     const lines: string[] = [];
@@ -87,6 +89,7 @@ export function OrderForm() {
     }
     if (phone.trim()) lines.push(`${t("publicMenu.order.yourPhone")}: ${phone.trim()}`);
     if (address.trim()) lines.push(`${t("publicMenu.order.yourAddress")}: ${address.trim()}`);
+    if (email.trim()) lines.push(`${t("publicMenu.order.yourEmail")}: ${email.trim()}`);
     if (comment.trim()) lines.push(`${t("publicMenu.order.comment")}: ${comment.trim()}`);
     const text = encodeURIComponent(lines.join("\n"));
     const waPhone = (restaurant.whatsapp || "").replace(/[^0-9]/g, "");
@@ -136,6 +139,7 @@ export function OrderForm() {
           customerName: name.trim() || null,
           customerPhone: phone.trim() || null,
           customerAddress: address.trim() || null,
+          customerEmail: email.trim() || null,
           comment: comment.trim() || null,
           tableNumber: tableNumber ?? null,
         }),
@@ -233,6 +237,15 @@ export function OrderForm() {
             {t("publicMenu.order.yourAddress")}: *
           </label>
           <input id="order-address" value={address} onChange={(e) => setAddress(e.target.value)} placeholder={t("publicMenu.order.addressPlaceholder")} required autoComplete="off" className={inputCls} style={{ borderColor: address ? accentColor : undefined }} />
+        </div>
+      ) : null}
+
+      {restaurant.orderEmailEnabled ? (
+        <div className="space-y-2">
+          <label htmlFor="order-email" className="text-base font-semibold text-black">
+            {t("publicMenu.order.yourEmail")}: *
+          </label>
+          <input id="order-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={t("publicMenu.order.emailPlaceholder")} required autoComplete="off" className={inputCls} style={{ borderColor: email ? accentColor : undefined }} />
         </div>
       ) : null}
 

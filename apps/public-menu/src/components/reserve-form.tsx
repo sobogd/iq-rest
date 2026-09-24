@@ -123,6 +123,15 @@ export function ReserveForm() {
     return raw.filter((d) => d.date >= todayStr).sort((a, b) => (a.date < b.date ? -1 : 1));
   }, [restaurant.reservationDates, restaurant.timezone]);
 
+  // Event mode lets the owner cap the party size, so the picker must not offer
+  // sizes above it. Weekly mode is table-based — there the table's capacity is
+  // the real limit, so the full 1–12 list stays. 12 remains the UI ceiling.
+  const guestOptions = useMemo(() => {
+    const cap = eventMode ? restaurant.eventMaxGuestsPerBooking : null;
+    const max = cap && cap > 0 ? Math.min(12, cap) : 12;
+    return Array.from({ length: max }, (_, i) => i + 1);
+  }, [eventMode, restaurant.eventMaxGuestsPerBooking]);
+
   const weekDates = useMemo(() => {
     const weekStart = addWeeks(currentWeekStart, currentWeekOffset);
     return Array.from({ length: 7 }, (_, i) => addDays(weekStart, i));
@@ -316,7 +325,7 @@ export function ReserveForm() {
       <div className="space-y-3">
         <label className="text-base font-semibold text-black">{t("publicReserve.selectGuests")}:</label>
         <div className="grid grid-cols-3 gap-3">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((n) => (
+          {guestOptions.map((n) => (
             <button
               key={n}
               type="button"

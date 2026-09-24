@@ -104,11 +104,14 @@ interface RestaurantInput {
   workingHoursEnd?: string;
   reservationSchedule?: ReservationSchedule | null;
   reservationDates?: ReservationDates | null;
+  // Event mode only: per-booking party cap. Null / absent ⇒ no limit.
+  eventMaxGuestsPerBooking?: number | null;
   timezone?: string;
   ordersEnabled?: boolean;
   orderNameEnabled?: boolean;
   orderPhoneEnabled?: boolean;
   orderAddressEnabled?: boolean;
+  orderEmailEnabled?: boolean;
   orderMode?: string;
 }
 
@@ -118,8 +121,8 @@ const FIELDS: (keyof RestaurantInput)[] = [
   "defaultLanguage", "hideTitle", "hideDescription", "logoUrl", "hideLogo", "logoScale",
   "menuLayout", "titleScale", "languageSwitcher", "paymentMethods", "reservationsEnabled", "reservationMode",
   "reservationSlotMinutes", "workingHoursStart", "workingHoursEnd",
-  "reservationSchedule", "reservationDates", "timezone", "ordersEnabled",
-  "orderNameEnabled", "orderPhoneEnabled", "orderAddressEnabled", "orderMode",
+  "reservationSchedule", "reservationDates", "eventMaxGuestsPerBooking", "timezone", "ordersEnabled",
+  "orderNameEnabled", "orderPhoneEnabled", "orderAddressEnabled", "orderEmailEnabled", "orderMode",
 ];
 
 function isValidTimezone(tz: string): boolean {
@@ -151,6 +154,18 @@ function pickFields(raw: Record<string, unknown>): RestaurantInput {
       );
     }
     out.reservationDates = parsed.data;
+  }
+  if (out.eventMaxGuestsPerBooking !== undefined && out.eventMaxGuestsPerBooking !== null) {
+    // Bounded like the reservation schema's guestsCount ceiling (50): a cap
+    // above it could never be hit, and a non-integer would reach Prisma as a
+    // broken Int value.
+    const n = out.eventMaxGuestsPerBooking;
+    if (typeof n !== "number" || !Number.isInteger(n) || n < 1 || n > 50) {
+      throw new BadRequestException(
+        "Invalid eventMaxGuestsPerBooking: must be an integer 1..50 or null"
+      );
+    }
+    out.eventMaxGuestsPerBooking = n;
   }
   if (out.timezone !== undefined) {
     const tz = String(out.timezone).trim();

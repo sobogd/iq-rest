@@ -252,6 +252,8 @@ export class ReservationsController {
         workingHoursEnd: true,
         reservationSchedule: true,
         reservationDates: true,
+        // Event-mode per-booking party cap; null ⇒ no limit.
+        eventMaxGuestsPerBooking: true,
         timezone: true,
         ...ACCOUNT_ENTITLEMENT_SELECT,
       },
@@ -270,6 +272,18 @@ export class ReservationsController {
     // capacity is computed — windows and past-slot skipping are shared below.
     const eventDates = parseEventDates(restaurant.reservationDates, this.logger);
     const isEvent = eventDates.length > 0;
+
+    // Event mode: the owner may cap how many guests a single booking holds.
+    // The picker caps its buttons, but a hand-made call must not slip past it,
+    // so an over-limit party gets no slots at all here.
+    const maxPerBooking = restaurant.eventMaxGuestsPerBooking ?? null;
+    if (isEvent && maxPerBooking !== null && guestsCount > maxPerBooking) {
+      return {
+        timeSlots: [],
+        tables: [],
+        message: "Guests exceed the per-booking limit",
+      };
+    }
 
     const tables = await this.prisma.table.findMany({
       where: { restaurantId: restaurant.id, isActive: true, deletedAt: null },
@@ -378,6 +392,7 @@ export class ReservationsController {
         reservationSlotMinutes: true,
         reservationMode: true,
         reservationDates: true,
+        eventMaxGuestsPerBooking: true,
         timezone: true,
         restaurantUsers: { select: { user: { select: { email: true } } } },
         ...ACCOUNT_ENTITLEMENT_SELECT,
@@ -409,6 +424,15 @@ export class ReservationsController {
     // availability endpoint is what shapes the flow.
     const eventDates = parseEventDates(restaurant.reservationDates, this.logger);
     const isEvent = eventDates.length > 0;
+    // Event mode: reject a party above the owner's per-booking cap. The picker
+    // already hides such sizes; this guards a hand-made POST. Weekly mode is
+    // unaffected — there the table's own capacity caps the party.
+    if (isEvent) {
+      const maxPerBooking = restaurant.eventMaxGuestsPerBooking ?? null;
+      if (maxPerBooking !== null && guestsCount > maxPerBooking) {
+        throw new BadRequestException("too_many_guests");
+      }
+    }
     // Seats the requested date holds; null / 0 ⇒ unlimited.
     let eventCapacity: number | null = null;
     if (isEvent) {

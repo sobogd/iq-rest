@@ -595,6 +595,7 @@
         "fieldName": "Name",
         "fieldPhone": "Phone",
         "fieldAddress": "Address",
+        "fieldEmail": "Email",
         "paymentMethodsLabel": "Payment methods",
         "paymentMethodsTip": "Methods waitstaff can pick when closing an order. Turn everything off to skip the selector.",
         "paymentIntegrationTip": "To integrate a payment system for your restaurant, contact support."
@@ -641,6 +642,9 @@
         "eventRemoveDate": "Remove date",
         "eventCapacityPlaceholder": "Seats",
         "eventCapacityTip": "Seats for this date. Empty = unlimited.",
+        "eventMaxGuestsLabel": "Limit guests per booking",
+        "eventMaxGuestsOffTip": "No limit — one booking may hold as many guests as the date's total seats allow.",
+        "eventMaxGuestsOnTip": "Most guests a single booking may hold.",
         "eventEmptyError": "Add at least one date.",
         "eventDuplicateError": "The same date is listed twice.",
         "eventInvalidError": "Each row needs a date and an end time after the start time."

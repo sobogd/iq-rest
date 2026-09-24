@@ -15,6 +15,9 @@ const orderSchema = z.object({
   customerName: z.string().max(200).nullable().optional(),
   customerPhone: z.string().max(50).nullable().optional(),
   customerAddress: z.string().max(500).nullable().optional(),
+  // Collected only when the restaurant enables `orderEmailEnabled`; the client
+  // already requires it then. Format-checked so a bad address can't be stored.
+  customerEmail: z.string().trim().email().max(200).nullable().optional(),
   comment: z.string().max(1000).nullable().optional(),
   tableNumber: z.number().int().nullable().optional(),
 });
@@ -47,7 +50,7 @@ export class OrdersController {
   async create(@Req() req: Request, @Body() body: unknown) {
     const parsed = orderSchema.safeParse(body);
     if (!parsed.success) throw new BadRequestException(parsed.error.issues[0]?.message || "invalid input");
-    const { slug, items, total, customerName, customerPhone, customerAddress, comment, tableNumber } = parsed.data;
+    const { slug, items, total, customerName, customerPhone, customerAddress, customerEmail, comment, tableNumber } = parsed.data;
 
     const ip =
       ((req.headers["cf-connecting-ip"] as string) || "").trim() ||
@@ -97,6 +100,7 @@ export class OrdersController {
               customerName: customerName ? String(customerName).slice(0, 200) : null,
               customerPhone: customerPhone ? String(customerPhone).slice(0, 50) : null,
               customerAddress: customerAddress ? String(customerAddress).slice(0, 500) : null,
+              customerEmail: customerEmail ? String(customerEmail).slice(0, 200) : null,
               comment: comment ? String(comment).slice(0, 1000) : null,
               tableNumber: tableNumber ?? null,
               status: "new",

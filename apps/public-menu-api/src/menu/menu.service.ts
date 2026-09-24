@@ -40,6 +40,9 @@ export class MenuService {
         // Event mode (owner's explicit bookable dates). Non-empty ⇒ the diner
         // picker shows only these dates instead of the weekly strip.
         reservationDates: true,
+        // Event-mode per-booking party cap; null ⇒ no limit. The reserve form
+        // caps its guest buttons with this, the API re-checks on create.
+        eventMaxGuestsPerBooking: true,
         // The diner SPA needs the restaurant's clock to drop past dates from
         // that list (the device may sit in another time zone).
         timezone: true,
@@ -48,6 +51,7 @@ export class MenuService {
         orderNameEnabled: true,
         orderPhoneEnabled: true,
         orderAddressEnabled: true,
+        orderEmailEnabled: true,
         x: true,
         y: true,
         googlePlaceId: true,

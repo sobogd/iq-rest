@@ -519,6 +519,7 @@
         "fieldName": "Nombre",
         "fieldPhone": "Teléfono",
         "fieldAddress": "Dirección",
+        "fieldEmail": "Correo electrónico",
         "paymentMethodsLabel": "Métodos de pago",
         "paymentMethodsTip": "Métodos que el personal puede elegir al cerrar un pedido. Desactiva todo para omitir el selector.",
         "paymentIntegrationTip": "Para integrar un sistema de pago en tu restaurante, contacta con soporte."
@@ -565,6 +566,9 @@
         "eventRemoveDate": "Eliminar fecha",
         "eventCapacityPlaceholder": "Plazas",
         "eventCapacityTip": "Plazas para esta fecha. Vacío = sin límite.",
+        "eventMaxGuestsLabel": "Limitar comensales por reserva",
+        "eventMaxGuestsOffTip": "Sin límite: una reserva puede incluir tantos comensales como permitan las plazas totales de la fecha.",
+        "eventMaxGuestsOnTip": "Máximo de comensales que puede incluir una sola reserva.",
         "eventEmptyError": "Añade al menos una fecha.",
         "eventDuplicateError": "La misma fecha está listada dos veces.",
         "eventInvalidError": "Cada fila necesita una fecha y una hora de fin posterior a la hora de inicio."

@@ -109,11 +109,14 @@ export interface ApiRestaurant {
  // Event mode. Non-empty ⇒ the public booking flow offers ONLY these dates and
  // ignores reservationSchedule; null / empty ⇒ normal weekly mode.
  reservationDates: ApiEventDate[] | null;
+ // Event mode only: per-booking party cap. null ⇒ no limit.
+ eventMaxGuestsPerBooking: number | null;
  timezone: string;
  ordersEnabled: boolean;
  orderNameEnabled: boolean;
  orderPhoneEnabled: boolean;
  orderAddressEnabled: boolean;
+ orderEmailEnabled: boolean;
  orderMode: string;
  scanBannerDismissed?: boolean;
  // First-login onboarding step flags. false → the matching modal still shows.
@@ -689,6 +692,7 @@ export interface ApiOrder {
  customerName: string | null;
  customerPhone: string | null;
  customerAddress: string | null;
+ customerEmail: string | null;
  comment: string | null;
  tableNumber: number | null;
  status: string;
