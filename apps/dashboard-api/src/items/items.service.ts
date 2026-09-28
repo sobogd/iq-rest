@@ -5,14 +5,15 @@ import { PrismaService } from "../prisma/prisma.service";
 import { AutoTranslateService } from "../auto-translate/auto-translate.service";
 
 const mlSchema = z.record(z.string(), z.string());
+const nameSchema = z.union([z.string(), mlSchema]).nullable().optional();
 const variantSchema = z.object({
   id: z.string().min(1),
-  name: mlSchema.nullable().optional(),
+  name: nameSchema,
   priceDelta: z.union([z.string(), z.number()]).optional(),
 }).passthrough();
 const optionSchema = z.object({
   id: z.string().min(1),
-  name: mlSchema.nullable().optional(),
+  name: nameSchema,
   type: z.enum(["single", "multi"]).optional(),
   required: z.boolean().optional(),
   variants: z.array(variantSchema).optional(),
