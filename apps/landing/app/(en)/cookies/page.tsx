@@ -3,11 +3,19 @@ import { COOKIE_POLICY_SECTIONS, COOKIE_POLICY_TITLE } from "@/components/cookie
 import { LegalDocument } from "@/components/legal-document";
 import { getLandingChrome } from "@/app/_landing/lib/landing-chrome";
 
-// See (en)/privacy/page.tsx — root URL is the canonical copy.
+// See (en)/privacy/page.tsx — root URL is the canonical English copy; es has
+// its own self-canonical Spanish variant with reciprocal hreflang below.
 export const metadata: Metadata = {
   title: COOKIE_POLICY_TITLE,
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://iq-rest.com/cookies" },
+  alternates: {
+    canonical: "https://iq-rest.com/cookies",
+    languages: {
+      "x-default": "https://iq-rest.com/cookies",
+      en: "https://iq-rest.com/cookies",
+      es: "https://iq-rest.com/es/cookies",
+    },
+  },
 };
 
 export default async function CookiesPage() {

@@ -6,8 +6,9 @@ import { getLandingChrome } from "@/app/_landing/lib/landing-chrome";
 // The document body is identical English text on every locale (only the
 // header/footer chrome is localized), so all locale URLs canonicalise to the
 // root English copy at (en)/privacy — one indexed page, no duplicate-content
-// noise. No hreflang on purpose: hreflang requires each variant to be
-// self-canonical.
+// noise. Exception: es has its own self-canonical Spanish variant at
+// app/es/privacy (equivalent translation, reciprocal hreflang). No hreflang on
+// purpose here: hreflang requires each variant to be self-canonical.
 export const metadata: Metadata = {
   title: PRIVACY_POLICY_TITLE,
   robots: { index: true, follow: true },

@@ -4,12 +4,21 @@ import { LegalDocument } from "@/components/legal-document";
 import { getLandingChrome } from "@/app/_landing/lib/landing-chrome";
 
 // English lives at the root (no /en prefix), same as every other (en) page.
-// This is the canonical copy of the document — every /<locale>/privacy
-// variant (identical English body, localized chrome) canonicalises here.
+// This is the canonical English copy of the document — every /<locale>/privacy
+// variant (identical English body, localized chrome) canonicalises here,
+// except es, which has its own self-canonical Spanish variant at
+// /es/privacy (app/es/privacy) with reciprocal hreflang below.
 export const metadata: Metadata = {
   title: PRIVACY_POLICY_TITLE,
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://iq-rest.com/privacy" },
+  alternates: {
+    canonical: "https://iq-rest.com/privacy",
+    languages: {
+      "x-default": "https://iq-rest.com/privacy",
+      en: "https://iq-rest.com/privacy",
+      es: "https://iq-rest.com/es/privacy",
+    },
+  },
 };
 
 export default async function PrivacyPage() {

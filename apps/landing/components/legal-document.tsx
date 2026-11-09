@@ -6,11 +6,19 @@ import type { LandingChrome } from "@/app/_landing/lib/landing-chrome";
 
 type Section = { heading?: string; paragraphs: string[] };
 
+// Every document in legal-text.tsx / legal-text.es.ts opens with a
+// "Last updated: <date>" paragraph ("Última actualización: " in Spanish);
+// the cookie-consent modals rely on it staying in the shared sections.
+const LAST_UPDATED_MARKERS = ["Last updated:", "Última actualización:"];
+const isLastUpdatedParagraph = (p: string) =>
+  LAST_UPDATED_MARKERS.some((m) => p.startsWith(m));
+
 /** Renders a single legal document (Privacy / Terms / Cookies) inside the
- *  standard landing chrome (localized header/footer). Content is English-only
- *  on purpose — translating legal text requires lawyer review and English is
- *  the canonical binding version — hence the explicit lang/dir on the card:
- *  the surrounding <html> carries the active locale (possibly RTL).
+ *  standard landing chrome (localized header/footer). Content is English
+ *  (legal-text.tsx) or the equivalent Spanish translation (legal-text.es.ts)
+ *  — legal text passes legal review, not the app's i18n flow — hence the
+ *  explicit lang/dir on the card: the surrounding <html> carries the active
+ *  locale (possibly RTL).
  *
  *  Same big card as the FAQ block: tinted sticky 40% column on the LEFT
  *  (document title + revision date) and a plain 60% column on the RIGHT
@@ -21,6 +29,7 @@ export function LegalDocument({
   locale,
   trackPage,
   chrome,
+  lang = "en",
 }: {
   title: string;
   sections: Section[];
@@ -29,16 +38,17 @@ export function LegalDocument({
    *  the previously visited page set, so these clicks land in the wrong bucket. */
   trackPage: string;
   chrome: LandingChrome;
+  /** BCP-47 language of the document body; pinned on the card (dir stays ltr
+   *  — the shipped bodies are English and Spanish, both LTR). */
+  lang?: string;
 }) {
-  // Every document in legal-text.tsx opens with a "Last updated: <date>"
-  // paragraph (the cookie-consent modals rely on it staying in the shared
-  // sections). Here that line moves into the tinted title column, so pull it
-  // out of the body instead of rendering it twice.
+  // Here that date line moves into the tinted title column, so pull it out of
+  // the body instead of rendering it twice.
   const lastUpdated = sections
     .flatMap((s) => s.paragraphs)
-    .find((p) => p.startsWith("Last updated:"));
+    .find(isLastUpdatedParagraph);
   const body = sections
-    .map((s) => ({ ...s, paragraphs: s.paragraphs.filter((p) => !p.startsWith("Last updated:")) }))
+    .map((s) => ({ ...s, paragraphs: s.paragraphs.filter((p) => !isLastUpdatedParagraph(p)) }))
     .filter((s) => s.heading || s.paragraphs.length > 0);
 
   return (
@@ -55,7 +65,7 @@ export function LegalDocument({
       <Content>
         <Band section={trackPage}>
           <div
-            lang="en"
+            lang={lang}
             dir="ltr"
             className="rounded-2xl border border-border grid grid-cols-1 lg:grid-cols-[2fr_3fr]"
           >

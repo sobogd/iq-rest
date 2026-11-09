@@ -3,7 +3,8 @@ import { COOKIE_POLICY_SECTIONS, COOKIE_POLICY_TITLE } from "@/components/cookie
 import { LegalDocument } from "@/components/legal-document";
 import { getLandingChrome } from "@/app/_landing/lib/landing-chrome";
 
-// See privacy/page.tsx for why every locale canonicalises to the root en URL.
+// See privacy/page.tsx — every locale canonicalises to the root en URL, except
+// es (own self-canonical Spanish route under app/es).
 export const metadata: Metadata = {
   title: COOKIE_POLICY_TITLE,
   robots: { index: true, follow: true },

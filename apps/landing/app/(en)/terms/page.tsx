@@ -3,11 +3,19 @@ import { TERMS_SECTIONS, TERMS_TITLE } from "@/components/cookie-consent/legal-t
 import { LegalDocument } from "@/components/legal-document";
 import { getLandingChrome } from "@/app/_landing/lib/landing-chrome";
 
-// See (en)/privacy/page.tsx — root URL is the canonical copy.
+// See (en)/privacy/page.tsx — root URL is the canonical English copy; es has
+// its own self-canonical Spanish variant with reciprocal hreflang below.
 export const metadata: Metadata = {
   title: TERMS_TITLE,
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://iq-rest.com/terms" },
+  alternates: {
+    canonical: "https://iq-rest.com/terms",
+    languages: {
+      "x-default": "https://iq-rest.com/terms",
+      en: "https://iq-rest.com/terms",
+      es: "https://iq-rest.com/es/terms",
+    },
+  },
 };
 
 export default async function TermsPage() {

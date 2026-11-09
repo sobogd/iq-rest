@@ -1,7 +1,8 @@
-// Footer link labels — translated. The legal documents themselves (Privacy Policy /
-// Cookie Policy / Terms inside LegalModal) are English-only on purpose (binding
-// version, no per-locale lawyer review needed). Locales not listed fall back to
-// English via the helper below.
+// Footer link labels — translated. The legal documents themselves
+// (Privacy Policy / Cookie Policy / Terms) are English everywhere except es,
+// which has equivalent Spanish versions (components/cookie-consent/
+// legal-text.es.ts, served at /es/privacy, /es/terms, /es/cookies). Locales not
+// listed fall back to English via the helper below.
 
 export type CookieTexts = {
   // Legacy banner-only fields kept to avoid breaking translations during rollout.

@@ -1,6 +1,9 @@
-// Hardcoded English legal text shown inside the cookie consent secondary modals.
-// Kept in TypeScript (not JSON i18n) on purpose — translating legal documents requires lawyer
-// review and is more risk than benefit. The English version is canonical and binding.
+// Hardcoded English legal text, the canonical source for the three documents.
+// Kept in TypeScript (not JSON i18n) on purpose — legal documents pass legal
+// review, not the app's i18n flow. The equivalent Spanish translation lives in
+// legal-text.es.ts and is served at the self-canonical /es/privacy, /es/terms
+// and /es/cookies routes (app/es/…); every other locale renders this English
+// body inside localized chrome.
 //
 // Operator data sourced from the existing Privacy Policy (messages/en.json → privacy.sections).
 
