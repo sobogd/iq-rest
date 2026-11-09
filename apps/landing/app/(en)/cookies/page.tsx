@@ -3,8 +3,9 @@ import { COOKIE_POLICY_SECTIONS, COOKIE_POLICY_TITLE } from "@/components/cookie
 import { LegalDocument } from "@/components/legal-document";
 import { getLandingChrome } from "@/app/_landing/lib/landing-chrome";
 
-// See (en)/privacy/page.tsx — root URL is the canonical English copy; es has
-// its own self-canonical Spanish variant with reciprocal hreflang below.
+// See (en)/privacy/page.tsx — root URL is the canonical English copy; es is the
+// self-canonical Spanish variant with reciprocal hreflang below (served by
+// app/[locale]/cookies, see legal-doc.ts).
 export const metadata: Metadata = {
   title: COOKIE_POLICY_TITLE,
   robots: { index: true, follow: true },

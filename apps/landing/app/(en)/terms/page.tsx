@@ -3,8 +3,9 @@ import { TERMS_SECTIONS, TERMS_TITLE } from "@/components/cookie-consent/legal-t
 import { LegalDocument } from "@/components/legal-document";
 import { getLandingChrome } from "@/app/_landing/lib/landing-chrome";
 
-// See (en)/privacy/page.tsx — root URL is the canonical English copy; es has
-// its own self-canonical Spanish variant with reciprocal hreflang below.
+// See (en)/privacy/page.tsx — root URL is the canonical English copy; es is the
+// self-canonical Spanish variant with reciprocal hreflang below (served by
+// app/[locale]/terms, see legal-doc.ts).
 export const metadata: Metadata = {
   title: TERMS_TITLE,
   robots: { index: true, follow: true },

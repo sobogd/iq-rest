@@ -5,9 +5,9 @@ import { getLandingChrome } from "@/app/_landing/lib/landing-chrome";
 
 // English lives at the root (no /en prefix), same as every other (en) page.
 // This is the canonical English copy of the document — every /<locale>/privacy
-// variant (identical English body, localized chrome) canonicalises here,
-// except es, which has its own self-canonical Spanish variant at
-// /es/privacy (app/es/privacy) with reciprocal hreflang below.
+// variant (identical English body, localized chrome) canonicalises here, except
+// es, which is the self-canonical Spanish variant with reciprocal hreflang
+// below (served by app/[locale]/privacy, see legal-doc.ts).
 export const metadata: Metadata = {
   title: PRIVACY_POLICY_TITLE,
   robots: { index: true, follow: true },

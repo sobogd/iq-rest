@@ -39,6 +39,8 @@ high-level fact changes.
 - **Legal docs (privacy / terms / cookies):** English canonical in
   `components/cookie-consent/legal-text.tsx`; the equivalent Spanish
   translation (`legal-text.es.ts`) is self-canonical at `/es/privacy`,
-  `/es/terms`, `/es/cookies` (own routes under `app/es/`) with reciprocal
-  hreflang to the English root. All other locales render the English body via
-  `app/[locale]` and canonicalise to the English root (no hreflang).
+  `/es/terms`, `/es/cookies` with reciprocal hreflang to the English root —
+  the es/en switch + metadata live in `legal-doc.ts` (the pages are the shared
+  `app/[locale]` routes, NOT static `app/es/…` routes — a static es route
+  collides with the [locale] prerender on the same .next file). All other
+  locales render the English body and canonicalise to the English root.
