@@ -281,7 +281,7 @@ export const TERMS_SECTIONS_ES: Section[] = [
   {
     heading: "2. Uso aceptable",
     paragraphs: [
-      `Usted se compromete a no utilizar el Servicio para ningún fin ilícito; a no cargar código malicioso, virus o contenido que sea ilegal, engañoso o infrinja derechos de terceros; a no intentar eludir los límites de frecuencia, los controles de seguridad, las cuotas o la facturación; y a no rapear, espejar o extraer sistemáticamente datos del Servicio por otros medios.`,
+      `Usted se compromete a no utilizar el Servicio para ningún fin ilícito; a no cargar código malicioso, virus o contenido que sea ilegal, engañoso o infrinja derechos de terceros; a no intentar eludir los límites de frecuencia, los controles de seguridad, las cuotas o la facturación; y a no extraer sistemáticamente por medios automatizados datos del Servicio.`,
       `El incumplimiento de estas normas puede dar lugar a la suspensión o terminación inmediata de su cuenta.`,
     ],
   },
