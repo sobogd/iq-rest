@@ -28,7 +28,7 @@ type Section = { heading?: string; paragraphs: string[] };
 export const COOKIE_POLICY_TITLE_ES = "Política de cookies";
 
 // Cada documento lleva su propia fecha de revisión.
-export const COOKIE_LAST_UPDATED_ES = "9 de noviembre de 2026";
+export const COOKIE_LAST_UPDATED_ES = "8 de abril de 2026";
 
 export const COOKIE_POLICY_SECTIONS_ES: Section[] = [
   {
@@ -102,7 +102,7 @@ export const COOKIE_POLICY_SECTIONS_ES: Section[] = [
  *  Versión equivalente en español de PRIVACY_POLICY_SECTIONS. */
 export const PRIVACY_POLICY_TITLE_ES = "Política de privacidad";
 
-export const PRIVACY_LAST_UPDATED_ES = "9 de noviembre de 2026";
+export const PRIVACY_LAST_UPDATED_ES = "8 de abril de 2026";
 
 export const PRIVACY_POLICY_SECTIONS_ES: Section[] = [
   {
@@ -254,7 +254,7 @@ export const PRIVACY_POLICY_SECTIONS_ES: Section[] = [
  *  TERMS_SECTIONS. */
 export const TERMS_TITLE_ES = "Condiciones del servicio";
 
-export const TERMS_LAST_UPDATED_ES = "9 de noviembre de 2026";
+export const TERMS_LAST_UPDATED_ES = "8 de abril de 2026";
 
 export const TERMS_SECTIONS_ES: Section[] = [
   {

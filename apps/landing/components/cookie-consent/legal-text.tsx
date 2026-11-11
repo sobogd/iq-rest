@@ -29,7 +29,7 @@ export const OPERATOR = {
 export const COOKIE_POLICY_TITLE = "Cookie Policy";
 
 // Each document carries its own revision date.
-export const COOKIE_LAST_UPDATED = "September 7, 2026";
+export const COOKIE_LAST_UPDATED = "April 8, 2026";
 
 export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
   {
@@ -102,7 +102,7 @@ export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[
  *  per GDPR Article 13/14 transparency requirements. */
 export const PRIVACY_POLICY_TITLE = "Privacy Policy";
 
-export const PRIVACY_LAST_UPDATED = "September 7, 2026";
+export const PRIVACY_LAST_UPDATED = "April 8, 2026";
 
 export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
   {
@@ -255,7 +255,7 @@ export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }
  *  data-processing clause, EU consumer carve-outs). */
 export const TERMS_TITLE = "Terms of Service";
 
-export const TERMS_LAST_UPDATED = "August 10, 2026";
+export const TERMS_LAST_UPDATED = "April 8, 2026";
 
 export const TERMS_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
   {
