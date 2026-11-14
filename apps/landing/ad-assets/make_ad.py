@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-IQ Rest — generador de creatividades cuadradas para Facebook/Instagram (1080x1080).
-Layout v1: foto a sangre completa + degradado + logo IQ Rest arriba-izq +
+QRgine — generador de creatividades cuadradas para Facebook/Instagram (1080x1080).
+Layout v1: foto a sangre completa + degradado + logo QRgine arriba-izq +
 titular abajo-izq (SF Pro Heavy) + subtítulo. Sin botón ni URL.
 
 Uso:

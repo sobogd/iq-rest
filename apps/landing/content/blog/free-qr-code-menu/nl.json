@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Gratis QR-menu: wat is er echt gratis | IQ Rest",
+    "title": "Gratis QR-menu: wat is er echt gratis | QRgine",
     "description": "Gratis QR-menu's bestaan en sommige zijn prima. Hoe ze geld verdienen, welke limiet je het eerst raakt en wanneer gratis echt de juiste keuze is."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Typische gratis laag",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Is een gratis proefperiode hetzelfde als een gratis plan?",
-          "a": "Nee. Een proefperiode is het volledige product voor beperkte tijd; een gratis plan is een beperkt product voor altijd. IQ Rest biedt 14 dagen proef met alles aan, zonder creditcard."
+          "a": "Nee. Een proefperiode is het volledige product voor beperkte tijd; een gratis plan is een beperkt product voor altijd. QRgine biedt 14 dagen proef met alles aan, zonder creditcard."
         },
         {
           "q": "Wat is het goedkoopste betaalde QR-menu?",
-          "a": "Vaste plannen beginnen doorgaans rond € 10 per maand per vestiging. IQ Rest start bij € 9,90 — de volledige uitsplitsing staat in [wat een QR-menu kost](blog:qr-code-menu-cost)."
+          "a": "Vaste plannen beginnen doorgaans rond € 10 per maand per vestiging. QRgine start bij € 9,90 — de volledige uitsplitsing staat in [wat een QR-menu kost](blog:qr-code-menu-cost)."
         },
         {
           "q": "Kan ik mijn menu van een gratis tool naar een betaalde verhuizen?",
-          "a": "Meestal wel, en je hoeft het zelden over te typen: IQ Rest kan een foto of pdf van het bestaande menu lezen en de gerechten in ongeveer vijf minuten opnieuw opbouwen."
+          "a": "Meestal wel, en je hoeft het zelden over te typen: QRgine kan een foto of pdf van het bestaande menu lezen en de gerechten in ongeveer vijf minuten opnieuw opbouwen."
         }
       ]
     }

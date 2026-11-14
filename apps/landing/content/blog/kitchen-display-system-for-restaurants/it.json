@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Monitor di cucina: ti serve un KDS? | IQ Rest",
+    "title": "Monitor di cucina: ti serve un KDS? | QRgine",
     "description": "Cosa fa un KDS, quanto costa davvero l'hardware, come farlo girare su un tablet che hai già e quali cucine stanno meglio con le comande di carta."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "La maggior parte delle cucine non ne ha bisogno. Il [monitor di cucina](route:/kitchen-display) di IQ Rest gira nel browser, quindi l'hardware può essere un tablet che hai già, un tablet Android economico o un vecchio portatile con un monitor. Mettilo in una custodia antischizzo, montalo fuori dalla linea del vapore e il costo marginale è una staffa a muro."
+      "text": "La maggior parte delle cucine non ne ha bisogno. Il [monitor di cucina](route:/kitchen-display) di QRgine gira nel browser, quindi l'hardware può essere un tablet che hai già, un tablet Android economico o un vecchio portatile con un monitor. Mettilo in una custodia antischizzo, montalo fuori dalla linea del vapore e il costo marginale è una staffa a muro."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Posso far girare un KDS su un tablet normale?",
-          "a": "Sì. Il monitor di cucina di IQ Rest gira nel browser, quindi va bene qualsiasi tablet o portatile degli ultimi cinque anni. Usa una custodia antischizzo."
+          "a": "Sì. Il monitor di cucina di QRgine gira nel browser, quindi va bene qualsiasi tablet o portatile degli ultimi cinque anni. Usa una custodia antischizzo."
         },
         {
           "q": "Il KDS ha bisogno di internet?",

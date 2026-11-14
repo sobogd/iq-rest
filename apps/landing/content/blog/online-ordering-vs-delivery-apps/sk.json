@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Vlastné objednávky vs rozvozové aplikácie: čísla | IQ Rest",
+    "title": "Vlastné objednávky vs rozvozové aplikácie: čísla | QRgine",
     "description": "Koľko stojí provízia platformy z objednávky, koľko objednávok vo vlastnom kanáli pokryje predplatné a prečo väčšina reštaurácií potrebuje oba kanály."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Potrebujem web, aby som prijímal priame objednávky?",
-          "a": "Nie. IQ Rest vám dá hostovanú objednávkovú stránku s vlastnou adresou, na ktorú môžete odkazovať z Googlu, Instagramu alebo QR kódu na stole."
+          "a": "Nie. QRgine vám dá hostovanú objednávkovú stránku s vlastnou adresou, na ktorú môžete odkazovať z Googlu, Instagramu alebo QR kódu na stole."
         }
       ]
     }

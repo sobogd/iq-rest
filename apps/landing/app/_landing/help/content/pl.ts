@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // PL help guide.
 export const pl: HelpDoc = {
-  metaTitle: "Jak korzystać z IQ Rest — przewodnik krok po kroku",
+  metaTitle: "Jak korzystać z QRgine — przewodnik krok po kroku",
   metaDescription:
-    "Pełny przewodnik po IQ Rest: rejestracja, menu, zamówienia, rezerwacje, ekran kuchenny i ustawienia — dla restauracji.",
+    "Pełny przewodnik po QRgine: rejestracja, menu, zamówienia, rezerwacje, ekran kuchenny i ustawienia — dla restauracji.",
   h1: "Pomoc",
-  intro: "Szczegółowy przewodnik po IQ Rest — od rejestracji po najdrobniejsze ustawienia.",
+  intro: "Szczegółowy przewodnik po QRgine — od rejestracji po najdrobniejsze ustawienia.",
   banner: {
     title: "To prostsze, niż się wydaje",
     sub: "Przewodnik krok po kroku: od rejestracji po najdrobniejsze ustawienia — poradzi sobie każdy.",
@@ -22,7 +22,7 @@ export const pl: HelpDoc = {
         { type: "h3", text: "Czym jest ten system" },
         {
           type: "p",
-          text: "IQ Rest to usługa dla restauracji: tworzysz menu online z kodem QR, przyjmujesz zamówienia i rezerwacje stolików bezpośrednio z telefonów gości, a w kuchni i u kelnerów działają tablety-terminale. Wszystkim zarządzasz z jednego panelu administracyjnego (pulpitu).",
+          text: "QRgine to usługa dla restauracji: tworzysz menu online z kodem QR, przyjmujesz zamówienia i rezerwacje stolików bezpośrednio z telefonów gości, a w kuchni i u kelnerów działają tablety-terminale. Wszystkim zarządzasz z jednego panelu administracyjnego (pulpitu).",
         },
         { type: "h3", text: "Rejestracja i logowanie" },
         { type: "p", text: "Zalogować się można na trzy sposoby — wybierz dowolny na ekranie logowania:" },

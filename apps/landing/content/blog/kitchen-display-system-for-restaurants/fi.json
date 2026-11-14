@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Keittiönäyttö: tarvitsetko KDS:n? | IQ Rest",
+    "title": "Keittiönäyttö: tarvitsetko KDS:n? | QRgine",
     "description": "Mitä KDS tekee, paljonko laitteisto oikeasti maksaa, miten ajat sen tabletilla joka sinulla jo on, ja mitkä keittiöt pärjäävät paremmin paperitilauslapuilla."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Useimmat keittiöt eivät tarvitse sitä. IQ Restin [keittiönäyttö](route:/kitchen-display) toimii selaimessa, joten laitteisto voi olla tabletti joka sinulla jo on, halpa Android-tabletti tai vanha kannettava näytön kanssa. Laita se roiskesuojattuun koteloon, kiinnitä höyrylinjan ulkopuolelle, ja rajakustannus on seinäteline."
+      "text": "Useimmat keittiöt eivät tarvitse sitä. QRginein [keittiönäyttö](route:/kitchen-display) toimii selaimessa, joten laitteisto voi olla tabletti joka sinulla jo on, halpa Android-tabletti tai vanha kannettava näytön kanssa. Laita se roiskesuojattuun koteloon, kiinnitä höyrylinjan ulkopuolelle, ja rajakustannus on seinäteline."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Voinko ajaa KDS:ää tavallisella tabletilla?",
-          "a": "Kyllä. IQ Restin keittiönäyttö toimii selaimessa, joten mikä tahansa viimeisen viiden vuoden tabletti tai kannettava käy. Käytä roiskesuojattua koteloa."
+          "a": "Kyllä. QRginein keittiönäyttö toimii selaimessa, joten mikä tahansa viimeisen viiden vuoden tabletti tai kannettava käy. Käytä roiskesuojattua koteloa."
         },
         {
           "q": "Tarvitseeko KDS internetiä?",

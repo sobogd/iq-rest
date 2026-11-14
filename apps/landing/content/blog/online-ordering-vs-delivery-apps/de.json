@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Eigene Bestellseite vs Lieferapps: die Zahlen | IQ Rest",
+    "title": "Eigene Bestellseite vs Lieferapps: die Zahlen | QRgine",
     "description": "Was die Marktplatz-Provision pro Bestellung kostet, wie viele Bestellungen im eigenen Kanal die Kosten decken und warum die meisten Restaurants beides fahren sollten."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Brauche ich eine Website für Direktbestellungen?",
-          "a": "Nein. IQ Rest gibt Ihnen eine gehostete Bestellseite mit eigener Adresse, die Sie von Google, Instagram oder einem QR-Code am Tisch verlinken können."
+          "a": "Nein. QRgine gibt Ihnen eine gehostete Bestellseite mit eigener Adresse, die Sie von Google, Instagram oder einem QR-Code am Tisch verlinken können."
         }
       ]
     }

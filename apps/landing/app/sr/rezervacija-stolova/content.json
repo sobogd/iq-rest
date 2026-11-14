@@ -3,13 +3,13 @@
   "slug": "rezervacija-stolova",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Rezervacije stolova 24/7 za restorane | IQ Rest",
+    "title": "Rezervacije stolova 24/7 za restorane | QRgine",
     "description": "Gosti sami rezervišu stolove 24/7 preko QR menija ili sajta restorana. Kalendar po stolovima, automatske potvrde i podsetnici. 14 dana besplatno.",
     "canonical": "https://iq-rest.com/sr/rezervacija-stolova",
     "ogLocale": "sr_RS",
     "ogTitle": "Rezervacije stolova 24/7 — Gosti sami rezervišu",
     "ogDescription": "Gosti rezervišu stolove preko QR menija ili sajta. Kalendar, automatske potvrde, podsetnici. Nijedan gost nije propušten.",
-    "brandLine": "IQ Rest — Rezervacije stolova za restorane"
+    "brandLine": "QRgine — Rezervacije stolova za restorane"
   },
   "hero": {
     "headline": "Rezervacije stolova 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Kalendar rezervacija u IQ Rest admin panelu na dva tableta: dnevni pregled po stolovima i mesečni kalendar"
+        "alt": "Kalendar rezervacija u QRgine admin panelu na dva tableta: dnevni pregled po stolovima i mesečni kalendar"
       }
     }
   ],
   "faq": {
-    "sub": "Šta ugostitelji pitaju o rezervacijama stolova u IQ Rest-u. Ako vaše pitanje nije na listi — pišite nam na WhatsApp.",
+    "sub": "Šta ugostitelji pitaju o rezervacijama stolova u QRgine-u. Ako vaše pitanje nije na listi — pišite nam na WhatsApp.",
     "items": [
       {
         "q": "Mogu li da izaberem dane i vreme kada su rezervacije dostupne?",

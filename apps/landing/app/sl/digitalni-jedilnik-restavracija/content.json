@@ -3,13 +3,13 @@
   "slug": "digitalni-jedilnik-restavracija",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digitalni meni za restavracije | IQ Rest",
+    "title": "Digitalni meni za restavracije | QRgine",
     "description": "Digitalni meni za vašo restavracijo: spletni meni s fotografijami, alergeni, AI prevodom in posodobitvami cen v realnem času. 14 dni brezplačno, brez kreditne kartice.",
     "canonical": "https://iq-rest.com/sl/digitalni-jedilnik-restavracija",
     "ogLocale": "sl_SI",
     "ogTitle": "Digitalni meni za restavracije",
     "ogDescription": "Spletna različica vašega papirnatega menija s fotografijami, alergeni in AI prevodom. Cene se posodabljajo v realnem času.",
-    "brandLine": "IQ Rest — Digitalni meni za restavracije"
+    "brandLine": "QRgine — Digitalni meni za restavracije"
   },
   "hero": {
     "headline": "Digitalni meni in spletna stran",
@@ -166,7 +166,7 @@
     "heading": "Zakaj restavracije izberejo nas,",
     "headingAccent": "ne drugih sistemov",
     "sub": "Večina orodij za menije se konča pri QR kodi. Spodaj je tisto, kar se pri vsakodnevnem delu zares razlikuje. Brez imen — sami primerjajte s katerim koli sistemom.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Drugi sistemi",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Kaj gostince najpogosteje zanima o digitalnem meniju v IQ Rest. Če vašega vprašanja ni na seznamu — pišite nam na WhatsApp.",
+    "sub": "Kaj gostince najpogosteje zanima o digitalnem meniju v QRgine. Če vašega vprašanja ni na seznamu — pišite nam na WhatsApp.",
     "items": [
       {
         "q": "Ali potrebujem tehnično znanje ali izkušnje s CMS-jem?",
         "a": "Posebno znanje ni potrebno. Vse v nadzorni plošči se uredi z nekaj kliki — brez programiranja ali dela z izvornimi datotekami. Dodajanje jedi vzame nekaj sekund: ime, cena, fotografija. Celotna nastavitev menija običajno traja od 30 do 60 minut."
       },
       {
-        "q": "Kaj je digitalni meni IQ Rest?",
+        "q": "Kaj je digitalni meni QRgine?",
         "a": "To je spletna različica vašega menija, ki je gostom na voljo prek QR kode ali neposredne povezave: fotografije jedi, cene, alergeni, AI prevod v 35 jezikov in posodobitve v realnem času. Meni deluje na naših strežnikih — ni vam treba nameščati ali vzdrževati programske opreme, potrebujete le brskalnik."
       },
       {

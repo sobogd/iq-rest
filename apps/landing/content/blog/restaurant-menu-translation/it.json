@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Tradurre il menu: cosa tradurre e cosa no | IQ Rest",
+    "title": "Tradurre il menu: cosa tradurre e cosa no | QRgine",
     "description": "Perché tradurre a macchina i nomi dei piatti va storto, quali parti del menu devono restare nella lingua originale e come gestire quattro lingue senza quattro menu."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "Un [menu digitale](route:/digital-menu) ribalta la cosa. Il telefono del cliente annuncia già la sua lingua, quindi il menu si apre in quella giusta senza che nessuno scelga. IQ Rest traduce il menu automaticamente e, poiché le traduzioni sono legate al piatto, cambiare un prezzo una volta lo cambia in ogni lingua. Aggiungere una quinta lingua non costa nulla e non richiede ristampe."
+      "text": "Un [menu digitale](route:/digital-menu) ribalta la cosa. Il telefono del cliente annuncia già la sua lingua, quindi il menu si apre in quella giusta senza che nessuno scelga. QRgine traduce il menu automaticamente e, poiché le traduzioni sono legate al piatto, cambiare un prezzo una volta lo cambia in ogni lingua. Aggiungere una quinta lingua non costa nulla e non richiede ristampe."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Un menu, tutte le lingue",
-      "text": "IQ Rest traduce il tuo menu automaticamente e lo apre nella lingua del cliente. Cambi un prezzo una volta e si aggiornano tutte le lingue. 14 giorni gratis.",
+      "text": "QRgine traduce il tuo menu automaticamente e lo apre nella lingua del cliente. Cambi un prezzo una volta e si aggiornano tutte le lingue. 14 giorni gratis.",
       "buttonLabel": "Vedi la traduzione automatica",
       "routeKey": "/digital-menu"
     },

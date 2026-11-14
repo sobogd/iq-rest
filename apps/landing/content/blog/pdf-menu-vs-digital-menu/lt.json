@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR į PDF nėra skaitmeninis meniu | IQ Rest",
+    "title": "QR į PDF nėra skaitmeninis meniu | QRgine",
     "description": "QR kodas, vedantis į PDF, yra dažniausias ir blogiausias skaitmeninio meniu variantas. Kiek jis kainuoja skaitomumu, atnaujinimais, alergenais ir užsakymais."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Nufotografuokite popierinį meniu arba įkelkite patį PDF.",
-        "IQ Rest jį perskaito ir sukuria kategorijas, pozicijas ir kainas — apie penkias minutes vietoj viso vakaro.",
+        "QRgine jį perskaito ir sukuria kategorijas, pozicijas ir kainas — apie penkias minutes vietoj viso vakaro.",
         "Patikrinkite kainas ir pataisykite tai, ką nuskaitymas suprato klaidingai.",
         "Nukreipkite esamus QR kodus į naują meniu arba atspausdinkite naujus kiekvienam staliukui."
       ]

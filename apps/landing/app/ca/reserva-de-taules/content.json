@@ -3,13 +3,13 @@
   "slug": "reserva-de-taules",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Reserva de taules 24/7 per a restaurants | IQ Rest",
+    "title": "Reserva de taules 24/7 per a restaurants | QRgine",
     "description": "Reserva de taules 24/7: els clients reserven des de la carta QR o el web. Calendari per taula, confirmacions automàtiques i recordatoris. 14 dies gratis.",
     "canonical": "https://iq-rest.com/ca/reserva-de-taules",
     "ogLocale": "ca_ES",
     "ogTitle": "Reserva de taules 24/7 — Els clients reserven ells mateixos",
     "ogDescription": "Els clients reserven taula a través de la carta QR o el web. Calendari, confirmacions automàtiques, recordatoris. Cap client perdut.",
-    "brandLine": "IQ Rest — Reserva de taules per a restaurants"
+    "brandLine": "QRgine — Reserva de taules per a restaurants"
   },
   "hero": {
     "headline": "Reserva de taules 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "El calendari de reserves al panell d'IQ Rest en dues tauletes: una graella diària per taula i un calendari mensual"
+        "alt": "El calendari de reserves al panell d'QRgine en dues tauletes: una graella diària per taula i un calendari mensual"
       }
     }
   ],
   "faq": {
-    "sub": "El que pregunten els restauradors sobre la reserva de taules a IQ Rest. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
+    "sub": "El que pregunten els restauradors sobre la reserva de taules a QRgine. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
     "items": [
       {
         "q": "Puc triar els dies i les hores en què es pot reservar?",

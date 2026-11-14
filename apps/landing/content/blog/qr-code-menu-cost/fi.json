@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Mitä QR-ruokalista oikeasti maksaa | IQ Rest",
+    "title": "Mitä QR-ruokalista oikeasti maksaa | QRgine",
     "description": "Mitä QR-ruokalista todella maksaa: ilmaiset työkalut, kuukausimaksut, hinta toimipaikkaa kohti, tilausprovisiot ja piilotettu käyttöönottoaika."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest on kolmannella rivillä: **alkaen 9,90 € kuussa toimipaikkaa kohti**, ei provisiota tilauksista, 14 päivää ilmaiseksi ilman korttia. Laskutamme toimipaikasta, emme tarjoilijasta, koska käyttäjäkohtainen laskutus rankaisee juuri niitä paikkoja, joissa henkilöstön vaihtuvuus on suurinta."
+      "text": "QRgine on kolmannella rivillä: **alkaen 9,90 € kuussa toimipaikkaa kohti**, ei provisiota tilauksista, 14 päivää ilmaiseksi ilman korttia. Laskutamme toimipaikasta, emme tarjoilijasta, koska käyttäjäkohtainen laskutus rankaisee juuri niitä paikkoja, joissa henkilöstön vaihtuvuus on suurinta."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Siksi listan tuonti merkitsee enemmän kuin miltä kuulostaa. IQ Rest lukee valokuvan paperilistastasi ja luo rivit automaattisesti, jolloin puolikas päivä kutistuu noin viideksi minuutiksi. Laske käyttöönottoaika mukaan, kun vertailet työkaluja; se painaa usein enemmän kuin ensimmäinen tilausvuosi."
+      "text": "Siksi listan tuonti merkitsee enemmän kuin miltä kuulostaa. QRgine lukee valokuvan paperilistastasi ja luo rivit automaattisesti, jolloin puolikas päivä kutistuu noin viideksi minuutiksi. Laske käyttöönottoaika mukaan, kun vertailet työkaluja; se painaa usein enemmän kuin ensimmäinen tilausvuosi."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Paljonko QR-ruokalista maksaa kuukaudessa?",
-          "a": "Kiinteän tilauksen työkalut liikkuvat yleensä 10–40 eurossa toimipaikkaa kohti kuussa. IQ Rest alkaa 9,90 eurosta ilman provisiota tilauksista."
+          "a": "Kiinteän tilauksen työkalut liikkuvat yleensä 10–40 eurossa toimipaikkaa kohti kuussa. QRgine alkaa 9,90 eurosta ilman provisiota tilauksista."
         },
         {
           "q": "Onko olemassa ilmaista QR-ruokalistaa?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Maksanko pöydästä vai ravintolasta?",
-          "a": "IQ Restissä ravintolasta – pöydät ja QR-koodit ovat rajattomia. Tarkista tämä ennen kuin allekirjoitat missään, sillä pöytä- tai käyttäjäkohtainen hinnoittelu skaalautuu huonosti."
+          "a": "QRgineissä ravintolasta – pöydät ja QR-koodit ovat rajattomia. Tarkista tämä ennen kuin allekirjoitat missään, sillä pöytä- tai käyttäjäkohtainen hinnoittelu skaalautuu huonosti."
         },
         {
           "q": "Onko käyttöönottomaksua?",

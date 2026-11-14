@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // FI help guide.
 export const fi: HelpDoc = {
-  metaTitle: "Näin käytät IQ Restiä — vaiheittainen opas",
+  metaTitle: "Näin käytät QRgineiä — vaiheittainen opas",
   metaDescription:
-    "Kattava IQ Rest -opas: rekisteröinti, menu, tilaukset, varaukset, keittiönäyttö ja asetukset — ravintoloille.",
+    "Kattava QRgine -opas: rekisteröinti, menu, tilaukset, varaukset, keittiönäyttö ja asetukset — ravintoloille.",
   h1: "Ohje",
-  intro: "Yksityiskohtainen opas IQ Restiin — rekisteröinnistä hienosäätöasetuksiin.",
+  intro: "Yksityiskohtainen opas QRgineiin — rekisteröinnistä hienosäätöasetuksiin.",
   banner: {
     title: "Se on helpompaa kuin miltä näyttää",
     sub: "Vaiheittainen opas: rekisteröinnistä hienosäätöasetuksiin — kuka tahansa osaa.",
@@ -22,7 +22,7 @@ export const fi: HelpDoc = {
         { type: "h3", text: "Mikä tämä järjestelmä on" },
         {
           type: "p",
-          text: "IQ Rest on palvelu ravintoloille: luot verkkomenun QR-koodilla, otat vastaan tilauksia ja pöytävarauksia suoraan asiakkaiden puhelimista, ja keittiössä sekä tarjoilijoilla toimivat tabletti-päätteet. Kaikkea hallitaan yhdestä hallintapaneelista (dashboardista).",
+          text: "QRgine on palvelu ravintoloille: luot verkkomenun QR-koodilla, otat vastaan tilauksia ja pöytävarauksia suoraan asiakkaiden puhelimista, ja keittiössä sekä tarjoilijoilla toimivat tabletti-päätteet. Kaikkea hallitaan yhdestä hallintapaneelista (dashboardista).",
         },
         { type: "h3", text: "Rekisteröinti ja kirjautuminen" },
         { type: "p", text: "Voit kirjautua kolmella tavalla — valitse mikä tahansa kirjautumisnäytöllä:" },

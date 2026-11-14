@@ -3,13 +3,13 @@
   "slug": "konyhai-kijelzo",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Konyhai kijelző (KDS) éttermeknek | IQ Rest",
+    "title": "Konyhai kijelző (KDS) éttermeknek | QRgine",
     "description": "KDS konyhai kijelző éttermeknek: a teremből és a QR étlapról érkező rendelések a szakács képernyőjére futnak be. Státuszok, szűrők, tableten vagy telefonon fut.",
     "canonical": "https://iq-rest.com/hu/konyhai-kijelzo",
     "ogLocale": "hu_HU",
     "ogTitle": "Konyhai Kijelző (KDS) — Rendelések Egyenesen a Szakács Képernyőjére",
     "ogDescription": "Rendelések a pályáról a szakács képernyőjén. Oszlopok asztalonként, státuszok és időzítő. Egy érintés megváltoztatja a státuszt.",
-    "brandLine": "IQ Rest — Konyhai kijelző éttermeknek"
+    "brandLine": "QRgine — Konyhai kijelző éttermeknek"
   },
   "hero": {
     "headline": "Konyhai Kijelző (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Amit a vendéglátósok a konyhai kijelzőről kérdeznek az IQ Restben. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
+    "sub": "Amit a vendéglátósok a konyhai kijelzőről kérdeznek az QRgineben. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
     "items": [
       {
         "q": "Milyen státuszaik vannak a konyhai tételeknek?",

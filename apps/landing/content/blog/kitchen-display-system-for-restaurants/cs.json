@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kuchyňský displej: potřebujete KDS? | IQ Rest",
+    "title": "Kuchyňský displej: potřebujete KDS? | QRgine",
     "description": "Co KDS dělá, kolik hardware skutečně stojí, jak ho provozovat na tabletu, který už máte, a kterým kuchyním je lépe s papírovými bony."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Většina kuchyní to nepotřebuje. [Kuchyňský displej](route:/kitchen-display) IQ Rest běží v prohlížeči, takže hardwarem může být tablet, který už máte, levný Android tablet nebo starý notebook s monitorem. Dejte ho do pouzdra odolného proti stříkání, pověste mimo linii páry, a mezní náklad je nástěnný držák."
+      "text": "Většina kuchyní to nepotřebuje. [Kuchyňský displej](route:/kitchen-display) QRgine běží v prohlížeči, takže hardwarem může být tablet, který už máte, levný Android tablet nebo starý notebook s monitorem. Dejte ho do pouzdra odolného proti stříkání, pověste mimo linii páry, a mezní náklad je nástěnný držák."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Můžu KDS provozovat na běžném tabletu?",
-          "a": "Ano. Kuchyňský displej IQ Rest běží v prohlížeči, takže stačí jakýkoli tablet nebo notebook z posledních pěti let. Použijte pouzdro odolné proti stříkání."
+          "a": "Ano. Kuchyňský displej QRgine běží v prohlížeči, takže stačí jakýkoli tablet nebo notebook z posledních pěti let. Použijte pouzdro odolné proti stříkání."
         },
         {
           "q": "Potřebuje KDS internet?",

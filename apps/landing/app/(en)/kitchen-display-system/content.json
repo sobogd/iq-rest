@@ -3,13 +3,13 @@
   "slug": "kitchen-display-system",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Kitchen Display System (KDS) for Restaurants | IQ Rest",
+    "title": "Kitchen Display System (KDS) for Restaurants | QRgine",
     "description": "KDS for restaurants: orders from the floor and QR menu go straight to the cook's screen. Statuses, station filters, columns by table. Runs on any tablet or phone.",
     "canonical": "https://iq-rest.com/kitchen-display-system",
     "ogLocale": "en_US",
     "ogTitle": "Kitchen Display System (KDS) — Orders Straight to the Cook's Screen",
     "ogDescription": "Orders from the floor on the cook's screen. Columns by table, statuses and a timer. One tap changes the status.",
-    "brandLine": "IQ Rest — Kitchen Display for Restaurants"
+    "brandLine": "QRgine — Kitchen Display for Restaurants"
   },
   "hero": {
     "headline": "Kitchen Display System (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "What restaurateurs ask about the kitchen display in IQ Rest. If your question isn't listed — message us on WhatsApp.",
+    "sub": "What restaurateurs ask about the kitchen display in QRgine. If your question isn't listed — message us on WhatsApp.",
     "items": [
       {
         "q": "What statuses do kitchen items have?",

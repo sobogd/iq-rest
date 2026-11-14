@@ -2,7 +2,7 @@
   "htmlLang": "tr",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Dijital Menü, Mutfak Ekranı ve Rezervasyon — IQ Rest",
+    "title": "Dijital Menü, Mutfak Ekranı ve Rezervasyon — QRgine",
     "description": "Restoranınızı tek uygulamadan yönetin: çok dilli dijital menü, mutfak ekranı ve 7/24 rezervasyon. 5 dakikada kurun. 14 gün ücretsiz, kredi kartı gerekmez.",
     "canonical": "https://iq-rest.com/tr",
     "ogLocale": "tr_TR",
@@ -10,7 +10,7 @@
     "ogDescription": "Restoranınızı tek uygulamadan yönetin: çok dilli dijital menü, mutfak ekranı ve 7/24 rezervasyon. 5 dakikada kurun. 14 gün ücretsiz, kredi kartı gerekmez."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Restoran Yönetim Platformu"
+    "appName": "QRgine — Restoran Yönetim Platformu"
   },
   "ctaText": "Ücretsiz deneyin",
   "homeCtaText": "Ücretsiz deneyin",
@@ -82,7 +82,7 @@
     "quoteStart": "Eşimle kendi kafemizi işlettik ve restoranın günlük temposunu içeriden biliyoruz: sipariş alma, rezervasyonlar, salon ve mutfak operasyonları. Kurulumu kolay, modern ve ilk bakışta anlaşılır tek bir araç istedik —",
     "quoteAccent": "şu an diğer restorancılar için geliştirdiğimiz platform fikri işte böyle doğdu.",
     "sign": "Bogdan Sokolov · kurucu, eski kafe işletmecisi",
-    "photoAlt": "Bogdan Sokolov, IQ Rest kurucusu"
+    "photoAlt": "Bogdan Sokolov, QRgine kurucusu"
   },
   "pricing": {
     "badge": "Komisyon yok · Sözleşme yok",
@@ -108,7 +108,7 @@
     "headingAccent": "sorular",
     "sub": "Restorancıların kayıt olmadan önce en çok sorduğu sorular. Cevabınızı bulamadıysanız WhatsApp'tan yazın, bot değil gerçek ekibimiz yanıtlasın.",
     "whatsappCta": "WhatsApp'tan yazın",
-    "whatsappPrefill": "Merhaba, IQ Rest hakkında bir sorum var",
+    "whatsappPrefill": "Merhaba, QRgine hakkında bir sorum var",
     "items": [
       {
         "q": "Deneme süresi neleri kapsıyor ve bittiğinde ne oluyor?",
@@ -192,7 +192,7 @@
     "button": "Paketimi oluştur"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Tüm hakları saklıdır.",
+    "copyrightTemplate": "© {year} QRgine. Tüm hakları saklıdır.",
     "featuresHeading": "Özellikler",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Restoran teknolojisi blogu — IQ Rest",
+    "metaTitle": "Restoran teknolojisi blogu — QRgine",
     "metaDescription": "Dijital menü, QR sipariş, mutfak ekranları ve rezervasyonlar üzerine rehberler ve karşılaştırmalar — restoran sahipleri için pratik içerikler.",
     "title": "Blog",
     "intro": "Dijital menü, QR sipariş, mutfak ekranları ve restoran yönetimi üzerine rehberler ve karşılaştırmalar.",

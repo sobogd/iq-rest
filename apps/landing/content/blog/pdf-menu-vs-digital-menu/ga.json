@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ní biachlár digiteach é QR chuig PDF | IQ Rest",
+    "title": "Ní biachlár digiteach é QR chuig PDF | QRgine",
     "description": "Is é cód QR a dhíríonn ar PDF an socrú is coitianta agus an ceann is measa. An costas i léitheoireacht, nuashonruithe, ailléirginí agus orduithe."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Tóg grianghraf den bhiachlár páipéir, nó uaslódáil an PDF féin.",
-        "Léann IQ Rest é agus cruthaíonn sé na catagóirí, na míreanna agus na praghsanna — thart ar chúig nóiméad seachas tráthnóna iomlán.",
+        "Léann QRgine é agus cruthaíonn sé na catagóirí, na míreanna agus na praghsanna — thart ar chúig nóiméad seachas tráthnóna iomlán.",
         "Seiceáil na praghsanna agus ceartaigh aon rud a léigh an scanadh mícheart.",
         "Dírigh do chóid QR reatha ar an mbiachlár nua, nó priontáil cinn nua in aghaidh an bhoird."
       ]

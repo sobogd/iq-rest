@@ -3,13 +3,13 @@
   "slug": "sistema-de-pedidos-restaurante",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Receção de pedidos no restaurante — Cliente e empregado | IQ Rest",
+    "title": "Receção de pedidos no restaurante — Cliente e empregado | QRgine",
     "description": "Receção de pedidos no restaurante por telemóvel ou tablet: planta da sala, divisão da conta, estados e opções. O cliente pede na mesa. 14 dias grátis.",
     "canonical": "https://iq-rest.com/pt/sistema-de-pedidos-restaurante",
     "ogLocale": "pt_PT",
     "ogTitle": "Receção de pedidos no restaurante — Cliente e empregado",
     "ogDescription": "O cliente na mesa ou o empregado no telemóvel — o pedido chega de imediato à cozinha. Planta da sala, divisão da conta, estados, opções e comentários.",
-    "brandLine": "IQ Rest — Receção de pedidos no restaurante"
+    "brandLine": "QRgine — Receção de pedidos no restaurante"
   },
   "hero": {
     "headline": "Pedidos da mesa —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "O que os restauradores perguntam sobre a receção de pedidos na IQ Rest. Se a sua pergunta não está na lista, escreva-nos no WhatsApp.",
+    "sub": "O que os restauradores perguntam sobre a receção de pedidos na QRgine. Se a sua pergunta não está na lista, escreva-nos no WhatsApp.",
     "items": [
       {
         "q": "Podem vários empregados trabalhar em simultâneo em dispositivos diferentes?",

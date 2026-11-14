@@ -7,13 +7,13 @@
     "sub": "Alt en enkelt skanning blir til for gjestene og gulvet ditt."
   },
   "meta": {
-    "title": "QR-meny for restauranter | IQ Rest",
+    "title": "QR-meny for restauranter | QRgine",
     "description": "QR-meny for restauranter: gjestene skanner QR-koden på bordet, åpner menyen i nettleseren og bestiller på sitt eget språk. 14 dager gratis, krever ikke kort.",
     "canonical": "https://iq-rest.com/no/qr-kode-meny-restaurant",
     "ogLocale": "nb_NO",
     "ogTitle": "QR-meny for restauranter",
     "ogDescription": "En QR på bordet, menyen på mobilen — bilder, allergener, 35 språk og oppdateringer i sanntid.",
-    "brandLine": "IQ Rest — QR-meny for restauranter"
+    "brandLine": "QRgine — QR-meny for restauranter"
   },
   "hero": {
     "headline": "QR-meny:\nskann og bestill",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Det restaurantdrivere spør om når det gjelder QR-menyen fra IQ Rest. Finner du ikke spørsmålet ditt? Send oss en melding på WhatsApp.",
+    "sub": "Det restaurantdrivere spør om når det gjelder QR-menyen fra QRgine. Finner du ikke spørsmålet ditt? Send oss en melding på WhatsApp.",
     "items": [
       {
-        "q": "Hvordan fungerer QR-menyen fra IQ Rest?",
+        "q": "Hvordan fungerer QR-menyen fra QRgine?",
         "a": "Hvert bord har en utskrevet QR-kode. Gjestene skanner den med mobilkameraet, og nettleseren åpner restaurantens meny — bilder, beskrivelser, allergener og oppdaterte priser. Ingen app å laste ned for gjester eller ansatte."
       },
       {

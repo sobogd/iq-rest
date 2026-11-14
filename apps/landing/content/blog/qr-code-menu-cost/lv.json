@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Cik patiesībā maksā QR ēdienkarte | IQ Rest",
+    "title": "Cik patiesībā maksā QR ēdienkarte | QRgine",
     "description": "Cik patiešām maksā ēdienkarte ar QR kodu: bezmaksas rīki, ikmēneša abonementi, cena par vietu, komisijas no pasūtījumiem un slēptais ieviešanas laiks."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest ir trešajā rindā: **no 9,90 € mēnesī par vietu**, bez komisijas no pasūtījumiem, 14 dienas bez maksas un bez kartes. Mēs rēķinām par vietu, nevis par viesmīli, jo maksa par lietotāju soda tieši tās vietas, kur personāla mainība ir vislielākā."
+      "text": "QRgine ir trešajā rindā: **no 9,90 € mēnesī par vietu**, bez komisijas no pasūtījumiem, 14 dienas bez maksas un bez kartes. Mēs rēķinām par vietu, nevis par viesmīli, jo maksa par lietotāju soda tieši tās vietas, kur personāla mainība ir vislielākā."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Tāpēc ēdienkartes imports nozīmē vairāk, nekā izklausās. IQ Rest nolasa tavas papīra ēdienkartes fotogrāfiju un izveido pozīcijas automātiski, tā šī pusdiena kļūst par aptuveni piecām minūtēm. Rēķini ieviešanas laiku, kad salīdzini rīkus; tas bieži sver vairāk nekā pirmais abonementa gads."
+      "text": "Tāpēc ēdienkartes imports nozīmē vairāk, nekā izklausās. QRgine nolasa tavas papīra ēdienkartes fotogrāfiju un izveido pozīcijas automātiski, tā šī pusdiena kļūst par aptuveni piecām minūtēm. Rēķini ieviešanas laiku, kad salīdzini rīkus; tas bieži sver vairāk nekā pirmais abonementa gads."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Cik mēnesī maksā ēdienkarte ar QR kodu?",
-          "a": "Rīki ar fiksētu abonementu parasti ir 10-40 € par vietu mēnesī. IQ Rest sākas no 9,90 € bez komisijas no pasūtījumiem."
+          "a": "Rīki ar fiksētu abonementu parasti ir 10-40 € par vietu mēnesī. QRgine sākas no 9,90 € bez komisijas no pasūtījumiem."
         },
         {
           "q": "Vai ir bezmaksas ēdienkarte ar QR kodu?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Maksā par galdu vai par restorānu?",
-          "a": "IQ Rest gadījumā par restorānu — galdi un QR kodi ir neierobežoti. Pārbaudi to, pirms jebkur paraksti, jo cena par galdu vai par lietotāju mērogojas ļoti slikti."
+          "a": "QRgine gadījumā par restorānu — galdi un QR kodi ir neierobežoti. Pārbaudi to, pirms jebkur paraksti, jo cena par galdu vai par lietotāju mērogojas ļoti slikti."
         },
         {
           "q": "Vai ir uzsākšanas maksa?",

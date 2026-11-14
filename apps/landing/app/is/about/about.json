@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Um IQ Rest — Hver við erum, tengiliðir og lagalegar upplýsingar",
-    "description": "Hverjir standa á bak við IQ Rest, hvernig á að ná í okkur og upplýsingar um rekstraraðila þjónustunnar: tölvupóstur, WhatsApp, lagalegar upplýsingar.",
+    "title": "Um QRgine — Hver við erum, tengiliðir og lagalegar upplýsingar",
+    "description": "Hverjir standa á bak við QRgine, hvernig á að ná í okkur og upplýsingar um rekstraraðila þjónustunnar: tölvupóstur, WhatsApp, lagalegar upplýsingar.",
     "canonical": "https://iq-rest.com/is/about",
     "ogLocale": "is_IS",
-    "ogTitle": "Um IQ Rest",
-    "ogDescription": "Hverjir standa á bak við IQ Rest, tengiliðir þjónustuvers og lagalegar upplýsingar um rekstraraðila þjónustunnar."
+    "ogTitle": "Um QRgine",
+    "ogDescription": "Hverjir standa á bak við QRgine, tengiliðir þjónustuvers og lagalegar upplýsingar um rekstraraðila þjónustunnar."
   },
   "heading": "Frá eigin kaffihúsi",
   "headingAccent": "að kerfi fyrir veitingastaði",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "staðir keyra á IQ Rest"
+      "label": "staðir keyra á QRgine"
     },
     {
       "value": "15",
       "label": "lönd þar sem viðskiptavinir okkar eru"
     }
   ],
-  "waPrefill": "Hæ, ég er með spurningu um IQ Rest",
+  "waPrefill": "Hæ, ég er með spurningu um QRgine",
   "contacts": [
     {
       "icon": "Mail",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Köksdisplay: behöver du ett KDS? | IQ Rest",
+    "title": "Köksdisplay: behöver du ett KDS? | QRgine",
     "description": "Vad ett KDS gör, vad hårdvaran faktiskt kostar, hur du kör det på en surfplatta du redan har, och vilka kök som har det bättre med papperslappar."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "De flesta kök behöver inte det. IQ Rests [köksdisplay](route:/kitchen-display) körs i webbläsaren, så hårdvaran kan vara en platta du redan har, en billig Android-platta eller en gammal laptop med en skärm. Stoppa den i ett stänkskyddat fodral, montera den utanför ångstråket, så är marginalkostnaden ett väggfäste."
+      "text": "De flesta kök behöver inte det. QRgines [köksdisplay](route:/kitchen-display) körs i webbläsaren, så hårdvaran kan vara en platta du redan har, en billig Android-platta eller en gammal laptop med en skärm. Stoppa den i ett stänkskyddat fodral, montera den utanför ångstråket, så är marginalkostnaden ett väggfäste."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Kan jag köra ett KDS på en vanlig surfplatta?",
-          "a": "Ja. IQ Rests köksdisplay körs i webbläsaren, så vilken platta eller laptop som helst från de senaste fem åren fungerar. Använd ett stänkskyddat fodral."
+          "a": "Ja. QRgines köksdisplay körs i webbläsaren, så vilken platta eller laptop som helst från de senaste fem åren fungerar. Använd ett stänkskyddat fodral."
         },
         {
           "q": "Behöver ett KDS internet?",

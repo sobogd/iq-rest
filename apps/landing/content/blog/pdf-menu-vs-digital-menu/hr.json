@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR na PDF nije digitalni jelovnik | IQ Rest",
+    "title": "QR na PDF nije digitalni jelovnik | QRgine",
     "description": "QR kod koji vodi na PDF najčešće je i najlošije rješenje digitalnog jelovnika. Koliko vas stoji u čitljivosti, ažuriranjima, alergenima i narudžbama."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Fotografirajte papirnati jelovnik ili postavite sam PDF.",
-        "IQ Rest ga pročita i stvori kategorije, stavke i cijene — otprilike pet minuta umjesto cijele večeri.",
+        "QRgine ga pročita i stvori kategorije, stavke i cijene — otprilike pet minuta umjesto cijele večeri.",
         "Provjerite cijene i ispravite ono što je očitanje krivo pročitalo.",
         "Usmjerite postojeće QR kodove na novi jelovnik ili ispišite nove, po jedan za svaki stol."
       ]

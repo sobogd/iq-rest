@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ecrã de cozinha: precisa de um KDS? | IQ Rest",
+    "title": "Ecrã de cozinha: precisa de um KDS? | QRgine",
     "description": "O que faz um KDS, quanto custa mesmo o equipamento, como pô-lo a correr num tablet que já tem e que cozinhas ficam melhor com comandas em papel."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "A maioria das cozinhas não precisa disso. O [ecrã de cozinha](route:/kitchen-display) do IQ Rest corre no navegador, por isso o equipamento pode ser um tablet que já tem, um tablet Android barato ou um portátil velho com um monitor. Meta-o numa capa à prova de salpicos, monte-o fora da linha do vapor e o custo marginal é um suporte de parede."
+      "text": "A maioria das cozinhas não precisa disso. O [ecrã de cozinha](route:/kitchen-display) do QRgine corre no navegador, por isso o equipamento pode ser um tablet que já tem, um tablet Android barato ou um portátil velho com um monitor. Meta-o numa capa à prova de salpicos, monte-o fora da linha do vapor e o custo marginal é um suporte de parede."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Posso pôr um KDS a correr num tablet normal?",
-          "a": "Sim. O ecrã de cozinha do IQ Rest corre no navegador, por isso serve qualquer tablet ou portátil dos últimos cinco anos. Use uma capa à prova de salpicos."
+          "a": "Sim. O ecrã de cozinha do QRgine corre no navegador, por isso serve qualquer tablet ou portátil dos últimos cinco anos. Use uma capa à prova de salpicos."
         },
         {
           "q": "O KDS precisa de internet?",

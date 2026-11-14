@@ -3,13 +3,13 @@
   "slug": "objednavkovy-system-restaurace",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Příjem objednávek v restauraci — Host a Číšník | IQ Rest",
+    "title": "Příjem objednávek v restauraci — Host a Číšník | QRgine",
     "description": "Příjem objednávek z telefonu nebo tabletu: plán stolů, rozdělení účtu, stavy, možnosti a poznámky. Hosté objednávají od stolu, číšníci ze svého zařízení. 14 dní zdarma.",
     "canonical": "https://iq-rest.com/cs/objednavkovy-system-restaurace",
     "ogLocale": "cs_CZ",
     "ogTitle": "Příjem objednávek v restauraci — Host a Číšník",
     "ogDescription": "Host u stolu nebo číšník s telefonem — objednávka je hned v kuchyni. Plán stolů, rozdělení účtu, stavy, možnosti a poznámky.",
-    "brandLine": "IQ Rest — Příjem objednávek v restauraci"
+    "brandLine": "QRgine — Příjem objednávek v restauraci"
   },
   "hero": {
     "headline": "Objednávky od stolu —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Na co se majitelé podniků ptají ohledně příjmu objednávek v IQ Rest. Nenašli jste svůj dotaz — napište nám na WhatsApp.",
+    "sub": "Na co se majitelé podniků ptají ohledně příjmu objednávek v QRgine. Nenašli jste svůj dotaz — napište nám na WhatsApp.",
     "items": [
       {
         "q": "Může pracovat více číšníků současně z různých zařízení?",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Menu cyfrowe czy papierowe: porównanie kosztów | IQ Rest",
+    "title": "Menu cyfrowe czy papierowe: porównanie kosztów | QRgine",
     "description": "Ile naprawdę kosztuje papierowe menu w restauracji w porównaniu z cyfrowym menu QR: druk, aktualizacje, tłumaczenia, tempo zamówień. Porównanie z liczbami."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Zeskanuj papierowe menu — IQ Rest je odczyta i automatycznie zbuduje menu cyfrowe.",
+        "Zeskanuj papierowe menu — QRgine je odczyta i automatycznie zbuduje menu cyfrowe.",
         "Sprawdź ceny, dodaj zdjęcia tam, gdzie mają znaczenie.",
         "Wydrukuj po jednym kodzie QR na stolik.",
         "Zmieniaj cokolwiek, w każdej chwili, z telefonu."

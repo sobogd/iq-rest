@@ -3,13 +3,13 @@
   "slug": "digitale-speisekarte-restaurant",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digitale Speisekarte für Restaurants | IQ Rest",
+    "title": "Digitale Speisekarte für Restaurants | QRgine",
     "description": "Digitale Speisekarte für Ihr Restaurant: Online-Menü mit Fotos, Allergenen und KI-Übersetzung. 14 Tage kostenlos, keine Kreditkarte nötig.",
     "canonical": "https://iq-rest.com/de/digitale-speisekarte-restaurant",
     "ogLocale": "de_DE",
     "ogTitle": "Digitale Speisekarte für Restaurants",
     "ogDescription": "Eine Online-Version Ihrer Papierkarte mit Fotos, Allergenen und KI-Übersetzung. Preise aktualisieren sich in Echtzeit.",
-    "brandLine": "IQ Rest — Digitale Speisekarte für Restaurants"
+    "brandLine": "QRgine — Digitale Speisekarte für Restaurants"
   },
   "hero": {
     "headline": "Digitale Speisekarte und Website",
@@ -166,7 +166,7 @@
     "heading": "Warum Restaurants uns wählen",
     "headingAccent": "und nicht andere Systeme",
     "sub": "Die meisten Menü-Tools enden beim QR-Code. Die Zeilen unten zeigen, was sich im Alltag wirklich unterscheidet. Ohne Namen — vergleichen Sie selbst mit jedem beliebigen System.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Andere Systeme",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Was Gastronomen zur digitalen Speisekarte in IQ Rest fragen. Wenn Ihre Frage nicht dabei ist — schreiben Sie uns auf WhatsApp.",
+    "sub": "Was Gastronomen zur digitalen Speisekarte in QRgine fragen. Wenn Ihre Frage nicht dabei ist — schreiben Sie uns auf WhatsApp.",
     "items": [
       {
         "q": "Brauche ich technisches Wissen oder CMS-Erfahrung?",
         "a": "Keine besonderen Kenntnisse erforderlich. Alles im Dashboard funktioniert mit ein paar Fingertipps — kein Programmieren, keine Arbeit mit Quelldateien. Ein Gericht hinzuzufügen dauert Sekunden: Name, Preis, Foto. Die komplette Einrichtung der Speisekarte dauert meist 30–60 Minuten."
       },
       {
-        "q": "Was ist die digitale Speisekarte von IQ Rest?",
+        "q": "Was ist die digitale Speisekarte von QRgine?",
         "a": "Es ist eine Online-Version Ihrer Speisekarte, die für Gäste per QR-Code oder Direktlink erreichbar ist: Fotos der Gerichte, Preise, Allergene, KI-Übersetzung in 35 Sprachen und Echtzeit-Updates. Die Speisekarte läuft auf unseren Servern — es muss keine Software installiert oder gewartet werden, ein Browser reicht völlig aus."
       },
       {

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ile naprawdę kosztuje menu QR | IQ Rest",
+    "title": "Ile naprawdę kosztuje menu QR | QRgine",
     "description": "Ile naprawdę kosztuje menu z kodem QR: darmowe narzędzia, abonamenty, cena za lokal, prowizje od zamówień i ukryty czas wdrożenia."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest jest w trzecim wierszu: **od 9,90 € miesięcznie za lokal**, bez prowizji od zamówień, 14 dni za darmo bez karty. Rozliczamy lokal, a nie kelnera, bo płatność za użytkownika karze właśnie te lokale, w których najczęściej zmienia się załoga."
+      "text": "QRgine jest w trzecim wierszu: **od 9,90 € miesięcznie za lokal**, bez prowizji od zamówień, 14 dni za darmo bez karty. Rozliczamy lokal, a nie kelnera, bo płatność za użytkownika karze właśnie te lokale, w których najczęściej zmienia się załoga."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Dlatego import karty znaczy więcej, niż brzmi. IQ Rest czyta zdjęcie twojej papierowej karty i tworzy pozycje automatycznie, przez co pół dnia pracy zamienia się w jakieś pięć minut. Wliczaj czas wdrożenia przy porównywaniu narzędzi; często waży więcej niż pierwszy rok abonamentu."
+      "text": "Dlatego import karty znaczy więcej, niż brzmi. QRgine czyta zdjęcie twojej papierowej karty i tworzy pozycje automatycznie, przez co pół dnia pracy zamienia się w jakieś pięć minut. Wliczaj czas wdrożenia przy porównywaniu narzędzi; często waży więcej niż pierwszy rok abonamentu."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Ile kosztuje menu z kodem QR miesięcznie?",
-          "a": "Narzędzia ze stałym abonamentem chodzą zwykle po 10-40 € za lokal miesięcznie. IQ Rest zaczyna się od 9,90 € bez prowizji od zamówień."
+          "a": "Narzędzia ze stałym abonamentem chodzą zwykle po 10-40 € za lokal miesięcznie. QRgine zaczyna się od 9,90 € bez prowizji od zamówień."
         },
         {
           "q": "Czy istnieje darmowe menu z kodem QR?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Płaci się za stolik czy za restaurację?",
-          "a": "W IQ Rest za restaurację — stoliki i kody QR bez limitu. Sprawdź to przed podpisaniem czegokolwiek, bo cena za stolik lub za użytkownika skaluje się fatalnie."
+          "a": "W QRgine za restaurację — stoliki i kody QR bez limitu. Sprawdź to przed podpisaniem czegokolwiek, bo cena za stolik lub za użytkownika skaluje się fatalnie."
         },
         {
           "q": "Czy jest opłata wdrożeniowa?",

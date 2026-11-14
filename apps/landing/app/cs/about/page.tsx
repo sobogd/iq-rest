@@ -36,9 +36,9 @@ const JSON_LD = JSON.stringify({
   mainEntity: {
     "@type": "Organization",
     "@id": `${SITE}/#organization`,
-    name: "IQ Rest",
+    name: "QRgine",
     url: SITE,
-    logo: { "@type": "ImageObject", url: `${SITE}/logo.png`, width: 1408, height: 512 },
+    logo: { "@type": "ImageObject", url: `${SITE}/wordmark.svg`, width: 430, height: 128 },
     founder: { "@type": "Person", name: "Bogdan Sokolov" },
     address: {
       "@type": "PostalAddress",
@@ -71,11 +71,11 @@ export const metadata: Metadata = {
     title: ABOUT.meta.ogTitle,
     description: ABOUT.meta.ogDescription,
     url: PAGE_URL,
-    siteName: "IQ Rest",
+    siteName: "QRgine",
     locale: ABOUT.meta.ogLocale,
     alternateLocale: ogAlternateLocales(ABOUT.meta.ogLocale),
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QRgine" }],
   },
 };
 

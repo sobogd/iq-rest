@@ -9,7 +9,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const { auth } = await getLandingChrome(locale);
   return {
-    title: `${auth.metaSignIn} · IQ Rest`,
+    title: `${auth.metaSignIn} · QRgine`,
     robots: { index: false, follow: true },
   };
 }

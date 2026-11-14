@@ -3,13 +3,13 @@
   "slug": "pasutijumu-sistema-restorans",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Pasūtījumu pieņemšana restorānā — Viesis un Viesmīlis | IQ Rest",
+    "title": "Pasūtījumu pieņemšana restorānā — Viesis un Viesmīlis | QRgine",
     "description": "Pasūtījumu pieņemšana no tālruņa vai planšetdatora: zāles plāns, rēķina sadalīšana, statusi un komentāri. Viesi pasūta no galdiņa. 14 dienas bez maksas.",
     "canonical": "https://iq-rest.com/lv/pasutijumu-sistema-restorans",
     "ogLocale": "lv_LV",
     "ogTitle": "Pasūtījumu pieņemšana restorānā — Viesis un Viesmīlis",
     "ogDescription": "Viesis pie galdiņa vai viesmīlis tālrunī — pasūtījums uzreiz nonāk virtuvē. Zāles plāns, rēķina sadalīšana, statusi, piedevas un komentāri.",
-    "brandLine": "IQ Rest — Pasūtījumu pieņemšana restorānā"
+    "brandLine": "QRgine — Pasūtījumu pieņemšana restorānā"
   },
   "hero": {
     "headline": "Pasūtījumi no galdiņa —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Ko restorānu īpašnieki jautā par pasūtījumu pieņemšanu IQ Rest. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
+    "sub": "Ko restorānu īpašnieki jautā par pasūtījumu pieņemšanu QRgine. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
     "items": [
       {
         "q": "Vai vairāki viesmīļi var strādāt vienlaicīgi no dažādām ierīcēm?",

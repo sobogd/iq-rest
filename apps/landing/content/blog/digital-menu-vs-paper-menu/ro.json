@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Meniu digital vs meniu tipărit: costuri reale | IQ Rest",
+    "title": "Meniu digital vs meniu tipărit: costuri reale | QRgine",
     "description": "Cât costă cu adevărat un meniu tipărit față de un meniu digital QR: tipar, actualizări, traduceri, viteza comenzilor. Comparație directă, cu cifre."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Scanează meniul de hârtie — IQ Rest îl citește și construiește automat meniul digital.",
+        "Scanează meniul de hârtie — QRgine îl citește și construiește automat meniul digital.",
         "Verifică prețurile, adaugă fotografii unde contează.",
         "Tipărește câte un cod QR pentru fiecare masă.",
         "Actualizează orice, oricând, de pe telefon."

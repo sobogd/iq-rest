@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Un QR către un PDF nu e meniu digital | IQ Rest",
+    "title": "Un QR către un PDF nu e meniu digital | QRgine",
     "description": "Un cod QR care duce la un PDF e cea mai răspândită și cea mai proastă variantă. Cât te costă la citire, actualizări, alergeni și comenzi."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Fă o fotografie meniului tipărit sau încarcă direct PDF-ul.",
-        "IQ Rest îl citește și creează categoriile, preparatele și prețurile — vreo cinci minute în loc de o seară.",
+        "QRgine îl citește și creează categoriile, preparatele și prețurile — vreo cinci minute în loc de o seară.",
         "Verifică prețurile și corectează ce a citit greșit scanarea.",
         "Îndreaptă codurile QR existente către noul meniu sau tipărește altele noi, câte unul pe masă."
       ]

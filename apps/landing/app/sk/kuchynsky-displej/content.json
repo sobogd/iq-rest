@@ -3,13 +3,13 @@
   "slug": "kuchynsky-displej",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Kuchynský displej (KDS) pre reštaurácie | IQ Rest",
+    "title": "Kuchynský displej (KDS) pre reštaurácie | QRgine",
     "description": "KDS kuchynský displej: objednávky z rajónu a QR menu idú priamo na obrazovku kuchára. Stĺpce podľa stolov, statusy a filtre sekcií. Beží na tablete aj telefóne.",
     "canonical": "https://iq-rest.com/sk/kuchynsky-displej",
     "ogLocale": "sk_SK",
     "ogTitle": "Kuchynský displej (KDS) — Objednávky priamo ku kuchárovi",
     "ogDescription": "Objednávky z rajónu priamo na obrazovke kuchára. Stĺpce podľa stolov, statusy a časovač. Zmena statusu jedným dotykom.",
-    "brandLine": "IQ Rest — Kuchynský displej pre reštaurácie"
+    "brandLine": "QRgine — Kuchynský displej pre reštaurácie"
   },
   "hero": {
     "headline": "Kuchynský displej (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom kuchynského displeja v IQ Rest. Ak nenájdete svoju otázku — napíšte nám na WhatsApp.",
+    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom kuchynského displeja v QRgine. Ak nenájdete svoju otázku — napíšte nám na WhatsApp.",
     "items": [
       {
         "q": "Aké statusy majú položky v kuchyni?",

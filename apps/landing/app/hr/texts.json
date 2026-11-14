@@ -2,7 +2,7 @@
   "htmlLang": "hr",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Digitalni jelovnik, kuhinjski ekran i rezervacije — IQ Rest",
+    "title": "Digitalni jelovnik, kuhinjski ekran i rezervacije — QRgine",
     "description": "Vodite restoran iz jedne aplikacije: višejezični digitalni jelovnik, kuhinjski ekran i 0-24 rezervacije. Pokrenite u 5 minuta. 14 dana besplatno, bez kartice.",
     "canonical": "https://iq-rest.com/hr",
     "ogLocale": "hr_HR",
@@ -10,7 +10,7 @@
     "ogDescription": "Vodite restoran iz jedne aplikacije: višejezični digitalni jelovnik, kuhinjski ekran i 0-24 rezervacije. Pokrenite u 5 minuta. 14 dana besplatno, bez kartice."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Platforma za upravljanje restoranom"
+    "appName": "QRgine — Platforma za upravljanje restoranom"
   },
   "ctaText": "Isprobajte besplatno",
   "homeCtaText": "Isprobajte besplatno",
@@ -82,7 +82,7 @@
     "quoteStart": "Supruga i ja vodili smo vlastiti kafić i znamo kako izgleda radni dan u ugostiteljstvu iznutra: zaprimanje narudžbi, rezervacije, rad u sali i kuhinji. Htjeli smo jedan alat — moderan, jednostavan za postavljanje i jasan na prvi pogled —",
     "quoteAccent": "tako se rodila ideja za platformu koju sada gradimo za druge ugostitelje.",
     "sign": "Bogdan Sokolov · osnivač, bivši vlasnik kafića",
-    "photoAlt": "Bogdan Sokolov, osnivač IQ Resta"
+    "photoAlt": "Bogdan Sokolov, osnivač QRginea"
   },
   "pricing": {
     "badge": "Bez provizija · Bez ugovora",
@@ -108,7 +108,7 @@
     "headingAccent": "pitanja",
     "sub": "Što ugostitelji najčešće pitaju prije registracije. Ako ne nalazite odgovor — pošaljite nam poruku na WhatsApp, odgovaraju stvarni ljudi, a ne botovi.",
     "whatsappCta": "Javite nam se na WhatsApp",
-    "whatsappPrefill": "Poštovani, imam pitanje o IQ Restu",
+    "whatsappPrefill": "Poštovani, imam pitanje o QRgineu",
     "items": [
       {
         "q": "Što uključuje probni rok i što se događa nakon njega?",
@@ -192,7 +192,7 @@
     "button": "Složi moj paket"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Sva prava pridržana.",
+    "copyrightTemplate": "© {year} QRgine. Sva prava pridržana.",
     "featuresHeading": "Mogućnosti",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blog o tehnologiji za restorane — IQ Rest",
+    "metaTitle": "Blog o tehnologiji za restorane — QRgine",
     "metaDescription": "Vodiči i usporedbe o digitalnim jelovnicima, QR narudžbama, kuhinjskim zaslonima i rezervacijama — praktično štivo za ugostitelje.",
     "title": "Blog",
     "intro": "Vodiči i usporedbe o digitalnim jelovnicima, QR narudžbama, kuhinjskim zaslonima i vođenju restorana.",

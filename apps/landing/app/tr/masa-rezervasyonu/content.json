@@ -3,13 +3,13 @@
   "slug": "masa-rezervasyonu",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Restoranlar İçin 7/24 Masa Rezervasyonu | IQ Rest",
+    "title": "Restoranlar İçin 7/24 Masa Rezervasyonu | QRgine",
     "description": "7/24 masa rezervasyonu: misafirler QR menü veya web sitesinden masalarını kendileri ayırır. Masaya göre takvim, otomatik onaylar ve hatırlatıcılar. 14 gün ücretsiz.",
     "canonical": "https://iq-rest.com/tr/masa-rezervasyonu",
     "ogLocale": "tr_TR",
     "ogTitle": "7/24 Masa Rezervasyonu — Misafirler Kendileri Ayırsın",
     "ogDescription": "Misafirler QR menü veya web sitesi üzerinden masa ayırır. Takvim, otomatik onaylar, hatırlatıcılar. Tek bir misafiri bile kaçırmayın.",
-    "brandLine": "IQ Rest — Restoran Masa Rezervasyonu"
+    "brandLine": "QRgine — Restoran Masa Rezervasyonu"
   },
   "hero": {
     "headline": "7/24 masa rezervasyonu,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "İki tablette IQ Rest yönetim panelindeki rezervasyon takvimi: masalara göre günlük görünüm ve aylık takvim"
+        "alt": "İki tablette QRgine yönetim panelindeki rezervasyon takvimi: masalara göre günlük görünüm ve aylık takvim"
       }
     }
   ],
   "faq": {
-    "sub": "Restorancıların IQ Rest'te masa rezervasyonları hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
+    "sub": "Restorancıların QRgine'te masa rezervasyonları hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
     "items": [
       {
         "q": "Rezervasyonun açık olduğu gün ve saatleri seçebilir miyim?",

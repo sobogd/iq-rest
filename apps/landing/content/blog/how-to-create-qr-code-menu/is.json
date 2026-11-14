@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Hvernig á að búa til QR-matseðil: 3 leiðir | IQ Rest",
+    "title": "Hvernig á að búa til QR-matseðil: 3 leiðir | QRgine",
     "description": "Þrjár leiðir til að búa til QR-matseðil fyrir veitingastaðinn: ókeypis kóðagerð með PDF, matseðlasmiður eða heilt kerfi. Hvað kostar og hvað bilar."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Komdu matseðlinum á stafrænt form. Að slá inn 80 línur er langstærsti tímaþjófurinn – IQ Rest les mynd af pappírsmatseðlinum þínum og býr til réttina og verðin fyrir þig, sem breytir heilu kvöldi í um fimm mínútur.",
+        "Komdu matseðlinum á stafrænt form. Að slá inn 80 línur er langstærsti tímaþjófurinn – QRgine les mynd af pappírsmatseðlinum þínum og býr til réttina og verðin fyrir þig, sem breytir heilu kvöldi í um fimm mínútur.",
         "Lagaðu uppbygginguna á undan útlitinu. Flokkaðu eins og gestir panta (forréttir, aðalréttir, drykkir), ekki eins og eldhúsið þitt er skipulagt. Langir flatir listar drepa skrunið.",
         "Settu myndir þar sem þær breyta ákvörðuninni. Að mynda hvern einasta rétt er verra en fimm góðar myndir við réttina sem þú vilt selja.",
         "Merktu ofnæmisvalda núna, ekki síðar. Innan ESB þarftu þá hvort eð er, og að bæta þeim við 80 línur eftir á er kvöl.",

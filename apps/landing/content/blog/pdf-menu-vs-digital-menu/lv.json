@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR uz PDF nav digitāla ēdienkarte | IQ Rest",
+    "title": "QR uz PDF nav digitāla ēdienkarte | QRgine",
     "description": "QR kods, kas norāda uz PDF, ir visizplatītākais un vissliktākais digitālās ēdienkartes risinājums. Cik tas maksā lasāmībā, atjauninājumos, alergēnos un pasūtījumos."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Nofotografē papīra ēdienkarti vai augšupielādē pašu PDF.",
-        "IQ Rest to nolasa un izveido kategorijas, pozīcijas un cenas — apmēram piecas minūtes visa vakara vietā.",
+        "QRgine to nolasa un izveido kategorijas, pozīcijas un cenas — apmēram piecas minūtes visa vakara vietā.",
         "Pārbaudi cenas un izlabo to, ko nolasīšana saprata nepareizi.",
         "Novirzi esošos QR kodus uz jauno ēdienkarti vai izdrukā jaunus katram galdam."
       ]

@@ -3,13 +3,13 @@
   "slug": "curfha-bord",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Áirithintí Boird 24/7 do Bhialanna | IQ Rest",
+    "title": "Áirithintí Boird 24/7 do Bhialanna | QRgine",
     "description": "Áirithintí boird 24/7: cuireann aíonna boird in áirithe tríd an mbiachlár QR nó an suíomh gréasáin. Deimhnithe agus meabhrúcháin uathoibríocha. 14 lá saor in aisce.",
     "canonical": "https://iq-rest.com/ga/curfha-bord",
     "ogLocale": "ga_IE",
     "ogTitle": "Áirithintí Boird 24/7 — Cuireann Aíonna in Áirithe Iad Féin",
     "ogDescription": "Cuireann aíonna boird in áirithe tríd an mbiachlár QR nó suíomh gréasáin. Féilire, deimhnithe uathoibríocha, meabhrúcháin. Ní chailleann tú aoi amháin.",
-    "brandLine": "IQ Rest — Áirithintí Boird Bialainne"
+    "brandLine": "QRgine — Áirithintí Boird Bialainne"
   },
   "hero": {
     "headline": "Áirithintí boird 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "An féilire áirithinte i bpainéal riaracháin IQ Rest ar dhá tháibléad: eangach laethúil de réir boird agus féilire míosúil"
+        "alt": "An féilire áirithinte i bpainéal riaracháin QRgine ar dhá tháibléad: eangach laethúil de réir boird agus féilire míosúil"
       }
     }
   ],
   "faq": {
-    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoi áirithintí boird in IQ Rest. Mura bhfuil do cheist liostaithe — seol teachtaireacht chugainn ar WhatsApp.",
+    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoi áirithintí boird in QRgine. Mura bhfuil do cheist liostaithe — seol teachtaireacht chugainn ar WhatsApp.",
     "items": [
       {
         "q": "An féidir liom na laethanta agus na hamanna a bhfuil áirithint ar fáil a roghnú?",

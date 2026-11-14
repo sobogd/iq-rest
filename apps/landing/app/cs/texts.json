@@ -2,7 +2,7 @@
   "htmlLang": "cs",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Digitální menu, KDS a rezervace — IQ Rest",
+    "title": "Digitální menu, KDS a rezervace — QRgine",
     "description": "Řiďte svůj podnik z jedné aplikace: vícejazyčné digitální menu, kuchyňský displej a rezervace 24/7. Spuštění do 5 minut. 14 dní zdarma, bez karty.",
     "canonical": "https://iq-rest.com/cs",
     "ogLocale": "cs_CZ",
@@ -10,7 +10,7 @@
     "ogDescription": "Řiďte svůj podnik z jedné aplikace: vícejazyčné digitální menu, kuchyňský displej a rezervace 24/7. Spuštění do 5 minut. 14 dní zdarma, bez karty."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Platforma pro řízení restaurací"
+    "appName": "QRgine — Platforma pro řízení restaurací"
   },
   "ctaText": "Vyzkoušet zdarma",
   "homeCtaText": "Vyzkoušet zdarma",
@@ -82,7 +82,7 @@
     "quoteStart": "S manželkou jsme vedli vlastní kavárnu a známe běžný den v gastru zevnitř: přijímání objednávek, rezervace, provoz na place i v kuchyni. Chtěli jsme jeden nástroj — moderní, se snadným nastavením a přehledný na první pohled —",
     "quoteAccent": "tak vznikl nápad na platformu, kterou teď budujeme pro další majitele podniků.",
     "sign": "Bogdan Sokolov · zakladatel, bývalý majitel kavárny",
-    "photoAlt": "Bogdan Sokolov, zakladatel IQ Rest"
+    "photoAlt": "Bogdan Sokolov, zakladatel QRgine"
   },
   "pricing": {
     "badge": "Bez provizí · Bez závazků",
@@ -108,7 +108,7 @@
     "headingAccent": "dotazy",
     "sub": "Na co se majitelé podniků ptají nejčastěji před registrací. Nenašli jste odpověď — napište nám na WhatsApp, odpovídají skuteční lidé, ne bot.",
     "whatsappCta": "Napsat na WhatsApp",
-    "whatsappPrefill": "Dobrý den, mám dotaz ohledně IQ Rest",
+    "whatsappPrefill": "Dobrý den, mám dotaz ohledně QRgine",
     "items": [
       {
         "q": "Co obsahuje zkušební verze a co se stane po jejím skončení?",
@@ -192,7 +192,7 @@
     "button": "Sestavit tarif"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Všechna práva vyhrazena.",
+    "copyrightTemplate": "© {year} QRgine. Všechna práva vyhrazena.",
     "featuresHeading": "Funkce",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blog o technologiích pro restaurace — IQ Rest",
+    "metaTitle": "Blog o technologiích pro restaurace — QRgine",
     "metaDescription": "Návody a srovnání: digitální menu, QR objednávky, kuchyňské displeje a rezervace — praktické čtení pro restauratéry.",
     "title": "Blog",
     "intro": "Návody a srovnání o digitálním menu, QR objednávkách, kuchyňských displejích a chodu restaurace.",

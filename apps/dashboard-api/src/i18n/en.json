@@ -2,11 +2,11 @@
   "companyDefaultName": "My Company",
   "otpEmail": {
     "subject": "Your code: {code}",
-    "intro": "Here's your one-time code to sign in to IQ Rest:",
+    "intro": "Here's your one-time code to sign in to QRgine:",
     "expiry": "The code expires in 5 minutes. If you didn't request it, just ignore this email."
   },
   "supportEmail": {
-    "subject": "New message from IQ Rest support",
+    "subject": "New message from QRgine support",
     "title": "New message from support",
     "body": "Our support team has sent you a new message. Open the support chat in your dashboard to read it and reply.",
     "cta": "Open support chat"

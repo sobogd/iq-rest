@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR na PDF nie je digitálne menu | IQ Rest",
+    "title": "QR na PDF nie je digitálne menu | QRgine",
     "description": "QR kód smerujúci na PDF je najčastejšia a najhoršia podoba digitálneho menu. Čo vás stojí v čitateľnosti, aktualizáciách, alergénoch a objednávkach."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Odfoťte papierový lístok alebo nahrajte samotné PDF.",
-        "IQ Rest ho prečíta a vytvorí kategórie, položky a ceny — zhruba päť minút namiesto celého večera.",
+        "QRgine ho prečíta a vytvorí kategórie, položky a ceny — zhruba päť minút namiesto celého večera.",
         "Skontrolujte ceny a opravte, čo načítanie prečítalo zle.",
         "Nasmerujte existujúce QR kódy na nové menu alebo vytlačte nové pre každý stôl."
       ]

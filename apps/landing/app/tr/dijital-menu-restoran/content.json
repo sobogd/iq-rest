@@ -3,13 +3,13 @@
   "slug": "dijital-menu-restoran",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Restoranlar İçin Dijital Menü | IQ Rest",
+    "title": "Restoranlar İçin Dijital Menü | QRgine",
     "description": "Restoranınız için dijital menü: fotoğraflar, alerjenler, yapay zeka çevirisi ve anlık fiyat güncellemeleriyle online bir menü. 14 gün ücretsiz, kredi kartı gerekmez.",
     "canonical": "https://iq-rest.com/tr/dijital-menu-restoran",
     "ogLocale": "tr_TR",
     "ogTitle": "Restoranlar İçin Dijital Menü",
     "ogDescription": "Kağıt menünüzün fotoğraflar, alerjenler ve yapay zeka çevirisi içeren online versiyonu. Fiyatlar anında güncellenir.",
-    "brandLine": "IQ Rest — Restoranlar İçin Dijital Menü"
+    "brandLine": "QRgine — Restoranlar İçin Dijital Menü"
   },
   "hero": {
     "headline": "Restoranınız için",
@@ -166,7 +166,7 @@
     "heading": "Restoranlar diğer sistemler yerine",
     "headingAccent": "neden bizi tercih ediyor",
     "sub": "Çoğu menü aracı QR kodda kalır. Aşağıdaki satırlar günlük işleyişte gerçekten fark yaratan noktalar. İsim vermeden — istediğiniz sistemle kendiniz karşılaştırın.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Diğer sistemler",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Restorancıların IQ Rest dijital menüsü hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
+    "sub": "Restorancıların QRgine dijital menüsü hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
     "items": [
       {
         "q": "Teknik bilgiye veya CMS tecrübesine ihtiyacım var mı?",
         "a": "Özel bir beceri gerekmez. Yönetim panelindeki her şey birkaç dokunuşla halledilir — kodlama veya kaynak dosyalarla uğraşmak yok. Bir yemek eklemek saniyeler sürer: isim, fiyat, fotoğraf. Tam bir menü kurulumu genellikle 30–60 dakika içinde biter."
       },
       {
-        "q": "IQ Rest dijital menü nedir?",
+        "q": "QRgine dijital menü nedir?",
         "a": "Menünüzün misafirlere QR kod veya doğrudan bir bağlantı aracılığıyla sunulan online versiyonudur: yemek fotoğrafları, fiyatlar, alerjenler, 35 dile yapay zeka çevirisi ve anlık güncellemeler. Menü bizim sunucularımızda çalışır — kurmanız veya bakımını yapmanız gereken bir yazılım yoktur, sadece bir tarayıcı yeterlidir."
       },
       {

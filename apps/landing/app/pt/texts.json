@@ -2,7 +2,7 @@
   "htmlLang": "pt",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Ementa digital, ecrã de cozinha e reservas — IQ Rest",
+    "title": "Ementa digital, ecrã de cozinha e reservas — QRgine",
     "description": "Faça a gestão do restaurante numa única aplicação: ementa digital multilingue, ecrã de cozinha e reservas 24/7. Arranque em 5 minutos. 14 dias grátis, sem cartão.",
     "canonical": "https://iq-rest.com/pt",
     "ogLocale": "pt_PT",
@@ -10,7 +10,7 @@
     "ogDescription": "Faça a gestão do restaurante numa única aplicação: ementa digital multilingue, ecrã de cozinha e reservas 24/7. Arranque em 5 minutos. 14 dias grátis, sem cartão."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Plataforma de gestão de restaurantes"
+    "appName": "QRgine — Plataforma de gestão de restaurantes"
   },
   "ctaText": "Experimentar grátis",
   "homeCtaText": "Experimentar grátis",
@@ -82,7 +82,7 @@
     "quoteStart": "Eu e a minha mulher gerimos o nosso próprio café e sabemos bem como funciona o dia a dia de um restaurante por dentro: receção de pedidos, reservas, trabalho da sala e da cozinha. Queríamos ter uma ferramenta única — moderna, fácil de ativar e clara à primeira vista —",
     "quoteAccent": "assim nasceu a ideia da plataforma que desenvolvemos para outros restauradores.",
     "sign": "Bogdan Sokolov · fundador, antigo proprietário de um café",
-    "photoAlt": "Bogdan Sokolov, fundador da IQ Rest"
+    "photoAlt": "Bogdan Sokolov, fundador da QRgine"
   },
   "pricing": {
     "badge": "Sem comissões · Sem contratos",
@@ -108,7 +108,7 @@
     "headingAccent": "frequentes",
     "sub": "O que os restauradores mais perguntam antes de aderir. Se não encontrou a resposta, escreva-nos no WhatsApp — quem responde são pessoas da equipa, não um bot.",
     "whatsappCta": "Escrever no WhatsApp",
-    "whatsappPrefill": "Olá, tenho uma pergunta sobre a IQ Rest",
+    "whatsappPrefill": "Olá, tenho uma pergunta sobre a QRgine",
     "items": [
       {
         "q": "O que inclui o período experimental e o que acontece depois?",
@@ -192,7 +192,7 @@
     "button": "Calcular plano"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Todos os direitos reservados.",
+    "copyrightTemplate": "© {year} QRgine. Todos os direitos reservados.",
     "featuresHeading": "Funcionalidades",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blog de tecnologia para restaurantes — IQ Rest",
+    "metaTitle": "Blog de tecnologia para restaurantes — QRgine",
     "metaDescription": "Guias e comparações sobre ementas digitais, pedidos por QR, ecrãs de cozinha e reservas — leitura prática para restauradores.",
     "title": "Blog",
     "intro": "Guias e comparações sobre ementas digitais, pedidos por QR, ecrãs de cozinha e a gestão do restaurante.",

@@ -3,13 +3,13 @@
   "slug": "eldhus-skjar",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Eldhússkjár (KDS) fyrir veitingastaði | IQ Rest",
+    "title": "Eldhússkjár (KDS) fyrir veitingastaði | QRgine",
     "description": "KDS eldhússkjár fyrir veitingastaði: pantanir úr sal og af QR matseðli fara beint á skjá kokksins. Dálkar eftir borðum, staða og síur. Keyrir á spjaldtölvu eða síma.",
     "canonical": "https://iq-rest.com/is/eldhus-skjar",
     "ogLocale": "is_IS",
     "ogTitle": "Eldhússkjár (KDS) — Pantanir beint á skjá kokksins",
     "ogDescription": "Pantanir úr sal beint á skjá kokksins. Dálkar eftir borðum, staða og tímamælir. Einn smellur breytir stöðunni.",
-    "brandLine": "IQ Rest — Eldhússkjár fyrir veitingastaði"
+    "brandLine": "QRgine — Eldhússkjár fyrir veitingastaði"
   },
   "hero": {
     "headline": "Eldhússkjár (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Það sem veitingamenn spyrja um eldhússkjáinn í IQ Rest. Ef spurningin þín er ekki á listanum — sendu okkur skilaboð á WhatsApp.",
+    "sub": "Það sem veitingamenn spyrja um eldhússkjáinn í QRgine. Ef spurningin þín er ekki á listanum — sendu okkur skilaboð á WhatsApp.",
     "items": [
       {
         "q": "Hvaða stöðu geta réttir í eldhúsinu haft?",

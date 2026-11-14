@@ -3,13 +3,13 @@
   "slug": "biachlar-digiteach-bialann",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Biachlár Digiteach do Bhialanna | IQ Rest",
+    "title": "Biachlár Digiteach do Bhialanna | QRgine",
     "description": "Biachlár digiteach do do bhialann: biachlár ar líne le grianghraif, ailléirginí agus aistriúchán AI. Nuashonruithe praghsanna fíor-ama. 14 lá saor in aisce.",
     "canonical": "https://iq-rest.com/ga/biachlar-digiteach-bialann",
     "ogLocale": "ga_IE",
     "ogTitle": "Biachlár Digiteach do Bhialanna",
     "ogDescription": "Leagan ar líne de do bhiachlár páipéir le grianghraif, ailléirginí agus aistriúchán AI. Nuashonraítear praghsanna i bhfíor-am.",
-    "brandLine": "IQ Rest — Biachlár Digiteach do Bhialanna"
+    "brandLine": "QRgine — Biachlár Digiteach do Bhialanna"
   },
   "hero": {
     "headline": "Biachlár digiteach agus suíomh gréasáin",
@@ -166,7 +166,7 @@
     "heading": "Cén fáth a roghnaíonn bialanna sinne",
     "headingAccent": "thar chórais eile",
     "sub": "Stopann formhór na n-uirlisí biachláir ag an gcód QR. Thíos atá na nithe a bhíonn éagsúil i ndáiríre ó lá go lá. Gan ainmneacha — déan comparáid le córas ar bith tú féin.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Córais eile",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoin mbiachlár digiteach in IQ Rest. Mura bhfuil do cheist liostaithe — seol teachtaireacht chugainn ar WhatsApp.",
+    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoin mbiachlár digiteach in QRgine. Mura bhfuil do cheist liostaithe — seol teachtaireacht chugainn ar WhatsApp.",
     "items": [
       {
         "q": "An dteastaíonn scileanna teicniúla nó taithí CMS uaim?",
         "a": "Níl aon scileanna speisialta ag teastáil. Tógann gach rud sa phainéal riaracháin cúpla tapáil — gan aon chódú, gan aon obair le comhaid fhoinse. Tógann sé soicindí chun mias a chur leis: ainm, praghas, grianghraf. De ghnáth tógann socrú iomlán biachláir 30–60 nóiméad."
       },
       {
-        "q": "Cad is biachlár digiteach IQ Rest ann?",
+        "q": "Cad is biachlár digiteach QRgine ann?",
         "a": "Is leagan ar líne de do bhiachlár é atá ar fáil d'aíonna trí chód QR nó nasc díreach: grianghraif miasa, praghsanna, ailléirginí, aistriúchán AI go 35 teanga agus nuashonruithe fíor-ama. Ritheann an biachlár ar ár bhfreastalaithe — níl aon bhogearraí le suiteáil ná le cothabháil, níl uait ach brabhsálaí."
       },
       {

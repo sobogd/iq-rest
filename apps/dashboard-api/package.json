@@ -1,7 +1,7 @@
 {
   "name": "iq-rest-dashboard-api",
   "version": "0.1.0",
-  "description": "IQ Rest Dashboard API — NestJS + Prisma",
+  "description": "QRgine Dashboard API — NestJS + Prisma",
   "private": true,
   "scripts": {
     "build": "nest build",

@@ -24,7 +24,7 @@ function goneResponse(pathname: string): NextResponse {
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Gone · IQ Rest</title>
+<title>Gone · QRgine</title>
 <meta name="robots" content="noindex">
 <style>body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;margin:64px auto;padding:0 20px;color:#1a1a1a}h1{font-weight:500;font-size:28px;margin:0 0 12px}p{line-height:1.5;color:#555}a{color:#000;text-decoration:underline}</style>
 </head>

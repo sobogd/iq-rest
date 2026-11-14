@@ -11,7 +11,7 @@
     "viewFeatures": "View features"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. All rights reserved.",
+    "copyrightTemplate": "© {year} QRgine. All rights reserved.",
     "featuresHeading": "Features",
     "featureLinks": [],
     "infoHeading": "Information",
@@ -70,7 +70,7 @@
   "demoText": "Open demo",
   "microcopy": "14 days free · No credit card · Cancel anytime",
   "blog": {
-    "metaTitle": "Restaurant Tech Blog — IQ Rest",
+    "metaTitle": "Restaurant Tech Blog — QRgine",
     "metaDescription": "Guides and comparisons on digital menus, QR ordering, kitchen displays and reservations — practical reading for restaurant owners.",
     "title": "Blog",
     "intro": "Guides and comparisons on digital menus, QR ordering, kitchen displays and running a smoother restaurant.",

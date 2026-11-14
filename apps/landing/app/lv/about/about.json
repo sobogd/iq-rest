@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Par IQ Rest — Kas mēs esam, kontakti un juridiskā informācija",
-    "description": "Kas stāv aiz IQ Rest, kā ar mums sazināties un pakalpojuma sniedzēja informācija: e-pasts, WhatsApp, juridiskā informācija.",
+    "title": "Par QRgine — Kas mēs esam, kontakti un juridiskā informācija",
+    "description": "Kas stāv aiz QRgine, kā ar mums sazināties un pakalpojuma sniedzēja informācija: e-pasts, WhatsApp, juridiskā informācija.",
     "canonical": "https://iq-rest.com/lv/about",
     "ogLocale": "lv_LV",
-    "ogTitle": "Par IQ Rest",
-    "ogDescription": "Kas stāv aiz IQ Rest, atbalsta kontakti un pakalpojuma sniedzēja juridiskā informācija."
+    "ogTitle": "Par QRgine",
+    "ogDescription": "Kas stāv aiz QRgine, atbalsta kontakti un pakalpojuma sniedzēja juridiskā informācija."
   },
   "heading": "No savas kafejnīcas",
   "headingAccent": "līdz platformai restorāniem",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "vietas darbojas ar IQ Rest"
+      "label": "vietas darbojas ar QRgine"
     },
     {
       "value": "15",
       "label": "valstis, kurās ir mūsu klienti"
     }
   ],
-  "waPrefill": "Sveiki, man ir jautājums par IQ Rest",
+  "waPrefill": "Sveiki, man ir jautājums par QRgine",
   "contacts": [
     {
       "icon": "Mail",

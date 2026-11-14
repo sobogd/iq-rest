@@ -3,13 +3,13 @@
   "slug": "coras-orduithe-bialann",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Glacadh Orduithe Bialainne — Aoi agus Freastalaí | IQ Rest",
+    "title": "Glacadh Orduithe Bialainne — Aoi agus Freastalaí | QRgine",
     "description": "Glacadh orduithe bialainne ó fhón nó táibléad: léarscáil urláir, bille a roinnt, stádais agus tuairimí. Ordaíonn aíonna ón mbord féin. 14 lá saor in aisce.",
     "canonical": "https://iq-rest.com/ga/coras-orduithe-bialann",
     "ogLocale": "ga_IE",
     "ogTitle": "Glacadh Orduithe Bialainne — Aoi agus Freastalaí",
     "ogDescription": "Aoi ag an mbord nó freastalaí ar fhón — sroicheann an t-ordú an chistin láithreach. Léarscáil urláir, bille a roinnt, stádais, roghanna agus tuairimí.",
-    "brandLine": "IQ Rest — Glacadh Orduithe Bialainne"
+    "brandLine": "QRgine — Glacadh Orduithe Bialainne"
   },
   "hero": {
     "headline": "Orduithe ón mbord —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoi ghlacadh orduithe in IQ Rest. Mura bhfuil do cheist liostaithe — seol teachtaireacht chugainn ar WhatsApp.",
+    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoi ghlacadh orduithe in QRgine. Mura bhfuil do cheist liostaithe — seol teachtaireacht chugainn ar WhatsApp.",
     "items": [
       {
         "q": "An féidir le roinnt freastalaithe oibriú ag an am céanna ó ghléasanna éagsúla?",

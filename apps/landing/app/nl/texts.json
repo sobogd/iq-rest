@@ -2,7 +2,7 @@
   "htmlLang": "nl",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Digitaal menu, keukenscherm en reserveringen — IQ Rest",
+    "title": "Digitaal menu, keukenscherm en reserveringen — QRgine",
     "description": "Run je restaurant vanuit één app: meertalig digitaal menu, keukenscherm en 24/7 reserveringen. Live in 5 minuten. 14 dagen gratis, geen creditcard nodig.",
     "canonical": "https://iq-rest.com/nl",
     "ogLocale": "nl_NL",
@@ -10,7 +10,7 @@
     "ogDescription": "Run je restaurant vanuit één app: meertalig digitaal menu, keukenscherm en 24/7 reserveringen. Live in 5 minuten. 14 dagen gratis, geen creditcard nodig."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Platform voor restaurantbeheer"
+    "appName": "QRgine — Platform voor restaurantbeheer"
   },
   "ctaText": "Gratis proberen",
   "homeCtaText": "Gratis proberen",
@@ -82,7 +82,7 @@
     "quoteStart": "Mijn vrouw en ik runden ons eigen café en kennen de dagelijkse praktijk van binnenuit: bestellingen opnemen, reserveringen, de bediening en de keuken. We wilden één systeem — modern, makkelijk in te stellen en in één oogopslag duidelijk —",
     "quoteAccent": "zo ontstond het idee voor het platform dat we nu voor andere restauranthouders bouwen.",
     "sign": "Bogdan Sokolov · oprichter, voormalig café-eigenaar",
-    "photoAlt": "Bogdan Sokolov, oprichter van IQ Rest"
+    "photoAlt": "Bogdan Sokolov, oprichter van QRgine"
   },
   "pricing": {
     "badge": "Geen commissies · Geen contracten",
@@ -108,7 +108,7 @@
     "headingAccent": "vragen",
     "sub": "Wat restauranthouders het vaakst vragen voordat ze zich aanmelden. Staat je vraag er niet tussen, stuur ons dan een bericht via WhatsApp. Je krijgt antwoord van een echt persoon, niet van een bot.",
     "whatsappCta": "Stuur ons een bericht via WhatsApp",
-    "whatsappPrefill": "Hallo, ik heb een vraag over IQ Rest",
+    "whatsappPrefill": "Hallo, ik heb een vraag over QRgine",
     "items": [
       {
         "q": "Wat houdt de proefperiode in en wat gebeurt er daarna?",
@@ -192,7 +192,7 @@
     "button": "Mijn pakket samenstellen"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Alle rechten voorbehouden.",
+    "copyrightTemplate": "© {year} QRgine. Alle rechten voorbehouden.",
     "featuresHeading": "Functies",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blog over restauranttechnologie — IQ Rest",
+    "metaTitle": "Blog over restauranttechnologie — QRgine",
     "metaDescription": "Gidsen en vergelijkingen over digitale menu's, QR-bestellen, keukenschermen en reserveringen — praktisch voor horecaondernemers.",
     "title": "Blog",
     "intro": "Gidsen en vergelijkingen over digitale menu's, QR-bestellen, keukenschermen en de dagelijkse horecapraktijk.",

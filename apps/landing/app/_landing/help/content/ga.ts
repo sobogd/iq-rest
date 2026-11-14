@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // GA help guide.
 export const ga: HelpDoc = {
-  metaTitle: "Conas IQ Rest a úsáid — treoir céim ar chéim",
+  metaTitle: "Conas QRgine a úsáid — treoir céim ar chéim",
   metaDescription:
-    "Treoir iomlán IQ Rest: clárú, biachlár, orduithe, áirithintí, scáileán cistine agus socruithe — do bhialanna.",
+    "Treoir iomlán QRgine: clárú, biachlár, orduithe, áirithintí, scáileán cistine agus socruithe — do bhialanna.",
   h1: "Cabhair",
-  intro: "Treoir mhionsonraithe ar IQ Rest — ón gclárú go dtí na socruithe is míne.",
+  intro: "Treoir mhionsonraithe ar QRgine — ón gclárú go dtí na socruithe is míne.",
   banner: {
     title: "Tá sé níos simplí ná mar a fhéachann sé",
     sub: "Treoir céim ar chéim: ón gclárú go dtí na socruithe is míne — éireoidh le duine ar bith.",
@@ -22,7 +22,7 @@ export const ga: HelpDoc = {
         { type: "h3", text: "Cad é an córas seo" },
         {
           type: "p",
-          text: "Is seirbhís do bhialanna é IQ Rest: cruthaíonn tú biachlár ar líne le cód QR, glacann tú orduithe agus áirithintí boird go díreach ó fhóin na n-aíonna, agus oibríonn teirminéil táibléid sa chistin agus ag na freastalaithe. Déantar gach rud a bhainistiú ó phainéal riaracháin amháin (an deais).",
+          text: "Is seirbhís do bhialanna é QRgine: cruthaíonn tú biachlár ar líne le cód QR, glacann tú orduithe agus áirithintí boird go díreach ó fhóin na n-aíonna, agus oibríonn teirminéil táibléid sa chistin agus ag na freastalaithe. Déantar gach rud a bhainistiú ó phainéal riaracháin amháin (an deais).",
         },
         { type: "h3", text: "Clárú agus logáil isteach" },
         { type: "p", text: "Is féidir logáil isteach ar thrí bhealach — roghnaigh ceann ar bith ar an scáileán logála isteach:" },

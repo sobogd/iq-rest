@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Pantalla de cocina: ¿necesitas un KDS? | IQ Rest",
+    "title": "Pantalla de cocina: ¿necesitas un KDS? | QRgine",
     "description": "Qué hace un KDS, cuánto cuesta de verdad el hardware, cómo montarlo en una tablet que ya tienes y qué cocinas están mejor con comandas de papel."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "La mayoría de cocinas no lo necesita. La [pantalla de cocina](route:/kitchen-display) de IQ Rest funciona en el navegador, así que el hardware puede ser una tablet que ya tengas, una tablet Android barata o un portátil viejo con un monitor. Métela en una funda antisalpicaduras, móntala fuera de la línea de vapor y el coste marginal es un soporte de pared."
+      "text": "La mayoría de cocinas no lo necesita. La [pantalla de cocina](route:/kitchen-display) de QRgine funciona en el navegador, así que el hardware puede ser una tablet que ya tengas, una tablet Android barata o un portátil viejo con un monitor. Métela en una funda antisalpicaduras, móntala fuera de la línea de vapor y el coste marginal es un soporte de pared."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "¿Puedo usar un KDS en una tablet normal?",
-          "a": "Sí. La pantalla de cocina de IQ Rest funciona en el navegador, así que sirve cualquier tablet o portátil de los últimos cinco años. Usa una funda antisalpicaduras."
+          "a": "Sí. La pantalla de cocina de QRgine funciona en el navegador, así que sirve cualquier tablet o portátil de los últimos cinco años. Usa una funda antisalpicaduras."
         },
         {
           "q": "¿El KDS necesita internet?",

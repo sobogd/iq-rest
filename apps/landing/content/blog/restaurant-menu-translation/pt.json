@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Traduzir o menu: o que traduzir e o que não | IQ Rest",
+    "title": "Traduzir o menu: o que traduzir e o que não | QRgine",
     "description": "Porque traduzir automaticamente os nomes dos pratos corre mal, que partes do menu devem ficar no idioma original e como ter quatro idiomas sem quatro menus."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "Um [menu digital](route:/digital-menu) inverte isso. O telemóvel do cliente já anuncia o idioma, portanto o menu abre no correto sem ninguém escolher. O IQ Rest traduz o menu automaticamente e, como as traduções estão ligadas ao prato, mudar um preço uma vez muda-o em todos os idiomas. Acrescentar um quinto idioma não custa nada nem obriga a reimprimir."
+      "text": "Um [menu digital](route:/digital-menu) inverte isso. O telemóvel do cliente já anuncia o idioma, portanto o menu abre no correto sem ninguém escolher. O QRgine traduz o menu automaticamente e, como as traduções estão ligadas ao prato, mudar um preço uma vez muda-o em todos os idiomas. Acrescentar um quinto idioma não custa nada nem obriga a reimprimir."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Um menu, todos os idiomas",
-      "text": "O IQ Rest traduz o seu menu automaticamente e abre-o no idioma do cliente. Muda um preço uma vez e todos os idiomas ficam atualizados. 14 dias grátis.",
+      "text": "O QRgine traduz o seu menu automaticamente e abre-o no idioma do cliente. Muda um preço uma vez e todos os idiomas ficam atualizados. 14 dias grátis.",
       "buttonLabel": "Ver a tradução automática",
       "routeKey": "/digital-menu"
     },

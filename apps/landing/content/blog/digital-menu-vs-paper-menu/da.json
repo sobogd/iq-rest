@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digital menu vs papirmenu: de reelle omkostninger | IQ Rest",
+    "title": "Digital menu vs papirmenu: de reelle omkostninger | QRgine",
     "description": "Hvad en papirmenu reelt koster en restaurant vs en digital QR-menu: tryk, opdateringer, oversættelser og bestillingstempo. Sammenligning med rigtige tal."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Scan din papirmenu — IQ Rest læser den og bygger automatisk den digitale menu.",
+        "Scan din papirmenu — QRgine læser den og bygger automatisk den digitale menu.",
         "Tjek priserne, tilføj fotos, hvor de gør en forskel.",
         "Print én QR-kode pr. bord.",
         "Opdater hvad som helst, når som helst, fra din telefon."

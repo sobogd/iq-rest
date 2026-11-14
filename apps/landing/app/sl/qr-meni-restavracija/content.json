@@ -7,13 +7,13 @@
     "sub": "Vse, kar eno skeniranje postane za vaše goste in strežbo."
   },
   "meta": {
-    "title": "QR meni za restavracije | IQ Rest",
+    "title": "QR meni za restavracije | QRgine",
     "description": "QR meni za restavracije: gosti skenirajo QR kodo na mizi, odprejo meni v brskalniku in naročijo v svojem jeziku. 14 dni brezplačno, brez kartice.",
     "canonical": "https://iq-rest.com/sl/qr-meni-restavracija",
     "ogLocale": "sl_SI",
     "ogTitle": "QR meni za restavracije",
     "ogDescription": "QR na mizi, meni na telefonu — fotografije, alergeni, 35 jezikov in posodobitve v realnem času.",
-    "brandLine": "IQ Rest — QR meni za restavracije"
+    "brandLine": "QRgine — QR meni za restavracije"
   },
   "hero": {
     "headline": "QR meni:\nskeniraj in naroči",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Kaj gostince najpogosteje zanima o QR meniju IQ Rest. Ne najdete svojega vprašanja? Pišite nam na WhatsApp.",
+    "sub": "Kaj gostince najpogosteje zanima o QR meniju QRgine. Ne najdete svojega vprašanja? Pišite nam na WhatsApp.",
     "items": [
       {
-        "q": "Kako deluje QR meni IQ Rest?",
+        "q": "Kako deluje QR meni QRgine?",
         "a": "Vsaka miza ima natisnjeno QR kodo. Gosti jo skenirajo s kamero na telefonu in v brskalniku se odpre meni restavracije — fotografije, opisi, alergeni in aktualne cene. Gostom in osebju ni treba prenašati nobene aplikacije."
       },
       {

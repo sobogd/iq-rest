@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digitale Speisekarte vs. Papierkarte: Kostenvergleich | IQ Rest",
+    "title": "Digitale Speisekarte vs. Papierkarte: Kostenvergleich | QRgine",
     "description": "Was eine Papierkarte ein Restaurant wirklich kostet vs. eine digitale QR-Speisekarte: Druck, Updates, Übersetzungen, Bestelltempo. Vergleich mit echten Zahlen."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Scannen Sie Ihre Papierkarte — IQ Rest liest sie ein und erstellt die digitale Speisekarte automatisch.",
+        "Scannen Sie Ihre Papierkarte — QRgine liest sie ein und erstellt die digitale Speisekarte automatisch.",
         "Prüfen Sie die Preise, ergänzen Sie Fotos, wo sie zählen.",
         "Drucken Sie einen QR-Code pro Tisch.",
         "Ändern Sie alles jederzeit vom Handy aus."

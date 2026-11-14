@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kako ustvariti QR meni: 3 načini | IQ Rest",
+    "title": "Kako ustvariti QR meni: 3 načini | QRgine",
     "description": "Trije načini za izdelavo QR menija za restavracijo: brezplačni generator s PDF, urejevalnik jedilnika ali celovit sistem. Koliko stanejo in kje odpovejo."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Prenesite jedilnik v digitalno obliko. Vtipkati 80 postavk je največji požiralec časa – IQ Rest prebere fotografijo vašega papirnatega jedilnika in jedi ter cene ustvari namesto vas, s čimer se cel večer skrči na približno pet minut.",
+        "Prenesite jedilnik v digitalno obliko. Vtipkati 80 postavk je največji požiralec časa – QRgine prebere fotografijo vašega papirnatega jedilnika in jedi ter cene ustvari namesto vas, s čimer se cel večer skrči na približno pet minut.",
         "Uredite strukturo pred oblikovanjem. Združujte tako, kot gostje naročajo (predjedi, glavne jedi, pijača), ne tako, kot je organizirana vaša kuhinja. Dolgi ravni seznami ubijejo drsenje.",
         "Fotografije dajte tja, kjer spremenijo odločitev. Fotografirati vsako jed je slabše kot pet dobrih fotografij pri jedeh, ki jih želite prodati.",
         "Alergene označite zdaj, ne pozneje. V EU jih tako ali tako potrebujete, naknadno dodajanje k 80 postavkam pa je muka.",

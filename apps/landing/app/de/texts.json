@@ -2,7 +2,7 @@
   "htmlLang": "de",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Digitale Speisekarte, Küchenmonitor und Reservierungen — IQ Rest",
+    "title": "Digitale Speisekarte, Küchenmonitor und Reservierungen — QRgine",
     "description": "Führen Sie Ihr Restaurant mit einer App: mehrsprachige Speisekarte, Küchenmonitor und 24/7-Reservierungen. 14 Tage kostenlos, keine Kreditkarte nötig.",
     "canonical": "https://iq-rest.com/de",
     "ogLocale": "de_DE",
@@ -10,7 +10,7 @@
     "ogDescription": "Führen Sie Ihr Restaurant mit einer App: mehrsprachige digitale Speisekarte, Küchenmonitor und 24/7-Reservierungen. Startklar in 5 Minuten. 14 Tage kostenlos, keine Kreditkarte nötig."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Plattform für Restaurant-Management"
+    "appName": "QRgine — Plattform für Restaurant-Management"
   },
   "ctaText": "Kostenlos testen",
   "homeCtaText": "Kostenlos testen",
@@ -82,7 +82,7 @@
     "quoteStart": "Meine Frau und ich hatten unser eigenes Café und kennen den Gastro-Alltag von innen: Bestellungen aufnehmen, Reservierungen, Service und Küche. Wir wollten ein einziges Tool — modern, einfach einzurichten und auf den ersten Blick verständlich —",
     "quoteAccent": "so entstand die Idee für die Plattform, die wir heute für andere Gastronomen bauen.",
     "sign": "Bogdan Sokolov · Gründer, ehemaliger Café-Besitzer",
-    "photoAlt": "Bogdan Sokolov, Gründer von IQ Rest"
+    "photoAlt": "Bogdan Sokolov, Gründer von QRgine"
   },
   "pricing": {
     "badge": "Keine Provisionen · Keine Verträge",
@@ -108,7 +108,7 @@
     "headingAccent": "Fragen",
     "sub": "Was Gastronomen vor der Anmeldung am häufigsten fragen. Wenn Sie Ihre Antwort nicht finden — schreiben Sie uns auf WhatsApp. Es antworten echte Mitarbeiter, kein Bot.",
     "whatsappCta": "Schreiben Sie uns auf WhatsApp",
-    "whatsappPrefill": "Hallo, ich habe eine Frage zu IQ Rest",
+    "whatsappPrefill": "Hallo, ich habe eine Frage zu QRgine",
     "items": [
       {
         "q": "Was beinhaltet die Testphase und was passiert danach?",
@@ -192,7 +192,7 @@
     "button": "Tarif zusammenstellen"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Alle Rechte vorbehalten.",
+    "copyrightTemplate": "© {year} QRgine. Alle Rechte vorbehalten.",
     "featuresHeading": "Funktionen",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blog: Restaurant-Technik — IQ Rest",
+    "metaTitle": "Blog: Restaurant-Technik — QRgine",
     "metaDescription": "Ratgeber und Vergleiche zu digitalen Speisekarten, QR-Bestellung, Küchendisplays und Reservierungen — praxisnah für Gastronomen.",
     "title": "Blog",
     "intro": "Ratgeber und Vergleiche zu digitalen Speisekarten, QR-Bestellung, Küchendisplays und dem Restaurantalltag.",

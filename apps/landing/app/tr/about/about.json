@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "IQ Rest Hakkında — Biz Kimiz, İletişim ve Yasal Bilgiler",
-    "description": "IQ Rest'in arkasında kim var, bize nasıl ulaşabilirsiniz ve hizmet sağlayıcının detayları: e-posta, WhatsApp, yasal bilgiler.",
+    "title": "QRgine Hakkında — Biz Kimiz, İletişim ve Yasal Bilgiler",
+    "description": "QRgine'in arkasında kim var, bize nasıl ulaşabilirsiniz ve hizmet sağlayıcının detayları: e-posta, WhatsApp, yasal bilgiler.",
     "canonical": "https://iq-rest.com/tr/about",
     "ogLocale": "tr_TR",
-    "ogTitle": "IQ Rest Hakkında",
-    "ogDescription": "IQ Rest'in arkasında kim var, destek iletişim bilgileri ve hizmet sağlayıcının yasal detayları."
+    "ogTitle": "QRgine Hakkında",
+    "ogDescription": "QRgine'in arkasında kim var, destek iletişim bilgileri ve hizmet sağlayıcının yasal detayları."
   },
   "heading": "Kendi kafemizden",
   "headingAccent": "restoranlar için bir platforma",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "IQ Rest kullanan mekan"
+      "label": "QRgine kullanan mekan"
     },
     {
       "value": "15",
       "label": "müşterilerimizin bulunduğu ülke"
     }
   ],
-  "waPrefill": "Merhaba, IQ Rest hakkında bir sorum var",
+  "waPrefill": "Merhaba, QRgine hakkında bir sorum var",
   "contacts": [
     {
       "icon": "Mail",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Køkkenskærm: har du brug for et KDS? | IQ Rest",
+    "title": "Køkkenskærm: har du brug for et KDS? | QRgine",
     "description": "Hvad et KDS gør, hvad hardwaren reelt koster, hvordan du kører det på en tablet, du allerede har, og hvilke køkkener der har det bedre med papirsedler."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "De fleste køkkener har ikke brug for det. IQ Rests [køkkendisplay](route:/kitchen-display) kører i browseren, så hardwaren kan være en tablet, du allerede har, en billig Android-tablet eller en gammel bærbar med en skærm. Læg den i et stænktæt cover, monter den uden for damplinjen, og marginalomkostningen er et vægbeslag."
+      "text": "De fleste køkkener har ikke brug for det. QRgines [køkkendisplay](route:/kitchen-display) kører i browseren, så hardwaren kan være en tablet, du allerede har, en billig Android-tablet eller en gammel bærbar med en skærm. Læg den i et stænktæt cover, monter den uden for damplinjen, og marginalomkostningen er et vægbeslag."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Kan jeg køre et KDS på en almindelig tablet?",
-          "a": "Ja. IQ Rests køkkendisplay kører i browseren, så enhver tablet eller bærbar fra de seneste fem år virker. Brug et stænktæt cover."
+          "a": "Ja. QRgines køkkendisplay kører i browseren, så enhver tablet eller bærbar fra de seneste fem år virker. Brug et stænktæt cover."
         },
         {
           "q": "Kræver et KDS internet?",

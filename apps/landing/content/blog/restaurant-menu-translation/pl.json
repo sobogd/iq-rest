@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Tłumaczenie karty: co tłumaczyć, a czego nie | IQ Rest",
+    "title": "Tłumaczenie karty: co tłumaczyć, a czego nie | QRgine",
     "description": "Dlaczego maszynowe tłumaczenie nazw dań wychodzi źle, które części karty powinny zostać w oryginale i jak prowadzić cztery języki bez czterech kart."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "[Cyfrowe menu](route:/digital-menu) odwraca sytuację. Telefon gościa i tak ogłasza swój język, więc karta otwiera się we właściwym bez niczyjego wyboru. IQ Rest tłumaczy kartę automatycznie, a ponieważ tłumaczenia są przypięte do pozycji, jedna zmiana ceny zmienia ją we wszystkich językach. Dodanie piątego języka nic nie kosztuje i nie wymaga przedruku."
+      "text": "[Cyfrowe menu](route:/digital-menu) odwraca sytuację. Telefon gościa i tak ogłasza swój język, więc karta otwiera się we właściwym bez niczyjego wyboru. QRgine tłumaczy kartę automatycznie, a ponieważ tłumaczenia są przypięte do pozycji, jedna zmiana ceny zmienia ją we wszystkich językach. Dodanie piątego języka nic nie kosztuje i nie wymaga przedruku."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Jedna karta, wszystkie języki",
-      "text": "IQ Rest tłumaczy twoją kartę automatycznie i otwiera ją w języku gościa. Zmień cenę raz, a zaktualizują się wszystkie języki. 14 dni za darmo.",
+      "text": "QRgine tłumaczy twoją kartę automatycznie i otwiera ją w języku gościa. Zmień cenę raz, a zaktualizują się wszystkie języki. 14 dni za darmo.",
       "buttonLabel": "Zobacz tłumaczenie automatyczne",
       "routeKey": "/digital-menu"
     },

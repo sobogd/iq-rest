@@ -1,6 +1,6 @@
 # Landing (`apps/landing`) — documentation index
 
-Next.js 15 App Router marketing site for **IQ Rest** at `iq-rest.com`. 35 locales,
+Next.js 15 App Router marketing site for **QRgine** at `iq-rest.com`. 35 locales,
 almost fully statically generated, plus the first-party auth pages (login /
 register) and the in-product help guide.
 

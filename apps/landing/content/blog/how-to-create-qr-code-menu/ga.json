@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Conas biachlár QR a chruthú: 3 bhealach | IQ Rest",
+    "title": "Conas biachlár QR a chruthú: 3 bhealach | QRgine",
     "description": "Trí bhealach chun biachlár QR a dhéanamh do bhialann: gineadóir saor in aisce le PDF, uirlis bhiachláir nó córas iomlán. An costas agus an fhadhb i ngach ceann."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Cuir an biachlár i bhfoirm dhigiteach. Is é clóscríobh 80 mír an caillteanas ama is mó – léann IQ Rest grianghraf de do bhiachlár páipéir agus cruthaíonn sé na miasa agus na praghsanna duit, rud a dhéanann cúig nóiméad as tráthnóna iomlán.",
+        "Cuir an biachlár i bhfoirm dhigiteach. Is é clóscríobh 80 mír an caillteanas ama is mó – léann QRgine grianghraf de do bhiachlár páipéir agus cruthaíonn sé na miasa agus na praghsanna duit, rud a dhéanann cúig nóiméad as tráthnóna iomlán.",
         "Socraigh an struchtúr roimh an dearadh. Grúpáil mar a ordaíonn aíonna (cúrsaí tosaigh, príomhchúrsaí, deochanna), ní mar atá do chistin eagraithe. Maraíonn liostaí fada réidhe an scrollú.",
         "Cuir grianghraif san áit a n-athraíonn siad an cinneadh. Is measa gach mias a ghrianghrafadh ná cúig phictiúr mhaithe ar na miasa is mian leat a dhíol.",
         "Marcáil na hailléirginí anois, ní níos déanaí. San AE teastaíonn siad ar aon nós, agus is céasadh iad a chur le 80 mír ina dhiaidh sin.",

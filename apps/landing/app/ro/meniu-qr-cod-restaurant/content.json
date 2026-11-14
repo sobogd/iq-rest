@@ -7,13 +7,13 @@
     "sub": "Tot ce devine o simplă scanare pentru oaspeții tăi și pentru sală."
   },
   "meta": {
-    "title": "Meniu QR pentru restaurante | IQ Rest",
+    "title": "Meniu QR pentru restaurante | QRgine",
     "description": "Meniu QR pentru restaurante: oaspeții scanează codul QR de pe masă, deschid meniul în browser și comandă în limba lor. 14 zile gratuit, fără card.",
     "canonical": "https://iq-rest.com/ro/meniu-qr-cod-restaurant",
     "ogLocale": "ro_RO",
     "ogTitle": "Meniu QR pentru restaurante",
     "ogDescription": "Un QR pe masă, meniul pe telefon — fotografii, alergeni, 35 de limbi și actualizări în timp real.",
-    "brandLine": "IQ Rest — Meniu QR pentru restaurante"
+    "brandLine": "QRgine — Meniu QR pentru restaurante"
   },
   "hero": {
     "headline": "Meniu QR:\nscanează și comandă",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Ce întreabă proprietarii de restaurante despre meniul QR IQ Rest. Nu găsești întrebarea ta? Scrie-ne pe WhatsApp.",
+    "sub": "Ce întreabă proprietarii de restaurante despre meniul QR QRgine. Nu găsești întrebarea ta? Scrie-ne pe WhatsApp.",
     "items": [
       {
-        "q": "Cum funcționează meniul QR IQ Rest?",
+        "q": "Cum funcționează meniul QR QRgine?",
         "a": "Fiecare masă are un cod QR tipărit. Oaspeții îl scanează cu camera telefonului, iar browserul deschide meniul restaurantului — fotografii, descrieri, alergeni și prețuri actualizate. Nicio aplicație de descărcat pentru oaspeți sau personal."
       },
       {

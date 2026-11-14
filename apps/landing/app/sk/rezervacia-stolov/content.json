@@ -3,13 +3,13 @@
   "slug": "rezervacia-stolov",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Rezervácie stolov 24/7 pre reštaurácie | IQ Rest",
+    "title": "Rezervácie stolov 24/7 pre reštaurácie | QRgine",
     "description": "Hostia si stoly rezervujú sami 24/7 cez QR menu alebo web podniku. Kalendár podľa stolov, automatické potvrdenia a pripomienky. 14 dní zadarmo.",
     "canonical": "https://iq-rest.com/sk/rezervacia-stolov",
     "ogLocale": "sk_SK",
     "ogTitle": "Rezervácie stolov 24/7 — Hostia sa rezervujú sami",
     "ogDescription": "Hostia si rezervujú stoly cez QR menu alebo web. Kalendár, automatické potvrdzovanie, pripomienky. Ani jeden zmeškaný hosť.",
-    "brandLine": "IQ Rest — Rezervácie stolov pre reštaurácie"
+    "brandLine": "QRgine — Rezervácie stolov pre reštaurácie"
   },
   "hero": {
     "headline": "Rezervácie stolov 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Rezervačný kalendár v administrácii IQ Rest na dvoch tabletoch: denná mriežka podľa stolov a mesačný kalendár"
+        "alt": "Rezervačný kalendár v administrácii QRgine na dvoch tabletoch: denná mriežka podľa stolov a mesačný kalendár"
       }
     }
   ],
   "faq": {
-    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom rezervácií v IQ Rest. Ak nenájdete svoju otázku — napíšte nám na WhatsApp.",
+    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom rezervácií v QRgine. Ak nenájdete svoju otázku — napíšte nám na WhatsApp.",
     "items": [
       {
         "q": "Môžem si vybrať dni a časy, kedy sú rezervácie dostupné?",

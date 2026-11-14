@@ -16,7 +16,7 @@ const TEXTS = TEXTS_JSON as unknown as LandingTexts;
 // <html lang>) because the missing URL has no locale context we can trust;
 // the header includes the language switcher so visitors can re-orient.
 export const metadata = {
-  title: "Not found · IQ Rest",
+  title: "Not found · QRgine",
   robots: { index: false, follow: false },
 };
 

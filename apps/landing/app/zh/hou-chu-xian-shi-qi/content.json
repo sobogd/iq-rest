@@ -3,13 +3,13 @@
   "slug": "hou-chu-xian-shi-qi",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "餐厅后厨显示系统（KDS）厨房屏幕接单 | IQ Rest",
+    "title": "餐厅后厨显示系统（KDS）厨房屏幕接单 | QRgine",
     "description": "餐厅KDS后厨显示系统：前厅和QR菜单的订单直达厨师屏幕。按桌台分列，待接单 / 制作中 / 已出餐 / 已上菜状态，档口筛选。在平板或手机上运行。",
     "canonical": "https://iq-rest.com/zh/hou-chu-xian-shi-qi",
     "ogLocale": "zh_CN",
     "ogTitle": "后厨显示系统 (KDS) — 订单直达厨师屏幕",
     "ogDescription": "前厅订单显示在厨师屏幕上。按桌台分列、状态和计时器。一键更改状态。",
-    "brandLine": "IQ Rest — 餐厅后厨显示系统"
+    "brandLine": "QRgine — 餐厅后厨显示系统"
   },
   "hero": {
     "headline": "后厨显示系统 (KDS)：",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "餐饮老板关于 IQ Rest 后厨显示系统的常见问题。如果没找到答案——请在WhatsApp上联系我们。",
+    "sub": "餐饮老板关于 QRgine 后厨显示系统的常见问题。如果没找到答案——请在WhatsApp上联系我们。",
     "items": [
       {
         "q": "后厨菜品有哪些状态？",

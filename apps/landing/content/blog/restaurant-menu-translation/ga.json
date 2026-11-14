@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Aistriú an bhiachláir: cad a aistrítear | IQ Rest",
+    "title": "Aistriú an bhiachláir: cad a aistrítear | QRgine",
     "description": "Cén fáth a dtéann meaisínaistriú ainmneacha na miasa amú, cé na codanna den bhiachlár a fhanann sa bhunteanga, agus conas ceithre theanga a rith gan ceithre bhiachlár."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "Athraíonn [biachlár digiteach](route:/digital-menu) an scéal. Fógraíonn fón an aoi a theanga cheana féin, mar sin osclaíonn an biachlár sa cheann ceart gan aon duine a roghnú. Aistríonn IQ Rest an biachlár go huathoibríoch, agus toisc go bhfuil na haistriúcháin ceangailte den mhír, athraíonn athrú praghais amháin gach teanga. Ní chosnaíonn cúigiú teanga faic agus ní éilíonn sí athphriontáil."
+      "text": "Athraíonn [biachlár digiteach](route:/digital-menu) an scéal. Fógraíonn fón an aoi a theanga cheana féin, mar sin osclaíonn an biachlár sa cheann ceart gan aon duine a roghnú. Aistríonn QRgine an biachlár go huathoibríoch, agus toisc go bhfuil na haistriúcháin ceangailte den mhír, athraíonn athrú praghais amháin gach teanga. Ní chosnaíonn cúigiú teanga faic agus ní éilíonn sí athphriontáil."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Biachlár amháin, gach teanga",
-      "text": "Aistríonn IQ Rest do bhiachlár go huathoibríoch agus osclaíonn sé i dteanga an aoi é. Athraigh praghas uair amháin agus nuashonraítear gach teanga. 14 lá saor in aisce.",
+      "text": "Aistríonn QRgine do bhiachlár go huathoibríoch agus osclaíonn sé i dteanga an aoi é. Athraigh praghas uair amháin agus nuashonraítear gach teanga. 14 lá saor in aisce.",
       "buttonLabel": "Féach ar an aistriúchán uathoibríoch",
       "routeKey": "/digital-menu"
     },

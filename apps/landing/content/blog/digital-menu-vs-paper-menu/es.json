@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Carta digital vs carta en papel: costes reales | IQ Rest",
+    "title": "Carta digital vs carta en papel: costes reales | QRgine",
     "description": "Lo que de verdad cuesta una carta en papel frente a una carta digital QR: impresión, cambios, traducciones y velocidad de servicio. Comparativa con cifras."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Escanea tu carta en papel — IQ Rest la lee y crea la carta digital automáticamente.",
+        "Escanea tu carta en papel — QRgine la lee y crea la carta digital automáticamente.",
         "Revisa los precios y añade fotos donde importan.",
         "Imprime un código QR por mesa.",
         "Cambia lo que quieras, cuando quieras, desde el móvil."

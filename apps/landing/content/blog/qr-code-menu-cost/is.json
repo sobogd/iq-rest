@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Hvað QR-matseðill kostar í raun | IQ Rest",
+    "title": "Hvað QR-matseðill kostar í raun | QRgine",
     "description": "Hvað matseðill með QR-kóða kostar raunverulega: ókeypis verkfæri, mánaðargjöld, verð á hvern stað, þóknanir af pöntunum og falinn uppsetningartími."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest er í þriðju línu: **frá 9,90 € á mánuði á hvern stað**, engin þóknun af pöntunum, 14 dagar frítt án korts. Við rukkum staðinn, ekki þjóninn, því gjaldtaka á notanda refsar einmitt þeim stöðum þar sem starfsmannavelta er mest."
+      "text": "QRgine er í þriðju línu: **frá 9,90 € á mánuði á hvern stað**, engin þóknun af pöntunum, 14 dagar frítt án korts. Við rukkum staðinn, ekki þjóninn, því gjaldtaka á notanda refsar einmitt þeim stöðum þar sem starfsmannavelta er mest."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Þess vegna skiptir innflutningur matseðils meira máli en hann hljómar. IQ Rest les mynd af pappírsmatseðlinum þínum og býr línurnar til sjálfkrafa, sem gerir hálfan daginn að um fimm mínútum. Reiknaðu uppsetningartímann með þegar þú berð verkfæri saman; hann vegur oft þyngra en fyrsta áskriftarárið."
+      "text": "Þess vegna skiptir innflutningur matseðils meira máli en hann hljómar. QRgine les mynd af pappírsmatseðlinum þínum og býr línurnar til sjálfkrafa, sem gerir hálfan daginn að um fimm mínútum. Reiknaðu uppsetningartímann með þegar þú berð verkfæri saman; hann vegur oft þyngra en fyrsta áskriftarárið."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Hvað kostar matseðill með QR-kóða á mánuði?",
-          "a": "Verkfæri með fastri áskrift liggja yfirleitt á 10-40 € á hvern stað á mánuði. IQ Rest byrjar í 9,90 € án þóknunar af pöntunum."
+          "a": "Verkfæri með fastri áskrift liggja yfirleitt á 10-40 € á hvern stað á mánuði. QRgine byrjar í 9,90 € án þóknunar af pöntunum."
         },
         {
           "q": "Er til ókeypis matseðill með QR-kóða?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Borga ég á borð eða á veitingastað?",
-          "a": "Hjá IQ Rest á veitingastað — borð og QR-kóðar eru ótakmarkaðir. Athugaðu þetta áður en þú skrifar undir annars staðar, því verð á borð eða á notanda skalar illa."
+          "a": "Hjá QRgine á veitingastað — borð og QR-kóðar eru ótakmarkaðir. Athugaðu þetta áður en þú skrifar undir annars staðar, því verð á borð eða á notanda skalar illa."
         },
         {
           "q": "Er stofngjald?",

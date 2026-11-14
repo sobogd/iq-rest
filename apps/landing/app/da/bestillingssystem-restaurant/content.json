@@ -3,13 +3,13 @@
   "slug": "bestillingssystem-restaurant",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Ordrehåndtering i restauranten — Gæst og tjener | IQ Rest",
+    "title": "Ordrehåndtering i restauranten — Gæst og tjener | QRgine",
     "description": "Ordrehåndtering fra telefon eller tablet: bordplan, deling af regningen, valgmuligheder og kommentarer. Gæsterne bestiller fra bordet. 14 dage gratis.",
     "canonical": "https://iq-rest.com/da/bestillingssystem-restaurant",
     "ogLocale": "da_DK",
     "ogTitle": "Ordrehåndtering i restauranten — Gæst og tjener",
     "ogDescription": "En gæst ved bordet eller en tjener på en telefon — ordren rammer køkkenet med det samme. Bordplan, deling af regningen, statusser, valgmuligheder og kommentarer.",
-    "brandLine": "IQ Rest — Ordrehåndtering i restauranten"
+    "brandLine": "QRgine — Ordrehåndtering i restauranten"
   },
   "hero": {
     "headline": "Bestillinger fra bordet —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Hvad restauratører spørger om vedrørende ordrehåndtering i IQ Rest. Hvis dit spørgsmål ikke er på listen — skriv til os på WhatsApp.",
+    "sub": "Hvad restauratører spørger om vedrørende ordrehåndtering i QRgine. Hvis dit spørgsmål ikke er på listen — skriv til os på WhatsApp.",
     "items": [
       {
         "q": "Kan flere tjenere arbejde samtidigt fra forskellige enheder?",

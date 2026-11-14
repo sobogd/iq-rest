@@ -3,13 +3,13 @@
   "slug": "digitaal-menu-restaurant",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digitaal menu voor restaurants | IQ Rest",
+    "title": "Digitaal menu voor restaurants | QRgine",
     "description": "Digitaal menu voor je restaurant: een online menu met foto's, allergenen, AI-vertaling en realtime prijsupdates. 14 dagen gratis, geen creditcard nodig.",
     "canonical": "https://iq-rest.com/nl/digitaal-menu-restaurant",
     "ogLocale": "nl_NL",
     "ogTitle": "Digitaal menu voor restaurants",
     "ogDescription": "Een online versie van je papieren menu met foto's, allergenen en AI-vertaling. Prijzen worden in realtime bijgewerkt.",
-    "brandLine": "IQ Rest — Digitaal menu voor restaurants"
+    "brandLine": "QRgine — Digitaal menu voor restaurants"
   },
   "hero": {
     "headline": "Digitaal menu en website",
@@ -166,7 +166,7 @@
     "heading": "Waarom restaurants voor ons kiezen",
     "headingAccent": "en niet voor andere systemen",
     "sub": "De meeste menutools stoppen bij een QR-code. De rijen hieronder laten zien wat er in de dagelijkse praktijk echt verschilt. Zonder namen — vergelijk zelf met elk ander systeem.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Andere systemen",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Wat restauranthouders vragen over het digitale menu van IQ Rest. Staat je vraag er niet tussen — stuur ons een bericht via WhatsApp.",
+    "sub": "Wat restauranthouders vragen over het digitale menu van QRgine. Staat je vraag er niet tussen — stuur ons een bericht via WhatsApp.",
     "items": [
       {
         "q": "Heb ik technische kennis of ervaring met een CMS nodig?",
         "a": "Geen speciale vaardigheden nodig. Alles in het dashboard kost maar een paar tikken — geen code, geen gedoe met bronbestanden. Een gerecht toevoegen duurt seconden: naam, prijs, foto. Een compleet menu instellen lukt meestal binnen 30–60 minuten."
       },
       {
-        "q": "Wat is het digitale menu van IQ Rest?",
+        "q": "Wat is het digitale menu van QRgine?",
         "a": "Het is een online versie van je menu die voor gasten beschikbaar is via een QR-code of een directe link: foto's van gerechten, prijzen, allergenen, AI-vertaling in 35 talen en realtime updates. Het menu draait op onze servers — je hoeft geen software te installeren of te onderhouden, een browser is alles wat je nodig hebt."
       },
       {

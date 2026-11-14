@@ -3,13 +3,13 @@
   "slug": "ekran-kuchenny",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Ekran kuchenny (KDS) dla restauracji | IQ Rest",
+    "title": "Ekran kuchenny (KDS) dla restauracji | QRgine",
     "description": "Ekran kuchenny KDS: zamówienia z sali i menu QR trafiają prosto na ekran kucharza. Kolumny stolików, statusy i filtry stanowisk. Działa na tablecie lub telefonie.",
     "canonical": "https://iq-rest.com/pl/ekran-kuchenny",
     "ogLocale": "pl_PL",
     "ogTitle": "Ekran kuchenny (KDS) — Zamówienia prosto na ekran kucharza",
     "ogDescription": "Zamówienia z sali na ekranie kucharza. Kolumny dla stolików, statusy i stoper. Jedno kliknięcie zmienia status.",
-    "brandLine": "IQ Rest — Ekran kuchenny dla restauracji"
+    "brandLine": "QRgine — Ekran kuchenny dla restauracji"
   },
   "hero": {
     "headline": "Ekran kuchenny (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "O co pytają restauratorzy w związku z ekranem kuchennym w IQ Rest. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
+    "sub": "O co pytają restauratorzy w związku z ekranem kuchennym w QRgine. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
     "items": [
       {
         "q": "Jakie statusy mają pozycje w kuchni?",

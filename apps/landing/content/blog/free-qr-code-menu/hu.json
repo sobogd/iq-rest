@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ingyenes QR étlap: mi ingyenes valójában | IQ Rest",
+    "title": "Ingyenes QR étlap: mi ingyenes valójában | QRgine",
     "description": "Ingyenes QR étlapok léteznek, és van köztük használható. Hogyan keresnek pénzt, melyik korlát fog először, és mikor jó választás tényleg az ingyenes."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Tipikus ingyenes szint",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Az ingyenes próba ugyanaz, mint az ingyenes csomag?",
-          "a": "Nem. A próba a teljes termék korlátozott ideig; az ingyenes csomag korlátozott termék örökre. Az IQ Rest 14 napos próbát ad mindennel bekapcsolva, kártya nélkül."
+          "a": "Nem. A próba a teljes termék korlátozott ideig; az ingyenes csomag korlátozott termék örökre. Az QRgine 14 napos próbát ad mindennel bekapcsolva, kártya nélkül."
         },
         {
           "q": "Melyik a legolcsóbb fizetős QR étlap?",
-          "a": "A fix csomagok általában havi 10 euró körül indulnak egységenként. Az IQ Rest 9,90 eurótól — a teljes bontás itt van: [mennyibe kerül egy QR kódos étlap](blog:qr-code-menu-cost)."
+          "a": "A fix csomagok általában havi 10 euró körül indulnak egységenként. Az QRgine 9,90 eurótól — a teljes bontás itt van: [mennyibe kerül egy QR kódos étlap](blog:qr-code-menu-cost)."
         },
         {
           "q": "Átvihetem az étlapomat ingyenes eszközből fizetősbe?",
-          "a": "Általában igen, és ritkán kell újragépelni: az IQ Rest be tudja olvasni a meglévő étlap fotóját vagy PDF-jét, és a tételeket öt perc alatt újraépíti."
+          "a": "Általában igen, és ritkán kell újragépelni: az QRgine be tudja olvasni a meglévő étlap fotóját vagy PDF-jét, és a tételeket öt perc alatt újraépíti."
         }
       ]
     }

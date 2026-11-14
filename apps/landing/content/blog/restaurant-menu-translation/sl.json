@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Prevod jedilnika: kaj prevesti in kaj ne | IQ Rest",
+    "title": "Prevod jedilnika: kaj prevesti in kaj ne | QRgine",
     "description": "Zakaj strojni prevod imen jedi gre narobe, kateri deli jedilnika ostanejo v izvirnem jeziku in kako voditi štiri jezike brez štirih jedilnikov."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "[Digitalni jedilnik](route:/digital-menu) to obrne. Gostov telefon svoj jezik itak sporoči, zato se jedilnik odpre v pravem, ne da bi kdo izbiral. IQ Rest jedilnik prevede samodejno, in ker so prevodi pripeti na postavko, ena sprememba cene spremeni vse jezike. Dodati peti jezik ne stane nič in ne zahteva ponovnega tiska."
+      "text": "[Digitalni jedilnik](route:/digital-menu) to obrne. Gostov telefon svoj jezik itak sporoči, zato se jedilnik odpre v pravem, ne da bi kdo izbiral. QRgine jedilnik prevede samodejno, in ker so prevodi pripeti na postavko, ena sprememba cene spremeni vse jezike. Dodati peti jezik ne stane nič in ne zahteva ponovnega tiska."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "En jedilnik, vsi jeziki",
-      "text": "IQ Rest vaš jedilnik samodejno prevede in ga odpre v jeziku gosta. Ceno spremenite enkrat in posodobijo se vsi jeziki. 14 dni brezplačno.",
+      "text": "QRgine vaš jedilnik samodejno prevede in ga odpre v jeziku gosta. Ceno spremenite enkrat in posodobijo se vsi jeziki. 14 dni brezplačno.",
       "buttonLabel": "Poglejte samodejni prevod",
       "routeKey": "/digital-menu"
     },

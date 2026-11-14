@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kjøkkenskjerm: trenger du et KDS? | IQ Rest",
+    "title": "Kjøkkenskjerm: trenger du et KDS? | QRgine",
     "description": "Hva et KDS gjør, hva maskinvaren faktisk koster, hvordan du kjører det på et nettbrett du allerede har, og hvilke kjøkken som har det bedre med papirlapper."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "De fleste kjøkken trenger ikke det. IQ Rests [kjøkkendisplay](route:/kitchen-display) kjører i nettleseren, så maskinvaren kan være et nettbrett du allerede har, et billig Android-nettbrett eller en gammel laptop med skjerm. Legg det i et sprutsikkert deksel, monter det utenfor damplinjen, og marginalkostnaden er en veggbrakett."
+      "text": "De fleste kjøkken trenger ikke det. QRgines [kjøkkendisplay](route:/kitchen-display) kjører i nettleseren, så maskinvaren kan være et nettbrett du allerede har, et billig Android-nettbrett eller en gammel laptop med skjerm. Legg det i et sprutsikkert deksel, monter det utenfor damplinjen, og marginalkostnaden er en veggbrakett."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Kan jeg kjøre et KDS på et vanlig nettbrett?",
-          "a": "Ja. IQ Rests kjøkkendisplay kjører i nettleseren, så et hvilket som helst nettbrett eller en laptop fra de siste fem årene fungerer. Bruk et sprutsikkert deksel."
+          "a": "Ja. QRgines kjøkkendisplay kjører i nettleseren, så et hvilket som helst nettbrett eller en laptop fra de siste fem årene fungerer. Bruk et sprutsikkert deksel."
         },
         {
           "q": "Trenger et KDS internett?",

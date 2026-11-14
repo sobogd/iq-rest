@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // ET help guide.
 export const et: HelpDoc = {
-  metaTitle: "Kuidas kasutada IQ Resti — samm-sammuline juhend",
+  metaTitle: "Kuidas kasutada QRginei — samm-sammuline juhend",
   metaDescription:
-    "Täielik IQ Resti juhend: registreerimine, menüü, tellimused, broneeringud, kööginäidik ja seaded — restoranidele.",
+    "Täielik QRginei juhend: registreerimine, menüü, tellimused, broneeringud, kööginäidik ja seaded — restoranidele.",
   h1: "Abi",
-  intro: "Üksikasjalik IQ Resti juhend — registreerimisest peenemate seadeteni.",
+  intro: "Üksikasjalik QRginei juhend — registreerimisest peenemate seadeteni.",
   banner: {
     title: "See on lihtsam, kui tundub",
     sub: "Samm-sammuline juhend: registreerimisest peenemate seadeteni — saab hakkama igaüks.",
@@ -22,7 +22,7 @@ export const et: HelpDoc = {
         { type: "h3", text: "Mis süsteem see on" },
         {
           type: "p",
-          text: "IQ Rest on teenus restoranidele: loote QR-koodiga veebimenüü, võtate tellimusi ja lauabroneeringuid vastu otse külaliste telefonidest, köögis ja teenindajatel töötavad aga tahvelterminalid. Kõike hallatakse ühest halduspaneelist (töölaud).",
+          text: "QRgine on teenus restoranidele: loote QR-koodiga veebimenüü, võtate tellimusi ja lauabroneeringuid vastu otse külaliste telefonidest, köögis ja teenindajatel töötavad aga tahvelterminalid. Kõike hallatakse ühest halduspaneelist (töölaud).",
         },
         { type: "h3", text: "Registreerimine ja sisselogimine" },
         { type: "p", text: "Sisse saab logida kolmel viisil — valige sisselogimisekraanil ükskõik milline:" },

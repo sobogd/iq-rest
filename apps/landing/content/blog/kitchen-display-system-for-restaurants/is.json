@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Eldhússkjár: þarftu KDS? | IQ Rest",
+    "title": "Eldhússkjár: þarftu KDS? | QRgine",
     "description": "Hvað KDS gerir, hvað vélbúnaðurinn kostar í raun, hvernig þú keyrir hann á spjaldtölvu sem þú átt nú þegar, og hvaða eldhús hafa það betra með pappírsmiðum."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Flest eldhús þurfa það ekki. [Eldhússkjár](route:/kitchen-display) IQ Rest keyrir í vafra, svo vélbúnaðurinn getur verið spjaldtölva sem þú átt, ódýr Android-spjaldtölva eða gömul fartölva með skjá. Settu hana í slettuhelt hulstur, festu utan gufulínunnar, og jaðarkostnaðurinn er veggfesting."
+      "text": "Flest eldhús þurfa það ekki. [Eldhússkjár](route:/kitchen-display) QRgine keyrir í vafra, svo vélbúnaðurinn getur verið spjaldtölva sem þú átt, ódýr Android-spjaldtölva eða gömul fartölva með skjá. Settu hana í slettuhelt hulstur, festu utan gufulínunnar, og jaðarkostnaðurinn er veggfesting."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Get ég keyrt KDS á venjulegri spjaldtölvu?",
-          "a": "Já. Eldhússkjár IQ Rest keyrir í vafra, svo hvaða spjaldtölva eða fartölva sem er frá síðustu fimm árum dugar. Notaðu slettuhelt hulstur."
+          "a": "Já. Eldhússkjár QRgine keyrir í vafra, svo hvaða spjaldtölva eða fartölva sem er frá síðustu fimm árum dugar. Notaðu slettuhelt hulstur."
         },
         {
           "q": "Þarf KDS internet?",

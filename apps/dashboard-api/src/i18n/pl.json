@@ -2,11 +2,11 @@
   "companyDefaultName": "Moja restauracja",
   "otpEmail": {
     "subject": "Twój kod: {code}",
-    "intro": "Oto Twój jednorazowy kod do zalogowania się w IQ Rest:",
+    "intro": "Oto Twój jednorazowy kod do zalogowania się w QRgine:",
     "expiry": "Kod jest ważny przez 5 minut. Jeśli ta prośba nie pochodzi od Ciebie, po prostu zignoruj tę wiadomość."
   },
   "supportEmail": {
-    "subject": "Nowa wiadomość od wsparcia IQ Rest",
+    "subject": "Nowa wiadomość od wsparcia QRgine",
     "title": "Nowa wiadomość od wsparcia",
     "body": "Nasz zespół wsparcia wysłał Ci nową wiadomość. Otwórz czat wsparcia w swoim panelu, aby ją przeczytać i odpowiedzieć.",
     "cta": "Otwórz czat wsparcia"

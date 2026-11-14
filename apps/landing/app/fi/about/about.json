@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Tietoa IQ Restistä — Keitä olemme, yhteystiedot ja lakitiedot",
-    "description": "Kuka on IQ Restin takana, miten tavoitat meidät ja palveluntarjoajan tiedot: sähköposti, WhatsApp, lakitiedot.",
+    "title": "Tietoa QRgineistä — Keitä olemme, yhteystiedot ja lakitiedot",
+    "description": "Kuka on QRginein takana, miten tavoitat meidät ja palveluntarjoajan tiedot: sähköposti, WhatsApp, lakitiedot.",
     "canonical": "https://iq-rest.com/fi/about",
     "ogLocale": "fi_FI",
-    "ogTitle": "Tietoa IQ Restistä",
-    "ogDescription": "Kuka on IQ Restin takana, tuen yhteystiedot ja palveluntarjoajan lakitiedot."
+    "ogTitle": "Tietoa QRgineistä",
+    "ogDescription": "Kuka on QRginein takana, tuen yhteystiedot ja palveluntarjoajan lakitiedot."
   },
   "heading": "Omasta kahvilasta",
   "headingAccent": "ravintoloiden alustaksi",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "toimipistettä pyörii IQ Restillä"
+      "label": "toimipistettä pyörii QRgineillä"
     },
     {
       "value": "15",
       "label": "maata, joissa asiakkaamme ovat"
     }
   ],
-  "waPrefill": "Hei, minulla on kysyttävää IQ Restistä",
+  "waPrefill": "Hei, minulla on kysyttävää QRgineistä",
   "contacts": [
     {
       "icon": "Mail",

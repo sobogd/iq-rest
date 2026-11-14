@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Þýðing matseðils: hverju á að þýða | IQ Rest",
+    "title": "Þýðing matseðils: hverju á að þýða | QRgine",
     "description": "Hvers vegna vélþýðing á heitum rétta fer illa, hvaða hlutar matseðilsins eiga að standa á frummálinu og hvernig þú keyrir fjögur tungumál án fjögurra matseðla."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "[Stafrænn matseðill](route:/digital-menu) snýr þessu við. Sími gestsins gefur tungumálið hvort eð er upp, svo matseðillinn opnast á réttu máli án þess að nokkur velji. IQ Rest þýðir matseðilinn sjálfkrafa og þar sem þýðingarnar hanga á réttinum breytir ein verðbreyting öllum tungumálum. Að bæta við fimmta tungumálinu kostar ekkert og krefst engrar endurprentunar."
+      "text": "[Stafrænn matseðill](route:/digital-menu) snýr þessu við. Sími gestsins gefur tungumálið hvort eð er upp, svo matseðillinn opnast á réttu máli án þess að nokkur velji. QRgine þýðir matseðilinn sjálfkrafa og þar sem þýðingarnar hanga á réttinum breytir ein verðbreyting öllum tungumálum. Að bæta við fimmta tungumálinu kostar ekkert og krefst engrar endurprentunar."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Einn matseðill, öll tungumál",
-      "text": "IQ Rest þýðir matseðilinn þinn sjálfkrafa og opnar hann á tungumáli gestsins. Breyttu verði einu sinni og öll tungumál uppfærast. 14 dagar frítt.",
+      "text": "QRgine þýðir matseðilinn þinn sjálfkrafa og opnar hann á tungumáli gestsins. Breyttu verði einu sinni og öll tungumál uppfærast. 14 dagar frítt.",
       "buttonLabel": "Sjá sjálfvirku þýðinguna",
       "routeKey": "/digital-menu"
     },

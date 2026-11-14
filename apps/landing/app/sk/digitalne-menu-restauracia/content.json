@@ -3,13 +3,13 @@
   "slug": "digitalne-menu-restauracia",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digitálne menu pre reštaurácie | IQ Rest",
+    "title": "Digitálne menu pre reštaurácie | QRgine",
     "description": "Digitálne menu pre váš podnik: online menu s fotkami, alergénmi, AI prekladom a aktualizáciou cien v reálnom čase. 14 dní zadarmo, bez karty.",
     "canonical": "https://iq-rest.com/sk/digitalne-menu-restauracia",
     "ogLocale": "sk_SK",
     "ogTitle": "Digitálne menu pre reštaurácie",
     "ogDescription": "Online verzia vášho papierového menu s fotkami, alergénmi a AI prekladom. Ceny sa aktualizujú v reálnom čase.",
-    "brandLine": "IQ Rest — Digitálne menu pre reštaurácie"
+    "brandLine": "QRgine — Digitálne menu pre reštaurácie"
   },
   "hero": {
     "headline": "Digitálne menu a web",
@@ -166,7 +166,7 @@
     "heading": "Prečo si reštaurácie vyberajú nás,",
     "headingAccent": "a nie iné systémy",
     "sub": "Väčšina nástrojov na menu končí pri QR kóde. Nižšie je to, čo sa v každodennej prevádzke skutočne líši. Bez mien — porovnajte s ľubovoľným systémom.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Iné systémy",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom digitálneho menu v IQ Rest. Ak nenájdete svoju otázku — napíšte nám na WhatsApp.",
+    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom digitálneho menu v QRgine. Ak nenájdete svoju otázku — napíšte nám na WhatsApp.",
     "items": [
       {
         "q": "Potrebujem technické znalosti alebo skúsenosti s CMS?",
         "a": "Žiadne špeciálne znalosti nie sú potrebné. Všetko v administrácii zvládnete pár kliknutiami — žiadne kódovanie ani práca so zdrojovými súbormi. Pridanie jedla trvá sekundy: názov, cena, fotka. Kompletné nastavenie menu zvyčajne zaberie 30–60 minút."
       },
       {
-        "q": "Čo je digitálne menu IQ Rest?",
+        "q": "Čo je digitálne menu QRgine?",
         "a": "Je to online verzia vášho menu dostupná hosťom cez QR kód alebo priamy odkaz: fotky jedál, ceny, alergény, AI preklad do 35 jazykov a aktualizácie v reálnom čase. Menu beží na našich serveroch — nemusíte nič inštalovať ani udržiavať, stačí vám prehliadač."
       },
       {

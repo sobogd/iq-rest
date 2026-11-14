@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR Code Menu Cost: What Restaurants Actually Pay | IQ Rest",
+    "title": "QR Code Menu Cost: What Restaurants Actually Pay | QRgine",
     "description": "What a QR code menu really costs — free tools, monthly subscriptions, per-location pricing, order commissions and the hidden setup time. With numbers."
   },
   "card": {
@@ -23,7 +23,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest sits in the third row: **from €9.90 a month per venue**, no commission on orders, 14 days free without a card. We charge for the venue, not per waiter, because charging per user penalises exactly the venues with the most staff turnover."
+      "text": "QRgine sits in the third row: **from €9.90 a month per venue**, no commission on orders, 14 days free without a card. We charge for the venue, not per waiter, because charging per user penalises exactly the venues with the most staff turnover."
     },
     { "type": "h2", "text": "The cost everyone forgets: getting the menu in" },
     {
@@ -32,7 +32,7 @@
     },
     {
       "type": "p",
-      "text": "This is why menu import matters more than it sounds. IQ Rest reads a photo of your paper menu and builds the items automatically, which turns that half-day into roughly five minutes. Budget the setup time when you compare tools; it's often larger than the first year of subscription."
+      "text": "This is why menu import matters more than it sounds. QRgine reads a photo of your paper menu and builds the items automatically, which turns that half-day into roughly five minutes. Budget the setup time when you compare tools; it's often larger than the first year of subscription."
     },
     { "type": "h2", "text": "Printing and hardware" },
     {
@@ -94,7 +94,7 @@
       "items": [
         {
           "q": "How much does a QR code menu cost per month?",
-          "a": "Flat-subscription tools generally run €10–€40 per venue per month. IQ Rest starts at €9.90 with no commission on orders."
+          "a": "Flat-subscription tools generally run €10–€40 per venue per month. QRgine starts at €9.90 with no commission on orders."
         },
         {
           "q": "Is there a free QR code menu?",
@@ -102,7 +102,7 @@
         },
         {
           "q": "Do I pay per table or per restaurant?",
-          "a": "With IQ Rest, per restaurant — tables and QR codes are unlimited. Check this before signing anywhere, because per-table and per-user pricing scales badly."
+          "a": "With QRgine, per restaurant — tables and QR codes are unlimited. Check this before signing anywhere, because per-table and per-user pricing scales badly."
         },
         {
           "q": "Is there a setup fee?",

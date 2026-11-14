@@ -2,11 +2,11 @@
   "companyDefaultName": "Minu ettevõte",
   "otpEmail": {
     "subject": "Teie kood: {code}",
-    "intro": "Siin on teie ühekordne kood IQ Resti sisselogimiseks:",
+    "intro": "Siin on teie ühekordne kood QRginei sisselogimiseks:",
     "expiry": "Kood kehtib 5 minutit. Kui te seda ei taotlenud, ignoreerige lihtsalt seda kirja."
   },
   "supportEmail": {
-    "subject": "Uus sõnum IQ Resti klienditoelt",
+    "subject": "Uus sõnum QRginei klienditoelt",
     "title": "Uus sõnum klienditoelt",
     "body": "Meie klienditugi saatis teile uue sõnumi. Lugemiseks ja vastamiseks avage töölaual klienditoe vestlus.",
     "cta": "Ava klienditoe vestlus"

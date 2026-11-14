@@ -2,11 +2,11 @@
   "companyDefaultName": "우리 가게",
   "otpEmail": {
     "subject": "인증 코드: {code}",
-    "intro": "IQ Rest 로그인용 일회용 코드입니다:",
+    "intro": "QRgine 로그인용 일회용 코드입니다:",
     "expiry": "코드는 5분 동안 유효합니다. 직접 요청하지 않으셨다면 이 이메일을 무시해 주세요."
   },
   "supportEmail": {
-    "subject": "IQ Rest 지원팀의 새 메시지",
+    "subject": "QRgine 지원팀의 새 메시지",
     "title": "지원팀의 새 메시지",
     "body": "지원팀에서 새 메시지를 보냈습니다. 대시보드에서 지원 채팅을 열어 내용을 확인하고 답장해 주세요.",
     "cta": "지원 채팅 열기"

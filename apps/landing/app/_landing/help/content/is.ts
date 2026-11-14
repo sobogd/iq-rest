@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // IS help guide.
 export const is: HelpDoc = {
-  metaTitle: "Hvernig á að nota IQ Rest — skref-fyrir-skref leiðarvísir",
+  metaTitle: "Hvernig á að nota QRgine — skref-fyrir-skref leiðarvísir",
   metaDescription:
-    "Heildarleiðarvísir um IQ Rest: skráning, matseðill, pantanir, borðabókanir, eldhússkjár og stillingar — fyrir veitingastaði.",
+    "Heildarleiðarvísir um QRgine: skráning, matseðill, pantanir, borðabókanir, eldhússkjár og stillingar — fyrir veitingastaði.",
   h1: "Hjálp",
-  intro: "Ítarlegur leiðarvísir um IQ Rest — frá skráningu að fínni stillingum.",
+  intro: "Ítarlegur leiðarvísir um QRgine — frá skráningu að fínni stillingum.",
   banner: {
     title: "Það er einfaldara en það lítur út fyrir",
     sub: "Skref-fyrir-skref leiðarvísir: frá skráningu að fínni stillingum — allir ráða við það.",
@@ -22,7 +22,7 @@ export const is: HelpDoc = {
         { type: "h3", text: "Hvað er þetta kerfi" },
         {
           type: "p",
-          text: "IQ Rest er þjónusta fyrir veitingastaði: þú býrð til netmatseðil með QR-kóða, tekur við pöntunum og borðabókunum beint úr símum gesta, en í eldhúsi og hjá þjónum keyra spjaldtölvur-skjáir. Öllu er stýrt frá einu stjórnborði (mælaborði).",
+          text: "QRgine er þjónusta fyrir veitingastaði: þú býrð til netmatseðil með QR-kóða, tekur við pöntunum og borðabókunum beint úr símum gesta, en í eldhúsi og hjá þjónum keyra spjaldtölvur-skjáir. Öllu er stýrt frá einu stjórnborði (mælaborði).",
         },
         { type: "h3", text: "Skráning og innskráning" },
         { type: "p", text: "Hægt er að skrá sig inn á þrjá vegu — veldu hvaða sem er á innskráningarskjánum:" },

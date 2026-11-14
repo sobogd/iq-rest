@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Pedidos propios vs apps de reparto: los números | IQ Rest",
+    "title": "Pedidos propios vs apps de reparto: los números | QRgine",
     "description": "Cuánto cuesta la comisión del marketplace por pedido, cuántos pedidos necesitas en tu canal propio para cubrir gastos y por qué casi todos deberían usar ambos."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "¿Necesito una web para recibir pedidos directos?",
-          "a": "No. IQ Rest te da una página de pedidos alojada con su propia dirección, que puedes enlazar desde Google, Instagram o un código QR en la mesa."
+          "a": "No. QRgine te da una página de pedidos alojada con su propia dirección, que puedes enlazar desde Google, Instagram o un código QR en la mesa."
         }
       ]
     }

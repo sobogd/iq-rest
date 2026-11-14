@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kolik doopravdy stojí QR menu | IQ Rest",
+    "title": "Kolik doopravdy stojí QR menu | QRgine",
     "description": "Kolik skutečně stojí menu s QR kódem: bezplatné nástroje, měsíční předplatné, cena za provozovnu, provize z objednávek a skrytý čas nasazení."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest je ve třetím řádku: **od 9,90 € měsíčně za provozovnu**, bez provize z objednávek, 14 dní zdarma a bez karty. Účtujeme provozovnu, ne číšníka, protože účtování za uživatele trestá právě ty podniky, kde se personál mění nejčastěji."
+      "text": "QRgine je ve třetím řádku: **od 9,90 € měsíčně za provozovnu**, bez provize z objednávek, 14 dní zdarma a bez karty. Účtujeme provozovnu, ne číšníka, protože účtování za uživatele trestá právě ty podniky, kde se personál mění nejčastěji."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Proto import lístku znamená víc, než jak zní. IQ Rest přečte fotku vašeho papírového lístku a položky vytvoří sám, takže z půl dne je asi pět minut. Při porovnávání nástrojů počítejte i čas nasazení; často váží víc než první rok předplatného."
+      "text": "Proto import lístku znamená víc, než jak zní. QRgine přečte fotku vašeho papírového lístku a položky vytvoří sám, takže z půl dne je asi pět minut. Při porovnávání nástrojů počítejte i čas nasazení; často váží víc než první rok předplatného."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Kolik stojí menu s QR kódem měsíčně?",
-          "a": "Nástroje s paušálním předplatným se obvykle pohybují mezi 10 a 40 € za provozovnu měsíčně. IQ Rest začíná na 9,90 € bez provize z objednávek."
+          "a": "Nástroje s paušálním předplatným se obvykle pohybují mezi 10 a 40 € za provozovnu měsíčně. QRgine začíná na 9,90 € bez provize z objednávek."
         },
         {
           "q": "Existuje bezplatné menu s QR kódem?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Platí se za stůl, nebo za restauraci?",
-          "a": "U IQ Rest za restauraci – stoly i QR kódy jsou bez omezení. Ověřte si to, než někde podepíšete, protože cena za stůl nebo za uživatele škáluje mizerně."
+          "a": "U QRgine za restauraci – stoly i QR kódy jsou bez omezení. Ověřte si to, než někde podepíšete, protože cena za stůl nebo za uživatele škáluje mizerně."
         },
         {
           "q": "Je nějaký zřizovací poplatek?",

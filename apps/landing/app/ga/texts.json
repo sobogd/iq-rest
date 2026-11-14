@@ -2,7 +2,7 @@
   "htmlLang": "ga",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Biachlár Digiteach, Scáileán Cistine agus Áirithintí — IQ Rest",
+    "title": "Biachlár Digiteach, Scáileán Cistine agus Áirithintí — QRgine",
     "description": "Bainistigh do bhialann ó aip amháin: biachlár digiteach ilteangach, scáileán cistine agus áirithintí 24/7. Seol in 5 nóiméad. 14 lá saor in aisce, ní gá cárta.",
     "canonical": "https://iq-rest.com/ga",
     "ogLocale": "ga_IE",
@@ -10,7 +10,7 @@
     "ogDescription": "Bainistigh do bhialann ó aip amháin: biachlár digiteach ilteangach, scáileán cistine agus áirithintí 24/7. Seol in 5 nóiméad. 14 lá saor in aisce, ní gá cárta."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Ardán Bainistíochta Bialainne"
+    "appName": "QRgine — Ardán Bainistíochta Bialainne"
   },
   "ctaText": "Bain triail as saor in aisce",
   "homeCtaText": "Bain triail as saor in aisce",
@@ -82,7 +82,7 @@
     "quoteStart": "Bhí ár gcaifé féin ag mo bhean chéile agus agam féin agus tá a fhios againn conas a oibríonn an bhialann ón taobh istigh: glacadh orduithe, áirithintí, obair urláir agus cistine. Theastaigh uainn uirlis amháin — nua-aimseartha, éasca le socrú agus soiléir ar an gcéad amharc —",
     "quoteAccent": "sin mar a tháinig an smaoineamh don ardán a thógaimid anois d'úinéirí bialainne eile.",
     "sign": "Bogdan Sokolov · bunaitheoir, iar-úinéir caifé",
-    "photoAlt": "Bogdan Sokolov, bunaitheoir IQ Rest"
+    "photoAlt": "Bogdan Sokolov, bunaitheoir QRgine"
   },
   "pricing": {
     "badge": "Gan aon choimisiún · Gan aon chonarthaí",
@@ -108,7 +108,7 @@
     "headingAccent": "coitianta",
     "sub": "Na rudaí is minice a fhiafraíonn úinéirí bialainne sula gcláraíonn siad. Mura bhfaigheann tú do fhreagra — seol teachtaireacht chugainn ar WhatsApp, freagraíonn foireann fhíor, ní róbat.",
     "whatsappCta": "Seol teachtaireacht chugainn ar WhatsApp",
-    "whatsappPrefill": "Dia duit, tá ceist agam faoi IQ Rest",
+    "whatsappPrefill": "Dia duit, tá ceist agam faoi QRgine",
     "items": [
       {
         "q": "Cad atá san áireamh sa triail agus cad a tharlaíonn ina dhiaidh?",
@@ -192,7 +192,7 @@
     "button": "Tóg mo phlean"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Gach ceart ar cosaint.",
+    "copyrightTemplate": "© {year} QRgine. Gach ceart ar cosaint.",
     "featuresHeading": "Gnéithe",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blag faoi theicneolaíocht bialainne — IQ Rest",
+    "metaTitle": "Blag faoi theicneolaíocht bialainne — QRgine",
     "metaDescription": "Treoracha agus comparáidí faoi bhiachláir dhigiteacha, orduithe QR, scáileáin chistine agus áirithintí — léitheoireacht phraiticiúil d'úinéirí bialainne.",
     "title": "Blag",
     "intro": "Treoracha agus comparáidí faoi bhiachláir dhigiteacha, orduithe QR, scáileáin chistine agus reáchtáil bialainne.",

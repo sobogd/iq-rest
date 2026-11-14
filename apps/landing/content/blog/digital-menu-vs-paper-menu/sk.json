@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digitálne menu vs papierové: porovnanie nákladov | IQ Rest",
+    "title": "Digitálne menu vs papierové: porovnanie nákladov | QRgine",
     "description": "Koľko reštauráciu skutočne stojí papierové menu v porovnaní s digitálnym QR menu: tlač, aktualizácie, preklady, rýchlosť objednávok. Porovnanie s číslami."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Naskenujte papierové menu — IQ Rest ho prečíta a digitálne menu zostaví automaticky.",
+        "Naskenujte papierové menu — QRgine ho prečíta a digitálne menu zostaví automaticky.",
         "Skontrolujte ceny, doplňte fotky tam, kde na nich záleží.",
         "Vytlačte jeden QR kód na každý stôl.",
         "Čokoľvek kedykoľvek upravte priamo z telefónu."

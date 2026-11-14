@@ -3,13 +3,13 @@
   "slug": "objednavkovy-system-restauracia",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Prijímanie objednávok — Hosť a čašník | IQ Rest",
+    "title": "Prijímanie objednávok — Hosť a čašník | QRgine",
     "description": "Prijímanie objednávok z telefónu alebo tabletu: mapa stolov, rozdelenie účtu, statusy a poznámky. Hostia objednávajú priamo od stola. 14 dní zadarmo.",
     "canonical": "https://iq-rest.com/sk/objednavkovy-system-restauracia",
     "ogLocale": "sk_SK",
     "ogTitle": "Prijímanie objednávok — Hosť a čašník",
     "ogDescription": "Hosť pri stole alebo čašník s telefónom — objednávka ide okamžite do kuchyne. Mapa stolov, rozdelenie účtu, statusy a poznámky.",
-    "brandLine": "IQ Rest — Prijímanie objednávok"
+    "brandLine": "QRgine — Prijímanie objednávok"
   },
   "hero": {
     "headline": "Objednávky od stola —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom prijímania objednávok v IQ Rest. Ak nenájdete svoju otázku — napíšte nám na WhatsApp.",
+    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom prijímania objednávok v QRgine. Ak nenájdete svoju otázku — napíšte nám na WhatsApp.",
     "items": [
       {
         "q": "Môže pracovať viacero čašníkov súčasne z rôznych zariadení?",

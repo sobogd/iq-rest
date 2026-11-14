@@ -3,13 +3,13 @@
   "slug": "virtuves-ekranas",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Virtuvės ekranas (KDS) restoranams | IQ Rest",
+    "title": "Virtuvės ekranas (KDS) restoranams | QRgine",
     "description": "KDS virtuvės ekranas restoranams: užsakymai iš salės ir QR meniu patenka į virėjo ekraną. Stulpeliai pagal staliukus, statusai ir filtrai. 14 dienų nemokamai.",
     "canonical": "https://iq-rest.com/lt/virtuves-ekranas",
     "ogLocale": "lt_LT",
     "ogTitle": "Virtuvės ekranų sistema (KDS) — Užsakymai tiesiai į virėjo ekraną",
     "ogDescription": "Užsakymai iš salės virėjo ekrane. Stulpeliai pagal staliukus, statusai ir laikmatis. Statusas keičiamas vienu paspaudimu.",
-    "brandLine": "IQ Rest — Virtuvės ekranas restoranams"
+    "brandLine": "QRgine — Virtuvės ekranas restoranams"
   },
   "hero": {
     "headline": "Virtuvės ekranų sistema (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Ko restoranų savininkai klausia apie virtuvės ekraną IQ Rest. Jei jūsų klausimo nėra – parašykite mums WhatsApp.",
+    "sub": "Ko restoranų savininkai klausia apie virtuvės ekraną QRgine. Jei jūsų klausimo nėra – parašykite mums WhatsApp.",
     "items": [
       {
         "q": "Kokius statusus turi patiekalai virtuvėje?",

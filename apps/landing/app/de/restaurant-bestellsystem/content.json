@@ -3,13 +3,13 @@
   "slug": "restaurant-bestellsystem",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Bestellannahme im Restaurant — Gast und Service | IQ Rest",
+    "title": "Bestellannahme im Restaurant — Gast und Service | QRgine",
     "description": "Bestellannahme im Restaurant über Handy oder Tablet: Tischplan, Rechnungen splitten, Optionen und Kommentare. Gäste bestellen am Tisch. 14 Tage kostenlos.",
     "canonical": "https://iq-rest.com/de/restaurant-bestellsystem",
     "ogLocale": "de_DE",
     "ogTitle": "Bestellannahme im Restaurant — Gast und Service",
     "ogDescription": "Ein Gast am Tisch oder der Service auf dem Handy — die Bestellung erreicht die Küche sofort. Tischplan, Rechnungen splitten, Status, Optionen und Kommentare.",
-    "brandLine": "IQ Rest — Bestellannahme im Restaurant"
+    "brandLine": "QRgine — Bestellannahme im Restaurant"
   },
   "hero": {
     "headline": "Bestellungen vom Tisch —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Was Gastronomen zur Bestellannahme in IQ Rest fragen. Wenn Ihre Frage nicht dabei ist — schreiben Sie uns auf WhatsApp.",
+    "sub": "Was Gastronomen zur Bestellannahme in QRgine fragen. Wenn Ihre Frage nicht dabei ist — schreiben Sie uns auf WhatsApp.",
     "items": [
       {
         "q": "Können mehrere Servicekräfte gleichzeitig von verschiedenen Geräten arbeiten?",

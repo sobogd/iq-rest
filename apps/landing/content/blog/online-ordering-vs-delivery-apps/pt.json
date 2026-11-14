@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Pedidos próprios vs apps de entrega: os números | IQ Rest",
+    "title": "Pedidos próprios vs apps de entrega: os números | QRgine",
     "description": "Quanto custa a comissão do marketplace por pedido, quantos pedidos precisa no canal próprio para se pagar e por que a maioria dos restaurantes deve usar os dois."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Preciso de um site para receber pedidos diretos?",
-          "a": "Não. O IQ Rest dá-lhe uma página de pedidos alojada com endereço próprio, que pode ligar a partir do Google, do Instagram ou de um código QR na mesa."
+          "a": "Não. O QRgine dá-lhe uma página de pedidos alojada com endereço próprio, que pode ligar a partir do Google, do Instagram ou de um código QR na mesa."
         }
       ]
     }

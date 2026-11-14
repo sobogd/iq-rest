@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Meniu QR gratuit: ce e gratis cu adevărat | IQ Rest",
+    "title": "Meniu QR gratuit: ce e gratis cu adevărat | QRgine",
     "description": "Meniurile QR gratuite există și unele sunt în regulă. Cum fac bani, ce limită te oprește prima și când gratuitul chiar e alegerea potrivită."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Nivel gratuit tipic",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "O perioadă gratuită e același lucru cu un plan gratuit?",
-          "a": "Nu. Perioada de probă e produsul complet pe timp limitat; planul gratuit e un produs limitat pentru totdeauna. IQ Rest oferă 14 zile de probă cu tot pornit și fără card."
+          "a": "Nu. Perioada de probă e produsul complet pe timp limitat; planul gratuit e un produs limitat pentru totdeauna. QRgine oferă 14 zile de probă cu tot pornit și fără card."
         },
         {
           "q": "Care e cel mai ieftin meniu QR cu plată?",
-          "a": "Planurile fixe pornesc în general de la vreo 10 € pe lună per locație. IQ Rest începe la 9,90 € — detalierea completă e în [cât costă un meniu cu cod QR](blog:qr-code-menu-cost)."
+          "a": "Planurile fixe pornesc în general de la vreo 10 € pe lună per locație. QRgine începe la 9,90 € — detalierea completă e în [cât costă un meniu cu cod QR](blog:qr-code-menu-cost)."
         },
         {
           "q": "Pot muta meniul de la o unealtă gratuită la una cu plată?",
-          "a": "De regulă da, și rareori trebuie să-l retastezi: IQ Rest poate citi o fotografie sau un PDF al meniului existent și reface pozițiile în vreo cinci minute."
+          "a": "De regulă da, și rareori trebuie să-l retastezi: QRgine poate citi o fotografie sau un PDF al meniului existent și reface pozițiile în vreo cinci minute."
         }
       ]
     }

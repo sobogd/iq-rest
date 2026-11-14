@@ -7,13 +7,13 @@
     "sub": "Tot allò en què es converteix un simple escaneig per als teus clients i la teva sala."
   },
   "meta": {
-    "title": "Carta QR per a restaurants | IQ Rest",
+    "title": "Carta QR per a restaurants | QRgine",
     "description": "Carta QR per a restaurants: els clients escanegen el codi QR de la taula, obren la carta al navegador i demanen en el seu propi idioma. 14 dies gratis, sense targeta.",
     "canonical": "https://iq-rest.com/ca/codi-qr-restaurant",
     "ogLocale": "ca_ES",
     "ogTitle": "Carta QR per a restaurants",
     "ogDescription": "Un QR a la taula, la carta al mòbil: fotos, al·lèrgens, 35 idiomes i actualitzacions en temps real.",
-    "brandLine": "IQ Rest — Carta QR per a restaurants"
+    "brandLine": "QRgine — Carta QR per a restaurants"
   },
   "hero": {
     "headline": "Carta QR:\nescanejar i demanar",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "El que pregunten els restauradors sobre la carta QR d'IQ Rest. No trobes la teva pregunta? Escriu-nos per WhatsApp.",
+    "sub": "El que pregunten els restauradors sobre la carta QR d'QRgine. No trobes la teva pregunta? Escriu-nos per WhatsApp.",
     "items": [
       {
-        "q": "Com funciona la carta QR d'IQ Rest?",
+        "q": "Com funciona la carta QR d'QRgine?",
         "a": "Cada taula té un codi QR imprès. Els clients l'escanegen amb la càmera del mòbil i el navegador obre la carta del restaurant: fotos, descripcions, al·lèrgens i preus actualitzats. Ni els clients ni el personal han de descarregar cap app."
       },
       {

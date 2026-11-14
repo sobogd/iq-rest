@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kuidas teha QR-menüü: 3 võimalust | IQ Rest",
+    "title": "Kuidas teha QR-menüü: 3 võimalust | QRgine",
     "description": "Kolm viisi restorani QR-menüü tegemiseks: tasuta generaator ja PDF, menüükoostaja või täislahendus. Mida need maksavad ja kus need katki lähevad."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Vii menüü digitaalsesse vormi. 80 rea sisestamine on suurim ajaraiskaja – IQ Rest loeb sinu paberimenüü fotot ja loob road ja hinnad sinu eest, mis muudab terve õhtu umbes viieks minutiks.",
+        "Vii menüü digitaalsesse vormi. 80 rea sisestamine on suurim ajaraiskaja – QRgine loeb sinu paberimenüü fotot ja loob road ja hinnad sinu eest, mis muudab terve õhtu umbes viieks minutiks.",
         "Korrasta struktuur enne kujundust. Rühmita nii, nagu külalised tellivad (eelroad, pearoad, joogid), mitte nii, nagu su köök on korraldatud. Pikad lamedad nimekirjad tapavad kerimise.",
         "Pane fotod sinna, kus need otsust muudavad. Iga roa pildistamine on halvem kui viis head pilti nende roogade juures, mida tahad müüa.",
         "Märgi allergeenid kohe, mitte hiljem. EL-is on neid niikuinii vaja ja nende tagantjärele lisamine 80 reale on piin.",

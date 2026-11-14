@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Cad a chosnaíonn biachlár QR i ndáiríre | IQ Rest",
+    "title": "Cad a chosnaíonn biachlár QR i ndáiríre | QRgine",
     "description": "An costas fírinneach ar bhiachlár le cód QR: uirlisí saor in aisce, síntiúis mhíosúla, praghas in aghaidh an ionaid, coimisiúin ar orduithe agus an t-am socraithe."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "Tá IQ Rest sa tríú ró: **ó €9.90 sa mhí in aghaidh an ionaid**, gan choimisiún ar orduithe, 14 lá saor in aisce gan chárta. Gearraimid ar an ionad, ní ar an bhfreastalaí, mar cuireann muirearú in aghaidh an úsáideora pionós ar na hionaid a bhfuil an t-athrú foirne is mó iontu."
+      "text": "Tá QRgine sa tríú ró: **ó €9.90 sa mhí in aghaidh an ionaid**, gan choimisiún ar orduithe, 14 lá saor in aisce gan chárta. Gearraimid ar an ionad, ní ar an bhfreastalaí, mar cuireann muirearú in aghaidh an úsáideora pionós ar na hionaid a bhfuil an t-athrú foirne is mó iontu."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Sin an fáth go bhfuil iompórtáil an bhiachláir níos tábhachtaí ná mar a chloiseann sé. Léann IQ Rest grianghraf de do bhiachlár páipéir agus cruthaíonn sé na míreanna go huathoibríoch, rud a dhéanann cúig nóiméad as leathlá. Cuir an t-am socraithe san áireamh agus tú ag cur uirlisí i gcomparáid; is minic gur troime é ná an chéad bhliain síntiúis."
+      "text": "Sin an fáth go bhfuil iompórtáil an bhiachláir níos tábhachtaí ná mar a chloiseann sé. Léann QRgine grianghraf de do bhiachlár páipéir agus cruthaíonn sé na míreanna go huathoibríoch, rud a dhéanann cúig nóiméad as leathlá. Cuir an t-am socraithe san áireamh agus tú ag cur uirlisí i gcomparáid; is minic gur troime é ná an chéad bhliain síntiúis."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Cé mhéad a chosnaíonn biachlár le cód QR sa mhí?",
-          "a": "De ghnáth bíonn uirlisí síntiúis chothroim idir €10 agus €40 in aghaidh an ionaid sa mhí. Tosaíonn IQ Rest ag €9.90 gan choimisiún ar orduithe."
+          "a": "De ghnáth bíonn uirlisí síntiúis chothroim idir €10 agus €40 in aghaidh an ionaid sa mhí. Tosaíonn QRgine ag €9.90 gan choimisiún ar orduithe."
         },
         {
           "q": "An bhfuil biachlár QR saor in aisce ann?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "An íocaim in aghaidh an bhoird nó in aghaidh na bialainne?",
-          "a": "Le IQ Rest, in aghaidh na bialainne — tá boird agus cóid QR gan teorainn. Seiceáil é sin sula síníonn tú áit ar bith, mar scálaíonn praghsáil in aghaidh boird nó úsáideora go dona."
+          "a": "Le QRgine, in aghaidh na bialainne — tá boird agus cóid QR gan teorainn. Seiceáil é sin sula síníonn tú áit ar bith, mar scálaíonn praghsáil in aghaidh boird nó úsáideora go dona."
         },
         {
           "q": "An bhfuil táille socraithe ann?",

@@ -3,13 +3,13 @@
   "slug": "rezervare-mese",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Rezervări mese 24/7 pentru restaurante | IQ Rest",
+    "title": "Rezervări mese 24/7 pentru restaurante | QRgine",
     "description": "Rezervări mese 24/7: oaspeții își rezervă singuri masa prin meniul QR sau site. Calendar pe mese, confirmări automate și mementouri. 14 zile gratuit.",
     "canonical": "https://iq-rest.com/ro/rezervare-mese",
     "ogLocale": "ro_RO",
     "ogTitle": "Rezervări mese 24/7 — Oaspeții rezervă singuri",
     "ogDescription": "Oaspeții rezervă mese prin meniul QR sau site. Calendar, confirmări automate, mementouri. Niciun oaspete ratat.",
-    "brandLine": "IQ Rest — Rezervări mese restaurant"
+    "brandLine": "QRgine — Rezervări mese restaurant"
   },
   "hero": {
     "headline": "Rezervări mese 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Calendarul de rezervări în panoul IQ Rest pe două tablete: o grilă zilnică pe mese și un calendar lunar"
+        "alt": "Calendarul de rezervări în panoul QRgine pe două tablete: o grilă zilnică pe mese și un calendar lunar"
       }
     }
   ],
   "faq": {
-    "sub": "Ce întreabă proprietarii de restaurante despre rezervările de mese în IQ Rest. Dacă nu găsești întrebarea ta — scrie-ne pe WhatsApp.",
+    "sub": "Ce întreabă proprietarii de restaurante despre rezervările de mese în QRgine. Dacă nu găsești întrebarea ta — scrie-ne pe WhatsApp.",
     "items": [
       {
         "q": "Pot alege zilele și orele în care rezervarea este disponibilă?",

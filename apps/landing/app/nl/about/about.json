@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Over IQ Rest — Wie we zijn, Contact en Juridische Gegevens",
-    "description": "Wie er achter IQ Rest zit, hoe je ons kunt bereiken en de gegevens van de serviceprovider: e-mail, WhatsApp, juridische informatie.",
+    "title": "Over QRgine — Wie we zijn, Contact en Juridische Gegevens",
+    "description": "Wie er achter QRgine zit, hoe je ons kunt bereiken en de gegevens van de serviceprovider: e-mail, WhatsApp, juridische informatie.",
     "canonical": "https://iq-rest.com/nl/about",
     "ogLocale": "nl_NL",
-    "ogTitle": "Over IQ Rest",
-    "ogDescription": "Wie er achter IQ Rest zit, contactgegevens voor support en de juridische gegevens van de serviceprovider."
+    "ogTitle": "Over QRgine",
+    "ogDescription": "Wie er achter QRgine zit, contactgegevens voor support en de juridische gegevens van de serviceprovider."
   },
   "heading": "Van ons eigen café",
   "headingAccent": "naar een platform voor restaurants",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "zaken draaien op IQ Rest"
+      "label": "zaken draaien op QRgine"
     },
     {
       "value": "15",
       "label": "landen waar onze klanten zich bevinden"
     }
   ],
-  "waPrefill": "Hallo, ik heb een vraag over IQ Rest",
+  "waPrefill": "Hallo, ik heb een vraag over QRgine",
   "contacts": [
     {
       "icon": "Mail",

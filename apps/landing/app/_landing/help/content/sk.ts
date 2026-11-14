@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // SK help guide.
 export const sk: HelpDoc = {
-  metaTitle: "Ako používať IQ Rest — návod krok za krokom",
+  metaTitle: "Ako používať QRgine — návod krok za krokom",
   metaDescription:
-    "Kompletný návod na IQ Rest: registrácia, menu, objednávky, rezervácie, kuchynský displej a nastavenia — pre reštaurácie.",
+    "Kompletný návod na QRgine: registrácia, menu, objednávky, rezervácie, kuchynský displej a nastavenia — pre reštaurácie.",
   h1: "Pomoc",
-  intro: "Podrobný návod na IQ Rest — od registrácie po jemné nastavenia.",
+  intro: "Podrobný návod na QRgine — od registrácie po jemné nastavenia.",
   banner: {
     title: "Je to jednoduchšie, než to vyzerá",
     sub: "Návod krok za krokom: od registrácie po jemné nastavenia — zvládne to každý.",
@@ -22,7 +22,7 @@ export const sk: HelpDoc = {
         { type: "h3", text: "Čo je tento systém" },
         {
           type: "p",
-          text: "IQ Rest je služba pre reštaurácie: vytvoríte online menu s QR kódom, prijímate objednávky a rezervácie stolov priamo z telefónov hostí, zatiaľ čo v kuchyni a u čašníkov bežia tablety-terminály. Všetko sa spravuje z jedného administračného panela (dashboardu).",
+          text: "QRgine je služba pre reštaurácie: vytvoríte online menu s QR kódom, prijímate objednávky a rezervácie stolov priamo z telefónov hostí, zatiaľ čo v kuchyni a u čašníkov bežia tablety-terminály. Všetko sa spravuje z jedného administračného panela (dashboardu).",
         },
         { type: "h3", text: "Registrácia a prihlásenie" },
         { type: "p", text: "Prihlásiť sa môžete tromi spôsobmi — vyberte si na prihlasovacej obrazovke:" },

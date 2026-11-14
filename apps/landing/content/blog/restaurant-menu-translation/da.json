@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Oversætte menuen: hvad skal oversættes | IQ Rest",
+    "title": "Oversætte menuen: hvad skal oversættes | QRgine",
     "description": "Hvorfor maskinoversatte retnavne går galt, hvilke dele af menuen der skal blive på originalsproget, og hvordan du kører fire sprog uden fire menuer."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "En [digital menu](route:/digital-menu) vender det om. Gæstens telefon oplyser allerede sit sprog, så menuen åbner på det rigtige, uden at nogen vælger. IQ Rest oversætter menuen automatisk, og fordi oversættelserne hænger på retten, ændrer én prisændring alle sprog. At tilføje et femte sprog koster ingenting og kræver ingen genoptryk."
+      "text": "En [digital menu](route:/digital-menu) vender det om. Gæstens telefon oplyser allerede sit sprog, så menuen åbner på det rigtige, uden at nogen vælger. QRgine oversætter menuen automatisk, og fordi oversættelserne hænger på retten, ændrer én prisændring alle sprog. At tilføje et femte sprog koster ingenting og kræver ingen genoptryk."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Én menu, alle sprog",
-      "text": "IQ Rest oversætter din menu automatisk og åbner den på gæstens sprog. Ret et pris én gang, og alle sprog opdateres. 14 dage gratis.",
+      "text": "QRgine oversætter din menu automatisk og åbner den på gæstens sprog. Ret et pris én gang, og alle sprog opdateres. 14 dage gratis.",
       "buttonLabel": "Se den automatiske oversættelse",
       "routeKey": "/digital-menu"
     },

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR PDF-ile ei ole digitaalne menüü | IQ Rest",
+    "title": "QR PDF-ile ei ole digitaalne menüü | QRgine",
     "description": "PDF-ile viitav QR-kood on kõige levinum ja kõige halvem digimenüü lahendus. Mida see maksab loetavuses, uuendustes, allergeenides ja tellimustes."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Tee paberimenüüst foto või lae üles PDF ise.",
-        "IQ Rest loeb selle ja loob kategooriad, road ja hinnad — umbes viis minutit terve õhtu asemel.",
+        "QRgine loeb selle ja loob kategooriad, road ja hinnad — umbes viis minutit terve õhtu asemel.",
         "Kontrolli hindu ja paranda see, mille lugemine valesti tõlgendas.",
         "Suuna olemasolevad QR-koodid uuele menüüle või trüki uued laua kaupa."
       ]

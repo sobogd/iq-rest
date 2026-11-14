@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR do PDF-a to nie jest cyfrowe menu | IQ Rest",
+    "title": "QR do PDF-a to nie jest cyfrowe menu | QRgine",
     "description": "Kod QR prowadzący do PDF-a to najczęstsze i najgorsze rozwiązanie. Ile kosztuje cię w czytelności, aktualizacjach, alergenach i zamówieniach."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Zrób zdjęcie papierowej karty albo wgraj sam PDF.",
-        "IQ Rest odczyta go i utworzy kategorie, pozycje i ceny — około pięciu minut zamiast całego wieczoru.",
+        "QRgine odczyta go i utworzy kategorie, pozycje i ceny — około pięciu minut zamiast całego wieczoru.",
         "Sprawdź ceny i popraw to, co odczyt źle zinterpretował.",
         "Skieruj istniejące kody QR na nowe menu albo wydrukuj nowe, po jednym na stolik."
       ]

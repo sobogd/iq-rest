@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR-Code auf ein PDF: warum das nicht reicht | IQ Rest",
+    "title": "QR-Code auf ein PDF: warum das nicht reicht | QRgine",
     "description": "Ein QR-Code, der auf ein PDF zeigt, ist die häufigste digitale Speisekarte und die schlechteste. Was sie Sie bei Lesbarkeit, Updates, Allergenen und Bestellungen kostet."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Fotografieren Sie die Papierkarte, oder laden Sie das PDF selbst hoch.",
-        "IQ Rest liest es und legt Kategorien, Artikel und Preise an – etwa fünf Minuten statt eines ganzen Abends.",
+        "QRgine liest es und legt Kategorien, Artikel und Preise an – etwa fünf Minuten statt eines ganzen Abends.",
         "Prüfen Sie die Preise und korrigieren Sie, was der Scan falsch gelesen hat.",
         "Lassen Sie Ihre vorhandenen QR-Codes auf die neue Karte zeigen, oder drucken Sie neue pro Tisch."
       ]

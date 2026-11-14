@@ -22,7 +22,7 @@ export function Hero({
   microcopy,
   locale,
   imageSrc = "/landing/hero-cafe.webp",
-  imageAlt = "Two guests at a sunlit cafe table holding phones with the IQ Rest QR menu on screen",
+  imageAlt = "Two guests at a sunlit cafe table holding phones with the QRgine QR menu on screen",
   demoVariant = "phone",
 }: HeroProps) {
   return (

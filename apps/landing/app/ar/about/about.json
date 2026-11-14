@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "من نحن — فريق IQ Rest، جهات الاتصال والتفاصيل القانونية",
-    "description": "من يقف خلف IQ Rest، كيف تتواصل معنا وتفاصيل مشغل الخدمة: البريد الإلكتروني، WhatsApp، والمعلومات القانونية.",
+    "title": "من نحن — فريق QRgine، جهات الاتصال والتفاصيل القانونية",
+    "description": "من يقف خلف QRgine، كيف تتواصل معنا وتفاصيل مشغل الخدمة: البريد الإلكتروني، WhatsApp، والمعلومات القانونية.",
     "canonical": "https://iq-rest.com/ar/about",
     "ogLocale": "en_US",
-    "ogTitle": "من نحن — IQ Rest",
-    "ogDescription": "من يقف خلف IQ Rest، جهات الاتصال للدعم والتفاصيل القانونية لمشغل الخدمة."
+    "ogTitle": "من نحن — QRgine",
+    "ogDescription": "من يقف خلف QRgine، جهات الاتصال للدعم والتفاصيل القانونية لمشغل الخدمة."
   },
   "heading": "من مقهانا الخاص",
   "headingAccent": "إلى منصة للمطاعم",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "أماكن تعمل على IQ Rest"
+      "label": "أماكن تعمل على QRgine"
     },
     {
       "value": "15",
       "label": "دولة يتواجد فيها عملاؤنا"
     }
   ],
-  "waPrefill": "مرحباً، لدي سؤال حول IQ Rest",
+  "waPrefill": "مرحباً، لدي سؤال حول QRgine",
   "contacts": [
     {
       "icon": "Mail",

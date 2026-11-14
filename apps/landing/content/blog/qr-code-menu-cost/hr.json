@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Koliko stvarno košta QR jelovnik | IQ Rest",
+    "title": "Koliko stvarno košta QR jelovnik | QRgine",
     "description": "Koliko doista košta jelovnik s QR kodom: besplatni alati, mjesečne pretplate, cijena po lokalu, provizije na narudžbe i skriveno vrijeme uvođenja."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest je u trećem retku: **od 9,90 € mjesečno po lokalu**, bez provizije na narudžbe, 14 dana besplatno bez kartice. Naplaćujemo lokal, a ne konobara, jer naplata po korisniku kažnjava upravo one lokale s najvećom fluktuacijom osoblja."
+      "text": "QRgine je u trećem retku: **od 9,90 € mjesečno po lokalu**, bez provizije na narudžbe, 14 dana besplatno bez kartice. Naplaćujemo lokal, a ne konobara, jer naplata po korisniku kažnjava upravo one lokale s najvećom fluktuacijom osoblja."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Zato uvoz jelovnika znači više nego što zvuči. IQ Rest pročita fotografiju vašeg papirnatog jelovnika i sam stvori stavke, pa se to pola dana pretvara u otprilike pet minuta. Uračunajte vrijeme uvođenja kad uspoređujete alate; često teži više od prve godine pretplate."
+      "text": "Zato uvoz jelovnika znači više nego što zvuči. QRgine pročita fotografiju vašeg papirnatog jelovnika i sam stvori stavke, pa se to pola dana pretvara u otprilike pet minuta. Uračunajte vrijeme uvođenja kad uspoređujete alate; često teži više od prve godine pretplate."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Koliko mjesečno košta jelovnik s QR kodom?",
-          "a": "Alati s fiksnom pretplatom obično idu 10-40 € po lokalu mjesečno. IQ Rest kreće od 9,90 € bez provizije na narudžbe."
+          "a": "Alati s fiksnom pretplatom obično idu 10-40 € po lokalu mjesečno. QRgine kreće od 9,90 € bez provizije na narudžbe."
         },
         {
           "q": "Postoji li besplatan jelovnik s QR kodom?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Plaća li se po stolu ili po restoranu?",
-          "a": "Kod IQ Resta po restoranu — stolovi i QR kodovi su neograničeni. Provjerite to prije nego što bilo gdje potpišete, jer cijena po stolu ili po korisniku loše skalira."
+          "a": "Kod QRginea po restoranu — stolovi i QR kodovi su neograničeni. Provjerite to prije nego što bilo gdje potpišete, jer cijena po stolu ili po korisniku loše skalira."
         },
         {
           "q": "Postoji li naknada za uspostavu?",

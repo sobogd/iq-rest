@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Chi siamo — IQ Rest: l'azienda, i contatti e i dati legali",
-    "description": "Chi c'è dietro IQ Rest, come contattarci e i dati dell'operatore del servizio: email, WhatsApp, informazioni legali.",
+    "title": "Chi siamo — QRgine: l'azienda, i contatti e i dati legali",
+    "description": "Chi c'è dietro QRgine, come contattarci e i dati dell'operatore del servizio: email, WhatsApp, informazioni legali.",
     "canonical": "https://iq-rest.com/it/chi-siamo",
     "ogLocale": "it_IT",
-    "ogTitle": "Chi siamo — IQ Rest",
-    "ogDescription": "Chi c'è dietro IQ Rest, i contatti del supporto e i dati dell'operatore del servizio."
+    "ogTitle": "Chi siamo — QRgine",
+    "ogDescription": "Chi c'è dietro QRgine, i contatti del supporto e i dati dell'operatore del servizio."
   },
   "heading": "Dal proprio locale",
   "headingAccent": "a una piattaforma per ristoranti",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "locali lavorano con IQ Rest"
+      "label": "locali lavorano con QRgine"
     },
     {
       "value": "15",
       "label": "paesi in cui abbiamo clienti"
     }
   ],
-  "waPrefill": "Salve, ho una domanda su IQ Rest",
+  "waPrefill": "Salve, ho una domanda su QRgine",
   "contactsHeading": "Come contattarci",
   "contacts": [
     {

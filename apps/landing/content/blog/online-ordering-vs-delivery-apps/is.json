@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Eigin pöntunarsíða vs sendingarforrit: raunverulegu tölurnar | IQ Rest",
+    "title": "Eigin pöntunarsíða vs sendingarforrit: raunverulegu tölurnar | QRgine",
     "description": "Hvað þóknun markaðstorgsins kostar á hverja pöntun, hversu margar pantanir þarf í eigin rás til að standa á sléttu og hvers vegna flestir veitingastaðir ættu að nota bæði."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Þarf ég vefsíðu til að taka við beinum pöntunum?",
-          "a": "Nei. IQ Rest gefur þér hýsta pöntunarsíðu með eigin slóð, sem þú getur tengt frá Google, Instagram eða QR-kóða á borðinu."
+          "a": "Nei. QRgine gefur þér hýsta pöntunarsíðu með eigin slóð, sem þú getur tengt frá Google, Instagram eða QR-kóða á borðinu."
         }
       ]
     }

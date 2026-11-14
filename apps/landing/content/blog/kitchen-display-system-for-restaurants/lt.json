@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Virtuvės ekranas: ar jums reikia KDS? | IQ Rest",
+    "title": "Virtuvės ekranas: ar jums reikia KDS? | QRgine",
     "description": "Ką daro KDS, kiek iš tikrųjų kainuoja įranga, kaip jį paleisti planšetėje, kurią jau turite, ir kurioms virtuvėms geriau su popieriniais lapeliais."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Daugumai virtuvių to nereikia. IQ Rest [virtuvės ekranas](route:/kitchen-display) veikia naršyklėje, tad įranga gali būti planšetė, kurią jau turite, pigi Android planšetė arba senas nešiojamasis su monitoriumi. Įdėkite į nuo purslų apsaugotą dėklą, pritvirtinkite už garų linijos, ir ribinės išlaidos — sieninis laikiklis."
+      "text": "Daugumai virtuvių to nereikia. QRgine [virtuvės ekranas](route:/kitchen-display) veikia naršyklėje, tad įranga gali būti planšetė, kurią jau turite, pigi Android planšetė arba senas nešiojamasis su monitoriumi. Įdėkite į nuo purslų apsaugotą dėklą, pritvirtinkite už garų linijos, ir ribinės išlaidos — sieninis laikiklis."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Ar galiu paleisti KDS paprastoje planšetėje?",
-          "a": "Taip. IQ Rest virtuvės ekranas veikia naršyklėje, tad tinka bet kuri pastarųjų penkerių metų planšetė ar nešiojamasis. Naudokite nuo purslų apsaugotą dėklą."
+          "a": "Taip. QRgine virtuvės ekranas veikia naršyklėje, tad tinka bet kuri pastarųjų penkerių metų planšetė ar nešiojamasis. Naudokite nuo purslų apsaugotą dėklą."
         },
         {
           "q": "Ar KDS reikia interneto?",

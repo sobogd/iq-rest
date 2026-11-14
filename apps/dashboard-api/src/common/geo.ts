@@ -31,7 +31,7 @@ export function getRequestCurrency(req: Request): string {
   return getMenuCurrencyByCountry(getRequestCountry(req));
 }
 
-/** IQ Rest billing currency. A primitive, hardcoded country→currency map
+/** QRgine billing currency. A primitive, hardcoded country→currency map
  *  (see stripe.ts `BILLING_CURRENCY_BY_COUNTRY`). We intentionally do NOT read
  *  the nginx `x-currency` header or the `geo_currency` cookie — currency is a
  *  direct function of the detected country only, so it can't drift away from it

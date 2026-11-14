@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Konyhai kijelző: kell neked KDS? | IQ Rest",
+    "title": "Konyhai kijelző: kell neked KDS? | QRgine",
     "description": "Mit csinál egy KDS, mennyibe kerül valójában a hardver, hogyan futtatod egy meglévő tableten, és mely konyháknak jobb a papírbon."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "A legtöbb konyhának erre nincs szüksége. Az IQ Rest [konyhai kijelzője](route:/kitchen-display) böngészőben fut, így a hardver lehet egy tablet, ami már megvan, egy olcsó Android tablet vagy egy régi laptop monitorral. Tedd fröccsenésálló tokba, szereld a gőzvonalon kívülre, és a határköltség egy fali tartó."
+      "text": "A legtöbb konyhának erre nincs szüksége. Az QRgine [konyhai kijelzője](route:/kitchen-display) böngészőben fut, így a hardver lehet egy tablet, ami már megvan, egy olcsó Android tablet vagy egy régi laptop monitorral. Tedd fröccsenésálló tokba, szereld a gőzvonalon kívülre, és a határköltség egy fali tartó."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Futtathatok KDS-t hétköznapi tableten?",
-          "a": "Igen. Az IQ Rest konyhai kijelzője böngészőben fut, így bármelyik elmúlt öt évből származó tablet vagy laptop megfelel. Használj fröccsenésálló tokot."
+          "a": "Igen. Az QRgine konyhai kijelzője böngészőben fut, így bármelyik elmúlt öt évből származó tablet vagy laptop megfelel. Használj fröccsenésálló tokot."
         },
         {
           "q": "Kell a KDS-hez internet?",

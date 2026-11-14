@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Darmowe menu QR: co jest naprawdę za darmo | IQ Rest",
+    "title": "Darmowe menu QR: co jest naprawdę za darmo | QRgine",
     "description": "Darmowe menu QR istnieją i niektóre są w porządku. Jak na tym zarabiają, który limit uderzy pierwszy i kiedy darmowe naprawdę wystarcza."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Typowy darmowy plan",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Czy darmowy okres próbny to to samo co darmowy plan?",
-          "a": "Nie. Okres próbny to pełny produkt przez ograniczony czas; darmowy plan to ograniczony produkt na zawsze. IQ Rest daje 14 dni próby ze wszystkim włączonym i bez karty."
+          "a": "Nie. Okres próbny to pełny produkt przez ograniczony czas; darmowy plan to ograniczony produkt na zawsze. QRgine daje 14 dni próby ze wszystkim włączonym i bez karty."
         },
         {
           "q": "Jakie jest najtańsze płatne menu QR?",
-          "a": "Stałe plany zaczynają się zwykle od około 10 € miesięcznie za lokal. IQ Rest startuje od 9,90 € — pełne wyliczenie jest w tekście [ile kosztuje menu z kodem QR](blog:qr-code-menu-cost)."
+          "a": "Stałe plany zaczynają się zwykle od około 10 € miesięcznie za lokal. QRgine startuje od 9,90 € — pełne wyliczenie jest w tekście [ile kosztuje menu z kodem QR](blog:qr-code-menu-cost)."
         },
         {
           "q": "Czy mogę przenieść menu z darmowego narzędzia do płatnego?",
-          "a": "Zwykle tak i rzadko trzeba je przepisywać: IQ Rest potrafi odczytać zdjęcie albo PDF istniejącej karty i odtworzyć pozycje w jakieś pięć minut."
+          "a": "Zwykle tak i rzadko trzeba je przepisywać: QRgine potrafi odczytać zdjęcie albo PDF istniejącej karty i odtworzyć pozycje w jakieś pięć minut."
         }
       ]
     }

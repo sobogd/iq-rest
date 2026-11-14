@@ -3,13 +3,13 @@
   "slug": "digitalni-meni-restoran",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digitalni meni za restorane | IQ Rest",
+    "title": "Digitalni meni za restorane | QRgine",
     "description": "Digitalni meni za vaš restoran: online meni sa slikama, alergenima, AI prevodom i ažuriranjem cena u realnom vremenu. 14 dana besplatno, bez kreditne kartice.",
     "canonical": "https://iq-rest.com/sr/digitalni-meni-restoran",
     "ogLocale": "sr_RS",
     "ogTitle": "Digitalni meni za restorane",
     "ogDescription": "Online verzija vašeg papirnog menija sa slikama, alergenima i AI prevodom. Cene se ažuriraju u realnom vremenu.",
-    "brandLine": "IQ Rest — Digitalni meni za restorane"
+    "brandLine": "QRgine — Digitalni meni za restorane"
   },
   "hero": {
     "headline": "Digitalni meni i sajt",
@@ -166,7 +166,7 @@
     "heading": "Zašto restorani biraju nas,",
     "headingAccent": "a ne druge sisteme",
     "sub": "Većina alata za meni staje kod QR koda. Ispod je ono što se zaista razlikuje u svakodnevnom radu. Bez imena — uporedite sa bilo kojim sistemom.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Drugi sistemi",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Šta ugostitelji pitaju o digitalnom meniju u IQ Rest-u. Ako vaše pitanje nije na listi — pišite nam na WhatsApp.",
+    "sub": "Šta ugostitelji pitaju o digitalnom meniju u QRgine-u. Ako vaše pitanje nije na listi — pišite nam na WhatsApp.",
     "items": [
       {
         "q": "Da li mi je potrebno tehničko znanje ili iskustvo sa CMS-om?",
         "a": "Nisu potrebne posebne veštine. Sve u admin panelu zahteva par klikova — bez kodiranja, bez rada sa izvornim fajlovima. Dodavanje jela traje par sekundi: naziv, cena, slika. Kompletno podešavanje menija obično staje u 30–60 minuta."
       },
       {
-        "q": "Šta je IQ Rest digitalni meni?",
+        "q": "Šta je QRgine digitalni meni?",
         "a": "To je online verzija vašeg menija dostupna gostima preko QR koda ili direktnog linka: slike jela, cene, alergeni, AI prevod na 35 jezika i ažuriranja u realnom vremenu. Meni radi na našim serverima — nema softvera za instalaciju ili održavanje, dovoljan je pregledač."
       },
       {

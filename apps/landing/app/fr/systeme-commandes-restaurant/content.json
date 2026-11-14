@@ -3,13 +3,13 @@
   "slug": "systeme-commandes-restaurant",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Prise de commandes au restaurant — Client et serveur | IQ Rest",
+    "title": "Prise de commandes au restaurant — Client et serveur | QRgine",
     "description": "Prise de commandes depuis un téléphone ou une tablette : plan de salle, addition partagée, statuts et options. Le client commande à table. 14 jours gratuits.",
     "canonical": "https://iq-rest.com/fr/systeme-commandes-restaurant",
     "ogLocale": "fr_FR",
     "ogTitle": "Prise de commandes au restaurant — Client et serveur",
     "ogDescription": "Le client à table ou le serveur depuis son téléphone — la commande part instantanément en cuisine. Plan de salle, addition partagée, statuts, options et commentaires.",
-    "brandLine": "IQ Rest — Prise de commandes au restaurant"
+    "brandLine": "QRgine — Prise de commandes au restaurant"
   },
   "hero": {
     "headline": "Les commandes à table —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Ce que les restaurateurs demandent sur la prise de commandes dans IQ Rest. Votre question n'est pas dans la liste ? Écrivez-nous sur WhatsApp.",
+    "sub": "Ce que les restaurateurs demandent sur la prise de commandes dans QRgine. Votre question n'est pas dans la liste ? Écrivez-nous sur WhatsApp.",
     "items": [
       {
         "q": "Plusieurs serveurs peuvent-ils travailler en même temps sur des appareils différents ?",

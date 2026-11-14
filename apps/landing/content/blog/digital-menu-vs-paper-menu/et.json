@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digimenüü vs pabermenüü: tegelikud kulud võrdluses | IQ Rest",
+    "title": "Digimenüü vs pabermenüü: tegelikud kulud võrdluses | QRgine",
     "description": "Mida pabermenüü restoranile tegelikult maksab võrreldes QR-digimenüüga: trükkimine, uuendused, tõlked, tellimiskiirus. Võrdlus päris numbritega."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Skanni oma pabermenüü — IQ Rest loeb selle ja koostab digimenüü automaatselt.",
+        "Skanni oma pabermenüü — QRgine loeb selle ja koostab digimenüü automaatselt.",
         "Kontrolli hinnad üle ja lisa fotod sinna, kus need loevad.",
         "Prindi igale lauale üks QR-kood.",
         "Uuenda mida tahes, millal tahes, otse telefonist."

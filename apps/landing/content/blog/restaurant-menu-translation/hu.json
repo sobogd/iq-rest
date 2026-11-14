@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Étlapfordítás: mit fordíts és mit ne | IQ Rest",
+    "title": "Étlapfordítás: mit fordíts és mit ne | QRgine",
     "description": "Miért sül el rosszul az ételnevek gépi fordítása, az étlap mely részei maradjanak az eredeti nyelven, és hogyan viszel négy nyelvet négy étlap nélkül."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "Egy [digitális étlap](route:/digital-menu) ezt megfordítja. A vendég telefonja amúgy is bejelenti a nyelvét, így az étlap a megfelelőn nyílik meg, anélkül hogy bárki választana. Az IQ Rest automatikusan fordítja az étlapot, és mivel a fordítások a tételhez tapadnak, egyetlen áremelés minden nyelvben átvezet. Egy ötödik nyelv hozzáadása nem kerül semmibe, és nem igényel újranyomtatást."
+      "text": "Egy [digitális étlap](route:/digital-menu) ezt megfordítja. A vendég telefonja amúgy is bejelenti a nyelvét, így az étlap a megfelelőn nyílik meg, anélkül hogy bárki választana. Az QRgine automatikusan fordítja az étlapot, és mivel a fordítások a tételhez tapadnak, egyetlen áremelés minden nyelvben átvezet. Egy ötödik nyelv hozzáadása nem kerül semmibe, és nem igényel újranyomtatást."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Egy étlap, minden nyelv",
-      "text": "Az IQ Rest automatikusan lefordítja az étlapodat, és a vendég nyelvén nyitja meg. Egyszer módosítasz egy árat, és minden nyelv frissül. 14 nap ingyen.",
+      "text": "Az QRgine automatikusan lefordítja az étlapodat, és a vendég nyelvén nyitja meg. Egyszer módosítasz egy árat, és minden nyelv frissül. 14 nap ingyen.",
       "buttonLabel": "Nézd meg az automatikus fordítást",
       "routeKey": "/digital-menu"
     },

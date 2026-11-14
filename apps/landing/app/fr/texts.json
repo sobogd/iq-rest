@@ -2,7 +2,7 @@
   "htmlLang": "fr",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Menu digital, écran de cuisine et réservations — IQ Rest",
+    "title": "Menu digital, écran de cuisine et réservations — QRgine",
     "description": "Gérez votre restaurant depuis une seule application : menu digital multilingue, écran de cuisine et réservations 24h/24. 14 jours gratuits, sans carte bancaire.",
     "canonical": "https://iq-rest.com/fr",
     "ogLocale": "fr_FR",
@@ -10,7 +10,7 @@
     "ogDescription": "Gérez votre restaurant depuis une seule application : menu digital multilingue, écran de cuisine et réservations 24h/24. Lancement en 5 minutes. 14 jours gratuits, sans carte bancaire."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Plateforme de gestion de restaurant"
+    "appName": "QRgine — Plateforme de gestion de restaurant"
   },
   "ctaText": "Essayer gratuitement",
   "homeCtaText": "Essayer gratuitement",
@@ -82,7 +82,7 @@
     "quoteStart": "Avec ma femme, nous avons dirigé notre propre café et nous connaissons de l'intérieur le quotidien d'un restaurant : prise de commandes, réservations, gestion de la salle et de la cuisine. Nous voulions un outil unique — moderne, simple à mettre en place et compréhensible au premier regard —",
     "quoteAccent": "c'est ainsi qu'est née l'idée de la plateforme que nous développons pour d'autres restaurateurs.",
     "sign": "Bogdan Sokolov · fondateur, ancien propriétaire de café",
-    "photoAlt": "Bogdan Sokolov, fondateur d'IQ Rest"
+    "photoAlt": "Bogdan Sokolov, fondateur d'QRgine"
   },
   "pricing": {
     "badge": "Sans commission · Sans engagement",
@@ -108,7 +108,7 @@
     "headingAccent": "fréquentes",
     "sub": "Ce que les restaurateurs demandent le plus souvent avant de se lancer. Vous ne trouvez pas votre réponse ? Écrivez-nous sur WhatsApp — ce sont des personnes qui répondent, pas un bot.",
     "whatsappCta": "Écrire sur WhatsApp",
-    "whatsappPrefill": "Bonjour, j'ai une question au sujet d'IQ Rest",
+    "whatsappPrefill": "Bonjour, j'ai une question au sujet d'QRgine",
     "items": [
       {
         "q": "Que comprend la période d'essai et que se passe-t-il ensuite ?",
@@ -192,7 +192,7 @@
     "button": "Calculer ma formule"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Tous droits réservés.",
+    "copyrightTemplate": "© {year} QRgine. Tous droits réservés.",
     "featuresHeading": "Fonctionnalités",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blog tech pour restaurants — IQ Rest",
+    "metaTitle": "Blog tech pour restaurants — QRgine",
     "metaDescription": "Guides et comparatifs sur les menus digitaux, la commande par QR, les écrans de cuisine et les réservations — pour les restaurateurs.",
     "title": "Blog",
     "intro": "Guides et comparatifs sur les menus digitaux, la commande par QR, les écrans de cuisine et la gestion du restaurant.",

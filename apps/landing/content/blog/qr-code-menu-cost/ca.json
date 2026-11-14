@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Què costa de debò una carta QR | IQ Rest",
+    "title": "Què costa de debò una carta QR | QRgine",
     "description": "Què costa realment una carta amb codi QR: eines gratuïtes, quotes mensuals, preu per local, comissions per comanda i el temps de muntatge."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest és a la tercera fila: **des de 9,90 € al mes per local**, sense comissió per comanda, 14 dies gratis i sense targeta. Cobrem pel local, no per cambrer, perquè cobrar per usuari penalitza precisament els locals amb més rotació de personal."
+      "text": "QRgine és a la tercera fila: **des de 9,90 € al mes per local**, sense comissió per comanda, 14 dies gratis i sense targeta. Cobrem pel local, no per cambrer, perquè cobrar per usuari penalitza precisament els locals amb més rotació de personal."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Per això importa més del que sembla la importació de la carta. IQ Rest llegeix una foto de la teva carta en paper i crea els plats automàticament, cosa que converteix aquesta mitja jornada en uns cinc minuts. Compta el temps de muntatge quan comparis eines; sovint pesa més que el primer any de subscripció."
+      "text": "Per això importa més del que sembla la importació de la carta. QRgine llegeix una foto de la teva carta en paper i crea els plats automàticament, cosa que converteix aquesta mitja jornada en uns cinc minuts. Compta el temps de muntatge quan comparis eines; sovint pesa més que el primer any de subscripció."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Quant costa al mes una carta amb codi QR?",
-          "a": "Les eines de subscripció plana solen anar de 10 a 40 € per local i mes. IQ Rest comença a 9,90 € sense comissió per comanda."
+          "a": "Les eines de subscripció plana solen anar de 10 a 40 € per local i mes. QRgine comença a 9,90 € sense comissió per comanda."
         },
         {
           "q": "Existeix alguna carta QR gratuïta?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Es paga per taula o per restaurant?",
-          "a": "Amb IQ Rest, per restaurant: taules i codis QR il·limitats. Comprova-ho abans de signar enlloc, perquè el preu per taula o per usuari escala fatal."
+          "a": "Amb QRgine, per restaurant: taules i codis QR il·limitats. Comprova-ho abans de signar enlloc, perquè el preu per taula o per usuari escala fatal."
         },
         {
           "q": "Hi ha quota d'alta?",

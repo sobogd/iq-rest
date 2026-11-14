@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "O IQ Rest — Kto sme, kontakty a právne informácie",
-    "description": "Kto stojí za IQ Rest, ako nás kontaktovať a údaje o prevádzkovateľovi služby: e-mail, WhatsApp, právne informácie.",
+    "title": "O QRgine — Kto sme, kontakty a právne informácie",
+    "description": "Kto stojí za QRgine, ako nás kontaktovať a údaje o prevádzkovateľovi služby: e-mail, WhatsApp, právne informácie.",
     "canonical": "https://iq-rest.com/sk/about",
     "ogLocale": "sk_SK",
-    "ogTitle": "O IQ Rest",
-    "ogDescription": "Kto stojí za IQ Rest, kontakty na podporu a právne informácie o prevádzkovateľovi služby."
+    "ogTitle": "O QRgine",
+    "ogDescription": "Kto stojí za QRgine, kontakty na podporu a právne informácie o prevádzkovateľovi služby."
   },
   "heading": "Od vlastnej kaviarne",
   "headingAccent": "k platforme pre reštaurácie",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "podnikov beží na IQ Rest"
+      "label": "podnikov beží na QRgine"
     },
     {
       "value": "15",
       "label": "krajín, kde sú naši klienti"
     }
   ],
-  "waPrefill": "Dobrý deň, mám otázku ohľadom IQ Rest",
+  "waPrefill": "Dobrý deň, mám otázku ohľadom QRgine",
   "contacts": [
     {
       "icon": "Mail",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ókeypis QR-matseðill: hvað er raunverulega frítt | IQ Rest",
+    "title": "Ókeypis QR-matseðill: hvað er raunverulega frítt | QRgine",
     "description": "Ókeypis QR-matseðlar eru til og sumir duga. Hvernig þeir afla tekna, hvaða takmörkun stoppar þig fyrst og hvenær ókeypis er í raun rétta valið."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Dæmigert ókeypis þrep",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Er ókeypis prufa það sama og ókeypis áskrift?",
-          "a": "Nei. Prufa er öll varan í takmarkaðan tíma; ókeypis áskrift er takmörkuð vara að eilífu. IQ Rest býður 14 daga prufu með allt kveikt og án korts."
+          "a": "Nei. Prufa er öll varan í takmarkaðan tíma; ókeypis áskrift er takmörkuð vara að eilífu. QRgine býður 14 daga prufu með allt kveikt og án korts."
         },
         {
           "q": "Hver er ódýrasti greiddi QR-matseðillinn?",
-          "a": "Fastar áskriftir byrja yfirleitt í kringum 10 € á mánuði á hvern stað. IQ Rest byrjar í 9,90 € — öll sundurliðunin er í [hvað matseðill með QR-kóða kostar](blog:qr-code-menu-cost)."
+          "a": "Fastar áskriftir byrja yfirleitt í kringum 10 € á mánuði á hvern stað. QRgine byrjar í 9,90 € — öll sundurliðunin er í [hvað matseðill með QR-kóða kostar](blog:qr-code-menu-cost)."
         },
         {
           "q": "Get ég flutt matseðilinn minn frá ókeypis verkfæri yfir í greitt?",
-          "a": "Yfirleitt já, og þú þarft sjaldan að slá hann inn aftur: IQ Rest getur lesið mynd eða PDF af núverandi matseðli og endurbyggt línurnar á um fimm mínútum."
+          "a": "Yfirleitt já, og þú þarft sjaldan að slá hann inn aftur: QRgine getur lesið mynd eða PDF af núverandi matseðli og endurbyggt línurnar á um fimm mínútum."
         }
       ]
     }

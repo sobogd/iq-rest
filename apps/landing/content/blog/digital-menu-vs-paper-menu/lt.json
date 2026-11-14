@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Skaitmeninis meniu ar popierinis: tikrosios kainos | IQ Rest",
+    "title": "Skaitmeninis meniu ar popierinis: tikrosios kainos | QRgine",
     "description": "Kiek popierinis meniu iš tiesų kainuoja restoranui, palyginti su QR meniu: spausdinimas, atnaujinimai, vertimai, užsakymų greitis. Palyginimas skaičiais."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Nuskenuok savo popierinį meniu — IQ Rest jį perskaito ir automatiškai sukuria skaitmeninį meniu.",
+        "Nuskenuok savo popierinį meniu — QRgine jį perskaito ir automatiškai sukuria skaitmeninį meniu.",
         "Patikrink kainas, pridėk nuotraukas ten, kur jos svarbios.",
         "Atspausdink po vieną QR kodą kiekvienam stalui.",
         "Atnaujink bet ką, bet kada, tiesiai iš telefono."

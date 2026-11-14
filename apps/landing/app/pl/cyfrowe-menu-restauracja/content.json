@@ -3,13 +3,13 @@
   "slug": "cyfrowe-menu-restauracja",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Cyfrowe menu dla restauracji | IQ Rest",
+    "title": "Cyfrowe menu dla restauracji | QRgine",
     "description": "Cyfrowe menu dla Twojej restauracji: menu online ze zdjęciami, alergenami, tłumaczeniem AI i aktualizacją cen na żywo. 14 dni za darmo, bez karty.",
     "canonical": "https://iq-rest.com/pl/cyfrowe-menu-restauracja",
     "ogLocale": "pl_PL",
     "ogTitle": "Cyfrowe menu dla restauracji",
     "ogDescription": "Wersja online Twojego papierowego menu ze zdjęciami, alergenami i tłumaczeniem AI. Ceny aktualizują się na żywo.",
-    "brandLine": "IQ Rest — Cyfrowe menu dla restauracji"
+    "brandLine": "QRgine — Cyfrowe menu dla restauracji"
   },
   "hero": {
     "headline": "Cyfrowe menu i strona www",
@@ -166,7 +166,7 @@
     "heading": "Dlaczego restauracje wybierają nas,",
     "headingAccent": "a nie inne systemy",
     "sub": "Większość narzędzi do menu kończy się na kodzie QR. Poniżej to, co naprawdę różni się w codziennej pracy. Bez nazw — porównaj z dowolnym systemem.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Inne systemy",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "O co pytają restauratorzy w związku z cyfrowym menu IQ Rest. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
+    "sub": "O co pytają restauratorzy w związku z cyfrowym menu QRgine. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
     "items": [
       {
         "q": "Czy potrzebuję wiedzy technicznej lub doświadczenia z CMS?",
         "a": "Nie są potrzebne żadne specjalne umiejętności. Wszystko w panelu to kwestia kilku kliknięć — bez kodowania i pracy na plikach źródłowych. Dodanie dania zajmuje sekundy: nazwa, cena, zdjęcie. Pełna konfiguracja menu mieści się zazwyczaj w 30–60 minutach."
       },
       {
-        "q": "Czym jest cyfrowe menu IQ Rest?",
+        "q": "Czym jest cyfrowe menu QRgine?",
         "a": "To wersja online Twojego menu, dostępna dla gości przez kod QR lub bezpośredni link: zdjęcia dań, ceny, alergeny, tłumaczenie AI na 35 języków i aktualizacje na żywo. Menu działa na naszych serwerach — nie trzeba nic instalować ani utrzymywać, wystarczy przeglądarka."
       },
       {

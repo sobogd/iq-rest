@@ -3,13 +3,13 @@
   "slug": "digital-menu-for-restaurants",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digital Menu for Restaurants | IQ Rest",
+    "title": "Digital Menu for Restaurants | QRgine",
     "description": "Digital menu for your restaurant: an online menu with photos, allergens, AI translation and real-time price updates. 14 days free, no credit card required.",
     "canonical": "https://iq-rest.com/digital-menu-for-restaurants",
     "ogLocale": "en_US",
     "ogTitle": "Digital Menu for Restaurants",
     "ogDescription": "An online version of your paper menu with photos, allergens and AI translation. Prices update in real time.",
-    "brandLine": "IQ Rest — Digital Menu for Restaurants"
+    "brandLine": "QRgine — Digital Menu for Restaurants"
   },
   "hero": {
     "headline": "Digital menu and website",
@@ -166,7 +166,7 @@
     "heading": "Why restaurants pick us",
     "headingAccent": "over other systems",
     "sub": "Most menu tools stop at a QR code. The rows below are what actually differs day to day. No brand call-outs — compare any system you like against them.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Other systems",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "What restaurateurs ask about the digital menu in IQ Rest. If your question isn't listed — message us on WhatsApp.",
+    "sub": "What restaurateurs ask about the digital menu in QRgine. If your question isn't listed — message us on WhatsApp.",
     "items": [
       {
         "q": "Do I need technical skills or CMS experience?",
         "a": "No special skills required. Everything in the admin panel takes a couple of taps — no coding, no working with source files. Adding a dish takes seconds: name, price, photo. A full menu setup usually fits within 30–60 minutes."
       },
       {
-        "q": "What is the IQ Rest digital menu?",
+        "q": "What is the QRgine digital menu?",
         "a": "It's an online version of your menu available to guests via QR code or a direct link: dish photos, prices, allergens, AI translation into 35 languages and real-time updates. The menu runs on our servers — there's no software to install or maintain, a browser is all you need."
       },
       {

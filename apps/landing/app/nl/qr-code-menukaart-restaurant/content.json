@@ -7,13 +7,13 @@
     "sub": "Alles wat één scan betekent voor je gasten en je zaak."
   },
   "meta": {
-    "title": "QR-menu voor Restaurants | IQ Rest",
+    "title": "QR-menu voor Restaurants | QRgine",
     "description": "QR-menu voor restaurants: gasten scannen de QR-code op tafel, openen het menu in hun browser en bestellen in hun eigen taal. 14 dagen gratis, geen creditcard nodig.",
     "canonical": "https://iq-rest.com/nl/qr-code-menukaart-restaurant",
     "ogLocale": "nl_NL",
     "ogTitle": "QR-menu voor Restaurants",
     "ogDescription": "Een QR op tafel, het menu op de telefoon — foto's, allergenen, 35 talen en realtime updates.",
-    "brandLine": "IQ Rest — QR-menu voor Restaurants"
+    "brandLine": "QRgine — QR-menu voor Restaurants"
   },
   "hero": {
     "headline": "QR-menu:\nscannen en bestellen",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Wat restauranthouders vragen over het IQ Rest QR-menu. Staat je vraag er niet tussen? Stuur ons een bericht via WhatsApp.",
+    "sub": "Wat restauranthouders vragen over het QRgine QR-menu. Staat je vraag er niet tussen? Stuur ons een bericht via WhatsApp.",
     "items": [
       {
-        "q": "Hoe werkt het IQ Rest QR-menu?",
+        "q": "Hoe werkt het QRgine QR-menu?",
         "a": "Elke tafel heeft een geprinte QR-code. Gasten scannen deze met de camera van hun telefoon, en de browser opent het menu van het restaurant — foto's, beschrijvingen, allergenen en actuele prijzen. Geen app om te downloaden voor gasten of personeel."
       },
       {

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Um QR para um PDF não é um menu digital | IQ Rest",
+    "title": "Um QR para um PDF não é um menu digital | QRgine",
     "description": "Um código QR que aponta para um PDF é a montagem mais comum e a pior. O que custa em leitura, atualizações, alergénios e pedidos."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Tire uma fotografia ao menu em papel, ou carregue o próprio PDF.",
-        "O IQ Rest lê-o e cria as categorias, os pratos e os preços — cerca de cinco minutos em vez de uma noite.",
+        "O QRgine lê-o e cria as categorias, os pratos e os preços — cerca de cinco minutos em vez de uma noite.",
         "Confirme os preços e corrija o que a leitura tenha interpretado mal.",
         "Aponte os seus códigos QR atuais para o novo menu, ou imprima novos por mesa."
       ]

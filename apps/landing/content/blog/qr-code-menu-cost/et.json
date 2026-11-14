@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kui palju QR-menüü tegelikult maksab | IQ Rest",
+    "title": "Kui palju QR-menüü tegelikult maksab | QRgine",
     "description": "Kui palju QR-koodiga menüü päriselt maksab: tasuta tööriistad, kuutasud, hind asukoha kohta, tellimustasud ja peidetud käivitusaeg."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest on kolmandal real: **alates 9,90 € kuus asukoha kohta**, ilma tellimustasudeta, 14 päeva tasuta ilma kaardita. Me võtame tasu koha eest, mitte ettekandja eest, sest kasutajapõhine arveldus karistab just neid kohti, kus personali voolavus on suurim."
+      "text": "QRgine on kolmandal real: **alates 9,90 € kuus asukoha kohta**, ilma tellimustasudeta, 14 päeva tasuta ilma kaardita. Me võtame tasu koha eest, mitte ettekandja eest, sest kasutajapõhine arveldus karistab just neid kohti, kus personali voolavus on suurim."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Seepärast loeb menüü importimine rohkem, kui see kõlab. IQ Rest loeb foto sinu paberimenüüst ja loob read automaatselt, mis muudab selle poole päeva umbes viieks minutiks. Arvesta tööriistu võrreldes ka käivitusajaga; see kaalub sageli rohkem kui esimene tellimusaasta."
+      "text": "Seepärast loeb menüü importimine rohkem, kui see kõlab. QRgine loeb foto sinu paberimenüüst ja loob read automaatselt, mis muudab selle poole päeva umbes viieks minutiks. Arvesta tööriistu võrreldes ka käivitusajaga; see kaalub sageli rohkem kui esimene tellimusaasta."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Kui palju maksab QR-koodiga menüü kuus?",
-          "a": "Fikseeritud tellimusega tööriistad jäävad üldiselt 10-40 euro juurde asukoha kohta kuus. IQ Rest algab 9,90 eurost ilma tellimustasudeta."
+          "a": "Fikseeritud tellimusega tööriistad jäävad üldiselt 10-40 euro juurde asukoha kohta kuus. QRgine algab 9,90 eurost ilma tellimustasudeta."
         },
         {
           "q": "Kas on olemas tasuta QR-koodiga menüü?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Kas maksan laua või restorani kohta?",
-          "a": "IQ Restis restorani kohta — lauad ja QR-koodid on piiramatud. Kontrolli seda enne kuskil allakirjutamist, sest laua- või kasutajapõhine hind skaleerub halvasti."
+          "a": "QRgineis restorani kohta — lauad ja QR-koodid on piiramatud. Kontrolli seda enne kuskil allakirjutamist, sest laua- või kasutajapõhine hind skaleerub halvasti."
         },
         {
           "q": "Kas on liitumistasu?",

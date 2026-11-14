@@ -3,13 +3,13 @@
   "slug": "menu-digital-restaurantes",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Ementa digital para restaurante | IQ Rest",
+    "title": "Ementa digital para restaurante | QRgine",
     "description": "Ementa digital para restaurante: carta online com fotografias, alergénios, tradução por IA e atualização de preços em tempo real. 14 dias grátis, sem cartão bancário.",
     "canonical": "https://iq-rest.com/pt/menu-digital-restaurantes",
     "ogLocale": "pt_PT",
     "ogTitle": "Ementa digital para restaurante",
     "ogDescription": "Versão online da ementa em papel, com fotografias, alergénios e tradução por IA. Atualização de preços em tempo real.",
-    "brandLine": "IQ Rest — Ementa digital para restaurante"
+    "brandLine": "QRgine — Ementa digital para restaurante"
   },
   "hero": {
     "headline": "Ementa digital e site",
@@ -166,7 +166,7 @@
     "heading": "Porque é que os restaurantes nos escolhem",
     "headingAccent": "em vez de outros sistemas",
     "sub": "A maioria das ferramentas de ementa fica-se pelo código QR. As linhas abaixo mostram o que muda de facto no dia a dia. Sem nomes: compare qualquer sistema com elas.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Outros sistemas",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "O que os restauradores perguntam sobre a ementa digital da IQ Rest. Se a sua pergunta não está na lista, escreva-nos no WhatsApp.",
+    "sub": "O que os restauradores perguntam sobre a ementa digital da QRgine. Se a sua pergunta não está na lista, escreva-nos no WhatsApp.",
     "items": [
       {
         "q": "São precisas competências técnicas ou experiência com CMS?",
         "a": "Não são precisas competências especiais. Todas as ações no painel de gestão fazem-se em poucos toques — sem programação nem trabalho com código. Adicionar um prato leva alguns segundos: nome, preço, fotografia. A configuração completa da ementa cabe normalmente em 30 a 60 minutos."
       },
       {
-        "q": "O que é a ementa digital da IQ Rest?",
+        "q": "O que é a ementa digital da QRgine?",
         "a": "É a versão online da sua carta, acessível aos clientes por código QR ou ligação direta: fotografias dos pratos, preços, alergénios, tradução por IA para 35 idiomas e atualizações em tempo real. A ementa funciona nos nossos servidores — não é preciso instalar nem manter software, basta um navegador."
       },
       {

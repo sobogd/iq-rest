@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kostenlose QR-Karte: was wirklich gratis ist | IQ Rest",
+    "title": "Kostenlose QR-Karte: was wirklich gratis ist | QRgine",
     "description": "Kostenlose QR-Karten gibt es, und manche taugen. Wie sie Geld verdienen, welche Grenze zuerst greift und wann kostenlos wirklich die richtige Wahl ist."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Typische Gratisstufe",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Ist eine kostenlose Testphase dasselbe wie ein Gratistarif?",
-          "a": "Nein. Eine Testphase ist das volle Produkt für begrenzte Zeit; ein Gratistarif ist ein begrenztes Produkt für immer. IQ Rest bietet 14 Tage Test mit allem eingeschaltet, ohne Karte."
+          "a": "Nein. Eine Testphase ist das volle Produkt für begrenzte Zeit; ein Gratistarif ist ein begrenztes Produkt für immer. QRgine bietet 14 Tage Test mit allem eingeschaltet, ohne Karte."
         },
         {
           "q": "Was ist die günstigste kostenpflichtige QR-Karte?",
-          "a": "Pauschaltarife beginnen meist um 10 € pro Monat und Standort. IQ Rest startet bei 9,90 € — die vollständige Aufschlüsselung steht in [was eine QR-Code-Speisekarte kostet](blog:qr-code-menu-cost)."
+          "a": "Pauschaltarife beginnen meist um 10 € pro Monat und Standort. QRgine startet bei 9,90 € — die vollständige Aufschlüsselung steht in [was eine QR-Code-Speisekarte kostet](blog:qr-code-menu-cost)."
         },
         {
           "q": "Kann ich meine Karte von einem kostenlosen zu einem kostenpflichtigen Tool umziehen?",
-          "a": "Meist ja, und Sie müssen sie selten neu tippen: IQ Rest kann ein Foto oder ein PDF der bestehenden Karte lesen und die Artikel in etwa fünf Minuten neu anlegen."
+          "a": "Meist ja, und Sie müssen sie selten neu tippen: QRgine kann ein Foto oder ein PDF der bestehenden Karte lesen und die Artikel in etwa fünf Minuten neu anlegen."
         }
       ]
     }

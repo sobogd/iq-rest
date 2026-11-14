@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Biachlár QR saor in aisce: cad atá saor i ndáiríre | IQ Rest",
+    "title": "Biachlár QR saor in aisce: cad atá saor i ndáiríre | QRgine",
     "description": "Tá biachláir QR saor in aisce ann agus tá cuid acu ceart go leor. Conas a dhéanann siad airgead, cén teorainn a bhuaileann tú ar dtús, agus cathain a oireann saor."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Gnáthleibhéal saor",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "An ionann triail saor in aisce agus plean saor in aisce?",
-          "a": "Ní hionann. Is é an triail an táirge iomlán ar feadh tréimhse teoranta; is táirge teoranta go deo é plean saor in aisce. Tugann IQ Rest 14 lá trialach le gach rud casta air agus gan chárta."
+          "a": "Ní hionann. Is é an triail an táirge iomlán ar feadh tréimhse teoranta; is táirge teoranta go deo é plean saor in aisce. Tugann QRgine 14 lá trialach le gach rud casta air agus gan chárta."
         },
         {
           "q": "Cad é an biachlár QR íoctha is saoire?",
-          "a": "Tosaíonn pleananna cothroma de ghnáth timpeall €10 sa mhí in aghaidh an ionaid. Tosaíonn IQ Rest ag €9.90 — tá an miondealú iomlán in [cad a chosnaíonn biachlár le cód QR](blog:qr-code-menu-cost)."
+          "a": "Tosaíonn pleananna cothroma de ghnáth timpeall €10 sa mhí in aghaidh an ionaid. Tosaíonn QRgine ag €9.90 — tá an miondealú iomlán in [cad a chosnaíonn biachlár le cód QR](blog:qr-code-menu-cost)."
         },
         {
           "q": "An féidir liom mo bhiachlár a bhogadh ó uirlis saor in aisce go ceann íoctha?",
-          "a": "De ghnáth is féidir, agus is annamh a chaithfidh tú é a chlóscríobh arís: is féidir le IQ Rest grianghraf nó PDF den bhiachlár atá ann a léamh agus na míreanna a atógáil i gceann thart ar chúig nóiméad."
+          "a": "De ghnáth is féidir, agus is annamh a chaithfidh tú é a chlóscríobh arís: is féidir le QRgine grianghraf nó PDF den bhiachlár atá ann a léamh agus na míreanna a atógáil i gceann thart ar chúig nóiméad."
         }
       ]
     }

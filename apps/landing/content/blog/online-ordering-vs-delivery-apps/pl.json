@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Własne zamówienia vs aplikacje dostawcze: liczby | IQ Rest",
+    "title": "Własne zamówienia vs aplikacje dostawcze: liczby | QRgine",
     "description": "Ile kosztuje prowizja platformy od zamówienia, ile zamówień we własnym kanale pokrywa koszt i dlaczego większość restauracji powinna korzystać z obu."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Czy potrzebuję strony internetowej, żeby przyjmować zamówienia bezpośrednie?",
-          "a": "Nie. IQ Rest daje hostowaną stronę zamówień z własnym adresem, do której podlinkujesz z Google, Instagrama albo kodu QR na stole."
+          "a": "Nie. QRgine daje hostowaną stronę zamówień z własnym adresem, do której podlinkujesz z Google, Instagrama albo kodu QR na stole."
         }
       ]
     }

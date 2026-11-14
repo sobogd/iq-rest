@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Een QR naar een pdf is geen digitaal menu | IQ Rest",
+    "title": "Een QR naar een pdf is geen digitaal menu | QRgine",
     "description": "Een QR-code die naar een pdf wijst is de meest gebruikte digitale menu-opzet en de slechtste. Wat het kost aan leesbaarheid, updates, allergenen en bestellingen."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Maak een foto van de papieren kaart, of upload de pdf zelf.",
-        "IQ Rest leest hem en maakt de categorieën, gerechten en prijzen aan — ongeveer vijf minuten in plaats van een hele avond.",
+        "QRgine leest hem en maakt de categorieën, gerechten en prijzen aan — ongeveer vijf minuten in plaats van een hele avond.",
         "Controleer de prijzen en corrigeer wat de scan verkeerd las.",
         "Laat je bestaande QR-codes naar het nieuwe menu wijzen, of druk nieuwe per tafel."
       ]

@@ -3,13 +3,13 @@
   "slug": "sustav-narudzbi-restoran",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Zaprimanje narudžbi u restoranu — Gost i konobar | IQ Rest",
+    "title": "Zaprimanje narudžbi u restoranu — Gost i konobar | QRgine",
     "description": "Zaprimanje narudžbi s telefona ili tableta: tlocrt stolova, dijeljenje računa, statusi i napomene. Gosti naručuju sa stola, konobari na uređaju. 14 dana besplatno.",
     "canonical": "https://iq-rest.com/hr/sustav-narudzbi-restoran",
     "ogLocale": "hr_HR",
     "ogTitle": "Zaprimanje narudžbi u restoranu — Gost i konobar",
     "ogDescription": "Gost za stolom ili konobar s telefonom — narudžba odmah stiže u kuhinju. Tlocrt stolova, dijeljenje računa, statusi, opcije i napomene.",
-    "brandLine": "IQ Rest — Zaprimanje narudžbi u restoranu"
+    "brandLine": "QRgine — Zaprimanje narudžbi u restoranu"
   },
   "hero": {
     "headline": "Narudžbe sa stola —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Što ugostitelji pitaju o zaprimanju narudžbi u IQ Restu. Ako vašeg pitanja nema na popisu — pošaljite nam poruku na WhatsApp.",
+    "sub": "Što ugostitelji pitaju o zaprimanju narudžbi u QRgineu. Ako vašeg pitanja nema na popisu — pošaljite nam poruku na WhatsApp.",
     "items": [
       {
         "q": "Može li više konobara raditi istovremeno s različitih uređaja?",

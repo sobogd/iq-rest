@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kā izveidot QR ēdienkarti: 3 veidi | IQ Rest",
+    "title": "Kā izveidot QR ēdienkarti: 3 veidi | QRgine",
     "description": "Trīs veidi, kā izveidot QR ēdienkarti restorānam: bezmaksas ģenerators ar PDF, ēdienkartes veidotājs vai pilna sistēma. Cik maksā un kur katrs salūzt."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Pārnes ēdienkarti digitālā formā. 80 pozīciju ievadīšana ir lielākais laika patērētājs – IQ Rest nolasa tavas papīra ēdienkartes fotogrāfiju un izveido ēdienus un cenas tavā vietā, tā vesels vakars pārvēršas apmēram piecās minūtēs.",
+        "Pārnes ēdienkarti digitālā formā. 80 pozīciju ievadīšana ir lielākais laika patērētājs – QRgine nolasa tavas papīra ēdienkartes fotogrāfiju un izveido ēdienus un cenas tavā vietā, tā vesels vakars pārvēršas apmēram piecās minūtēs.",
         "Sakārto struktūru pirms dizaina. Grupē tā, kā viesi pasūta (uzkodas, pamatēdieni, dzērieni), nevis tā, kā organizēta tava virtuve. Garas plakanas listes nogalina ritināšanu.",
         "Liec fotogrāfijas tur, kur tās maina lēmumu. Nofotografēt katru ēdienu ir sliktāk nekā piecas labas bildes pie tiem ēdieniem, kurus gribi pārdot.",
         "Atzīmē alergēnus tagad, ne vēlāk. ES tie tāpat ir vajadzīgi, un pievienot tos vēlāk 80 pozīcijām ir mocība.",

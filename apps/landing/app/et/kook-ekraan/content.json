@@ -3,13 +3,13 @@
   "slug": "kook-ekraan",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Köögiekraan (KDS) restoranidele | IQ Rest",
+    "title": "Köögiekraan (KDS) restoranidele | QRgine",
     "description": "KDS köögiekraan restoranidele: tellimused saalist ja QR-menüüst lähevad otse koka ekraanile. Veerud laudade kaupa, staatused ja filtrid. 14 päeva tasuta.",
     "canonical": "https://iq-rest.com/et/kook-ekraan",
     "ogLocale": "et_EE",
     "ogTitle": "Köögiekraan (KDS) — tellimused otse koka ekraanile",
     "ogDescription": "Tellimused saalist koka ekraanil. Veerud laudade kaupa, staatused ja taimer. Üks nupuvajutus muudab staatust.",
-    "brandLine": "IQ Rest — Köögiekraan restoranidele"
+    "brandLine": "QRgine — Köögiekraan restoranidele"
   },
   "hero": {
     "headline": "Köögiekraan (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Mida restoranipidajad IQ Resti köögiekraani kohta küsivad. Kui sinu küsimust pole nimekirjas — kirjuta meile WhatsAppi.",
+    "sub": "Mida restoranipidajad QRginei köögiekraani kohta küsivad. Kui sinu küsimust pole nimekirjas — kirjuta meile WhatsAppi.",
     "items": [
       {
         "q": "Millised staatused on köögitellimustel?",

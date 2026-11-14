@@ -2,7 +2,7 @@
   "htmlLang": "hu",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Digitális étlap, konyhai kijelző és asztalfoglalás — IQ Rest",
+    "title": "Digitális étlap, konyhai kijelző és asztalfoglalás — QRgine",
     "description": "Irányítsd az éttermed egyetlen alkalmazásból: többnyelvű digitális étlap, konyhai kijelző és 0-24 asztalfoglalás. Indulás 5 perc alatt. 14 nap ingyen, bankkártya nélkül.",
     "canonical": "https://iq-rest.com/hu",
     "ogLocale": "hu_HU",
@@ -10,7 +10,7 @@
     "ogDescription": "Irányítsd az éttermed egyetlen alkalmazásból: többnyelvű digitális étlap, konyhai kijelző és 0-24 asztalfoglalás. Indulás 5 perc alatt. 14 nap ingyen, bankkártya nélkül."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Étteremkezelő platform"
+    "appName": "QRgine — Étteremkezelő platform"
   },
   "ctaText": "Próbáld ki ingyen",
   "homeCtaText": "Próbáld ki ingyen",
@@ -82,7 +82,7 @@
     "quoteStart": "A feleségemmel saját kávézót vezettünk, és belülről ismerjük a vendéglátós mindennapokat: rendelésfelvétel, asztalfoglalás, a pálya és a konyha működése. Egyetlen eszközt akartunk — modernet, könnyen beállíthatót és első pillantásra átláthatót —",
     "quoteAccent": "így született meg a platform ötlete, amit most más vendéglátósoknak építünk.",
     "sign": "Bogdan Sokolov · alapító, egykori kávézótulajdonos",
-    "photoAlt": "Bogdan Sokolov, az IQ Rest alapítója"
+    "photoAlt": "Bogdan Sokolov, az QRgine alapítója"
   },
   "pricing": {
     "badge": "Nincs jutalék · Nincs hűségidő",
@@ -108,7 +108,7 @@
     "headingAccent": "kérdések",
     "sub": "Amit a vendéglátósok a leggyakrabban kérdeznek regisztráció előtt. Ha nem találod a választ — írj nekünk WhatsAppon, hús-vér emberek válaszolnak, nem botok.",
     "whatsappCta": "Írj nekünk WhatsAppon",
-    "whatsappPrefill": "Szia, kérdésem lenne az IQ Resttel kapcsolatban",
+    "whatsappPrefill": "Szia, kérdésem lenne az QRginetel kapcsolatban",
     "items": [
       {
         "q": "Mit tartalmaz a próbaidőszak és mi történik utána?",
@@ -192,7 +192,7 @@
     "button": "Csomag összeállítása"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Minden jog fenntartva.",
+    "copyrightTemplate": "© {year} QRgine. Minden jog fenntartva.",
     "featuresHeading": "Funkciók",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Éttermi technológiai blog — IQ Rest",
+    "metaTitle": "Éttermi technológiai blog — QRgine",
     "metaDescription": "Útmutatók és összehasonlítások digitális étlapokról, QR-rendelésről, konyhai kijelzőkről és foglalásokról — gyakorlati olvasnivaló vendéglátósoknak.",
     "title": "Blog",
     "intro": "Útmutatók és összehasonlítások digitális étlapokról, QR-rendelésről, konyhai kijelzőkről és az étterem működtetéséről.",

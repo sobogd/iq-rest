@@ -43,7 +43,7 @@ function build(
       title,
       description,
       url: canonical,
-      siteName: "IQ Rest",
+      siteName: "QRgine",
       locale: ogLocale,
       alternateLocale: ogAlternateLocales(ogLocale),
       type: ogType,

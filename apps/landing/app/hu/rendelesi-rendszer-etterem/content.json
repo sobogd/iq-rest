@@ -3,13 +3,13 @@
   "slug": "rendelesi-rendszer-etterem",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Éttermi rendelésfelvétel — Vendég és Pincér | IQ Rest",
+    "title": "Éttermi rendelésfelvétel — Vendég és Pincér | QRgine",
     "description": "Éttermi rendelésfelvétel telefonról vagy tabletről: asztaltérkép, számlabontás, státuszok és megjegyzések. A vendégek az asztaltól rendelnek. 14 nap ingyen.",
     "canonical": "https://iq-rest.com/hu/rendelesi-rendszer-etterem",
     "ogLocale": "hu_HU",
     "ogTitle": "Éttermi rendelésfelvétel — Vendég és Pincér",
     "ogDescription": "A vendég az asztalnál vagy a pincér a telefonon — a rendelés azonnal a konyhára fut be. Asztaltérkép, számlabontás, státuszok, opciók és megjegyzések.",
-    "brandLine": "IQ Rest — Éttermi rendelésfelvétel"
+    "brandLine": "QRgine — Éttermi rendelésfelvétel"
   },
   "hero": {
     "headline": "Rendelések az asztaltól —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Amit a vendéglátósok a rendelésfelvételről kérdeznek az IQ Restben. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
+    "sub": "Amit a vendéglátósok a rendelésfelvételről kérdeznek az QRgineben. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
     "items": [
       {
         "q": "Több pincér is dolgozhat egyszerre különböző eszközökről?",

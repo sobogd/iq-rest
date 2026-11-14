@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Tasuta QR-menüü: mis on tegelikult tasuta | IQ Rest",
+    "title": "Tasuta QR-menüü: mis on tegelikult tasuta | QRgine",
     "description": "Tasuta QR-menüüd on olemas ja mõned on korralikud. Kuidas nad raha teenivad, milline piirang tabab esimesena ja millal tasuta on tõesti õige valik."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Tüüpiline tasuta tase",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Kas tasuta prooviperiood on sama mis tasuta pakett?",
-          "a": "Ei. Prooviperiood on kogu toode piiratud ajaks; tasuta pakett on piiratud toode igaveseks. IQ Rest annab 14 päeva proovi kõigega sisse lülitatuna ja ilma kaardita."
+          "a": "Ei. Prooviperiood on kogu toode piiratud ajaks; tasuta pakett on piiratud toode igaveseks. QRgine annab 14 päeva proovi kõigega sisse lülitatuna ja ilma kaardita."
         },
         {
           "q": "Milline on odavaim tasuline QR-menüü?",
-          "a": "Fikseeritud paketid algavad tavaliselt umbes 10 eurost kuus asukoha kohta. IQ Rest algab 9,90 eurost — kogu jaotus on artiklis [kui palju maksab QR-koodiga menüü](blog:qr-code-menu-cost)."
+          "a": "Fikseeritud paketid algavad tavaliselt umbes 10 eurost kuus asukoha kohta. QRgine algab 9,90 eurost — kogu jaotus on artiklis [kui palju maksab QR-koodiga menüü](blog:qr-code-menu-cost)."
         },
         {
           "q": "Kas ma saan menüü tasuta tööriistast tasulisse kolida?",
-          "a": "Tavaliselt jah ja harva pead selle uuesti sisestama: IQ Rest oskab lugeda olemasoleva menüü fotot või PDF-i ja read umbes viie minutiga uuesti üles ehitada."
+          "a": "Tavaliselt jah ja harva pead selle uuesti sisestama: QRgine oskab lugeda olemasoleva menüü fotot või PDF-i ja read umbes viie minutiga uuesti üles ehitada."
         }
       ]
     }

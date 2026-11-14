@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ēdienkartes tulkošana: ko tulkot un ko ne | IQ Rest",
+    "title": "Ēdienkartes tulkošana: ko tulkot un ko ne | QRgine",
     "description": "Kāpēc ēdienu nosaukumu mašīntulkojums iznāk slikti, kuras ēdienkartes daļas paliek oriģinālvalodā un kā uzturēt četras valodas bez četrām ēdienkartēm."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "[Digitāla ēdienkarte](route:/digital-menu) to apgriež otrādi. Viesa telefons savu valodu tāpat paziņo, tāpēc ēdienkarte atveras pareizajā, nevienam neizvēloties. IQ Rest ēdienkarti pārtulko automātiski, un, tā kā tulkojumi ir piesaistīti pozīcijai, viena cenas maiņa maina to visās valodās. Piektās valodas pievienošana nemaksā neko un neprasa atkārtotu druku."
+      "text": "[Digitāla ēdienkarte](route:/digital-menu) to apgriež otrādi. Viesa telefons savu valodu tāpat paziņo, tāpēc ēdienkarte atveras pareizajā, nevienam neizvēloties. QRgine ēdienkarti pārtulko automātiski, un, tā kā tulkojumi ir piesaistīti pozīcijai, viena cenas maiņa maina to visās valodās. Piektās valodas pievienošana nemaksā neko un neprasa atkārtotu druku."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Viena ēdienkarte, visas valodas",
-      "text": "IQ Rest tavu ēdienkarti pārtulko automātiski un atver viesa valodā. Nomaini cenu vienreiz, un atjaunojas visas valodas. 14 dienas bez maksas.",
+      "text": "QRgine tavu ēdienkarti pārtulko automātiski un atver viesa valodā. Nomaini cenu vienreiz, un atjaunojas visas valodas. 14 dienas bez maksas.",
       "buttonLabel": "Skatīt automātisko tulkojumu",
       "routeKey": "/digital-menu"
     },

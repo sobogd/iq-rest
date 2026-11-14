@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digitaalinen menu vs paperinen menu: kustannukset | IQ Rest",
+    "title": "Digitaalinen menu vs paperinen menu: kustannukset | QRgine",
     "description": "Mitä paperinen ruokalista todella maksaa ravintolalle verrattuna QR-menuun: painatus, päivitykset, käännökset, tilausnopeus. Vertailu oikeilla luvuilla."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Skannaa paperinen ruokalistasi — IQ Rest lukee sen ja rakentaa digitaalisen menun automaattisesti.",
+        "Skannaa paperinen ruokalistasi — QRgine lukee sen ja rakentaa digitaalisen menun automaattisesti.",
         "Tarkista hinnat ja lisää kuvat sinne, missä niillä on merkitystä.",
         "Tulosta yksi QR-koodi per pöytä.",
         "Päivitä mitä tahansa, milloin tahansa, suoraan puhelimestasi."

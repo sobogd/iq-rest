@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // CA help guide.
 export const ca: HelpDoc = {
-  metaTitle: "Com utilitzar IQ Rest — guia pas a pas",
+  metaTitle: "Com utilitzar QRgine — guia pas a pas",
   metaDescription:
-    "Guia completa d'IQ Rest: registre, menú, comandes, reserves, pantalla de cuina i configuració — per a restaurants.",
+    "Guia completa d'QRgine: registre, menú, comandes, reserves, pantalla de cuina i configuració — per a restaurants.",
   h1: "Ajuda",
-  intro: "Una guia detallada d'IQ Rest — des del registre fins als ajustos més fins.",
+  intro: "Una guia detallada d'QRgine — des del registre fins als ajustos més fins.",
   banner: {
     title: "És més senzill del que sembla",
     sub: "Una guia pas a pas: des del registre fins als ajustos més fins — qualsevol ho pot fer.",
@@ -22,7 +22,7 @@ export const ca: HelpDoc = {
         { type: "h3", text: "Què és aquest sistema" },
         {
           type: "p",
-          text: "IQ Rest és un servei per a restaurants: crees un menú en línia amb codi QR, reps comandes i reserves de taula directament des dels mòbils dels clients, mentre que a la cuina i als cambrers funcionen tauletes-terminal. Tot es gestiona des d'un únic panell d'administració (tauler).",
+          text: "QRgine és un servei per a restaurants: crees un menú en línia amb codi QR, reps comandes i reserves de taula directament des dels mòbils dels clients, mentre que a la cuina i als cambrers funcionen tauletes-terminal. Tot es gestiona des d'un únic panell d'administració (tauler).",
         },
         { type: "h3", text: "Registre i inici de sessió" },
         { type: "p", text: "Pots entrar de tres maneres — tria'n qualsevol a la pantalla d'inici de sessió:" },

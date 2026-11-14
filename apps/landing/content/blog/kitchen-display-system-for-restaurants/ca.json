@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Pantalla de cuina: necessites un KDS? | IQ Rest",
+    "title": "Pantalla de cuina: necessites un KDS? | QRgine",
     "description": "Què fa un KDS, quant costa de debò el maquinari, com muntar-lo en una tauleta que ja tens i quines cuines estan millor amb comandes de paper."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "La majoria de cuines no ho necessiten. La [pantalla de cuina](route:/kitchen-display) d'IQ Rest funciona al navegador, així que el maquinari pot ser una tauleta que ja tinguis, una tauleta Android barata o un portàtil vell amb un monitor. Fica-la en una funda antiesquitxades, munta-la fora de la línia de vapor i el cost marginal és un suport de paret."
+      "text": "La majoria de cuines no ho necessiten. La [pantalla de cuina](route:/kitchen-display) d'QRgine funciona al navegador, així que el maquinari pot ser una tauleta que ja tinguis, una tauleta Android barata o un portàtil vell amb un monitor. Fica-la en una funda antiesquitxades, munta-la fora de la línia de vapor i el cost marginal és un suport de paret."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Puc fer servir un KDS en una tauleta normal?",
-          "a": "Sí. La pantalla de cuina d'IQ Rest funciona al navegador, així que serveix qualsevol tauleta o portàtil dels últims cinc anys. Fes servir una funda antiesquitxades."
+          "a": "Sí. La pantalla de cuina d'QRgine funciona al navegador, així que serveix qualsevol tauleta o portàtil dels últims cinc anys. Fes servir una funda antiesquitxades."
         },
         {
           "q": "El KDS necessita internet?",

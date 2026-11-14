@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ilmainen QR-lista: mikä on oikeasti ilmaista | IQ Rest",
+    "title": "Ilmainen QR-lista: mikä on oikeasti ilmaista | QRgine",
     "description": "Ilmaisia QR-listoja on olemassa ja osa niistä kelpaa. Miten ne tekevät rahaa, mikä raja tulee ensin vastaan ja milloin ilmainen on oikea valinta."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Tyypillinen ilmaistaso",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Onko ilmainen kokeilu sama asia kuin ilmainen taso?",
-          "a": "Ei. Kokeilu on koko tuote rajoitetun ajan; ilmainen taso on rajoitettu tuote ikuisesti. IQ Rest tarjoaa 14 päivän kokeilun kaikki päällä ja ilman korttia."
+          "a": "Ei. Kokeilu on koko tuote rajoitetun ajan; ilmainen taso on rajoitettu tuote ikuisesti. QRgine tarjoaa 14 päivän kokeilun kaikki päällä ja ilman korttia."
         },
         {
           "q": "Mikä on halvin maksullinen QR-lista?",
-          "a": "Kiinteät tasot alkavat yleensä noin 10 eurosta kuussa toimipaikkaa kohti. IQ Rest alkaa 9,90 eurosta – koko erittely on artikkelissa [mitä QR-ruokalista maksaa](blog:qr-code-menu-cost)."
+          "a": "Kiinteät tasot alkavat yleensä noin 10 eurosta kuussa toimipaikkaa kohti. QRgine alkaa 9,90 eurosta – koko erittely on artikkelissa [mitä QR-ruokalista maksaa](blog:qr-code-menu-cost)."
         },
         {
           "q": "Voinko siirtää listani ilmaisesta työkalusta maksulliseen?",
-          "a": "Yleensä kyllä, eikä sitä tarvitse juuri koskaan näppäillä uudelleen: IQ Rest osaa lukea valokuvan tai pdf:n olemassa olevasta listasta ja rakentaa rivit uudelleen noin viidessä minuutissa."
+          "a": "Yleensä kyllä, eikä sitä tarvitse juuri koskaan näppäillä uudelleen: QRgine osaa lukea valokuvan tai pdf:n olemassa olevasta listasta ja rakentaa rivit uudelleen noin viidessä minuutissa."
         }
       ]
     }

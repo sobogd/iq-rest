@@ -2,7 +2,7 @@
   "htmlLang": "ro",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Meniu digital, KDS și rezervări — IQ Rest",
+    "title": "Meniu digital, KDS și rezervări — QRgine",
     "description": "Gestionează-ți restaurantul dintr-o singură aplicație: meniu digital multilingv, KDS și rezervări 24/7. Gata în 5 minute. 14 zile gratuit, fără card.",
     "canonical": "https://iq-rest.com/ro",
     "ogLocale": "ro_RO",
@@ -10,7 +10,7 @@
     "ogDescription": "Gestionează-ți restaurantul dintr-o singură aplicație: meniu digital multilingv, KDS și rezervări 24/7. Gata în 5 minute. 14 zile gratuit, fără card."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Platformă de Management pentru Restaurante"
+    "appName": "QRgine — Platformă de Management pentru Restaurante"
   },
   "ctaText": "Încearcă gratuit",
   "homeCtaText": "Încearcă gratuit",
@@ -82,7 +82,7 @@
     "quoteStart": "Eu și soția mea am avut propria cafenea și știm cum arată o zi în HoReCa pe dinăuntru: preluarea comenzilor, rezervările, sala și bucătăria. Ne-am dorit o singură aplicație — modernă, ușor de configurat și clară de la prima vedere —",
     "quoteAccent": "așa a apărut ideea platformei pe care o dezvoltăm acum pentru alți proprietari de restaurante.",
     "sign": "Bogdan Sokolov · fondator, fost proprietar de cafenea",
-    "photoAlt": "Bogdan Sokolov, fondatorul IQ Rest"
+    "photoAlt": "Bogdan Sokolov, fondatorul QRgine"
   },
   "pricing": {
     "badge": "Fără comisioane · Fără contracte",
@@ -108,7 +108,7 @@
     "headingAccent": "frecvente",
     "sub": "Ce întreabă cel mai des proprietarii de restaurante înainte să-și facă un cont. Dacă nu găsești răspunsul — scrie-ne pe WhatsApp, îți răspunde un om, nu un robot.",
     "whatsappCta": "Scrie-ne pe WhatsApp",
-    "whatsappPrefill": "Salut, am o întrebare despre IQ Rest",
+    "whatsappPrefill": "Salut, am o întrebare despre QRgine",
     "items": [
       {
         "q": "Ce include perioada de probă și ce se întâmplă după ce expiră?",
@@ -192,7 +192,7 @@
     "button": "Configurează abonamentul"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Toate drepturile rezervate.",
+    "copyrightTemplate": "© {year} QRgine. Toate drepturile rezervate.",
     "featuresHeading": "Funcționalități",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blog despre tehnologie pentru restaurante — IQ Rest",
+    "metaTitle": "Blog despre tehnologie pentru restaurante — QRgine",
     "metaDescription": "Ghiduri și comparații despre meniuri digitale, comenzi prin QR, ecrane de bucătărie și rezervări — lectură practică pentru restauratori.",
     "title": "Blog",
     "intro": "Ghiduri și comparații despre meniuri digitale, comenzi prin QR, ecrane de bucătărie și administrarea restaurantului.",

@@ -2,7 +2,7 @@
   "htmlLang": "lv",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Digitālā ēdienkarte, virtuves ekrāns un rezervācijas — IQ Rest",
+    "title": "Digitālā ēdienkarte, virtuves ekrāns un rezervācijas — QRgine",
     "description": "Vadiet restorānu no vienas lietotnes: daudzvalodu digitālā ēdienkarte, virtuves ekrāns un rezervācijas 24/7. Palaidiet 5 minūtēs. 14 dienas bez maksas.",
     "canonical": "https://iq-rest.com/lv",
     "ogLocale": "lv_LV",
@@ -10,7 +10,7 @@
     "ogDescription": "Vadiet restorānu no vienas lietotnes: daudzvalodu digitālā ēdienkarte, virtuves ekrāns un 24/7 rezervācijas. Palaidiet 5 minūtēs. 14 dienas bez maksas, karte nav nepieciešama."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Restorānu vadības platforma"
+    "appName": "QRgine — Restorānu vadības platforma"
   },
   "ctaText": "Izmēģināt bez maksas",
   "homeCtaText": "Izmēģināt bez maksas",
@@ -82,7 +82,7 @@
     "quoteStart": "Mēs ar sievu vadījām savu kafejnīcu un zinām restorānu ikdienu no iekšpuses: pasūtījumu pieņemšanu, rezervācijas, darbu zālē un virtuvē. Mēs gribējām vienu rīku — modernu, viegli iestatāmu un uzreiz saprotamu —",
     "quoteAccent": "tā radās ideja par platformu, ko tagad attīstām citiem restorānu īpašniekiem.",
     "sign": "Bogdans Sokolovs · dibinātājs, bijušais kafejnīcas īpašnieks",
-    "photoAlt": "Bogdans Sokolovs, IQ Rest dibinātājs"
+    "photoAlt": "Bogdans Sokolovs, QRgine dibinātājs"
   },
   "pricing": {
     "badge": "Bez komisijas maksas · Bez līgumiem",
@@ -108,7 +108,7 @@
     "headingAccent": "jautājumi",
     "sub": "Ko restorānu īpašnieki jautā visbiežāk pirms reģistrēšanās. Ja neatradāt atbildi — rakstiet mums WhatsApp, atbildēs reāls darbinieks, nevis robots.",
     "whatsappCta": "Rakstiet mums WhatsApp",
-    "whatsappPrefill": "Sveiki, man ir jautājums par IQ Rest",
+    "whatsappPrefill": "Sveiki, man ir jautājums par QRgine",
     "items": [
       {
         "q": "Kas iekļauts izmēģinājuma periodā un kas notiek pēc tā beigām?",
@@ -192,7 +192,7 @@
     "button": "Izveidot plānu"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Visas tiesības aizsargātas.",
+    "copyrightTemplate": "© {year} QRgine. Visas tiesības aizsargātas.",
     "featuresHeading": "Iespējas",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blogs par restorānu tehnoloģijām — IQ Rest",
+    "metaTitle": "Blogs par restorānu tehnoloģijām — QRgine",
     "metaDescription": "Ceļveži un salīdzinājumi par digitālajām ēdienkartēm, QR pasūtījumiem, virtuves ekrāniem un rezervācijām — praktiska lasāmviela restorānu īpašniekiem.",
     "title": "Blogs",
     "intro": "Ceļveži un salīdzinājumi par digitālajām ēdienkartēm, QR pasūtījumiem, virtuves ekrāniem un restorāna vadību.",

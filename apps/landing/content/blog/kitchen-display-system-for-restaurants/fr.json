@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Écran de cuisine : avez-vous besoin d'un KDS ? | IQ Rest",
+    "title": "Écran de cuisine : avez-vous besoin d'un KDS ? | QRgine",
     "description": "Ce que fait un KDS, ce que coûte vraiment le matériel, comment le faire tourner sur une tablette que vous avez déjà, et les cuisines qui vivent mieux avec des bons papier."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "La plupart des cuisines n'en ont pas besoin. L'[écran de cuisine](route:/kitchen-display) d'IQ Rest fonctionne dans le navigateur, le matériel peut donc être une tablette que vous possédez déjà, une tablette Android bon marché ou un vieux portable avec un moniteur. Mettez-la dans une coque anti-projections, fixez-la hors de la ligne de vapeur, et le coût marginal est un support mural."
+      "text": "La plupart des cuisines n'en ont pas besoin. L'[écran de cuisine](route:/kitchen-display) d'QRgine fonctionne dans le navigateur, le matériel peut donc être une tablette que vous possédez déjà, une tablette Android bon marché ou un vieux portable avec un moniteur. Mettez-la dans une coque anti-projections, fixez-la hors de la ligne de vapeur, et le coût marginal est un support mural."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Puis-je faire tourner un KDS sur une tablette ordinaire ?",
-          "a": "Oui. L'écran de cuisine d'IQ Rest fonctionne dans le navigateur, donc toute tablette ou tout portable des cinq dernières années convient. Utilisez une coque anti-projections."
+          "a": "Oui. L'écran de cuisine d'QRgine fonctionne dans le navigateur, donc toute tablette ou tout portable des cinq dernières années convient. Utilisez une coque anti-projections."
         },
         {
           "q": "Un KDS a-t-il besoin d'internet ?",

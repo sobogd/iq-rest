@@ -3,13 +3,13 @@
   "slug": "poytavaraus",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "24/7 Pöytävaraukset ravintoloille | IQ Rest",
+    "title": "24/7 Pöytävaraukset ravintoloille | QRgine",
     "description": "Pöytävaraukset 24/7: asiakkaat varaavat pöydän QR-ruokalistan tai verkkosivun kautta. Kalenteri, automaattiset vahvistukset ja muistutukset. 14 päivää ilmaiseksi.",
     "canonical": "https://iq-rest.com/fi/poytavaraus",
     "ogLocale": "fi_FI",
     "ogTitle": "24/7 Pöytävaraukset — Asiakkaat varaavat itse",
     "ogDescription": "Asiakkaat varaavat pöydät QR-ruokalistan tai verkkosivujen kautta. Kalenteri, automaattiset vahvistukset, muistutukset. Yksikään asiakas ei mene sivu suun.",
-    "brandLine": "IQ Rest — Ravintolan pöytävaraukset"
+    "brandLine": "QRgine — Ravintolan pöytävaraukset"
   },
   "hero": {
     "headline": "Pöytävaraukset 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Varauskalenteri IQ Restin hallintapaneelissa kahdella tabletilla: päiväruudukko pöydittäin ja kuukausikalenteri"
+        "alt": "Varauskalenteri QRginein hallintapaneelissa kahdella tabletilla: päiväruudukko pöydittäin ja kuukausikalenteri"
       }
     }
   ],
   "faq": {
-    "sub": "Mitä ravintoloitsijat kysyvät IQ Restin pöytävarauksista. Jos kysymystäsi ei löydy — laita viestiä WhatsAppissa.",
+    "sub": "Mitä ravintoloitsijat kysyvät QRginein pöytävarauksista. Jos kysymystäsi ei löydy — laita viestiä WhatsAppissa.",
     "items": [
       {
         "q": "Voinko valita päivät ja ajat, jolloin varaus on mahdollista?",

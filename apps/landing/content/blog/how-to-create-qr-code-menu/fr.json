@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Créer un menu QR code : 3 méthodes | IQ Rest",
+    "title": "Créer un menu QR code : 3 méthodes | QRgine",
     "description": "Trois façons de créer un menu QR pour votre restaurant : générateur gratuit avec PDF, éditeur de menu ou système complet. Ce que chacune coûte et casse."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Passez la carte au format numérique. Saisir 80 plats est le premier gouffre de temps : IQ Rest lit une photo de votre carte papier et crée les plats et les prix, ce qui transforme une soirée en cinq minutes environ.",
+        "Passez la carte au format numérique. Saisir 80 plats est le premier gouffre de temps : QRgine lit une photo de votre carte papier et crée les plats et les prix, ce qui transforme une soirée en cinq minutes environ.",
         "Réglez la structure avant le design. Regroupez comme les clients commandent (entrées, plats, boissons), pas comme votre cuisine est organisée. Les longues listes uniques tuent le défilement.",
         "Mettez des photos là où elles changent la décision. Photographier chaque plat vaut moins que cinq bonnes photos sur les plats que vous voulez vendre.",
         "Marquez les allergènes tout de suite, pas plus tard. Dans l'UE vous en avez besoin de toute façon, et les ajouter après coup sur 80 plats est un supplice.",

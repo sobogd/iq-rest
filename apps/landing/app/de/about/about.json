@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Über IQ Rest — Wer wir sind, Kontakte und rechtliche Details",
-    "description": "Wer hinter IQ Rest steckt, wie Sie uns erreichen und die rechtlichen Details des Dienstanbieters: E-Mail, WhatsApp, Impressum.",
+    "title": "Über QRgine — Wer wir sind, Kontakte und rechtliche Details",
+    "description": "Wer hinter QRgine steckt, wie Sie uns erreichen und die rechtlichen Details des Dienstanbieters: E-Mail, WhatsApp, Impressum.",
     "canonical": "https://iq-rest.com/de/about",
     "ogLocale": "de_DE",
-    "ogTitle": "Über IQ Rest",
-    "ogDescription": "Wer hinter IQ Rest steckt, Support-Kontakte und die rechtlichen Details des Dienstanbieters."
+    "ogTitle": "Über QRgine",
+    "ogDescription": "Wer hinter QRgine steckt, Support-Kontakte und die rechtlichen Details des Dienstanbieters."
   },
   "heading": "Vom eigenen Café",
   "headingAccent": "zur Plattform für Restaurants",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "Betriebe laufen mit IQ Rest"
+      "label": "Betriebe laufen mit QRgine"
     },
     {
       "value": "15",
       "label": "Länder, in denen unsere Kunden sind"
     }
   ],
-  "waPrefill": "Hallo, ich habe eine Frage zu IQ Rest",
+  "waPrefill": "Hallo, ich habe eine Frage zu QRgine",
   "contacts": [
     {
       "icon": "Mail",

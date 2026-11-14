@@ -2,7 +2,7 @@
   "htmlLang": "fi",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Digitaalinen ruokalista, KDS ja varaukset | IQ Rest",
+    "title": "Digitaalinen ruokalista, KDS ja varaukset | QRgine",
     "description": "Pyöritä ravintolaasi yhdestä sovelluksesta: monikielinen digitaalinen ruokalista, keittiönäyttö ja pöytävaraukset 24/7. 14 päivää ilmaiseksi, ei luottokorttia.",
     "canonical": "https://iq-rest.com/fi",
     "ogLocale": "fi_FI",
@@ -10,7 +10,7 @@
     "ogDescription": "Pyöritä ravintolaasi yhdestä sovelluksesta: monikielinen digitaalinen ruokalista, keittiönäyttö ja 24/7 pöytävaraukset. Käyttövalmis 5 minuutissa. 14 päivää ilmaiseksi, ei luottokorttia."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Ravintolan hallinta-alusta"
+    "appName": "QRgine — Ravintolan hallinta-alusta"
   },
   "ctaText": "Kokeile ilmaiseksi",
   "homeCtaText": "Kokeile ilmaiseksi",
@@ -82,7 +82,7 @@
     "quoteStart": "Pyöritimme vaimoni kanssa omaa kahvilaa ja tunnemme ravintola-arjen sisältäpäin: tilausten vastaanoton, pöytävaraukset, salin ja keittiön toiminnot. Halusimme yhden työkalun — modernin, helposti käyttöönotettavan ja heti ymmärrettävän —",
     "quoteAccent": "näin syntyi idea alustasta, jota nyt kehitämme muille ravintoloitsijoille.",
     "sign": "Bogdan Sokolov · perustaja, entinen kahvilayrittäjä",
-    "photoAlt": "Bogdan Sokolov, IQ Restin perustaja"
+    "photoAlt": "Bogdan Sokolov, QRginein perustaja"
   },
   "pricing": {
     "badge": "Ei välityspalkkioita · Ei sitovia sopimuksia",
@@ -108,7 +108,7 @@
     "headingAccent": "kysymykset",
     "sub": "Mitä ravintoloitsijat kysyvät useimmiten ennen rekisteröitymistä. Jos et löydä vastausta — laita viestiä WhatsAppissa. Meillä vastaa oikea ihminen, ei botti.",
     "whatsappCta": "Laita viestiä WhatsAppissa",
-    "whatsappPrefill": "Hei, minulla on kysyttävää IQ Restistä",
+    "whatsappPrefill": "Hei, minulla on kysyttävää QRgineistä",
     "items": [
       {
         "q": "Mitä kokeilujakso sisältää ja mitä sen jälkeen tapahtuu?",
@@ -192,7 +192,7 @@
     "button": "Kokoa pakettini"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Kaikki oikeudet pidätetään.",
+    "copyrightTemplate": "© {year} QRgine. Kaikki oikeudet pidätetään.",
     "featuresHeading": "Ominaisuudet",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Ravintolateknologian blogi — IQ Rest",
+    "metaTitle": "Ravintolateknologian blogi — QRgine",
     "metaDescription": "Oppaita ja vertailuja digitaalisista ruokalistoista, QR-tilauksista, keittiönäytöistä ja varauksista — käytännönläheistä luettavaa ravintoloitsijoille.",
     "title": "Blogi",
     "intro": "Oppaita ja vertailuja digitaalisista ruokalistoista, QR-tilauksista, keittiönäytöistä ja ravintolan arjesta.",

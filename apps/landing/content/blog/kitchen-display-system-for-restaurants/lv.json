@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Virtuves ekrāns: vai tev vajag KDS? | IQ Rest",
+    "title": "Virtuves ekrāns: vai tev vajag KDS? | QRgine",
     "description": "Ko dara KDS, cik patiesībā maksā aparatūra, kā to palaist uz planšetes, kas tev jau ir, un kurām virtuvēm labāk klājas ar papīra pasūtījumu lapiņām."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Lielākajai daļai virtuvju tas nav vajadzīgs. IQ Rest [virtuves ekrāns](route:/kitchen-display) darbojas pārlūkā, tāpēc aparatūra var būt planšete, kas tev jau ir, lēta Android planšete vai vecs klēpjdators ar monitoru. Ieliec to pret šļakatām izturīgā apvalkā, uzstādi ārpus tvaika līnijas, un robežizmaksas ir sienas stiprinājums."
+      "text": "Lielākajai daļai virtuvju tas nav vajadzīgs. QRgine [virtuves ekrāns](route:/kitchen-display) darbojas pārlūkā, tāpēc aparatūra var būt planšete, kas tev jau ir, lēta Android planšete vai vecs klēpjdators ar monitoru. Ieliec to pret šļakatām izturīgā apvalkā, uzstādi ārpus tvaika līnijas, un robežizmaksas ir sienas stiprinājums."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Vai KDS var darbināt uz parastas planšetes?",
-          "a": "Jā. IQ Rest virtuves ekrāns darbojas pārlūkā, tāpēc der jebkura pēdējo piecu gadu planšete vai klēpjdators. Izmanto pret šļakatām izturīgu apvalku."
+          "a": "Jā. QRgine virtuves ekrāns darbojas pārlūkā, tāpēc der jebkura pēdējo piecu gadu planšete vai klēpjdators. Izmanto pret šļakatām izturīgu apvalku."
         },
         {
           "q": "Vai KDS vajag internetu?",

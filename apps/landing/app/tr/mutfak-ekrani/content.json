@@ -3,13 +3,13 @@
   "slug": "mutfak-ekrani",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Restoranlar İçin Mutfak Ekranı Sistemi (KDS) | IQ Rest",
+    "title": "Restoranlar İçin Mutfak Ekranı Sistemi (KDS) | QRgine",
     "description": "Restoranlar için KDS mutfak ekranı: salondan ve QR menüden gelen siparişler doğrudan aşçıya düşer. Durumlar, istasyon filtreleri; tablet veya telefonda çalışır.",
     "canonical": "https://iq-rest.com/tr/mutfak-ekrani",
     "ogLocale": "tr_TR",
     "ogTitle": "Mutfak Ekranı Sistemi (KDS) — Siparişler Doğrudan Aşçının Ekranında",
     "ogDescription": "Salondan gelen siparişler aşçının ekranında. Masaya göre sütunlar, durumlar ve zamanlayıcı. Tek dokunuşla durum değişir.",
-    "brandLine": "IQ Rest — Restoranlar İçin Mutfak Ekranı"
+    "brandLine": "QRgine — Restoranlar İçin Mutfak Ekranı"
   },
   "hero": {
     "headline": "Mutfak Ekranı Sistemi (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Restorancıların IQ Rest mutfak ekranı hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
+    "sub": "Restorancıların QRgine mutfak ekranı hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
     "items": [
       {
         "q": "Mutfaktaki ürünlerin hangi durumları vardır?",

@@ -3,13 +3,13 @@
   "slug": "prenotazione-tavoli",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Prenotazione dei tavoli 24/7 per ristoranti | IQ Rest",
+    "title": "Prenotazione dei tavoli 24/7 per ristoranti | QRgine",
     "description": "Prenotazione dei tavoli 24/7: gli ospiti riservano da soli tramite menù QR o sito. Calendario per tavoli, conferme automatiche e promemoria. 14 giorni gratis.",
     "canonical": "https://iq-rest.com/it/prenotazione-tavoli",
     "ogLocale": "it_IT",
     "ogTitle": "Prenotazione dei tavoli 24/7 — gli ospiti prenotano da soli",
     "ogDescription": "Gli ospiti prenotano i tavoli tramite menù QR o sito. Calendario, conferme automatiche, promemoria. Nessun cliente perso.",
-    "brandLine": "IQ Rest — Prenotazione dei tavoli al ristorante"
+    "brandLine": "QRgine — Prenotazione dei tavoli al ristorante"
   },
   "hero": {
     "headline": "Prenotazioni 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Calendario delle prenotazioni nel pannello di amministrazione IQ Rest su due tablet: griglia giornaliera per tavoli e calendario mensile"
+        "alt": "Calendario delle prenotazioni nel pannello di amministrazione QRgine su due tablet: griglia giornaliera per tavoli e calendario mensile"
       }
     }
   ],
   "faq": {
-    "sub": "Le domande dei ristoratori sulla prenotazione dei tavoli in IQ Rest. Se la tua domanda non è nell'elenco, scrivici su WhatsApp.",
+    "sub": "Le domande dei ristoratori sulla prenotazione dei tavoli in QRgine. Se la tua domanda non è nell'elenco, scrivici su WhatsApp.",
     "items": [
       {
         "q": "Posso scegliere i giorni e gli orari in cui è disponibile la prenotazione?",

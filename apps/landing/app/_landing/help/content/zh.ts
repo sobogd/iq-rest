@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // ZH help guide.
 export const zh: HelpDoc = {
-  metaTitle: "如何使用 IQ Rest — 分步指南",
+  metaTitle: "如何使用 QRgine — 分步指南",
   metaDescription:
-    "IQ Rest 完整指南：注册、菜单、订单、预订、厨房显示屏和设置 — 面向餐厅。",
+    "QRgine 完整指南：注册、菜单、订单、预订、厨房显示屏和设置 — 面向餐厅。",
   h1: "帮助",
-  intro: "IQ Rest 详细指南 — 从注册到细致设置。",
+  intro: "QRgine 详细指南 — 从注册到细致设置。",
   banner: {
     title: "比看上去更简单",
     sub: "分步指南：从注册到细致设置 — 人人都能上手。",
@@ -22,7 +22,7 @@ export const zh: HelpDoc = {
         { type: "h3", text: "这是什么系统" },
         {
           type: "p",
-          text: "IQ Rest 是面向餐厅的服务：你创建带二维码的在线菜单，直接从客人的手机接收订单和餐桌预订，厨房和服务员使用平板终端工作。一切都在一个管理面板（仪表板）中管理。",
+          text: "QRgine 是面向餐厅的服务：你创建带二维码的在线菜单，直接从客人的手机接收订单和餐桌预订，厨房和服务员使用平板终端工作。一切都在一个管理面板（仪表板）中管理。",
         },
         { type: "h3", text: "注册与登录" },
         { type: "p", text: "可以用三种方式登录 — 在登录界面选择任意一种：" },

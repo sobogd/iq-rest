@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Mutfak ekranı: KDS'ye ihtiyacınız var mı? | IQ Rest",
+    "title": "Mutfak ekranı: KDS'ye ihtiyacınız var mı? | QRgine",
     "description": "KDS ne yapar, donanım gerçekte ne kadar tutar, halihazırda sahip olduğunuz tablette nasıl çalıştırılır ve hangi mutfaklar kâğıt fişle daha iyi durumda."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Çoğu mutfağın buna ihtiyacı yok. IQ Rest'in [mutfak ekranı](route:/kitchen-display) tarayıcıda çalışır; yani donanım halihazırda sahip olduğunuz bir tablet, ucuz bir Android tablet ya da monitörlü eski bir dizüstü olabilir. Sıçramaya dayanıklı bir kılıfa koyun, buhar hattının dışına monte edin; marjinal maliyet bir duvar aparatıdır."
+      "text": "Çoğu mutfağın buna ihtiyacı yok. QRgine'in [mutfak ekranı](route:/kitchen-display) tarayıcıda çalışır; yani donanım halihazırda sahip olduğunuz bir tablet, ucuz bir Android tablet ya da monitörlü eski bir dizüstü olabilir. Sıçramaya dayanıklı bir kılıfa koyun, buhar hattının dışına monte edin; marjinal maliyet bir duvar aparatıdır."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "KDS'yi sıradan bir tablette çalıştırabilir miyim?",
-          "a": "Evet. IQ Rest'in mutfak ekranı tarayıcıda çalışır, dolayısıyla son beş yılın herhangi bir tableti ya da dizüstü bilgisayarı iş görür. Sıçramaya dayanıklı bir kılıf kullanın."
+          "a": "Evet. QRgine'in mutfak ekranı tarayıcıda çalışır, dolayısıyla son beş yılın herhangi bir tableti ya da dizüstü bilgisayarı iş görür. Sıçramaya dayanıklı bir kılıf kullanın."
         },
         {
           "q": "KDS internet ister mi?",

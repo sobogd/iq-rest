@@ -3,13 +3,13 @@
   "slug": "stafraen-matsedill-veitingastaur",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Stafrænn matseðill fyrir veitingastaði | IQ Rest",
+    "title": "Stafrænn matseðill fyrir veitingastaði | QRgine",
     "description": "Stafrænn matseðill fyrir veitingastaðinn: matseðill á netinu með myndum, ofnæmisvöldum og gervigreindarþýðingum. Verð uppfærast í rauntíma. 14 dagar frítt.",
     "canonical": "https://iq-rest.com/is/stafraen-matsedill-veitingastaur",
     "ogLocale": "is_IS",
     "ogTitle": "Stafrænn matseðill fyrir veitingastaði",
     "ogDescription": "Stafræn útgáfa af prentaða matseðlinum með myndum, ofnæmisvöldum og gervigreindarþýðingum. Verð uppfærist í rauntíma.",
-    "brandLine": "IQ Rest — Stafrænn matseðill fyrir veitingastaði"
+    "brandLine": "QRgine — Stafrænn matseðill fyrir veitingastaði"
   },
   "hero": {
     "headline": "Stafrænn matseðill og vefsíða",
@@ -166,7 +166,7 @@
     "heading": "Af hverju veitingastaðir velja okkur",
     "headingAccent": "fram yfir önnur kerfi",
     "sub": "Flest matseðilsverkfæri enda á QR-kóða. Hér að neðan er það sem raunverulega skiptir máli í daglegum rekstri. Engin nöfn nefnd — berðu saman við hvaða kerfi sem er.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Önnur kerfi",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Það sem veitingamenn spyrja um stafræna matseðilinn í IQ Rest. Ef spurningin þín er ekki á listanum — sendu okkur skilaboð á WhatsApp.",
+    "sub": "Það sem veitingamenn spyrja um stafræna matseðilinn í QRgine. Ef spurningin þín er ekki á listanum — sendu okkur skilaboð á WhatsApp.",
     "items": [
       {
         "q": "Þarf ég tækniþekkingu eða reynslu af vefumsjónarkerfum?",
         "a": "Engin sérstök kunnátta nauðsynleg. Allt í stjórnborðinu tekur örfáa smelli — engin forritun, engin vinna með frumkóða. Það tekur sekúndur að bæta við rétti: nafn, verð, mynd. Uppsetning á heilum matseðli tekur venjulega 30–60 mínútur."
       },
       {
-        "q": "Hvað er IQ Rest stafrænn matseðill?",
+        "q": "Hvað er QRgine stafrænn matseðill?",
         "a": "Það er netútgáfa af matseðlinum þínum sem gestir nálgast í gegnum QR kóða eða beinan hlekk: myndir af réttum, verð, ofnæmisvaldar, gervigreindarþýðingar á 35 tungumál og uppfærslur í rauntíma. Matseðillinn keyrir á okkar netþjónum — það þarf ekki að setja upp eða viðhalda neinum hugbúnaði, vafri er allt sem þú þarft."
       },
       {

@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // HU help guide.
 export const hu: HelpDoc = {
-  metaTitle: "Az IQ Rest használata — lépésről lépésre útmutató",
+  metaTitle: "Az QRgine használata — lépésről lépésre útmutató",
   metaDescription:
-    "Teljes IQ Rest útmutató: regisztráció, menü, rendelések, foglalások, konyhai kijelző és beállítások — éttermeknek.",
+    "Teljes QRgine útmutató: regisztráció, menü, rendelések, foglalások, konyhai kijelző és beállítások — éttermeknek.",
   h1: "Súgó",
-  intro: "Részletes útmutató az IQ Resthez — a regisztrációtól a finomabb beállításokig.",
+  intro: "Részletes útmutató az QRginehez — a regisztrációtól a finomabb beállításokig.",
   banner: {
     title: "Egyszerűbb, mint amilyennek látszik",
     sub: "Lépésről lépésre útmutató: a regisztrációtól a finomabb beállításokig — bárki megcsinálja.",
@@ -22,7 +22,7 @@ export const hu: HelpDoc = {
         { type: "h3", text: "Mi ez a rendszer" },
         {
           type: "p",
-          text: "Az IQ Rest éttermeknek szóló szolgáltatás: online menüt készítesz QR-kóddal, rendeléseket és asztalfoglalásokat fogadsz közvetlenül a vendégek telefonjáról, a konyhában és a pincéreknél pedig tablet-terminálok működnek. Mindent egyetlen adminisztrációs panelről (irányítópult) kezelsz.",
+          text: "Az QRgine éttermeknek szóló szolgáltatás: online menüt készítesz QR-kóddal, rendeléseket és asztalfoglalásokat fogadsz közvetlenül a vendégek telefonjáról, a konyhában és a pincéreknél pedig tablet-terminálok működnek. Mindent egyetlen adminisztrációs panelről (irányítópult) kezelsz.",
         },
         { type: "h3", text: "Regisztráció és bejelentkezés" },
         { type: "p", text: "Háromféleképpen léphetsz be — válassz a bejelentkezési képernyőn:" },

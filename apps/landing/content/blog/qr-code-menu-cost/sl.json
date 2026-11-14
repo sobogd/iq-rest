@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Koliko v resnici stane QR jedilnik | IQ Rest",
+    "title": "Koliko v resnici stane QR jedilnik | QRgine",
     "description": "Koliko zares stane jedilnik s QR kodo: brezplačna orodja, mesečne naročnine, cena na lokal, provizije od naročil in skriti čas vzpostavitve."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest je v tretji vrstici: **od 9,90 € na mesec na lokal**, brez provizije od naročil, 14 dni brezplačno brez kartice. Zaračunavamo lokal, ne natakarja, ker obračun na uporabnika kaznuje prav tiste lokale z največjo fluktuacijo osebja."
+      "text": "QRgine je v tretji vrstici: **od 9,90 € na mesec na lokal**, brez provizije od naročil, 14 dni brezplačno brez kartice. Zaračunavamo lokal, ne natakarja, ker obračun na uporabnika kaznuje prav tiste lokale z največjo fluktuacijo osebja."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Zato uvoz jedilnika šteje več, kot se sliši. IQ Rest prebere fotografijo vašega papirnatega jedilnika in postavke ustvari sam, kar tisti pol dneva spremeni v približno pet minut. Pri primerjavi orodij vštejte čas vzpostavitve; pogosto tehta več kot prvo leto naročnine."
+      "text": "Zato uvoz jedilnika šteje več, kot se sliši. QRgine prebere fotografijo vašega papirnatega jedilnika in postavke ustvari sam, kar tisti pol dneva spremeni v približno pet minut. Pri primerjavi orodij vštejte čas vzpostavitve; pogosto tehta več kot prvo leto naročnine."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Koliko stane jedilnik s QR kodo na mesec?",
-          "a": "Orodja s fiksno naročnino se navadno gibljejo med 10 in 40 € na lokal mesečno. IQ Rest se začne pri 9,90 € brez provizije od naročil."
+          "a": "Orodja s fiksno naročnino se navadno gibljejo med 10 in 40 € na lokal mesečno. QRgine se začne pri 9,90 € brez provizije od naročil."
         },
         {
           "q": "Ali obstaja brezplačen jedilnik s QR kodo?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Se plača na mizo ali na restavracijo?",
-          "a": "Pri IQ Restu na restavracijo — mize in QR kode so neomejene. Preverite to, preden kjerkoli podpišete, saj se cena na mizo ali na uporabnika slabo skalira."
+          "a": "Pri QRgineu na restavracijo — mize in QR kode so neomejene. Preverite to, preden kjerkoli podpišete, saj se cena na mizo ali na uporabnika slabo skalira."
         },
         {
           "q": "Ali obstaja pristopnina?",

@@ -7,13 +7,13 @@
     "sub": "Kaikki mitä yksi skannaus tarjoaa asiakkaillesi ja salillesi."
   },
   "meta": {
-    "title": "QR-ruokalista ravintoloille | IQ Rest",
+    "title": "QR-ruokalista ravintoloille | QRgine",
     "description": "QR-ruokalista ravintoloille: asiakkaat skannaavat QR-koodin pöydässä, avaavat ruokalistan selaimessa ja tilaavat omalla kielellään. 14 päivää ilmaiseksi.",
     "canonical": "https://iq-rest.com/fi/qr-koodi-ruokalista-ravintola",
     "ogLocale": "fi_FI",
     "ogTitle": "QR-ruokalista ravintoloille",
     "ogDescription": "QR pöydässä, ruokalista puhelimessa — kuvat, allergeenit, 35 kieltä ja reaaliaikaiset päivitykset.",
-    "brandLine": "IQ Rest — QR-ruokalista ravintoloille"
+    "brandLine": "QRgine — QR-ruokalista ravintoloille"
   },
   "hero": {
     "headline": "QR-ruokalista:\nskannaa ja tilaa",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Mitä ravintoloitsijat kysyvät IQ Restin QR-ruokalistasta. Etkö löydä kysymystäsi? Laita viestiä WhatsAppissa.",
+    "sub": "Mitä ravintoloitsijat kysyvät QRginein QR-ruokalistasta. Etkö löydä kysymystäsi? Laita viestiä WhatsAppissa.",
     "items": [
       {
-        "q": "Miten IQ Restin QR-ruokalista toimii?",
+        "q": "Miten QRginein QR-ruokalista toimii?",
         "a": "Jokaisessa pöydässä on painettu QR-koodi. Asiakkaat skannaavat sen puhelimensa kameralla, ja selain avaa ravintolan ruokalistan — kuvat, kuvaukset, allergeenit ja ajantasaiset hinnat. Asiakkaiden tai henkilökunnan ei tarvitse ladata sovellusta."
       },
       {

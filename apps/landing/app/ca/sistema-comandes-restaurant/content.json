@@ -3,13 +3,13 @@
   "slug": "sistema-comandes-restaurant",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Presa de comandes: comensals i cambrers | IQ Rest",
+    "title": "Presa de comandes: comensals i cambrers | QRgine",
     "description": "Presa de comandes des del mòbil o la tauleta: plànol de sala, comptes separats, estats i opcions. Els clients demanen des de la taula. 14 dies gratis.",
     "canonical": "https://iq-rest.com/ca/sistema-comandes-restaurant",
     "ogLocale": "ca_ES",
     "ogTitle": "Presa de comandes: comensals i cambrers",
     "ogDescription": "Un client a la taula o un cambrer amb el mòbil: la comanda arriba a cuina a l'instant. Plànol de sala, comptes separats, estats, opcions i comentaris.",
-    "brandLine": "IQ Rest — Presa de comandes per a restaurants"
+    "brandLine": "QRgine — Presa de comandes per a restaurants"
   },
   "hero": {
     "headline": "Comandes des de la taula:",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "El que pregunten els restauradors sobre la presa de comandes a IQ Rest. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
+    "sub": "El que pregunten els restauradors sobre la presa de comandes a QRgine. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
     "items": [
       {
         "q": "Poden treballar diversos cambrers alhora des de diferents dispositius?",

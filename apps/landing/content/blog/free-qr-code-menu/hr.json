@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Besplatan QR jelovnik: što je stvarno besplatno | IQ Rest",
+    "title": "Besplatan QR jelovnik: što je stvarno besplatno | QRgine",
     "description": "Besplatni QR jelovnici postoje i neki su u redu. Kako zarađuju, koje ograničenje udara prvo i kada je besplatno doista pravi izbor."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Tipična besplatna razina",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Je li besplatno probno razdoblje isto što i besplatan paket?",
-          "a": "Nije. Probno razdoblje je cijeli proizvod na ograničeno vrijeme; besplatan paket je ograničen proizvod zauvijek. IQ Rest daje 14 dana probe sa svime uključenim i bez kartice."
+          "a": "Nije. Probno razdoblje je cijeli proizvod na ograničeno vrijeme; besplatan paket je ograničen proizvod zauvijek. QRgine daje 14 dana probe sa svime uključenim i bez kartice."
         },
         {
           "q": "Koji je najjeftiniji plaćeni QR jelovnik?",
-          "a": "Fiksni paketi obično kreću oko 10 € mjesečno po lokalu. IQ Rest počinje na 9,90 € — cijela raščlamba je u [koliko košta jelovnik s QR kodom](blog:qr-code-menu-cost)."
+          "a": "Fiksni paketi obično kreću oko 10 € mjesečno po lokalu. QRgine počinje na 9,90 € — cijela raščlamba je u [koliko košta jelovnik s QR kodom](blog:qr-code-menu-cost)."
         },
         {
           "q": "Mogu li premjestiti jelovnik s besplatnog alata na plaćeni?",
-          "a": "Obično da i rijetko ga morate ponovno utipkavati: IQ Rest može pročitati fotografiju ili PDF postojećeg jelovnika i ponovno složiti stavke za otprilike pet minuta."
+          "a": "Obično da i rijetko ga morate ponovno utipkavati: QRgine može pročitati fotografiju ili PDF postojećeg jelovnika i ponovno složiti stavke za otprilike pet minuta."
         }
       ]
     }

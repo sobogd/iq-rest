@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Jak zrobić menu z kodem QR: 3 sposoby | IQ Rest",
+    "title": "Jak zrobić menu z kodem QR: 3 sposoby | QRgine",
     "description": "Trzy sposoby na menu QR dla restauracji: darmowy generator z PDF-em, kreator menu albo pełny system. Ile kosztuje każdy i co się w nim psuje."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Przenieś kartę do postaci cyfrowej. Przepisanie 80 pozycji to największy pożeracz czasu – IQ Rest czyta zdjęcie papierowej karty i sam tworzy dania oraz ceny, co zamienia cały wieczór w jakieś pięć minut.",
+        "Przenieś kartę do postaci cyfrowej. Przepisanie 80 pozycji to największy pożeracz czasu – QRgine czyta zdjęcie papierowej karty i sam tworzy dania oraz ceny, co zamienia cały wieczór w jakieś pięć minut.",
         "Napraw strukturę, zanim zajmiesz się wyglądem. Grupuj dania tak, jak zamawiają goście (przystawki, dania główne, napoje), a nie tak, jak zorganizowana jest kuchnia. Długie płaskie listy zabijają przewijanie.",
         "Dodaj zdjęcia tam, gdzie zmieniają decyzję. Sfotografowanie każdego dania jest gorsze niż pięć dobrych zdjęć przy daniach, które chcesz sprzedawać.",
         "Oznacz alergeny od razu, nie później. W UE i tak są wymagane, a dorabianie ich później do 80 pozycji to udręka.",

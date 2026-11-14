@@ -2,7 +2,7 @@
   "htmlLang": "lt",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Skaitmeninis meniu, virtuvės ekranas ir rezervacijos — IQ Rest",
+    "title": "Skaitmeninis meniu, virtuvės ekranas ir rezervacijos — QRgine",
     "description": "Valdykite restoraną viena programėle: daugiakalbis skaitmeninis meniu, virtuvės ekranas ir rezervacijos 24/7. Paleiskite per 5 minutes. 14 dienų nemokamai.",
     "canonical": "https://iq-rest.com/lt",
     "ogLocale": "lt_LT",
@@ -10,7 +10,7 @@
     "ogDescription": "Valdykite restoraną viena programėle: daugiakalbis skaitmeninis meniu, virtuvės ekranas ir visą parą veikiančios rezervacijos. Paleiskite per 5 minutes. 14 dienų nemokamai, kortelės nereikia."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Restoranų valdymo platforma"
+    "appName": "QRgine — Restoranų valdymo platforma"
   },
   "ctaText": "Išbandyti nemokamai",
   "homeCtaText": "Išbandyti nemokamai",
@@ -82,7 +82,7 @@
     "quoteStart": "Su žmona turėjome savo kavinę ir žinome restorano kasdienybę iš vidaus: užsakymų priėmimas, rezervacijos, darbas salėje ir virtuvėje. Norėjome vieno įrankio – modernaus, lengvai paruošiamo ir aiškaus iš pirmo žvilgsnio –",
     "quoteAccent": "taip gimė idėja platformai, kurią dabar vystome kitiems restoranų savininkams.",
     "sign": "Bogdanas Sokolovas · įkūrėjas, buvęs kavinės savininkas",
-    "photoAlt": "Bogdanas Sokolovas, IQ Rest įkūrėjas"
+    "photoAlt": "Bogdanas Sokolovas, QRgine įkūrėjas"
   },
   "pricing": {
     "badge": "Jokių komisinių · Jokių sutarčių",
@@ -108,7 +108,7 @@
     "headingAccent": "klausimai",
     "sub": "Ko restoranų savininkai dažniausiai klausia prieš registruodamiesi. Jei nerandate atsakymo – parašykite mums WhatsApp, atsako realūs darbuotojai, ne botai.",
     "whatsappCta": "Parašykite mums WhatsApp",
-    "whatsappPrefill": "Sveiki, turiu klausimą apie IQ Rest",
+    "whatsappPrefill": "Sveiki, turiu klausimą apie QRgine",
     "items": [
       {
         "q": "Ką apima bandomasis laikotarpis ir kas nutinka jam pasibaigus?",
@@ -192,7 +192,7 @@
     "button": "Kurti mano planą"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Visos teisės saugomos.",
+    "copyrightTemplate": "© {year} QRgine. Visos teisės saugomos.",
     "featuresHeading": "Funkcijos",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Restoranų technologijų tinklaraštis — IQ Rest",
+    "metaTitle": "Restoranų technologijų tinklaraštis — QRgine",
     "metaDescription": "Gidai ir palyginimai apie skaitmeninius meniu, QR užsakymus, virtuvės ekranus ir rezervacijas — praktiška medžiaga restoranų savininkams.",
     "title": "Tinklaraštis",
     "intro": "Gidai ir palyginimai apie skaitmeninius meniu, QR užsakymus, virtuvės ekranus ir restorano valdymą.",

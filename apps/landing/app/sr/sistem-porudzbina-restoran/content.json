@@ -3,13 +3,13 @@
   "slug": "sistem-porudzbina-restoran",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Prijem porudžbina u restoranu — Gost i konobar | IQ Rest",
+    "title": "Prijem porudžbina u restoranu — Gost i konobar | QRgine",
     "description": "Prijem porudžbina sa telefona ili tableta: mapa stolova, deljenje računa, statusi i napomene. Gosti poručuju direktno sa stola. 14 dana besplatno.",
     "canonical": "https://iq-rest.com/sr/sistem-porudzbina-restoran",
     "ogLocale": "sr_RS",
     "ogTitle": "Prijem porudžbina u restoranu — Gost i konobar",
     "ogDescription": "Gost za stolom ili konobar na telefonu — porudžbina odmah stiže u kuhinju. Mapa stolova, deljenje računa, statusi, opcije i napomene.",
-    "brandLine": "IQ Rest — Prijem porudžbina u restoranu"
+    "brandLine": "QRgine — Prijem porudžbina u restoranu"
   },
   "hero": {
     "headline": "Porudžbine sa stola —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Šta ugostitelji pitaju o prijemu porudžbina u IQ Rest-u. Ako vaše pitanje nije na listi — pišite nam na WhatsApp.",
+    "sub": "Šta ugostitelji pitaju o prijemu porudžbina u QRgine-u. Ako vaše pitanje nije na listi — pišite nam na WhatsApp.",
     "items": [
       {
         "q": "Mogu li više konobara raditi istovremeno sa različitih uređaja?",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Meniu vertimas: ką versti ir ko ne | IQ Rest",
+    "title": "Meniu vertimas: ką versti ir ko ne | QRgine",
     "description": "Kodėl mašininis patiekalų pavadinimų vertimas nepavyksta, kurios meniu dalys lieka originalo kalba ir kaip išlaikyti keturias kalbas be keturių meniu."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "[Skaitmeninis meniu](route:/digital-menu) tai apverčia. Svečio telefonas savo kalbą ir taip praneša, tad meniu atsidaro teisinga, niekam nesirenkant. IQ Rest meniu verčia automatiškai, o kadangi vertimai prisegti prie pozicijos, vienas kainos pakeitimas pakeičia ją visose kalbose. Penktos kalbos pridėjimas nekainuoja nieko ir nereikalauja perspausdinimo."
+      "text": "[Skaitmeninis meniu](route:/digital-menu) tai apverčia. Svečio telefonas savo kalbą ir taip praneša, tad meniu atsidaro teisinga, niekam nesirenkant. QRgine meniu verčia automatiškai, o kadangi vertimai prisegti prie pozicijos, vienas kainos pakeitimas pakeičia ją visose kalbose. Penktos kalbos pridėjimas nekainuoja nieko ir nereikalauja perspausdinimo."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Vienas meniu, visos kalbos",
-      "text": "IQ Rest jūsų meniu išverčia automatiškai ir atidaro svečio kalba. Pakeičiate kainą vieną kartą — atsinaujina visos kalbos. 14 dienų nemokamai.",
+      "text": "QRgine jūsų meniu išverčia automatiškai ir atidaro svečio kalba. Pakeičiate kainą vieną kartą — atsinaujina visos kalbos. 14 dienų nemokamai.",
       "buttonLabel": "Žiūrėti automatinį vertimą",
       "routeKey": "/digital-menu"
     },

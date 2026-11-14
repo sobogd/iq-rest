@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Apie IQ Rest — Kas mes esame, kontaktai ir teisinė informacija",
-    "description": "Kas stovi už IQ Rest, kaip su mumis susisiekti ir paslaugos operatoriaus duomenys: el. paštas, WhatsApp, teisinė informacija.",
+    "title": "Apie QRgine — Kas mes esame, kontaktai ir teisinė informacija",
+    "description": "Kas stovi už QRgine, kaip su mumis susisiekti ir paslaugos operatoriaus duomenys: el. paštas, WhatsApp, teisinė informacija.",
     "canonical": "https://iq-rest.com/lt/about",
     "ogLocale": "lt_LT",
-    "ogTitle": "Apie IQ Rest",
-    "ogDescription": "Kas stovi už IQ Rest, palaikymo kontaktai ir paslaugos operatoriaus teisinė informacija."
+    "ogTitle": "Apie QRgine",
+    "ogDescription": "Kas stovi už QRgine, palaikymo kontaktai ir paslaugos operatoriaus teisinė informacija."
   },
   "heading": "Nuo nuosavos kavinės",
   "headingAccent": "iki platformos restoranams",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "vietų naudoja IQ Rest"
+      "label": "vietų naudoja QRgine"
     },
     {
       "value": "15",
       "label": "šalių, kuriose yra mūsų klientai"
     }
   ],
-  "waPrefill": "Sveiki, turiu klausimą apie IQ Rest",
+  "waPrefill": "Sveiki, turiu klausimą apie QRgine",
   "contacts": [
     {
       "icon": "Mail",

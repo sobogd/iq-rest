@@ -4,7 +4,7 @@ import type { FeatureComparison as FeatureComparisonData } from "../templates/ty
 // "Us vs other systems" comparison band, in the same big card as the FAQ:
 // a tinted 40% column on the LEFT (heading/sub, sticky) and a plain 60%
 // column on the RIGHT with the rows stacked one after another — each row is
-// a capability title plus the two labelled lines ("IQ Rest: …" / "Other
+// a capability title plus the two labelled lines ("QRgine: …" / "Other
 // systems: …"). Competitors stay anonymous on purpose — the rows contrast
 // capabilities, not brands. Server component: static SSR content, no JS.
 export function FeatureComparison({ data }: { data: FeatureComparisonData }) {

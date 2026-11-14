@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Keukenscherm: heb je een KDS nodig? | IQ Rest",
+    "title": "Keukenscherm: heb je een KDS nodig? | QRgine",
     "description": "Wat een KDS doet, wat de hardware echt kost, hoe je het draait op een tablet die je al hebt, en welke keukens beter af zijn met papieren bonnen."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "De meeste keukens hebben dat niet nodig. Het [keukenscherm](route:/kitchen-display) van IQ Rest draait in de browser, dus de hardware kan een tablet zijn die je al hebt, een goedkope Android-tablet of een oude laptop met een monitor. Stop hem in een spatbestendige hoes, hang hem buiten de stoomlijn, en de marginale kosten zijn een wandbeugel."
+      "text": "De meeste keukens hebben dat niet nodig. Het [keukenscherm](route:/kitchen-display) van QRgine draait in de browser, dus de hardware kan een tablet zijn die je al hebt, een goedkope Android-tablet of een oude laptop met een monitor. Stop hem in een spatbestendige hoes, hang hem buiten de stoomlijn, en de marginale kosten zijn een wandbeugel."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Kan ik een KDS op een gewone tablet draaien?",
-          "a": "Ja. Het keukenscherm van IQ Rest draait in de browser, dus elke tablet of laptop van de afgelopen vijf jaar volstaat. Gebruik een spatbestendige hoes."
+          "a": "Ja. Het keukenscherm van QRgine draait in de browser, dus elke tablet of laptop van de afgelopen vijf jaar volstaat. Gebruik een spatbestendige hoes."
         },
         {
           "q": "Heeft een KDS internet nodig?",

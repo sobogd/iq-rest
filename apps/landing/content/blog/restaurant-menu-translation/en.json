@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Restaurant Menu Translation: What to Translate | IQ Rest",
+    "title": "Restaurant Menu Translation: What to Translate | QRgine",
     "description": "Why machine-translating dish names goes wrong, which parts of a menu should stay in the original language, and how to run four languages without four menus."
   },
   "card": {
@@ -74,7 +74,7 @@
     },
     {
       "type": "p",
-      "text": "A [digital menu](route:/digital-menu) inverts that. The guest's phone already announces its language, so the menu opens in the right one without anybody choosing. IQ Rest translates the menu automatically, and because translations are attached to the item, changing a price once changes it in every language. Adding a fifth language costs nothing and takes no reprint."
+      "text": "A [digital menu](route:/digital-menu) inverts that. The guest's phone already announces its language, so the menu opens in the right one without anybody choosing. QRgine translates the menu automatically, and because translations are attached to the item, changing a price once changes it in every language. Adding a fifth language costs nothing and takes no reprint."
     },
     { "type": "h2", "text": "A workable process" },
     {
@@ -94,7 +94,7 @@
     {
       "type": "cta",
       "heading": "One menu, every language",
-      "text": "IQ Rest translates your menu automatically and opens it in the guest's own language. Change a price once and every language updates. 14 days free.",
+      "text": "QRgine translates your menu automatically and opens it in the guest's own language. Change a price once and every language updates. 14 days free.",
       "buttonLabel": "See automatic translation",
       "routeKey": "/digital-menu"
     },

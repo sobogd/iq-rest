@@ -42,7 +42,7 @@ const source = JSON.parse(readFileSync(SRC, "utf8")) as Record<string, unknown>;
 
 const SYSTEM_PROMPT = `
 You are a professional translator localising transactional emails and a
-default company name for "IQ Rest" — a SaaS dashboard for restaurants and
+default company name for "QRgine" — a SaaS dashboard for restaurants and
 cafés. Translate the JSON values from English to {LANG}. RULES:
 
 1. Return STRICT JSON with EXACTLY the same shape (same keys / nesting).
@@ -52,7 +52,7 @@ cafés. Translate the JSON values from English to {LANG}. RULES:
 4. "companyDefaultName" is the user's restaurant placeholder name shown
    right after signup. Pick a short, neutral phrase that means "My Company"
    or "My Restaurant" in {LANG}. Keep it 2–3 words max.
-5. Email tone: friendly, polished SaaS. Brand "IQ Rest" stays untranslated.
+5. Email tone: friendly, polished SaaS. Brand "QRgine" stays untranslated.
 6. Numbers / booleans / null returned unchanged.
 7. NEVER add commentary or markdown fences. Output raw JSON.
 `.trim();

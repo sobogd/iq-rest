@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Skapa en QR-meny: 3 sätt jämförda | IQ Rest",
+    "title": "Skapa en QR-meny: 3 sätt jämförda | QRgine",
     "description": "Tre sätt att skapa en QR-meny för restaurangen: gratis generator med pdf, menybyggare eller ett komplett system. Vad de kostar och var de går sönder."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Få in menyn i digital form. Att knappa in 80 rader är den överlägset största tidstjuven – IQ Rest läser ett foto av din pappersmeny och skapar rätter och priser åt dig, vilket gör en hel kväll till ungefär fem minuter.",
+        "Få in menyn i digital form. Att knappa in 80 rader är den överlägset största tidstjuven – QRgine läser ett foto av din pappersmeny och skapar rätter och priser åt dig, vilket gör en hel kväll till ungefär fem minuter.",
         "Fixa strukturen före designen. Gruppera som gäster beställer (förrätter, varmrätter, dryck), inte som ditt kök är organiserat. Långa platta listor dödar scrollandet.",
         "Lägg bilder där de ändrar beslutet. Att fotografera varje rätt är sämre än fem bra bilder på de rätter du vill sälja.",
         "Märk allergener nu, inte sedan. Inom EU behöver du dem ändå, och att efterhandsmärka 80 rader är plågsamt.",

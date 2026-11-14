@@ -3,13 +3,13 @@
   "slug": "tebeul-yeyak",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "레스토랑 24시간 테이블 예약 | IQ Rest",
+    "title": "레스토랑 24시간 테이블 예약 | QRgine",
     "description": "매장을 위한 24시간 테이블 예약: 고객이 QR 메뉴나 웹사이트에서 직접 예약합니다. 테이블별 캘린더, 자동 확정과 알림. 전화 응대 없이 예약을 놓치지 마세요. 14일 무료 체험.",
     "canonical": "https://iq-rest.com/ko/tebeul-yeyak",
     "ogLocale": "ko_KR",
     "ogTitle": "24시간 테이블 예약 — 고객이 직접 예약합니다",
     "ogDescription": "고객이 QR 메뉴나 웹사이트를 통해 테이블을 예약합니다. 캘린더, 자동 확정, 알림 기능. 단 한 명의 고객도 놓치지 마세요.",
-    "brandLine": "IQ Rest — 레스토랑 테이블 예약"
+    "brandLine": "QRgine — 레스토랑 테이블 예약"
   },
   "hero": {
     "headline": "24시간 테이블 예약,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "두 대의 태블릿에 표시된 IQ Rest 예약 캘린더: 테이블별 일간 일정과 월간 일정"
+        "alt": "두 대의 태블릿에 표시된 QRgine 예약 캘린더: 테이블별 일간 일정과 월간 일정"
       }
     }
   ],
   "faq": {
-    "sub": "IQ Rest 테이블 예약에 대해 사장님들이 자주 묻는 질문입니다. 원하는 답을 찾지 못하셨다면 WhatsApp으로 문의해 주세요.",
+    "sub": "QRgine 테이블 예약에 대해 사장님들이 자주 묻는 질문입니다. 원하는 답을 찾지 못하셨다면 WhatsApp으로 문의해 주세요.",
     "items": [
       {
         "q": "예약 가능한 요일과 시간을 설정할 수 있나요?",

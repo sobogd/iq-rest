@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Free QR Code Menu: What's Actually Free | IQ Rest",
+    "title": "Free QR Code Menu: What's Actually Free | QRgine",
     "description": "Free QR menu tools exist and some are fine. Here's how they make money, which limits bite first, and when free is genuinely the right choice."
   },
   "card": {
@@ -46,7 +46,7 @@
     { "type": "h2", "text": "What the free tiers usually cap" },
     {
       "type": "table",
-      "headers": ["", "Typical free tier", "IQ Rest"],
+      "headers": ["", "Typical free tier", "QRgine"],
       "rows": [
         ["Menu items", "Often 20–50", "Unlimited"],
         ["QR codes", "Often one", "One per table, unlimited"],
@@ -104,15 +104,15 @@
         },
         {
           "q": "Is a free trial the same as a free plan?",
-          "a": "No. A trial is the full product for a limited time; a free plan is a limited product forever. IQ Rest offers a 14-day trial with everything switched on, no card required."
+          "a": "No. A trial is the full product for a limited time; a free plan is a limited product forever. QRgine offers a 14-day trial with everything switched on, no card required."
         },
         {
           "q": "What's the cheapest paid QR menu?",
-          "a": "Flat plans generally start around €10 a month per venue. IQ Rest starts at €9.90 with unlimited items, tables and languages — the full breakdown is in [what a QR code menu costs](blog:qr-code-menu-cost)."
+          "a": "Flat plans generally start around €10 a month per venue. QRgine starts at €9.90 with unlimited items, tables and languages — the full breakdown is in [what a QR code menu costs](blog:qr-code-menu-cost)."
         },
         {
           "q": "Can I move my menu from a free tool to a paid one?",
-          "a": "Usually yes, and you rarely have to retype it — IQ Rest can read a photo or a PDF of the existing menu and rebuild the items in about five minutes."
+          "a": "Usually yes, and you rarely have to retype it — QRgine can read a photo or a PDF of the existing menu and rebuild the items in about five minutes."
         }
       ]
     }

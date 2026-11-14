@@ -3,13 +3,13 @@
   "slug": "chubo-disupurei",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "飲食店向けキッチンディスプレイ（KDS） | IQ Rest",
+    "title": "飲食店向けキッチンディスプレイ（KDS） | QRgine",
     "description": "飲食店向けKDS（キッチンディスプレイ）：ホールやQRメニューの注文が直接厨房モニターに届きます。テーブル別の列表示、調理ステータス管理、ポジション別フィルター。タブレットやスマホで動作。",
     "canonical": "https://iq-rest.com/ja/chubo-disupurei",
     "ogLocale": "ja_JP",
     "ogTitle": "KDS（キッチンディスプレイ） — 注文が直接厨房モニターへ",
     "ogDescription": "ホールからの注文が厨房モニターに。テーブル別の列表示、ステータス、タイマー機能を搭載。ワンタップでステータスを変更。",
-    "brandLine": "IQ Rest — 飲食店向けKDS"
+    "brandLine": "QRgine — 飲食店向けKDS"
   },
   "hero": {
     "headline": "KDS（キッチンディスプレイ）：",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "IQ RestのKDSについて飲食店の方からよくいただく質問です。解決しない場合はWhatsAppでお問い合わせください。",
+    "sub": "QRgineのKDSについて飲食店の方からよくいただく質問です。解決しない場合はWhatsAppでお問い合わせください。",
     "items": [
       {
         "q": "料理のステータスにはどのようなものがありますか？",

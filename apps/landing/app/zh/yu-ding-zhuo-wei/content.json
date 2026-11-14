@@ -3,13 +3,13 @@
   "slug": "yu-ding-zhuo-wei",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "餐厅全天候桌位预订 | IQ Rest",
+    "title": "餐厅全天候桌位预订 | QRgine",
     "description": "为您的餐厅提供全天候桌位预订：顾客通过QR菜单或网站自助订座。按桌台显示的日历、自动确认和提醒。免接电话，不漏掉任何一位顾客。免费试用14天。",
     "canonical": "https://iq-rest.com/zh/yu-ding-zhuo-wei",
     "ogLocale": "zh_CN",
     "ogTitle": "全天候桌位预订 — 顾客自助订座",
     "ogDescription": "顾客通过QR菜单或网站订座。日历、自动确认、提醒。不漏掉任何一位顾客。",
-    "brandLine": "IQ Rest — 餐厅桌位预订"
+    "brandLine": "QRgine — 餐厅桌位预订"
   },
   "hero": {
     "headline": "全天候桌位预订，",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "两台平板电脑上显示的 IQ Rest 后台预订日历：按桌台显示的日视图网格和月视图日历"
+        "alt": "两台平板电脑上显示的 QRgine 后台预订日历：按桌台显示的日视图网格和月视图日历"
       }
     }
   ],
   "faq": {
-    "sub": "餐饮老板关于 IQ Rest 桌位预订的常见问题。如果没找到答案——请在WhatsApp上联系我们。",
+    "sub": "餐饮老板关于 QRgine 桌位预订的常见问题。如果没找到答案——请在WhatsApp上联系我们。",
     "items": [
       {
         "q": "我可以选择开放预订的日期和时间吗？",

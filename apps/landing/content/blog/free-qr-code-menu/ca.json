@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Carta QR gratuïta: què és gratis de debò | IQ Rest",
+    "title": "Carta QR gratuïta: què és gratis de debò | QRgine",
     "description": "Les cartes QR gratuïtes existeixen i algunes van bé. Com guanyen diners, quin límit et frena primer i quan el gratuït és l'opció correcta."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Pla gratuït típic",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Una prova gratuïta és el mateix que un pla gratuït?",
-          "a": "No. Una prova és el producte complet durant un temps limitat; un pla gratuït és un producte limitat per sempre. IQ Rest ofereix 14 dies de prova amb tot activat i sense targeta."
+          "a": "No. Una prova és el producte complet durant un temps limitat; un pla gratuït és un producte limitat per sempre. QRgine ofereix 14 dies de prova amb tot activat i sense targeta."
         },
         {
           "q": "Quina és la carta QR de pagament més barata?",
-          "a": "Els plans plans solen començar al voltant de 10 € al mes per local. IQ Rest arrenca a 9,90 €: el desglossament complet és a [què costa una carta amb codi QR](blog:qr-code-menu-cost)."
+          "a": "Els plans plans solen començar al voltant de 10 € al mes per local. QRgine arrenca a 9,90 €: el desglossament complet és a [què costa una carta amb codi QR](blog:qr-code-menu-cost)."
         },
         {
           "q": "Puc moure la meva carta d'una eina gratuïta a una de pagament?",
-          "a": "Normalment sí, i poques vegades l'has de tornar a teclejar: IQ Rest pot llegir una foto o un PDF de la carta existent i reconstruir els plats en uns cinc minuts."
+          "a": "Normalment sí, i poques vegades l'has de tornar a teclejar: QRgine pot llegir una foto o un PDF de la carta existent i reconstruir els plats en uns cinc minuts."
         }
       ]
     }

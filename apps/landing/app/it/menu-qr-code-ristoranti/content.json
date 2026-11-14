@@ -7,13 +7,13 @@
     "sub": "Tutto ciò che una singola scansione diventa per gli ospiti e per la sala."
   },
   "meta": {
-    "title": "Menù QR per ristoranti | IQ Rest",
+    "title": "Menù QR per ristoranti | QRgine",
     "description": "Menù QR per ristoranti: l'ospite scansiona il codice QR sul tavolo, apre il menù nel browser e ordina nella propria lingua. 14 giorni gratis, senza carta.",
     "canonical": "https://iq-rest.com/it/menu-qr-code-ristoranti",
     "ogLocale": "it_IT",
     "ogTitle": "Menù QR per ristoranti",
     "ogDescription": "QR sul tavolo, menù sul telefono: foto, allergeni, 35 lingue e aggiornamenti in tempo reale.",
-    "brandLine": "IQ Rest — menù QR per ristoranti"
+    "brandLine": "QRgine — menù QR per ristoranti"
   },
   "hero": {
     "headline": "Menù QR:\nscansiona e ordina",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Le domande dei ristoratori sul menù QR di IQ Rest. Non trovate la vostra? Scriveteci su WhatsApp.",
+    "sub": "Le domande dei ristoratori sul menù QR di QRgine. Non trovate la vostra? Scriveteci su WhatsApp.",
     "items": [
       {
-        "q": "Come funziona il menù QR di IQ Rest?",
+        "q": "Come funziona il menù QR di QRgine?",
         "a": "Su ogni tavolo c'è un codice QR stampato. L'ospite lo scansiona con la fotocamera del telefono e il browser apre il menù del ristorante: foto, descrizioni, allergeni e prezzi aggiornati. Non serve scaricare alcuna app, né per l'ospite né per il personale."
       },
       {

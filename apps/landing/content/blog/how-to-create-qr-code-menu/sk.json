@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ako vytvoriť QR menu: 3 spôsoby | IQ Rest",
+    "title": "Ako vytvoriť QR menu: 3 spôsoby | QRgine",
     "description": "Tri spôsoby, ako vytvoriť QR menu pre reštauráciu: bezplatný generátor s PDF, editor menu alebo kompletný systém. Koľko stoja a kde sa pokazia."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Preveďte lístok do digitálnej podoby. Prepísať 80 položiek je najväčší žrút času – IQ Rest prečíta fotku vášho papierového lístka a jedlá aj ceny vytvorí za vás, takže z celého večera je asi päť minút.",
+        "Preveďte lístok do digitálnej podoby. Prepísať 80 položiek je najväčší žrút času – QRgine prečíta fotku vášho papierového lístka a jedlá aj ceny vytvorí za vás, takže z celého večera je asi päť minút.",
         "Vyriešte štruktúru skôr než dizajn. Zoskupujte tak, ako objednávajú hostia (predjedlá, hlavné jedlá, nápoje), nie tak, ako je usporiadaná vaša kuchyňa. Dlhé ploché zoznamy zabíjajú posúvanie.",
         "Fotky dajte tam, kde menia rozhodnutie. Odfotiť každé jedlo je horšie než päť dobrých fotiek pri jedlách, ktoré chcete predať.",
         "Označte alergény hneď, nie neskôr. V EÚ ich aj tak potrebujete a dopĺňať ich spätne k 80 položkám je utrpenie.",

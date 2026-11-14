@@ -3,13 +3,13 @@
   "slug": "sistema-pedidos-restaurante",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Toma de comandas en el restaurante | IQ Rest",
+    "title": "Toma de comandas en el restaurante | QRgine",
     "description": "Toma de comandas desde el teléfono o la tableta: plano de la sala, división de la cuenta, estados y opciones. El comensal pide desde la mesa. 14 días gratis.",
     "canonical": "https://iq-rest.com/es/sistema-pedidos-restaurante",
     "ogLocale": "es_ES",
     "ogTitle": "Toma de comandas en el restaurante — comensal y camarero",
     "ogDescription": "El comensal desde la mesa o el camarero desde el teléfono: el pedido llega al momento a cocina. Plano de la sala, división de la cuenta, estados, opciones y comentarios.",
-    "brandLine": "IQ Rest — Toma de comandas en el restaurante"
+    "brandLine": "QRgine — Toma de comandas en el restaurante"
   },
   "hero": {
     "headline": "Pedidos desde la mesa,",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Lo que preguntan los hosteleros sobre la toma de comandas en IQ Rest. Si su pregunta no está en la lista, escríbanos por WhatsApp.",
+    "sub": "Lo que preguntan los hosteleros sobre la toma de comandas en QRgine. Si su pregunta no está en la lista, escríbanos por WhatsApp.",
     "items": [
       {
         "q": "¿Pueden trabajar varios camareros a la vez desde dispositivos distintos?",

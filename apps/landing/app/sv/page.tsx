@@ -55,11 +55,11 @@ export const metadata: Metadata = {
     title: TEXTS.meta.ogTitle,
     description: TEXTS.meta.ogDescription,
     url: TEXTS.meta.canonical,
-    siteName: "IQ Rest",
+    siteName: "QRgine",
     locale: TEXTS.meta.ogLocale,
     alternateLocale: ogAlternateLocales(TEXTS.meta.ogLocale),
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QRgine" }],
   },
   twitter: {
     card: "summary_large_image",

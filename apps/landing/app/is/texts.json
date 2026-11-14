@@ -2,7 +2,7 @@
   "htmlLang": "is",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Stafrænn matseðill, eldhússkjár og borðabókanir — IQ Rest",
+    "title": "Stafrænn matseðill, eldhússkjár og borðabókanir — QRgine",
     "description": "Rektu veitingastaðinn úr einu smáforriti: fjöltyngdur stafrænn matseðill, eldhússkjár og borðabókanir allan sólarhringinn. 14 dagar frítt, ekkert kort.",
     "canonical": "https://iq-rest.com/is",
     "ogLocale": "is_IS",
@@ -10,7 +10,7 @@
     "ogDescription": "Rektu veitingastaðinn úr einu smáforriti: fjöltyngdur stafrænn matseðill, eldhússkjár og borðabókanir allan sólarhringinn. Tilbúið á 5 mínútum. 14 dagar frítt, engin kortakrafa."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Stjórnkerfi fyrir veitingastaði"
+    "appName": "QRgine — Stjórnkerfi fyrir veitingastaði"
   },
   "ctaText": "Prófaðu frítt",
   "homeCtaText": "Prófaðu frítt",
@@ -82,7 +82,7 @@
     "quoteStart": "Við hjónin rákum eigið kaffihús og þekkjum daglegan rekstur af eigin raun: móttöku pantana, borðabókanir, þjónustu og eldhús. Okkur vantaði eitt tól — nútímalegt, auðvelt í uppsetningu og skýrt við fyrstu sýn —",
     "quoteAccent": "þannig kviknaði hugmyndin að kerfinu sem við þróum nú fyrir aðra veitingamenn.",
     "sign": "Bogdan Sokolov · stofnandi, fyrrum kaffihúsaeigandi",
-    "photoAlt": "Bogdan Sokolov, stofnandi IQ Rest"
+    "photoAlt": "Bogdan Sokolov, stofnandi QRgine"
   },
   "pricing": {
     "badge": "Engin þóknun · Enginn binditími",
@@ -108,7 +108,7 @@
     "headingAccent": "spurningar",
     "sub": "Það sem veitingamenn spyrja oftast að áður en þeir skrá sig. Ef þú finnur ekki svarið — sendu okkur skilaboð á WhatsApp, raunverulegt fólk svarar, ekki vélmenni.",
     "whatsappCta": "Senda skilaboð á WhatsApp",
-    "whatsappPrefill": "Hæ, ég er með spurningu um IQ Rest",
+    "whatsappPrefill": "Hæ, ég er með spurningu um QRgine",
     "items": [
       {
         "q": "Hvað er innifalið í prufutímabilinu og hvað gerist þegar því lýkur?",
@@ -192,7 +192,7 @@
     "button": "Settu saman áskrift"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Allur réttur áskilinn.",
+    "copyrightTemplate": "© {year} QRgine. Allur réttur áskilinn.",
     "featuresHeading": "Virkni",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blogg um veitingatækni — IQ Rest",
+    "metaTitle": "Blogg um veitingatækni — QRgine",
     "metaDescription": "Leiðbeiningar og samanburður um stafræna matseðla, QR-pantanir, eldhússkjái og borðabókanir — hagnýtt lesefni fyrir veitingamenn.",
     "title": "Blogg",
     "intro": "Leiðbeiningar og samanburður um stafræna matseðla, QR-pantanir, eldhússkjái og rekstur veitingastaða.",

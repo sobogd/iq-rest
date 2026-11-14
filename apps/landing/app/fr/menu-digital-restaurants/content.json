@@ -3,13 +3,13 @@
   "slug": "menu-digital-restaurants",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Menu digital pour restaurant | IQ Rest",
+    "title": "Menu digital pour restaurant | QRgine",
     "description": "Menu digital pour restaurant : carte en ligne avec photos, allergènes, traduction IA et mise à jour des prix en temps réel. 14 jours gratuits, sans carte bancaire.",
     "canonical": "https://iq-rest.com/fr/menu-digital-restaurants",
     "ogLocale": "fr_FR",
     "ogTitle": "Menu digital pour restaurant",
     "ogDescription": "La version en ligne de votre menu papier avec photos, allergènes et traduction IA. Mise à jour des prix en temps réel.",
-    "brandLine": "IQ Rest — Menu digital pour restaurant"
+    "brandLine": "QRgine — Menu digital pour restaurant"
   },
   "hero": {
     "headline": "Menu digital et site web",
@@ -166,7 +166,7 @@
     "heading": "Pourquoi les restaurants nous choisissent",
     "headingAccent": "plutôt que d'autres systèmes",
     "sub": "La plupart des outils de menu s'arrêtent au code QR. Les lignes ci-dessous montrent ce qui change vraiment au quotidien. Sans citer de noms : comparez-les au système de votre choix.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Autres systèmes",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Ce que les restaurateurs demandent sur le menu digital d'IQ Rest. Votre question n'est pas dans la liste ? Écrivez-nous sur WhatsApp.",
+    "sub": "Ce que les restaurateurs demandent sur le menu digital d'QRgine. Votre question n'est pas dans la liste ? Écrivez-nous sur WhatsApp.",
     "items": [
       {
         "q": "Faut-il des compétences techniques ou une expérience des CMS ?",
         "a": "Aucune compétence particulière n'est requise. Toutes les actions dans le panneau de gestion se font en quelques clics — sans programmation ni manipulation de code. Ajouter un plat prend quelques secondes : nom, prix, photo. La configuration complète du menu tient généralement en 30 à 60 minutes."
       },
       {
-        "q": "Qu'est-ce que le menu digital IQ Rest ?",
+        "q": "Qu'est-ce que le menu digital QRgine ?",
         "a": "La version en ligne de votre carte, accessible aux clients via un QR code ou un lien direct : photos des plats, prix, allergènes, traduction IA en 35 langues et mises à jour en temps réel. Le menu fonctionne sur nos serveurs — aucun logiciel à installer ou à maintenir, un navigateur suffit."
       },
       {

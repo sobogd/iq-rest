@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Про IQ Rest — Хто ми, контакти та юридичні дані",
-    "description": "Хто стоїть за IQ Rest, як з нами зв'язатися та реквізити оператора сервісу: email, WhatsApp, юридична інформація.",
+    "title": "Про QRgine — Хто ми, контакти та юридичні дані",
+    "description": "Хто стоїть за QRgine, як з нами зв'язатися та реквізити оператора сервісу: email, WhatsApp, юридична інформація.",
     "canonical": "https://iq-rest.com/uk/about",
     "ogLocale": "uk_UA",
-    "ogTitle": "Про IQ Rest",
-    "ogDescription": "Хто стоїть за IQ Rest, контакти підтримки та юридичні реквізити оператора сервісу."
+    "ogTitle": "Про QRgine",
+    "ogDescription": "Хто стоїть за QRgine, контакти підтримки та юридичні реквізити оператора сервісу."
   },
   "heading": "Від власного кафе",
   "headingAccent": "до платформи для ресторанів",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "закладів працюють на IQ Rest"
+      "label": "закладів працюють на QRgine"
     },
     {
       "value": "15",
       "label": "країн, де є наші клієнти"
     }
   ],
-  "waPrefill": "Вітаю, маю запитання щодо IQ Rest",
+  "waPrefill": "Вітаю, маю запитання щодо QRgine",
   "contacts": [
     {
       "icon": "Mail",

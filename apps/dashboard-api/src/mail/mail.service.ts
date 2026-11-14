@@ -75,7 +75,7 @@ export class MailService implements OnModuleDestroy {
    *  recolor it together with the rest of the copy. SVG is not an option —
    *  Gmail strips it. Must stay a public absolute URL. */
   private logoImg(): string {
-    return `<div style="margin:0 0 28px"><img src="https://iq-rest.com/icon-512.png" width="44" height="44" alt="IQ Rest" style="vertical-align:middle;border:0" /><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;letter-spacing:-0.5px;color:#1a1a1a;vertical-align:middle;padding:0 10px">Rest</span></div>`;
+    return `<div style="margin:0 0 28px"><img src="https://iq-rest.com/icon-512.png" width="44" height="44" alt="QRgine" style="vertical-align:middle;border:0" /><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;letter-spacing:-0.5px;color:#1a1a1a;vertical-align:middle;padding:0 10px">Rest</span></div>`;
   }
 
   /** Public help-center URL on the landing for a locale (en lives unprefixed). */
@@ -407,7 +407,7 @@ export class MailService implements OnModuleDestroy {
     });
   }
 
-  /** Notify the IQ Rest support inbox when a customer sends a new
+  /** Notify the QRgine support inbox when a customer sends a new
    *  support message. Fire-and-forget from the support controller so
    *  SMTP failures don't bubble back to the writer. Recipient address
    *  comes from SUPPORT_INBOX_EMAIL (falls back to support@iq-rest.com).
@@ -432,7 +432,7 @@ export class MailService implements OnModuleDestroy {
     const appUrl = (this.config.get<string>("APP_URL") || "https://dashboard.iq-rest.com").replace(/\/$/, "");
     const adminUrl = `${appUrl}/en/dashboard/admin?from=email`;
     const safeMessage = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const subject = `[IQ Rest support] ${companyName} — new message`;
+    const subject = `[QRgine support] ${companyName} — new message`;
 
     await transporter.sendMail({
       from: this.cachedFrom ?? cfg.from,
@@ -464,7 +464,7 @@ export class MailService implements OnModuleDestroy {
     const appUrl = (this.config.get<string>("APP_URL") || "https://dashboard.iq-rest.com").replace(/\/$/, "");
     const inboxUrl = `${appUrl}/en/dashboard/settings/admin/inbox?from=email`;
     const label = count === 1 ? "1 unread conversation" : `${count} unread conversations`;
-    const subject = `[IQ Rest inbox] ${label}`;
+    const subject = `[QRgine inbox] ${label}`;
 
     await transporter.sendMail({
       from: this.cachedFrom ?? cfg.from,

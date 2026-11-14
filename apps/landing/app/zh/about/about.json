@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "关于 IQ Rest — 我们是谁、联系方式与法律信息",
-    "description": "IQ Rest 背后的团队、如何联系我们以及服务运营商的详细信息：邮箱、WhatsApp、法律信息。",
+    "title": "关于 QRgine — 我们是谁、联系方式与法律信息",
+    "description": "QRgine 背后的团队、如何联系我们以及服务运营商的详细信息：邮箱、WhatsApp、法律信息。",
     "canonical": "https://iq-rest.com/zh/about",
     "ogLocale": "zh_CN",
-    "ogTitle": "关于 IQ Rest",
-    "ogDescription": "IQ Rest 背后的团队、客服联系方式及服务运营商的法律信息。"
+    "ogTitle": "关于 QRgine",
+    "ogDescription": "QRgine 背后的团队、客服联系方式及服务运营商的法律信息。"
   },
   "heading": "从我们自己的咖啡馆",
   "headingAccent": "到为餐厅打造的平台",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "家门店使用 IQ Rest"
+      "label": "家门店使用 QRgine"
     },
     {
       "value": "15",
       "label": "个国家有我们的客户"
     }
   ],
-  "waPrefill": "你好，我有一个关于 IQ Rest 的问题",
+  "waPrefill": "你好，我有一个关于 QRgine 的问题",
   "contacts": [
     {
       "icon": "Mail",

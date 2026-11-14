@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "IQ Restist — Kes me oleme, kontaktid ja juriidilised andmed",
-    "description": "Kes on IQ Resti taga, kuidas meiega ühendust võtta ja teenusepakkuja andmed: e-post, WhatsApp, juriidiline info.",
+    "title": "QRgineist — Kes me oleme, kontaktid ja juriidilised andmed",
+    "description": "Kes on QRginei taga, kuidas meiega ühendust võtta ja teenusepakkuja andmed: e-post, WhatsApp, juriidiline info.",
     "canonical": "https://iq-rest.com/et/about",
     "ogLocale": "et_EE",
-    "ogTitle": "IQ Restist",
-    "ogDescription": "Kes on IQ Resti taga, klienditoe kontaktid ja teenusepakkuja juriidilised andmed."
+    "ogTitle": "QRgineist",
+    "ogDescription": "Kes on QRginei taga, klienditoe kontaktid ja teenusepakkuja juriidilised andmed."
   },
   "heading": "Meie enda kohvikust",
   "headingAccent": "platvormiks restoranidele",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "kohta töötab IQ Restil"
+      "label": "kohta töötab QRgineil"
     },
     {
       "value": "15",
       "label": "riiki, kus asuvad meie kliendid"
     }
   ],
-  "waPrefill": "Tere, mul on küsimus IQ Resti kohta",
+  "waPrefill": "Tere, mul on küsimus QRginei kohta",
   "contacts": [
     {
       "icon": "Mail",

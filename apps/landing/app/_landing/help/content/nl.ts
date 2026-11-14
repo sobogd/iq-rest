@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // NL help guide.
 export const nl: HelpDoc = {
-  metaTitle: "IQ Rest gebruiken — stapsgewijze handleiding",
+  metaTitle: "QRgine gebruiken — stapsgewijze handleiding",
   metaDescription:
-    "Volledige IQ Rest-handleiding: registratie, menu, bestellingen, reserveringen, keukenscherm en instellingen — voor restaurants.",
+    "Volledige QRgine-handleiding: registratie, menu, bestellingen, reserveringen, keukenscherm en instellingen — voor restaurants.",
   h1: "Hulp",
-  intro: "Een gedetailleerde handleiding voor IQ Rest — van registratie tot de fijnere instellingen.",
+  intro: "Een gedetailleerde handleiding voor QRgine — van registratie tot de fijnere instellingen.",
   banner: {
     title: "Het is eenvoudiger dan het lijkt",
     sub: "Een stapsgewijze handleiding: van registratie tot de fijnere instellingen — iedereen kan het.",
@@ -22,7 +22,7 @@ export const nl: HelpDoc = {
         { type: "h3", text: "Wat is dit systeem" },
         {
           type: "p",
-          text: "IQ Rest is een dienst voor restaurants: je maakt een online menu met QR-code, ontvangt bestellingen en tafelreserveringen rechtstreeks vanaf de telefoon van gasten, terwijl in de keuken en bij de bediening tablet-terminals draaien. Alles wordt beheerd vanuit één beheerpaneel (het dashboard).",
+          text: "QRgine is een dienst voor restaurants: je maakt een online menu met QR-code, ontvangt bestellingen en tafelreserveringen rechtstreeks vanaf de telefoon van gasten, terwijl in de keuken en bij de bediening tablet-terminals draaien. Alles wordt beheerd vanuit één beheerpaneel (het dashboard).",
         },
         { type: "h3", text: "Registratie en inloggen" },
         { type: "p", text: "Je kunt op drie manieren inloggen — kies er een op het inlogscherm:" },

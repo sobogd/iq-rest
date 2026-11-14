@@ -3,13 +3,13 @@
   "slug": "sistema-ordinazioni-ristorante",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Ricezione degli ordini al ristorante | IQ Rest",
+    "title": "Ricezione degli ordini al ristorante | QRgine",
     "description": "Ricezione degli ordini al ristorante da telefono o tablet: mappa della sala, divisione del conto, stati e opzioni. L'ospite ordina dal tavolo. 14 giorni gratis.",
     "canonical": "https://iq-rest.com/it/sistema-ordinazioni-ristorante",
     "ogLocale": "it_IT",
     "ogTitle": "Ricezione degli ordini al ristorante — Ospite e cameriere",
     "ogDescription": "L'ospite dal tavolo o il cameriere dal telefono — l'ordine arriva subito in cucina. Mappa della sala, divisione del conto, stati, opzioni e commenti.",
-    "brandLine": "IQ Rest — Ricezione degli ordini al ristorante"
+    "brandLine": "QRgine — Ricezione degli ordini al ristorante"
   },
   "hero": {
     "headline": "Ordini dal tavolo —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Le domande dei ristoratori sulla ricezione degli ordini in IQ Rest. Se la tua domanda non è nell'elenco, scrivici su WhatsApp.",
+    "sub": "Le domande dei ristoratori sulla ricezione degli ordini in QRgine. Se la tua domanda non è nell'elenco, scrivici su WhatsApp.",
     "items": [
       {
         "q": "Più camerieri possono lavorare contemporaneamente da dispositivi diversi?",

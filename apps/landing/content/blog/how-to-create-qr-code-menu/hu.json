@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR kódos étlap készítése: 3 módszer | IQ Rest",
+    "title": "QR kódos étlap készítése: 3 módszer | QRgine",
     "description": "Három módszer QR étlap készítésére: ingyenes generátor PDF-fel, étlapszerkesztő vagy teljes rendszer. Mennyibe kerül és hol romlik el mindegyik."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Vidd át az étlapot digitális formába. 80 tétel begépelése a legnagyobb időrabló – az IQ Rest beolvassa a papíralapú étlapod fotóját, és helyetted hozza létre az ételeket és az árakat, így egy egész estéből körülbelül öt perc lesz.",
+        "Vidd át az étlapot digitális formába. 80 tétel begépelése a legnagyobb időrabló – az QRgine beolvassa a papíralapú étlapod fotóját, és helyetted hozza létre az ételeket és az árakat, így egy egész estéből körülbelül öt perc lesz.",
         "A szerkezetet rendezd a design előtt. Úgy csoportosíts, ahogy a vendégek rendelnek (előételek, főételek, italok), nem úgy, ahogy a konyhád szervezve van. A hosszú, lapos listák megölik a görgetést.",
         "Fotót oda tegyél, ahol megváltoztatja a döntést. Minden ételt lefotózni rosszabb, mint öt jó képet tenni azokhoz az ételekhez, amiket el akarsz adni.",
         "Az allergéneket most jelöld, ne később. Az EU-ban amúgy is kellenek, és utólag 80 tételhez hozzáírni kínszenvedés.",

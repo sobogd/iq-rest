@@ -7,13 +7,13 @@
     "sub": "Všetko, čím sa jedno naskenovanie stane pre vašich hostí a obsluhu."
   },
   "meta": {
-    "title": "QR menu pre reštaurácie | IQ Rest",
+    "title": "QR menu pre reštaurácie | QRgine",
     "description": "QR menu pre reštaurácie: hostia naskenujú QR kód na stole, otvoria menu v prehliadači a objednajú si vo svojom jazyku. 14 dní zadarmo, bez karty.",
     "canonical": "https://iq-rest.com/sk/qr-menu-restauracia",
     "ogLocale": "sk_SK",
     "ogTitle": "QR menu pre reštaurácie",
     "ogDescription": "QR kód na stole, menu v telefóne — fotky, alergény, 35 jazykov a aktualizácie v reálnom čase.",
-    "brandLine": "IQ Rest — QR menu pre reštaurácie"
+    "brandLine": "QRgine — QR menu pre reštaurácie"
   },
   "hero": {
     "headline": "QR menu:\nnaskenuj a objednaj",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom QR menu IQ Rest. Nenašli ste svoju otázku? Napíšte nám na WhatsApp.",
+    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom QR menu QRgine. Nenašli ste svoju otázku? Napíšte nám na WhatsApp.",
     "items": [
       {
-        "q": "Ako funguje QR menu IQ Rest?",
+        "q": "Ako funguje QR menu QRgine?",
         "a": "Každý stôl má vytlačený QR kód. Hostia ho naskenujú fotoaparátom v telefóne a v prehliadači sa im otvorí menu reštaurácie — fotky, popisy, alergény a aktuálne ceny. Žiadna aplikácia na stiahnutie pre hostí ani personál."
       },
       {

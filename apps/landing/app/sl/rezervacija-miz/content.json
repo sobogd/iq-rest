@@ -3,13 +3,13 @@
   "slug": "rezervacija-miz",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Rezervacije miz 24/7 za restavracije | IQ Rest",
+    "title": "Rezervacije miz 24/7 za restavracije | QRgine",
     "description": "Rezervacije miz 24/7: gosti sami rezervirajo mize prek QR menija ali spletne strani. Koledar po mizah, samodejne potrditve in opomniki. 14 dni brezplačno.",
     "canonical": "https://iq-rest.com/sl/rezervacija-miz",
     "ogLocale": "sl_SI",
     "ogTitle": "Rezervacije miz 24/7 — Gosti rezervirajo sami",
     "ogDescription": "Gosti rezervirajo mize prek QR menija ali spletne strani. Koledar, samodejne potrditve, opomniki. Niti en gost ni spregledan.",
-    "brandLine": "IQ Rest — Rezervacije miz za restavracije"
+    "brandLine": "QRgine — Rezervacije miz za restavracije"
   },
   "hero": {
     "headline": "Rezervacije miz 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Koledar rezervacij v nadzorni plošči IQ Rest na dveh tablicah: dnevni prikaz po mizah in mesečni koledar"
+        "alt": "Koledar rezervacij v nadzorni plošči QRgine na dveh tablicah: dnevni prikaz po mizah in mesečni koledar"
       }
     }
   ],
   "faq": {
-    "sub": "Kaj gostince najpogosteje zanima o rezervacijah miz v IQ Rest. Če vašega vprašanja ni na seznamu — pišite nam na WhatsApp.",
+    "sub": "Kaj gostince najpogosteje zanima o rezervacijah miz v QRgine. Če vašega vprašanja ni na seznamu — pišite nam na WhatsApp.",
     "items": [
       {
         "q": "Ali lahko izberem dneve in ure, ko so rezervacije na voljo?",

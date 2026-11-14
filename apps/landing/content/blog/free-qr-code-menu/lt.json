@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Nemokamas QR meniu: kas iš tikrųjų nemokama | IQ Rest",
+    "title": "Nemokamas QR meniu: kas iš tikrųjų nemokama | QRgine",
     "description": "Nemokami QR meniu egzistuoja ir kai kurie yra geri. Kaip jie uždirba, kuris limitas sustabdys pirmas ir kada nemokamas iš tikrųjų yra teisingas pasirinkimas."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Tipinis nemokamas lygis",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Ar nemokamas bandomasis laikotarpis yra tas pat, kas nemokamas planas?",
-          "a": "Ne. Bandomasis laikotarpis — visas produktas ribotam laikui; nemokamas planas — ribotas produktas visam laikui. IQ Rest duoda 14 dienų bandymą su viskuo įjungtu ir be kortelės."
+          "a": "Ne. Bandomasis laikotarpis — visas produktas ribotam laikui; nemokamas planas — ribotas produktas visam laikui. QRgine duoda 14 dienų bandymą su viskuo įjungtu ir be kortelės."
         },
         {
           "q": "Koks pigiausias mokamas QR meniu?",
-          "a": "Fiksuoti planai paprastai prasideda nuo maždaug 10 € per mėnesį už vietą. IQ Rest prasideda nuo 9,90 € — visas išskaidymas yra tekste [kiek kainuoja meniu su QR kodu](blog:qr-code-menu-cost)."
+          "a": "Fiksuoti planai paprastai prasideda nuo maždaug 10 € per mėnesį už vietą. QRgine prasideda nuo 9,90 € — visas išskaidymas yra tekste [kiek kainuoja meniu su QR kodu](blog:qr-code-menu-cost)."
         },
         {
           "q": "Ar galiu perkelti meniu iš nemokamo įrankio į mokamą?",
-          "a": "Paprastai taip ir retai reikia jį perrašinėti: IQ Rest gali perskaityti esamo meniu nuotrauką arba PDF ir atkurti pozicijas maždaug per penkias minutes."
+          "a": "Paprastai taip ir retai reikia jį perrašinėti: QRgine gali perskaityti esamo meniu nuotrauką arba PDF ir atkurti pozicijas maždaug per penkias minutes."
         }
       ]
     }

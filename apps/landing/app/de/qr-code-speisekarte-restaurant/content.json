@@ -7,13 +7,13 @@
     "sub": "Alles, was ein einziger Scan für Ihre Gäste und Ihren Service bedeutet."
   },
   "meta": {
-    "title": "QR-Speisekarte für Restaurants | IQ Rest",
+    "title": "QR-Speisekarte für Restaurants | QRgine",
     "description": "QR-Speisekarte für Restaurants: Gäste scannen den QR-Code am Tisch und bestellen in ihrer eigenen Sprache. 14 Tage kostenlos, keine Kreditkarte nötig.",
     "canonical": "https://iq-rest.com/de/qr-code-speisekarte-restaurant",
     "ogLocale": "de_DE",
     "ogTitle": "QR-Speisekarte für Restaurants",
     "ogDescription": "Ein QR-Code auf dem Tisch, die Speisekarte auf dem Handy — Fotos, Allergene, 35 Sprachen und Echtzeit-Updates.",
-    "brandLine": "IQ Rest — QR-Speisekarte für Restaurants"
+    "brandLine": "QRgine — QR-Speisekarte für Restaurants"
   },
   "hero": {
     "headline": "QR-Speisekarte:\nscannen und bestellen",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Was Gastronomen zur IQ Rest QR-Speisekarte fragen. Wenn Sie Ihre Frage nicht finden — schreiben Sie uns auf WhatsApp.",
+    "sub": "Was Gastronomen zur QRgine QR-Speisekarte fragen. Wenn Sie Ihre Frage nicht finden — schreiben Sie uns auf WhatsApp.",
     "items": [
       {
-        "q": "Wie funktioniert die QR-Speisekarte von IQ Rest?",
+        "q": "Wie funktioniert die QR-Speisekarte von QRgine?",
         "a": "Jeder Tisch hat einen gedruckten QR-Code. Gäste scannen ihn mit ihrer Handykamera, und der Browser öffnet die Speisekarte des Restaurants — Fotos, Beschreibungen, Allergene und aktuelle Preise. Weder Gäste noch Personal müssen eine App herunterladen."
       },
       {

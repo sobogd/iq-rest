@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Saját rendelés vs ételkiszállító appok: a valós számok | IQ Rest",
+    "title": "Saját rendelés vs ételkiszállító appok: a valós számok | QRgine",
     "description": "Mennyibe kerül a platform jutaléka rendelésenként, hány rendelés kell a saját csatornán a nullszaldóhoz, és miért érdemes a legtöbb étteremnek mindkettőt használnia."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Kell weboldal a közvetlen rendelésekhez?",
-          "a": "Nem. Az IQ Rest ad egy saját címmel rendelkező rendelőoldalt, amire linkelhetsz a Google-ból, az Instagramról vagy egy asztali QR-kódról."
+          "a": "Nem. Az QRgine ad egy saját címmel rendelkező rendelőoldalt, amire linkelhetsz a Google-ból, az Instagramról vagy egy asztali QR-kódról."
         }
       ]
     }

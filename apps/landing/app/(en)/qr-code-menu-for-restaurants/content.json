@@ -7,13 +7,13 @@
     "sub": "Everything a single scan becomes for your guests and your floor."
   },
   "meta": {
-    "title": "QR Menu for Restaurants | IQ Rest",
+    "title": "QR Menu for Restaurants | QRgine",
     "description": "QR menu for restaurants: guests scan the QR code on the table, open the menu in their browser and order in their own language. 14 days free, no card required.",
     "canonical": "https://iq-rest.com/qr-code-menu-for-restaurants",
     "ogLocale": "en_US",
     "ogTitle": "QR Menu for Restaurants",
     "ogDescription": "A QR on the table, the menu on the phone — photos, allergens, 35 languages and real-time updates.",
-    "brandLine": "IQ Rest — QR Menu for Restaurants"
+    "brandLine": "QRgine — QR Menu for Restaurants"
   },
   "hero": {
     "headline": "QR menu:\nscan and order",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "What restaurateurs ask about the IQ Rest QR menu. Can't find your question? Message us on WhatsApp.",
+    "sub": "What restaurateurs ask about the QRgine QR menu. Can't find your question? Message us on WhatsApp.",
     "items": [
       {
-        "q": "How does the IQ Rest QR menu work?",
+        "q": "How does the QRgine QR menu work?",
         "a": "Every table has a printed QR code. Guests scan it with their phone camera, and the browser opens the restaurant's menu — photos, descriptions, allergens and up-to-date prices. No app to download for guests or staff."
       },
       {

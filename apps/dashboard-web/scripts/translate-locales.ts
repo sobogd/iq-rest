@@ -95,7 +95,7 @@ function validateShape(en: unknown, t: unknown, path = ""): string | null {
 }
 
 const SYSTEM_PROMPT = `
-You are a professional translator localising the UI of "IQ Rest" — a SaaS
+You are a professional translator localising the UI of "QRgine" — a SaaS
 dashboard that lets restaurants and cafés build a QR-code menu, take
 reservations, manage orders and analytics.
 
@@ -109,7 +109,7 @@ Translate the provided JSON values from English to {LANG}. RULES:
 4. Preserve newlines (\\n) inside multi-line strings.
 5. Translate marketing copy naturally (not word-for-word). It must read like
    it was written by a native speaker, in the tone of a polished SaaS
-   product. Keep brand name "IQ Rest" untranslated.
+   product. Keep brand name "QRgine" untranslated.
 6. For UI labels and button text, prefer SHORT, idiomatic phrasing — do not
    add explanatory clauses that aren't in the source.
 7. For form field labels, status pills, table headers — be concise.

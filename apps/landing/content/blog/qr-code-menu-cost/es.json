@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Cuánto cuesta una carta QR de verdad | IQ Rest",
+    "title": "Cuánto cuesta una carta QR de verdad | QRgine",
     "description": "Lo que cuesta realmente una carta con código QR: herramientas gratis, cuotas mensuales, precio por local, comisiones por pedido y el tiempo de montaje."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest está en la tercera fila: **desde 9,90 € al mes por local**, sin comisión por pedido, 14 días gratis y sin tarjeta. Cobramos por el local, no por camarero, porque cobrar por usuario penaliza precisamente a los locales con más rotación de personal."
+      "text": "QRgine está en la tercera fila: **desde 9,90 € al mes por local**, sin comisión por pedido, 14 días gratis y sin tarjeta. Cobramos por el local, no por camarero, porque cobrar por usuario penaliza precisamente a los locales con más rotación de personal."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Por eso importa más de lo que parece la importación de la carta. IQ Rest lee una foto de tu carta en papel y crea los platos automáticamente, lo que convierte esa media jornada en unos cinco minutos. Cuenta el tiempo de montaje al comparar herramientas: a menudo pesa más que el primer año de suscripción."
+      "text": "Por eso importa más de lo que parece la importación de la carta. QRgine lee una foto de tu carta en papel y crea los platos automáticamente, lo que convierte esa media jornada en unos cinco minutos. Cuenta el tiempo de montaje al comparar herramientas: a menudo pesa más que el primer año de suscripción."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "¿Cuánto cuesta al mes una carta con código QR?",
-          "a": "Las herramientas de suscripción plana suelen ir de 10 a 40 € por local y mes. IQ Rest empieza en 9,90 € sin comisión por pedido."
+          "a": "Las herramientas de suscripción plana suelen ir de 10 a 40 € por local y mes. QRgine empieza en 9,90 € sin comisión por pedido."
         },
         {
           "q": "¿Existe alguna carta QR gratis?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "¿Se paga por mesa o por restaurante?",
-          "a": "Con IQ Rest, por restaurante: mesas y códigos QR ilimitados. Compruébalo antes de firmar en cualquier sitio, porque el precio por mesa o por usuario escala fatal."
+          "a": "Con QRgine, por restaurante: mesas y códigos QR ilimitados. Compruébalo antes de firmar en cualquier sitio, porque el precio por mesa o por usuario escala fatal."
         },
         {
           "q": "¿Hay cuota de alta?",

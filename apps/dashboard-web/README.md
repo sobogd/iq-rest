@@ -1,4 +1,4 @@
-# IQ Rest Dashboard Web
+# QRgine Dashboard Web
 
 Vite + React + TanStack Router/Query + Tailwind v4 + react-i18next.
 

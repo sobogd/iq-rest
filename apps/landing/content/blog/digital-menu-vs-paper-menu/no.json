@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digital meny vs papirmeny: hva koster de egentlig? | IQ Rest",
+    "title": "Digital meny vs papirmeny: hva koster de egentlig? | QRgine",
     "description": "Hva en papirmeny egentlig koster sammenlignet med en digital QR-meny: trykk, oppdateringer, oversettelser, bestillingstempo. Sammenligning med ekte tall."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Skann papirmenyen din — IQ Rest leser den og bygger den digitale menyen automatisk.",
+        "Skann papirmenyen din — QRgine leser den og bygger den digitale menyen automatisk.",
         "Sjekk prisene, legg til bilder der de betyr noe.",
         "Skriv ut én QR-kode per bord.",
         "Oppdater hva som helst, når som helst, fra telefonen."

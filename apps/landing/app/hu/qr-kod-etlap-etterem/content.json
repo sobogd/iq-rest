@@ -7,13 +7,13 @@
     "sub": "Minden, amivé egyetlen beolvasás válhat a vendégeid és a pályád számára."
   },
   "meta": {
-    "title": "QR Étlap Éttermeknek | IQ Rest",
+    "title": "QR Étlap Éttermeknek | QRgine",
     "description": "QR étlap éttermeknek: a vendégek beolvassák a QR-kódot az asztalon, és a saját nyelvükön böngészik az étlapot és rendelnek. 14 nap ingyen, bankkártya nélkül.",
     "canonical": "https://iq-rest.com/hu/qr-kod-etlap-etterem",
     "ogLocale": "hu_HU",
     "ogTitle": "QR Étlap Éttermeknek",
     "ogDescription": "Egy QR az asztalon, az étlap a telefonon — fotók, allergének, 35 nyelv és valós idejű frissítések.",
-    "brandLine": "IQ Rest — QR Étlap Éttermeknek"
+    "brandLine": "QRgine — QR Étlap Éttermeknek"
   },
   "hero": {
     "headline": "QR étlap:\nolvasd be és rendelj",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Amit a vendéglátósok az IQ Rest QR étlapról kérdeznek. Nem találod a kérdésed? Írj nekünk WhatsAppon.",
+    "sub": "Amit a vendéglátósok az QRgine QR étlapról kérdeznek. Nem találod a kérdésed? Írj nekünk WhatsAppon.",
     "items": [
       {
-        "q": "Hogyan működik az IQ Rest QR étlap?",
+        "q": "Hogyan működik az QRgine QR étlap?",
         "a": "Minden asztalon van egy nyomtatott QR-kód. A vendégek beolvassák a telefonjuk kamerájával, és a böngésző megnyitja az étterem étlapját — fotók, leírások, allergének és naprakész árak. Sem a vendégeknek, sem a személyzetnek nem kell alkalmazást letöltenie."
       },
       {

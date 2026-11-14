@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Un QR vers un PDF n'est pas un menu digital | IQ Rest",
+    "title": "Un QR vers un PDF n'est pas un menu digital | QRgine",
     "description": "Un QR code qui pointe vers un PDF est l'installation la plus courante et la pire. Ce qu'elle coûte en lecture, mises à jour, allergènes et commandes."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Photographiez la carte papier, ou téléversez le PDF lui-même.",
-        "IQ Rest le lit et crée les catégories, les plats et les prix : environ cinq minutes au lieu d'une soirée.",
+        "QRgine le lit et crée les catégories, les plats et les prix : environ cinq minutes au lieu d'une soirée.",
         "Vérifiez les prix et corrigez ce que la lecture a mal interprété.",
         "Faites pointer vos QR codes existants vers le nouveau menu, ou imprimez-en de nouveaux par table."
       ]

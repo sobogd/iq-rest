@@ -2,7 +2,7 @@
   "htmlLang": "es",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Menú digital, pantalla de cocina y reservas — IQ Rest",
+    "title": "Menú digital, pantalla de cocina y reservas — QRgine",
     "description": "Gestione su restaurante desde una sola aplicación: menú digital multilingüe, pantalla de cocina y reservas 24/7. En marcha en 5 minutos. 14 días gratis, sin tarjeta.",
     "canonical": "https://iq-rest.com/es",
     "ogLocale": "es_ES",
@@ -10,7 +10,7 @@
     "ogDescription": "Gestione su restaurante desde una sola aplicación: menú digital multilingüe, pantalla de cocina y reservas 24/7. En marcha en 5 minutos. 14 días gratis, sin tarjeta."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Plataforma de gestión para restaurantes"
+    "appName": "QRgine — Plataforma de gestión para restaurantes"
   },
   "ctaText": "Probar gratis",
   "homeCtaText": "Probar gratis",
@@ -82,7 +82,7 @@
     "quoteStart": "Mi mujer y yo gestionamos nuestra propia cafetería y conocemos bien, desde dentro, cómo es el día a día de un restaurante: la toma de comandas, las reservas, el trabajo de la sala y de la cocina. Queríamos una herramienta única — moderna, fácil de poner en marcha y clara a primera vista —",
     "quoteAccent": "así nació la idea de la plataforma que hoy desarrollamos para otros hosteleros.",
     "sign": "Bogdan Sokolov · fundador, antiguo propietario de una cafetería",
-    "photoAlt": "Bogdan Sokolov, fundador de IQ Rest"
+    "photoAlt": "Bogdan Sokolov, fundador de QRgine"
   },
   "pricing": {
     "badge": "Sin comisiones · Sin contratos",
@@ -108,7 +108,7 @@
     "headingAccent": "frecuentes",
     "sub": "Lo que más preguntan los hosteleros antes de darse de alta. Si no encuentra la respuesta, escríbanos por WhatsApp: responden personas, no un bot.",
     "whatsappCta": "Escribir por WhatsApp",
-    "whatsappPrefill": "Hola, tengo una pregunta sobre IQ Rest",
+    "whatsappPrefill": "Hola, tengo una pregunta sobre QRgine",
     "items": [
       {
         "q": "¿Qué incluye el periodo de prueba y qué ocurre después?",
@@ -192,7 +192,7 @@
     "button": "Calcular el plan"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Todos los derechos reservados.",
+    "copyrightTemplate": "© {year} QRgine. Todos los derechos reservados.",
     "featuresHeading": "Funciones",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blog de tecnología para restaurantes — IQ Rest",
+    "metaTitle": "Blog de tecnología para restaurantes — QRgine",
     "metaDescription": "Guías y comparativas sobre cartas digitales, pedidos por QR, pantallas de cocina y reservas — lectura práctica para hosteleros.",
     "title": "Blog",
     "intro": "Guías y comparativas sobre cartas digitales, pedidos por QR, pantallas de cocina y la gestión diaria del restaurante.",

@@ -3,13 +3,13 @@
   "slug": "kjokken-skjerm",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Kjøkkenskjerm (KDS) for restauranter | IQ Rest",
+    "title": "Kjøkkenskjerm (KDS) for restauranter | QRgine",
     "description": "En KDS-kjøkkenskjerm for restauranter: bestillinger fra gulvet og QR-menyen går rett til kokkens skjerm. Kolonner per bord. Kjører på nettbrett eller mobil.",
     "canonical": "https://iq-rest.com/no/kjokken-skjerm",
     "ogLocale": "nb_NO",
     "ogTitle": "Kjøkkenskjerm (KDS) — Bestillinger rett til kokkens skjerm",
     "ogDescription": "Bestillinger fra gulvet på kokkens skjerm. Kolonner per bord, statuser og tidtaker. Ett trykk endrer status.",
-    "brandLine": "IQ Rest — Kjøkkenskjerm for restauranter"
+    "brandLine": "QRgine — Kjøkkenskjerm for restauranter"
   },
   "hero": {
     "headline": "Kjøkkenskjerm (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Det restaurantdrivere spør om når det gjelder kjøkkenskjermen i IQ Rest. Finner du ikke spørsmålet ditt — send oss en melding på WhatsApp.",
+    "sub": "Det restaurantdrivere spør om når det gjelder kjøkkenskjermen i QRgine. Finner du ikke spørsmålet ditt — send oss en melding på WhatsApp.",
     "items": [
       {
         "q": "Hvilke statuser har rettene på kjøkkenet?",

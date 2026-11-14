@@ -3,13 +3,13 @@
   "slug": "pantalla-de-cocina",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Pantalla de cocina (KDS) para restaurantes | IQ Rest",
+    "title": "Pantalla de cocina (KDS) para restaurantes | QRgine",
     "description": "Pantalla de cocina KDS: los pedidos de la sala y del menú QR llegan directos al cocinero. Columnas por mesa, estados y filtros por zonas. Funciona en tableta.",
     "canonical": "https://iq-rest.com/es/pantalla-de-cocina",
     "ogLocale": "es_ES",
     "ogTitle": "Pantalla de cocina (KDS): pedidos directos a la pantalla del cocinero",
     "ogDescription": "Los pedidos de la sala en la pantalla del cocinero. Columnas por mesas, estados y temporizador. Un solo toque cambia el estado.",
-    "brandLine": "IQ Rest — Pantalla de cocina para restaurantes"
+    "brandLine": "QRgine — Pantalla de cocina para restaurantes"
   },
   "hero": {
     "headline": "Pantalla de cocina (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Lo que preguntan los hosteleros sobre la pantalla de cocina en IQ Rest. Si su pregunta no está en la lista, escríbanos por WhatsApp.",
+    "sub": "Lo que preguntan los hosteleros sobre la pantalla de cocina en QRgine. Si su pregunta no está en la lista, escríbanos por WhatsApp.",
     "items": [
       {
         "q": "¿Qué estados tienen las referencias en cocina?",

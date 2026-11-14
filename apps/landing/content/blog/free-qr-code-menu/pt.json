@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Menu QR grátis: o que é mesmo grátis | IQ Rest",
+    "title": "Menu QR grátis: o que é mesmo grátis | QRgine",
     "description": "Os menus QR gratuitos existem e alguns servem. Como ganham dinheiro, que limite o trava primeiro e quando o grátis é mesmo a escolha certa."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Plano gratuito típico",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Um período gratuito é o mesmo que um plano gratuito?",
-          "a": "Não. Um período experimental é o produto completo durante um tempo limitado; um plano gratuito é um produto limitado para sempre. O IQ Rest oferece 14 dias com tudo ligado e sem cartão."
+          "a": "Não. Um período experimental é o produto completo durante um tempo limitado; um plano gratuito é um produto limitado para sempre. O QRgine oferece 14 dias com tudo ligado e sem cartão."
         },
         {
           "q": "Qual é o menu QR pago mais barato?",
-          "a": "Os planos fixos começam geralmente à volta dos 10 € por mês e por espaço. O IQ Rest arranca em 9,90 € — o detalhe completo está em [quanto custa um menu com código QR](blog:qr-code-menu-cost)."
+          "a": "Os planos fixos começam geralmente à volta dos 10 € por mês e por espaço. O QRgine arranca em 9,90 € — o detalhe completo está em [quanto custa um menu com código QR](blog:qr-code-menu-cost)."
         },
         {
           "q": "Posso mudar o meu menu de uma ferramenta gratuita para uma paga?",
-          "a": "Normalmente sim, e raramente tem de o reescrever: o IQ Rest consegue ler uma fotografia ou um PDF do menu existente e reconstruir os artigos em cerca de cinco minutos."
+          "a": "Normalmente sim, e raramente tem de o reescrever: o QRgine consegue ler uma fotografia ou um PDF do menu existente e reconstruir os artigos em cerca de cinco minutos."
         }
       ]
     }

@@ -4,76 +4,76 @@
 
 export const ROUTE_TITLES: Record<string, Record<string, string>> = {
   "/": {
-    "ru": "Цифровое меню, кухонный дисплей и брони — IQ Rest",
-    "en": "Digital Menu, Kitchen Display and Reservations — IQ Rest",
-    "es": "Menú digital, pantalla de cocina y reservas — IQ Rest",
-    "fr": "Menu digital, écran de cuisine et réservations — IQ Rest",
-    "it": "Menù digitale, display cucina e prenotazioni — IQ Rest",
-    "pt": "Ementa digital, ecrã de cozinha e reservas — IQ Rest"
+    "ru": "Цифровое меню, кухонный дисплей и брони — QRgine",
+    "en": "Digital Menu, Kitchen Display and Reservations — QRgine",
+    "es": "Menú digital, pantalla de cocina y reservas — QRgine",
+    "fr": "Menu digital, écran de cuisine et réservations — QRgine",
+    "it": "Menù digitale, display cucina e prenotazioni — QRgine",
+    "pt": "Ementa digital, ecrã de cozinha e reservas — QRgine"
   },
   "/digital-menu": {
-    "ru": "Цифровое меню для ресторана | IQ Rest",
-    "en": "Digital Menu for Restaurants | IQ Rest",
-    "es": "Menú digital para restaurantes | IQ Rest",
-    "fr": "Menu digital pour restaurant | IQ Rest",
-    "it": "Menù digitale per ristoranti | IQ Rest",
-    "pt": "Ementa digital para restaurante | IQ Rest"
+    "ru": "Цифровое меню для ресторана | QRgine",
+    "en": "Digital Menu for Restaurants | QRgine",
+    "es": "Menú digital para restaurantes | QRgine",
+    "fr": "Menu digital pour restaurant | QRgine",
+    "it": "Menù digitale per ristoranti | QRgine",
+    "pt": "Ementa digital para restaurante | QRgine"
   },
   "/order-taking": {
-    "ru": "Приём заказов в ресторане — Гость и официант | IQ Rest",
-    "en": "Restaurant Order Taking — Guest and Waiter | IQ Rest",
-    "es": "Toma de comandas en el restaurante — comensal y camarero | IQ Rest",
-    "fr": "Prise de commandes au restaurant — Client et serveur | IQ Rest",
-    "it": "Ricezione degli ordini al ristorante — Ospite e cameriere | IQ Rest",
-    "pt": "Receção de pedidos no restaurante — Cliente e empregado | IQ Rest"
+    "ru": "Приём заказов в ресторане — Гость и официант | QRgine",
+    "en": "Restaurant Order Taking — Guest and Waiter | QRgine",
+    "es": "Toma de comandas en el restaurante — comensal y camarero | QRgine",
+    "fr": "Prise de commandes au restaurant — Client et serveur | QRgine",
+    "it": "Ricezione degli ordini al ristorante — Ospite e cameriere | QRgine",
+    "pt": "Receção de pedidos no restaurante — Cliente e empregado | QRgine"
   },
   "/bookings": {
-    "ru": "Бронирование столов 24/7 для ресторана | IQ Rest",
-    "en": "24/7 Table Reservations for Restaurants | IQ Rest",
-    "es": "Reserva de mesas 24/7 para restaurantes | IQ Rest",
-    "fr": "Réservation de tables 24h/24 pour restaurant | IQ Rest",
-    "it": "Prenotazione dei tavoli 24/7 per ristoranti | IQ Rest",
-    "pt": "Reserva de mesas 24/7 para restaurante | IQ Rest"
+    "ru": "Бронирование столов 24/7 для ресторана | QRgine",
+    "en": "24/7 Table Reservations for Restaurants | QRgine",
+    "es": "Reserva de mesas 24/7 para restaurantes | QRgine",
+    "fr": "Réservation de tables 24h/24 pour restaurant | QRgine",
+    "it": "Prenotazione dei tavoli 24/7 per ristoranti | QRgine",
+    "pt": "Reserva de mesas 24/7 para restaurante | QRgine"
   },
   "/kitchen-display": {
-    "ru": "Кухонный дисплей (KDS) для ресторана — Заказы на экран повара | IQ Rest",
-    "en": "Kitchen Display System (KDS) for Restaurants — Orders on the Cook's Screen | IQ Rest",
-    "es": "Pantalla de cocina (KDS) para restaurantes — Pedidos en la pantalla del cocinero | IQ Rest",
-    "fr": "Écran de cuisine (KDS) pour restaurant — Les commandes sur l'écran du cuisinier | IQ Rest",
-    "it": "Display cucina (KDS) per ristoranti — Ordini sullo schermo del cuoco | IQ Rest",
-    "pt": "Ecrã de cozinha (KDS) para restaurante — Pedidos no ecrã do cozinheiro | IQ Rest"
+    "ru": "Кухонный дисплей (KDS) для ресторана — Заказы на экран повара | QRgine",
+    "en": "Kitchen Display System (KDS) for Restaurants — Orders on the Cook's Screen | QRgine",
+    "es": "Pantalla de cocina (KDS) para restaurantes — Pedidos en la pantalla del cocinero | QRgine",
+    "fr": "Écran de cuisine (KDS) pour restaurant — Les commandes sur l'écran du cuisinier | QRgine",
+    "it": "Display cucina (KDS) per ristoranti — Ordini sullo schermo del cuoco | QRgine",
+    "pt": "Ecrã de cozinha (KDS) para restaurante — Pedidos no ecrã do cozinheiro | QRgine"
   },
   "/menu-qr-code": {
-    "ru": "QR-меню для ресторанов | IQ Rest",
-    "en": "QR Menu for Restaurants | IQ Rest",
-    "es": "Menú QR para restaurantes | IQ Rest",
-    "fr": "Menu QR pour restaurants | IQ Rest",
-    "it": "Menù QR per ristoranti | IQ Rest",
-    "pt": "Ementa QR para restaurantes | IQ Rest"
+    "ru": "QR-меню для ресторанов | QRgine",
+    "en": "QR Menu for Restaurants | QRgine",
+    "es": "Menú QR para restaurantes | QRgine",
+    "fr": "Menu QR pour restaurants | QRgine",
+    "it": "Menù QR per ristoranti | QRgine",
+    "pt": "Ementa QR para restaurantes | QRgine"
   },
   "/pricing": {
-    "ru": "Цены — конструктор тарифа для ресторана от 9.90 €/мес | IQ Rest",
-    "en": "Pricing — Build Your Restaurant Plan from 9.90 €/mo | IQ Rest",
-    "es": "Precios — configure la tarifa de su restaurante desde 9.90 €/mes | IQ Rest",
-    "fr": "Tarifs — composez votre formule restaurant dès 9.90 €/mois | IQ Rest",
-    "it": "Prezzi — configuratore del piano per ristoranti da 9.90 €/mese | IQ Rest",
-    "pt": "Preços — plano modular para restaurante desde 9.90 €/mês | IQ Rest"
+    "ru": "Цены — конструктор тарифа для ресторана от 9.90 €/мес | QRgine",
+    "en": "Pricing — Build Your Restaurant Plan from 9.90 €/mo | QRgine",
+    "es": "Precios — configure la tarifa de su restaurante desde 9.90 €/mes | QRgine",
+    "fr": "Tarifs — composez votre formule restaurant dès 9.90 €/mois | QRgine",
+    "it": "Prezzi — configuratore del piano per ristoranti da 9.90 €/mese | QRgine",
+    "pt": "Preços — plano modular para restaurante desde 9.90 €/mês | QRgine"
   },
   "/about": {
-    "ru": "О компании IQ Rest — кто мы, контакты и реквизиты",
-    "en": "About IQ Rest — Who We Are, Contacts and Legal Details",
-    "es": "Sobre IQ Rest: quiénes somos, contacto y datos legales",
-    "fr": "À propos d'IQ Rest — qui nous sommes, contacts et mentions légales",
-    "it": "Chi siamo — IQ Rest: l'azienda, i contatti e i dati legali",
-    "pt": "Sobre a IQ Rest — quem somos, contactos e dados legais"
+    "ru": "О компании QRgine — кто мы, контакты и реквизиты",
+    "en": "About QRgine — Who We Are, Contacts and Legal Details",
+    "es": "Sobre QRgine: quiénes somos, contacto y datos legales",
+    "fr": "À propos d'QRgine — qui nous sommes, contacts et mentions légales",
+    "it": "Chi siamo — QRgine: l'azienda, i contatti e i dati legali",
+    "pt": "Sobre a QRgine — quem somos, contactos e dados legais"
   },
   "/help": {
-    "ru": "Как пользоваться IQ Rest — пошаговая инструкция",
-    "en": "How to use IQ Rest — step-by-step guide",
-    "es": "Cómo usar IQ Rest — guía paso a paso",
-    "fr": "Comment utiliser IQ Rest — guide pas à pas",
-    "it": "Come usare IQ Rest — guida passo passo",
-    "pt": "Como usar o IQ Rest — guia passo a passo"
+    "ru": "Как пользоваться QRgine — пошаговая инструкция",
+    "en": "How to use QRgine — step-by-step guide",
+    "es": "Cómo usar QRgine — guía paso a paso",
+    "fr": "Comment utiliser QRgine — guide pas à pas",
+    "it": "Come usare QRgine — guida passo passo",
+    "pt": "Como usar o QRgine — guia passo a passo"
   }
 };
 

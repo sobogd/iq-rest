@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Mennyibe kerül valójában a QR étlap | IQ Rest",
+    "title": "Mennyibe kerül valójában a QR étlap | QRgine",
     "description": "Mennyibe kerül tényleg egy QR kódos étlap: ingyenes eszközök, havidíjak, egységenkénti ár, rendelési jutalékok és a rejtett beüzemelési idő."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "Az IQ Rest a harmadik sorban van: **egységenként havi 9,90 eurótól**, rendelési jutalék nélkül, 14 nap ingyen, kártya nélkül. A helyet számlázzuk, nem a pincért, mert a felhasználónkénti számlázás pont azokat a helyeket bünteti, ahol a legnagyobb a fluktuáció."
+      "text": "Az QRgine a harmadik sorban van: **egységenként havi 9,90 eurótól**, rendelési jutalék nélkül, 14 nap ingyen, kártya nélkül. A helyet számlázzuk, nem a pincért, mert a felhasználónkénti számlázás pont azokat a helyeket bünteti, ahol a legnagyobb a fluktuáció."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Ezért számít az étlapimport többet, mint amennyire hangzik. Az IQ Rest beolvassa a papíralapú étlapod fotóját, és automatikusan létrehozza a tételeket, amitől az a fél nap körülbelül öt perc lesz. Az eszközök összehasonlításakor számold bele a beüzemelési időt; gyakran többet nyom, mint az első előfizetői év."
+      "text": "Ezért számít az étlapimport többet, mint amennyire hangzik. Az QRgine beolvassa a papíralapú étlapod fotóját, és automatikusan létrehozza a tételeket, amitől az a fél nap körülbelül öt perc lesz. Az eszközök összehasonlításakor számold bele a beüzemelési időt; gyakran többet nyom, mint az első előfizetői év."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Mennyibe kerül havonta egy QR kódos étlap?",
-          "a": "A fix előfizetéses eszközök jellemzően egységenként havi 10-40 € között mozognak. Az IQ Rest 9,90 eurótól indul, rendelési jutalék nélkül."
+          "a": "A fix előfizetéses eszközök jellemzően egységenként havi 10-40 € között mozognak. Az QRgine 9,90 eurótól indul, rendelési jutalék nélkül."
         },
         {
           "q": "Van ingyenes QR kódos étlap?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Asztalonként vagy éttermenként fizetek?",
-          "a": "Az IQ Restnél éttermenként — az asztalok és a QR kódok korlátlanok. Ezt bárhol ellenőrizd aláírás előtt, mert az asztalonkénti vagy felhasználónkénti árazás rosszul skálázódik."
+          "a": "Az QRginenél éttermenként — az asztalok és a QR kódok korlátlanok. Ezt bárhol ellenőrizd aláírás előtt, mert az asztalonkénti vagy felhasználónkénti árazás rosszul skálázódik."
         },
         {
           "q": "Van beüzemelési díj?",

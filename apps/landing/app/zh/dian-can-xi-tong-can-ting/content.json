@@ -3,13 +3,13 @@
   "slug": "dian-can-xi-tong-can-ting",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "餐厅点餐系统 — 顾客与服务员 | IQ Rest",
+    "title": "餐厅点餐系统 — 顾客与服务员 | QRgine",
     "description": "通过手机或平板进行餐厅点餐：平面图、拆单、状态、选项和备注。顾客在桌台扫码点餐，服务员用自己的设备录单。免费试用14天。",
     "canonical": "https://iq-rest.com/zh/dian-can-xi-tong-can-ting",
     "ogLocale": "zh_CN",
     "ogTitle": "餐厅点餐系统 — 顾客与服务员",
     "ogDescription": "桌台顾客扫码或服务员手机录单——订单即时直达后厨。支持平面图、拆单、状态、选项和备注。",
-    "brandLine": "IQ Rest — 餐厅点餐系统"
+    "brandLine": "QRgine — 餐厅点餐系统"
   },
   "hero": {
     "headline": "桌台点餐——",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "餐饮老板关于 IQ Rest 点餐系统的常见问题。如果没找到答案——请在WhatsApp上联系我们。",
+    "sub": "餐饮老板关于 QRgine 点餐系统的常见问题。如果没找到答案——请在WhatsApp上联系我们。",
     "items": [
       {
         "q": "多名服务员可以同时使用不同设备工作吗？",

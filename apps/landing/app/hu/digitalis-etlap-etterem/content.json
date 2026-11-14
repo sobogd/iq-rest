@@ -3,13 +3,13 @@
   "slug": "digitalis-etlap-etterem",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digitális étlap éttermeknek | IQ Rest",
+    "title": "Digitális étlap éttermeknek | QRgine",
     "description": "Digitális étlap az éttermednek: online étlap fotókkal, allergénekkel, MI fordítással és valós idejű ármódosítással. 14 nap ingyen, bankkártya nélkül.",
     "canonical": "https://iq-rest.com/hu/digitalis-etlap-etterem",
     "ogLocale": "hu_HU",
     "ogTitle": "Digitális étlap éttermeknek",
     "ogDescription": "A papír étlapod online verziója fotókkal, allergénekkel és MI fordítással. Az árak valós időben frissülnek.",
-    "brandLine": "IQ Rest — Digitális étlap éttermeknek"
+    "brandLine": "QRgine — Digitális étlap éttermeknek"
   },
   "hero": {
     "headline": "Digitális étlap és weboldal",
@@ -166,7 +166,7 @@
     "heading": "Miért minket választanak az éttermek,",
     "headingAccent": "nem más rendszereket",
     "sub": "A legtöbb étlapkezelő eszköz a QR-kódnál megáll. Alább az áll, ami a mindennapi munkában tényleg különbözik. Nevek nélkül — hasonlítsd össze bármelyik rendszerrel.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Más rendszerek",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Amit a vendéglátósok az IQ Rest digitális étlapról kérdeznek. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
+    "sub": "Amit a vendéglátósok az QRgine digitális étlapról kérdeznek. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
     "items": [
       {
         "q": "Szükségem van technikai tudásra vagy CMS tapasztalatra?",
         "a": "Nincs szükség semmilyen speciális tudásra. Az admin felületen minden pár érintéssel működik — nincs kódolás, nem kell forrásfájlokkal dolgozni. Egy étel hozzáadása másodpercekbe telik: név, ár, fotó. Egy teljes étlap beállítása általában 30–60 perc alatt megvan."
       },
       {
-        "q": "Mi az az IQ Rest digitális étlap?",
+        "q": "Mi az az QRgine digitális étlap?",
         "a": "Ez a papír étlapod online verziója, amit a vendégek QR-kóddal vagy egy közvetlen linken érnek el: ételfotók, árak, allergének, MI fordítás 35 nyelvre és valós idejű frissítések. Az étlap a mi szervereinken fut — nem kell szoftvert telepíteni vagy karbantartani, csak egy böngészőre van szükséged."
       },
       {

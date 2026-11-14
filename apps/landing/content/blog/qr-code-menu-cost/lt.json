@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kiek iš tikrųjų kainuoja QR meniu | IQ Rest",
+    "title": "Kiek iš tikrųjų kainuoja QR meniu | QRgine",
     "description": "Kiek iš tiesų kainuoja meniu su QR kodu: nemokami įrankiai, mėnesinės prenumeratos, kaina už vietą, komisiniai nuo užsakymų ir paslėptas įdiegimo laikas."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest yra trečioje eilutėje: **nuo 9,90 € per mėnesį už vietą**, be komisinių nuo užsakymų, 14 dienų nemokamai be kortelės. Imame mokestį už įstaigą, o ne už padavėją, nes mokestis už naudotoją baudžia būtent tas įstaigas, kuriose personalo kaita didžiausia."
+      "text": "QRgine yra trečioje eilutėje: **nuo 9,90 € per mėnesį už vietą**, be komisinių nuo užsakymų, 14 dienų nemokamai be kortelės. Imame mokestį už įstaigą, o ne už padavėją, nes mokestis už naudotoją baudžia būtent tas įstaigas, kuriose personalo kaita didžiausia."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Todėl meniu importas reiškia daugiau, nei skamba. IQ Rest perskaito jūsų popierinio meniu nuotrauką ir sukuria pozicijas automatiškai, todėl ta pusė dienos virsta maždaug penkiomis minutėmis. Skaičiuokite įdiegimo laiką, kai lyginate įrankius; jis dažnai sveria daugiau nei pirmieji prenumeratos metai."
+      "text": "Todėl meniu importas reiškia daugiau, nei skamba. QRgine perskaito jūsų popierinio meniu nuotrauką ir sukuria pozicijas automatiškai, todėl ta pusė dienos virsta maždaug penkiomis minutėmis. Skaičiuokite įdiegimo laiką, kai lyginate įrankius; jis dažnai sveria daugiau nei pirmieji prenumeratos metai."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Kiek per mėnesį kainuoja meniu su QR kodu?",
-          "a": "Fiksuotos prenumeratos įrankiai paprastai kainuoja 10-40 € už vietą per mėnesį. IQ Rest prasideda nuo 9,90 € be komisinių nuo užsakymų."
+          "a": "Fiksuotos prenumeratos įrankiai paprastai kainuoja 10-40 € už vietą per mėnesį. QRgine prasideda nuo 9,90 € be komisinių nuo užsakymų."
         },
         {
           "q": "Ar yra nemokamas meniu su QR kodu?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Mokama už staliuką ar už restoraną?",
-          "a": "IQ Rest atveju už restoraną — staliukai ir QR kodai neriboti. Patikrinkite tai prieš bet kur pasirašydami, nes kaina už staliuką ar naudotoją skaliuojasi labai prastai."
+          "a": "QRgine atveju už restoraną — staliukai ir QR kodai neriboti. Patikrinkite tai prieš bet kur pasirašydami, nes kaina už staliuką ar naudotoją skaliuojasi labai prastai."
         },
         {
           "q": "Ar yra prijungimo mokestis?",

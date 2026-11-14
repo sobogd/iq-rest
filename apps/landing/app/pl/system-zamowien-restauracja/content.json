@@ -3,13 +3,13 @@
   "slug": "system-zamowien-restauracja",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Przyjmowanie zamówień w restauracji — Gość i Kelner | IQ Rest",
+    "title": "Przyjmowanie zamówień w restauracji — Gość i Kelner | QRgine",
     "description": "Przyjmowanie zamówień z telefonu lub tabletu: plan sali, dzielenie rachunku, statusy i uwagi. Goście zamawiają ze stolika przez menu QR. 14 dni za darmo.",
     "canonical": "https://iq-rest.com/pl/system-zamowien-restauracja",
     "ogLocale": "pl_PL",
     "ogTitle": "Przyjmowanie zamówień — Gość i Kelner",
     "ogDescription": "Gość przy stoliku lub kelner z telefonem — zamówienie od razu trafia do kuchni. Plan sali, dzielenie rachunku, statusy, opcje i uwagi.",
-    "brandLine": "IQ Rest — Przyjmowanie zamówień w restauracji"
+    "brandLine": "QRgine — Przyjmowanie zamówień w restauracji"
   },
   "hero": {
     "headline": "Zamówienia ze stolika —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "O co pytają restauratorzy w związku z przyjmowaniem zamówień w IQ Rest. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
+    "sub": "O co pytają restauratorzy w związku z przyjmowaniem zamówień w QRgine. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
     "items": [
       {
         "q": "Czy kilku kelnerów może pracować jednocześnie na różnych urządzeniach?",

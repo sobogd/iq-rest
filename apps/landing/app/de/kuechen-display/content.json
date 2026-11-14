@@ -3,13 +3,13 @@
   "slug": "kuechen-display",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Küchenmonitor (KDS) für Restaurants | IQ Rest",
+    "title": "Küchenmonitor (KDS) für Restaurants | QRgine",
     "description": "KDS-Küchenmonitor für Restaurants: Bestellungen aus Gastraum und QR-Speisekarte direkt auf dem Bildschirm des Kochs. Läuft auf Tablet oder Handy.",
     "canonical": "https://iq-rest.com/de/kuechen-display",
     "ogLocale": "de_DE",
     "ogTitle": "Küchenmonitor (KDS) — Bestellungen direkt zum Koch",
     "ogDescription": "Bestellungen aus dem Gastraum auf dem Bildschirm des Kochs. Spalten nach Tisch, Status und Timer. Ein Fingertipp ändert den Status.",
-    "brandLine": "IQ Rest — Küchenmonitor für Restaurants"
+    "brandLine": "QRgine — Küchenmonitor für Restaurants"
   },
   "hero": {
     "headline": "Küchenmonitor (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Was Gastronomen zum Küchenmonitor in IQ Rest fragen. Wenn Ihre Frage nicht dabei ist — schreiben Sie uns auf WhatsApp.",
+    "sub": "Was Gastronomen zum Küchenmonitor in QRgine fragen. Wenn Ihre Frage nicht dabei ist — schreiben Sie uns auf WhatsApp.",
     "items": [
       {
         "q": "Welche Status haben Küchenartikel?",

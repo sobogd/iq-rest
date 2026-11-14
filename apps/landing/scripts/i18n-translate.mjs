@@ -71,7 +71,7 @@ const BANNED_PHRASES = [
 ];
 
 function buildPrompt(langName, bundle) {
-  return `You are a senior native-speaking copywriter and localization expert for IQ Rest, a restaurant SaaS: digital QR menu + kitchen display system (KDS) + table booking + order taking, sold to restaurant owners.
+  return `You are a senior native-speaking copywriter and localization expert for QRgine, a restaurant SaaS: digital QR menu + kitchen display system (KDS) + table booking + order taking, sold to restaurant owners.
 
 Translate every string VALUE in the JSON object below from English into ${langName}, for the real local market (not a generic pan-regional translation) — use the phrasing, idiom and register a native ${langName}-speaking restaurateur would find natural, not a literal word-for-word rendering of the English sentence structure.
 
@@ -79,7 +79,7 @@ Hard rules:
 1. Keep every JSON key exactly as-is (English key names), only translate string values.
 2. Keep arrays/objects structure and item count identical to the source.
 3. Preserve placeholders exactly as they appear: {count} {email} {amount} {percent} {price} {total} {year} etc.
-4. Never translate: the brand name "IQ Rest", the acronyms "QR", "KDS", "API", "URL", "SEO", "SaaS", "WhatsApp", "SMS".
+4. Never translate: the brand name "QRgine", the acronyms "QR", "KDS", "API", "URL", "SEO", "SaaS", "WhatsApp", "SMS".
 5. Write like an experienced human copywriter, not an AI assistant. NO AI-marketing-slop phrasing. Never use (or their ${langName} equivalents of): ${BANNED_PHRASES.join(", ")}.
 6. No filler, no hype, no overly formal/corporate tone, no exclamation-mark stacking. Confident, concrete, benefit-first — matches how a real local restaurant-tech company writes.
 7. Where ${langName} has a natural, commonly-used local term for a concept (e.g. how restaurants locally refer to "table booking" or "digital menu"), prefer that over a stiff calque of the English.

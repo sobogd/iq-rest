@@ -1,5 +1,5 @@
 // IG Feed 4:5 (1080x1350) editorial layout with:
-//   - IQ Rest brand top-left
+//   - QRgine brand top-left
 //   - Stronger headline
 //   - Dark readable subhead
 //   - 4-photo editorial collage with QR-menu as HERO

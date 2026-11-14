@@ -2,11 +2,11 @@
   "companyDefaultName": "Éttermem",
   "otpEmail": {
     "subject": "A kódod: {code}",
-    "intro": "Íme az egyszer használatos kódod az IQ Rest rendszerébe való bejelentkezéshez:",
+    "intro": "Íme az egyszer használatos kódod az QRgine rendszerébe való bejelentkezéshez:",
     "expiry": "A kód 5 percig érvényes. Ha nem te kérted, egyszerűen hagyd figyelmen kívül ezt az e-mailt."
   },
   "supportEmail": {
-    "subject": "Új üzenet az IQ Rest ügyfélszolgálatától",
+    "subject": "Új üzenet az QRgine ügyfélszolgálatától",
     "title": "Új üzenet az ügyfélszolgálattól",
     "body": "Ügyfélszolgálati csapatunk új üzenetet küldött neked. Nyisd meg az ügyfélszolgálati csevegést a vezérlőpulton, hogy elolvashasd és válaszolhass rá.",
     "cta": "Ügyfélszolgálati csevegés megnyitása"

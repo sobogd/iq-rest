@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Menu QR gratuit : ce qui est vraiment gratuit | IQ Rest",
+    "title": "Menu QR gratuit : ce qui est vraiment gratuit | QRgine",
     "description": "Les menus QR gratuits existent et certains conviennent. Comment ils gagnent de l'argent, quelle limite vous bloque en premier et quand le gratuit suffit."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Offre gratuite typique",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Un essai gratuit, est-ce la même chose qu'une offre gratuite ?",
-          "a": "Non. Un essai, c'est le produit complet pendant une durée limitée ; une offre gratuite, c'est un produit limité pour toujours. IQ Rest propose 14 jours d'essai avec tout activé et sans carte bancaire."
+          "a": "Non. Un essai, c'est le produit complet pendant une durée limitée ; une offre gratuite, c'est un produit limité pour toujours. QRgine propose 14 jours d'essai avec tout activé et sans carte bancaire."
         },
         {
           "q": "Quel est le menu QR payant le moins cher ?",
-          "a": "Les formules forfaitaires commencent en général autour de 10 € par mois et par établissement. IQ Rest démarre à 9,90 € — le détail complet est dans [ce que coûte un menu QR code](blog:qr-code-menu-cost)."
+          "a": "Les formules forfaitaires commencent en général autour de 10 € par mois et par établissement. QRgine démarre à 9,90 € — le détail complet est dans [ce que coûte un menu QR code](blog:qr-code-menu-cost)."
         },
         {
           "q": "Puis-je transférer mon menu d'un outil gratuit vers un outil payant ?",
-          "a": "En général oui, et vous avez rarement à le ressaisir : IQ Rest peut lire une photo ou un PDF du menu existant et recréer les plats en cinq minutes environ."
+          "a": "En général oui, et vous avez rarement à le ressaisir : QRgine peut lire une photo ou un PDF du menu existant et recréer les plats en cinq minutes environ."
         }
       ]
     }

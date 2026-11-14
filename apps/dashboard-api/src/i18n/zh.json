@@ -2,11 +2,11 @@
   "companyDefaultName": "我的餐厅",
   "otpEmail": {
     "subject": "您的验证码：{code}",
-    "intro": "这是您登录 IQ Rest 的一次性验证码：",
+    "intro": "这是您登录 QRgine 的一次性验证码：",
     "expiry": "验证码 5 分钟内有效。如果这不是您本人的操作，请忽略此邮件。"
   },
   "supportEmail": {
-    "subject": "来自 IQ Rest 客服的新消息",
+    "subject": "来自 QRgine 客服的新消息",
     "title": "客服新消息",
     "body": "我们的客服团队给您发送了一条新消息。请在控制面板中打开客服聊天，查看并回复。",
     "cta": "打开客服聊天"

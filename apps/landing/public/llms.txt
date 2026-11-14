@@ -1,8 +1,8 @@
-# IQ Rest
+# QRgine
 
-> IQ Rest is a restaurant management platform that runs a whole venue from one app: a multilingual digital QR menu, a kitchen display, 24/7 table reservations and commission-free order taking. A restaurant goes live in about 5 minutes, with menus auto-translated into 35 languages by AI. Works on the web, iOS and Android. Used by 500+ restaurants, cafés and bars across 30+ countries.
+> QRgine is a restaurant management platform that runs a whole venue from one app: a multilingual digital QR menu, a kitchen display, 24/7 table reservations and commission-free order taking. A restaurant goes live in about 5 minutes, with menus auto-translated into 35 languages by AI. Works on the web, iOS and Android. Used by 500+ restaurants, cafés and bars across 30+ countries.
 
-## What IQ Rest is
+## What QRgine is
 
 - **Digital menu**: browser menu with photos, prices, allergens and descriptions, updated in real time from a phone. Guests scan a QR code at the table — no app to install. AI translates the menu into 35 languages so every guest reads it in their own.
 - **Kitchen display**: orders appear live on a screen in the kitchen with notes and allergens; runs on any tablet or phone, no dedicated hardware required.
@@ -29,7 +29,7 @@ Build-your-plan model: the digital menu is the base module, everything else is a
 - [Table booking system](https://iq-rest.com/table-booking-system): 24/7 self-service reservations.
 - [Kitchen display system](https://iq-rest.com/kitchen-display-system): live kitchen tickets on any screen.
 - [QR code menu for restaurants](https://iq-rest.com/qr-code-menu-for-restaurants): QR menu setup and use.
-- [About IQ Rest](https://iq-rest.com/about): who we are, the founder, and how support works.
+- [About QRgine](https://iq-rest.com/about): who we are, the founder, and how support works.
 - [Help guide](https://iq-rest.com/help): step-by-step product guide and FAQ.
 
 ## Blog
@@ -53,7 +53,7 @@ Build-your-plan model: the digital menu is the base module, everything else is a
 
 ## Facts
 
-- Product: IQ Rest (brand previously "SoqrMenu").
+- Product: QRgine (brand previously "SoqrMenu").
 - Category: restaurant management / hospitality SaaS.
 - Setup time: ~5 minutes.
 - Languages: 35 (AI-translated menu).

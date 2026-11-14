@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digitális étlap vagy papír étlap: valós költségek | IQ Rest",
+    "title": "Digitális étlap vagy papír étlap: valós költségek | QRgine",
     "description": "Mennyibe kerül valójában a papír étlap a QR-os digitális étlaphoz képest: nyomtatás, frissítés, fordítás, rendelési sebesség. Összehasonlítás számokkal."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Szkenneld be a papír étlapot — az IQ Rest beolvassa, és automatikusan felépíti a digitális étlapot.",
+        "Szkenneld be a papír étlapot — az QRgine beolvassa, és automatikusan felépíti a digitális étlapot.",
         "Ellenőrizd az árakat, tegyél fotót oda, ahol számít.",
         "Nyomtass asztalonként egy QR-kódot.",
         "Bármit módosíthatsz, bármikor, a telefonodról."

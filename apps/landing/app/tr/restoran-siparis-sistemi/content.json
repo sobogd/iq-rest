@@ -3,13 +3,13 @@
   "slug": "restoran-siparis-sistemi",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Restoran Sipariş Alma Sistemi — Misafir ve Garson | IQ Rest",
+    "title": "Restoran Sipariş Alma Sistemi — Misafir ve Garson | QRgine",
     "description": "Telefon veya tabletten restoran siparişi alma: masa planı, hesap bölme, durumlar ve notlar. Misafirler doğrudan masadan sipariş verir. 14 gün ücretsiz.",
     "canonical": "https://iq-rest.com/tr/restoran-siparis-sistemi",
     "ogLocale": "tr_TR",
     "ogTitle": "Restoran Sipariş Alma Sistemi — Misafir ve Garson",
     "ogDescription": "Masadaki misafir veya telefondaki garson — sipariş anında mutfağa ulaşır. Masa planı, hesap bölme, durumlar, seçenekler ve notlar.",
-    "brandLine": "IQ Rest — Restoran Sipariş Alma"
+    "brandLine": "QRgine — Restoran Sipariş Alma"
   },
   "hero": {
     "headline": "Masadan siparişler —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Restorancıların IQ Rest'te sipariş alma hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
+    "sub": "Restorancıların QRgine'te sipariş alma hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
     "items": [
       {
         "q": "Birden fazla garson farklı cihazlardan aynı anda çalışabilir mi?",

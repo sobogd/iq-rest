@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Speisekarte übersetzen: was übersetzen, was nicht | IQ Rest",
+    "title": "Speisekarte übersetzen: was übersetzen, was nicht | QRgine",
     "description": "Warum maschinell übersetzte Gerichtsnamen schiefgehen, welche Teile der Karte in der Originalsprache bleiben und wie Sie vier Sprachen ohne vier Karten führen."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "Eine [digitale Speisekarte](route:/digital-menu) dreht das um. Das Handy des Gastes gibt seine Sprache ohnehin an, also öffnet sich die Karte in der richtigen, ohne dass jemand wählen muss. IQ Rest übersetzt die Karte automatisch, und weil die Übersetzungen am Artikel hängen, ändert eine einzige Preisänderung alle Sprachen. Eine fünfte Sprache kostet nichts und braucht keinen Neudruck."
+      "text": "Eine [digitale Speisekarte](route:/digital-menu) dreht das um. Das Handy des Gastes gibt seine Sprache ohnehin an, also öffnet sich die Karte in der richtigen, ohne dass jemand wählen muss. QRgine übersetzt die Karte automatisch, und weil die Übersetzungen am Artikel hängen, ändert eine einzige Preisänderung alle Sprachen. Eine fünfte Sprache kostet nichts und braucht keinen Neudruck."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Eine Karte, alle Sprachen",
-      "text": "IQ Rest übersetzt Ihre Karte automatisch und öffnet sie in der Sprache des Gastes. Einen Preis einmal ändern, und alle Sprachen sind aktuell. 14 Tage kostenlos.",
+      "text": "QRgine übersetzt Ihre Karte automatisch und öffnet sie in der Sprache des Gastes. Einen Preis einmal ändern, und alle Sprachen sind aktuell. 14 Tage kostenlos.",
       "buttonLabel": "Automatische Übersetzung ansehen",
       "routeKey": "/digital-menu"
     },

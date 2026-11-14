@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Brezplačen QR jedilnik: kaj je res brezplačno | IQ Rest",
+    "title": "Brezplačen QR jedilnik: kaj je res brezplačno | QRgine",
     "description": "Brezplačni QR jedilniki obstajajo in nekateri so v redu. Kako služijo denar, katera omejitev vas ustavi prva in kdaj je brezplačno res prava izbira."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Tipična brezplačna raven",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Je brezplačno preizkusno obdobje isto kot brezplačen paket?",
-          "a": "Ne. Preizkusno obdobje je celoten izdelek za omejen čas; brezplačen paket je omejen izdelek za vedno. IQ Rest daje 14 dni preizkusa z vsem vklopljenim in brez kartice."
+          "a": "Ne. Preizkusno obdobje je celoten izdelek za omejen čas; brezplačen paket je omejen izdelek za vedno. QRgine daje 14 dni preizkusa z vsem vklopljenim in brez kartice."
         },
         {
           "q": "Kateri je najcenejši plačljiv QR jedilnik?",
-          "a": "Fiksni paketi se navadno začnejo okoli 10 € na mesec na lokal. IQ Rest se začne pri 9,90 € — celotna razčlenitev je v [koliko stane jedilnik s QR kodo](blog:qr-code-menu-cost)."
+          "a": "Fiksni paketi se navadno začnejo okoli 10 € na mesec na lokal. QRgine se začne pri 9,90 € — celotna razčlenitev je v [koliko stane jedilnik s QR kodo](blog:qr-code-menu-cost)."
         },
         {
           "q": "Ali lahko jedilnik preselim z brezplačnega orodja na plačljivo?",
-          "a": "Običajno da in le redko ga morate znova vnašati: IQ Rest zna prebrati fotografijo ali PDF obstoječega jedilnika in postavke znova sestaviti v približno petih minutah."
+          "a": "Običajno da in le redko ga morate znova vnašati: QRgine zna prebrati fotografijo ali PDF obstoječega jedilnika in postavke znova sestaviti v približno petih minutah."
         }
       ]
     }

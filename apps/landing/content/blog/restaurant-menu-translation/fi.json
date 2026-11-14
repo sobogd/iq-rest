@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ruokalistan käännös: mitä kääntää ja mitä ei | IQ Rest",
+    "title": "Ruokalistan käännös: mitä kääntää ja mitä ei | QRgine",
     "description": "Miksi konekäännetyt annosnimet menevät pieleen, mitkä listan osat jäävät alkukielelle ja miten pyörität neljää kieltä ilman neljää listaa."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "[Digitaalinen lista](route:/digital-menu) kääntää asetelman. Asiakkaan puhelin ilmoittaa jo kielensä, joten lista avautuu oikealla ilman että kukaan valitsee. IQ Rest kääntää listan automaattisesti, ja koska käännökset on kiinnitetty annokseen, yksi hinnanmuutos muuttaa sen kaikilla kielillä. Viidennen kielen lisääminen ei maksa mitään eikä vaadi uusintapainoa."
+      "text": "[Digitaalinen lista](route:/digital-menu) kääntää asetelman. Asiakkaan puhelin ilmoittaa jo kielensä, joten lista avautuu oikealla ilman että kukaan valitsee. QRgine kääntää listan automaattisesti, ja koska käännökset on kiinnitetty annokseen, yksi hinnanmuutos muuttaa sen kaikilla kielillä. Viidennen kielen lisääminen ei maksa mitään eikä vaadi uusintapainoa."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Yksi lista, kaikki kielet",
-      "text": "IQ Rest kääntää listasi automaattisesti ja avaa sen asiakkaan omalla kielellä. Muuta hintaa kerran, ja kaikki kielet päivittyvät. 14 päivää ilmaiseksi.",
+      "text": "QRgine kääntää listasi automaattisesti ja avaa sen asiakkaan omalla kielellä. Muuta hintaa kerran, ja kaikki kielet päivittyvät. 14 päivää ilmaiseksi.",
       "buttonLabel": "Katso automaattinen käännös",
       "routeKey": "/digital-menu"
     },

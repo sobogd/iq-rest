@@ -2,7 +2,7 @@
   "htmlLang": "it",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Menù digitale, display cucina e prenotazioni — IQ Rest",
+    "title": "Menù digitale, display cucina e prenotazioni — QRgine",
     "description": "Gestisci il ristorante da un'unica app: menù digitale multilingue, display cucina e prenotazioni 24/7. Attivo in 5 minuti. 14 giorni gratis, senza carta.",
     "canonical": "https://iq-rest.com/it",
     "ogLocale": "it_IT",
@@ -10,7 +10,7 @@
     "ogDescription": "Gestisci il ristorante da un'unica app: menù digitale multilingue, display cucina e prenotazioni 24/7. Attivo in 5 minuti. 14 giorni gratis, senza carta."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Piattaforma di gestione per ristoranti"
+    "appName": "QRgine — Piattaforma di gestione per ristoranti"
   },
   "ctaText": "Prova gratis",
   "homeCtaText": "Prova gratis",
@@ -82,7 +82,7 @@
     "quoteStart": "Io e mia moglie abbiamo gestito il nostro caffè e conosciamo bene la giornata di un ristorante dall'interno: ricezione degli ordini, prenotazioni, lavoro di sala e cucina. Volevamo un unico strumento — moderno, semplice da attivare e chiaro fin dal primo sguardo —",
     "quoteAccent": "così è nata l'idea della piattaforma che sviluppiamo per gli altri ristoratori.",
     "sign": "Bogdan Sokolov · fondatore, in passato titolare di un caffè",
-    "photoAlt": "Bogdan Sokolov, fondatore di IQ Rest"
+    "photoAlt": "Bogdan Sokolov, fondatore di QRgine"
   },
   "pricing": {
     "badge": "Senza commissioni · Senza vincoli",
@@ -108,7 +108,7 @@
     "headingAccent": "frequenti",
     "sub": "Le domande più comuni dei ristoratori prima dell'attivazione. Se non trovi la risposta, scrivici su WhatsApp: rispondono persone del team, non un bot.",
     "whatsappCta": "Scrivici su WhatsApp",
-    "whatsappPrefill": "Salve, ho una domanda su IQ Rest",
+    "whatsappPrefill": "Salve, ho una domanda su QRgine",
     "items": [
       {
         "q": "Cosa include il periodo di prova e cosa succede dopo?",
@@ -192,7 +192,7 @@
     "button": "Calcola il piano"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Tutti i diritti riservati.",
+    "copyrightTemplate": "© {year} QRgine. Tutti i diritti riservati.",
     "featuresHeading": "Funzionalità",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blog di tecnologia per ristoranti — IQ Rest",
+    "metaTitle": "Blog di tecnologia per ristoranti — QRgine",
     "metaDescription": "Guide e confronti su menù digitali, ordini via QR, display cucina e prenotazioni — letture pratiche per ristoratori.",
     "title": "Blog",
     "intro": "Guide e confronti su menù digitali, ordini via QR, display cucina e gestione del ristorante.",

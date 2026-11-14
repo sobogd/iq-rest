@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Traduire la carte : que traduire et quoi laisser | IQ Rest",
+    "title": "Traduire la carte : que traduire et quoi laisser | QRgine",
     "description": "Pourquoi la traduction automatique des noms de plats échoue, quelles parties de la carte doivent rester dans la langue d'origine, et comment tenir quatre langues sans quatre cartes."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "Un [menu digital](route:/digital-menu) inverse la situation. Le téléphone du client annonce déjà sa langue, donc le menu s'ouvre dans la bonne sans que personne n'ait à choisir. IQ Rest traduit le menu automatiquement et, comme les traductions sont attachées au plat, un seul changement de prix met à jour toutes les langues. Ajouter une cinquième langue ne coûte rien et n'impose aucune réimpression."
+      "text": "Un [menu digital](route:/digital-menu) inverse la situation. Le téléphone du client annonce déjà sa langue, donc le menu s'ouvre dans la bonne sans que personne n'ait à choisir. QRgine traduit le menu automatiquement et, comme les traductions sont attachées au plat, un seul changement de prix met à jour toutes les langues. Ajouter une cinquième langue ne coûte rien et n'impose aucune réimpression."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Un menu, toutes les langues",
-      "text": "IQ Rest traduit votre carte automatiquement et l'ouvre dans la langue du client. Changez un prix une fois et toutes les langues se mettent à jour. 14 jours gratuits.",
+      "text": "QRgine traduit votre carte automatiquement et l'ouvre dans la langue du client. Changez un prix une fois et toutes les langues se mettent à jour. 14 jours gratuits.",
       "buttonLabel": "Voir la traduction automatique",
       "routeKey": "/digital-menu"
     },

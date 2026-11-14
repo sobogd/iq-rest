@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kaip sukurti QR meniu: 3 būdai | IQ Rest",
+    "title": "Kaip sukurti QR meniu: 3 būdai | QRgine",
     "description": "Trys būdai sukurti restorano QR meniu: nemokamas generatorius su PDF, meniu kūrimo įrankis arba visa sistema. Kiek kainuoja ir kur kiekvienas lūžta."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Perkelkite meniu į skaitmeninį pavidalą. 80 pozicijų suvedimas – didžiausias laiko ėdikas: IQ Rest perskaito jūsų popierinio meniu nuotrauką ir pats sukuria patiekalus bei kainas, todėl visas vakaras virsta maždaug penkiomis minutėmis.",
+        "Perkelkite meniu į skaitmeninį pavidalą. 80 pozicijų suvedimas – didžiausias laiko ėdikas: QRgine perskaito jūsų popierinio meniu nuotrauką ir pats sukuria patiekalus bei kainas, todėl visas vakaras virsta maždaug penkiomis minutėmis.",
         "Sutvarkykite struktūrą prieš dizainą. Grupuokite taip, kaip užsako svečiai (užkandžiai, pagrindiniai patiekalai, gėrimai), o ne taip, kaip sutvarkyta jūsų virtuvė. Ilgi vientisi sąrašai žudo slinkimą.",
         "Nuotraukas dėkite ten, kur jos keičia sprendimą. Nufotografuoti kiekvieną patiekalą blogiau nei penkios geros nuotraukos prie tų patiekalų, kuriuos norite parduoti.",
         "Alergenus pažymėkite dabar, o ne vėliau. ES jų vis tiek reikia, o pridėti juos atgaline data prie 80 pozicijų yra kančia.",

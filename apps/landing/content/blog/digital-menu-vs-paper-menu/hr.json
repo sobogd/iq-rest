@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digitalni jelovnik ili papirnati: stvarni troškovi | IQ Rest",
+    "title": "Digitalni jelovnik ili papirnati: stvarni troškovi | QRgine",
     "description": "Što papirnati jelovnik stvarno košta restoran u usporedbi s digitalnim QR jelovnikom: tisak, izmjene, prijevodi, brzina naručivanja. Usporedba s brojkama."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Skenirajte papirnati jelovnik — IQ Rest ga pročita i automatski izradi digitalni jelovnik.",
+        "Skenirajte papirnati jelovnik — QRgine ga pročita i automatski izradi digitalni jelovnik.",
         "Provjerite cijene, dodajte fotografije gdje su važne.",
         "Ispišite po jedan QR kod za svaki stol.",
         "Mijenjajte što god želite, bilo kada, s mobitela."

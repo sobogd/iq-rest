@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digitale menukaart vs. papieren menukaart: kosten | IQ Rest",
+    "title": "Digitale menukaart vs. papieren menukaart: kosten | QRgine",
     "description": "Wat een papieren menukaart een restaurant echt kost vs. een digitale QR-menukaart: drukwerk, updates, vertalingen, bestelsnelheid. Vergelijking met cijfers."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Scan je papieren menukaart — IQ Rest leest hem in en bouwt automatisch de digitale menukaart.",
+        "Scan je papieren menukaart — QRgine leest hem in en bouwt automatisch de digitale menukaart.",
         "Controleer de prijzen, voeg foto's toe waar ze ertoe doen.",
         "Druk één QR-code per tafel af.",
         "Werk alles op elk moment bij vanaf je telefoon."

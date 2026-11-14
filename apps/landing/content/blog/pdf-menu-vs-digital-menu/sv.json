@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "En QR till en pdf är ingen digital meny | IQ Rest",
+    "title": "En QR till en pdf är ingen digital meny | QRgine",
     "description": "En QR-kod som pekar på en pdf är den vanligaste digitala menylösningen och den sämsta. Vad den kostar i läsbarhet, uppdateringar, allergener och beställningar."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Ta ett foto av pappersmenyn, eller ladda upp pdf:en i sig.",
-        "IQ Rest läser den och skapar kategorier, rätter och priser – ungefär fem minuter i stället för en hel kväll.",
+        "QRgine läser den och skapar kategorier, rätter och priser – ungefär fem minuter i stället för en hel kväll.",
         "Kontrollera priserna och rätta det som inläsningen tolkade fel.",
         "Peka dina befintliga QR-koder mot den nya menyn, eller tryck nya per bord."
       ]

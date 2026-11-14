@@ -1,6 +1,6 @@
-# IQ Rest Dashboard API
+# QRgine Dashboard API
 
-NestJS + Prisma backend for the IQ Rest dashboard web app.
+NestJS + Prisma backend for the QRgine dashboard web app.
 
 ## Setup
 

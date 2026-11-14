@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ekran kuchenny: czy potrzebujesz KDS? | IQ Rest",
+    "title": "Ekran kuchenny: czy potrzebujesz KDS? | QRgine",
     "description": "Co robi KDS, ile naprawdę kosztuje sprzęt, jak uruchomić go na tablecie, który już masz, i które kuchnie lepiej wychodzą na papierowych bonach."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Większość kuchni tego nie potrzebuje. [Ekran kuchenny](route:/kitchen-display) IQ Rest działa w przeglądarce, więc sprzętem może być tablet, który już masz, tani tablet z Androidem albo stary laptop z monitorem. Włóż go w bryzgoszczelne etui, zamontuj poza linią pary, a koszt krańcowy to uchwyt ścienny."
+      "text": "Większość kuchni tego nie potrzebuje. [Ekran kuchenny](route:/kitchen-display) QRgine działa w przeglądarce, więc sprzętem może być tablet, który już masz, tani tablet z Androidem albo stary laptop z monitorem. Włóż go w bryzgoszczelne etui, zamontuj poza linią pary, a koszt krańcowy to uchwyt ścienny."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Czy mogę uruchomić KDS na zwykłym tablecie?",
-          "a": "Tak. Ekran kuchenny IQ Rest działa w przeglądarce, więc nada się każdy tablet lub laptop z ostatnich pięciu lat. Użyj bryzgoszczelnego etui."
+          "a": "Tak. Ekran kuchenny QRgine działa w przeglądarce, więc nada się każdy tablet lub laptop z ostatnich pięciu lat. Użyj bryzgoszczelnego etui."
         },
         {
           "q": "Czy KDS potrzebuje internetu?",

@@ -81,7 +81,7 @@ def main():
             build_story(os.path.join(HERE, PHOTO[key]), os.path.join(folder, FILE_STORY[key]), hl, sl, cx)
             total += 2
         # description.txt
-        lines = [f"IQ Rest — {loc.upper()} ad set", "",
+        lines = [f"QRgine — {loc.upper()} ad set", "",
                  "FACEBOOK / INSTAGRAM PRIMARY TEXT (fits preview, no truncation):",
                  d["primary"], "", "CREATIVES:"]
         for i, key in enumerate(ORDER, 1):

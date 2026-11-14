@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR pdf-tiedostoon ei ole digitaalinen ruokalista | IQ Rest",
+    "title": "QR pdf-tiedostoon ei ole digitaalinen ruokalista | QRgine",
     "description": "Pdf-tiedostoon osoittava QR-koodi on yleisin ja huonoin digilistaratkaisu. Mitä se maksaa luettavuudessa, päivityksissä, allergeeneissa ja tilauksissa."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Ota valokuva paperilistasta tai lataa itse pdf.",
-        "IQ Rest lukee sen ja luo kategoriat, annokset ja hinnat – noin viisi minuuttia koko illan sijaan.",
+        "QRgine lukee sen ja luo kategoriat, annokset ja hinnat – noin viisi minuuttia koko illan sijaan.",
         "Tarkista hinnat ja korjaa se, minkä lukeminen tulkitsi väärin.",
         "Ohjaa nykyiset QR-koodit uuteen listaan tai tulosta uudet pöytäkohtaisesti."
       ]

@@ -2,11 +2,11 @@
   "companyDefaultName": "Můj podnik",
   "otpEmail": {
     "subject": "Váš kód: {code}",
-    "intro": "Zde je váš jednorázový kód pro přihlášení do IQ Rest:",
+    "intro": "Zde je váš jednorázový kód pro přihlášení do QRgine:",
     "expiry": "Kód platí 5 minut. Pokud jste o něj nežádali, tento e-mail jednoduše ignorujte."
   },
   "supportEmail": {
-    "subject": "Nová zpráva od podpory IQ Rest",
+    "subject": "Nová zpráva od podpory QRgine",
     "title": "Nová zpráva od podpory",
     "body": "Náš tým podpory vám poslal novou zprávu. Otevřete chat s podporou ve svém ovládacím panelu, kde si ji můžete přečíst a odpovědět.",
     "cta": "Otevřít chat s podporou"

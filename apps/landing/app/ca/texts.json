@@ -2,7 +2,7 @@
   "htmlLang": "ca",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Carta digital, pantalla de cuina i reserves — IQ Rest",
+    "title": "Carta digital, pantalla de cuina i reserves — QRgine",
     "description": "Gestiona el teu restaurant des d'una sola app: carta digital multilingüe, pantalla de cuina i reserves 24/7. En marxa en 5 minuts. 14 dies gratis, sense targeta.",
     "canonical": "https://iq-rest.com/ca",
     "ogLocale": "ca_ES",
@@ -10,7 +10,7 @@
     "ogDescription": "Gestiona el teu restaurant des d'una sola app: carta digital multilingüe, pantalla de cuina i reserves 24/7. En marxa en 5 minuts. 14 dies gratis, sense targeta."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Plataforma de gestió per a restaurants"
+    "appName": "QRgine — Plataforma de gestió per a restaurants"
   },
   "ctaText": "Prova-ho gratis",
   "homeCtaText": "Prova-ho gratis",
@@ -82,7 +82,7 @@
     "quoteStart": "La meva dona i jo teníem la nostra pròpia cafeteria i coneixem el dia a dia d'un restaurant des de dins: prendre comandes, reserves, la feina a la sala i a la cuina. Volíem una única eina, moderna, fàcil de configurar i clara a primera vista,",
     "quoteAccent": "i així va néixer la idea de la plataforma que ara desenvolupem per a altres restauradors.",
     "sign": "Bogdan Sokolov · fundador, antic propietari d'una cafeteria",
-    "photoAlt": "Bogdan Sokolov, fundador d'IQ Rest"
+    "photoAlt": "Bogdan Sokolov, fundador d'QRgine"
   },
   "pricing": {
     "badge": "Sense comissions · Sense contractes de permanència",
@@ -108,7 +108,7 @@
     "headingAccent": "freqüents",
     "sub": "El que més pregunten els restauradors abans de registrar-se. Si no trobes la teva resposta, escriu-nos per WhatsApp; et respondrà una persona del nostre equip, no un bot.",
     "whatsappCta": "Escriu-nos per WhatsApp",
-    "whatsappPrefill": "Hola, tinc un dubte sobre IQ Rest",
+    "whatsappPrefill": "Hola, tinc un dubte sobre QRgine",
     "items": [
       {
         "q": "Què inclou el període de prova i què passa quan acaba?",
@@ -192,7 +192,7 @@
     "button": "Crear el meu pla"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Tots els drets reservats.",
+    "copyrightTemplate": "© {year} QRgine. Tots els drets reservats.",
     "featuresHeading": "Funcionalitats",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blog de tecnologia per a restaurants — IQ Rest",
+    "metaTitle": "Blog de tecnologia per a restaurants — QRgine",
     "metaDescription": "Guies i comparatives sobre cartes digitals, comandes per QR, pantalles de cuina i reserves — lectura pràctica per a restauradors.",
     "title": "Blog",
     "intro": "Guies i comparatives sobre cartes digitals, comandes per QR, pantalles de cuina i la gestió del restaurant.",

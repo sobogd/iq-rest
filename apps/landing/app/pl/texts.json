@@ -2,7 +2,7 @@
   "htmlLang": "pl",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Cyfrowe menu, ekran kuchenny i rezerwacje — IQ Rest",
+    "title": "Cyfrowe menu, ekran kuchenny i rezerwacje — QRgine",
     "description": "Zarządzaj lokalem z jednej aplikacji: wielojęzyczne cyfrowe menu, ekran kuchenny i rezerwacje 24/7. Start w 5 minut. 14 dni za darmo, bez podawania karty.",
     "canonical": "https://iq-rest.com/pl",
     "ogLocale": "pl_PL",
@@ -10,7 +10,7 @@
     "ogDescription": "Zarządzaj lokalem z jednej aplikacji: wielojęzyczne cyfrowe menu, ekran kuchenny i rezerwacje 24/7. Start w 5 minut. 14 dni za darmo, bez podawania karty."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Platforma do zarządzania restauracją"
+    "appName": "QRgine — Platforma do zarządzania restauracją"
   },
   "ctaText": "Wypróbuj za darmo",
   "homeCtaText": "Wypróbuj za darmo",
@@ -82,7 +82,7 @@
     "quoteStart": "Prowadziliśmy z żoną własną kawiarnię i znamy ten biznes od kuchni: przyjmowanie zamówień, rezerwacje, praca na sali i na wydawce. Brakowało nam jednego narzędzia — nowoczesnego, prostego w konfiguracji i czytelnego od pierwszego wejrzenia —",
     "quoteAccent": "tak zrodził się pomysł na platformę, którą teraz rozwijamy dla innych gastronomów.",
     "sign": "Bogdan Sokołow · założyciel, były właściciel kawiarni",
-    "photoAlt": "Bogdan Sokołow, założyciel IQ Rest"
+    "photoAlt": "Bogdan Sokołow, założyciel QRgine"
   },
   "pricing": {
     "badge": "Brak prowizji · Brak umów długoterminowych",
@@ -108,7 +108,7 @@
     "headingAccent": "pytania",
     "sub": "O co najczęściej pytają restauratorzy przed założeniem konta. Jeśli nie widzisz odpowiedzi — napisz do nas na WhatsApp, odpowiadają prawdziwi ludzie, nie boty.",
     "whatsappCta": "Napisz na WhatsApp",
-    "whatsappPrefill": "Cześć, mam pytanie o IQ Rest",
+    "whatsappPrefill": "Cześć, mam pytanie o QRgine",
     "items": [
       {
         "q": "Co obejmuje okres próbny i co się dzieje po jego zakończeniu?",
@@ -192,7 +192,7 @@
     "button": "Zbuduj plan"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Wszelkie prawa zastrzeżone.",
+    "copyrightTemplate": "© {year} QRgine. Wszelkie prawa zastrzeżone.",
     "featuresHeading": "Funkcje",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blog o technologii dla restauracji — IQ Rest",
+    "metaTitle": "Blog o technologii dla restauracji — QRgine",
     "metaDescription": "Poradniki i porównania: cyfrowe menu, zamówienia QR, ekrany kuchenne i rezerwacje — praktycznie dla restauratorów.",
     "title": "Blog",
     "intro": "Poradniki i porównania o cyfrowym menu, zamówieniach QR, ekranach kuchennych i prowadzeniu restauracji.",

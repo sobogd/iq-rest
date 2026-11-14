@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // HR help guide.
 export const hr: HelpDoc = {
-  metaTitle: "Kako koristiti IQ Rest — vodič korak po korak",
+  metaTitle: "Kako koristiti QRgine — vodič korak po korak",
   metaDescription:
-    "Potpuni vodič za IQ Rest: registracija, jelovnik, narudžbe, rezervacije, kuhinjski zaslon i postavke — za restorane.",
+    "Potpuni vodič za QRgine: registracija, jelovnik, narudžbe, rezervacije, kuhinjski zaslon i postavke — za restorane.",
   h1: "Pomoć",
-  intro: "Detaljan vodič za IQ Rest — od registracije do finih postavki.",
+  intro: "Detaljan vodič za QRgine — od registracije do finih postavki.",
   banner: {
     title: "Jednostavnije je nego što izgleda",
     sub: "Vodič korak po korak: od registracije do finih postavki — svatko to može.",
@@ -22,7 +22,7 @@ export const hr: HelpDoc = {
         { type: "h3", text: "Što je ovaj sustav" },
         {
           type: "p",
-          text: "IQ Rest je usluga za restorane: izrađujete online jelovnik s QR kodom, primate narudžbe i rezervacije stolova izravno s gostiju telefona, dok u kuhinji i kod konobara rade tableti-terminali. Sve se upravlja iz jedne administratorske ploče (nadzorne ploče).",
+          text: "QRgine je usluga za restorane: izrađujete online jelovnik s QR kodom, primate narudžbe i rezervacije stolova izravno s gostiju telefona, dok u kuhinji i kod konobara rade tableti-terminali. Sve se upravlja iz jedne administratorske ploče (nadzorne ploče).",
         },
         { type: "h3", text: "Registracija i prijava" },
         { type: "p", text: "Prijaviti se možete na tri načina — odaberite bilo koji na zaslonu za prijavu:" },

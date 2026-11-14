@@ -3,13 +3,13 @@
   "slug": "table-booking-system",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "24/7 Table Reservations for Restaurants | IQ Rest",
+    "title": "24/7 Table Reservations for Restaurants | QRgine",
     "description": "24/7 table reservations: guests book via the QR menu or website. Calendar by table, automatic confirmations and reminders. No phone calls. 14 days free.",
     "canonical": "https://iq-rest.com/table-booking-system",
     "ogLocale": "en_US",
     "ogTitle": "24/7 Table Reservations — Guests Book Themselves",
     "ogDescription": "Guests book tables via the QR menu or website. Calendar, automatic confirmations, reminders. Not a single guest missed.",
-    "brandLine": "IQ Rest — Restaurant Table Reservations"
+    "brandLine": "QRgine — Restaurant Table Reservations"
   },
   "hero": {
     "headline": "Table bookings 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "The reservation calendar in the IQ Rest admin panel on two tablets: a daily grid by table and a monthly calendar"
+        "alt": "The reservation calendar in the QRgine admin panel on two tablets: a daily grid by table and a monthly calendar"
       }
     }
   ],
   "faq": {
-    "sub": "What restaurateurs ask about table reservations in IQ Rest. If your question isn't listed — message us on WhatsApp.",
+    "sub": "What restaurateurs ask about table reservations in QRgine. If your question isn't listed — message us on WhatsApp.",
     "items": [
       {
         "q": "Can I choose the days and times when booking is available?",

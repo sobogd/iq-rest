@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Biachlár digiteach vs biachlár páipéir: costais | IQ Rest",
+    "title": "Biachlár digiteach vs biachlár páipéir: costais | QRgine",
     "description": "Fíorchostas biachláir pháipéir vs biachlár digiteach QR: priontáil, nuashonruithe, aistriúcháin agus luas seirbhíse. Comparáid taobh le taobh le figiúirí."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Scan do bhiachlár páipéir — léann IQ Rest é agus tógann sé an biachlár digiteach go huathoibríoch.",
+        "Scan do bhiachlár páipéir — léann QRgine é agus tógann sé an biachlár digiteach go huathoibríoch.",
         "Seiceáil na praghsanna, cuir grianghraif leis an áit a bhfuil tábhacht leo.",
         "Priontáil cód QR amháin in aghaidh an bhoird.",
         "Nuashonraigh rud ar bith, am ar bith, ó do ghuthán."

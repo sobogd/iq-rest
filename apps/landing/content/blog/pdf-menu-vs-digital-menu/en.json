@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR Code to a PDF Menu: Why It Doesn't Work | IQ Rest",
+    "title": "QR Code to a PDF Menu: Why It Doesn't Work | QRgine",
     "description": "A QR code pointing at a PDF is the most common digital menu setup and the worst one. What it costs you in reading, updates, allergens and orders."
   },
   "card": {
@@ -74,7 +74,7 @@
       "type": "steps",
       "items": [
         "Take a photo of the paper menu, or upload the PDF itself.",
-        "IQ Rest reads it and creates the categories, items and prices — about five minutes rather than an evening.",
+        "QRgine reads it and creates the categories, items and prices — about five minutes rather than an evening.",
         "Check the prices and fix anything the scan misread.",
         "Point your existing QR codes at the new menu, or print new ones per table."
       ]

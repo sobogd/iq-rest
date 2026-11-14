@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Un QR a un PDF no es una carta digital | IQ Rest",
+    "title": "Un QR a un PDF no es una carta digital | QRgine",
     "description": "Un código QR que apunta a un PDF es el montaje más común y el peor. Lo que te cuesta en lectura, actualizaciones, alérgenos y pedidos."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Haz una foto de la carta en papel, o sube el propio PDF.",
-        "IQ Rest lo lee y crea las categorías, los platos y los precios: unos cinco minutos en lugar de una tarde entera.",
+        "QRgine lo lee y crea las categorías, los platos y los precios: unos cinco minutos en lugar de una tarde entera.",
         "Revisa los precios y corrige lo que el escaneo haya leído mal.",
         "Apunta tus códigos QR actuales a la nueva carta, o imprime otros nuevos por mesa."
       ]

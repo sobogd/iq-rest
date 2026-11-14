@@ -3,13 +3,13 @@
   "slug": "kuhinjski-ekran",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Kuhinjski ekran (KDS) za restorane | IQ Rest",
+    "title": "Kuhinjski ekran (KDS) za restorane | QRgine",
     "description": "KDS kuhinjski ekran: porudžbine iz sale i sa QR menija idu pravo na ekran kuvara. Kolone po stolovima, statusi i filteri po stanicama. Radi na tabletu i telefonu.",
     "canonical": "https://iq-rest.com/sr/kuhinjski-ekran",
     "ogLocale": "sr_RS",
     "ogTitle": "Kuhinjski ekran (KDS) — Porudžbine pravo na ekran kuvara",
     "ogDescription": "Porudžbine iz sale na ekranu kuvara. Kolone po stolovima, statusi i tajmer. Jedan dodir menja status.",
-    "brandLine": "IQ Rest — Kuhinjski ekran za restorane"
+    "brandLine": "QRgine — Kuhinjski ekran za restorane"
   },
   "hero": {
     "headline": "Kuhinjski ekran (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Šta ugostitelji pitaju o kuhinjskom ekranu u IQ Rest-u. Ako vaše pitanje nije na listi — pišite nam na WhatsApp.",
+    "sub": "Šta ugostitelji pitaju o kuhinjskom ekranu u QRgine-u. Ako vaše pitanje nije na listi — pišite nam na WhatsApp.",
     "items": [
       {
         "q": "Koje statuse imaju jela u kuhinji?",

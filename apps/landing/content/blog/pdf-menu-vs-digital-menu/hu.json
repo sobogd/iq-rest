@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "A PDF-re mutató QR nem digitális étlap | IQ Rest",
+    "title": "A PDF-re mutató QR nem digitális étlap | QRgine",
     "description": "A PDF-re mutató QR kód a leggyakoribb és a legrosszabb digitális étlap. Mibe kerül olvashatóságban, frissítésben, allergénekben és rendelésben."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Fényképezd le a papíralapú étlapot, vagy töltsd fel magát a PDF-et.",
-        "Az IQ Rest beolvassa, és létrehozza a kategóriákat, tételeket és árakat — nagyjából öt perc egy egész este helyett.",
+        "Az QRgine beolvassa, és létrehozza a kategóriákat, tételeket és árakat — nagyjából öt perc egy egész este helyett.",
         "Ellenőrizd az árakat, és javítsd, amit a beolvasás félreolvasott.",
         "Irányítsd a meglévő QR kódokat az új étlapra, vagy nyomtass újakat asztalonként."
       ]

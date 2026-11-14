@@ -2,11 +2,11 @@
   "companyDefaultName": "Fyrirtækið mitt",
   "otpEmail": {
     "subject": "Kóðinn þinn: {code}",
-    "intro": "Hér er einnota kóðinn þinn til að skrá þig inn á IQ Rest:",
+    "intro": "Hér er einnota kóðinn þinn til að skrá þig inn á QRgine:",
     "expiry": "Kóðinn rennur út eftir 5 mínútur. Ef þú baðst ekki um hann geturðu hunsað þennan tölvupóst."
   },
   "supportEmail": {
-    "subject": "Ný skilaboð frá þjónustuveri IQ Rest",
+    "subject": "Ný skilaboð frá þjónustuveri QRgine",
     "title": "Ný skilaboð frá þjónustuveri",
     "body": "Þjónustuteymið okkar hefur sent þér ný skilaboð. Opnaðu þjónustuspjallið á mælaborðinu þínu til að lesa þau og svara.",
     "cta": "Opna þjónustuspjall"

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Bezmaksas QR ēdienkarte: kas patiesi ir bez maksas | IQ Rest",
+    "title": "Bezmaksas QR ēdienkarte: kas patiesi ir bez maksas | QRgine",
     "description": "Bezmaksas QR ēdienkartes pastāv, un dažas ir labas. Kā tās pelna, kurš ierobežojums apturēs pirmais un kad bezmaksas patiešām ir pareizā izvēle."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Tipisks bezmaksas līmenis",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Vai bezmaksas izmēģinājums ir tas pats, kas bezmaksas plāns?",
-          "a": "Nē. Izmēģinājums ir viss produkts ierobežotu laiku; bezmaksas plāns ir ierobežots produkts uz visiem laikiem. IQ Rest dod 14 dienu izmēģinājumu ar visu ieslēgtu un bez kartes."
+          "a": "Nē. Izmēģinājums ir viss produkts ierobežotu laiku; bezmaksas plāns ir ierobežots produkts uz visiem laikiem. QRgine dod 14 dienu izmēģinājumu ar visu ieslēgtu un bez kartes."
         },
         {
           "q": "Kura ir lētākā maksas QR ēdienkarte?",
-          "a": "Fiksētie plāni parasti sākas ap 10 € mēnesī par vietu. IQ Rest sākas no 9,90 € — pilns sadalījums ir tekstā [cik maksā ēdienkarte ar QR kodu](blog:qr-code-menu-cost)."
+          "a": "Fiksētie plāni parasti sākas ap 10 € mēnesī par vietu. QRgine sākas no 9,90 € — pilns sadalījums ir tekstā [cik maksā ēdienkarte ar QR kodu](blog:qr-code-menu-cost)."
         },
         {
           "q": "Vai varu pārcelt ēdienkarti no bezmaksas rīka uz maksas?",
-          "a": "Parasti jā, un reti kad tā jāievada no jauna: IQ Rest var izlasīt esošās ēdienkartes fotogrāfiju vai PDF un atjaunot pozīcijas aptuveni piecās minūtēs."
+          "a": "Parasti jā, un reti kad tā jāievada no jauna: QRgine var izlasīt esošās ēdienkartes fotogrāfiju vai PDF un atjaunot pozīcijas aptuveni piecās minūtēs."
         }
       ]
     }

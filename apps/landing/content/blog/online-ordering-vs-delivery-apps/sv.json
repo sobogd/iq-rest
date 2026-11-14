@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Egen beställningssida vs matleveransappar: siffrorna | IQ Rest",
+    "title": "Egen beställningssida vs matleveransappar: siffrorna | QRgine",
     "description": "Vad marknadsplatsens provision kostar per order, hur många ordrar du behöver i egen kanal för att gå jämnt ut, och varför de flesta restauranger bör köra båda."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Behöver jag en webbplats för att ta direktordrar?",
-          "a": "Nej. IQ Rest ger dig en beställningssida med egen adress, som du kan länka från Google, Instagram eller en QR-kod på bordet."
+          "a": "Nej. QRgine ger dig en beställningssida med egen adress, som du kan länka från Google, Instagram eller en QR-kod på bordet."
         }
       ]
     }

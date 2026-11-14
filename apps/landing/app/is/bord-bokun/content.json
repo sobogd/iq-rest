@@ -3,13 +3,13 @@
   "slug": "bord-bokun",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Borðabókanir allan sólarhringinn | IQ Rest",
+    "title": "Borðabókanir allan sólarhringinn | QRgine",
     "description": "Borðabókanir allan sólarhringinn: gestir bóka borð sjálfir í gegnum QR matseðilinn eða vefsíðuna. Sjálfvirkar staðfestingar og áminningar. 14 dagar frítt.",
     "canonical": "https://iq-rest.com/is/bord-bokun",
     "ogLocale": "is_IS",
     "ogTitle": "Borðabókanir allan sólarhringinn — Gestir bóka sjálfir",
     "ogDescription": "Gestir bóka borð í gegnum QR matseðil eða vefsíðu. Dagatal, sjálfvirkar staðfestingar, áminningar. Ekki einn gestur missir af borði.",
-    "brandLine": "IQ Rest — Borðabókanir"
+    "brandLine": "QRgine — Borðabókanir"
   },
   "hero": {
     "headline": "Borðabókanir allan sólarhringinn,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Bókanadagatalið í IQ Rest stjórnborðinu á tveimur spjaldtölvum: daglegt yfirlit eftir borðum og mánaðarlegt dagatal"
+        "alt": "Bókanadagatalið í QRgine stjórnborðinu á tveimur spjaldtölvum: daglegt yfirlit eftir borðum og mánaðarlegt dagatal"
       }
     }
   ],
   "faq": {
-    "sub": "Það sem veitingamenn spyrja um borðabókanir í IQ Rest. Ef spurningin þín er ekki á listanum — sendu okkur skilaboð á WhatsApp.",
+    "sub": "Það sem veitingamenn spyrja um borðabókanir í QRgine. Ef spurningin þín er ekki á listanum — sendu okkur skilaboð á WhatsApp.",
     "items": [
       {
         "q": "Get ég valið hvaða daga og tíma er hægt að bóka?",

@@ -10,26 +10,38 @@ export function LogoIcon({ className }: LogoIconProps) {
       aria-hidden="true"
       className={className}
     >
-      <defs>
-        <linearGradient id="iq-logo-bg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="hsl(9, 100%, 58%)" />
-          <stop offset="100%" stopColor="hsl(35, 95%, 55%)" />
-        </linearGradient>
-      </defs>
-      <rect width="512" height="512" rx="96" fill="url(#iq-logo-bg)" />
-      <text
-        x="256"
-        y="256"
-        textAnchor="middle"
-        dominantBaseline="central"
-        fontFamily="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif"
-        fontWeight="800"
-        fontSize="280"
-        letterSpacing="-12"
-        fill="#ffffff"
-      >
-        IQ
-      </text>
+      <rect width="512" height="512" rx="112" fill="#1b4332" />
+      <path d="M118 214 166 84c4-11 19-13 26-4l86 108H118Z" fill="#e8944a" />
+      <path d="M146 196 178 106l58 80H146Z" fill="#b4622f" />
+      <g fill="#f7efe3">
+        <rect x="292" y="96" width="44" height="44" rx="8" />
+        <rect x="348" y="96" width="44" height="44" rx="8" />
+        <rect x="292" y="152" width="44" height="44" rx="8" />
+        <rect x="348" y="152" width="44" height="44" rx="8" fill="#1b4332" />
+        <rect x="292" y="208" width="44" height="44" rx="8" fill="#1b4332" />
+        <rect x="348" y="208" width="44" height="44" rx="8" />
+      </g>
+      <path
+        d="M256 158c104 0 172 66 172 148 0 92-74 148-172 148S84 398 84 306c0-82 68-148 172-148Z"
+        fill="#f0b26a"
+      />
+      <path
+        d="M256 210c64 0 112 38 112 90 0 60-52 96-112 96s-112-36-112-96c0-52 48-90 112-90Z"
+        fill="#f7efe3"
+      />
+      <circle cx="204" cy="286" r="17" fill="#2a1e14" />
+      <circle cx="308" cy="286" r="17" fill="#2a1e14" />
+      <path
+        d="M256 318c-14 0-24 10-24 22 0 14 12 24 24 24s24-10 24-24c0-12-10-22-24-22Z"
+        fill="#2a1e14"
+      />
+      <path
+        d="M256 364v26m0 0c-10 14-26 16-38 8m38-8c10 14 26 16 38 8"
+        stroke="#2a1e14"
+        strokeWidth="12"
+        strokeLinecap="round"
+        fill="none"
+      />
     </svg>
   );
 }

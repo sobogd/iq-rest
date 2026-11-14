@@ -3,13 +3,13 @@
   "slug": "digitala-edienkarte-restorans",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digitālā ēdienkarte restorāniem | IQ Rest",
+    "title": "Digitālā ēdienkarte restorāniem | QRgine",
     "description": "Digitālā ēdienkarte jūsu restorānam: tiešsaistes ēdienkarte ar fotoattēliem, alergēniem un AI tulkojumu. Cenas atjaunojas reāllaikā. 14 dienas bez maksas.",
     "canonical": "https://iq-rest.com/lv/digitala-edienkarte-restorans",
     "ogLocale": "lv_LV",
     "ogTitle": "Digitālā ēdienkarte restorāniem",
     "ogDescription": "Jūsu papīra ēdienkartes tiešsaistes versija ar fotoattēliem, alergēniem un AI tulkojumu. Cenas atjaunojas reāllaikā.",
-    "brandLine": "IQ Rest — Digitālā ēdienkarte restorāniem"
+    "brandLine": "QRgine — Digitālā ēdienkarte restorāniem"
   },
   "hero": {
     "headline": "Digitālā ēdienkarte un mājaslapa",
@@ -166,7 +166,7 @@
     "heading": "Kāpēc restorāni izvēlas mūs,",
     "headingAccent": "nevis citas sistēmas",
     "sub": "Lielākā daļa ēdienkartes rīku beidzas ar QR kodu. Zemāk ir tas, kas ikdienas darbā patiešām atšķiras. Bez nosaukumiem — salīdziniet paši ar jebkuru sistēmu.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Citas sistēmas",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Ko restorānu īpašnieki jautā par IQ Rest digitālo ēdienkarti. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
+    "sub": "Ko restorānu īpašnieki jautā par QRgine digitālo ēdienkarti. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
     "items": [
       {
         "q": "Vai man nepieciešamas tehniskas zināšanas vai pieredze ar CMS?",
         "a": "Īpašas prasmes nav nepieciešamas. Viss vadības panelī tiek paveikts ar pāris klikšķiem — nekādas programmēšanas vai darba ar izejas failiem. Ēdiena pievienošana prasa sekundes: nosaukums, cena, fotoattēls. Pilna ēdienkartes iestatīšana parasti aizņem 30–60 minūtes."
       },
       {
-        "q": "Kas ir IQ Rest digitālā ēdienkarte?",
+        "q": "Kas ir QRgine digitālā ēdienkarte?",
         "a": "Tā ir jūsu ēdienkartes tiešsaistes versija, kas viesiem pieejama caur QR kodu vai tiešo saiti: ēdienu fotoattēli, cenas, alergēni, AI tulkojums 35 valodās un atjauninājumi reāllaikā. Ēdienkarte darbojas mūsu serveros — nav jāinstalē vai jāuztur programmatūra, pietiek ar pārlūkprogrammu."
       },
       {

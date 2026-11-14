@@ -2,7 +2,7 @@
   "htmlLang": "ja",
   "htmlDir": "ltr",
   "meta": {
-    "title": "デジタルメニュー、KDS、ネット予約 — IQ Rest",
+    "title": "デジタルメニュー、KDS、ネット予約 — QRgine",
     "description": "1つのアプリで飲食店を管理：多言語デジタルメニュー、KDS、24時間ネット予約。最短5分で導入可能。14日間無料トライアル、クレジットカード不要。",
     "canonical": "https://iq-rest.com/ja",
     "ogLocale": "ja_JP",
@@ -10,7 +10,7 @@
     "ogDescription": "1つのアプリで飲食店を管理：多言語デジタルメニュー、KDS、24時間ネット予約。最短5分で導入可能。14日間無料トライアル、クレジットカード不要。"
   },
   "jsonLd": {
-    "appName": "IQ Rest — 飲食店向け管理プラットフォーム"
+    "appName": "QRgine — 飲食店向け管理プラットフォーム"
   },
   "ctaText": "無料で試す",
   "homeCtaText": "無料で試す",
@@ -82,7 +82,7 @@
     "quoteStart": "妻と一緒にカフェを経営していた私たちは、オーダー取り、予約管理、ホールとキッチンの連携など、飲食店の日常を内側から熟知しています。モダンで設定が簡単、そして一目でわかるシンプルなツールが欲しい——",
     "quoteAccent": "それが、私たちが他の飲食店経営者のためにこのプラットフォームを開発したきっかけです。",
     "sign": "Bogdan Sokolov · 創業者、元カフェオーナー",
-    "photoAlt": "IQ Rest創業者、Bogdan Sokolov"
+    "photoAlt": "QRgine創業者、Bogdan Sokolov"
   },
   "pricing": {
     "badge": "販売手数料なし · 契約期間の縛りなし",
@@ -108,7 +108,7 @@
     "headingAccent": "質問",
     "sub": "導入前に飲食店の方からよくいただく質問です。解決しない場合はWhatsAppでお問い合わせください。ボットではなくスタッフが直接お答えします。",
     "whatsappCta": "WhatsAppで問い合わせる",
-    "whatsappPrefill": "こんにちは、IQ Restについて質問があります。",
+    "whatsappPrefill": "こんにちは、QRgineについて質問があります。",
     "items": [
       {
         "q": "トライアルの内容と終了後の流れは？",
@@ -192,7 +192,7 @@
     "button": "プランを作成する"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. All rights reserved.",
+    "copyrightTemplate": "© {year} QRgine. All rights reserved.",
     "featuresHeading": "機能",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "レストランテックブログ — IQ Rest",
+    "metaTitle": "レストランテックブログ — QRgine",
     "metaDescription": "デジタルメニュー、QR注文、キッチンディスプレイ、予約管理に関するガイドと比較記事。飲食店オーナー向けの実践的な情報。",
     "title": "ブログ",
     "intro": "デジタルメニュー、QR注文、キッチンディスプレイ、店舗運営に関するガイドと比較記事。",

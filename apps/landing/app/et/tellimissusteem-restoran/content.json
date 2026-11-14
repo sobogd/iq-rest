@@ -3,13 +3,13 @@
   "slug": "tellimissusteem-restoran",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Tellimuste vastuvõtmine — külaline ja teenindaja | IQ Rest",
+    "title": "Tellimuste vastuvõtmine — külaline ja teenindaja | QRgine",
     "description": "Restorani tellimuste vastuvõtmine telefonist või tahvelarvutist: saaliplaan, arve jagamine, staatused ja kommentaarid. Külalised tellivad lauast. 14 päeva tasuta.",
     "canonical": "https://iq-rest.com/et/tellimissusteem-restoran",
     "ogLocale": "et_EE",
     "ogTitle": "Tellimuste vastuvõtmine — külaline ja teenindaja",
     "ogDescription": "Külaline lauas või teenindaja telefonis — tellimus jõuab kohe kööki. Saaliplaan, arve jagamine, staatused, lisavalikud ja kommentaarid.",
-    "brandLine": "IQ Rest — Tellimuste vastuvõtmine restoranis"
+    "brandLine": "QRgine — Tellimuste vastuvõtmine restoranis"
   },
   "hero": {
     "headline": "Tellimused lauast —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Mida restoranipidajad IQ Resti tellimuste vastuvõtmise kohta küsivad. Kui sinu küsimust pole nimekirjas — kirjuta meile WhatsAppi.",
+    "sub": "Mida restoranipidajad QRginei tellimuste vastuvõtmise kohta küsivad. Kui sinu küsimust pole nimekirjas — kirjuta meile WhatsAppi.",
     "items": [
       {
         "q": "Kas mitu teenindajat saavad töötada samaaegselt erinevatest seadmetest?",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Taispeáint chistine: an bhfuil KDS uait? | IQ Rest",
+    "title": "Taispeáint chistine: an bhfuil KDS uait? | QRgine",
     "description": "Cad a dhéanann KDS, cad a chosnaíonn na crua-earraí i ndáiríre, conas é a rith ar tháibléad atá agat cheana, agus na cistiní ar fearr dóibh duillíní páipéir."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Ní theastaíonn sé sin ó fhormhór na gcistiní. Ritheann [taispeáint chistine](route:/kitchen-display) IQ Rest sa bhrabhsálaí, mar sin is féidir leis na crua-earraí a bheith ina dtáibléad atá agat cheana, táibléad Android saor, nó ríomhaire glúine sean le monatóir. Cuir i gcás sceite-dhíonach é, feistigh lasmuigh de líne na gaile, agus is é an costas breise ná lúbán balla."
+      "text": "Ní theastaíonn sé sin ó fhormhór na gcistiní. Ritheann [taispeáint chistine](route:/kitchen-display) QRgine sa bhrabhsálaí, mar sin is féidir leis na crua-earraí a bheith ina dtáibléad atá agat cheana, táibléad Android saor, nó ríomhaire glúine sean le monatóir. Cuir i gcás sceite-dhíonach é, feistigh lasmuigh de líne na gaile, agus is é an costas breise ná lúbán balla."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "An féidir liom KDS a rith ar ghnáth-tháibléad?",
-          "a": "Is féidir. Ritheann taispeáint chistine IQ Rest sa bhrabhsálaí, mar sin oibríonn aon táibléad nó ríomhaire glúine ó na cúig bliana anuas. Bain úsáid as cás sceite-dhíonach."
+          "a": "Is féidir. Ritheann taispeáint chistine QRgine sa bhrabhsálaí, mar sin oibríonn aon táibléad nó ríomhaire glúine ó na cúig bliana anuas. Bain úsáid as cás sceite-dhíonach."
         },
         {
           "q": "An dteastaíonn idirlíon ó KDS?",

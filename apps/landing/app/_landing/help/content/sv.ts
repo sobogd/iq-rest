@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // SV help guide.
 export const sv: HelpDoc = {
-  metaTitle: "Så använder du IQ Rest — steg-för-steg-guide",
+  metaTitle: "Så använder du QRgine — steg-för-steg-guide",
   metaDescription:
-    "Komplett IQ Rest-guide: registrering, meny, beställningar, bokningar, köksskärm och inställningar — för restauranger.",
+    "Komplett QRgine-guide: registrering, meny, beställningar, bokningar, köksskärm och inställningar — för restauranger.",
   h1: "Hjälp",
-  intro: "En detaljerad guide till IQ Rest — från registrering till de finare inställningarna.",
+  intro: "En detaljerad guide till QRgine — från registrering till de finare inställningarna.",
   banner: {
     title: "Det är enklare än det ser ut",
     sub: "En steg-för-steg-guide: från registrering till de finare inställningarna — vem som helst klarar det.",
@@ -22,7 +22,7 @@ export const sv: HelpDoc = {
         { type: "h3", text: "Vad är det här systemet" },
         {
           type: "p",
-          text: "IQ Rest är en tjänst för restauranger: du skapar en onlinemeny med QR-kod, tar emot beställningar och bordsbokningar direkt från gästernas telefoner, medan köket och servitörerna jobbar på surfplatte-terminaler. Allt hanteras från en enda adminpanel (dashboarden).",
+          text: "QRgine är en tjänst för restauranger: du skapar en onlinemeny med QR-kod, tar emot beställningar och bordsbokningar direkt från gästernas telefoner, medan köket och servitörerna jobbar på surfplatte-terminaler. Allt hanteras från en enda adminpanel (dashboarden).",
         },
         { type: "h3", text: "Registrering och inloggning" },
         { type: "p", text: "Du kan logga in på tre sätt — välj valfritt på inloggningsskärmen:" },

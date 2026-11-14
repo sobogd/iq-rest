@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Cum faci un meniu cu cod QR: 3 metode | IQ Rest",
+    "title": "Cum faci un meniu cu cod QR: 3 metode | QRgine",
     "description": "Trei moduri de a face un meniu QR pentru restaurant: generator gratuit cu PDF, editor de meniu sau sistem complet. Cât costă și unde se strică fiecare."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Adu meniul în formă digitală. Tastarea a 80 de poziții e cea mai mare pierdere de timp – IQ Rest citește o fotografie a meniului tău tipărit și creează preparatele și prețurile în locul tău, ceea ce transformă o seară întreagă în vreo cinci minute.",
+        "Adu meniul în formă digitală. Tastarea a 80 de poziții e cea mai mare pierdere de timp – QRgine citește o fotografie a meniului tău tipărit și creează preparatele și prețurile în locul tău, ceea ce transformă o seară întreagă în vreo cinci minute.",
         "Rezolvă structura înainte de design. Grupează așa cum comandă clienții (aperitive, feluri principale, băuturi), nu cum e organizată bucătăria ta. Listele lungi și plate ucid derularea.",
         "Pune poze acolo unde schimbă decizia. Să fotografiezi fiecare preparat e mai slab decât cinci poze bune la preparatele pe care vrei să le vinzi.",
         "Marchează alergenii acum, nu mai târziu. În UE îți trebuie oricum, iar adăugarea lor ulterioară la 80 de poziții e un chin.",

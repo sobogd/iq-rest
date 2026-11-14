@@ -13,7 +13,7 @@ export function getStripe(): InstanceType<typeof Stripe> {
 
 // ─── billing-features-constructor: ad-hoc pricing ────────────────────────────
 // A single reusable Stripe Product that every ad-hoc Price attaches to. Ad-hoc
-// prices carry the amount; the Product is just the umbrella ("IQ Rest"). If the
+// prices carry the amount; the Product is just the umbrella ("QRgine"). If the
 // env var is unset we lazily create/reuse one by name.
 let cachedProductId: string | null = null;
 export async function getAdhocProductId(): Promise<string> {
@@ -21,13 +21,13 @@ export async function getAdhocProductId(): Promise<string> {
   if (fromEnv) return fromEnv;
   if (cachedProductId) return cachedProductId;
   const stripe = getStripe();
-  // Reuse an existing "IQ Rest" product if present, else create one.
-  const existing = await stripe.products.search({ query: 'name:"IQ Rest"', limit: 1 }).catch(() => null);
+  // Reuse an existing "QRgine" product if present, else create one.
+  const existing = await stripe.products.search({ query: 'name:"QRgine"', limit: 1 }).catch(() => null);
   if (existing && existing.data[0]) {
     cachedProductId = existing.data[0].id;
     return cachedProductId;
   }
-  const product = await stripe.products.create({ name: "IQ Rest" });
+  const product = await stripe.products.create({ name: "QRgine" });
   cachedProductId = product.id;
   return cachedProductId;
 }

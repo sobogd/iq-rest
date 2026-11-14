@@ -3,13 +3,13 @@
   "slug": "bordreservasjon",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Bordbestilling 24/7 for restauranter | IQ Rest",
+    "title": "Bordbestilling 24/7 for restauranter | QRgine",
     "description": "Bordbestilling 24/7 for restauranten din: gjestene booker bord selv via QR-menyen eller nettsiden. Kalender per bord og automatiske bekreftelser. 14 dager gratis.",
     "canonical": "https://iq-rest.com/no/bordreservasjon",
     "ogLocale": "nb_NO",
     "ogTitle": "Bordbestilling 24/7 — Gjestene booker selv",
     "ogDescription": "Gjestene booker bord via QR-menyen eller nettsiden. Kalender, automatiske bekreftelser, påminnelser. Ikke en eneste gjest går tapt.",
-    "brandLine": "IQ Rest — Bordbestilling for restauranter"
+    "brandLine": "QRgine — Bordbestilling for restauranter"
   },
   "hero": {
     "headline": "Bordbestilling 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Reservasjonskalenderen i IQ Rest-kontrollpanelet på to nettbrett: en daglig oversikt per bord og en månedskalender"
+        "alt": "Reservasjonskalenderen i QRgine-kontrollpanelet på to nettbrett: en daglig oversikt per bord og en månedskalender"
       }
     }
   ],
   "faq": {
-    "sub": "Det restaurantdrivere spør om når det gjelder bordbestilling i IQ Rest. Finner du ikke spørsmålet ditt — send oss en melding på WhatsApp.",
+    "sub": "Det restaurantdrivere spør om når det gjelder bordbestilling i QRgine. Finner du ikke spørsmålet ditt — send oss en melding på WhatsApp.",
     "items": [
       {
         "q": "Kan jeg velge hvilke dager og tider bestilling er tilgjengelig?",

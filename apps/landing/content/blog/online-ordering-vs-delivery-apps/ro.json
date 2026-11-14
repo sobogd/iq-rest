@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Comenzi proprii vs aplicații de livrare: cifrele reale | IQ Rest",
+    "title": "Comenzi proprii vs aplicații de livrare: cifrele reale | QRgine",
     "description": "Cât costă comisionul platformei pe comandă, câte comenzi îți trebuie pe canalul propriu ca să iasă pe zero și de ce majoritatea restaurantelor ar trebui să le folosească pe amândouă."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Am nevoie de site ca să preiau comenzi directe?",
-          "a": "Nu. IQ Rest îți dă o pagină de comenzi găzduită, cu adresa ei proprie, pe care o poți lega din Google, Instagram sau de la un cod QR de pe masă."
+          "a": "Nu. QRgine îți dă o pagină de comenzi găzduită, cu adresa ei proprie, pe care o poți lega din Google, Instagram sau de la un cod QR de pe masă."
         }
       ]
     }

@@ -13,7 +13,7 @@
 export const OPERATOR_ES = {
   legalName: "Bogdan Sokolov",
   status: "empresario individual (autónomo) inscrito en España",
-  brand: "IQ Rest",
+  brand: "QRgine",
   domain: "iq-rest.com",
   contactEmail: "support@iq-rest.com",
   fiscalAddress: "Calle Boca Del Rio 2, 1A, Oviedo, 33010, Asturias, España",

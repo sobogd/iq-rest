@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Stafrænn matseðill vs pappírsmatseðill: kostnaður | IQ Rest",
+    "title": "Stafrænn matseðill vs pappírsmatseðill: kostnaður | QRgine",
     "description": "Hvað pappírsmatseðill kostar veitingastað í raun samanborið við stafrænan QR-matseðil: prentun, uppfærslur, þýðingar, pöntunarhraði. Samanburður með tölum."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Skannaðu pappírsmatseðilinn — IQ Rest les hann og býr stafræna matseðilinn til sjálfkrafa.",
+        "Skannaðu pappírsmatseðilinn — QRgine les hann og býr stafræna matseðilinn til sjálfkrafa.",
         "Farðu yfir verðin og bættu við myndum þar sem þær skipta máli.",
         "Prentaðu einn QR-kóða á hvert borð.",
         "Uppfærðu hvað sem er, hvenær sem er, úr símanum."

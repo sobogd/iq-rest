@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digitālā ēdienkarte pret papīra: patiesās izmaksas | IQ Rest",
+    "title": "Digitālā ēdienkarte pret papīra: patiesās izmaksas | QRgine",
     "description": "Ko papīra ēdienkarte restorānam patiesībā maksā salīdzinājumā ar QR digitālo: druka, atjauninājumi, tulkojumi, pasūtīšanas ātrums. Salīdzinājums skaitļos."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Noskenē savu papīra ēdienkarti — IQ Rest to nolasa un automātiski izveido digitālo ēdienkarti.",
+        "Noskenē savu papīra ēdienkarti — QRgine to nolasa un automātiski izveido digitālo ēdienkarti.",
         "Pārbaudi cenas, pievieno foto tur, kur tie ir svarīgi.",
         "Izdrukā vienu QR kodu katram galdam.",
         "Atjaunini jebko, jebkurā laikā, no sava telefona."

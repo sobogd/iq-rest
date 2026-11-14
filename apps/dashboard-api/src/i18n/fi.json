@@ -2,11 +2,11 @@
   "companyDefaultName": "Oma yritys",
   "otpEmail": {
     "subject": "Koodisi: {code}",
-    "intro": "Tässä on kertakäyttöinen koodisi IQ Rest -palveluun kirjautumista varten:",
+    "intro": "Tässä on kertakäyttöinen koodisi QRgine -palveluun kirjautumista varten:",
     "expiry": "Koodi on voimassa 5 minuuttia. Jos et pyytänyt koodia, voit jättää tämän viestin huomiotta."
   },
   "supportEmail": {
-    "subject": "Uusi viesti IQ Rest -tuesta",
+    "subject": "Uusi viesti QRgine -tuesta",
     "title": "Uusi viesti tuesta",
     "body": "Tukitiimimme on lähettänyt sinulle uuden viestin. Avaa tukikeskustelu hallintapaneelissa, niin voit lukea viestin ja vastata siihen.",
     "cta": "Avaa tukikeskustelu"

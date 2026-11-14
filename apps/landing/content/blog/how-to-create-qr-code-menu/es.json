@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Cómo crear una carta con código QR | IQ Rest",
+    "title": "Cómo crear una carta con código QR | QRgine",
     "description": "Tres formas de crear una carta QR para tu restaurante: generador gratis con PDF, editor de cartas o sistema completo. Qué cuesta cada una y qué se rompe."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Pasa la carta a formato digital. Teclear 80 platos es el mayor sumidero de tiempo: IQ Rest lee una foto de tu carta en papel y crea los platos y los precios por ti, lo que convierte una tarde entera en unos cinco minutos.",
+        "Pasa la carta a formato digital. Teclear 80 platos es el mayor sumidero de tiempo: QRgine lee una foto de tu carta en papel y crea los platos y los precios por ti, lo que convierte una tarde entera en unos cinco minutos.",
         "Arregla la estructura antes que el diseño. Agrupa los platos como pide la gente (entrantes, principales, bebidas), no como está organizada tu cocina. Las listas largas y planas matan el scroll.",
         "Pon fotos donde cambien la decisión. Fotografiar todos los platos es peor que tener cinco buenas fotos de los platos que quieres vender.",
         "Marca los alérgenos ahora, no después. Si sirves en la UE los necesitas igualmente, y añadirlos luego a 80 platos es una tortura.",

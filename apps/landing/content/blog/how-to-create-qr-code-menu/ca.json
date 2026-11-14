@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Com crear una carta amb codi QR: 3 vies | IQ Rest",
+    "title": "Com crear una carta amb codi QR: 3 vies | QRgine",
     "description": "Tres maneres de crear una carta QR per al restaurant: generador gratuït amb PDF, editor de cartes o sistema complet. Què costa i què falla en cadascuna."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Passa la carta a format digital. Teclejar 80 plats és el gran forat de temps: IQ Rest llegeix una foto de la teva carta en paper i crea els plats i els preus per tu, cosa que converteix una tarda sencera en uns cinc minuts.",
+        "Passa la carta a format digital. Teclejar 80 plats és el gran forat de temps: QRgine llegeix una foto de la teva carta en paper i crea els plats i els preus per tu, cosa que converteix una tarda sencera en uns cinc minuts.",
         "Arregla l'estructura abans que el disseny. Agrupa els plats com demana la gent (entrants, principals, begudes), no com està organitzada la teva cuina. Les llistes llargues i planes maten el desplaçament.",
         "Posa fotos on canviïn la decisió. Fotografiar tots els plats és pitjor que tenir cinc bones fotos als plats que vols vendre.",
         "Marca els al·lèrgens ara, no després. Si serveixes a la UE els necessites igualment, i afegir-los més tard a 80 plats és una tortura.",

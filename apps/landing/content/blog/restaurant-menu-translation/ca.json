@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Traduir la carta: què traduir i què no | IQ Rest",
+    "title": "Traduir la carta: què traduir i què no | QRgine",
     "description": "Per què traduir automàticament els noms dels plats surt malament, quines parts de la carta han de quedar-se en l'idioma original i com portar quatre idiomes sense quatre cartes."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "Una [carta digital](route:/digital-menu) capgira això. El mòbil del client ja anuncia el seu idioma, així que la carta s'obre en el correcte sense que ningú triï. IQ Rest tradueix la carta automàticament i, com que les traduccions van unides al plat, canviar un preu una vegada el canvia en tots els idiomes. Afegir un cinquè idioma no costa res ni obliga a reimprimir."
+      "text": "Una [carta digital](route:/digital-menu) capgira això. El mòbil del client ja anuncia el seu idioma, així que la carta s'obre en el correcte sense que ningú triï. QRgine tradueix la carta automàticament i, com que les traduccions van unides al plat, canviar un preu una vegada el canvia en tots els idiomes. Afegir un cinquè idioma no costa res ni obliga a reimprimir."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Una carta, tots els idiomes",
-      "text": "IQ Rest tradueix la teva carta automàticament i l'obre en l'idioma del client. Canvia un preu una vegada i s'actualitzen tots els idiomes. 14 dies gratis.",
+      "text": "QRgine tradueix la teva carta automàticament i l'obre en l'idioma del client. Canvia un preu una vegada i s'actualitzen tots els idiomes. 14 dies gratis.",
       "buttonLabel": "Veure la traducció automàtica",
       "routeKey": "/digital-menu"
     },

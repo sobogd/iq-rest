@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Wat een QR-menu echt kost | IQ Rest",
+    "title": "Wat een QR-menu echt kost | QRgine",
     "description": "Wat een QR-menu werkelijk kost: gratis tools, maandabonnementen, prijs per vestiging, commissie per bestelling en de verborgen opzettijd."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest zit op de derde regel: **vanaf € 9,90 per maand per vestiging**, geen commissie op bestellingen, 14 dagen gratis zonder creditcard. We rekenen per zaak, niet per medewerker, want per gebruiker afrekenen straft juist de zaken met het meeste personeelsverloop."
+      "text": "QRgine zit op de derde regel: **vanaf € 9,90 per maand per vestiging**, geen commissie op bestellingen, 14 dagen gratis zonder creditcard. We rekenen per zaak, niet per medewerker, want per gebruiker afrekenen straft juist de zaken met het meeste personeelsverloop."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Daarom telt menu-import zwaarder dan het klinkt. IQ Rest leest een foto van je papieren kaart en maakt de gerechten automatisch aan, waardoor die halve dag ongeveer vijf minuten wordt. Reken de opzettijd mee als je tools vergelijkt; hij is vaak groter dan het eerste abonnementsjaar."
+      "text": "Daarom telt menu-import zwaarder dan het klinkt. QRgine leest een foto van je papieren kaart en maakt de gerechten automatisch aan, waardoor die halve dag ongeveer vijf minuten wordt. Reken de opzettijd mee als je tools vergelijkt; hij is vaak groter dan het eerste abonnementsjaar."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Wat kost een QR-menu per maand?",
-          "a": "Tools met een vast abonnement liggen doorgaans op € 10-40 per vestiging per maand. IQ Rest begint bij € 9,90 zonder commissie op bestellingen."
+          "a": "Tools met een vast abonnement liggen doorgaans op € 10-40 per vestiging per maand. QRgine begint bij € 9,90 zonder commissie op bestellingen."
         },
         {
           "q": "Bestaat er een gratis QR-menu?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Betaal ik per tafel of per restaurant?",
-          "a": "Bij IQ Rest per restaurant — tafels en QR-codes zijn onbeperkt. Controleer dit voordat je ergens tekent, want prijzen per tafel of per gebruiker schalen slecht."
+          "a": "Bij QRgine per restaurant — tafels en QR-codes zijn onbeperkt. Controleer dit voordat je ergens tekent, want prijzen per tafel of per gebruiker schalen slecht."
         },
         {
           "q": "Zijn er opstartkosten?",

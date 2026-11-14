@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Cât costă de fapt un meniu QR | IQ Rest",
+    "title": "Cât costă de fapt un meniu QR | QRgine",
     "description": "Cât costă cu adevărat un meniu cu cod QR: unelte gratuite, abonamente lunare, preț per locație, comisioane pe comenzi și timpul ascuns de implementare."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest e pe rândul trei: **de la 9,90 € pe lună per locație**, fără comision pe comenzi, 14 zile gratuit fără card. Taxăm locația, nu ospătarul, pentru că taxarea per utilizator pedepsește tocmai localurile cu cea mai mare fluctuație de personal."
+      "text": "QRgine e pe rândul trei: **de la 9,90 € pe lună per locație**, fără comision pe comenzi, 14 zile gratuit fără card. Taxăm locația, nu ospătarul, pentru că taxarea per utilizator pedepsește tocmai localurile cu cea mai mare fluctuație de personal."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "De aceea importul meniului contează mai mult decât pare. IQ Rest citește o fotografie a meniului tău tipărit și creează pozițiile automat, transformând acea jumătate de zi în vreo cinci minute. Pune la socoteală timpul de implementare când compari uneltele; adesea cântărește mai mult decât primul an de abonament."
+      "text": "De aceea importul meniului contează mai mult decât pare. QRgine citește o fotografie a meniului tău tipărit și creează pozițiile automat, transformând acea jumătate de zi în vreo cinci minute. Pune la socoteală timpul de implementare când compari uneltele; adesea cântărește mai mult decât primul an de abonament."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Cât costă lunar un meniu cu cod QR?",
-          "a": "Uneltele cu abonament fix se învârt în general între 10 și 40 € per locație pe lună. IQ Rest începe de la 9,90 € fără comision pe comenzi."
+          "a": "Uneltele cu abonament fix se învârt în general între 10 și 40 € per locație pe lună. QRgine începe de la 9,90 € fără comision pe comenzi."
         },
         {
           "q": "Există meniu cu cod QR gratuit?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Se plătește per masă sau per restaurant?",
-          "a": "La IQ Rest, per restaurant — mese și coduri QR nelimitate. Verifică asta înainte să semnezi oriunde, pentru că prețul per masă sau per utilizator scalează prost."
+          "a": "La QRgine, per restaurant — mese și coduri QR nelimitate. Verifică asta înainte să semnezi oriunde, pentru că prețul per masă sau per utilizator scalează prost."
         },
         {
           "q": "Există taxă de instalare?",

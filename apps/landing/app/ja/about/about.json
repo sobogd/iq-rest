@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "IQ Restについて — 運営会社、お問い合わせ、法的情報",
-    "description": "IQ Restの開発背景、お問い合わせ先、サービス運営者の法的情報：メール、WhatsApp、法的詳細。",
+    "title": "QRgineについて — 運営会社、お問い合わせ、法的情報",
+    "description": "QRgineの開発背景、お問い合わせ先、サービス運営者の法的情報：メール、WhatsApp、法的詳細。",
     "canonical": "https://iq-rest.com/ja/about",
     "ogLocale": "ja_JP",
-    "ogTitle": "IQ Restについて",
-    "ogDescription": "IQ Restの開発背景、サポートの連絡先、サービス運営者の法的情報。"
+    "ogTitle": "QRgineについて",
+    "ogDescription": "QRgineの開発背景、サポートの連絡先、サービス運営者の法的情報。"
   },
   "heading": "自分たちのカフェから",
   "headingAccent": "飲食店向けプラットフォームへ",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "IQ Rest導入店舗数"
+      "label": "QRgine導入店舗数"
     },
     {
       "value": "15",
       "label": "クライアントの展開国数"
     }
   ],
-  "waPrefill": "こんにちは、IQ Restについて質問があります。",
+  "waPrefill": "こんにちは、QRgineについて質問があります。",
   "contacts": [
     {
       "icon": "Mail",

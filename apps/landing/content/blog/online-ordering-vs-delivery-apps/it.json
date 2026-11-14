@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ordini propri vs app di delivery: i numeri veri | IQ Rest",
+    "title": "Ordini propri vs app di delivery: i numeri veri | QRgine",
     "description": "Quanto costa la commissione del marketplace per ordine, quanti ordini servono sul canale diretto per ripagarsi e perché quasi tutti i ristoranti dovrebbero usarli entrambi."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Serve un sito web per prendere ordini diretti?",
-          "a": "No. IQ Rest ti dà una pagina ordini ospitata con un proprio indirizzo, che puoi collegare da Google, Instagram o da un QR code sul tavolo."
+          "a": "No. QRgine ti dà una pagina ordini ospitata con un proprio indirizzo, che puoi collegare da Google, Instagram o da un QR code sul tavolo."
         }
       ]
     }

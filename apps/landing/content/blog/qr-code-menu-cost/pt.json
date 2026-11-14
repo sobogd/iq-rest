@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Quanto custa mesmo um menu QR | IQ Rest",
+    "title": "Quanto custa mesmo um menu QR | QRgine",
     "description": "Quanto custa realmente um menu com código QR: ferramentas grátis, mensalidades, preço por espaço, comissões por pedido e o tempo de arranque escondido."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "O IQ Rest está na terceira linha: **desde 9,90 € por mês e por espaço**, sem comissão por pedido, 14 dias grátis e sem cartão. Cobramos pelo espaço, não por empregado, porque cobrar por utilizador penaliza precisamente os espaços com mais rotatividade de pessoal."
+      "text": "O QRgine está na terceira linha: **desde 9,90 € por mês e por espaço**, sem comissão por pedido, 14 dias grátis e sem cartão. Cobramos pelo espaço, não por empregado, porque cobrar por utilizador penaliza precisamente os espaços com mais rotatividade de pessoal."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Por isso a importação do menu conta mais do que parece. O IQ Rest lê uma fotografia do seu menu em papel e cria os artigos automaticamente, o que transforma essa meia jornada em cerca de cinco minutos. Conte o tempo de arranque ao comparar ferramentas; é muitas vezes maior do que o primeiro ano de subscrição."
+      "text": "Por isso a importação do menu conta mais do que parece. O QRgine lê uma fotografia do seu menu em papel e cria os artigos automaticamente, o que transforma essa meia jornada em cerca de cinco minutos. Conte o tempo de arranque ao comparar ferramentas; é muitas vezes maior do que o primeiro ano de subscrição."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Quanto custa por mês um menu com código QR?",
-          "a": "As ferramentas de subscrição fixa andam geralmente entre 10 e 40 € por espaço e por mês. O IQ Rest começa em 9,90 € sem comissão por pedido."
+          "a": "As ferramentas de subscrição fixa andam geralmente entre 10 e 40 € por espaço e por mês. O QRgine começa em 9,90 € sem comissão por pedido."
         },
         {
           "q": "Existe algum menu com código QR grátis?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Paga-se por mesa ou por restaurante?",
-          "a": "Com o IQ Rest, por restaurante — mesas e códigos QR ilimitados. Confirme isto antes de assinar em qualquer lado, porque o preço por mesa ou por utilizador escala muito mal."
+          "a": "Com o QRgine, por restaurante — mesas e códigos QR ilimitados. Confirme isto antes de assinar em qualquer lado, porque o preço por mesa ou por utilizador escala muito mal."
         },
         {
           "q": "Há taxa de adesão?",

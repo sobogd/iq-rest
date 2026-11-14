@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR á PDF er ekki stafrænn matseðill | IQ Rest",
+    "title": "QR á PDF er ekki stafrænn matseðill | QRgine",
     "description": "QR-kóði sem vísar á PDF er algengasta og versta lausnin. Hvað hún kostar í læsileika, uppfærslum, ofnæmisvöldum og pöntunum."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Taktu mynd af pappírsmatseðlinum, eða hlaðið upp PDF-inum sjálfum.",
-        "IQ Rest les hann og býr til flokka, rétti og verð — um fimm mínútur í stað heils kvölds.",
+        "QRgine les hann og býr til flokka, rétti og verð — um fimm mínútur í stað heils kvölds.",
         "Farðu yfir verðin og lagaðu það sem innlesturinn las vitlaust.",
         "Láttu núverandi QR-kóða vísa á nýja matseðilinn, eða prentaðu nýja fyrir hvert borð."
       ]

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ecran de bucătărie: ai nevoie de KDS? | IQ Rest",
+    "title": "Ecran de bucătărie: ai nevoie de KDS? | QRgine",
     "description": "Ce face un KDS, cât costă de fapt echipamentul, cum îl pornești pe o tabletă pe care o ai deja și ce bucătării o duc mai bine cu bonuri pe hârtie."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Majoritatea bucătăriilor nu au nevoie de asta. [Ecranul de bucătărie](route:/kitchen-display) IQ Rest rulează în browser, deci echipamentul poate fi o tabletă pe care o ai deja, o tabletă Android ieftină sau un laptop vechi cu un monitor. Bag-o într-o husă rezistentă la stropi, montează-o în afara traseului aburului, iar costul marginal e un suport de perete."
+      "text": "Majoritatea bucătăriilor nu au nevoie de asta. [Ecranul de bucătărie](route:/kitchen-display) QRgine rulează în browser, deci echipamentul poate fi o tabletă pe care o ai deja, o tabletă Android ieftină sau un laptop vechi cu un monitor. Bag-o într-o husă rezistentă la stropi, montează-o în afara traseului aburului, iar costul marginal e un suport de perete."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Pot rula un KDS pe o tabletă obișnuită?",
-          "a": "Da. Ecranul de bucătărie IQ Rest rulează în browser, așa că merge orice tabletă sau laptop din ultimii cinci ani. Folosește o husă rezistentă la stropi."
+          "a": "Da. Ecranul de bucătărie QRgine rulează în browser, așa că merge orice tabletă sau laptop din ultimii cinci ani. Folosește o husă rezistentă la stropi."
         },
         {
           "q": "KDS-ul are nevoie de internet?",

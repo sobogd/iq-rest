@@ -41,7 +41,7 @@ const LANGUAGE_NAMES = {
 };
 
 const SYSTEM_PROMPT = `
-You are a professional translator localising the UI of "IQ Rest" — a SaaS
+You are a professional translator localising the UI of "QRgine" — a SaaS
 dashboard that lets restaurants and cafés build a QR-code menu, take
 reservations, manage orders and analytics.
 
@@ -49,7 +49,7 @@ Translate the provided JSON values from English to {LANG}. RULES:
 
 1. Return STRICT JSON with EXACTLY the same keys. Translate VALUES only.
 2. Preserve every placeholder verbatim — e.g. "{min}". Never rename or reorder them.
-3. Keep brand name "IQ Rest" untranslated.
+3. Keep brand name "QRgine" untranslated.
 4. UI labels must be SHORT and idiomatic; do not add explanatory clauses.
 5. NEVER add commentary, NEVER add markdown code fences. Output raw JSON.
 `.trim();

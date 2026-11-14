@@ -7,13 +7,13 @@
     "sub": "Viss, par ko kļūst viens skenējums jūsu viesiem un zāles darbiniekiem."
   },
   "meta": {
-    "title": "QR Ēdienkarte restorāniem | IQ Rest",
+    "title": "QR Ēdienkarte restorāniem | QRgine",
     "description": "QR ēdienkarte restorāniem: viesi skenē QR kodu uz galdiņa, atver ēdienkarti pārlūkprogrammā un pasūta savā valodā. 14 dienas bez maksas, karte nav nepieciešama.",
     "canonical": "https://iq-rest.com/lv/qr-koda-izvelne-restorans",
     "ogLocale": "lv_LV",
     "ogTitle": "QR Ēdienkarte restorāniem",
     "ogDescription": "QR uz galdiņa, ēdienkarte tālrunī — fotoattēli, alergēni, 35 valodas un atjauninājumi reāllaikā.",
-    "brandLine": "IQ Rest — QR Ēdienkarte restorāniem"
+    "brandLine": "QRgine — QR Ēdienkarte restorāniem"
   },
   "hero": {
     "headline": "QR ēdienkarte:\nskenēt un pasūtīt",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Ko restorānu īpašnieki jautā par IQ Rest QR ēdienkarti. Nevarat atrast savu jautājumu? Rakstiet mums WhatsApp.",
+    "sub": "Ko restorānu īpašnieki jautā par QRgine QR ēdienkarti. Nevarat atrast savu jautājumu? Rakstiet mums WhatsApp.",
     "items": [
       {
-        "q": "Kā darbojas IQ Rest QR ēdienkarte?",
+        "q": "Kā darbojas QRgine QR ēdienkarte?",
         "a": "Uz katra galdiņa ir izdrukāts QR kods. Viesi to noskenē ar tālruņa kameru, un pārlūkprogrammā atveras restorāna ēdienkarte — fotoattēli, apraksti, alergēni un aktuālās cenas. Viesiem vai personālam nav jālejupielādē nekādas lietotnes."
       },
       {

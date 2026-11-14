@@ -10,7 +10,7 @@ function plain(text: string): string {
 
 const ORG = {
   "@type": "Organization",
-  name: "IQ Rest",
+  name: "QRgine",
   url: SITE,
   logo: { "@type": "ImageObject", url: `${SITE}/icon.png` },
 };
@@ -43,7 +43,7 @@ export function blogBreadcrumbJsonLd(
   articleTitle?: string,
 ): string {
   const items = [
-    { name: "IQ Rest", item: locale === "en" ? SITE : `${SITE}/${locale}` },
+    { name: "QRgine", item: locale === "en" ? SITE : `${SITE}/${locale}` },
     { name: blogLabel, item: `${SITE}${localePath(locale, "/blog")}` },
     ...(entry && articleTitle
       ? [{ name: plain(articleTitle), item: `${SITE}${localePath(locale, `/blog/${entry.id}`)}` }]

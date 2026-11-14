@@ -3,13 +3,13 @@
   "slug": "kokken-skaerm",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Køkkenskærm (KDS) til restauranter | IQ Rest",
+    "title": "Køkkenskærm (KDS) til restauranter | QRgine",
     "description": "En KDS-køkkenskærm til restauranter: ordrer fra gulvet og QR-menuen går direkte til kokkens skærm. Kolonner pr. bord. Kører på tablet eller telefon.",
     "canonical": "https://iq-rest.com/da/kokken-skaerm",
     "ogLocale": "da_DK",
     "ogTitle": "Køkkenskærm (KDS) — Ordrer direkte til kokkens skærm",
     "ogDescription": "Ordrer fra gulvet på kokkens skærm. Kolonner pr. bord, statusser og en timer. Ét tryk ændrer statussen.",
-    "brandLine": "IQ Rest — Køkkenskærm til restauranter"
+    "brandLine": "QRgine — Køkkenskærm til restauranter"
   },
   "hero": {
     "headline": "Køkkenskærm (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Hvad restauratører spørger om vedrørende køkkenskærmen i IQ Rest. Hvis dit spørgsmål ikke er på listen — skriv til os på WhatsApp.",
+    "sub": "Hvad restauratører spørger om vedrørende køkkenskærmen i QRgine. Hvis dit spørgsmål ikke er på listen — skriv til os på WhatsApp.",
     "items": [
       {
         "q": "Hvilke statusser har varer i køkkenet?",

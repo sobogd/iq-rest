@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Faoi IQ Rest — Cé Muid Féin, Teagmhálacha agus Sonraí Dlíthiúla",
-    "description": "Cé atá taobh thiar de IQ Rest, conas teagmháil a dhéanamh linn agus sonraí oibreoir na seirbhíse: ríomhphost, WhatsApp, eolas dlíthiúil.",
+    "title": "Faoi QRgine — Cé Muid Féin, Teagmhálacha agus Sonraí Dlíthiúla",
+    "description": "Cé atá taobh thiar de QRgine, conas teagmháil a dhéanamh linn agus sonraí oibreoir na seirbhíse: ríomhphost, WhatsApp, eolas dlíthiúil.",
     "canonical": "https://iq-rest.com/ga/about",
     "ogLocale": "ga_IE",
-    "ogTitle": "Faoi IQ Rest",
-    "ogDescription": "Cé atá taobh thiar de IQ Rest, teagmhálacha tacaíochta agus sonraí dlíthiúla oibreoir na seirbhíse."
+    "ogTitle": "Faoi QRgine",
+    "ogDescription": "Cé atá taobh thiar de QRgine, teagmhálacha tacaíochta agus sonraí dlíthiúla oibreoir na seirbhíse."
   },
   "heading": "Ónár gcaifé féin",
   "headingAccent": "go hardán do bhialanna",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "ionad a ritheann ar IQ Rest"
+      "label": "ionad a ritheann ar QRgine"
     },
     {
       "value": "15",
       "label": "tír ina bhfuil ár gcliaint"
     }
   ],
-  "waPrefill": "Dia duit, tá ceist agam faoi IQ Rest",
+  "waPrefill": "Dia duit, tá ceist agam faoi QRgine",
   "contacts": [
     {
       "icon": "Mail",

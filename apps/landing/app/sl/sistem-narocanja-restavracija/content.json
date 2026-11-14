@@ -3,13 +3,13 @@
   "slug": "sistem-narocanja-restavracija",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Sprejemanje naročil v restavraciji — Gost in natakar | IQ Rest",
+    "title": "Sprejemanje naročil v restavraciji — Gost in natakar | QRgine",
     "description": "Sprejemanje naročil s telefona ali tablice: tloris miz, delitev računa, statusi, opcije in opombe. Gosti naročajo z mize, natakarji na svoji napravi. 14 dni brezplačno.",
     "canonical": "https://iq-rest.com/sl/sistem-narocanja-restavracija",
     "ogLocale": "sl_SI",
     "ogTitle": "Sprejemanje naročil v restavraciji — Gost in natakar",
     "ogDescription": "Gost pri mizi ali natakar na telefonu — naročilo takoj doseže kuhinjo. Tloris miz, delitev računa, statusi, opcije in opombe.",
-    "brandLine": "IQ Rest — Sprejemanje naročil v restavraciji"
+    "brandLine": "QRgine — Sprejemanje naročil v restavraciji"
   },
   "hero": {
     "headline": "Naročila z mize —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Kaj gostince najpogosteje zanima o sprejemanju naročil v IQ Rest. Če vašega vprašanja ni na seznamu — pišite nam na WhatsApp.",
+    "sub": "Kaj gostince najpogosteje zanima o sprejemanju naročil v QRgine. Če vašega vprašanja ni na seznamu — pišite nam na WhatsApp.",
     "items": [
       {
         "q": "Ali lahko več natakarjev hkrati dela na različnih napravah?",

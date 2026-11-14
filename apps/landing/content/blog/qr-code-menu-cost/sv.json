@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Vad en QR-meny faktiskt kostar | IQ Rest",
+    "title": "Vad en QR-meny faktiskt kostar | QRgine",
     "description": "Vad en QR-meny verkligen kostar: gratisverktyg, månadsavgifter, pris per verksamhet, orderprovisioner och den dolda uppstartstiden."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest ligger på tredje raden: **från 9,90 € per månad och verksamhet**, ingen provision på beställningar, 14 dagar gratis utan kort. Vi tar betalt för stället, inte per servitör, eftersom betalning per användare straffar just de ställen som har störst personalomsättning."
+      "text": "QRgine ligger på tredje raden: **från 9,90 € per månad och verksamhet**, ingen provision på beställningar, 14 dagar gratis utan kort. Vi tar betalt för stället, inte per servitör, eftersom betalning per användare straffar just de ställen som har störst personalomsättning."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Därför betyder menyimport mer än det låter. IQ Rest läser ett foto av din pappersmeny och skapar raderna automatiskt, vilket gör den halvdagen till ungefär fem minuter. Räkna med uppstartstiden när du jämför verktyg; den väger ofta tyngre än första prenumerationsåret."
+      "text": "Därför betyder menyimport mer än det låter. QRgine läser ett foto av din pappersmeny och skapar raderna automatiskt, vilket gör den halvdagen till ungefär fem minuter. Räkna med uppstartstiden när du jämför verktyg; den väger ofta tyngre än första prenumerationsåret."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Vad kostar en QR-meny per månad?",
-          "a": "Verktyg med fast prenumeration ligger vanligen på 10–40 € per verksamhet och månad. IQ Rest börjar på 9,90 € utan provision på beställningar."
+          "a": "Verktyg med fast prenumeration ligger vanligen på 10–40 € per verksamhet och månad. QRgine börjar på 9,90 € utan provision på beställningar."
         },
         {
           "q": "Finns det gratis QR-menyer?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Betalar jag per bord eller per restaurang?",
-          "a": "Med IQ Rest per restaurang – bord och QR-koder är obegränsade. Kontrollera det innan du skriver på någon annanstans, för pris per bord eller per användare skalar dåligt."
+          "a": "Med QRgine per restaurang – bord och QR-koder är obegränsade. Kontrollera det innan du skriver på någon annanstans, för pris per bord eller per användare skalar dåligt."
         },
         {
           "q": "Finns det någon startavgift?",

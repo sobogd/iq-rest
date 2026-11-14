@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR na PDF ni digitalni jedilnik | IQ Rest",
+    "title": "QR na PDF ni digitalni jedilnik | QRgine",
     "description": "QR koda, ki kaže na PDF, je najpogostejša in najslabša različica digitalnega jedilnika. Koliko vas stane pri branju, posodobitvah, alergenih in naročilih."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Fotografirajte papirnati jedilnik ali naložite kar PDF.",
-        "IQ Rest ga prebere in ustvari kategorije, postavke in cene — približno pet minut namesto celega večera.",
+        "QRgine ga prebere in ustvari kategorije, postavke in cene — približno pet minut namesto celega večera.",
         "Preverite cene in popravite tisto, kar je prepoznavanje prebralo napačno.",
         "Obstoječe QR kode usmerite na novi jedilnik ali natisnite nove, po eno na mizo."
       ]

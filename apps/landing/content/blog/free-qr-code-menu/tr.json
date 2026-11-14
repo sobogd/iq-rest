@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Ücretsiz QR menü: gerçekte ne bedava | IQ Rest",
+    "title": "Ücretsiz QR menü: gerçekte ne bedava | QRgine",
     "description": "Ücretsiz QR menüler var ve bazıları iş görür. Nasıl para kazandıkları, önce hangi sınıra takılacağınız ve ücretsizin gerçekten doğru olduğu durumlar."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Tipik ücretsiz katman",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Ücretsiz deneme ile ücretsiz plan aynı şey mi?",
-          "a": "Hayır. Deneme, sınırlı süreyle ürünün tamamıdır; ücretsiz plan ise sonsuza dek sınırlı bir üründür. IQ Rest her şeyi açık şekilde 14 günlük deneme sunar, kart istemez."
+          "a": "Hayır. Deneme, sınırlı süreyle ürünün tamamıdır; ücretsiz plan ise sonsuza dek sınırlı bir üründür. QRgine her şeyi açık şekilde 14 günlük deneme sunar, kart istemez."
         },
         {
           "q": "En ucuz ücretli QR menü hangisi?",
-          "a": "Sabit planlar genelde şube başına ayda 10 € civarında başlar. IQ Rest 9,90 €'dan başlar — tam dökümü [QR kodlu menü ne kadara mal olur](blog:qr-code-menu-cost) yazısında."
+          "a": "Sabit planlar genelde şube başına ayda 10 € civarında başlar. QRgine 9,90 €'dan başlar — tam dökümü [QR kodlu menü ne kadara mal olur](blog:qr-code-menu-cost) yazısında."
         },
         {
           "q": "Menümü ücretsiz bir araçtan ücretliye taşıyabilir miyim?",
-          "a": "Genelde evet ve nadiren yeniden yazmanız gerekir: IQ Rest mevcut menünün fotoğrafını ya da PDF'ini okuyup kalemleri yaklaşık beş dakikada yeniden oluşturabilir."
+          "a": "Genelde evet ve nadiren yeniden yazmanız gerekir: QRgine mevcut menünün fotoğrafını ya da PDF'ini okuyup kalemleri yaklaşık beş dakikada yeniden oluşturabilir."
         }
       ]
     }

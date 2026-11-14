@@ -3,13 +3,13 @@
   "slug": "virtuves-ekrans",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Virtuves ekrāns (KDS) restorāniem | IQ Rest",
+    "title": "Virtuves ekrāns (KDS) restorāniem | QRgine",
     "description": "KDS virtuves ekrāns restorāniem: pasūtījumi no zāles un QR ēdienkartes nonāk tieši pavāra ekrānā. Kolonnas pa galdiņiem, statusi un filtri. 14 dienas bez maksas.",
     "canonical": "https://iq-rest.com/lv/virtuves-ekrans",
     "ogLocale": "lv_LV",
     "ogTitle": "KDS Virtuves ekrāns — Pasūtījumi tieši pavāra ekrānā",
     "ogDescription": "Pasūtījumi no zāles pavāra ekrānā. Kolonnas pa galdiņiem, statusi un taimeris. Viens pieskāriens maina statusu.",
-    "brandLine": "IQ Rest — Virtuves ekrāns restorāniem"
+    "brandLine": "QRgine — Virtuves ekrāns restorāniem"
   },
   "hero": {
     "headline": "KDS virtuves ekrāns:",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Ko restorānu īpašnieki jautā par IQ Rest virtuves ekrānu. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
+    "sub": "Ko restorānu īpašnieki jautā par QRgine virtuves ekrānu. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
     "items": [
       {
         "q": "Kādi statusi ir virtuves vienumiem?",

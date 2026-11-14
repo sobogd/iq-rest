@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // LT help guide.
 export const lt: HelpDoc = {
-  metaTitle: "Kaip naudotis IQ Rest — žingsnis po žingsnio vadovas",
+  metaTitle: "Kaip naudotis QRgine — žingsnis po žingsnio vadovas",
   metaDescription:
-    "Išsamus IQ Rest vadovas: registracija, meniu, užsakymai, rezervacijos, virtuvės ekranas ir nustatymai — restoranams.",
+    "Išsamus QRgine vadovas: registracija, meniu, užsakymai, rezervacijos, virtuvės ekranas ir nustatymai — restoranams.",
   h1: "Pagalba",
-  intro: "Išsamus IQ Rest vadovas — nuo registracijos iki smulkių nustatymų.",
+  intro: "Išsamus QRgine vadovas — nuo registracijos iki smulkių nustatymų.",
   banner: {
     title: "Tai paprasčiau, nei atrodo",
     sub: "Žingsnis po žingsnio vadovas: nuo registracijos iki smulkių nustatymų — susidoros kiekvienas.",
@@ -22,7 +22,7 @@ export const lt: HelpDoc = {
         { type: "h3", text: "Kas tai per sistema" },
         {
           type: "p",
-          text: "IQ Rest yra paslauga restoranams: sukuriate internetinį meniu su QR kodu, priimate užsakymus ir staliukų rezervacijas tiesiai iš svečių telefonų, o virtuvėje ir pas padavėjus veikia planšetės-terminalai. Viskas valdoma iš vieno administravimo skydelio (skydelio).",
+          text: "QRgine yra paslauga restoranams: sukuriate internetinį meniu su QR kodu, priimate užsakymus ir staliukų rezervacijas tiesiai iš svečių telefonų, o virtuvėje ir pas padavėjus veikia planšetės-terminalai. Viskas valdoma iš vieno administravimo skydelio (skydelio).",
         },
         { type: "h3", text: "Registracija ir prisijungimas" },
         { type: "p", text: "Prisijungti galima trimis būdais — pasirinkite bet kurį prisijungimo ekrane:" },

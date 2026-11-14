@@ -30,7 +30,7 @@ export function buildFeatureMetadata(content: FeatureContent): Metadata {
       title: content.meta.ogTitle,
       description: content.meta.ogDescription,
       url: content.meta.canonical,
-      siteName: "IQ Rest",
+      siteName: "QRgine",
       locale: content.meta.ogLocale,
       alternateLocale: ogAlternateLocales(content.meta.ogLocale),
       type: "website",

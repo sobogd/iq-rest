@@ -3,13 +3,13 @@
   "slug": "bestallningssystem-restaurang",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Beställningshantering för restaurang | IQ Rest",
+    "title": "Beställningshantering för restaurang | QRgine",
     "description": "Beställningshantering från mobil eller surfplatta: bordskarta, dela notan, tillval och kommentarer. Gästerna beställer från bordet. 14 dagar gratis.",
     "canonical": "https://iq-rest.com/sv/bestallningssystem-restaurang",
     "ogLocale": "sv_SE",
     "ogTitle": "Beställningshantering för restaurang — Gäst och Servitör",
     "ogDescription": "En gäst vid bordet eller en servitör med mobilen — beställningen når köket direkt. Bordskarta, dela notan, status, tillval och kommentarer.",
-    "brandLine": "IQ Rest — Beställningshantering för restaurang"
+    "brandLine": "QRgine — Beställningshantering för restaurang"
   },
   "hero": {
     "headline": "Beställningar från bordet —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Vad krögare frågar om beställningshantering i IQ Rest. Om din fråga inte finns med — skicka ett meddelande på WhatsApp.",
+    "sub": "Vad krögare frågar om beställningshantering i QRgine. Om din fråga inte finns med — skicka ett meddelande på WhatsApp.",
     "items": [
       {
         "q": "Kan flera servitörer arbeta samtidigt från olika enheter?",

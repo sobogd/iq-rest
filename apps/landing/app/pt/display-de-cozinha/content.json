@@ -3,13 +3,13 @@
   "slug": "display-de-cozinha",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Ecrã de cozinha (KDS) para restaurantes | IQ Rest",
+    "title": "Ecrã de cozinha (KDS) para restaurantes | QRgine",
     "description": "Ecrã de cozinha KDS: pedidos da sala e da ementa QR diretamente no ecrã do cozinheiro. Colunas por mesa, estados e filtros por zona. Funciona em tablet e telemóvel.",
     "canonical": "https://iq-rest.com/pt/display-de-cozinha",
     "ogLocale": "pt_PT",
     "ogTitle": "Ecrã de cozinha (KDS) — Pedidos diretos no ecrã do cozinheiro",
     "ogDescription": "Pedidos da sala no ecrã do cozinheiro. Colunas por mesa, estados e temporizador. Um toque muda o estado.",
-    "brandLine": "IQ Rest — Ecrã de cozinha para restaurante"
+    "brandLine": "QRgine — Ecrã de cozinha para restaurante"
   },
   "hero": {
     "headline": "Ecrã de cozinha (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "O que os restauradores perguntam sobre o ecrã de cozinha na IQ Rest. Se a sua pergunta não está na lista, escreva-nos no WhatsApp.",
+    "sub": "O que os restauradores perguntam sobre o ecrã de cozinha na QRgine. Se a sua pergunta não está na lista, escreva-nos no WhatsApp.",
     "items": [
       {
         "q": "Que estados têm os itens na cozinha?",

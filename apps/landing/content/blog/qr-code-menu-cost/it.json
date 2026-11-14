@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Quanto costa davvero un menu QR | IQ Rest",
+    "title": "Quanto costa davvero un menu QR | QRgine",
     "description": "Quanto costa davvero un menu con QR code: strumenti gratuiti, abbonamenti mensili, prezzo per locale, commissioni sugli ordini e il tempo di avvio nascosto."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest sta nella terza riga: **da 9,90 € al mese per locale**, nessuna commissione sugli ordini, 14 giorni gratis senza carta. Fatturiamo il locale, non il cameriere, perché far pagare per utente penalizza proprio i locali con più turnover di personale."
+      "text": "QRgine sta nella terza riga: **da 9,90 € al mese per locale**, nessuna commissione sugli ordini, 14 giorni gratis senza carta. Fatturiamo il locale, non il cameriere, perché far pagare per utente penalizza proprio i locali con più turnover di personale."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Per questo l'importazione del menu conta più di quanto sembri. IQ Rest legge una foto del tuo menu cartaceo e crea le voci in automatico, trasformando quella mezza giornata in circa cinque minuti. Metti in conto il tempo di avvio quando confronti gli strumenti: spesso pesa più del primo anno di abbonamento."
+      "text": "Per questo l'importazione del menu conta più di quanto sembri. QRgine legge una foto del tuo menu cartaceo e crea le voci in automatico, trasformando quella mezza giornata in circa cinque minuti. Metti in conto il tempo di avvio quando confronti gli strumenti: spesso pesa più del primo anno di abbonamento."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Quanto costa al mese un menu con QR code?",
-          "a": "Gli strumenti ad abbonamento fisso vanno di norma dai 10 ai 40 € per locale al mese. IQ Rest parte da 9,90 € senza commissione sugli ordini."
+          "a": "Gli strumenti ad abbonamento fisso vanno di norma dai 10 ai 40 € per locale al mese. QRgine parte da 9,90 € senza commissione sugli ordini."
         },
         {
           "q": "Esiste un menu con QR code gratuito?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Si paga per tavolo o per ristorante?",
-          "a": "Con IQ Rest per ristorante: tavoli e QR code illimitati. Verificalo prima di firmare altrove, perché il prezzo per tavolo o per utente scala malissimo."
+          "a": "Con QRgine per ristorante: tavoli e QR code illimitati. Verificalo prima di firmare altrove, perché il prezzo per tavolo o per utente scala malissimo."
         },
         {
           "q": "C'è un costo di attivazione?",

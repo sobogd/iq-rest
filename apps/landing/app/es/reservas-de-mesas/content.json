@@ -3,13 +3,13 @@
   "slug": "reservas-de-mesas",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Reserva de mesas 24/7 para restaurantes | IQ Rest",
+    "title": "Reserva de mesas 24/7 para restaurantes | QRgine",
     "description": "Reserva de mesas 24/7: los comensales reservan desde el menú QR o la web. Calendario por mesas, confirmaciones y recordatorios automáticos. 14 días gratis.",
     "canonical": "https://iq-rest.com/es/reservas-de-mesas",
     "ogLocale": "es_ES",
     "ogTitle": "Reserva de mesas 24/7: los comensales reservan por sí mismos",
     "ogDescription": "Los comensales reservan mesa desde el menú QR o la web. Calendario, confirmaciones automáticas y recordatorios. Ni un cliente perdido.",
-    "brandLine": "IQ Rest — Reserva de mesas en el restaurante"
+    "brandLine": "QRgine — Reserva de mesas en el restaurante"
   },
   "hero": {
     "headline": "Reserva de mesas 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Calendario de reservas en el panel de administración de IQ Rest en dos tabletas: cuadrícula diaria por mesas y calendario mensual"
+        "alt": "Calendario de reservas en el panel de administración de QRgine en dos tabletas: cuadrícula diaria por mesas y calendario mensual"
       }
     }
   ],
   "faq": {
-    "sub": "Lo que preguntan los hosteleros sobre la reserva de mesas en IQ Rest. Si su pregunta no está en la lista, escríbanos por WhatsApp.",
+    "sub": "Lo que preguntan los hosteleros sobre la reserva de mesas en QRgine. Si su pregunta no está en la lista, escríbanos por WhatsApp.",
     "items": [
       {
         "q": "¿Puedo elegir los días y las horas en que se admiten reservas?",

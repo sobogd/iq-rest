@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Un QR su un PDF non è un menu digitale | IQ Rest",
+    "title": "Un QR su un PDF non è un menu digitale | QRgine",
     "description": "Un QR code che punta a un PDF è la soluzione più diffusa e la peggiore. Quanto ti costa in leggibilità, aggiornamenti, allergeni e ordini."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Scatta una foto del menu cartaceo, oppure carica direttamente il PDF.",
-        "IQ Rest lo legge e crea categorie, piatti e prezzi: circa cinque minuti invece di una serata.",
+        "QRgine lo legge e crea categorie, piatti e prezzi: circa cinque minuti invece di una serata.",
         "Controlla i prezzi e correggi ciò che la scansione ha letto male.",
         "Fai puntare i QR code esistenti al nuovo menu, oppure stampane di nuovi per ogni tavolo."
       ]

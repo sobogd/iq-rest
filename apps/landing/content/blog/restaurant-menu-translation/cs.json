@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Překlad jídelního lístku: co překládat a co ne | IQ Rest",
+    "title": "Překlad jídelního lístku: co překládat a co ne | QRgine",
     "description": "Proč strojový překlad názvů jídel dopadá špatně, které části lístku mají zůstat v původním jazyce a jak vést čtyři jazyky bez čtyř lístků."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "[Digitální menu](route:/digital-menu) to obrací. Telefon hosta svůj jazyk stejně hlásí, takže se lístek otevře ve správném, aniž by kdokoli vybíral. IQ Rest překládá lístek automaticky, a protože překlady visí na položce, jediná změna ceny ji změní ve všech jazycích. Přidat pátý jazyk nestojí nic a nevyžaduje dotisk."
+      "text": "[Digitální menu](route:/digital-menu) to obrací. Telefon hosta svůj jazyk stejně hlásí, takže se lístek otevře ve správném, aniž by kdokoli vybíral. QRgine překládá lístek automaticky, a protože překlady visí na položce, jediná změna ceny ji změní ve všech jazycích. Přidat pátý jazyk nestojí nic a nevyžaduje dotisk."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Jedno menu, všechny jazyky",
-      "text": "IQ Rest přeloží váš lístek automaticky a otevře ho v jazyce hosta. Změníte cenu jednou a aktualizují se všechny jazyky. 14 dní zdarma.",
+      "text": "QRgine přeloží váš lístek automaticky a otevře ho v jazyce hosta. Změníte cenu jednou a aktualizují se všechny jazyky. 14 dní zdarma.",
       "buttonLabel": "Podívat se na automatický překlad",
       "routeKey": "/digital-menu"
     },

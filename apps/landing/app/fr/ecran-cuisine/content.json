@@ -3,13 +3,13 @@
   "slug": "ecran-cuisine",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Écran de cuisine (KDS) pour restaurant | IQ Rest",
+    "title": "Écran de cuisine (KDS) pour restaurant | QRgine",
     "description": "Écran de cuisine KDS : les commandes de la salle et du menu QR arrivent sur l'écran du cuisinier. Colonnes par table, statuts et filtres par zone. Sur tablette.",
     "canonical": "https://iq-rest.com/fr/ecran-cuisine",
     "ogLocale": "fr_FR",
     "ogTitle": "Écran de cuisine (KDS) — Les commandes droit sur l'écran du cuisinier",
     "ogDescription": "Les commandes de la salle sur l'écran du cuisinier. Colonnes par table, statuts et minuteur. Un appui change le statut.",
-    "brandLine": "IQ Rest — Écran de cuisine pour restaurant"
+    "brandLine": "QRgine — Écran de cuisine pour restaurant"
   },
   "hero": {
     "headline": "Écran de cuisine (KDS) :",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Ce que les restaurateurs demandent sur l'écran de cuisine dans IQ Rest. Votre question n'est pas dans la liste ? Écrivez-nous sur WhatsApp.",
+    "sub": "Ce que les restaurateurs demandent sur l'écran de cuisine dans QRgine. Votre question n'est pas dans la liste ? Écrivez-nous sur WhatsApp.",
     "items": [
       {
         "q": "Quels sont les statuts des articles en cuisine ?",

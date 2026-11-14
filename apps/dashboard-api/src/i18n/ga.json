@@ -2,11 +2,11 @@
   "companyDefaultName": "Mo Chuideachta",
   "otpEmail": {
     "subject": "Do chód: {code}",
-    "intro": "Seo é do chód aonuaire chun síniú isteach in IQ Rest:",
+    "intro": "Seo é do chód aonuaire chun síniú isteach in QRgine:",
     "expiry": "Rachaidh an cód in éag i gceann 5 nóiméad. Murar iarr tú é, déan neamhaird den ríomhphost seo."
   },
   "supportEmail": {
-    "subject": "Teachtaireacht nua ó thacaíocht IQ Rest",
+    "subject": "Teachtaireacht nua ó thacaíocht QRgine",
     "title": "Teachtaireacht nua ón tacaíocht",
     "body": "Tá teachtaireacht nua seolta chugat ag ár bhfoireann tacaíochta. Oscail an comhrá tacaíochta i do dheais chun í a léamh agus freagra a thabhairt.",
     "cta": "Oscail an comhrá tacaíochta"

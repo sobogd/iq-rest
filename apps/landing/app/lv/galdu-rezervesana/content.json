@@ -3,13 +3,13 @@
   "slug": "galdu-rezervesana",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "24/7 Galdiņu rezervācija restorāniem | IQ Rest",
+    "title": "24/7 Galdiņu rezervācija restorāniem | QRgine",
     "description": "Galdiņu rezervācija 24/7: viesi paši rezervē galdiņu caur QR ēdienkarti vai mājaslapu. Kalendārs, automātiski apstiprinājumi un atgādinājumi. 14 dienas bez maksas.",
     "canonical": "https://iq-rest.com/lv/galdu-rezervesana",
     "ogLocale": "lv_LV",
     "ogTitle": "24/7 Galdiņu rezervācija — Viesi rezervē paši",
     "ogDescription": "Viesi rezervē galdiņus caur QR ēdienkarti vai mājaslapu. Kalendārs, automātiski apstiprinājumi, atgādinājumi. Neviens viesis netiek palaists garām.",
-    "brandLine": "IQ Rest — Restorānu galdiņu rezervācija"
+    "brandLine": "QRgine — Restorānu galdiņu rezervācija"
   },
   "hero": {
     "headline": "Galdiņu rezervācija 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Rezervāciju kalendārs IQ Rest vadības panelī divos planšetdatoros: dienas režģis pa galdiņiem un mēneša kalendārs"
+        "alt": "Rezervāciju kalendārs QRgine vadības panelī divos planšetdatoros: dienas režģis pa galdiņiem un mēneša kalendārs"
       }
     }
   ],
   "faq": {
-    "sub": "Ko restorānu īpašnieki jautā par galdiņu rezervācijām IQ Rest. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
+    "sub": "Ko restorānu īpašnieki jautā par galdiņu rezervācijām QRgine. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
     "items": [
       {
         "q": "Vai varu izvēlēties dienas un laikus, kad rezervācija ir pieejama?",

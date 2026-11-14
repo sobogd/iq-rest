@@ -3,13 +3,13 @@
   "slug": "carta-digital-restaurant",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Carta digital per a restaurants | IQ Rest",
+    "title": "Carta digital per a restaurants | QRgine",
     "description": "Carta digital per al teu restaurant: una carta online amb fotos, al·lèrgens, traducció per IA i actualització de preus en temps real. 14 dies gratis, sense targeta.",
     "canonical": "https://iq-rest.com/ca/carta-digital-restaurant",
     "ogLocale": "ca_ES",
     "ogTitle": "Carta digital per a restaurants",
     "ogDescription": "La versió online de la teva carta de paper amb fotos, al·lèrgens i traducció per IA. Els preus s'actualitzen en temps real.",
-    "brandLine": "IQ Rest — Carta digital per a restaurants"
+    "brandLine": "QRgine — Carta digital per a restaurants"
   },
   "hero": {
     "headline": "Carta digital i web",
@@ -166,7 +166,7 @@
     "heading": "Per què els restaurants ens trien",
     "headingAccent": "i no altres sistemes",
     "sub": "La majoria d'eines de carta es queden en el codi QR. Les files de sota mostren el que realment canvia en el dia a dia. Sense noms: compara-hi el sistema que vulguis.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Altres sistemes",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "El que pregunten els restauradors sobre la carta digital d'IQ Rest. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
+    "sub": "El que pregunten els restauradors sobre la carta digital d'QRgine. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
     "items": [
       {
         "q": "Necessito coneixements tècnics o experiència amb CMS?",
         "a": "No cal cap coneixement especial. Tot al panell d'administració es fa amb un parell de clics: sense programar ni treballar amb fitxers complexos. Afegir un plat triga segons: nom, preu, foto. Configurar una carta completa sol portar entre 30 i 60 minuts."
       },
       {
-        "q": "Què és la carta digital d'IQ Rest?",
+        "q": "Què és la carta digital d'QRgine?",
         "a": "És una versió online de la teva carta, disponible per als clients mitjançant un codi QR o un enllaç directe: fotos dels plats, preus, al·lèrgens, traducció per IA a 35 idiomes i actualitzacions en temps real. La carta funciona als nostres servidors: no cal instal·lar ni mantenir cap programari, només necessites un navegador."
       },
       {

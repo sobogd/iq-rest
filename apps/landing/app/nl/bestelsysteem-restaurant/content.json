@@ -3,13 +3,13 @@
   "slug": "bestelsysteem-restaurant",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Bestellingen opnemen in het restaurant | IQ Rest",
+    "title": "Bestellingen opnemen in het restaurant | QRgine",
     "description": "Bestellingen opnemen vanaf telefoon of tablet: plattegrond, rekening splitsen, opties en opmerkingen. Gasten bestellen aan tafel. 14 dagen gratis.",
     "canonical": "https://iq-rest.com/nl/bestelsysteem-restaurant",
     "ogLocale": "nl_NL",
     "ogTitle": "Bestellingen opnemen in het restaurant — Gast en Bediening",
     "ogDescription": "Een gast aan tafel of de bediening via een telefoon — de bestelling gaat direct naar de keuken. Plattegrond, rekening splitsen, statussen, opties en opmerkingen.",
-    "brandLine": "IQ Rest — Bestellingen opnemen in het restaurant"
+    "brandLine": "QRgine — Bestellingen opnemen in het restaurant"
   },
   "hero": {
     "headline": "Bestellingen vanaf de tafel —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Wat restauranthouders vragen over bestellingen opnemen in IQ Rest. Staat je vraag er niet tussen — stuur ons een bericht via WhatsApp.",
+    "sub": "Wat restauranthouders vragen over bestellingen opnemen in QRgine. Staat je vraag er niet tussen — stuur ons een bericht via WhatsApp.",
     "items": [
       {
         "q": "Kunnen meerdere medewerkers tegelijkertijd op verschillende apparaten werken?",

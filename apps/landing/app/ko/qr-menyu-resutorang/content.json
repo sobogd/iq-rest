@@ -7,13 +7,13 @@
     "sub": "스캔 한 번으로 고객과 매장에 제공되는 모든 기능을 확인하세요."
   },
   "meta": {
-    "title": "레스토랑용 QR 메뉴 | IQ Rest",
+    "title": "레스토랑용 QR 메뉴 | QRgine",
     "description": "레스토랑용 QR 메뉴: 고객이 테이블의 QR 코드를 스캔하여 브라우저에서 메뉴를 열고 자신의 언어로 주문합니다. 카드 등록 없이 14일 무료 체험.",
     "canonical": "https://iq-rest.com/ko/qr-menyu-resutorang",
     "ogLocale": "ko_KR",
     "ogTitle": "레스토랑용 QR 메뉴",
     "ogDescription": "테이블의 QR, 스마트폰 속 메뉴 — 사진, 알레르기 정보, 35개국어 지원 및 실시간 업데이트.",
-    "brandLine": "IQ Rest — 레스토랑용 QR 메뉴"
+    "brandLine": "QRgine — 레스토랑용 QR 메뉴"
   },
   "hero": {
     "headline": "QR 메뉴:\n스캔하고 바로 주문",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "IQ Rest QR 메뉴에 대해 사장님들이 자주 묻는 질문입니다. 원하는 답을 찾지 못하셨다면 WhatsApp으로 문의해 주세요.",
+    "sub": "QRgine QR 메뉴에 대해 사장님들이 자주 묻는 질문입니다. 원하는 답을 찾지 못하셨다면 WhatsApp으로 문의해 주세요.",
     "items": [
       {
-        "q": "IQ Rest QR 메뉴는 어떻게 작동하나요?",
+        "q": "QRgine QR 메뉴는 어떻게 작동하나요?",
         "a": "모든 테이블에 QR 코드가 인쇄되어 있습니다. 고객이 스마트폰 카메라로 스캔하면 브라우저에서 레스토랑 메뉴(사진, 설명, 알레르기 정보, 최신 가격)가 열립니다. 고객이나 직원이 앱을 다운로드할 필요가 없습니다."
       },
       {

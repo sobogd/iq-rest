@@ -3,13 +3,13 @@
   "slug": "digital-meny-restaurant",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digital meny for restauranter | IQ Rest",
+    "title": "Digital meny for restauranter | QRgine",
     "description": "Digital meny for restauranten din: en meny på nett med bilder, allergener, AI-oversettelse og priser som oppdateres i sanntid. 14 dager gratis, krever ikke kort.",
     "canonical": "https://iq-rest.com/no/digital-meny-restaurant",
     "ogLocale": "nb_NO",
     "ogTitle": "Digital meny for restauranter",
     "ogDescription": "En nettversjon av papirmenyen din med bilder, allergener og AI-oversettelse. Prisene oppdateres i sanntid.",
-    "brandLine": "IQ Rest — Digital meny for restauranter"
+    "brandLine": "QRgine — Digital meny for restauranter"
   },
   "hero": {
     "headline": "Digital meny og nettside",
@@ -166,7 +166,7 @@
     "heading": "Derfor velger restauranter oss",
     "headingAccent": "fremfor andre systemer",
     "sub": "De fleste menyverktøy stopper ved en QR-kode. Radene under viser hva som faktisk utgjør en forskjell i hverdagen. Ingen navn — sammenlign selv med hvilket som helst system.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Andre systemer",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Det restaurantdrivere spør om når det gjelder den digitale menyen i IQ Rest. Finner du ikke spørsmålet ditt — send oss en melding på WhatsApp.",
+    "sub": "Det restaurantdrivere spør om når det gjelder den digitale menyen i QRgine. Finner du ikke spørsmålet ditt — send oss en melding på WhatsApp.",
     "items": [
       {
         "q": "Trenger jeg teknisk kunnskap eller erfaring med CMS?",
         "a": "Ingen spesielle ferdigheter kreves. Alt i kontrollpanelet gjøres med et par trykk — ingen koding, ingen kildekoder. Å legge til en rett tar sekunder: navn, pris, bilde. Et komplett menyoppsett tar vanligvis 30–60 minutter."
       },
       {
-        "q": "Hva er den digitale menyen fra IQ Rest?",
+        "q": "Hva er den digitale menyen fra QRgine?",
         "a": "Det er en nettversjon av menyen din som er tilgjengelig for gjestene via QR-kode eller en direkte lenke: bilder av retter, priser, allergener, AI-oversettelse til 35 språk og oppdateringer i sanntid. Menyen kjører på våre servere — det er ingen programvare å installere eller vedlikeholde, en nettleser er alt du trenger."
       },
       {

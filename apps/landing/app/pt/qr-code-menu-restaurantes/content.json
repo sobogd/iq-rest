@@ -7,13 +7,13 @@
     "sub": "Tudo em que um único scan se transforma para os clientes e a sala."
   },
   "meta": {
-    "title": "Ementa QR para restaurantes | IQ Rest",
+    "title": "Ementa QR para restaurantes | QRgine",
     "description": "Ementa QR para restaurantes: o cliente lê o código QR na mesa, abre a ementa no navegador e pede na sua língua. 14 dias grátis, sem cartão.",
     "canonical": "https://iq-rest.com/pt/qr-code-menu-restaurantes",
     "ogLocale": "pt_PT",
     "ogTitle": "Ementa QR para restaurantes",
     "ogDescription": "QR na mesa, ementa no telemóvel — fotos, alergénios, 35 idiomas e atualizações em tempo real.",
-    "brandLine": "IQ Rest — Ementa QR para restaurantes"
+    "brandLine": "QRgine — Ementa QR para restaurantes"
   },
   "hero": {
     "headline": "Ementa QR:\nler e pedir",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "O que os restauradores perguntam sobre a ementa QR da IQ Rest. Não encontrou a sua pergunta? Escreva-nos no WhatsApp.",
+    "sub": "O que os restauradores perguntam sobre a ementa QR da QRgine. Não encontrou a sua pergunta? Escreva-nos no WhatsApp.",
     "items": [
       {
-        "q": "Como funciona a ementa QR da IQ Rest?",
+        "q": "Como funciona a ementa QR da QRgine?",
         "a": "Em cada mesa há um código QR impresso. O cliente lê-o com a câmara do telemóvel e o navegador abre a ementa do restaurante — fotos, descrições, alergénios e preços atualizados. Não é preciso descarregar nenhuma aplicação, nem para o cliente nem para o pessoal."
       },
       {

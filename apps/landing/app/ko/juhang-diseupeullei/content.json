@@ -3,13 +3,13 @@
   "slug": "juhang-diseupeullei",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "레스토랑용 주방 디스플레이 (KDS) | IQ Rest",
+    "title": "레스토랑용 주방 디스플레이 (KDS) | QRgine",
     "description": "레스토랑용 KDS 주방 디스플레이: 홀과 QR 메뉴 주문이 조리 파트 모니터로 바로 전달됩니다. 테이블별 구분, 조리 상태 표시, 파트별 필터. 태블릿이나 스마트폰에서 작동합니다.",
     "canonical": "https://iq-rest.com/ko/juhang-diseupeullei",
     "ogLocale": "ko_KR",
     "ogTitle": "주방 디스플레이 시스템 (KDS) — 조리 파트로 직행하는 주문",
     "ogDescription": "홀에서 들어온 주문이 주방 모니터에 표시됩니다. 테이블별 구분, 조리 상태, 타이머 기능. 터치 한 번으로 상태를 변경하세요.",
-    "brandLine": "IQ Rest — 레스토랑용 주방 디스플레이"
+    "brandLine": "QRgine — 레스토랑용 주방 디스플레이"
   },
   "hero": {
     "headline": "주방 디스플레이 시스템 (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "IQ Rest 주방 디스플레이에 대해 사장님들이 자주 묻는 질문입니다. 원하는 답을 찾지 못하셨다면 WhatsApp으로 문의해 주세요.",
+    "sub": "QRgine 주방 디스플레이에 대해 사장님들이 자주 묻는 질문입니다. 원하는 답을 찾지 못하셨다면 WhatsApp으로 문의해 주세요.",
     "items": [
       {
         "q": "주방 메뉴는 어떤 상태를 가지나요?",

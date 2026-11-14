@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Savi pasūtījumi pret piegādes lietotnēm: reālie skaitļi | IQ Rest",
+    "title": "Savi pasūtījumi pret piegādes lietotnēm: reālie skaitļi | QRgine",
     "description": "Cik maksā platformas komisija par pasūtījumu, cik pasūtījumu savā kanālā sedz abonementu un kāpēc lielākajai daļai restorānu vajag abus kanālus."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Vai man vajag mājaslapu, lai pieņemtu tiešos pasūtījumus?",
-          "a": "Nē. IQ Rest dod jums gatavu pasūtījumu lapu ar savu adresi, uz kuru varat vest no Google, Instagram vai QR koda uz galda."
+          "a": "Nē. QRgine dod jums gatavu pasūtījumu lapu ar savu adresi, uz kuru varat vest no Google, Instagram vai QR koda uz galda."
         }
       ]
     }

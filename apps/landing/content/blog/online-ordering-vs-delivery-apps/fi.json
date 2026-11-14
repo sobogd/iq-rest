@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Oma tilaussivu vs ruokalähettisovellukset: luvut | IQ Rest",
+    "title": "Oma tilaussivu vs ruokalähettisovellukset: luvut | QRgine",
     "description": "Mitä alustan komissio maksaa tilaukselta, montako tilausta omassa kanavassa kattaa kulut ja miksi useimpien ravintoloiden kannattaa käyttää molempia."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Tarvitsenko verkkosivut suoriin tilauksiin?",
-          "a": "Et. IQ Rest antaa sinulle valmiin tilaussivun omalla osoitteella, johon voit linkittää Googlesta, Instagramista tai pöydän QR-koodista."
+          "a": "Et. QRgine antaa sinulle valmiin tilaussivun omalla osoitteella, johon voit linkittää Googlesta, Instagramista tai pöydän QR-koodista."
         }
       ]
     }

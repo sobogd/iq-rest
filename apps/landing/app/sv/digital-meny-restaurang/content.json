@@ -3,13 +3,13 @@
   "slug": "digital-meny-restaurang",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digital meny för restauranger | IQ Rest",
+    "title": "Digital meny för restauranger | QRgine",
     "description": "Digital meny för din restaurang: en onlinemeny med bilder, allergener, AI-översättning och prisuppdateringar i realtid. 14 dagar gratis, inget kreditkort krävs.",
     "canonical": "https://iq-rest.com/sv/digital-meny-restaurang",
     "ogLocale": "sv_SE",
     "ogTitle": "Digital meny för restauranger",
     "ogDescription": "En onlineversion av din pappersmeny med bilder, allergener och AI-översättning. Priserna uppdateras i realtid.",
-    "brandLine": "IQ Rest — Digital meny för restauranger"
+    "brandLine": "QRgine — Digital meny för restauranger"
   },
   "hero": {
     "headline": "Digital meny och hemsida",
@@ -166,7 +166,7 @@
     "heading": "Därför väljer restauranger oss",
     "headingAccent": "framför andra system",
     "sub": "De flesta menyverktyg stannar vid en QR-kod. Raderna nedan visar vad som faktiskt skiljer sig i det dagliga arbetet. Inga namn — jämför själv med vilket system som helst.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Andra system",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Vad krögare frågar om den digitala menyn i IQ Rest. Om din fråga inte finns med — skicka ett meddelande på WhatsApp.",
+    "sub": "Vad krögare frågar om den digitala menyn i QRgine. Om din fråga inte finns med — skicka ett meddelande på WhatsApp.",
     "items": [
       {
         "q": "Behöver jag tekniska kunskaper eller erfarenhet av CMS?",
         "a": "Inga särskilda kunskaper krävs. Allt i adminpanelen tar ett par klick — ingen kodning, inget krångel med källfiler. Att lägga till en rätt tar sekunder: namn, pris, bild. En komplett meny tar oftast 30–60 minuter att ställa in."
       },
       {
-        "q": "Vad är IQ Rests digitala meny?",
+        "q": "Vad är QRgines digitala meny?",
         "a": "Det är en onlineversion av din meny som gästerna når via QR-kod eller en direktlänk: bilder på rätterna, priser, allergener, AI-översättning till 35 språk och uppdateringar i realtid. Menyn körs på våra servrar — det finns ingen mjukvara att installera eller underhålla, en webbläsare är allt som behövs."
       },
       {

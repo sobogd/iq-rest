@@ -3,13 +3,13 @@
   "slug": "restaurant-ordering-system",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Restaurant Order Taking — Guest and Waiter | IQ Rest",
+    "title": "Restaurant Order Taking — Guest and Waiter | QRgine",
     "description": "Restaurant order taking from a phone or tablet: floor map, bill splitting, statuses and comments. Guests order from the table, waiters from their device. 14 days free.",
     "canonical": "https://iq-rest.com/restaurant-ordering-system",
     "ogLocale": "en_US",
     "ogTitle": "Restaurant Order Taking — Guest and Waiter",
     "ogDescription": "A guest at the table or a waiter on a phone — the order hits the kitchen instantly. Floor map, bill splitting, statuses, options and comments.",
-    "brandLine": "IQ Rest — Restaurant Order Taking"
+    "brandLine": "QRgine — Restaurant Order Taking"
   },
   "hero": {
     "headline": "Orders from the table —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "What restaurateurs ask about order taking in IQ Rest. If your question isn't listed — message us on WhatsApp.",
+    "sub": "What restaurateurs ask about order taking in QRgine. If your question isn't listed — message us on WhatsApp.",
     "items": [
       {
         "q": "Can several waiters work simultaneously from different devices?",

@@ -2,11 +2,11 @@
   "companyDefaultName": "Min restaurant",
   "otpEmail": {
     "subject": "Din kode: {code}",
-    "intro": "Her er din engangskode til at logge ind på IQ Rest:",
+    "intro": "Her er din engangskode til at logge ind på QRgine:",
     "expiry": "Koden er gyldig i 5 minutter. Hvis du ikke har anmodet om den, kan du bare ignorere denne mail."
   },
   "supportEmail": {
-    "subject": "Ny besked fra IQ Rest-supporten",
+    "subject": "Ny besked fra QRgine-supporten",
     "title": "Ny besked fra supporten",
     "body": "Vores supportteam har sendt dig en ny besked. Åbn supportchatten i dit dashboard for at læse den og svare.",
     "cta": "Åbn supportchatten"

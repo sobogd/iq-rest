@@ -7,13 +7,13 @@
     "sub": "Allt sem ein skönnun getur gert fyrir gestina þína og salinn."
   },
   "meta": {
-    "title": "QR matseðill fyrir veitingastaði | IQ Rest",
+    "title": "QR matseðill fyrir veitingastaði | QRgine",
     "description": "QR matseðill fyrir veitingastaði: gestir skanna QR kóðann á borðinu, opna matseðilinn í vafranum og panta á sínu eigin tungumáli. 14 dagar frítt, engin kortakrafa.",
     "canonical": "https://iq-rest.com/is/qr-matsedill-veitingastadur",
     "ogLocale": "is_IS",
     "ogTitle": "QR matseðill fyrir veitingastaði",
     "ogDescription": "QR á borðinu, matseðillinn í símanum — myndir, ofnæmisvaldar, 35 tungumál og uppfærslur í rauntíma.",
-    "brandLine": "IQ Rest — QR matseðill fyrir veitingastaði"
+    "brandLine": "QRgine — QR matseðill fyrir veitingastaði"
   },
   "hero": {
     "headline": "QR matseðill:\nskanna og panta",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Það sem veitingamenn spyrja um IQ Rest QR matseðilinn. Finnurðu ekki spurninguna þína? Sendu okkur skilaboð á WhatsApp.",
+    "sub": "Það sem veitingamenn spyrja um QRgine QR matseðilinn. Finnurðu ekki spurninguna þína? Sendu okkur skilaboð á WhatsApp.",
     "items": [
       {
-        "q": "Hvernig virkar IQ Rest QR matseðillinn?",
+        "q": "Hvernig virkar QRgine QR matseðillinn?",
         "a": "Hvert borð hefur prentaðan QR kóða. Gestir skanna hann með myndavél símans og vafrinn opnar matseðil veitingastaðarins — myndir, lýsingar, ofnæmisvaldar og uppfærð verð. Ekkert smáforrit til að sækja fyrir gesti eða starfsfólk."
       },
       {

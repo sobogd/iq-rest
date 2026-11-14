@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // PT help guide. Section ids shared across locales.
 export const pt: HelpDoc = {
-  metaTitle: "Como usar o IQ Rest — guia passo a passo",
+  metaTitle: "Como usar o QRgine — guia passo a passo",
   metaDescription:
-    "Guia completo do IQ Rest: registo, menu, pedidos, reservas, ecrã de cozinha e definições — para restaurantes.",
+    "Guia completo do QRgine: registo, menu, pedidos, reservas, ecrã de cozinha e definições — para restaurantes.",
   h1: "Ajuda",
-  intro: "Um guia detalhado do IQ Rest — do registo às definições mais finas.",
+  intro: "Um guia detalhado do QRgine — do registo às definições mais finas.",
   banner: {
     title: "É mais simples do que parece",
     sub: "Um guia passo a passo: do registo às definições mais finas — qualquer pessoa consegue.",
@@ -22,7 +22,7 @@ export const pt: HelpDoc = {
         { type: "h3", text: "O que é este sistema" },
         {
           type: "p",
-          text: "O IQ Rest é um serviço para restaurantes: cria um menu online com código QR, recebe pedidos e reservas de mesa diretamente do telemóvel dos clientes, enquanto na cozinha e nos empregados funcionam tablets-terminal. Tudo é gerido a partir de um único painel de administração (o dashboard).",
+          text: "O QRgine é um serviço para restaurantes: cria um menu online com código QR, recebe pedidos e reservas de mesa diretamente do telemóvel dos clientes, enquanto na cozinha e nos empregados funcionam tablets-terminal. Tudo é gerido a partir de um único painel de administração (o dashboard).",
         },
         { type: "h3", text: "Registo e início de sessão" },
         { type: "p", text: "Pode entrar de três formas — escolha qualquer uma no ecrã de acesso:" },

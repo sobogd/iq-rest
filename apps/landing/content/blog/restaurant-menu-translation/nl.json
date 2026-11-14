@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Menukaart vertalen: wat wel en wat niet | IQ Rest",
+    "title": "Menukaart vertalen: wat wel en wat niet | QRgine",
     "description": "Waarom machinaal vertaalde gerechtnamen misgaan, welke delen van de kaart in de oorspronkelijke taal blijven, en hoe je vier talen draait zonder vier kaarten."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "Een [digitaal menu](route:/digital-menu) keert dat om. De telefoon van de gast meldt zijn taal al, dus opent de kaart in de juiste zonder dat iemand kiest. IQ Rest vertaalt de kaart automatisch en omdat vertalingen aan het gerecht hangen, verandert één prijswijziging alle talen. Een vijfde taal toevoegen kost niets en vraagt geen herdruk."
+      "text": "Een [digitaal menu](route:/digital-menu) keert dat om. De telefoon van de gast meldt zijn taal al, dus opent de kaart in de juiste zonder dat iemand kiest. QRgine vertaalt de kaart automatisch en omdat vertalingen aan het gerecht hangen, verandert één prijswijziging alle talen. Een vijfde taal toevoegen kost niets en vraagt geen herdruk."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Eén kaart, alle talen",
-      "text": "IQ Rest vertaalt je kaart automatisch en opent hem in de taal van de gast. Wijzig één keer een prijs en alle talen zijn bij. 14 dagen gratis.",
+      "text": "QRgine vertaalt je kaart automatisch en opent hem in de taal van de gast. Wijzig één keer een prijs en alle talen zijn bij. 14 dagen gratis.",
       "buttonLabel": "Bekijk de automatische vertaling",
       "routeKey": "/digital-menu"
     },

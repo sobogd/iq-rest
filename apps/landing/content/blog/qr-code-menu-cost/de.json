@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Was eine QR-Speisekarte wirklich kostet | IQ Rest",
+    "title": "Was eine QR-Speisekarte wirklich kostet | QRgine",
     "description": "Was eine QR-Code-Speisekarte tatsächlich kostet: Gratis-Tools, Monatsgebühren, Preise pro Standort, Bestellprovisionen und die versteckte Einrichtungszeit."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest steht in der dritten Zeile: **ab 9,90 € pro Monat und Standort**, keine Provision auf Bestellungen, 14 Tage kostenlos ohne Karte. Wir rechnen pro Betrieb ab, nicht pro Kellner, weil eine Abrechnung pro Nutzer genau die Betriebe bestraft, die die höchste Personalfluktuation haben."
+      "text": "QRgine steht in der dritten Zeile: **ab 9,90 € pro Monat und Standort**, keine Provision auf Bestellungen, 14 Tage kostenlos ohne Karte. Wir rechnen pro Betrieb ab, nicht pro Kellner, weil eine Abrechnung pro Nutzer genau die Betriebe bestraft, die die höchste Personalfluktuation haben."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Deshalb zählt der Kartenimport mehr, als er klingt. IQ Rest liest ein Foto Ihrer Papierkarte und legt die Artikel automatisch an, aus dem halben Tag werden etwa fünf Minuten. Rechnen Sie die Einrichtungszeit beim Vergleich mit ein; sie ist oft größer als das erste Abo-Jahr."
+      "text": "Deshalb zählt der Kartenimport mehr, als er klingt. QRgine liest ein Foto Ihrer Papierkarte und legt die Artikel automatisch an, aus dem halben Tag werden etwa fünf Minuten. Rechnen Sie die Einrichtungszeit beim Vergleich mit ein; sie ist oft größer als das erste Abo-Jahr."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Was kostet eine QR-Code-Speisekarte pro Monat?",
-          "a": "Pauschal-Tools liegen meist bei 10–40 € pro Standort und Monat. IQ Rest startet bei 9,90 € ohne Provision auf Bestellungen."
+          "a": "Pauschal-Tools liegen meist bei 10–40 € pro Standort und Monat. QRgine startet bei 9,90 € ohne Provision auf Bestellungen."
         },
         {
           "q": "Gibt es eine kostenlose QR-Code-Speisekarte?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Zahle ich pro Tisch oder pro Restaurant?",
-          "a": "Bei IQ Rest pro Restaurant — Tische und QR-Codes sind unbegrenzt. Prüfen Sie das überall vor Vertragsschluss, denn Preise pro Tisch oder pro Nutzer skalieren schlecht."
+          "a": "Bei QRgine pro Restaurant — Tische und QR-Codes sind unbegrenzt. Prüfen Sie das überall vor Vertragsschluss, denn Preise pro Tisch oder pro Nutzer skalieren schlecht."
         },
         {
           "q": "Gibt es eine Einrichtungsgebühr?",

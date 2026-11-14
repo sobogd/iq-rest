@@ -2,11 +2,11 @@
   "companyDefaultName": "Moj restoran",
   "otpEmail": {
     "subject": "Vaš kod: {code}",
-    "intro": "Evo vašeg jednokratnog koda za prijavu u IQ Rest:",
+    "intro": "Evo vašeg jednokratnog koda za prijavu u QRgine:",
     "expiry": "Kod vrijedi 5 minuta. Ako ga niste zatražili, jednostavno zanemarite ovu e-poruku."
   },
   "supportEmail": {
-    "subject": "Nova poruka od podrške IQ Rest",
+    "subject": "Nova poruka od podrške QRgine",
     "title": "Nova poruka od podrške",
     "body": "Naš tim za podršku poslao vam je novu poruku. Otvorite chat podrške na svojoj nadzornoj ploči da biste je pročitali i odgovorili.",
     "cta": "Otvori chat podrške"

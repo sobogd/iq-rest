@@ -3,13 +3,13 @@
   "slug": "pantalla-de-cuina",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Pantalla de cuina (KDS) per a restaurants | IQ Rest",
+    "title": "Pantalla de cuina (KDS) per a restaurants | QRgine",
     "description": "Pantalla de cuina KDS: les comandes de la sala i de la carta QR van directes al cuiner. Columnes per taula, estats i filtres per partida. Funciona en tauleta.",
     "canonical": "https://iq-rest.com/ca/pantalla-de-cuina",
     "ogLocale": "ca_ES",
     "ogTitle": "Pantalla de cuina (KDS) — Comandes directes a la pantalla del cuiner",
     "ogDescription": "Comandes de la sala a la pantalla del cuiner. Columnes per taula, estats i temporitzador. Un sol toc canvia l'estat.",
-    "brandLine": "IQ Rest — Pantalla de cuina per a restaurants"
+    "brandLine": "QRgine — Pantalla de cuina per a restaurants"
   },
   "hero": {
     "headline": "Pantalla de cuina (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "El que pregunten els restauradors sobre la pantalla de cuina a IQ Rest. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
+    "sub": "El que pregunten els restauradors sobre la pantalla de cuina a QRgine. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
     "items": [
       {
         "q": "Quins estats tenen els articles a la cuina?",

@@ -7,13 +7,13 @@
     "sub": "一次扫码，为您的顾客和前厅带来全方位体验。"
   },
   "meta": {
-    "title": "餐厅QR菜单 | IQ Rest",
+    "title": "餐厅QR菜单 | QRgine",
     "description": "餐厅QR菜单：顾客扫描桌上的QR码，在浏览器中打开菜单并用自己的语言点餐。免费试用14天，无需绑卡。",
     "canonical": "https://iq-rest.com/zh/qr-cai-dan-can-ting",
     "ogLocale": "zh_CN",
     "ogTitle": "餐厅QR菜单",
     "ogDescription": "桌上扫QR码，手机看菜单——照片、过敏原、35种语言和实时更新。",
-    "brandLine": "IQ Rest — 餐厅QR菜单"
+    "brandLine": "QRgine — 餐厅QR菜单"
   },
   "hero": {
     "headline": "QR菜单：\n扫码即点餐",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "餐饮老板关于 IQ Rest QR菜单的常见问题。如果没找到答案？请在WhatsApp上联系我们。",
+    "sub": "餐饮老板关于 QRgine QR菜单的常见问题。如果没找到答案？请在WhatsApp上联系我们。",
     "items": [
       {
-        "q": "IQ Rest QR菜单是如何工作的？",
+        "q": "QRgine QR菜单是如何工作的？",
         "a": "每张桌子上都有打印的QR码。顾客用手机摄像头扫码，浏览器就会打开餐厅的菜单——照片、描述、过敏原和最新价格。顾客或员工都无需下载应用。"
       },
       {

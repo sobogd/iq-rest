@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kako napraviti QR meni: 3 načina | IQ Rest",
+    "title": "Kako napraviti QR meni: 3 načina | QRgine",
     "description": "Tri načina za izradu QR menija za restoran: besplatni generator s PDF-om, alat za izradu jelovnika ili cjelovit sustav. Koliko koštaju i gdje pucaju."
   },
   "card": {
@@ -120,7 +120,7 @@
     {
       "type": "steps",
       "items": [
-        "Prebacite jelovnik u digitalni oblik. Utipkavanje 80 stavki najveći je gubitak vremena – IQ Rest pročita fotografiju vašeg papirnatog jelovnika i sam stvori jela i cijene, čime cijela večer postaje otprilike pet minuta.",
+        "Prebacite jelovnik u digitalni oblik. Utipkavanje 80 stavki najveći je gubitak vremena – QRgine pročita fotografiju vašeg papirnatog jelovnika i sam stvori jela i cijene, čime cijela večer postaje otprilike pet minuta.",
         "Riješite strukturu prije dizajna. Grupirajte kako gosti naručuju (predjela, glavna jela, pića), a ne kako je organizirana vaša kuhinja. Duge ravne liste ubijaju listanje.",
         "Fotografije stavite tamo gdje mijenjaju odluku. Fotografirati svako jelo lošije je od pet dobrih fotografija na jelima koja želite prodati.",
         "Označite alergene sada, ne poslije. U EU ih ionako trebate, a naknadno ih dodavati na 80 stavki prava je muka.",

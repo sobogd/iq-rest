@@ -1,7 +1,7 @@
 {
-  "name": "IQ Rest Kitchen",
+  "name": "QRgine Kitchen",
   "short_name": "Kitchen",
-  "description": "Kitchen display for IQ Rest paired tablets.",
+  "description": "Kitchen display for QRgine paired tablets.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",

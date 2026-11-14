@@ -2,7 +2,7 @@
   "htmlLang": "zh-CN",
   "htmlDir": "ltr",
   "meta": {
-    "title": "电子菜单、后厨显示与预订系统 — IQ Rest",
+    "title": "电子菜单、后厨显示与预订系统 — QRgine",
     "description": "一个系统搞定餐厅运营：多语言电子菜单、后厨显示与全天候预订。5分钟即可上线。免费试用14天，无需绑定信用卡。",
     "canonical": "https://iq-rest.com/zh",
     "ogLocale": "zh_CN",
@@ -10,7 +10,7 @@
     "ogDescription": "一个系统搞定餐厅运营：多语言电子菜单、后厨显示与全天候预订。5分钟即可上线。免费试用14天，无需绑定信用卡。"
   },
   "jsonLd": {
-    "appName": "IQ Rest — 餐厅管理平台"
+    "appName": "QRgine — 餐厅管理平台"
   },
   "ctaText": "免费试用",
   "homeCtaText": "免费试用",
@@ -82,7 +82,7 @@
     "quoteStart": "我和妻子曾经营过自己的咖啡馆，深知餐厅日常运营的痛点：点餐、预订、前厅和后厨管理。我们想要一个现代、易于设置且一目了然的工具——",
     "quoteAccent": "这就是我们现在为其他餐饮同行打造这个平台的初衷。",
     "sign": "Bogdan Sokolov · 创始人，前咖啡馆老板",
-    "photoAlt": "IQ Rest 创始人 Bogdan Sokolov"
+    "photoAlt": "QRgine 创始人 Bogdan Sokolov"
   },
   "pricing": {
     "badge": "无抽成 · 无合约",
@@ -108,7 +108,7 @@
     "headingAccent": "问题",
     "sub": "餐饮老板在注册前最常问的问题。如果没找到答案——请在WhatsApp上联系我们，真人客服回复，绝非机器人。",
     "whatsappCta": "在WhatsApp上联系我们",
-    "whatsappPrefill": "你好，我有一个关于 IQ Rest 的问题",
+    "whatsappPrefill": "你好，我有一个关于 QRgine 的问题",
     "items": [
       {
         "q": "试用期包含哪些内容？结束后会怎样？",
@@ -192,7 +192,7 @@
     "button": "定制我的套餐"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. 保留所有权利。",
+    "copyrightTemplate": "© {year} QRgine. 保留所有权利。",
     "featuresHeading": "功能",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "餐厅科技博客 — IQ Rest",
+    "metaTitle": "餐厅科技博客 — QRgine",
     "metaDescription": "关于电子菜单、扫码点餐、厨房显示屏和预订的指南与对比——为餐厅经营者提供实用内容。",
     "title": "博客",
     "intro": "关于电子菜单、扫码点餐、厨房显示屏和餐厅运营的指南与对比。",

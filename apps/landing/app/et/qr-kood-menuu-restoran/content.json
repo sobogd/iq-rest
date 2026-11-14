@@ -7,13 +7,13 @@
     "sub": "Kõik, milleks üks skannimine sinu külaliste ja saali jaoks muutub."
   },
   "meta": {
-    "title": "QR-menüü restoranidele | IQ Rest",
+    "title": "QR-menüü restoranidele | QRgine",
     "description": "QR-menüü restoranidele: külalised skannivad laual oleva QR-koodi, avavad menüü oma brauseris ja tellivad oma emakeeles. 14 päeva tasuta, kaarti pole vaja.",
     "canonical": "https://iq-rest.com/et/qr-kood-menuu-restoran",
     "ogLocale": "et_EE",
     "ogTitle": "QR-menüü restoranidele",
     "ogDescription": "QR laual, menüü telefonis — fotod, allergeenid, 35 keelt ja reaalajas uuendused.",
-    "brandLine": "IQ Rest — QR-menüü restoranidele"
+    "brandLine": "QRgine — QR-menüü restoranidele"
   },
   "hero": {
     "headline": "QR-menüü:\nskanni ja telli",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Mida restoranipidajad IQ Resti QR-menüü kohta küsivad. Ei leia oma küsimust? Kirjuta meile WhatsAppi.",
+    "sub": "Mida restoranipidajad QRginei QR-menüü kohta küsivad. Ei leia oma küsimust? Kirjuta meile WhatsAppi.",
     "items": [
       {
-        "q": "Kuidas IQ Resti QR-menüü töötab?",
+        "q": "Kuidas QRginei QR-menüü töötab?",
         "a": "Igal laual on prinditud QR-kood. Külalised skannivad seda oma telefonikaameraga ja brauseris avaneb restorani menüü — fotod, kirjeldused, allergeenid ja ajakohased hinnad. Külalistel ega personalil pole vaja rakendust alla laadida."
       },
       {

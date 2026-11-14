@@ -3,13 +3,13 @@
   "slug": "rezerwacja-stolikow",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Rezerwacje stolików 24/7 dla restauracji | IQ Rest",
+    "title": "Rezerwacje stolików 24/7 dla restauracji | QRgine",
     "description": "Goście sami rezerwują stoliki 24/7 przez menu QR lub stronę restauracji. Kalendarz, automatyczne potwierdzenia i przypomnienia. 14 dni za darmo.",
     "canonical": "https://iq-rest.com/pl/rezerwacja-stolikow",
     "ogLocale": "pl_PL",
     "ogTitle": "Rezerwacje stolików 24/7 — Goście rezerwują sami",
     "ogDescription": "Goście rezerwują stoliki przez menu QR lub stronę. Kalendarz, automatyczne potwierdzenia, przypomnienia. Żaden gość nie zostanie pominięty.",
-    "brandLine": "IQ Rest — Rezerwacje stolików w restauracji"
+    "brandLine": "QRgine — Rezerwacje stolików w restauracji"
   },
   "hero": {
     "headline": "Rezerwacje stolików 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Kalendarz rezerwacji w panelu IQ Rest na dwóch tabletach: siatka dzienna dla stolików i kalendarz miesięczny"
+        "alt": "Kalendarz rezerwacji w panelu QRgine na dwóch tabletach: siatka dzienna dla stolików i kalendarz miesięczny"
       }
     }
   ],
   "faq": {
-    "sub": "O co pytają restauratorzy w związku z rezerwacjami stolików w IQ Rest. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
+    "sub": "O co pytają restauratorzy w związku z rezerwacjami stolików w QRgine. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
     "items": [
       {
         "q": "Czy mogę wybrać dni i godziny, w których rezerwacja jest dostępna?",

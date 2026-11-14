@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Om IQ Rest — Hvem vi er, kontakt og juridisk informasjon",
-    "description": "Hvem som står bak IQ Rest, hvordan du når oss og tjenesteleverandørens detaljer: e-post, WhatsApp, juridisk informasjon.",
+    "title": "Om QRgine — Hvem vi er, kontakt og juridisk informasjon",
+    "description": "Hvem som står bak QRgine, hvordan du når oss og tjenesteleverandørens detaljer: e-post, WhatsApp, juridisk informasjon.",
     "canonical": "https://iq-rest.com/no/about",
     "ogLocale": "nb_NO",
-    "ogTitle": "Om IQ Rest",
-    "ogDescription": "Hvem som står bak IQ Rest, kontaktinfo for support og tjenesteleverandørens juridiske detaljer."
+    "ogTitle": "Om QRgine",
+    "ogDescription": "Hvem som står bak QRgine, kontaktinfo for support og tjenesteleverandørens juridiske detaljer."
   },
   "heading": "Fra vår egen kafé",
   "headingAccent": "til en plattform for restauranter",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "steder kjører på IQ Rest"
+      "label": "steder kjører på QRgine"
     },
     {
       "value": "15",
       "label": "land hvor vi har kunder"
     }
   ],
-  "waPrefill": "Hei, jeg har et spørsmål om IQ Rest",
+  "waPrefill": "Hei, jeg har et spørsmål om QRgine",
   "contacts": [
     {
       "icon": "Mail",

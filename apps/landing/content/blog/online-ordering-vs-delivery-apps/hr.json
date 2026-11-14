@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Vlastite narudžbe vs aplikacije za dostavu: brojke | IQ Rest",
+    "title": "Vlastite narudžbe vs aplikacije za dostavu: brojke | QRgine",
     "description": "Koliko košta provizija platforme po narudžbi, koliko narudžbi u vlastitom kanalu pokriva pretplatu i zašto većina restorana treba oba kanala."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Trebam li web-stranicu za izravne narudžbe?",
-          "a": "Ne. IQ Rest vam daje gotovu stranicu za narudžbe s vlastitom adresom, na koju možete voditi s Googlea, Instagrama ili QR koda na stolu."
+          "a": "Ne. QRgine vam daje gotovu stranicu za narudžbe s vlastitom adresom, na koju možete voditi s Googlea, Instagrama ili QR koda na stolu."
         }
       ]
     }

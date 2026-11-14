@@ -3,13 +3,13 @@
   "slug": "asztalfoglalas",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "0-24 Asztalfoglalás Éttermeknek | IQ Rest",
+    "title": "0-24 Asztalfoglalás Éttermeknek | QRgine",
     "description": "0-24 asztalfoglalás az éttermednek: a vendégek maguk foglalnak a QR étlapon vagy a weboldalon. Naptár asztalonként, megerősítések és emlékeztetők. 14 nap ingyen.",
     "canonical": "https://iq-rest.com/hu/asztalfoglalas",
     "ogLocale": "hu_HU",
     "ogTitle": "0-24 Asztalfoglalás — A Vendégek Maguk Foglalnak",
     "ogDescription": "A vendégek a QR étlapon vagy a weboldalon keresztül foglalnak asztalt. Naptár, automatikus megerősítések, emlékeztetők. Egyetlen vendéget sem veszítesz el.",
-    "brandLine": "IQ Rest — Éttermi asztalfoglalás"
+    "brandLine": "QRgine — Éttermi asztalfoglalás"
   },
   "hero": {
     "headline": "0-24 asztalfoglalás,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Az asztalfoglalási naptár az IQ Rest admin felületén két tableten: egy napi rács asztalonként és egy havi naptár"
+        "alt": "Az asztalfoglalási naptár az QRgine admin felületén két tableten: egy napi rács asztalonként és egy havi naptár"
       }
     }
   ],
   "faq": {
-    "sub": "Amit a vendéglátósok az asztalfoglalásról kérdeznek az IQ Restben. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
+    "sub": "Amit a vendéglátósok az asztalfoglalásról kérdeznek az QRgineben. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
     "items": [
       {
         "q": "Kiválaszthatom, hogy mely napokon és mikor lehessen foglalni?",

@@ -2,7 +2,7 @@
   "htmlLang": "no",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Digital meny, kjøkkenskjerm og bordbestilling — IQ Rest",
+    "title": "Digital meny, kjøkkenskjerm og bordbestilling — QRgine",
     "description": "Driv restauranten fra én app: flerspråklig digital meny, kjøkkenskjerm og bordbestilling 24/7. Kom i gang på 5 minutter. 14 dager gratis, krever ikke kort.",
     "canonical": "https://iq-rest.com/no",
     "ogLocale": "nb_NO",
@@ -10,7 +10,7 @@
     "ogDescription": "Driv restauranten fra én app: flerspråklig digital meny, kjøkkenskjerm og bordbestilling 24/7. Kom i gang på 5 minutter. 14 dager gratis, krever ikke kort."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Plattform for restaurantdrift"
+    "appName": "QRgine — Plattform for restaurantdrift"
   },
   "ctaText": "Prøv gratis",
   "homeCtaText": "Prøv gratis",
@@ -82,7 +82,7 @@
     "quoteStart": "Kona mi og jeg drev vår egen kafé og kjenner hverdagen fra innsiden: bestillinger, bordreservasjoner, servering og kjøkkendrift. Vi ønsket oss ett enkelt verktøy — moderne, lett å sette opp og oversiktlig fra første stund —",
     "quoteAccent": "slik ble ideen til plattformen vi nå bygger for andre restauratører født.",
     "sign": "Bogdan Sokolov · grunnlegger, tidligere kaféeier",
-    "photoAlt": "Bogdan Sokolov, grunnlegger av IQ Rest"
+    "photoAlt": "Bogdan Sokolov, grunnlegger av QRgine"
   },
   "pricing": {
     "badge": "Ingen provisjon · Ingen bindingstid",
@@ -108,7 +108,7 @@
     "headingAccent": "spørsmål",
     "sub": "Det restaurantdrivere oftest spør om før de registrerer seg. Finner du ikke svaret — send oss en melding på WhatsApp, du får svar fra et menneske, ikke en bot.",
     "whatsappCta": "Send oss en melding på WhatsApp",
-    "whatsappPrefill": "Hei, jeg har et spørsmål om IQ Rest",
+    "whatsappPrefill": "Hei, jeg har et spørsmål om QRgine",
     "items": [
       {
         "q": "Hva inkluderer prøveperioden, og hva skjer når den utløper?",
@@ -192,7 +192,7 @@
     "button": "Sett sammen min plan"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Med enerett.",
+    "copyrightTemplate": "© {year} QRgine. Med enerett.",
     "featuresHeading": "Funksjoner",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Blogg om restaurantteknologi — IQ Rest",
+    "metaTitle": "Blogg om restaurantteknologi — QRgine",
     "metaDescription": "Guider og sammenligninger om digitale menyer, QR-bestilling, kjøkkenskjermer og reservasjoner — praktisk lesing for restauranteiere.",
     "title": "Blogg",
     "intro": "Guider og sammenligninger om digitale menyer, QR-bestilling, kjøkkenskjermer og restaurantdrift.",

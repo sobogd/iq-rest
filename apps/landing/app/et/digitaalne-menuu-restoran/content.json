@@ -3,13 +3,13 @@
   "slug": "digitaalne-menuu-restoran",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digimenüü restoranidele | IQ Rest",
+    "title": "Digimenüü restoranidele | QRgine",
     "description": "Digimenüü sinu restoranile: veebimenüü fotode, allergeenide, tehisintellektiga tõlke ja reaalajas hinna uuendustega. 14 päeva tasuta, krediitkaarti pole vaja.",
     "canonical": "https://iq-rest.com/et/digitaalne-menuu-restoran",
     "ogLocale": "et_EE",
     "ogTitle": "Digimenüü restoranidele",
     "ogDescription": "Sinu paberist menüü veebiversioon fotode, allergeenide ja tehisintellektiga tõlkega. Hinnad uuenevad reaalajas.",
-    "brandLine": "IQ Rest — Digimenüü restoranidele"
+    "brandLine": "QRgine — Digimenüü restoranidele"
   },
   "hero": {
     "headline": "Digimenüü ja veebileht",
@@ -166,7 +166,7 @@
     "heading": "Miks restoranid valivad meid",
     "headingAccent": "teiste süsteemide asemel",
     "sub": "Enamik menüütööriistu piirdub QR-koodiga. Allpool on see, mis igapäevatöös tegelikult erineb. Nimesid ei nimeta — võrdle ise mis tahes süsteemiga.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Teised süsteemid",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Mida restoranipidajad IQ Resti digimenüü kohta küsivad. Kui sinu küsimust pole nimekirjas — kirjuta meile WhatsAppi.",
+    "sub": "Mida restoranipidajad QRginei digimenüü kohta küsivad. Kui sinu küsimust pole nimekirjas — kirjuta meile WhatsAppi.",
     "items": [
       {
         "q": "Kas mul on vaja tehnilisi oskusi või CMS-i kogemust?",
         "a": "Erilisi oskusi pole vaja. Kõik halduspaneelis käib paari nupuvajutusega — koodi kirjutada pole vaja. Toidu lisamine võtab sekundeid: nimi, hind, foto. Täielik menüü seadistamine mahub tavaliselt 30–60 minuti sisse."
       },
       {
-        "q": "Mis on IQ Resti digimenüü?",
+        "q": "Mis on QRginei digimenüü?",
         "a": "See on sinu menüü veebiversioon, mis on külalistele kättesaadav QR-koodi või otselingi kaudu: toidufotod, hinnad, allergeenid, tehisintellektiga tõlge 35 keelde ja reaalajas uuendused. Menüü töötab meie serverites — tarkvara pole vaja paigaldada ega hooldada, piisab vaid brauserist."
       },
       {

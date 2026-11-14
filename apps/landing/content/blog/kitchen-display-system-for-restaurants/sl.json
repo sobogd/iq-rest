@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kuhinjski zaslon: potrebujete KDS? | IQ Rest",
+    "title": "Kuhinjski zaslon: potrebujete KDS? | QRgine",
     "description": "Kaj počne KDS, koliko strojna oprema res stane, kako ga poganjate na tablici, ki jo že imate, in katerim kuhinjam je bolje s papirnatimi listki."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Večina kuhinj tega ne potrebuje. IQ Restov [kuhinjski zaslon](route:/kitchen-display) teče v brskalniku, zato je strojna oprema lahko tablica, ki jo že imate, poceni tablica z Androidom ali star prenosnik z monitorjem. Dajte jo v ohišje, odporno na škropljenje, namestite izven linije pare, in mejni strošek je stenski nosilec."
+      "text": "Večina kuhinj tega ne potrebuje. QRgineov [kuhinjski zaslon](route:/kitchen-display) teče v brskalniku, zato je strojna oprema lahko tablica, ki jo že imate, poceni tablica z Androidom ali star prenosnik z monitorjem. Dajte jo v ohišje, odporno na škropljenje, namestite izven linije pare, in mejni strošek je stenski nosilec."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Ali lahko KDS poganjam na navadni tablici?",
-          "a": "Da. IQ Restov kuhinjski zaslon teče v brskalniku, zato ustreza katera koli tablica ali prenosnik iz zadnjih petih let. Uporabite ohišje, odporno na škropljenje."
+          "a": "Da. QRgineov kuhinjski zaslon teče v brskalniku, zato ustreza katera koli tablica ali prenosnik iz zadnjih petih let. Uporabite ohišje, odporno na škropljenje."
         },
         {
           "q": "Ali KDS potrebuje internet?",

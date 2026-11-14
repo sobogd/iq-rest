@@ -3,13 +3,13 @@
   "slug": "tesuto-yoyaku",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "飲食店向け24時間ネット予約システム | IQ Rest",
+    "title": "飲食店向け24時間ネット予約システム | QRgine",
     "description": "飲食店向け24時間ネット予約：お客様がQRメニューやウェブサイトから自分でテーブルを予約。テーブル別カレンダー、自動承認、リマインダー機能。電話対応を減らし、予約の取りこぼしを防ぎます。14日間無料トライアル。",
     "canonical": "https://iq-rest.com/ja/tesuto-yoyaku",
     "ogLocale": "ja_JP",
     "ogTitle": "24時間ネット予約 — お客様自身で予約完了",
     "ogDescription": "お客様がQRメニューやウェブサイトから予約。カレンダー管理、自動承認、リマインダー機能で予約の取りこぼしを防ぎます。",
-    "brandLine": "IQ Rest — 飲食店向けテーブル予約"
+    "brandLine": "QRgine — 飲食店向けテーブル予約"
   },
   "hero": {
     "headline": "24時間ネット予約、",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "2台のタブレットに表示されたIQ Rest管理画面の予約カレンダー：テーブル別の日間グリッドと月間カレンダー"
+        "alt": "2台のタブレットに表示されたQRgine管理画面の予約カレンダー：テーブル別の日間グリッドと月間カレンダー"
       }
     }
   ],
   "faq": {
-    "sub": "IQ Restのネット予約について飲食店の方からよくいただく質問です。解決しない場合はWhatsAppでお問い合わせください。",
+    "sub": "QRgineのネット予約について飲食店の方からよくいただく質問です。解決しない場合はWhatsAppでお問い合わせください。",
     "items": [
       {
         "q": "予約を受け付ける曜日や時間を指定できますか？",

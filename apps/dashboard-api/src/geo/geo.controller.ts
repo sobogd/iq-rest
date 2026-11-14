@@ -6,7 +6,7 @@ import { getRequestCountry, getRequestCurrency, getRequestBillingCurrency } from
 export class GeoController {
   @Get("currency")
   async currency(@Req() req: Request) {
-    // `currency` = public-menu currency (broad); `billingCurrency` = IQ Rest
+    // `currency` = public-menu currency (broad); `billingCurrency` = QRgine
     // subscription currency (EUR/NOK/SEK/DKK).
     return {
       country: getRequestCountry(req),

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Traducerea meniului: ce traduci și ce nu | IQ Rest",
+    "title": "Traducerea meniului: ce traduci și ce nu | QRgine",
     "description": "De ce traducerea automată a numelor preparatelor iese prost, ce părți din meniu rămân în limba originală și cum ții patru limbi fără patru meniuri."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "Un [meniu digital](route:/digital-menu) inversează asta. Telefonul clientului își anunță deja limba, așa că meniul se deschide în cea corectă fără ca cineva să aleagă. IQ Rest traduce meniul automat și, pentru că traducerile sunt legate de preparat, o singură schimbare de preț îl schimbă în toate limbile. Adăugarea unei a cincea limbi nu costă nimic și nu cere retipărire."
+      "text": "Un [meniu digital](route:/digital-menu) inversează asta. Telefonul clientului își anunță deja limba, așa că meniul se deschide în cea corectă fără ca cineva să aleagă. QRgine traduce meniul automat și, pentru că traducerile sunt legate de preparat, o singură schimbare de preț îl schimbă în toate limbile. Adăugarea unei a cincea limbi nu costă nimic și nu cere retipărire."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Un meniu, toate limbile",
-      "text": "IQ Rest îți traduce meniul automat și îl deschide în limba clientului. Schimbi un preț o dată și se actualizează toate limbile. 14 zile gratuit.",
+      "text": "QRgine îți traduce meniul automat și îl deschide în limba clientului. Schimbi un preț o dată și se actualizează toate limbile. 14 zile gratuit.",
       "buttonLabel": "Vezi traducerea automată",
       "routeKey": "/digital-menu"
     },

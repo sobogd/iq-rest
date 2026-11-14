@@ -3,13 +3,13 @@
   "slug": "shu-zi-cai-dan-can-ting",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "餐厅电子菜单 | IQ Rest",
+    "title": "餐厅电子菜单 | QRgine",
     "description": "专为餐厅打造的电子菜单：带照片、过敏原、AI翻译和实时价格更新的在线菜单。免费试用14天，无需信用卡。",
     "canonical": "https://iq-rest.com/zh/shu-zi-cai-dan-can-ting",
     "ogLocale": "zh_CN",
     "ogTitle": "餐厅电子菜单",
     "ogDescription": "纸质菜单的在线版本，包含照片、过敏原和AI翻译。价格实时更新。",
-    "brandLine": "IQ Rest — 餐厅电子菜单"
+    "brandLine": "QRgine — 餐厅电子菜单"
   },
   "hero": {
     "headline": "电子菜单与网站",
@@ -166,7 +166,7 @@
     "heading": "餐厅选择我们的原因，",
     "headingAccent": "而不是其他系统",
     "sub": "多数菜单工具止步于一个二维码。下面列出的是日常运营中真正不同的地方。我们不点名，您可以拿任何系统来对比。",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "其他系统",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "餐饮老板关于 IQ Rest 电子菜单的常见问题。如果没找到答案——请在WhatsApp上联系我们。",
+    "sub": "餐饮老板关于 QRgine 电子菜单的常见问题。如果没找到答案——请在WhatsApp上联系我们。",
     "items": [
       {
         "q": "我需要技术背景或CMS经验吗？",
         "a": "不需要特殊技能。管理后台的所有操作只需点击几下——无需写代码，无需处理源文件。添加菜品只需几秒钟：名称、价格、照片。完整的菜单设置通常在30-60分钟内搞定。"
       },
       {
-        "q": "什么是 IQ Rest 电子菜单？",
+        "q": "什么是 QRgine 电子菜单？",
         "a": "这是您菜单的在线版本，顾客可通过QR码或直接链接访问：包含菜品照片、价格、过敏原、35种语言的AI翻译以及实时更新。菜单在我们的服务器上运行——无需安装或维护软件，只需一个浏览器即可。"
       },
       {

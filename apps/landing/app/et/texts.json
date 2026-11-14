@@ -2,7 +2,7 @@
   "htmlLang": "et",
   "htmlDir": "ltr",
   "meta": {
-    "title": "Digimenüü, köögiekraan ja broneeringud — IQ Rest",
+    "title": "Digimenüü, köögiekraan ja broneeringud — QRgine",
     "description": "Juhi oma restorani ühest rakendusest: mitmekeelne digimenüü, köögiekraan ja 24/7 broneeringud. Käivita 5 minutiga. 14 päeva tasuta, kaarti pole vaja.",
     "canonical": "https://iq-rest.com/et",
     "ogLocale": "et_EE",
@@ -10,7 +10,7 @@
     "ogDescription": "Juhi oma restorani ühest rakendusest: mitmekeelne digimenüü, köögiekraan ja 24/7 broneeringud. Käivita 5 minutiga. 14 päeva tasuta, kaarti pole vaja."
   },
   "jsonLd": {
-    "appName": "IQ Rest — Restoranihaldusplatvorm"
+    "appName": "QRgine — Restoranihaldusplatvorm"
   },
   "ctaText": "Proovi tasuta",
   "homeCtaText": "Proovi tasuta",
@@ -82,7 +82,7 @@
     "quoteStart": "Pidasime abikaasaga oma kohvikut ja teame restorani argipäeva seestpoolt: tellimuste vastuvõtmine, broneeringud, saali- ja köögitöö. Otsisime ühte tööriista — kaasaegset, lihtsalt seadistatavat ja esmapilgul arusaadavat —",
     "quoteAccent": "nii sündiski idee platvormist, mida me nüüd teistele restoranipidajatele arendame.",
     "sign": "Bogdan Sokolov · asutaja, endine kohvikuomanik",
-    "photoAlt": "Bogdan Sokolov, IQ Resti asutaja"
+    "photoAlt": "Bogdan Sokolov, QRginei asutaja"
   },
   "pricing": {
     "badge": "Ei mingeid vahendustasusid ega lepinguid",
@@ -108,7 +108,7 @@
     "headingAccent": "küsimused",
     "sub": "Mida restoranipidajad enne liitumist kõige sagedamini küsivad. Kui sa ei leia oma küsimusele vastust — kirjuta meile WhatsAppi, vastab päris inimene, mitte robot.",
     "whatsappCta": "Kirjuta meile WhatsAppi",
-    "whatsappPrefill": "Tere, mul on küsimus IQ Resti kohta",
+    "whatsappPrefill": "Tere, mul on küsimus QRginei kohta",
     "items": [
       {
         "q": "Mida prooviperiood sisaldab ja mis saab pärast selle lõppu?",
@@ -192,7 +192,7 @@
     "button": "Pane pakett kokku"
   },
   "footer": {
-    "copyrightTemplate": "© {year} IQ Rest. Kõik õigused kaitstud.",
+    "copyrightTemplate": "© {year} QRgine. Kõik õigused kaitstud.",
     "featuresHeading": "Võimalused",
     "featureLinks": [
       {
@@ -260,7 +260,7 @@
     }
   },
   "blog": {
-    "metaTitle": "Restoranitehnoloogia blogi — IQ Rest",
+    "metaTitle": "Restoranitehnoloogia blogi — QRgine",
     "metaDescription": "Juhendid ja võrdlused digimenüüdest, QR-tellimustest, köögiekraanidest ja broneeringutest — praktiline lugemine restoranipidajatele.",
     "title": "Blogi",
     "intro": "Juhendid ja võrdlused digimenüüdest, QR-tellimustest, köögiekraanidest ja restorani igapäevatööst.",

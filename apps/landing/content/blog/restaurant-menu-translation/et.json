@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Menüü tõlkimine: mida tõlkida ja mida mitte | IQ Rest",
+    "title": "Menüü tõlkimine: mida tõlkida ja mida mitte | QRgine",
     "description": "Miks roanimede masintõlge untsu läheb, millised menüü osad jäävad algkeelde ja kuidas pidada nelja keelt ilma nelja menüüta."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "[Digitaalne menüü](route:/digital-menu) pöörab selle ümber. Külalise telefon teatab oma keele niikuinii, seega avaneb menüü õiges keeles, ilma et keegi valiks. IQ Rest tõlgib menüü automaatselt, ja kuna tõlked on roa küljes, muudab üks hinnamuutus kõik keeled. Viienda keele lisamine ei maksa midagi ega nõua kordustrükki."
+      "text": "[Digitaalne menüü](route:/digital-menu) pöörab selle ümber. Külalise telefon teatab oma keele niikuinii, seega avaneb menüü õiges keeles, ilma et keegi valiks. QRgine tõlgib menüü automaatselt, ja kuna tõlked on roa küljes, muudab üks hinnamuutus kõik keeled. Viienda keele lisamine ei maksa midagi ega nõua kordustrükki."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Üks menüü, kõik keeled",
-      "text": "IQ Rest tõlgib su menüü automaatselt ja avab selle külalise keeles. Muudad hinda korra ja kõik keeled uuenevad. 14 päeva tasuta.",
+      "text": "QRgine tõlgib su menüü automaatselt ja avab selle külalise keeles. Muudad hinda korra ja kõik keeled uuenevad. 14 päeva tasuta.",
       "buttonLabel": "Vaata automaatset tõlget",
       "routeKey": "/digital-menu"
     },

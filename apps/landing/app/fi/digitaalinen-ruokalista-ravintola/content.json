@@ -3,13 +3,13 @@
   "slug": "digitaalinen-ruokalista-ravintola",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digitaalinen ruokalista ravintoloille | IQ Rest",
+    "title": "Digitaalinen ruokalista ravintoloille | QRgine",
     "description": "Digitaalinen ruokalista ravintolaasi: verkkoruokalista kuvilla, allergeeneilla ja tekoälykäännöksillä. Hinnat päivittyvät reaaliajassa. 14 päivää ilmaiseksi.",
     "canonical": "https://iq-rest.com/fi/digitaalinen-ruokalista-ravintola",
     "ogLocale": "fi_FI",
     "ogTitle": "Digitaalinen ruokalista ravintoloille",
     "ogDescription": "Verkkoversio paperisesta ruokalistastasi kuvilla, allergeeneilla ja tekoälykäännöksillä. Hinnat päivittyvät reaaliajassa.",
-    "brandLine": "IQ Rest — Digitaalinen ruokalista ravintoloille"
+    "brandLine": "QRgine — Digitaalinen ruokalista ravintoloille"
   },
   "hero": {
     "headline": "Digitaalinen ruokalista ja verkkosivut",
@@ -166,7 +166,7 @@
     "heading": "Miksi ravintolat valitsevat meidät",
     "headingAccent": "muiden järjestelmien sijaan",
     "sub": "Useimmat ruokalistatyökalut jäävät QR-koodiin. Alla on se, mikä arjessa oikeasti eroaa. Ei nimiä — vertaa itse mihin tahansa järjestelmään.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Muut järjestelmät",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Mitä ravintoloitsijat kysyvät IQ Restin digitaalisesta ruokalistasta. Jos kysymystäsi ei löydy — laita viestiä WhatsAppissa.",
+    "sub": "Mitä ravintoloitsijat kysyvät QRginein digitaalisesta ruokalistasta. Jos kysymystäsi ei löydy — laita viestiä WhatsAppissa.",
     "items": [
       {
         "q": "Tarvitsenko teknistä osaamista tai kokemusta julkaisujärjestelmistä?",
         "a": "Erityistaitoja ei tarvita. Kaikki hallintapaneelissa hoituu parilla napautuksella — ei koodausta, ei tiedostojen pyörittelyä. Annoksen lisääminen vie sekunteja: nimi, hinta, kuva. Koko ruokalistan pystytys vie yleensä 30–60 minuuttia."
       },
       {
-        "q": "Mikä on IQ Restin digitaalinen ruokalista?",
+        "q": "Mikä on QRginein digitaalinen ruokalista?",
         "a": "Se on verkkoversio ruokalistastasi, joka on asiakkaiden saatavilla QR-koodilla tai suoralla linkillä: annoskuvat, hinnat, allergeenit, tekoälykäännös 35 kielelle ja reaaliaikaiset päivitykset. Ruokalista pyörii meidän palvelimillamme — mitään ohjelmistoja ei tarvitse asentaa tai ylläpitää, selain riittää."
       },
       {

@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "O IQ Rest-u — Ko smo mi, kontakti i pravni podaci",
-    "description": "Ko stoji iza IQ Rest-a, kako da nas kontaktirate i podaci o operateru usluge: email, WhatsApp, pravne informacije.",
+    "title": "O QRgine-u — Ko smo mi, kontakti i pravni podaci",
+    "description": "Ko stoji iza QRgine-a, kako da nas kontaktirate i podaci o operateru usluge: email, WhatsApp, pravne informacije.",
     "canonical": "https://iq-rest.com/sr/about",
     "ogLocale": "sr_RS",
-    "ogTitle": "O IQ Rest-u",
-    "ogDescription": "Ko stoji iza IQ Rest-a, kontakti za podršku i pravni podaci operatera usluge."
+    "ogTitle": "O QRgine-u",
+    "ogDescription": "Ko stoji iza QRgine-a, kontakti za podršku i pravni podaci operatera usluge."
   },
   "heading": "Od sopstvenog kafića",
   "headingAccent": "do platforme za restorane",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "lokala radi na IQ Rest-u"
+      "label": "lokala radi na QRgine-u"
     },
     {
       "value": "15",
       "label": "zemalja u kojima su naši klijenti"
     }
   ],
-  "waPrefill": "Zdravo, imam pitanje o IQ Rest",
+  "waPrefill": "Zdravo, imam pitanje o QRgine",
   "contacts": [
     {
       "icon": "Mail",

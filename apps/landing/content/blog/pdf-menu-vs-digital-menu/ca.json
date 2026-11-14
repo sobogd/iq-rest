@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Un QR a un PDF no és una carta digital | IQ Rest",
+    "title": "Un QR a un PDF no és una carta digital | QRgine",
     "description": "Un codi QR que apunta a un PDF és el muntatge més comú i el pitjor. Què et costa en lectura, actualitzacions, al·lèrgens i comandes."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Fes una foto de la carta en paper, o puja el mateix PDF.",
-        "IQ Rest el llegeix i crea les categories, els plats i els preus: uns cinc minuts en lloc d'una tarda sencera.",
+        "QRgine el llegeix i crea les categories, els plats i els preus: uns cinc minuts en lloc d'una tarda sencera.",
         "Revisa els preus i corregeix el que l'escaneig hagi llegit malament.",
         "Apunta els teus codis QR actuals a la nova carta, o imprimeix-ne de nous per taula."
       ]

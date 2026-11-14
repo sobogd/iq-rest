@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "QR menü gerçekte ne kadara mal olur | IQ Rest",
+    "title": "QR menü gerçekte ne kadara mal olur | QRgine",
     "description": "QR kodlu menünün gerçek maliyeti: ücretsiz araçlar, aylık abonelikler, şube başına fiyat, sipariş komisyonları ve gizli kurulum süresi."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest üçüncü satırda: **şube başına ayda 9,90 €'dan başlar**, siparişlerden komisyon yok, kartsız 14 gün ücretsiz. Garson başına değil işletme başına ücretlendiriyoruz, çünkü kullanıcı başına ücretlendirme tam da personel devri en yüksek işletmeleri cezalandırır."
+      "text": "QRgine üçüncü satırda: **şube başına ayda 9,90 €'dan başlar**, siparişlerden komisyon yok, kartsız 14 gün ücretsiz. Garson başına değil işletme başına ücretlendiriyoruz, çünkü kullanıcı başına ücretlendirme tam da personel devri en yüksek işletmeleri cezalandırır."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "Menü içe aktarımının kulağa geldiğinden önemli olmasının sebebi budur. IQ Rest kâğıt menünüzün fotoğrafını okuyup kalemleri otomatik oluşturur, böylece o yarım gün yaklaşık beş dakikaya iner. Araçları karşılaştırırken kurulum süresini de hesaba katın; çoğu zaman ilk yılın abonelik bedelinden ağır basar."
+      "text": "Menü içe aktarımının kulağa geldiğinden önemli olmasının sebebi budur. QRgine kâğıt menünüzün fotoğrafını okuyup kalemleri otomatik oluşturur, böylece o yarım gün yaklaşık beş dakikaya iner. Araçları karşılaştırırken kurulum süresini de hesaba katın; çoğu zaman ilk yılın abonelik bedelinden ağır basar."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "QR kodlu menü ayda ne kadar tutar?",
-          "a": "Sabit abonelikli araçlar genelde şube başına ayda 10-40 € arasındadır. IQ Rest, siparişlerden komisyon almadan 9,90 €'dan başlar."
+          "a": "Sabit abonelikli araçlar genelde şube başına ayda 10-40 € arasındadır. QRgine, siparişlerden komisyon almadan 9,90 €'dan başlar."
         },
         {
           "q": "Ücretsiz QR kodlu menü var mı?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Masa başına mı restoran başına mı ödeme yapılır?",
-          "a": "IQ Rest'te restoran başına — masa ve QR kod sınırı yok. Herhangi bir yerde imzalamadan önce bunu kontrol edin, çünkü masa ya da kullanıcı başına fiyatlandırma çok kötü ölçeklenir."
+          "a": "QRgine'te restoran başına — masa ve QR kod sınırı yok. Herhangi bir yerde imzalamadan önce bunu kontrol edin, çünkü masa ya da kullanıcı başına fiyatlandırma çok kötü ölçeklenir."
         },
         {
           "q": "Kurulum ücreti var mı?",

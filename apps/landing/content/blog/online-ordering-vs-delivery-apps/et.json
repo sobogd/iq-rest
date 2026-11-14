@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Oma tellimisleht vs toidukullerirakendused: päris numbrid | IQ Rest",
+    "title": "Oma tellimisleht vs toidukullerirakendused: päris numbrid | QRgine",
     "description": "Mida platvormi komisjon tellimuse kohta maksab, mitu tellimust oma kanalis katab kulud ja miks enamik restorane peaks kasutama mõlemat."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Kas otsetellimuste jaoks on vaja veebilehte?",
-          "a": "Ei. IQ Rest annab sulle majutatud tellimislehe oma aadressiga, millele saad viidata Google'ist, Instagramist või laual olevast QR-koodist."
+          "a": "Ei. QRgine annab sulle majutatud tellimislehe oma aadressiga, millele saad viidata Google'ist, Instagramist või laual olevast QR-koodist."
         }
       ]
     }

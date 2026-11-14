@@ -3,13 +3,13 @@
   "slug": "staliuku-rezervacija",
   "trackPrefix": "l_bookings",
   "meta": {
-    "title": "Staliukų rezervacijos restoranams 24/7 | IQ Rest",
+    "title": "Staliukų rezervacijos restoranams 24/7 | QRgine",
     "description": "Staliukų rezervacijos 24/7: svečiai patys rezervuoja staliuką per QR meniu arba svetainę. Kalendorius, automatiniai patvirtinimai ir priminimai. 14 dienų nemokamai.",
     "canonical": "https://iq-rest.com/lt/staliuku-rezervacija",
     "ogLocale": "lt_LT",
     "ogTitle": "Staliukų rezervacijos 24/7 — Svečiai rezervuoja patys",
     "ogDescription": "Svečiai rezervuoja staliukus per QR meniu arba svetainę. Kalendorius, automatiniai patvirtinimai, priminimai. Nė vieno prarasto svečio.",
-    "brandLine": "IQ Rest — Staliukų rezervacijos restoranams"
+    "brandLine": "QRgine — Staliukų rezervacijos restoranams"
   },
   "hero": {
     "headline": "Staliukų rezervacijos 24/7,",
@@ -78,12 +78,12 @@
       ],
       "image": {
         "src": "/landing/feature-booking-calendar.webp",
-        "alt": "Rezervacijų kalendorius IQ Rest valdymo skydelyje dviejose planšetėse: dienos tinklelis pagal staliukus ir mėnesio kalendorius"
+        "alt": "Rezervacijų kalendorius QRgine valdymo skydelyje dviejose planšetėse: dienos tinklelis pagal staliukus ir mėnesio kalendorius"
       }
     }
   ],
   "faq": {
-    "sub": "Ko restoranų savininkai klausia apie staliukų rezervacijas IQ Rest. Jei jūsų klausimo nėra – parašykite mums WhatsApp.",
+    "sub": "Ko restoranų savininkai klausia apie staliukų rezervacijas QRgine. Jei jūsų klausimo nėra – parašykite mums WhatsApp.",
     "items": [
       {
         "q": "Ar galiu pasirinkti dienas ir laikus, kada galima rezervuoti?",

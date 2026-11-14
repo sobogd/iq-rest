@@ -2,11 +2,11 @@
   "companyDefaultName": "Mi Restaurante",
   "otpEmail": {
     "subject": "Tu código: {code}",
-    "intro": "Aquí tienes tu código de un solo uso para iniciar sesión en IQ Rest:",
+    "intro": "Aquí tienes tu código de un solo uso para iniciar sesión en QRgine:",
     "expiry": "El código caduca en 5 minutos. Si no lo has solicitado, simplemente ignora este correo."
   },
   "supportEmail": {
-    "subject": "Nuevo mensaje del soporte de IQ Rest",
+    "subject": "Nuevo mensaje del soporte de QRgine",
     "title": "Nuevo mensaje de soporte",
     "body": "Nuestro equipo de soporte te ha enviado un nuevo mensaje. Abre el chat de soporte en tu panel de control para leerlo y responder.",
     "cta": "Abrir chat de soporte"

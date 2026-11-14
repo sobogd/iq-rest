@@ -7,13 +7,13 @@
     "sub": "Gach rud a thagann as scanadh amháin do d'aíonna agus do d'fhoireann."
   },
   "meta": {
-    "title": "Biachlár QR do Bhialanna | IQ Rest",
+    "title": "Biachlár QR do Bhialanna | QRgine",
     "description": "Biachlár QR do bhialanna: scanann aíonna an cód QR ar an mbord, osclaíonn siad an biachlár agus ordaíonn siad ina dteanga féin. 14 lá saor in aisce.",
     "canonical": "https://iq-rest.com/ga/biachlar-qr-coda-bialann",
     "ogLocale": "ga_IE",
     "ogTitle": "Biachlár QR do Bhialanna",
     "ogDescription": "QR ar an mbord, an biachlár ar an bhfón — grianghraif, ailléirginí, 35 teanga agus nuashonruithe fíor-ama.",
-    "brandLine": "IQ Rest — Biachlár QR do Bhialanna"
+    "brandLine": "QRgine — Biachlár QR do Bhialanna"
   },
   "hero": {
     "headline": "Biachlár QR:\nscan agus ordaigh",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoi bhiachlár QR IQ Rest. Ní bhfaigheann tú do cheist? Seol teachtaireacht chugainn ar WhatsApp.",
+    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoi bhiachlár QR QRgine. Ní bhfaigheann tú do cheist? Seol teachtaireacht chugainn ar WhatsApp.",
     "items": [
       {
-        "q": "Conas a oibríonn biachlár QR IQ Rest?",
+        "q": "Conas a oibríonn biachlár QR QRgine?",
         "a": "Tá cód QR clóite ag gach bord. Scanann aíonna é le ceamara a bhfóin, agus osclaíonn an brabhsálaí biachlár na bialainne — grianghraif, tuairiscí, ailléirginí agus praghsanna cothrom le dáta. Níl aon aip le híoslódáil d'aíonna ná don fhoireann."
       },
       {

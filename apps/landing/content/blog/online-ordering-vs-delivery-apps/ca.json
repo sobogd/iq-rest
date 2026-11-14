@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Comandes pròpies vs apps de repartiment: els números | IQ Rest",
+    "title": "Comandes pròpies vs apps de repartiment: els números | QRgine",
     "description": "Què costa la comissió del marketplace per comanda, quantes comandes calen al teu canal propi per cobrir despeses i per què gairebé tots els restaurants haurien de fer servir tots dos."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Necessito un web per rebre comandes directes?",
-          "a": "No. IQ Rest et dona una pàgina de comandes allotjada amb adreça pròpia, que pots enllaçar des de Google, Instagram o un codi QR a taula."
+          "a": "No. QRgine et dona una pàgina de comandes allotjada amb adreça pròpia, que pots enllaçar des de Google, Instagram o un codi QR a taula."
         }
       ]
     }

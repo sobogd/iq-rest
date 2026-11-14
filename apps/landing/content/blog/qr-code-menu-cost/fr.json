@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Combien coûte vraiment un menu QR | IQ Rest",
+    "title": "Combien coûte vraiment un menu QR | QRgine",
     "description": "Ce que coûte réellement un menu QR code : outils gratuits, abonnements, tarif par établissement, commissions sur commandes et le temps de mise en place."
   },
   "card": {
@@ -51,7 +51,7 @@
     },
     {
       "type": "p",
-      "text": "IQ Rest est sur la troisième ligne : **à partir de 9,90 € par mois et par établissement**, sans commission sur les commandes, 14 jours gratuits sans carte bancaire. Nous facturons l'établissement, pas le serveur, parce que facturer par utilisateur pénalise justement les établissements où le personnel tourne le plus."
+      "text": "QRgine est sur la troisième ligne : **à partir de 9,90 € par mois et par établissement**, sans commission sur les commandes, 14 jours gratuits sans carte bancaire. Nous facturons l'établissement, pas le serveur, parce que facturer par utilisateur pénalise justement les établissements où le personnel tourne le plus."
     },
     {
       "type": "h2",
@@ -63,7 +63,7 @@
     },
     {
       "type": "p",
-      "text": "C'est pourquoi l'import de la carte compte plus qu'il n'y paraît. IQ Rest lit une photo de votre carte papier et crée les plats automatiquement, ce qui transforme cette demi-journée en cinq minutes environ. Comptez le temps de mise en place quand vous comparez les outils ; il pèse souvent plus que la première année d'abonnement."
+      "text": "C'est pourquoi l'import de la carte compte plus qu'il n'y paraît. QRgine lit une photo de votre carte papier et crée les plats automatiquement, ce qui transforme cette demi-journée en cinq minutes environ. Comptez le temps de mise en place quand vous comparez les outils ; il pèse souvent plus que la première année d'abonnement."
     },
     {
       "type": "h2",
@@ -165,7 +165,7 @@
       "items": [
         {
           "q": "Combien coûte un menu QR code par mois ?",
-          "a": "Les outils à abonnement forfaitaire vont généralement de 10 à 40 € par établissement et par mois. IQ Rest démarre à 9,90 € sans commission sur les commandes."
+          "a": "Les outils à abonnement forfaitaire vont généralement de 10 à 40 € par établissement et par mois. QRgine démarre à 9,90 € sans commission sur les commandes."
         },
         {
           "q": "Existe-t-il un menu QR code gratuit ?",
@@ -173,7 +173,7 @@
         },
         {
           "q": "Je paie par table ou par restaurant ?",
-          "a": "Avec IQ Rest, par restaurant : tables et QR codes illimités. Vérifiez-le avant de signer ailleurs, car la tarification par table ou par utilisateur passe mal à l'échelle."
+          "a": "Avec QRgine, par restaurant : tables et QR codes illimités. Vérifiez-le avant de signer ailleurs, car la tarification par table ou par utilisateur passe mal à l'échelle."
         },
         {
           "q": "Y a-t-il des frais de mise en service ?",

@@ -2,11 +2,11 @@
   "companyDefaultName": "Mijn restaurant",
   "otpEmail": {
     "subject": "Je code: {code}",
-    "intro": "Hier is je eenmalige code om in te loggen bij IQ Rest:",
+    "intro": "Hier is je eenmalige code om in te loggen bij QRgine:",
     "expiry": "De code is 5 minuten geldig. Heb je deze niet aangevraagd? Negeer deze e-mail dan gewoon."
   },
   "supportEmail": {
-    "subject": "Nieuw bericht van IQ Rest-support",
+    "subject": "Nieuw bericht van QRgine-support",
     "title": "Nieuw bericht van support",
     "body": "Ons supportteam heeft je een nieuw bericht gestuurd. Open de supportchat in je dashboard om het te lezen en te beantwoorden.",
     "cta": "Supportchat openen"

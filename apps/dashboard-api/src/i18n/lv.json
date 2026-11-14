@@ -2,11 +2,11 @@
   "companyDefaultName": "Mans uzņēmums",
   "otpEmail": {
     "subject": "Jūsu kods: {code}",
-    "intro": "Šeit ir jūsu vienreizējais kods, lai pierakstītos IQ Rest:",
+    "intro": "Šeit ir jūsu vienreizējais kods, lai pierakstītos QRgine:",
     "expiry": "Kods ir derīgs 5 minūtes. Ja jūs to nepieprasījāt, vienkārši ignorējiet šo e-pastu."
   },
   "supportEmail": {
-    "subject": "Jauna ziņa no IQ Rest atbalsta dienesta",
+    "subject": "Jauna ziņa no QRgine atbalsta dienesta",
     "title": "Jauna ziņa no atbalsta dienesta",
     "body": "Mūsu atbalsta komanda jums ir nosūtījusi jaunu ziņu. Atveriet atbalsta tērzēšanu savā panelī, lai to izlasītu un atbildētu.",
     "cta": "Atvērt atbalsta tērzēšanu"

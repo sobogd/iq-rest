@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digital Menu vs Paper Menu: Real Costs Compared | IQ Rest",
+    "title": "Digital Menu vs Paper Menu: Real Costs Compared | QRgine",
     "description": "What a paper menu really costs a restaurant vs a QR digital menu: printing, updates, translations, ordering speed. Side-by-side comparison with numbers."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Scan your paper menu — IQ Rest reads it and builds the digital menu automatically.",
+        "Scan your paper menu — QRgine reads it and builds the digital menu automatically.",
         "Check prices, add photos where they matter.",
         "Print one QR code per table.",
         "Update anything, any time, from your phone."

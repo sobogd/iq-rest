@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Carta QR gratis: qué es gratis de verdad | IQ Rest",
+    "title": "Carta QR gratis: qué es gratis de verdad | QRgine",
     "description": "Las cartas QR gratuitas existen y algunas están bien. Cómo ganan dinero, qué límite te frena primero y cuándo lo gratis es la opción correcta."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Plan gratuito típico",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "¿Es lo mismo una prueba gratuita que un plan gratuito?",
-          "a": "No. Una prueba es el producto completo durante un tiempo limitado; un plan gratuito es un producto limitado para siempre. IQ Rest ofrece 14 días de prueba con todo activado y sin tarjeta."
+          "a": "No. Una prueba es el producto completo durante un tiempo limitado; un plan gratuito es un producto limitado para siempre. QRgine ofrece 14 días de prueba con todo activado y sin tarjeta."
         },
         {
           "q": "¿Cuál es la carta QR de pago más barata?",
-          "a": "Los planes planos suelen empezar en torno a 10 € al mes por local. IQ Rest arranca en 9,90 €: el desglose completo está en [lo que cuesta una carta con código QR](blog:qr-code-menu-cost)."
+          "a": "Los planes planos suelen empezar en torno a 10 € al mes por local. QRgine arranca en 9,90 €: el desglose completo está en [lo que cuesta una carta con código QR](blog:qr-code-menu-cost)."
         },
         {
           "q": "¿Puedo mover mi carta de una herramienta gratuita a una de pago?",
-          "a": "Normalmente sí, y rara vez tienes que volver a teclearla: IQ Rest puede leer una foto o un PDF de la carta existente y reconstruir los platos en unos cinco minutos."
+          "a": "Normalmente sí, y rara vez tienes que volver a teclearla: QRgine puede leer una foto o un PDF de la carta existente y reconstruir los platos en unos cinco minutos."
         }
       ]
     }

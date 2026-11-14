@@ -3,13 +3,13 @@
   "slug": "keittion-naytto",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "KDS-keittiönäyttö ravintoloille | IQ Rest",
+    "title": "KDS-keittiönäyttö ravintoloille | QRgine",
     "description": "KDS-keittiönäyttö ravintoloille: tilaukset salista ja QR-ruokalistalta suoraan kokin ruudulle. Sarakkeet pöydittäin, tilat ja suodattimet. Toimii tabletilla.",
     "canonical": "https://iq-rest.com/fi/keittion-naytto",
     "ogLocale": "fi_FI",
     "ogTitle": "KDS-keittiönäyttö — Tilaukset suoraan kokin ruudulle",
     "ogDescription": "Tilaukset salista kokin ruudulle. Sarakkeet pöydittäin, tilat ja ajastin. Tila vaihtuu yhdellä napautuksella.",
-    "brandLine": "IQ Rest — Keittiönäyttö ravintoloille"
+    "brandLine": "QRgine — Keittiönäyttö ravintoloille"
   },
   "hero": {
     "headline": "KDS-keittiönäyttö:",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Mitä ravintoloitsijat kysyvät IQ Restin keittiönäytöstä. Jos kysymystäsi ei löydy — laita viestiä WhatsAppissa.",
+    "sub": "Mitä ravintoloitsijat kysyvät QRginein keittiönäytöstä. Jos kysymystäsi ei löydy — laita viestiä WhatsAppissa.",
     "items": [
       {
         "q": "Mitä tiloja keittiön annoksilla on?",

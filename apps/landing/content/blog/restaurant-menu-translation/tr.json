@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Menü çevirisi: neyi çevirmeli, neyi çevirmemeli | IQ Rest",
+    "title": "Menü çevirisi: neyi çevirmeli, neyi çevirmemeli | QRgine",
     "description": "Yemek adlarını makineyle çevirmek neden ters teper, menünün hangi bölümleri özgün dilinde kalmalı ve dört menü olmadan dört dil nasıl yürütülür."
   },
   "card": {
@@ -131,7 +131,7 @@
     },
     {
       "type": "p",
-      "text": "[Dijital menü](route:/digital-menu) bunu tersine çevirir. Misafirin telefonu dilini zaten bildirir, dolayısıyla menü kimse seçim yapmadan doğru dilde açılır. IQ Rest menüyü otomatik çevirir ve çeviriler ürüne bağlı olduğu için tek bir fiyat değişikliği bütün dilleri değiştirir. Beşinci dili eklemek hiçbir şeye mal olmaz ve yeniden basım gerektirmez."
+      "text": "[Dijital menü](route:/digital-menu) bunu tersine çevirir. Misafirin telefonu dilini zaten bildirir, dolayısıyla menü kimse seçim yapmadan doğru dilde açılır. QRgine menüyü otomatik çevirir ve çeviriler ürüne bağlı olduğu için tek bir fiyat değişikliği bütün dilleri değiştirir. Beşinci dili eklemek hiçbir şeye mal olmaz ve yeniden basım gerektirmez."
     },
     {
       "type": "h2",
@@ -154,7 +154,7 @@
     {
       "type": "cta",
       "heading": "Tek menü, bütün diller",
-      "text": "IQ Rest menünüzü otomatik çevirir ve misafirin kendi dilinde açar. Fiyatı bir kez değiştirin, bütün diller güncellensin. 14 gün ücretsiz.",
+      "text": "QRgine menünüzü otomatik çevirir ve misafirin kendi dilinde açar. Fiyatı bir kez değiştirin, bütün diller güncellensin. 14 gün ücretsiz.",
       "buttonLabel": "Otomatik çeviriyi görün",
       "routeKey": "/digital-menu"
     },

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Commande en propre vs applis de livraison : les chiffres | IQ Rest",
+    "title": "Commande en propre vs applis de livraison : les chiffres | QRgine",
     "description": "Ce que coûte la commission d'une marketplace par commande, combien de commandes il faut sur votre canal direct pour l'amortir, et pourquoi la plupart des restaurants devraient faire les deux."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Faut-il un site web pour prendre des commandes directes ?",
-          "a": "Non. IQ Rest vous fournit une page de commande hébergée avec sa propre adresse, que vous pouvez lier depuis Google, Instagram ou un QR code sur la table."
+          "a": "Non. QRgine vous fournit une page de commande hébergée avec sa propre adresse, que vous pouvez lier depuis Google, Instagram ou un QR code sur la table."
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Bezplatné QR menu: čo je zadarmo naozaj | IQ Rest",
+    "title": "Bezplatné QR menu: čo je zadarmo naozaj | QRgine",
     "description": "Bezplatné QR menu existujú a niektoré sú v poriadku. Ako zarábajú, ktorý limit vás zastaví prvý a kedy je zadarmo naozaj správna voľba."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Typická bezplatná úroveň",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Je bezplatná skúšobná verzia to isté ako bezplatný tarif?",
-          "a": "Nie. Skúšobné obdobie je celý produkt na obmedzený čas; bezplatný tarif je obmedzený produkt navždy. IQ Rest ponúka 14 dní skúšky so všetkým zapnutým a bez karty."
+          "a": "Nie. Skúšobné obdobie je celý produkt na obmedzený čas; bezplatný tarif je obmedzený produkt navždy. QRgine ponúka 14 dní skúšky so všetkým zapnutým a bez karty."
         },
         {
           "q": "Aké je najlacnejšie platené QR menu?",
-          "a": "Paušálne tarify obvykle začínajú okolo 10 € mesačne za prevádzku. IQ Rest štartuje na 9,90 € – celý rozpad je v texte [koľko stojí menu s QR kódom](blog:qr-code-menu-cost)."
+          "a": "Paušálne tarify obvykle začínajú okolo 10 € mesačne za prevádzku. QRgine štartuje na 9,90 € – celý rozpad je v texte [koľko stojí menu s QR kódom](blog:qr-code-menu-cost)."
         },
         {
           "q": "Môžem svoje menu presunúť z bezplatného nástroja do plateného?",
-          "a": "Zvyčajne áno a málokedy ho musíte prepisovať: IQ Rest vie prečítať fotku alebo PDF súčasného lístka a položky znova vytvoriť asi za päť minút."
+          "a": "Zvyčajne áno a málokedy ho musíte prepisovať: QRgine vie prečítať fotku alebo PDF súčasného lístka a položky znova vytvoriť asi za päť minút."
         }
       ]
     }

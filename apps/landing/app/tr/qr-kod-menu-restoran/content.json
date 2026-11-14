@@ -7,13 +7,13 @@
     "sub": "Tek bir taramanın misafirleriniz ve salonunuz için dönüştüğü her şey."
   },
   "meta": {
-    "title": "Restoranlar İçin QR Menü | IQ Rest",
+    "title": "Restoranlar İçin QR Menü | QRgine",
     "description": "Restoranlar için QR menü: misafirler masadaki QR kodu okutur, menüyü tarayıcılarında açar ve kendi dillerinde sipariş verir. 14 gün ücretsiz, kart gerekmez.",
     "canonical": "https://iq-rest.com/tr/qr-kod-menu-restoran",
     "ogLocale": "tr_TR",
     "ogTitle": "Restoranlar İçin QR Menü",
     "ogDescription": "Masada bir QR, telefonda menü — fotoğraflar, alerjenler, 35 dil ve anlık güncellemeler.",
-    "brandLine": "IQ Rest — Restoranlar İçin QR Menü"
+    "brandLine": "QRgine — Restoranlar İçin QR Menü"
   },
   "hero": {
     "headline": "QR menü:\nokut ve sipariş ver",
@@ -111,10 +111,10 @@
     }
   ],
   "faq": {
-    "sub": "Restorancıların IQ Rest QR menüsü hakkında sordukları. Sorunuzu bulamadınız mı? Bize WhatsApp'tan yazın.",
+    "sub": "Restorancıların QRgine QR menüsü hakkında sordukları. Sorunuzu bulamadınız mı? Bize WhatsApp'tan yazın.",
     "items": [
       {
-        "q": "IQ Rest QR menüsü nasıl çalışır?",
+        "q": "QRgine QR menüsü nasıl çalışır?",
         "a": "Her masada basılı bir QR kod bulunur. Misafirler telefon kamerasıyla okutur ve tarayıcıda restoranın menüsü açılır — fotoğraflar, açıklamalar, alerjenler ve güncel fiyatlar. Misafirler veya personel için indirilecek bir uygulama yoktur."
       },
       {

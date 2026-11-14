@@ -2,11 +2,11 @@
   "companyDefaultName": "Restaurantul meu",
   "otpEmail": {
     "subject": "Codul tău: {code}",
-    "intro": "Iată codul tău de unică folosință pentru a te conecta la IQ Rest:",
+    "intro": "Iată codul tău de unică folosință pentru a te conecta la QRgine:",
     "expiry": "Codul este valabil 5 minute. Dacă nu l-ai solicitat, poți ignora acest e-mail."
   },
   "supportEmail": {
-    "subject": "Mesaj nou de la suportul IQ Rest",
+    "subject": "Mesaj nou de la suportul QRgine",
     "title": "Mesaj nou de la suport",
     "body": "Echipa noastră de suport ți-a trimis un mesaj nou. Deschide chatul de suport din panoul de control pentru a-l citi și a răspunde.",
     "cta": "Deschide chatul de suport"

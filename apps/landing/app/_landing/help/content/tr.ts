@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // TR help guide.
 export const tr: HelpDoc = {
-  metaTitle: "IQ Rest nasıl kullanılır — adım adım kılavuz",
+  metaTitle: "QRgine nasıl kullanılır — adım adım kılavuz",
   metaDescription:
-    "Eksiksiz IQ Rest kılavuzu: kayıt, menü, siparişler, rezervasyonlar, mutfak ekranı ve ayarlar — restoranlar için.",
+    "Eksiksiz QRgine kılavuzu: kayıt, menü, siparişler, rezervasyonlar, mutfak ekranı ve ayarlar — restoranlar için.",
   h1: "Yardım",
-  intro: "IQ Rest için ayrıntılı bir kılavuz — kayıttan en ince ayarlara kadar.",
+  intro: "QRgine için ayrıntılı bir kılavuz — kayıttan en ince ayarlara kadar.",
   banner: {
     title: "Göründüğünden daha basit",
     sub: "Adım adım kılavuz: kayıttan en ince ayarlara kadar — herkes yapabilir.",
@@ -22,7 +22,7 @@ export const tr: HelpDoc = {
         { type: "h3", text: "Bu sistem nedir" },
         {
           type: "p",
-          text: "IQ Rest, restoranlar için bir hizmettir: QR kodlu bir çevrimiçi menü oluşturursunuz, siparişleri ve masa rezervasyonlarını doğrudan müşterilerin telefonundan alırsınız, mutfakta ve garsonlarda tablet terminaller çalışır. Her şey tek bir yönetim panelinden (panel) yönetilir.",
+          text: "QRgine, restoranlar için bir hizmettir: QR kodlu bir çevrimiçi menü oluşturursunuz, siparişleri ve masa rezervasyonlarını doğrudan müşterilerin telefonundan alırsınız, mutfakta ve garsonlarda tablet terminaller çalışır. Her şey tek bir yönetim panelinden (panel) yönetilir.",
         },
         { type: "h3", text: "Kayıt ve giriş" },
         { type: "p", text: "Üç şekilde giriş yapabilirsiniz — giriş ekranında herhangi birini seçin:" },

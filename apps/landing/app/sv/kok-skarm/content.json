@@ -3,13 +3,13 @@
   "slug": "kok-skarm",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Köksskärm (KDS) för restauranger | IQ Rest",
+    "title": "Köksskärm (KDS) för restauranger | QRgine",
     "description": "En KDS-köksskärm för restauranger: beställningar från matsalen och QR-menyn går direkt till kockens skärm. Kolumner per bord. Körs på surfplatta eller mobil.",
     "canonical": "https://iq-rest.com/sv/kok-skarm",
     "ogLocale": "sv_SE",
     "ogTitle": "Köksskärm (KDS) — Beställningar direkt till kockens skärm",
     "ogDescription": "Beställningar från matsalen på kockens skärm. Kolumner per bord, status och en timer. Ett tryck ändrar status.",
-    "brandLine": "IQ Rest — Köksskärm för restauranger"
+    "brandLine": "QRgine — Köksskärm för restauranger"
   },
   "hero": {
     "headline": "Köksskärm (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Vad krögare frågar om köksskärmen i IQ Rest. Om din fråga inte finns med — skicka ett meddelande på WhatsApp.",
+    "sub": "Vad krögare frågar om köksskärmen i QRgine. Om din fråga inte finns med — skicka ett meddelande på WhatsApp.",
     "items": [
       {
         "q": "Vilka statusar har rätterna i köket?",

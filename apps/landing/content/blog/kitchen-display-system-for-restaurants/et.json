@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Köögiekraan: kas vajad KDS-i? | IQ Rest",
+    "title": "Köögiekraan: kas vajad KDS-i? | QRgine",
     "description": "Mida KDS teeb, mis riistvara tegelikult maksab, kuidas seda käivitada tahvelarvutil, mis sul juba on, ja millistel köökidel on parem paberitšekkidega."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Enamik kööke seda ei vaja. IQ Resti [köögiekraan](route:/kitchen-display) töötab brauseris, seega riistvaraks võib olla tahvelarvuti, mis sul juba on, odav Android-tahvel või vana sülearvuti monitoriga. Pane see pritsmekindlasse ümbrisesse, kinnita väljapoole aurujoont, ja piirkulu on seinakinnitus."
+      "text": "Enamik kööke seda ei vaja. QRginei [köögiekraan](route:/kitchen-display) töötab brauseris, seega riistvaraks võib olla tahvelarvuti, mis sul juba on, odav Android-tahvel või vana sülearvuti monitoriga. Pane see pritsmekindlasse ümbrisesse, kinnita väljapoole aurujoont, ja piirkulu on seinakinnitus."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Kas ma saan KDS-i käivitada tavalisel tahvelarvutil?",
-          "a": "Jah. IQ Resti köögiekraan töötab brauseris, seega sobib iga viimase viie aasta tahvelarvuti või sülearvuti. Kasuta pritsmekindlat ümbrist."
+          "a": "Jah. QRginei köögiekraan töötab brauseris, seega sobib iga viimase viie aasta tahvelarvuti või sülearvuti. Kasuta pritsmekindlat ümbrist."
         },
         {
           "q": "Kas KDS vajab internetti?",

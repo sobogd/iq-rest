@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kendi sipariş sayfan vs teslimat uygulamaları: gerçek rakamlar | IQ Rest",
+    "title": "Kendi sipariş sayfan vs teslimat uygulamaları: gerçek rakamlar | QRgine",
     "description": "Platform komisyonunun sipariş başına maliyeti, kendi kanalında başa baş için kaç sipariş gerektiği ve çoğu restoranın neden ikisini birden kullanması gerektiği."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Doğrudan sipariş almak için web siteme ihtiyacım var mı?",
-          "a": "Hayır. IQ Rest sana kendi adresi olan barındırılmış bir sipariş sayfası verir; ona Google'dan, Instagram'dan ya da masadaki QR koddan bağlantı verebilirsin."
+          "a": "Hayır. QRgine sana kendi adresi olan barındırılmış bir sipariş sayfası verir; ona Google'dan, Instagram'dan ya da masadaki QR koddan bağlantı verebilirsin."
         }
       ]
     }

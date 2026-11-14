@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "PDF'e giden QR dijital menü değildir | IQ Rest",
+    "title": "PDF'e giden QR dijital menü değildir | QRgine",
     "description": "PDF'e işaret eden bir QR kod en yaygın ve en kötü dijital menü kurulumudur. Okunabilirlik, güncelleme, alerjen ve siparişte size neye mal olur."
   },
   "card": {
@@ -141,7 +141,7 @@
       "type": "steps",
       "items": [
         "Kâğıt menünün fotoğrafını çekin ya da doğrudan PDF'i yükleyin.",
-        "IQ Rest onu okur ve kategorileri, ürünleri ve fiyatları oluşturur; bir akşam yerine yaklaşık beş dakika.",
+        "QRgine onu okur ve kategorileri, ürünleri ve fiyatları oluşturur; bir akşam yerine yaklaşık beş dakika.",
         "Fiyatları kontrol edin ve okumanın yanlış anladığı yerleri düzeltin.",
         "Mevcut QR kodlarınızı yeni menüye yönlendirin ya da masa başına yenilerini basın."
       ]

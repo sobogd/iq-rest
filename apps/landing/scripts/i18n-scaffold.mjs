@@ -80,10 +80,10 @@ export const metadata: Metadata = {
     title: TEXTS.meta.ogTitle,
     description: TEXTS.meta.ogDescription,
     url: TEXTS.meta.canonical,
-    siteName: "IQ Rest",
+    siteName: "QRgine",
     locale: TEXTS.meta.ogLocale,
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: \`IQ Rest — \${PRICING_JSON.breadcrumbLabel}\` }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: \`QRgine — \${PRICING_JSON.breadcrumbLabel}\` }],
   },
   twitter: {
     card: "summary_large_image",
@@ -99,16 +99,16 @@ const JSON_LD = JSON.stringify({
     {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "IQ Rest", item: DEFAULT.meta.canonical },
+        { "@type": "ListItem", position: 1, name: "QRgine", item: DEFAULT.meta.canonical },
         { "@type": "ListItem", position: 2, name: PRICING_JSON.breadcrumbLabel, item: TEXTS.meta.canonical },
       ],
     },
     {
       "@type": "Product",
-      name: "IQ Rest",
+      name: "QRgine",
       description: TEXTS.meta.description,
       dateModified: SCHEMA_DATE_MODIFIED,
-      brand: { "@type": "Brand", name: "IQ Rest" },
+      brand: { "@type": "Brand", name: "QRgine" },
       offers: [
         { "@type": "Offer", name: "Digital menu", price: SCHEMA_PRICE_MENU_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
       ],
@@ -165,9 +165,9 @@ const JSON_LD = JSON.stringify({
   mainEntity: {
     "@type": "Organization",
     "@id": \`\${SITE}/#organization\`,
-    name: "IQ Rest",
+    name: "QRgine",
     url: SITE,
-    logo: \`\${SITE}/logo.png\`,
+    logo: \`\${SITE}/wordmark.svg\`,
     founder: { "@type": "Person", name: "Bogdan Sokolov" },
     address: {
       "@type": "PostalAddress",
@@ -200,10 +200,10 @@ export const metadata: Metadata = {
     title: ABOUT.meta.ogTitle,
     description: ABOUT.meta.ogDescription,
     url: PAGE_URL,
-    siteName: "IQ Rest",
+    siteName: "QRgine",
     locale: ABOUT.meta.ogLocale,
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QRgine" }],
   },
 };
 

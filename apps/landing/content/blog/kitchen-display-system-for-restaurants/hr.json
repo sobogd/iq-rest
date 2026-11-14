@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kuhinjski zaslon: treba li vam KDS? | IQ Rest",
+    "title": "Kuhinjski zaslon: treba li vam KDS? | QRgine",
     "description": "Što KDS radi, koliko oprema stvarno košta, kako ga pokrenuti na tabletu koji već imate i kojim je kuhinjama bolje s papirnatim narudžbenicama."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Većini kuhinja to ne treba. IQ Restov [kuhinjski zaslon](route:/kitchen-display) radi u pregledniku, pa oprema može biti tablet koji već imate, jeftin Android tablet ili stari laptop s monitorom. Stavite ga u kućište otporno na prskanje, montirajte izvan linije pare i granični je trošak zidni nosač."
+      "text": "Većini kuhinja to ne treba. QRgineov [kuhinjski zaslon](route:/kitchen-display) radi u pregledniku, pa oprema može biti tablet koji već imate, jeftin Android tablet ili stari laptop s monitorom. Stavite ga u kućište otporno na prskanje, montirajte izvan linije pare i granični je trošak zidni nosač."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Mogu li pokrenuti KDS na običnom tabletu?",
-          "a": "Da. IQ Restov kuhinjski zaslon radi u pregledniku, pa odgovara bilo koji tablet ili laptop iz zadnjih pet godina. Koristite kućište otporno na prskanje."
+          "a": "Da. QRgineov kuhinjski zaslon radi u pregledniku, pa odgovara bilo koji tablet ili laptop iz zadnjih pet godina. Koristite kućište otporno na prskanje."
         },
         {
           "q": "Treba li KDS internet?",

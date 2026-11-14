@@ -3,13 +3,13 @@
   "slug": "display-cucina",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Display cucina (KDS) per ristoranti | IQ Rest",
+    "title": "Display cucina (KDS) per ristoranti | QRgine",
     "description": "Display cucina KDS: gli ordini dalla sala e dal menù QR arrivano subito sullo schermo del cuoco. Colonne per tavolo, stati e filtri per zona. Funziona su tablet.",
     "canonical": "https://iq-rest.com/it/display-cucina",
     "ogLocale": "it_IT",
     "ogTitle": "Display cucina (KDS) — Ordini subito sullo schermo del cuoco",
     "ogDescription": "Gli ordini dalla sala sullo schermo del cuoco. Colonne per tavolo, stati e timer. Un tocco cambia lo stato.",
-    "brandLine": "IQ Rest — Display cucina per ristoranti"
+    "brandLine": "QRgine — Display cucina per ristoranti"
   },
   "hero": {
     "headline": "Display cucina (KDS):",
@@ -83,7 +83,7 @@
     }
   ],
   "faq": {
-    "sub": "Le domande dei ristoratori sul display cucina in IQ Rest. Se la tua domanda non è nell'elenco, scrivici su WhatsApp.",
+    "sub": "Le domande dei ristoratori sul display cucina in QRgine. Se la tua domanda non è nell'elenco, scrivici su WhatsApp.",
     "items": [
       {
         "q": "Quali sono gli stati delle voci in cucina?",

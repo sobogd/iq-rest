@@ -3,13 +3,13 @@
   "slug": "sistem-comenzi-restaurant",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Preluare comenzi restaurant — Oaspeți și Ospătari | IQ Rest",
+    "title": "Preluare comenzi restaurant — Oaspeți și Ospătari | QRgine",
     "description": "Preluarea comenzilor de pe telefon sau tabletă: harta meselor, împărțirea notei, statusuri, opțiuni. Oaspeții comandă direct de la masă. 14 zile gratuit.",
     "canonical": "https://iq-rest.com/ro/sistem-comenzi-restaurant",
     "ogLocale": "ro_RO",
     "ogTitle": "Preluare comenzi restaurant — Oaspeți și Ospătari",
     "ogDescription": "Un oaspete la masă sau un ospătar pe telefon — comanda ajunge instantaneu în bucătărie. Harta meselor, împărțirea notei, statusuri, opțiuni și comentarii.",
-    "brandLine": "IQ Rest — Preluare comenzi restaurant"
+    "brandLine": "QRgine — Preluare comenzi restaurant"
   },
   "hero": {
     "headline": "Comenzi de la masă —",
@@ -113,7 +113,7 @@
     }
   ],
   "faq": {
-    "sub": "Ce întreabă proprietarii de restaurante despre preluarea comenzilor în IQ Rest. Dacă nu găsești întrebarea ta — scrie-ne pe WhatsApp.",
+    "sub": "Ce întreabă proprietarii de restaurante despre preluarea comenzilor în QRgine. Dacă nu găsești întrebarea ta — scrie-ne pe WhatsApp.",
     "items": [
       {
         "q": "Pot lucra mai mulți ospătari simultan de pe dispozitive diferite?",

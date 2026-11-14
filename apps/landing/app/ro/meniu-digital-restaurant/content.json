@@ -3,13 +3,13 @@
   "slug": "meniu-digital-restaurant",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Meniu digital pentru restaurante | IQ Rest",
+    "title": "Meniu digital pentru restaurante | QRgine",
     "description": "Meniu digital pentru restaurantul tău: meniu online cu fotografii, alergeni, traducere AI și actualizare a prețurilor în timp real. 14 zile gratuit, fără card.",
     "canonical": "https://iq-rest.com/ro/meniu-digital-restaurant",
     "ogLocale": "ro_RO",
     "ogTitle": "Meniu digital pentru restaurante",
     "ogDescription": "Versiunea online a meniului tău tipărit cu fotografii, alergeni și traducere AI. Prețurile se actualizează în timp real.",
-    "brandLine": "IQ Rest — Meniu digital pentru restaurante"
+    "brandLine": "QRgine — Meniu digital pentru restaurante"
   },
   "hero": {
     "headline": "Meniu digital și site web",
@@ -166,7 +166,7 @@
     "heading": "De ce restaurantele ne aleg pe noi,",
     "headingAccent": "nu alte sisteme",
     "sub": "Majoritatea instrumentelor de meniu se opresc la codul QR. Mai jos e ceea ce diferă cu adevărat în munca de zi cu zi. Fără nume — comparați singuri cu orice sistem.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Alte sisteme",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Ce întreabă proprietarii de restaurante despre meniul digital IQ Rest. Dacă nu găsești întrebarea ta — scrie-ne pe WhatsApp.",
+    "sub": "Ce întreabă proprietarii de restaurante despre meniul digital QRgine. Dacă nu găsești întrebarea ta — scrie-ne pe WhatsApp.",
     "items": [
       {
         "q": "Am nevoie de cunoștințe tehnice sau experiență cu platforme CMS?",
         "a": "Nu sunt necesare cunoștințe speciale. Totul în panoul de administrare se face din câteva atingeri — fără cod, fără fișiere sursă. Adăugarea unui preparat durează câteva secunde: nume, preț, fotografie. Configurarea completă a unui meniu durează de obicei 30–60 de minute."
       },
       {
-        "q": "Ce este meniul digital IQ Rest?",
+        "q": "Ce este meniul digital QRgine?",
         "a": "Este o versiune online a meniului tău, disponibilă pentru oaspeți prin cod QR sau link direct: fotografii ale preparatelor, prețuri, alergeni, traducere AI în 35 de limbi și actualizări în timp real. Meniul rulează pe serverele noastre — nu trebuie să instalezi sau să întreții niciun software, ai nevoie doar de un browser."
       },
       {

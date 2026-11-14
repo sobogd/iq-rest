@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Gratis QR-meny: vad är faktiskt gratis | IQ Rest",
+    "title": "Gratis QR-meny: vad är faktiskt gratis | QRgine",
     "description": "Gratis QR-menyer finns och vissa duger. Hur de tjänar pengar, vilken gräns du slår i först och när gratis faktiskt är rätt val."
   },
   "card": {
@@ -67,7 +67,7 @@
       "headers": [
         "",
         "Typisk gratisnivå",
-        "IQ Rest"
+        "QRgine"
       ],
       "rows": [
         [
@@ -168,15 +168,15 @@
         },
         {
           "q": "Är en gratis provperiod samma sak som en gratisplan?",
-          "a": "Nej. En provperiod är hela produkten under begränsad tid; en gratisplan är en begränsad produkt för alltid. IQ Rest ger 14 dagars prov med allt påslaget, utan kort."
+          "a": "Nej. En provperiod är hela produkten under begränsad tid; en gratisplan är en begränsad produkt för alltid. QRgine ger 14 dagars prov med allt påslaget, utan kort."
         },
         {
           "q": "Vilken är den billigaste betalda QR-menyn?",
-          "a": "Fasta planer börjar oftast runt 10 € per månad och verksamhet. IQ Rest startar på 9,90 € – hela uppdelningen finns i [vad en QR-meny kostar](blog:qr-code-menu-cost)."
+          "a": "Fasta planer börjar oftast runt 10 € per månad och verksamhet. QRgine startar på 9,90 € – hela uppdelningen finns i [vad en QR-meny kostar](blog:qr-code-menu-cost)."
         },
         {
           "q": "Kan jag flytta min meny från ett gratisverktyg till ett betalt?",
-          "a": "Oftast ja, och du behöver sällan knappa in den igen: IQ Rest kan läsa ett foto eller en pdf av den befintliga menyn och bygga upp raderna på ungefär fem minuter."
+          "a": "Oftast ja, och du behöver sällan knappa in den igen: QRgine kan läsa ett foto eller en pdf av den befintliga menyn och bygga upp raderna på ungefär fem minuter."
         }
       ]
     }

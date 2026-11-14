@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Küchendisplay: Brauchen Sie ein KDS? | IQ Rest",
+    "title": "Küchendisplay: Brauchen Sie ein KDS? | QRgine",
     "description": "Was ein KDS leistet, was die Hardware wirklich kostet, wie Sie es auf einem vorhandenen Tablet betreiben und welche Küchen mit Papierbons besser fahren."
   },
   "card": {
@@ -87,7 +87,7 @@
     },
     {
       "type": "p",
-      "text": "Die meisten Küchen brauchen das nicht. Die [Küchenanzeige](route:/kitchen-display) von IQ Rest läuft im Browser, die Hardware kann also ein Tablet sein, das Sie schon haben, ein günstiges Android-Tablet oder ein alter Laptop mit Monitor. Stecken Sie es in eine spritzwassergeschützte Hülle, montieren Sie es außerhalb der Dampfzone, und die Grenzkosten sind eine Wandhalterung."
+      "text": "Die meisten Küchen brauchen das nicht. Die [Küchenanzeige](route:/kitchen-display) von QRgine läuft im Browser, die Hardware kann also ein Tablet sein, das Sie schon haben, ein günstiges Android-Tablet oder ein alter Laptop mit Monitor. Stecken Sie es in eine spritzwassergeschützte Hülle, montieren Sie es außerhalb der Dampfzone, und die Grenzkosten sind eine Wandhalterung."
     },
     {
       "type": "table",
@@ -182,7 +182,7 @@
         },
         {
           "q": "Kann ich ein KDS auf einem gewöhnlichen Tablet betreiben?",
-          "a": "Ja. Die Küchenanzeige von IQ Rest läuft im Browser, also funktioniert jedes Tablet oder Notebook der letzten fünf Jahre. Nutzen Sie eine spritzwassergeschützte Hülle."
+          "a": "Ja. Die Küchenanzeige von QRgine läuft im Browser, also funktioniert jedes Tablet oder Notebook der letzten fünf Jahre. Nutzen Sie eine spritzwassergeschützte Hülle."
         },
         {
           "q": "Braucht ein KDS Internet?",

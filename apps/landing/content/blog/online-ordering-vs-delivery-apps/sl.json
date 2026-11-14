@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Lastno naročanje vs aplikacije za dostavo: številke | IQ Rest",
+    "title": "Lastno naročanje vs aplikacije za dostavo: številke | QRgine",
     "description": "Koliko stane provizija platforme na naročilo, koliko naročil v lastnem kanalu pokrije naročnino in zakaj večina restavracij potrebuje oba kanala."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Ali potrebujem spletno stran za neposredna naročila?",
-          "a": "Ne. IQ Rest vam da gostovano stran za naročila z lastnim naslovom, na katero lahko povežete z Googla, Instagrama ali QR kode na mizi."
+          "a": "Ne. QRgine vam da gostovano stran za naročila z lastnim naslovom, na katero lahko povežete z Googla, Instagrama ali QR kode na mizi."
         }
       ]
     }

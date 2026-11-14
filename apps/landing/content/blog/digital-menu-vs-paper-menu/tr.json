@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Dijital menü mü kağıt menü mü? Gerçek maliyetler | IQ Rest",
+    "title": "Dijital menü mü kağıt menü mü? Gerçek maliyetler | QRgine",
     "description": "Kağıt menünün restorana gerçek maliyeti QR dijital menüyle karşılaştırıldı: baskı, güncellemeler, çeviriler, sipariş hızı. Rakamlarla yan yana kıyaslama."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Kağıt menünüzü tarayın — IQ Rest onu okur ve dijital menüyü otomatik oluşturur.",
+        "Kağıt menünüzü tarayın — QRgine onu okur ve dijital menüyü otomatik oluşturur.",
         "Fiyatları kontrol edin, önemli yerlere fotoğraf ekleyin.",
         "Her masa için bir QR kod bastırın.",
         "Her şeyi, istediğiniz an, telefonunuzdan güncelleyin."

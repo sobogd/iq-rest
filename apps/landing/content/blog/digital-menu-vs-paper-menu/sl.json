@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Digitalni meni ali papirnati: primerjava stroškov | IQ Rest",
+    "title": "Digitalni meni ali papirnati: primerjava stroškov | QRgine",
     "description": "Koliko papirnati meni v resnici stane restavracijo v primerjavi z digitalnim QR menijem: tisk, spremembe, prevodi, hitrost naročanja. Primerjava s številkami."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Skenirajte papirnati meni — IQ Rest ga prebere in samodejno sestavi digitalni meni.",
+        "Skenirajte papirnati meni — QRgine ga prebere in samodejno sestavi digitalni meni.",
         "Preverite cene in dodajte fotografije tam, kjer štejejo.",
         "Natisnite po eno QR kodo za vsako mizo.",
         "Karkoli spremenite kadar koli, kar s telefona."

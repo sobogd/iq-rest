@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Savi užsakymai prieš pristatymo programėles: tikri skaičiai | IQ Rest",
+    "title": "Savi užsakymai prieš pristatymo programėles: tikri skaičiai | QRgine",
     "description": "Kiek kainuoja platformos komisinis nuo užsakymo, kiek užsakymų savame kanale padengia prenumeratą ir kodėl daugumai restoranų reikia abiejų kanalų."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Ar man reikia svetainės tiesioginiams užsakymams?",
-          "a": "Ne. IQ Rest duoda paruoštą užsakymų puslapį su savo adresu, į kurį galite vesti iš Google, Instagram ar QR kodo ant stalo."
+          "a": "Ne. QRgine duoda paruoštą užsakymų puslapį su savo adresu, į kurį galite vesti iš Google, Instagram ar QR kodo ant stalo."
         }
       ]
     }

@@ -8,7 +8,7 @@
 // Operator data sourced from the existing Privacy Policy (messages/en.json → privacy.sections).
 
 export const OPERATOR = {
-  // The legal person behind the IQ Rest brand. In Spain this is an "autónomo"
+  // The legal person behind the QRgine brand. In Spain this is an "autónomo"
   // (a registered self-employed individual) — rendered in the docs as
   // "individual entrepreneur (autónomo)" so it reads clearly internationally
   // while staying legally precise. GDPR requires the controller's real
@@ -16,7 +16,7 @@ export const OPERATOR = {
   // the brand.
   legalName: "Bogdan Sokolov",
   status: "individual entrepreneur (autónomo) registered in Spain",
-  brand: "IQ Rest",
+  brand: "QRgine",
   domain: "iq-rest.com",
   contactEmail: "support@iq-rest.com",
   fiscalAddress: "Calle Boca Del Rio 2, 1A, Oviedo, 33010, Asturias, Spain",

@@ -2,11 +2,11 @@
   "companyDefaultName": "Mein Restaurant",
   "otpEmail": {
     "subject": "Ihr Code: {code}",
-    "intro": "Hier ist Ihr Einmalcode für die Anmeldung bei IQ Rest:",
+    "intro": "Hier ist Ihr Einmalcode für die Anmeldung bei QRgine:",
     "expiry": "Der Code ist 5 Minuten gültig. Falls Sie ihn nicht angefordert haben, ignorieren Sie diese E-Mail einfach."
   },
   "supportEmail": {
-    "subject": "Neue Nachricht vom IQ Rest Support",
+    "subject": "Neue Nachricht vom QRgine Support",
     "title": "Neue Nachricht vom Support",
     "body": "Unser Support-Team hat Ihnen eine neue Nachricht gesendet. Öffnen Sie den Support-Chat in Ihrem Dashboard, um sie zu lesen und zu antworten.",
     "cta": "Support-Chat öffnen"

@@ -3,13 +3,13 @@
   "slug": "digitalni-jelovnik-restoran",
   "trackPrefix": "l_digital",
   "meta": {
-    "title": "Digitalni jelovnik za restorane | IQ Rest",
+    "title": "Digitalni jelovnik za restorane | QRgine",
     "description": "Digitalni jelovnik za vaš restoran: fotografije, alergeni, AI prijevod i cijene ažurirane u stvarnom vremenu. 14 dana besplatno, bez kreditne kartice.",
     "canonical": "https://iq-rest.com/hr/digitalni-jelovnik-restoran",
     "ogLocale": "hr_HR",
     "ogTitle": "Digitalni jelovnik za restorane",
     "ogDescription": "Online verzija vašeg papirnatog jelovnika s fotografijama, alergenima i AI prijevodom. Cijene se ažuriraju u stvarnom vremenu.",
-    "brandLine": "IQ Rest — Digitalni jelovnik za restorane"
+    "brandLine": "QRgine — Digitalni jelovnik za restorane"
   },
   "hero": {
     "headline": "Digitalni jelovnik i web stranica",
@@ -166,7 +166,7 @@
     "heading": "Zašto restorani biraju nas,",
     "headingAccent": "a ne druge sustave",
     "sub": "Većina alata za jelovnike staje na QR kodu. U nastavku je ono što se u svakodnevnom radu stvarno razlikuje. Bez imena — usporedite sami s bilo kojim sustavom.",
-    "usLabel": "IQ Rest",
+    "usLabel": "QRgine",
     "othersLabel": "Drugi sustavi",
     "rows": [
       {
@@ -212,14 +212,14 @@
     ]
   },
   "faq": {
-    "sub": "Što ugostitelji pitaju o digitalnom jelovniku u IQ Restu. Ako vašeg pitanja nema na popisu — pošaljite nam poruku na WhatsApp.",
+    "sub": "Što ugostitelji pitaju o digitalnom jelovniku u QRgineu. Ako vašeg pitanja nema na popisu — pošaljite nam poruku na WhatsApp.",
     "items": [
       {
         "q": "Trebaju li mi tehnička znanja ili iskustvo s CMS-om?",
         "a": "Nisu potrebna posebna znanja. Sve u administraciji rješava se s par klikova — bez kodiranja i rada s izvornim datotekama. Dodavanje jela traje nekoliko sekundi: naziv, cijena, fotografija. Kompletno postavljanje jelovnika obično stane u 30–60 minuta."
       },
       {
-        "q": "Što je IQ Rest digitalni jelovnik?",
+        "q": "Što je QRgine digitalni jelovnik?",
         "a": "To je online verzija vašeg jelovnika dostupna gostima putem QR koda ili izravne poveznice: fotografije jela, cijene, alergeni, AI prijevod na 35 jezika i ažuriranja u stvarnom vremenu. Jelovnik radi na našim poslužiteljima — nema softvera za instalaciju ili održavanje, dovoljan je samo preglednik."
       },
       {

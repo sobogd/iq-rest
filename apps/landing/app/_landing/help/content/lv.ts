@@ -2,11 +2,11 @@ import type { HelpDoc } from "../types";
 
 // LV help guide.
 export const lv: HelpDoc = {
-  metaTitle: "Kā lietot IQ Rest — soli pa solim ceļvedis",
+  metaTitle: "Kā lietot QRgine — soli pa solim ceļvedis",
   metaDescription:
-    "Pilns IQ Rest ceļvedis: reģistrācija, ēdienkarte, pasūtījumi, rezervācijas, virtuves ekrāns un iestatījumi — restorāniem.",
+    "Pilns QRgine ceļvedis: reģistrācija, ēdienkarte, pasūtījumi, rezervācijas, virtuves ekrāns un iestatījumi — restorāniem.",
   h1: "Palīdzība",
-  intro: "Detalizēts IQ Rest ceļvedis — no reģistrācijas līdz smalkiem iestatījumiem.",
+  intro: "Detalizēts QRgine ceļvedis — no reģistrācijas līdz smalkiem iestatījumiem.",
   banner: {
     title: "Tas ir vienkāršāk, nekā šķiet",
     sub: "Soli pa solim ceļvedis: no reģistrācijas līdz smalkiem iestatījumiem — tiks galā ikviens.",
@@ -22,7 +22,7 @@ export const lv: HelpDoc = {
         { type: "h3", text: "Kas ir šī sistēma" },
         {
           type: "p",
-          text: "IQ Rest ir pakalpojums restorāniem: izveidojat tiešsaistes ēdienkarti ar QR kodu, pieņemat pasūtījumus un galdiņu rezervācijas tieši no viesu tālruņiem, bet virtuvē un pie viesmīļiem darbojas planšetes-termināļi. Visu pārvalda no vienas administrēšanas paneļa (informācijas paneļa).",
+          text: "QRgine ir pakalpojums restorāniem: izveidojat tiešsaistes ēdienkarti ar QR kodu, pieņemat pasūtījumus un galdiņu rezervācijas tieši no viesu tālruņiem, bet virtuvē un pie viesmīļiem darbojas planšetes-termināļi. Visu pārvalda no vienas administrēšanas paneļa (informācijas paneļa).",
         },
         { type: "h3", text: "Reģistrācija un pieteikšanās" },
         { type: "p", text: "Pieteikties var trīs veidos — izvēlieties jebkuru pieteikšanās ekrānā:" },

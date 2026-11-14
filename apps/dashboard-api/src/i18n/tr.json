@@ -2,11 +2,11 @@
   "companyDefaultName": "Restoranım",
   "otpEmail": {
     "subject": "Kodunuz: {code}",
-    "intro": "IQ Rest'e giriş yapmak için tek kullanımlık kodunuz:",
+    "intro": "QRgine'e giriş yapmak için tek kullanımlık kodunuz:",
     "expiry": "Kod 5 dakika boyunca geçerlidir. Bu kodu siz talep etmediyseniz bu e-postayı görmezden gelebilirsiniz."
   },
   "supportEmail": {
-    "subject": "IQ Rest destek ekibinden yeni mesaj",
+    "subject": "QRgine destek ekibinden yeni mesaj",
     "title": "Destek ekibinden yeni mesaj",
     "body": "Destek ekibimiz size yeni bir mesaj gönderdi. Okuyup yanıtlamak için kontrol panelinizdeki destek sohbetini açın.",
     "cta": "Destek sohbetini aç"

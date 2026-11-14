@@ -23,7 +23,7 @@ export function FeatureJsonLd({ content }: { content: FeatureContent }) {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "IQ Rest", item: localePath },
+          { "@type": "ListItem", position: 1, name: "QRgine", item: localePath },
           { "@type": "ListItem", position: 2, name: content.meta.title, item: pagePath },
         ],
       },

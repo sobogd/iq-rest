@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Menù digitale vs menù cartaceo: costi reali | IQ Rest",
+    "title": "Menù digitale vs menù cartaceo: costi reali | QRgine",
     "description": "Quanto costa davvero un menù cartaceo rispetto a un menù digitale QR: stampa, aggiornamenti, traduzioni, velocità di servizio. Confronto con numeri reali."
   },
   "card": {
@@ -57,7 +57,7 @@
     {
       "type": "steps",
       "items": [
-        "Scansiona il tuo menù cartaceo — IQ Rest lo legge e crea il menù digitale in automatico.",
+        "Scansiona il tuo menù cartaceo — QRgine lo legge e crea il menù digitale in automatico.",
         "Controlla i prezzi, aggiungi le foto dove contano.",
         "Stampa un codice QR per tavolo.",
         "Aggiorna qualsiasi cosa, in qualsiasi momento, dal telefono."

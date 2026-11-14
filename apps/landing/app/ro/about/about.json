@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Despre IQ Rest — Cine suntem, Contact și Detalii Legale",
-    "description": "Cine se află în spatele IQ Rest, cum ne poți contacta și detaliile operatorului serviciului: email, WhatsApp, informații legale.",
+    "title": "Despre QRgine — Cine suntem, Contact și Detalii Legale",
+    "description": "Cine se află în spatele QRgine, cum ne poți contacta și detaliile operatorului serviciului: email, WhatsApp, informații legale.",
     "canonical": "https://iq-rest.com/ro/about",
     "ogLocale": "ro_RO",
-    "ogTitle": "Despre IQ Rest",
-    "ogDescription": "Cine se află în spatele IQ Rest, contacte de suport și detaliile legale ale operatorului serviciului."
+    "ogTitle": "Despre QRgine",
+    "ogDescription": "Cine se află în spatele QRgine, contacte de suport și detaliile legale ale operatorului serviciului."
   },
   "heading": "De la propria cafenea",
   "headingAccent": "la o platformă pentru restaurante",
@@ -25,14 +25,14 @@
     },
     {
       "value": "{count}",
-      "label": "locații care folosesc IQ Rest"
+      "label": "locații care folosesc QRgine"
     },
     {
       "value": "15",
       "label": "țări în care se află clienții noștri"
     }
   ],
-  "waPrefill": "Salut, am o întrebare despre IQ Rest",
+  "waPrefill": "Salut, am o întrebare despre QRgine",
   "contacts": [
     {
       "icon": "Mail",

@@ -2,11 +2,11 @@
   "companyDefaultName": "Mano restoranas",
   "otpEmail": {
     "subject": "Jūsų kodas: {code}",
-    "intro": "Štai jūsų vienkartinis kodas prisijungti prie IQ Rest:",
+    "intro": "Štai jūsų vienkartinis kodas prisijungti prie QRgine:",
     "expiry": "Kodas galioja 5 minutes. Jei jo neprašėte, tiesiog ignoruokite šį laišką."
   },
   "supportEmail": {
-    "subject": "Nauja žinutė iš IQ Rest palaikymo komandos",
+    "subject": "Nauja žinutė iš QRgine palaikymo komandos",
     "title": "Nauja žinutė iš palaikymo komandos",
     "body": "Mūsų palaikymo komanda atsiuntė jums naują žinutę. Atidarykite palaikymo pokalbį valdymo skydelyje, kad ją perskaitytumėte ir atsakytumėte.",
     "cta": "Atidaryti palaikymo pokalbį"

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Egen bestillingsside vs leveringsapper: de reelle tallene | IQ Rest",
+    "title": "Egen bestillingsside vs leveringsapper: de reelle tallene | QRgine",
     "description": "Hva markedsplassens provisjon koster per ordre, hvor mange ordrer du trenger i egen kanal for å gå i null, og hvorfor de fleste restauranter bør kjøre begge."
   },
   "card": {
@@ -207,7 +207,7 @@
         },
         {
           "q": "Trenger jeg en nettside for å ta direkteordrer?",
-          "a": "Nei. IQ Rest gir deg en hostet bestillingsside med egen adresse, som du kan lenke fra Google, Instagram eller en QR-kode på bordet."
+          "a": "Nei. QRgine gir deg en hostet bestillingsside med egen adresse, som du kan lenke fra Google, Instagram eller en QR-kode på bordet."
         }
       ]
     }
